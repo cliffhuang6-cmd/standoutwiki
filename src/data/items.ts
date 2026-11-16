@@ -11,7 +11,7 @@ export const items: Item[] = [
     "rarity": "Common",
     "sellPrice": "$500 Dalas",
     "uses": [
-      "Awakens a Stand from the full obtainable rarity pool (Rare through Pinnacle: 0.07%).",
+      "Awakens a Stand from the full obtainable rarity pool (Rare through Pinnacle: ~0.50% tier chance).",
       "Rerolls your current active Stand (overwrites previous ability unless stored).",
       "Essential baseline material required for crafting Lucky Arrows and Bizarre Arrows."
     ]
@@ -52,7 +52,7 @@ export const items: Item[] = [
     "category": "Arrow",
     "description": "An ancient arrow inscribed with Egyptian hieroglyphs. Exclusively awakens Stands from JoJo Part 3: Stardust Crusaders, with elevated 5% rates for SP and The World.",
     "obtainMethod": "Specialist Vendor in Cairo Bazaar or crafting with 1 Mysterious Arrow + 1 Cairo Relic.",
-    "image": "/images/arrows/part-3-arrow.webp",
+    "image": "/images/arrows/mysterious-arrow-part-3.webp",
     "rarity": "Epic",
     "sellPrice": "$8,000 Dalas",
     "uses": [
@@ -67,7 +67,7 @@ export const items: Item[] = [
     "category": "Arrow",
     "description": "A golden beetle clings to this arrow's head. Exclusively awakens Stands from JoJo Part 5: Golden Wind, featuring a 5% boosted chance for King Crimson.",
     "obtainMethod": "Passione Contraband Caches in Venice or crafting with 1 Mysterious Arrow + 1 Passione Brooch.",
-    "image": "/images/arrows/part-5-arrow.webp",
+    "image": "/images/arrows/mysterious-arrow-part-5.webp",
     "rarity": "Epic",
     "sellPrice": "$8,000 Dalas",
     "uses": [
@@ -169,7 +169,7 @@ export const items: Item[] = [
     "slug": "wood",
     "name": "Lumber / Wood",
     "category": "Material",
-    "description": "Sturdy wooden planks processed from Morioh timber. Used in basic agricultural construction, crate manufacturing, and building repairs.",
+    "description": "Sturdy wooden planks processed from island timber. Used in basic agricultural construction, crate manufacturing, and building repairs.",
     "obtainMethod": "Chopping mature trees with an axe, purchased from Big Chop lumber mill, or found in warehouse pallets.",
     "image": "/images/items/wood.webp",
     "rarity": "Common",
@@ -226,7 +226,7 @@ export const items: Item[] = [
     "slug": "blue-diamond",
     "name": "Blue Diamond",
     "category": "Story",
-    "description": "A priceless, flawless blue gemstone smuggled into Morioh. Central objective in the high-stakes heist storyline.",
+    "description": "A priceless, flawless blue gemstone smuggled into Honolulu. Central objective in the high-stakes heist storyline.",
     "obtainMethod": "Awarded upon completing Storyline Quest 5: The Heist from Meryl Mei Qi.",
     "image": "/images/items/blue-diamond.webp",
     "rarity": "Legendary",
@@ -254,7 +254,7 @@ export const items: Item[] = [
     "slug": "your-id",
     "name": "Civilian ID Card",
     "category": "Story",
-    "description": "Your personal identification card issued by the Morioh Municipal Authority. Proves your residency and unlocks city service checkpoints.",
+    "description": "Your personal identification card issued by the Honolulu Municipal Authority. Proves your residency and unlocks city service checkpoints.",
     "obtainMethod": "Granted during the opening tutorial sequence by the Instructor.",
     "image": "/images/items/your-id.webp",
     "rarity": "Common",
@@ -344,7 +344,7 @@ export const items: Item[] = [
     "rarity": "Rare",
     "sellPrice": "$600 Dalas",
     "uses": [
-      "Equip on Morioh beaches to uncover buried Dalas envelopes and Arrow Parts.",
+      "Equip on Waikiki and Honolulu beaches to uncover buried Dalas envelopes and Arrow Parts.",
       "Finds hidden historical coins used for trade with the Museum Curator."
     ]
   },
@@ -373,7 +373,7 @@ export const items: Item[] = [
     "sellPrice": "$1,000 Dalas",
     "uses": [
       "Grants a massive vertical bounce to scale building walls without Stand mobility skills.",
-      "Fun utility item for parkour routes across downtown Morioh."
+      "Fun utility item for parkour routes across downtown Honolulu."
     ]
   },
   {

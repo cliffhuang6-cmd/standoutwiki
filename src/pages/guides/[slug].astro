@@ -69,8 +69,8 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
     </div>
 
     <!-- Interactive Tool Embed (Contextual) -->
-    {(guide.slug === 'lucky-arrows' || guide.slug === 'bizarre-arrows') && (
-      <div class="mb-12">
+    {(guide.slug === 'lucky-arrows' || guide.slug === 'bizarre-arrows' || guide.slug === 'arrow-rates-explained') && (
+      <div id="calculator" class="scroll-mt-24 mb-12">
         <div class="mb-3">
           <span class="text-xs font-black uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
             Interactive Calculator
@@ -81,13 +81,13 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
       </div>
     )}
 
-    {(guide.slug === 'star-platinum' || guide.slug === 'the-world' || guide.slug === 'king-crimson') && (
-      <div class="mb-12">
+    {(guide.slug === 'level-up-fast' || guide.slug === 'star-platinum' || guide.slug === 'the-world' || guide.slug === 'king-crimson') && (
+      <div id="build-maker" class="scroll-mt-24 mb-12">
         <div class="mb-3">
           <span class="text-xs font-black uppercase tracking-wider text-purple-800 bg-purple-100 px-2 py-0.5 rounded-full">
-            Interactive Tool
+            Interactive Stat Calculator
           </span>
-          <h2 class="text-lg font-black text-slate-900 mt-1">Plan Your Character Stat Point Distribution</h2>
+          <h2 class="text-lg font-black text-slate-900 mt-1">Plan Your Character Stat Point Distribution (150 SP Max)</h2>
         </div>
         <BuildMaker client:load />
       </div>
@@ -96,7 +96,7 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
     <!-- Guide Content Sections -->
     <div class="space-y-12 text-sm text-slate-700 leading-relaxed max-w-none">
       {guide.sections && guide.sections.map((section, idx) => (
-        <section id={section.id} class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <section id={section.id} class="scroll-mt-24 bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
           <h2 class="text-2xl font-black text-slate-900">
             {idx + 1}. {section.title}
           </h2>
@@ -176,6 +176,30 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
         </section>
       ))}
     </div>
+
+    {/* Contextual Embedded Tool: Build Maker for level-up-fast */}
+    {guide.slug === 'level-up-fast' && (
+      <div class="mt-12 scroll-mt-24" id="build-maker">
+        <div class="mb-4">
+          <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Interactive Tool</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">Level 50 Stat Point Allocator &amp; Build Maker</h2>
+          <p class="text-xs text-slate-500 mt-1">Test attribute allocations up to the 150-point cap and calculate gear synergy bonuses.</p>
+        </div>
+        <BuildMaker client:load />
+      </div>
+    )}
+
+    {/* Contextual Embedded Tool: Arrow Calculator for arrow guides */}
+    {(guide.slug === 'bizarre-arrows' || guide.slug === 'lucky-arrows') && (
+      <div class="mt-12 scroll-mt-24" id="calculator">
+        <div class="mb-4">
+          <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Interactive Tool</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">Arrow Drop Rate &amp; Bernoulli Odds Calculator</h2>
+          <p class="text-xs text-slate-500 mt-1">Calculate exact probabilities of obtaining your target Stand across multiple arrow rolls.</p>
+        </div>
+        <ArrowCalculator client:load />
+      </div>
+    )}
 
     <!-- Related Guides Footer -->
     {relatedGuides.length > 0 && (

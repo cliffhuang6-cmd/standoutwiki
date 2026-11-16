@@ -3,7 +3,43 @@ import Layout from '../layouts/Layout.astro';
 import ImageModal from '../components/ImageModal';
 import { items } from '../data/items';
 
-const categories = ['All', 'Arrow', 'Consumable', 'Material', 'Story', 'Stand Chip'];
+const categorySections = [
+  {
+    id: 'arrow',
+    name: 'Summon Arrows & Focus Arrows',
+    category: 'Arrow',
+    badgeClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+    description: 'Mysterious, Lucky, Bizarre, and Part-specific focus arrows used to summon Stands from the meteor.',
+  },
+  {
+    id: 'consumable',
+    name: 'Consumables & Combat Food',
+    category: 'Consumable',
+    badgeClass: 'bg-purple-50 text-purple-800 border-purple-200',
+    description: 'Food, beverages, and recovery items providing health restoration and passive combat buffs.',
+  },
+  {
+    id: 'material',
+    name: 'Crafting Materials & Minerals',
+    category: 'Material',
+    badgeClass: 'bg-blue-50 text-blue-800 border-blue-200',
+    description: 'Forging ores, refined ingots, and botanical ingredients required for equipment and crafting recipes.',
+  },
+  {
+    id: 'story',
+    name: 'Story Relics & NPC Artifacts',
+    category: 'Story',
+    badgeClass: 'bg-amber-50 text-amber-800 border-amber-200',
+    description: 'Key items, municipal documents, and progression artifacts required to unlock Honolulu quests.',
+  },
+  {
+    id: 'stand-chip',
+    name: 'Stand Storage Chips',
+    category: 'Stand Chip',
+    badgeClass: 'bg-rose-50 text-rose-800 border-rose-200',
+    description: "Memory chips utilized by D'Arby in the casino cellar to safely store and switch Stand slots.",
+  },
+];
 ---
 
 <Layout
@@ -15,7 +51,7 @@ const categories = ['All', 'Arrow', 'Consumable', 'Material', 'Story', 'Stand Ch
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
     <!-- Header -->
-    <div class="max-w-3xl mb-10">
+    <div class="max-w-3xl mb-8">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3 border border-emerald-200">
         <span>Verified Item Encyclopedia</span>
         <span>•</span>
@@ -31,94 +67,108 @@ const categories = ['All', 'Arrow', 'Consumable', 'Material', 'Story', 'Stand Ch
       </p>
     </div>
 
-    <!-- Category Filter Notice / Navigation -->
-    <div class="flex flex-wrap items-center gap-2 mb-10 pb-6 border-b border-slate-200 text-xs font-bold">
+    <!-- Category Quick Jump Navigation -->
+    <div class="flex flex-wrap items-center gap-2 mb-10 pb-6 border-b border-slate-200 text-xs font-bold sticky top-16 bg-[#FFFDF3]/95 backdrop-blur-sm z-10 py-3">
       <span class="text-slate-400 uppercase tracking-wider text-[11px] mr-2">Quick Jump:</span>
-      <a href="#arrow" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-colors">
-        Summon Arrows
-      </a>
-      <a href="#consumable" class="px-3 py-1.5 rounded-lg bg-purple-50 text-purple-800 border border-purple-200 hover:bg-purple-100 transition-colors">
-        Consumables &amp; Food
-      </a>
-      <a href="#material" class="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100 transition-colors">
-        Crafting Materials
-      </a>
-      <a href="#story" class="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition-colors">
-        Story Relics &amp; IDs
-      </a>
-      <a href="#stand-chip" class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition-colors">
-        Stand Chips
-      </a>
+      {categorySections.map((sec) => (
+        <a
+          href={`#${sec.id}`}
+          class={`px-3 py-1.5 rounded-lg border font-bold transition-colors ${sec.badgeClass} hover:opacity-80`}
+        >
+          {sec.name.split('&')[0].trim()} ({items.filter(i => i.category === sec.category).length})
+        </a>
+      ))}
     </div>
 
-    <!-- Items Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {items.map((item) => (
-        <div
-          class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between hover:border-emerald-400 hover:shadow-md transition-all group"
-          id={item.slug}
-        >
-          <div>
-            {/* Card Header & Category Badge */}
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-2.5 py-1 text-[11px] font-black uppercase tracking-wider rounded-lg bg-slate-100 text-slate-700 border border-slate-200">
-                {item.category}
-              </span>
-              {item.sellPrice && (
-                <span class="text-xs font-mono font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                  {item.sellPrice}
+    <!-- Grouped Categories -->
+    <div class="space-y-14">
+      {categorySections.map((sec) => {
+        const categoryItems = items.filter((item) => item.category === sec.category);
+        return (
+          <section id={sec.id} class="scroll-mt-24">
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 mb-6 border-b border-slate-200">
+              <div class="flex items-center gap-3">
+                <h2 class="text-2xl font-black text-slate-900 tracking-tight">
+                  {sec.name}
+                </h2>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200">
+                  {categoryItems.length} {categoryItems.length === 1 ? 'item' : 'items'}
                 </span>
-              )}
+              </div>
+              <p class="text-xs text-slate-500 font-medium">
+                {sec.description}
+              </p>
             </div>
 
-            {/* Enlarged Image Container (140px-160px visible area) */}
-            <div class="w-full h-40 bg-slate-50 rounded-xl border border-slate-200/80 p-3 mb-5 flex items-center justify-center overflow-hidden">
-              <ImageModal
-                client:load
-                src={item.image || '/images/items/apple.webp'}
-                alt={item.name}
-                title={item.name}
-                subtitle={`Category: ${item.category} • ${item.sellPrice || 'Non-Tradeable'}`}
-                className="w-full h-full flex items-center justify-center"
-              />
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {categoryItems.map((item) => (
+                <div
+                  class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all group flex flex-col"
+                  id={item.slug}
+                >
+                  {/* Card Header & Category Badge */}
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="px-2.5 py-1 text-[11px] font-black uppercase tracking-wider rounded-lg bg-slate-100 text-slate-700 border border-slate-200">
+                      {item.category}
+                    </span>
+                    {item.sellPrice && (
+                      <span class="text-xs font-mono font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                        {item.sellPrice.startsWith('$') ? `Est. Value: ${item.sellPrice}` : item.sellPrice}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Clean Image Container (h-28 to h-32 centered) */}
+                  <div class="w-full h-28 sm:h-32 bg-slate-50 rounded-xl border border-slate-200/80 p-2 mb-3.5 flex items-center justify-center overflow-hidden">
+                    <ImageModal
+                      client:load
+                      src={item.image || '/images/items/apple.webp'}
+                      alt={item.name}
+                      title={item.name}
+                      subtitle={`Category: ${item.category} • ${item.sellPrice ? (item.sellPrice.startsWith('$') ? 'Est. Value: ' + item.sellPrice : item.sellPrice) : 'Non-Tradeable'}`}
+                      className="w-full h-full flex items-center justify-center"
+                    />
+                  </div>
+
+                  {/* Title & Obtainment */}
+                  <h3 class="text-base font-black text-slate-900 group-hover:text-emerald-800 transition-colors">
+                    {item.name}
+                  </h3>
+
+                  <div class="mt-1.5 mb-3 p-2 bg-slate-50 rounded-lg border border-slate-100 text-xs text-slate-600">
+                    <span class="font-bold text-slate-800 block text-[10px] uppercase tracking-wider mb-0.5">
+                      📍 Obtainment:
+                    </span>
+                    <p class="leading-relaxed">{item.obtainMethod}</p>
+                  </div>
+
+                  {/* Description */}
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                    {item.description}
+                  </p>
+
+                  {/* Key Uses */}
+                  {item.uses && item.uses.length > 0 && (
+                    <div class="mt-auto pt-3 border-t border-slate-100 text-xs text-slate-600">
+                      <span class="font-bold text-slate-800 uppercase tracking-wider text-[10px] block mb-1.5">
+                        Primary Utilities &amp; Uses:
+                      </span>
+                      <ul class="space-y-1">
+                        {item.uses.map((use) => (
+                          <li class="flex items-start gap-1.5">
+                            <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                            <span class="leading-relaxed">{use}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-
-            {/* Title & Obtainment */}
-            <h2 class="text-lg font-black text-slate-900 group-hover:text-emerald-800 transition-colors">
-              {item.name}
-            </h2>
-
-            <div class="mt-1.5 mb-4 p-2.5 bg-slate-50 rounded-lg border border-slate-100 text-xs text-slate-600">
-              <span class="font-bold text-slate-800 block text-[11px] uppercase tracking-wider mb-0.5">
-                📍 Obtainment:
-              </span>
-              <p class="leading-relaxed">{item.obtainMethod}</p>
-            </div>
-
-            {/* Description */}
-            <p class="text-sm text-slate-700 leading-relaxed mb-4">
-              {item.description}
-            </p>
-          </div>
-
-          {/* Key Uses */}
-          {item.uses && item.uses.length > 0 && (
-            <div class="pt-4 border-t border-slate-100 text-xs text-slate-600">
-              <span class="font-bold text-slate-800 uppercase tracking-wider text-[11px] block mb-2">
-                Primary Utilities &amp; Uses:
-              </span>
-              <ul class="space-y-1.5">
-                {item.uses.map((use) => (
-                  <li class="flex items-start gap-2">
-                    <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
-                    <span class="leading-relaxed">{use}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      ))}
+          </section>
+        );
+      })}
     </div>
   </div>
 </Layout>

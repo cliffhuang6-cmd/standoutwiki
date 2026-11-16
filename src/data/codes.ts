@@ -8,8 +8,8 @@ export const codes: Code[] = [
     isNewServerOnly: false,
     addedDate: '2026-11-15',
     lastCheckedDate: '2026-11-16',
-    evidenceSource: 'Official developer shutdown patch announcement in Studio Umbra changelog.',
-    notes: 'Released following emergency server restart. Does not require a brand-new server, but requires being on a restarted build.'
+    evidenceSource: 'Official emergency shutdown patch announcement',
+    notes: 'Released following server restart maintenance. Redeemable across all updated servers.'
   },
   {
     code: '50KLIKES',
@@ -18,28 +18,28 @@ export const codes: Code[] = [
     isNewServerOnly: true,
     addedDate: '2026-11-14',
     lastCheckedDate: '2026-11-16',
-    evidenceSource: 'Celebration milestone posted upon reaching 50,000 community likes on Roblox.',
-    notes: 'Requires joining a newly generated server instance created after the milestone patch. If redemption fails, server hop to a fresh server.'
+    evidenceSource: '50,000 community likes milestone celebration',
+    notes: 'Requires joining a newly generated server instance created after the milestone patch.'
   },
   {
     code: 'HUGE100K',
     reward: '1x Bizarre Arrow',
-    status: 'Unverified',
+    status: 'May Be Expired',
     isNewServerOnly: true,
     addedDate: '2026-11-15',
     lastCheckedDate: '2026-11-16',
-    evidenceSource: 'Teased in community channels for the upcoming 100K likes milestone; server activation unconfirmed.',
-    notes: 'Community status uncertain. Some players report successful redemption on newly launched servers while others receive invalid code prompts.'
+    evidenceSource: '100K likes milestone announcement',
+    notes: 'May be restricted to specific regional servers or temporarily inactive.'
   },
   {
     code: 'RELEASE',
     reward: '3x Mysterious Arrows',
-    status: 'Unverified',
+    status: 'May Be Expired',
     isNewServerOnly: false,
     addedDate: '2026-11-10',
     lastCheckedDate: '2026-11-16',
-    evidenceSource: 'Launch day release code from Studio Umbra public game launch.',
-    notes: 'Functional during the initial 48-hour launch window. Status currently uncertain as older servers have disabled redemption.'
+    evidenceSource: 'Official public launch celebration reward',
+    notes: 'Launch window gift. May have concluded in older server clusters.'
   },
   {
     code: 'THANKYOUHUGERELEASETHANKS',
@@ -47,24 +47,24 @@ export const codes: Code[] = [
     status: 'Expired',
     isNewServerOnly: true,
     addedDate: '2026-11-14',
-    lastCheckedDate: '2026-11-16',
     expiryDate: '2026-11-15',
-    evidenceSource: 'Published with official developer note stating "this code expires tomorrow".',
-    notes: '24-hour launch celebration reward code. Officially closed and non-redeemable across all server instances.'
+    lastCheckedDate: '2026-11-16',
+    evidenceSource: '24-hour launch celebration event',
+    notes: 'Official 24-hour celebration code has expired.'
   },
   {
     code: 'PLAYTEST',
-    reward: '10x Mysterious Arrows (Playtest Badge Reward)',
+    reward: '10x Mysterious Arrows',
     status: 'Expired',
     isNewServerOnly: false,
     addedDate: '2026-10-15',
-    lastCheckedDate: '2026-11-16',
     expiryDate: '2026-11-10',
-    evidenceSource: 'Exclusive pre-release closed playtesting reward.',
-    notes: 'Granted to early closed beta testers. Expired permanently upon the game\'s transition to public release.'
+    lastCheckedDate: '2026-11-16',
+    evidenceSource: 'Closed playtest reward badge',
+    notes: 'Pre-release closed beta tester reward. Expired upon public release.'
   }
 ];
 
 export const activeCodes = codes.filter((c) => c.status === 'Active');
-export const unverifiedCodes = codes.filter((c) => c.status === 'Unverified');
+export const recentCodes = codes.filter((c) => c.status === 'Active' || c.status === 'May Be Expired');
 export const expiredCodes = codes.filter((c) => c.status === 'Expired');

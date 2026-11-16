@@ -46,8 +46,8 @@ export const siteConfig = {
       children: [
         { label: 'Tier List Ranking', href: '/tier-list/', desc: 'Interactive PvP, Raid, and Farming rankings' },
         { label: 'Arrow Probability Calc', href: '/stand-rarity/#calculator', desc: 'Bernoulli probability odds calculator' },
-        { label: 'Stats & Build Maker', href: '/guides/level-up-fast/#build-maker', desc: 'Interactive 225-point stat simulator' },
-        { label: 'Rokakaka Mixer & Seeds', href: '/rokakaka/#mixer', desc: '35 mutation formulas & garden seeds' }
+        { label: 'Stats & Build Maker', href: '/guides/level-up-fast/#build-maker', desc: 'Interactive 150-point stat simulator' },
+        { label: 'Rokakaka Mixer & Seeds', href: '/rokakaka/#mixer', desc: '33 mutation formulas & garden seeds' }
       ]
     },
     {
@@ -56,7 +56,7 @@ export const siteConfig = {
       children: [
         { label: 'Items & Materials', href: '/items/', desc: 'Consumables, crafting and boss drops' },
         { label: 'Accessories & Sets', href: '/accessories/', desc: 'Gear stat bonuses and set synergies' },
-        { label: 'Rokakaka Mutations', href: '/rokakaka/', desc: 'Stand reset mechanics & 35 mutations' },
+        { label: 'Rokakaka Mutations', href: '/rokakaka/', desc: 'Stand reset mechanics & 33 mutations' },
         { label: 'Gardening System', href: '/gardening/', desc: 'Crops, soil, watering & greenhouse' },
         { label: 'Sub-Abilities & Styles', href: '/sub-abilities/', desc: 'Hamon, Vampire & Unarmed mastery' },
         { label: 'Quests & NPCs', href: '/quests/', desc: 'Storyline, bounties, and NPC map' },

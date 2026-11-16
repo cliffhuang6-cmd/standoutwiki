@@ -13,7 +13,7 @@ export const stands: Stand[] = [
       "farming": "S"
     },
     "status": "Playable",
-    "obtainMethod": "Can be awakened using Mysterious Arrows (0.07%), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 3 focus items.",
+    "obtainMethod": "Can be awakened using Mysterious Arrows (~0.50% tier chance), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 3 focus items (~5.0%).",
     "lore": "Star Platinum is a powerful Stand possessed by Jotaro Kujo in Part 3: Stardust Crusaders.",
     "image": "/images/stands/star-platinum.webp",
     "combatRole": "Offense",
@@ -107,7 +107,7 @@ export const stands: Stand[] = [
     "faqs": [
       {
         "q": "How do I obtain Star Platinum in STAND OUT?",
-        "a": "Can be awakened using Mysterious Arrows (0.07%), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 3 focus items."
+        "a": "Can be awakened using Mysterious Arrows (~0.50% tier chance), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 3 focus items (~5.0%)."
       },
       {
         "q": "What combat role does Star Platinum fulfill?",
@@ -128,7 +128,7 @@ export const stands: Stand[] = [
       "farming": "S"
     },
     "status": "Playable",
-    "obtainMethod": "Can be awakened using Mysterious Arrows (0.07%), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 3 focus items.",
+    "obtainMethod": "Can be awakened using Mysterious Arrows (~0.50% tier chance), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 3 focus items (~5.0%).",
     "lore": "The World is a powerful Stand possessed by DIO in Part 3: Stardust Crusaders.",
     "image": "/images/stands/the-world.webp",
     "combatRole": "Offense",
@@ -226,7 +226,7 @@ export const stands: Stand[] = [
     "faqs": [
       {
         "q": "How do I obtain The World in STAND OUT?",
-        "a": "Can be awakened using Mysterious Arrows (0.07%), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 3 focus items."
+        "a": "Can be awakened using Mysterious Arrows (~0.50% tier chance), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 3 focus items (~5.0%)."
       },
       {
         "q": "What combat role does The World fulfill?",
@@ -247,7 +247,7 @@ export const stands: Stand[] = [
       "farming": "A+"
     },
     "status": "Playable",
-    "obtainMethod": "Can be awakened using Mysterious Arrows (0.07%), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 5 focus items.",
+    "obtainMethod": "Can be awakened using Mysterious Arrows (~0.50% tier chance), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 5 focus items (~5.0%).",
     "lore": "King Crimson is a powerful Stand possessed by Diavolo / Vinegar Doppio in Part 5: Golden Wind.",
     "image": "/images/stands/king-crimson.webp",
     "combatRole": "Offense",
@@ -353,7 +353,7 @@ export const stands: Stand[] = [
     "faqs": [
       {
         "q": "How do I obtain King Crimson in STAND OUT?",
-        "a": "Can be awakened using Mysterious Arrows (0.07%), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 5 focus items."
+        "a": "Can be awakened using Mysterious Arrows (~0.50% tier chance), Lucky Arrows (1.5%), or Bizarre Arrows (4.4%). Focus rollable via Part 5 focus items (~5.0%)."
       },
       {
         "q": "What combat role does King Crimson fulfill?",

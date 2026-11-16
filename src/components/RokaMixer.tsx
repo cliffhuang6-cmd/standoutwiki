@@ -168,7 +168,7 @@ export default function RokaMixer() {
             }`}
           >
             <Sparkles className="w-3.5 h-3.5 text-purple-700" />
-            35 Mutations
+            33 Mutations
           </button>
           <button
             onClick={() => setActiveTab('recipes')}
@@ -345,7 +345,7 @@ export default function RokaMixer() {
         </div>
       )}
 
-      {/* TAB 2: 35 VERIFIED MUTATIONS DIRECTORY */}
+      {/* TAB 2: 33 VERIFIED MUTATIONS DIRECTORY */}
       {activeTab === 'directory' && (
         <div className="space-y-6">
           {/* Search & Filter Bar */}
@@ -368,7 +368,7 @@ export default function RokaMixer() {
                   filterType === 'all' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                 }`}
               >
-                All (35)
+                All ({rokaMutations.length})
               </button>
               <button
                 onClick={() => setFilterType('stand-reset')}

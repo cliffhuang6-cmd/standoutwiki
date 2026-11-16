@@ -6,7 +6,7 @@ export const quests: Quest[] = [
     "title": "Storyline 1: The Standless Awakening",
     "npc": "Tutorial Instructor",
     "category": "Storyline",
-    "location": "Central Morioh Plaza",
+    "location": "Central Honolulu Plaza",
     "prerequisites": "New Character / Level 1",
     "objectives": [
       "Speak to the Tutorial Instructor in the central town square.",
@@ -110,7 +110,7 @@ export const quests: Quest[] = [
     "title": "Storyline 6: The Subterranean Pressure Gates",
     "npc": "Jodio Joestar",
     "category": "Storyline",
-    "location": "Morioh Sewer System",
+    "location": "Downtown Drainage Network",
     "prerequisites": "Level 32+ & Storyline 5 Complete",
     "objectives": [
       "Enter the sewer grate beneath the Central Fountain.",
@@ -275,12 +275,12 @@ export const quests: Quest[] = [
     "title": "Space Oddity: The JoJosapiens Exhibition",
     "npc": "Major Tom",
     "category": "Sub-Ability",
-    "location": "Morioh Astronomical Observatory",
+    "location": "O'ahu Summit Observatory",
     "prerequisites": "Level 50 Cap & 7,500 Catalog Sales",
     "objectives": [
       "Visit Major Tom at the top of the Astronomical Observatory.",
       "Answer 20 historical JoJo trivia questions with 100% accuracy (0/20).",
-      "Collect 50 survey response ballots scattered across Morioh districts."
+      "Collect 50 survey response ballots scattered across Honolulu districts."
     ],
     "rewards": {
       "dalas": 15000,

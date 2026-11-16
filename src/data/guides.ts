@@ -34,7 +34,7 @@ export const guides: Guide[] = [
       {
         "id": "first-hour",
         "title": "The First 15 Minutes",
-        "content": "When you first spawn into Roblox STAND OUT, you start as a Standless civilian in the Morioh central plaza. Follow the glowing waypoint to speak with the Tutorial Instructor. Complete the fundamental combat training drills: perform light combos with LMB, guard with F, and dash with Q. Finishing this initial sequence awards you your first Mysterious Arrow and 500 Dalas to fund your early journey.",
+        "content": "When you first spawn into Roblox STAND OUT, you start as a Standless civilian in the Central Honolulu Plaza. Follow the glowing waypoint to speak with the Tutorial Instructor. Complete the fundamental combat training drills: perform light combos with LMB, guard with F, and dash with Q. Finishing this initial sequence awards you your first Mysterious Arrow and 500 Dalas to fund your early journey.",
         "steps": [
           "Talk to the Tutorial Instructor in the Central Plaza.",
           "Complete the 3 combat drills (LMB 4-hit combo, F guard, Q dash).",
@@ -49,7 +49,7 @@ export const guides: Guide[] = [
       {
         "id": "first-stand",
         "title": "Awakening Your First Stand",
-        "content": "Equip the Mysterious Arrow to your hotbar and click to initiate the Stand awakening ritual. In STAND OUT, every arrow roll pulls from the standard drop pool: Common/Rare (82%), Epic (13.5%), Legendary (4%), Mythical (0.43%), and Pinnacle (0.07%). If you roll an early Rare like Yellow Temperance or Beach Boy, keep it! These Stands have exceptional early-game survivability and clear speed.",
+        "content": "Equip the Mysterious Arrow to your hotbar and click to initiate the Stand awakening ritual. In STAND OUT, every arrow roll pulls from the standard drop pool: Common/Rare (82%), Epic (13.5%), Legendary (4%), Mythical (~0.50%), and Pinnacle (~0.50% tier chance). If you roll an early Rare like Yellow Temperance or Beach Boy, keep it! These Stands have exceptional early-game survivability and clear speed.",
         "tips": [
           "Never reset a Stand immediately if it has high farming utility (like Yellow Temperance or Harvest).",
           "Visit D'Arby's casino parlor downtown to purchase Stand Storage Chips before rolling arrows with high pity."
@@ -475,7 +475,7 @@ export const guides: Guide[] = [
       {
         "id": "lucky-rates",
         "title": "Drop Probabilities & 1.5% Pinnacle Math",
-        "content": "The Lucky Arrow represents the primary bridge between standard arrow grinding and high-rarity Stand acquisition. Unlike standard Mysterious Arrows which feature a crushing 0.07% Pinnacle probability, Lucky Arrows elevate Pinnacle Stand chances to an impressive 1.5%—a more than 21x statistical improvement. Furthermore, Common and low Rare tier outcomes are drastically suppressed.",
+        "content": "The Lucky Arrow represents the primary bridge between standard arrow grinding and high-rarity Stand acquisition. Unlike standard Mysterious Arrows which feature a baseline ~0.50% Pinnacle tier probability, Lucky Arrows elevate Pinnacle Stand chances to an impressive 1.5%—a 3x statistical improvement. Furthermore, Common and low Rare tier outcomes are drastically suppressed.",
         "table": {
           "headers": [
             "Stand Rarity",
@@ -486,9 +486,9 @@ export const guides: Guide[] = [
           "rows": [
             [
               "Pinnacle (SP, TW, KC)",
-              "0.07%",
+              "~0.50%",
               "1.50%",
-              "+2,042% Increase (21x)"
+              "+200% Increase (3x)"
             ],
             [
               "Mythical (November Rain, etc.)",
@@ -1062,9 +1062,9 @@ export const guides: Guide[] = [
       {
         "id": "stat-preservation",
         "title": "Retaining Skill Mastery & Sub-Abilities",
-        "content": "Unlike standard Rokakakas which reset your Sub-Ability and player level, Stand Evolution preserves your Hamon or Vampire mastery completely intact. Your 225 allocated stat points remain assigned, allowing immediate competitive deployment.",
+        "content": "Unlike standard Rokakakas which reset your Sub-Ability and player level, Stand Evolution preserves your Hamon or Vampire mastery completely intact. Your 150 allocated stat points remain assigned, allowing immediate competitive deployment.",
         "tips": [
-          "Visit Aya Tsuji in Morioh to refine your facial enhancements after evolution to optimize your secondary passive stats."
+          "Visit the cosmetic boutique in downtown Honolulu to refine your facial enhancements after evolution to optimize your secondary passive stats."
         ]
       }
     ]
@@ -1102,7 +1102,7 @@ export const guides: Guide[] = [
       {
         "id": "hamon-obtainment",
         "title": "Lisa Lisa Mountain Trial & Questline",
-        "content": "Hamon is the premier physical Sub-Ability in STAND OUT. To learn Hamon, your character must reach Level 25 and travel to the Mountain Monastery outside Morioh. Speak with Master Lisa Lisa to begin the Hamon Trial: complete the breathing endurance trial and defeat the 3 Ripple Acolytes without using Stand abilities.",
+        "content": "Hamon is the premier physical Sub-Ability in STAND OUT. To learn Hamon, your character must reach Level 25 and travel to the Highland Training Retreat on the O'ahu ridgeline. Speak with Master Lisa Lisa to begin the Hamon Trial: complete the breathing endurance trial and defeat the 3 Ripple Acolytes without using Stand abilities.",
         "steps": [
           "Reach Level 25 and bring 5,000 Dalas to the Mountain Monastery.",
           "Talk to Lisa Lisa to accept the \"Way of the Sun\" initiation quest.",
@@ -1399,7 +1399,7 @@ export const guides: Guide[] = [
       {
         "id": "world-boss-timers",
         "title": "World Boss Spawn Timers & Locations",
-        "content": "World bosses roam designated public zones across Morioh and drop unique legendary accessories and large cash bounties. When a boss spawns, a global server notification appears in chat. Bosses despawn after 15 minutes if not engaged.",
+        "content": "World bosses roam designated public zones across O'ahu and drop unique legendary accessories and large cash bounties. When a boss spawns, a global server notification appears in chat. Bosses despawn after 15 minutes if not engaged.",
         "table": {
           "headers": [
             "World Boss",
@@ -1485,7 +1485,7 @@ export const guides: Guide[] = [
     "tableOfContents": [
       {
         "id": "act-one",
-        "title": "Quests 1 to 5: Morioh Streets to Downtown"
+        "title": "Quests 1 to 5: Honolulu Streets to Downtown"
       },
       {
         "id": "act-two",
@@ -1500,15 +1500,15 @@ export const guides: Guide[] = [
         "title": "Huber Phone, Stand Storage Chips & EXP"
       },
       {
-        "id": "level-75-transition",
+        "id": "level-50-transition",
         "title": "Completing the Main Campaign & Endgame"
       }
     ],
     "sections": [
       {
         "id": "act-one",
-        "title": "Quests 1 to 5: Morioh Streets to Downtown",
-        "content": "The first chapter of STAND OUT introduces players to the criminal underworld of Morioh. Beginning with the Tutorial Instructor, Quest 2 introduces Meryl Mei Qi for the driving delivery task that unlocks the Smartphone. Quest 3 tasks you with investigating Billy in the back alley, while Quests 4 and 5 require clearing out street thugs and recovering stolen Stand arrows.",
+        "title": "Quests 1 to 5: Honolulu Streets to Downtown",
+        "content": "The first chapter of STAND OUT introduces players to the criminal underworld of Honolulu. Beginning with the Tutorial Instructor, Quest 2 introduces Meryl Mei Qi for the driving delivery task that unlocks the Smartphone. Quest 3 tasks you with investigating Billy in the back alley, while Quests 4 and 5 require clearing out street thugs and recovering stolen Stand arrows.",
         "table": {
           "headers": [
             "Quest #",
@@ -1706,7 +1706,7 @@ export const guides: Guide[] = [
     "slug": "gardening",
     "title": "Stand Out Gardening Guide: Crops, Greenhouses & Roka Mutations",
     "category": "Economy",
-    "description": "The definitive agricultural guide for Stand Out. Crop growth timers, 3x Gang Greenhouse buffs, produce packaging, and 35 Rokakaka mutation strains.",
+    "description": "The definitive agricultural guide for Stand Out. Crop growth timers, 3x Gang Greenhouse buffs, produce packaging, and 33 Rokakaka mutation strains.",
     "readingTime": "7 min read",
     "updatedDate": "2026-11-16",
     "tableOfContents": [
@@ -1724,7 +1724,7 @@ export const guides: Guide[] = [
       },
       {
         "id": "roka-mutations",
-        "title": "Cultivating 35 Rokakaka Strains with 3% Base Odds"
+        "title": "Cultivating 33 Rokakaka Strains with 3% Base Odds"
       },
       {
         "id": "produce-packaging",
@@ -1797,8 +1797,8 @@ export const guides: Guide[] = [
       },
       {
         "id": "roka-mutations",
-        "title": "Cultivating 35 Rokakaka Strains with 3% Base Odds",
-        "content": "Every harvested Rokakaka has a base 3% probability of mutating into one of 35 specialized strains (such as Emerald Roka, Sapphire Roka, Amethyst Roka, or Opal Roka). Each mutated strain possesses unique equivalent exchange mechanics, removing specific sub-abilities or triggering Stand evolution without resetting player level.",
+        "title": "Cultivating 33 Rokakaka Strains with 3% Base Odds",
+        "content": "Every harvested Rokakaka has a base 3% probability of mutating into one of 33 specialized strains (such as Emerald Roka, Sapphire Roka, Amethyst Roka, or Opal Roka). Each mutated strain possesses unique equivalent exchange mechanics, removing specific sub-abilities or triggering Stand evolution without resetting player level.",
         "table": {
           "headers": [
             "Mutated Strain",

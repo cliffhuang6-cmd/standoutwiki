@@ -94,7 +94,7 @@ export default function SearchModal() {
       { title: 'Stand Rarity & Chances', url: '/stand-rarity/', desc: 'Bernoulli probability & roll tables' },
       { title: 'Hamon (The Ripple)', url: '/hamon/', desc: 'Lisa Lisa quest & 3 Hamon paths' },
       { title: 'Vampire (Stone Mask)', url: '/vampire/', desc: 'Blood mechanics & Shadow Cloak' },
-      { title: 'Rokakaka Fruit Mutations', url: '/rokakaka/', desc: 'Stand reset & 35 mutations' },
+      { title: 'Rokakaka Fruit Mutations', url: '/rokakaka/', desc: 'Stand reset & 33 mutations' },
       { title: 'Gardening & Crops', url: '/gardening/', desc: 'Seeds, soil, water & greenhouse' },
       { title: 'Stand Storage & D\'Arby', url: '/stand-storage/', desc: 'Stand chips and slots' },
       { title: 'Quests & NPC Directory', url: '/quests/', desc: 'Story quests & bounty targets' },

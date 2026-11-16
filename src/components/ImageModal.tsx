@@ -96,7 +96,7 @@ export default function ImageModal({ src, alt, title, subtitle, className = '' }
             {/* Modal Footer / Navigation Hint */}
             <div className="flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span>Click outside or press Esc to close</span>
-              <span className="text-emerald-700 font-bold">Stand Out Official Game Asset</span>
+              <span className="text-slate-500 font-medium">Stand Out Wiki</span>
             </div>
           </div>
         </div>

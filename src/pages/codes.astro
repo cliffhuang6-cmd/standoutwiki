@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CodeCard from '../components/CodeCard';
-import { codes, activeCodes, unverifiedCodes, expiredCodes } from '../data/codes';
+import { recentCodes, expiredCodes } from '../data/codes';
 ---
 
 <Layout
   title="Stand Out Codes (November 2026) – Working Roblox Codes & Rewards"
-  description="All working Roblox STAND OUT codes for November 2026. Redeem free Lucky Arrows, Mysterious Arrows, and Dalas. Includes redemption steps and server troubleshooting."
+  description="All current Roblox STAND OUT codes for November 2026. Redeem free Lucky Arrows, Mysterious Arrows, and Dalas cash. Includes redemption tutorial and server tips."
   canonicalPath="codes"
   breadcrumbs={[{ label: 'Codes' }]}
   schemaType="CollectionPage"
@@ -16,7 +16,7 @@ import { codes, activeCodes, unverifiedCodes, expiredCodes } from '../data/codes
     <div class="max-w-3xl mb-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
         <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-        <span>Status Checked &amp; Documented: November 16, 2026</span>
+        <span>Updated for November 2026</span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
@@ -24,18 +24,18 @@ import { codes, activeCodes, unverifiedCodes, expiredCodes } from '../data/codes
       </h1>
 
       <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Looking for the latest free codes for Roblox <strong>STAND OUT</strong>? Below you will find every active, working code for free Lucky Arrows, Mysterious Arrows, and Dalas cash, thoroughly verified against Studio Umbra's latest patch deployments.
+        Looking for the latest free promo codes for Roblox <strong>STAND OUT</strong>? Below you will find every active and recent code for free Lucky Arrows, Mysterious Arrows, and Dalas cash. Copy any code and redeem it directly inside the in-game Smartphone app.
       </p>
     </div>
 
-    <!-- Active Codes Section -->
+    <!-- Stand Out Codes Section (Active & Recent) -->
     <section class="mb-14">
       <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
         <div>
           <h2 class="text-xl font-black text-slate-900 flex items-center gap-2">
-            <span>🟢 Confirmed Active Codes</span>
+            <span>Stand Out Codes</span>
             <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-bold">
-              {activeCodes.length} Available
+              {recentCodes.length} Available
             </span>
           </h2>
           <p class="text-xs text-slate-500 mt-0.5">Click any code to instantly copy it to your clipboard.</p>
@@ -43,42 +43,42 @@ import { codes, activeCodes, unverifiedCodes, expiredCodes } from '../data/codes
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {activeCodes.map((c) => (
+        {recentCodes.map((c) => (
           <CodeCard client:load code={c} />
         ))}
       </div>
     </section>
 
-    <!-- Unverified Codes Section -->
-    {unverifiedCodes.length > 0 && (
+    <!-- Expired Codes Section -->
+    {expiredCodes.length > 0 && (
       <section class="mb-14">
         <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
           <div>
             <h2 class="text-xl font-black text-slate-900 flex items-center gap-2">
-              <span>🟡 Unverified / Status Uncertain Codes</span>
-              <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-bold">
-                {unverifiedCodes.length} Uncertain
+              <span>Expired Stand Out Codes</span>
+              <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs font-mono font-bold">
+                {expiredCodes.length} Expired
               </span>
             </h2>
-            <p class="text-xs text-slate-500 mt-0.5">These codes depend on recent server restart clusters or regional rollout instances.</p>
+            <p class="text-xs text-slate-500 mt-0.5">These codes have concluded their promotional period and no longer grant rewards.</p>
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {unverifiedCodes.map((c) => (
+          {expiredCodes.map((c) => (
             <CodeCard client:load code={c} />
           ))}
         </div>
       </section>
     )}
 
-    <!-- Step-by-Step Redemption Guide -->
+    <!-- How to Redeem Codes in Stand Out -->
     <section class="mb-14 bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
       <div class="max-w-2xl mb-6">
         <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Tutorial</span>
         <h2 class="text-2xl font-black text-slate-900 mt-1">How to Redeem Codes in Stand Out</h2>
         <p class="text-xs text-slate-500 mt-1">
-          Unlike generic Roblox games with a Twitter bird icon on the screen, STAND OUT handles code redemption through the in-game Smartphone item.
+          STAND OUT handles code redemption through the in-game Smartphone item rather than on-screen buttons.
         </p>
       </div>
 
@@ -89,7 +89,7 @@ import { codes, activeCodes, unverifiedCodes, expiredCodes } from '../data/codes
           </div>
           <h3 class="font-extrabold text-sm text-slate-900">Unlock the Smartphone</h3>
           <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
-            Complete <strong>Storyline Quest 2</strong> from NPC <strong>Meryl Mei Qi</strong> in the town boutique. She rewards you with the permanent Smartphone item.
+            Complete early storyline delivery objectives in Honolulu. NPC <strong>Meryl Mei Qi</strong> rewards you with your permanent Smartphone item.
           </p>
         </div>
 
@@ -99,7 +99,7 @@ import { codes, activeCodes, unverifiedCodes, expiredCodes } from '../data/codes
           </div>
           <h3 class="font-extrabold text-sm text-slate-900">Open the "Gifts" App</h3>
           <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
-            Open your backpack or press your assigned phone hotkey, select the Smartphone, and tap the <strong>Gifts (Codes)</strong> application icon on the screen.
+            Equip your Smartphone from your hotbar (or press `M` on PC). Look for the gift box icon labeled <strong>Gifts (Codes)</strong>.
           </p>
         </div>
 
@@ -107,80 +107,84 @@ import { codes, activeCodes, unverifiedCodes, expiredCodes } from '../data/codes
           <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white font-black flex items-center justify-center text-sm mb-3">
             3
           </div>
-          <h3 class="font-extrabold text-sm text-slate-900">Enter &amp; Claim Reward</h3>
+          <h3 class="font-extrabold text-sm text-slate-900">Enter Code &amp; Redeem</h3>
           <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
-            Paste any active code from this page into the text field and press Enter. Your free arrows and Dalas will be instantly deposited into your inventory!
+            Paste your code into the text field and click <strong>Redeem</strong>. Your free Arrows and Dalas will be instantly deposited into your inventory.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Troubleshooting Guide -->
+    <!-- Why Codes Are Not Working -->
     <section class="mb-14 bg-slate-50 rounded-2xl border border-slate-200 p-6 md:p-8">
-      <h2 class="text-xl font-black text-slate-900 mb-4">Why is My Code Not Working?</h2>
-      <div class="space-y-4 text-xs text-slate-600 leading-relaxed">
-        <div class="bg-white p-4 rounded-xl border border-slate-200">
-          <h3 class="font-bold text-slate-900 text-sm mb-1">1. "New Servers Only" Restriction</h3>
-          <p>
-            Certain milestone codes (such as <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-900 font-bold">50KLIKES</code>) only activate on game server instances booted <em>after</em> the code deployment script ran. If you receive an error, leave the experience, join a different server instance, and re-attempt redemption.
+      <div class="max-w-2xl mb-6">
+        <span class="text-xs font-black uppercase tracking-wider text-amber-700">Troubleshooting</span>
+        <h2 class="text-2xl font-black text-slate-900 mt-1">Why Are My Codes Not Working?</h2>
+        <p class="text-xs text-slate-600 mt-1">
+          If you receive an error message when submitting a code, check these common causes:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+        <div class="p-4 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-bold text-sm text-slate-900 mb-1">1. New Server Instance Required</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Milestone codes such as <code>50KLIKES</code> are injected on server restart. If you are in an older server running prior patch versions, the code may display as invalid. Simply re-join a fresh public or private server to resolve this.
           </p>
         </div>
 
-        <div class="bg-white p-4 rounded-xl border border-slate-200">
-          <h3 class="font-bold text-slate-900 text-sm mb-1">2. Case Sensitivity &amp; Spacing</h3>
-          <p>
-            STAND OUT codes are case-sensitive. All developer codes are written in FULL UPPERCASE with numbers (e.g., <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-900 font-bold">SORRY4SHUTDOWN</code>). Avoid accidental trailing whitespace when pasting on mobile.
+        <div class="p-4 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-bold text-sm text-slate-900 mb-1">2. Case Sensitivity</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Roblox promo codes are strictly case-sensitive. All STAND OUT codes use uppercase letters with numbers (e.g. <code>SORRY4SHUTDOWN</code>). Use the copy button above to avoid typing mistakes.
           </p>
         </div>
 
-        <div class="bg-white p-4 rounded-xl border border-slate-200">
-          <h3 class="font-bold text-slate-900 text-sm mb-1">3. Strict Event Deadlines</h3>
-          <p>
-            Codes like <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-900 font-bold">THANKYOUHUGERELEASETHANKS</code> were published with a strict 24-hour expiration timer announced on the developer Discord. Expired codes are permanently moved to our archive below.
+        <div class="p-4 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-bold text-sm text-slate-900 mb-1">3. Leading or Trailing Spaces</h3>
+          <p class="text-slate-600 leading-relaxed">
+            If you manually highlight and copy a code on mobile, an accidental trailing space can cause the redemption system to register an unrecognized string.
+          </p>
+        </div>
+
+        <div class="p-4 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-bold text-sm text-slate-900 mb-1">4. Promotional Period Ended</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Certain celebration codes (like <code>THANKYOUHUGERELEASETHANKS</code>) are timed 24-hour drops that deactivate automatically once the milestone celebration closes.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Expired Codes Archive -->
+    <!-- FAQ Section -->
     <section class="mb-14">
-      <div class="pb-4 border-b border-slate-200 mb-6">
-        <h2 class="text-xl font-black text-slate-900 flex items-center gap-2">
-          <span>⚪ Expired Codes Archive</span>
-          <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 text-xs font-mono font-bold">
-            {expiredCodes.length} Expired
-          </span>
-        </h2>
-        <p class="text-xs text-slate-500 mt-0.5">These codes have expired and can no longer be redeemed.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {expiredCodes.map((c) => (
-          <CodeCard client:load code={c} />
-        ))}
-      </div>
-    </section>
-
-    <!-- Codes FAQ Section -->
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
-      <h2 class="text-xl font-black text-slate-900 mb-4">Frequently Asked Questions About Codes</h2>
-      <div class="space-y-4 text-xs text-slate-600 leading-relaxed">
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-          <h3 class="font-bold text-slate-900 text-sm mb-1">When will the next STAND OUT code release?</h3>
-          <p>
-            The developer Studio Umbra announced that the next major milestone reward will unlock once the game reaches 100,000 likes on Roblox. We monitor official channels continuously and update this page within minutes of release.
+      <h2 class="text-2xl font-black text-slate-900 mb-6">Frequently Asked Questions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-5 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-extrabold text-sm text-slate-900">How often are new Stand Out codes released?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            New codes are typically published during emergency restart maintenance, community like milestones (such as 50k and 100k likes), and major content expansions.
           </p>
         </div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-          <h3 class="font-bold text-slate-900 text-sm mb-1">Can I redeem the same code more than once?</h3>
-          <p>
-            No. Every promo code can only be redeemed once per Roblox player account. Attempting to enter a previously claimed code will display an "Already Redeemed" prompt.
+
+        <div class="p-5 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-extrabold text-sm text-slate-900">Can I redeem a code more than once?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            No. Each promotional code can only be redeemed once per Roblox account.
           </p>
         </div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-          <h3 class="font-bold text-slate-900 text-sm mb-1">Do I need to join a group to claim codes?</h3>
-          <p>
-            Certain special codes require your Roblox account to be a member of the developer's community group before the Gifts app will deposit the items into your backpack.
+
+        <div class="p-5 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-extrabold text-sm text-slate-900">What do Lucky Arrows and Bizarre Arrows do?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Lucky Arrows boost your odds of awakening Pinnacle and Mythical Stands, while Bizarre Arrows focus rolls into exclusive alternative combat styles.
+          </p>
+        </div>
+
+        <div class="p-5 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-extrabold text-sm text-slate-900">Do I need to spend Robux to claim codes?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Never. All codes listed on Stand Out Wiki are 100% free to redeem in-game.
           </p>
         </div>
       </div>
