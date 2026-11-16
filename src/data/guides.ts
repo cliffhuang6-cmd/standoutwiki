@@ -240,7 +240,7 @@ export const guides: Guide[] = [
   },
   {
     "slug": "level-up-fast",
-    "title": "How to Level Up Fast in Stand Out: 1 to 75 EXP Route",
+    "title": "How to Level Up Fast in Stand Out: 1 to 50 EXP Route",
     "category": "Progression",
     "description": "Fastest verified leveling methods in Stand Out. Optimize storyline progression, mob farming loops, daily bounties, and EXP booster usage.",
     "readingTime": "7 min read",
@@ -252,15 +252,15 @@ export const guides: Guide[] = [
       },
       {
         "id": "early-levels",
-        "title": "Levels 1 - 25: Storyline Rush"
+        "title": "Levels 1 - 15: Storyline Rush"
       },
       {
         "id": "mid-levels",
-        "title": "Levels 26 - 50: Mob Loops & Bounties"
+        "title": "Levels 16 - 35: Mob Loops & Bounties"
       },
       {
         "id": "endgame-grind",
-        "title": "Levels 51 - 75: SWAT Captain & Train Raids"
+        "title": "Levels 36 - 50: SWAT Captain & Train Raids"
       },
       {
         "id": "boosters",
@@ -1305,7 +1305,7 @@ export const guides: Guide[] = [
       {
         "id": "raid-entry",
         "title": "Passione Train & 77 Rings Requirements",
-        "content": "Raids represent the pinnacle collaborative content in STAND OUT. Passione Train Raid unlocks at Level 45 and pits 4 players against moving train car waves before fighting Boss Prosciutto & Pesci. The 77 Rings Raid unlocks at Level 60 in the ancient catacombs, featuring multi-tiered puzzle traps and the SWAT Commander encounter.",
+        "content": "Raids represent the pinnacle collaborative content in STAND OUT. Passione Train Raid unlocks at Level 45 and pits 4 players against moving train car waves before fighting Boss Prosciutto & Pesci. The 77 Rings Raid unlocks at Level 50 in the ancient catacombs, featuring multi-tiered puzzle traps and the SWAT Commander encounter.",
         "table": {
           "headers": [
             "Raid Name",
@@ -1324,7 +1324,7 @@ export const guides: Guide[] = [
             ],
             [
               "77 Rings Raid",
-              "Level 60+",
+              "Level 50 (Max)",
               "3 - 5 Players",
               "SWAT Commander & Rings",
               "DIO's Diary, Opal Roka, Master Chips"
@@ -1427,14 +1427,14 @@ export const guides: Guide[] = [
               "Prosciutto & Pesci",
               "Every 60 mins",
               "Train Station Platform 3",
-              "Level 55+",
+              "Level 45+",
               "Passione Overcoat (+12% DMG)"
             ],
             [
               "Vampire Lord",
               "Midnight Only",
               "Catacombs Crypt",
-              "Level 65+",
+              "Level 50 (Max)",
               "Ancient Stone Mask"
             ]
           ]
@@ -1735,7 +1735,7 @@ export const guides: Guide[] = [
       {
         "id": "gardening-setup",
         "title": "Garden Pots, Dirt Bags & Ice Water Basics",
-        "content": "Gardening is both the financial backbone of STAND OUT and the sole method for acquiring the 35 verified Rokakaka fruit mutation strains. To begin gardening, purchase a Garden Pot and a Dirt Bag from the Market Florist. Place the pot in your personal plot, fill it with rich soil, plant your chosen seed, and keep it hydrated with Ice Water.",
+        "content": "Gardening is both the financial backbone of STAND OUT and the sole method for acquiring the 33 verified Rokakaka fruit mutation strains. To begin gardening, purchase a Garden Pot and a Dirt Bag from the Market Florist. Place the pot in your personal plot, fill it with rich soil, plant your chosen seed, and keep it hydrated with Ice Water.",
         "steps": [
           "Purchase 1 Garden Pot (200 Dalas) and 1 Dirt Bag (100 Dalas).",
           "Deploy the pot on your assigned garden plot.",
@@ -1953,7 +1953,7 @@ export const guides: Guide[] = [
       {
         "id": "starter-progression",
         "title": "Upgrading Your First Stand to Mid-Game Viability",
-        "content": "By pairing your starter Stand with the Hamon Sub-Ability and acquiring early accessories like the Student Uniform or Leather Gloves, a Rare Stand like Yellow Temperance can comfortably carry you all the way to Level 60 raid content.",
+        "content": "By pairing your starter Stand with the Hamon Sub-Ability and acquiring early accessories like the Student Uniform or Leather Gloves, a Rare Stand like Yellow Temperance can comfortably carry you all the way to Level 50 endgame raid content.",
         "tips": [
           "Focus stat points evenly into Health (50) and Damage (50) during your first 35 levels for maximum survivability."
         ]

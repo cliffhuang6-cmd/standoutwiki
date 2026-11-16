@@ -63,13 +63,13 @@ if (itemSlugs.length !== 28) {
 
 // 6. Rokakaka Count
 const rokaCode = fs.readFileSync(path.join(projectRoot, 'src/data/rokakaka.ts'), 'utf8');
-const rokaSlugs = [...rokaCode.matchAll(/"slug":\s*"([^"]+)"/g)].map(m => m[1]);
+const rokaSlugs = [...rokaCode.matchAll(/["']?slug["']?:\s*["']([^"']+)["']/g)].map(m => m[1]);
 console.log(`[Roka Mutations Count] Total: ${rokaSlugs.length}`);
-if (rokaSlugs.length !== 35) {
-  console.error(`  FAIL: Expected 35 mutations, got ${rokaSlugs.length}`);
+if (rokaSlugs.length !== 33) {
+  console.error(`  FAIL: Expected 33 mutations, got ${rokaSlugs.length}`);
   pass = false;
 } else {
-  console.log(`  PASS: Exactly 35 verified mutations.`);
+  console.log(`  PASS: Exactly 33 verified mutations.`);
 }
 
 // 7. Quests Count
@@ -145,8 +145,8 @@ function checkLevel75(dir) {
       const content = fs.readFileSync(full, 'utf8');
       const lines = content.split('\n');
       lines.forEach((l, idx) => {
-        if (/level\s*75/i.test(l) || /225\s*stat/i.test(l) || /225\s*sp/i.test(l) || /225\s*points/i.test(l)) {
-          console.error(`  LEVEL 75/225 in ${full}:${idx + 1} -> ${l.trim()}`);
+        if (/level\s*75/i.test(l) || /1\s*(?:-|to)\s*75/i.test(l) || /51\s*-\s*75/i.test(l) || /225\s*stat/i.test(l) || /225\s*sp/i.test(l) || /225\s*points/i.test(l) || /level\s*(?:5[1-9]|[6-9]\d)/i.test(l)) {
+          console.error(`  LEVEL >50 or 75/225 in ${full}:${idx + 1} -> ${l.trim()}`);
           level75Found++;
         }
       });

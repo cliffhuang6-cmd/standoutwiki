@@ -174,7 +174,7 @@ export const quests: Quest[] = [
     "npc": "Prosciutto & Pesci",
     "category": "Storyline",
     "location": "High-Speed Express Train",
-    "prerequisites": "Level 55+ & Storyline 8 Complete",
+    "prerequisites": "Level 48+ & Storyline 8 Complete",
     "objectives": [
       "Board the express train to Venice.",
       "Survive the Withering Mist aging aura by drinking Ice Water (0/3).",

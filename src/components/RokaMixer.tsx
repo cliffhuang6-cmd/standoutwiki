@@ -146,7 +146,7 @@ export default function RokaMixer() {
             Cultivation &amp; Equivalent Exchange Calculator
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Calculate agricultural 3% mutation odds, harvest timelines, supply costs, and 35 verified mutation strains.
+            Calculate agricultural 3% mutation odds, harvest timelines, supply costs, and 33 verified mutation strains.
           </p>
         </div>
 
