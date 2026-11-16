@@ -4,7 +4,7 @@ export const siteConfig = {
   domain: 'standoutwiki.org',
   url: 'https://standoutwiki.org',
   contactEmail: 'contact@standoutwiki.org',
-  description: 'The definitive independent Wiki, database, tier list, tools, and guides for Roblox STAND OUT by Studio Umbra: Europa.',
+  description: 'Stand Out Wiki – Explore Roblox STAND OUT stands, movesets, tier lists, codes, arrow drop rates, items, and guides. Independent fan-made resource.',
   ogImage: 'https://standoutwiki.org/og-image.png',
   logoUrl: 'https://standoutwiki.org/images/brand/stand-out-wiki-logo.webp',
   iconUrl: 'https://standoutwiki.org/images/brand/stand-out-wiki-icon.png',
