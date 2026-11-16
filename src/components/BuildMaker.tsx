@@ -3,8 +3,8 @@ import { Shield, Zap, Heart, RotateCcw, Save, Share2, Check, Award, Sparkles } f
 import { stands } from '../data/stands';
 import { accessories } from '../data/accessories';
 
-const MAX_LEVEL = 75;
-const MAX_STAT_POINTS = MAX_LEVEL * 3; // 225 points
+const MAX_LEVEL = 50;
+const MAX_STAT_POINTS = MAX_LEVEL * 3; // 150 points
 
 const SUB_ABILITIES = [
   { id: 'none', name: 'None (Pure Stand)', desc: 'Standard Stand combat without sub-ability moveset' },
@@ -17,9 +17,9 @@ const SUB_ABILITIES = [
 export default function BuildMaker() {
   const [selectedStandSlug, setSelectedStandSlug] = useState('star-platinum');
   const [selectedSubAbility, setSelectedSubAbility] = useState('hamon-jonathan');
-  const [healthPoints, setHealthPoints] = useState(80);
-  const [damagePoints, setDamagePoints] = useState(85);
-  const [abilityPoints, setAbilityPoints] = useState(60);
+  const [healthPoints, setHealthPoints] = useState(50);
+  const [damagePoints, setDamagePoints] = useState(55);
+  const [abilityPoints, setAbilityPoints] = useState(45);
   const [selectedJacket, setSelectedJacket] = useState('jotaros-jacket');
   const [selectedPants, setSelectedPants] = useState('jotaros-pants');
   const [copiedLink, setCopiedLink] = useState(false);
@@ -36,9 +36,9 @@ export default function BuildMaker() {
     const sub = params.get('sub');
 
     if (stand && stands.some((s) => s.slug === stand)) setSelectedStandSlug(stand);
-    if (!isNaN(h)) setHealthPoints(Math.max(0, Math.min(225, h)));
-    if (!isNaN(d)) setDamagePoints(Math.max(0, Math.min(225, d)));
-    if (!isNaN(a)) setAbilityPoints(Math.max(0, Math.min(225, a)));
+    if (!isNaN(h)) setHealthPoints(Math.max(0, Math.min(150, h)));
+    if (!isNaN(d)) setDamagePoints(Math.max(0, Math.min(150, d)));
+    if (!isNaN(a)) setAbilityPoints(Math.max(0, Math.min(150, a)));
     if (sub && SUB_ABILITIES.some((s) => s.id === sub)) setSelectedSubAbility(sub);
   }, []);
 
@@ -86,9 +86,9 @@ export default function BuildMaker() {
   };
 
   const resetBuild = () => {
-    setHealthPoints(75);
-    setDamagePoints(75);
-    setAbilityPoints(75);
+    setHealthPoints(50);
+    setDamagePoints(50);
+    setAbilityPoints(50);
   };
 
   const copyShareLink = () => {
@@ -130,7 +130,7 @@ export default function BuildMaker() {
             Interactive Stat Simulator
           </div>
           <h3 className="text-xl font-black tracking-tight mt-0.5">Stand Out Character Build &amp; Stats Maker</h3>
-          <p className="text-xs text-emerald-200">Max Level 75 Cap • 225 Available Stat Points • Set Bonus Calculations</p>
+          <p className="text-xs text-emerald-200">Max Level 50 Cap • 150 Available Stat Points • Set Bonus Calculations</p>
         </div>
 
         <div className="flex items-center gap-2">

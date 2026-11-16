@@ -1,118 +1,201 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { siteConfig } from '../data/site';
-
 ---
 
 <Layout
-  title="Stand Out Trello & Official Links – Studio Umbra Discord & Game | Stand Out Wiki"
-  description="Verified directory of official links for Roblox STAND OUT. Access the official developer Trello boards, Studio Umbra Discord, Roblox group, and game portal."
+  title="Stand Out Trello Guide & Game Directory | Stand Out Wiki"
+  description="Comprehensive breakdown of the Roblox STAND OUT Trello directory. Learn how movesets, 43 Stands, drop percentages, gardening, and patch notes are organized."
   canonicalPath="trello"
-  breadcrumbs={[{ label: 'Official Links & Trello' }]}
+  breadcrumbs={[{ label: 'Trello Guide' }]}
   schemaType="Article"
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-    <div class="mb-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
-        <span>Verified First-Party Portals</span>
-        <span>•</span>
-        <span>Official Community Hubs</span>
+    <!-- Header -->
+    <div class="mb-10 pb-8 border-b border-slate-200">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3 border border-emerald-200">
+        <span>Game Architecture &amp; Data Roadmap</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-        Stand Out Official Trello &amp; Community Links
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+        Stand Out Trello Guide &amp; Database Directory
       </h1>
 
-      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Looking for direct developer channels for Roblox <strong>STAND OUT</strong>? Below is the verified directory of official links maintained by <strong>Studio Umbra: Europa</strong>.
+      <p class="mt-4 text-base text-slate-600 leading-relaxed font-medium">
+        Many players look for the developer Trello to check raw card notes, move cooldowns, and agricultural formulas for Studio Umbra's <strong>STAND OUT</strong>. This guide explains how the board is structured and directs you to our verified, searchable Wiki pages.
       </p>
     </div>
 
-    <!-- Links Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-      <!-- Official Trello -->
-      <a
-        href={siteConfig.officialTrelloUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all group flex flex-col justify-between"
-      >
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center font-black text-xl mb-3">
-            📋
-          </div>
-          <h2 class="text-lg font-black text-slate-900 group-hover:text-emerald-700">
-            Official Stand Out Trello
-          </h2>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-            The developer board containing cards for every Stand moveset, status effect, boss stat, and world event.
-          </p>
-        </div>
-        <span class="text-xs font-bold text-emerald-700 mt-4 block">Open Trello Board ↗</span>
+    <!-- Quick Navigation Hub -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12">
+      <a href="/stands/" class="p-4 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-xs transition-all block text-center">
+        <span class="text-xs font-black text-slate-900 block">43 Stands Database</span>
+        <span class="text-[11px] text-emerald-700 font-semibold mt-1 block">Browse Movesets →</span>
       </a>
+      <a href="/codes/" class="p-4 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-xs transition-all block text-center">
+        <span class="text-xs font-black text-slate-900 block">Active Codes</span>
+        <span class="text-[11px] text-emerald-700 font-semibold mt-1 block">View Codes →</span>
+      </a>
+      <a href="/stand-arrows/" class="p-4 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-xs transition-all block text-center">
+        <span class="text-xs font-black text-slate-900 block">Arrow Drop Rates</span>
+        <span class="text-[11px] text-emerald-700 font-semibold mt-1 block">Check Math →</span>
+      </a>
+      <a href="/updates/" class="p-4 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-xs transition-all block text-center">
+        <span class="text-xs font-black text-slate-900 block">Update Timeline</span>
+        <span class="text-[11px] text-emerald-700 font-semibold mt-1 block">Read Patches →</span>
+      </a>
+    </div>
 
-      <!-- Official Discord -->
-      <a
-        href={siteConfig.officialDiscordUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-indigo-500 hover:shadow-md transition-all group flex flex-col justify-between"
-      >
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center font-black text-xl mb-3">
-            💬
-          </div>
-          <h2 class="text-lg font-black text-slate-900 group-hover:text-indigo-700">
-            Official Studio Umbra Discord
-          </h2>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-            Join over 100K members for instant patch alerts, sneak peeks, server shutdown notices, and community code drops.
-          </p>
-        </div>
-        <span class="text-xs font-bold text-indigo-700 mt-4 block">Join Discord Server ↗</span>
-      </a>
+    <!-- Core Sections -->
+    <div class="space-y-10 text-sm text-slate-700 leading-relaxed">
+      <!-- Section 1 -->
+      <section class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="text-2xl font-black text-slate-900">1. What Is the Stand Out Trello?</h2>
+        <p>
+          The developer Trello board is an internal planning and documentation tool maintained by <strong>Studio Umbra: Europa</strong>. It serves as an unstyled, raw card index where developers post animation preview GIFs, move cooldowns, patch changelogs, and work-in-progress character balance notes.
+        </p>
+        <p>
+          While the board contains over 800 cards across 34 categories, raw cards are often fragmented, split across multiple attachments (such as King Crimson being split into separate Doppio and Boss cards), or contain temporary developer shorthand. Our Wiki compiles this raw information into structured, interactive pages with calculators, search filters, and side-by-side comparisons.
+        </p>
+      </section>
 
-      <!-- Roblox Group -->
-      <a
-        href={siteConfig.developerGroupUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-amber-500 hover:shadow-md transition-all group flex flex-col justify-between"
-      >
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-black text-xl mb-3">
-            👥
+      <!-- Section 2 -->
+      <section class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="text-2xl font-black text-slate-900">2. Stand Categories &amp; Rarity Structure</h2>
+        <p>
+          On the official board, characters are cataloged across three primary lists:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-black text-slate-900 text-xs mb-1 uppercase tracking-wider">Stands (Arrow)</h3>
+            <p class="text-xs text-slate-600">
+              35 live playable Stands awakened via Mysterious, Lucky, or Bizarre Arrows across Rare, Epic, Legendary, Mythical, and Pinnacle tiers.
+            </p>
+            <a href="/stands/" class="text-[11px] font-bold text-emerald-700 mt-2 block">View Arrow Stands →</a>
           </div>
-          <h2 class="text-lg font-black text-slate-900 group-hover:text-amber-700">
-            Studio Umbra: Europa Group
-          </h2>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-            Joining the official Roblox group is recommended to unlock developer product bonuses and verify code redemptions.
-          </p>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-black text-slate-900 text-xs mb-1 uppercase tracking-wider">Evolution &amp; Quest</h3>
+            <p class="text-xs text-slate-600">
+              Specialized evolutions including Star Platinum: The World (SPTW), The World: Alternative Universe (TWAU), and Jojosapiens.
+            </p>
+            <a href="/guides/evolve-stands/" class="text-[11px] font-bold text-emerald-700 mt-2 block">Evolution Guide →</a>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-black text-slate-900 text-xs mb-1 uppercase tracking-wider">In Testing / Rework</h3>
+            <p class="text-xs text-slate-600">
+              Part 9 JoJolands characters currently undergoing live combat balancing (The Hustle, November Rain, Lyin' Eyes, Big Mouth Strikes Again).
+            </p>
+            <a href="/tier-list/" class="text-[11px] font-bold text-emerald-700 mt-2 block">PvP Tier List →</a>
+          </div>
         </div>
-        <span class="text-xs font-bold text-amber-700 mt-4 block">View Roblox Group ↗</span>
-      </a>
+      </section>
 
-      <!-- Roblox Game -->
-      <a
-        href={siteConfig.robloxGameUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-rose-500 hover:shadow-md transition-all group flex flex-col justify-between"
-      >
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center font-black text-xl mb-3">
-            🎮
-          </div>
-          <h2 class="text-lg font-black text-slate-900 group-hover:text-rose-700">
-            Play STAND OUT on Roblox
-          </h2>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-            Direct link to the active Roblox game experience. Check player count, thumbs up milestones, and servers.
-          </p>
+      <!-- Section 3 -->
+      <section class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="text-2xl font-black text-slate-900">3. How to Find Stand Movesets &amp; Frame Data</h2>
+        <p>
+          On Trello, movesets are broken down into individual subheadings with animation webps and base cooldown lines. To view complete, cleanly formatted movesets without hunting through scattered attachments, use our dedicated Stand pages:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-xs">
+          <li><strong>Pinnacle Tier:</strong> Full combo guides for <a href="/stands/star-platinum/" class="text-emerald-700 font-bold underline">Star Platinum</a>, <a href="/stands/the-world/" class="text-emerald-700 font-bold underline">The World</a>, and <a href="/stands/king-crimson/" class="text-emerald-700 font-bold underline">King Crimson</a>.</li>
+          <li><strong>Defensive Tanks:</strong> Mechanics breakdown for <a href="/stands/yellow-temperance/" class="text-emerald-700 font-bold underline">Yellow Temperance</a> and <a href="/stands/notorious-big/" class="text-emerald-700 font-bold underline">Notorious B.I.G</a>.</li>
+          <li><strong>Disruption &amp; Tactical:</strong> Kinetic manipulation for <a href="/stands/kraft-work/" class="text-emerald-700 font-bold underline">Kraft Work</a> and fate timers for <a href="/stands/rolling-stones/" class="text-emerald-700 font-bold underline">Rolling Stones</a>.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="text-2xl font-black text-slate-900">4. Arrow Rates &amp; Obtainment Information</h2>
+        <p>
+          The developer board confirms official drop rates for all summon items:
+        </p>
+        <div class="overflow-x-auto rounded-xl border border-slate-200">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider text-[11px]">
+              <tr>
+                <th class="px-4 py-3">Arrow Type</th>
+                <th class="px-4 py-3">Pinnacle Rate</th>
+                <th class="px-4 py-3">Excluded Tiers</th>
+                <th class="px-4 py-3">Obtainment Method</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 font-mono">
+              <tr>
+                <td class="px-4 py-2.5 font-bold text-slate-900">Mysterious Arrow</td>
+                <td class="px-4 py-2.5 text-slate-600">0.07%</td>
+                <td class="px-4 py-2.5 text-slate-600">None (Full Pool)</td>
+                <td class="px-4 py-2.5 text-slate-600">Story Quests, Bounties, Map Spawns</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2.5 font-bold text-slate-900">Lucky Arrow</td>
+                <td class="px-4 py-2.5 text-emerald-700 font-bold">1.50%</td>
+                <td class="px-4 py-2.5 text-slate-600">Rare Filtered</td>
+                <td class="px-4 py-2.5 text-slate-600">Crafting Bench (3 Scrap + 1 Arrow)</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2.5 font-bold text-slate-900">Bizarre Arrow</td>
+                <td class="px-4 py-2.5 text-purple-700 font-bold">4.40%</td>
+                <td class="px-4 py-2.5 text-slate-600">Rare &amp; Epic Filtered</td>
+                <td class="px-4 py-2.5 text-slate-600">Passione Train Raid Boss Drops</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <span class="text-xs font-bold text-rose-700 mt-4 block">Launch Game ↗</span>
-      </a>
+        <p class="text-xs text-slate-500">
+          Use our interactive <a href="/stand-arrows/" class="text-emerald-700 font-bold underline">Arrow Calculator</a> to simulate pull probabilities and pity thresholds.
+        </p>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="text-2xl font-black text-slate-900">5. Game Mechanics &amp; Systems</h2>
+        <p>
+          STAND OUT features complex secondary systems documented across various Trello categories:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <a href="/gardening/" class="p-3 bg-slate-50 hover:bg-emerald-50 rounded-lg border border-slate-200 block transition-colors">
+            <span class="font-bold text-slate-900 block">Gardening &amp; Greenhouses</span>
+            <span class="text-slate-500 text-[11px] mt-0.5 block">Crop growth times, 3x gang buffs, and produce export stalls.</span>
+          </a>
+          <a href="/rokakaka/" class="p-3 bg-slate-50 hover:bg-emerald-50 rounded-lg border border-slate-200 block transition-colors">
+            <span class="font-bold text-slate-900 block">35 Rokakaka Mutations</span>
+            <span class="text-slate-500 text-[11px] mt-0.5 block">3% base mutation rates, stone limb penalties, and equivalent exchange.</span>
+          </a>
+          <a href="/hamon/" class="p-3 bg-slate-50 hover:bg-emerald-50 rounded-lg border border-slate-200 block transition-colors">
+            <span class="font-bold text-slate-900 block">Hamon Sub-Ability</span>
+            <span class="text-slate-500 text-[11px] mt-0.5 block">Jonathan, Caesar, and Zeppeli Ripple breathing specializations.</span>
+          </a>
+          <a href="/vampire/" class="p-3 bg-slate-50 hover:bg-emerald-50 rounded-lg border border-slate-200 block transition-colors">
+            <span class="font-bold text-slate-900 block">Vampirism &amp; Stone Mask</span>
+            <span class="text-slate-500 text-[11px] mt-0.5 block">Blood meter siphon, Space Ripper Stingy Eyes, and Shadow Cloaks.</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 6: FAQ -->
+      <section class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="text-2xl font-black text-slate-900">6. Frequently Asked Questions</h2>
+        <div class="space-y-3">
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-xs mb-1">Where do I find newly announced codes on Trello?</h3>
+            <p class="text-xs text-slate-600">
+              Codes are announced in developer changelog cards and patch announcements, rather than a single static card. We track all active and expired promo codes on our <a href="/codes/" class="text-emerald-700 font-bold underline">Codes Page</a> with verification notes.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-xs mb-1">What is the actual maximum level cap in STAND OUT?</h3>
+            <p class="text-xs text-slate-600">
+              According to the official Stats and Levels card, the verified maximum level is <strong>Level 50</strong>. Each level awards 3 Stat Points, giving a maximum of 150 points to allocate between Health, Damage, and Ability.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-xs mb-1">How often does Studio Umbra release game updates?</h3>
+            <p class="text-xs text-slate-600">
+              Patches, raid tuning, and bug fix updates typically roll out weekly. You can track full version changelogs on our <a href="/updates/" class="text-emerald-700 font-bold underline">Updates Timeline</a>.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </Layout>

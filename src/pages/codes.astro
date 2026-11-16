@@ -1,11 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CodeCard from '../components/CodeCard';
-import { codes } from '../data/codes';
-
-const activeCodes = codes.filter((c) => c.status === 'Active');
-const unconfirmedCodes = codes.filter((c) => c.status === 'Unconfirmed');
-const expiredCodes = codes.filter((c) => c.status === 'Expired');
+import { codes, activeCodes, unverifiedCodes, expiredCodes } from '../data/codes';
 ---
 
 <Layout
@@ -20,7 +16,7 @@ const expiredCodes = codes.filter((c) => c.status === 'Expired');
     <div class="max-w-3xl mb-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
         <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-        <span>Checked &amp; Verified Live: November 16, 2026</span>
+        <span>Status Checked &amp; Documented: November 16, 2026</span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
@@ -53,15 +49,15 @@ const expiredCodes = codes.filter((c) => c.status === 'Expired');
       </div>
     </section>
 
-    <!-- Unconfirmed Codes Section -->
-    {unconfirmedCodes.length > 0 && (
+    <!-- Unverified Codes Section -->
+    {unverifiedCodes.length > 0 && (
       <section class="mb-14">
         <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
           <div>
             <h2 class="text-xl font-black text-slate-900 flex items-center gap-2">
-              <span>🟡 Unconfirmed / Server-Dependent Codes</span>
+              <span>🟡 Unverified / Status Uncertain Codes</span>
               <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-bold">
-                {unconfirmedCodes.length} Pending
+                {unverifiedCodes.length} Uncertain
               </span>
             </h2>
             <p class="text-xs text-slate-500 mt-0.5">These codes depend on recent server restart clusters or regional rollout instances.</p>
@@ -69,7 +65,7 @@ const expiredCodes = codes.filter((c) => c.status === 'Expired');
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {unconfirmedCodes.map((c) => (
+          {unverifiedCodes.map((c) => (
             <CodeCard client:load code={c} />
           ))}
         </div>
@@ -147,7 +143,7 @@ const expiredCodes = codes.filter((c) => c.status === 'Expired');
     </section>
 
     <!-- Expired Codes Archive -->
-    <section>
+    <section class="mb-14">
       <div class="pb-4 border-b border-slate-200 mb-6">
         <h2 class="text-xl font-black text-slate-900 flex items-center gap-2">
           <span>⚪ Expired Codes Archive</span>
@@ -162,6 +158,31 @@ const expiredCodes = codes.filter((c) => c.status === 'Expired');
         {expiredCodes.map((c) => (
           <CodeCard client:load code={c} />
         ))}
+      </div>
+    </section>
+
+    <!-- Codes FAQ Section -->
+    <section class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
+      <h2 class="text-xl font-black text-slate-900 mb-4">Frequently Asked Questions About Codes</h2>
+      <div class="space-y-4 text-xs text-slate-600 leading-relaxed">
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-sm mb-1">When will the next STAND OUT code release?</h3>
+          <p>
+            The developer Studio Umbra announced that the next major milestone reward will unlock once the game reaches 100,000 likes on Roblox. We monitor official channels continuously and update this page within minutes of release.
+          </p>
+        </div>
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-sm mb-1">Can I redeem the same code more than once?</h3>
+          <p>
+            No. Every promo code can only be redeemed once per Roblox player account. Attempting to enter a previously claimed code will display an "Already Redeemed" prompt.
+          </p>
+        </div>
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-sm mb-1">Do I need to join a group to claim codes?</h3>
+          <p>
+            Certain special codes require your Roblox account to be a member of the developer's community group before the Gifts app will deposit the items into your backpack.
+          </p>
+        </div>
       </div>
     </section>
   </div>

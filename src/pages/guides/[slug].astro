@@ -68,140 +68,113 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
       </ol>
     </div>
 
+    <!-- Interactive Tool Embed (Contextual) -->
+    {(guide.slug === 'lucky-arrows' || guide.slug === 'bizarre-arrows') && (
+      <div class="mb-12">
+        <div class="mb-3">
+          <span class="text-xs font-black uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
+            Interactive Calculator
+          </span>
+          <h2 class="text-lg font-black text-slate-900 mt-1">Simulate Your Arrow Probabilities</h2>
+        </div>
+        <ArrowCalculator client:load />
+      </div>
+    )}
+
+    {(guide.slug === 'star-platinum' || guide.slug === 'the-world' || guide.slug === 'king-crimson') && (
+      <div class="mb-12">
+        <div class="mb-3">
+          <span class="text-xs font-black uppercase tracking-wider text-purple-800 bg-purple-100 px-2 py-0.5 rounded-full">
+            Interactive Tool
+          </span>
+          <h2 class="text-lg font-black text-slate-900 mt-1">Plan Your Character Stat Point Distribution</h2>
+        </div>
+        <BuildMaker client:load />
+      </div>
+    )}
+
     <!-- Guide Content Sections -->
-    <div class="space-y-12 text-sm text-slate-700 leading-relaxed prose prose-slate max-w-none">
-      {guide.slug === 'beginner-guide' && (
-        <>
-          <section id="first-hour" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">1. The First 15 Minutes</h2>
-            <p>
-              When you first spawn into Roblox STAND OUT, you start without a Stand. Follow the yellow on-screen waypoint to speak to the Tutorial Instructor. Complete the combat training drills (performing light combos with LMB, blocking with F, and dashing with Q).
-            </p>
-            <p>
-              Upon finishing the tutorial, you are awarded your first <strong>Mysterious Arrow</strong> and 500 Dalas.
-            </p>
-          </section>
+    <div class="space-y-12 text-sm text-slate-700 leading-relaxed max-w-none">
+      {guide.sections && guide.sections.map((section, idx) => (
+        <section id={section.id} class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-2xl font-black text-slate-900">
+            {idx + 1}. {section.title}
+          </h2>
+          
+          <p class="text-slate-700 leading-relaxed">
+            {section.content}
+          </p>
 
-          <section id="first-stand" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">2. Awakening Your First Stand</h2>
-            <p>
-              Open your backpack, hold the Mysterious Arrow, and click to awaken your Stand. If you roll a Rare tier Stand with solid early-game clearing power (like <em>Yellow Temperance</em> or <em>Beach Boy</em>), keep it! You can always store it later at D'Arby's casino counter.
-            </p>
-          </section>
-
-          <section id="combat-basics" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">3. Core Combat &amp; Keybinds</h2>
-            <p>
-              Combat in STAND OUT is high-tempo and precision-based:
-            </p>
-            <ul class="list-disc list-inside space-y-1 text-xs">
-              <li><strong>Light Combo (LMB):</strong> 4-hit basic chain that stuns opponents.</li>
-              <li><strong>Heavy Attack (R):</strong> Guardbreak strike that staggers blocking enemies.</li>
-              <li><strong>Perfect Block (F):</strong> Tapping block right as an attack connects completely negates damage and parries.</li>
-              <li><strong>Pilot Mode (Left Ctrl):</strong> Remotely controls your Stand away from your character body.</li>
-              <li><strong>Posing (P):</strong> Regenerates your Awakening/EX meter at 1% per second.</li>
-            </ul>
-          </section>
-
-          <section id="phone-utility" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">4. Unlocking the Phone &amp; Huber</h2>
-            <p>
-              Do not wander aimlessly around the massive map. Immediately begin Storyline Quest 1 and proceed to <strong>Storyline Quest 2</strong> with NPC <strong>Meryl Mei Qi</strong>. Completing her driving task rewards you with the permanent Smartphone. The phone unlocks Huber taxi fast travel, mini-map GPS navigation, and the Gifts app used to redeem promo codes!
-            </p>
-          </section>
-        </>
-      )}
-
-      {guide.slug === 'controls' && (
-        <>
-          <section id="pc-keybinds" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">PC Keyboard &amp; Mouse Keybinds</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Light Attack</span><kbd class="font-bold">LMB</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Heavy / Guardbreak</span><kbd class="font-bold">R / M2</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Block / Parry</span><kbd class="font-bold">F</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Dash / Dodge</span><kbd class="font-bold">Q</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Summon Stand</span><kbd class="font-bold">E</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>EX / Awakening Move</span><kbd class="font-bold">T</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Sprint</span><kbd class="font-bold">Left Shift / W+W</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Pilot Mode</span><kbd class="font-bold">Left Control</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Camera Shiftlock</span><kbd class="font-bold">Left Alt</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Pose (Charge Meter)</span><kbd class="font-bold">P</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>Crouch (Stealth)</span><kbd class="font-bold">C</kbd></div>
-              <div class="p-3 bg-slate-50 rounded-lg flex justify-between font-mono"><span>In-Game Menu</span><kbd class="font-bold">M</kbd></div>
+          {/* Step-by-Step Checklist */}
+          {section.steps && section.steps.length > 0 && (
+            <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
+              <h3 class="text-xs font-black uppercase tracking-wider text-slate-600 mb-3">
+                Action Steps
+              </h3>
+              <ol class="space-y-2">
+                {section.steps.map((step, sIdx) => (
+                  <li class="flex items-start gap-2.5 text-xs text-slate-700">
+                    <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-600 text-white font-bold text-[10px] shrink-0">
+                      {sIdx + 1}
+                    </span>
+                    <span class="pt-0.5">{step}</span>
+                  </li>
+                ))}
+              </ol>
             </div>
-          </section>
+          )}
 
-          <section id="mobile-layout" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">Mobile Touch Controls &amp; Aim-Lock</h2>
-            <p>
-              On mobile devices, STAND OUT renders a specialized on-screen button grid. As of the October 28 patch, tapping the <strong>Lock-On crosshair icon</strong> automatically centers your camera on the nearest enemy player or boss, eliminating camera control drift during high-speed PvP.
-            </p>
-          </section>
-        </>
-      )}
-
-      {guide.slug === 'level-up-fast' && (
-        <>
-          <section id="level-cap" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">Level Cap &amp; Stat Point Breakdown</h2>
-            <p>
-              The maximum level cap in STAND OUT is <strong>Level 75</strong>. Each level grants 3 Stat Points, giving you a total of <strong>225 points</strong> to invest across Health, Damage, and Ability.
-            </p>
-          </section>
-
-          <!-- Interactive Build Maker embedded directly into Leveling Guide -->
-          <div class="my-8">
-            <BuildMaker client:load />
-          </div>
-
-          <section id="early-levels" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">Levels 1 - 25: Storyline Rush</h2>
-            <p>
-              Do not farm random town thugs during the early levels. Rush directly through Main Storyline Quests 1 to 5. Quests give guaranteed high chunks of EXP (e.g. 8,000 to 15,000 EXP per completion) and unlock essential utility items like the Smartphone.
-            </p>
-          </section>
-
-          <section id="mid-levels" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">Levels 26 - 50: Bounty Stacking</h2>
-            <p>
-              Use the Bounties application on your Phone to accept NPC bounty contracts. Stack 3 bounties that spawn in adjacent sectors (such as Highway or Shore) to clear multiple targets in a single circuit.
-            </p>
-          </section>
-
-          <section id="endgame-grind" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">Levels 51 - 75: 77 Rings Raid Grinding</h2>
-            <p>
-              Once you hit Level 50, enter the <strong>77 Rings Raid</strong> with a party of 2-3 players. Wave clears in the graveyard grant exponential EXP multipliers and rare gear drops like Tarkus's Iron Helmet.
-            </p>
-          </section>
-        </>
-      )}
-
-      {/* Default content template for remaining guides */}
-      {guide.slug !== 'beginner-guide' && guide.slug !== 'controls' && guide.slug !== 'level-up-fast' && (
-        <>
-          <section class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h2 class="text-2xl font-black text-slate-900">Walkthrough &amp; Overview</h2>
-            <p>
-              Welcome to the specialized guide for <strong>{guide.title}</strong> in Roblox STAND OUT. This walkthrough is based on verified mechanics, frame data, and developer patch notes from Studio Umbra: Europa.
-            </p>
-
-            <div class="space-y-6 pt-4">
-              {guide.tableOfContents.map((section, idx) => (
-                <div id={section.id} class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                  <h3 class="font-black text-base text-slate-900 mb-2">
-                    {idx + 1}. {section.title}
-                  </h3>
-                  <p class="text-xs text-slate-600 leading-relaxed">
-                    Follow these step-by-step instructions to optimize your progress. Ensure your character meets the prerequisite level thresholds and has acquired appropriate gear pieces like DIO's Jacket or the Shadow Cloak before tackling high-difficulty encounters.
-                  </p>
-                </div>
-              ))}
+          {/* Formatted Data Table */}
+          {section.table && (
+            <div class="mt-4 overflow-x-auto rounded-xl border border-slate-200">
+              <table class="w-full text-xs text-left">
+                <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider text-[11px]">
+                  <tr>
+                    {section.table.headers.map((h) => (
+                      <th class="px-4 py-3">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 font-mono">
+                  {section.table.rows.map((row) => (
+                    <tr class="hover:bg-slate-50 transition-colors">
+                      {row.map((cell, cIdx) => (
+                        <td class={`px-4 py-2.5 ${cIdx === 0 ? 'font-bold text-slate-900' : 'text-slate-600'}`}>
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          </section>
-        </>
-      )}
+          )}
+
+          {/* Pro Tips */}
+          {section.tips && section.tips.length > 0 && (
+            <div class="mt-4 p-4 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-950">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-emerald-700 font-black text-xs uppercase tracking-wider">💡 Pro Strategy Tip</span>
+              </div>
+              <ul class="list-disc list-inside space-y-1 text-xs">
+                {section.tips.map((tip) => (
+                  <li>{tip}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Warning Alert */}
+          {section.warning && (
+            <div class="mt-4 p-4 bg-amber-50 rounded-xl border border-amber-200 text-amber-950">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-amber-800 font-black text-xs uppercase tracking-wider">⚠️ Critical Warning</span>
+              </div>
+              <p class="text-xs leading-relaxed">{section.warning}</p>
+            </div>
+          )}
+        </section>
+      ))}
     </div>
 
     <!-- Related Guides Footer -->

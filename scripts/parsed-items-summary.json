@@ -1,0 +1,1920 @@
+{
+  "star-platinum": {
+    "cardName": "Star Platinum",
+    "validItemsCount": 12,
+    "items": [
+      {
+        "header": "Barrage / Rage Finish [HOLD]",
+        "cd": "23s",
+        "len": 70
+      },
+      {
+        "header": "Star Finger",
+        "cd": "35s",
+        "len": 79
+      },
+      {
+        "header": "Ora Smash",
+        "cd": "32s",
+        "len": 106
+      },
+      {
+        "header": "Inhale",
+        "len": 163
+      },
+      {
+        "header": "Platinum Parry",
+        "len": 69
+      },
+      {
+        "header": "R/M2 (Deflect)",
+        "len": 1
+      },
+      {
+        "header": "M1 (Catch)",
+        "len": 40
+      },
+      {
+        "header": "Stand Jump [1 Bar]",
+        "cd": "2s",
+        "len": 69
+      },
+      {
+        "header": "Time Stop In-Air Variant",
+        "len": 1
+      },
+      {
+        "header": "Tandem Flank [2 Bars]",
+        "cd": "45s",
+        "len": 61
+      },
+      {
+        "header": "Time Stop / Quick Time Stop [HOLD]",
+        "cd": "20s",
+        "len": 154
+      },
+      {
+        "header": "Quick Time Stop (Held)",
+        "len": 91
+      }
+    ]
+  },
+  "the-world": {
+    "cardName": "The World",
+    "validItemsCount": 8,
+    "items": [
+      {
+        "header": "Barrage",
+        "cd": "23s",
+        "len": 70
+      },
+      {
+        "header": "Knife Throw [HOLD IN TIMESTOP]",
+        "cd": "25s",
+        "len": 103
+      },
+      {
+        "header": "Hole Puncher",
+        "cd": "30s",
+        "len": 90
+      },
+      {
+        "header": "Head Slam",
+        "cd": "15s",
+        "len": 85
+      },
+      {
+        "header": "Tandem Flank [2 Bars]",
+        "cd": "45s",
+        "len": 92
+      },
+      {
+        "header": "Stand Jump [1 Bar]",
+        "cd": "2s",
+        "len": 69
+      },
+      {
+        "header": "Time Stop / Road Roller [TAP AGAIN] / Quick Time Stop [HOLD] [4 Bars]",
+        "cd": "36s",
+        "len": 155
+      },
+      {
+        "header": "Quick Time Stop (Held)",
+        "len": 91
+      }
+    ]
+  },
+  "king-crimson": {
+    "cardName": "King Crimson (Full)",
+    "validItemsCount": 10,
+    "items": [
+      {
+        "header": "King Of The Court (Alter Ego)",
+        "len": 142
+      },
+      {
+        "header": "Two Identities",
+        "len": 210
+      },
+      {
+        "header": "Barrage",
+        "cd": "23s",
+        "len": 73
+      },
+      {
+        "header": "Chop",
+        "cd": "14s",
+        "len": 198
+      },
+      {
+        "header": "Decree",
+        "cd": "22s",
+        "len": 173
+      },
+      {
+        "header": "Epitaph",
+        "cd": "18s",
+        "len": 261
+      },
+      {
+        "header": "Tandem Combo [2 Bars]",
+        "cd": "45s",
+        "len": 137
+      },
+      {
+        "header": "Time Skip [1 Bar] / HOLD: PREVIEW / RELEASE: SKIP",
+        "cd": "24s",
+        "len": 260
+      },
+      {
+        "header": "Time Erase [2 Bars] / HOLD: DOUBLE / TAP: ERASE OR END",
+        "cd": "30s",
+        "len": 342
+      },
+      {
+        "header": "Blood Blind [1 Bar]",
+        "cd": "12s",
+        "len": 183
+      }
+    ]
+  },
+  "star-platinum-the-world": {
+    "cardName": "Star Platinum: The World",
+    "validItemsCount": 11,
+    "items": [
+      {
+        "header": "Bane of Rats",
+        "len": 208
+      },
+      {
+        "header": "Punching a projectile away",
+        "len": 1
+      },
+      {
+        "header": "Platinum Parry",
+        "len": 91
+      },
+      {
+        "header": "Ora Blitz",
+        "cd": "19s",
+        "len": 201
+      },
+      {
+        "header": "Bearing Toss",
+        "cd": "9s",
+        "len": 189
+      },
+      {
+        "header": "I’m Wide Open",
+        "cd": "24s",
+        "len": 146
+      },
+      {
+        "header": "Time Jump / HOLD: PREVIEW / RELEASE: JUMP",
+        "len": 347
+      },
+      {
+        "header": "Campfire",
+        "cd": "20s",
+        "len": 696
+      },
+      {
+        "header": "Tandem Rushdown [2 Bars]",
+        "len": 308
+      },
+      {
+        "header": "Panic Time Stop / Short [TAP] /  Full [HOLD]",
+        "len": 578
+      },
+      {
+        "header": "Timestop Movement",
+        "len": 82
+      }
+    ]
+  },
+  "the-world-alternative-universe": {
+    "cardName": "The World: Alternative Universe",
+    "validItemsCount": 8,
+    "items": [
+      {
+        "header": "Barrage",
+        "cd": "23s",
+        "len": 70
+      },
+      {
+        "header": "Deadly Shot / Follow-up [TAP AGAIN AFTER HIT]",
+        "cd": "7s",
+        "len": 70
+      },
+      {
+        "header": "Hole Puncher",
+        "cd": "30s",
+        "len": 90
+      },
+      {
+        "header": "Pilot Mode",
+        "len": 86
+      },
+      {
+        "header": "Tandem Flank [2 Bars]",
+        "cd": "45s",
+        "len": 71
+      },
+      {
+        "header": "Stand Jump [1 Bar]",
+        "cd": "2s",
+        "len": 69
+      },
+      {
+        "header": "Time Stop / Quick Time Stop [HOLD] [4 Bars]",
+        "cd": "22s",
+        "len": 154
+      },
+      {
+        "header": "Quick Time Stop (Held)",
+        "len": 91
+      }
+    ]
+  },
+  "jojosapiens": {
+    "cardName": "Jojosapiens",
+    "validItemsCount": 0,
+    "items": []
+  },
+  "november-rain": {
+    "cardName": "November Rain",
+    "validItemsCount": 0,
+    "items": []
+  },
+  "highway-star": {
+    "cardName": "Highway Star",
+    "validItemsCount": 12,
+    "items": [
+      {
+        "header": "Scent",
+        "len": 150
+      },
+      {
+        "header": "Barrage",
+        "cd": "14s",
+        "len": 70
+      },
+      {
+        "header": "Scent Trap",
+        "cd": "30s",
+        "len": 290
+      },
+      {
+        "header": "Pursuit",
+        "cd": "28s",
+        "len": 417
+      },
+      {
+        "header": "Footprints",
+        "len": 199
+      },
+      {
+        "header": "Nutrient Siphon",
+        "cd": "18s",
+        "len": 241
+      },
+      {
+        "header": "Nutrients",
+        "len": 346
+      },
+      {
+        "header": "Foot Form",
+        "cd": "3s",
+        "len": 222
+      },
+      {
+        "header": "Footprint Flurry",
+        "cd": "14s",
+        "len": 217
+      },
+      {
+        "header": "I’m so Handsome (2 Bars)",
+        "cd": "70s",
+        "len": 161
+      },
+      {
+        "header": "DEEEEP SNIFF (3 Bars)",
+        "cd": "120s",
+        "len": 140
+      },
+      {
+        "header": "Footprint Storm (3 Bars)",
+        "cd": "40s",
+        "len": 286
+      }
+    ]
+  },
+  "mandom": {
+    "cardName": "Mandom",
+    "validItemsCount": 6,
+    "items": [
+      {
+        "header": "Two rewind timings",
+        "len": 53
+      },
+      {
+        "header": "Rewind",
+        "cd": "45s",
+        "len": 92
+      },
+      {
+        "header": "Ol' Reliable [BASIC ATTACK]",
+        "cd": "28s",
+        "len": 62
+      },
+      {
+        "header": "Deadeye",
+        "cd": "35s",
+        "len": 61
+      },
+      {
+        "header": "Watch Set",
+        "cd": "70s",
+        "len": 212
+      },
+      {
+        "header": "EX Moveset",
+        "cd": "90s",
+        "len": 203
+      }
+    ]
+  },
+  "heavens-door": {
+    "cardName": "Heaven's Door",
+    "validItemsCount": 8,
+    "items": [
+      {
+        "header": "Book Transmutation",
+        "cd": "1s",
+        "len": 62
+      },
+      {
+        "header": "Written Command",
+        "cd": "15s",
+        "len": 95
+      },
+      {
+        "header": "Page Rip",
+        "cd": "28s",
+        "len": 82
+      },
+      {
+        "header": "Safety Lock",
+        "cd": "55s",
+        "len": 95
+      },
+      {
+        "header": "Pilot Mode",
+        "len": 80
+      },
+      {
+        "header": "Manga [3 Bars]",
+        "cd": "45s",
+        "len": 101
+      },
+      {
+        "header": "Become My Character [4 Bars]",
+        "cd": "120s",
+        "len": 96
+      },
+      {
+        "header": "Chapter Counter [3 Bars]",
+        "cd": "35s",
+        "len": 74
+      }
+    ]
+  },
+  "big-mouth-strikes-again": {
+    "cardName": "Big Mouth Strikes Again",
+    "validItemsCount": 0,
+    "items": []
+  },
+  "kraft-work": {
+    "cardName": "Kraft Work",
+    "validItemsCount": 16,
+    "items": [
+      {
+        "header": "Krafted",
+        "len": 413
+      },
+      {
+        "header": "Kinetic Control",
+        "len": 620
+      },
+      {
+        "header": "Kinetic Throw",
+        "len": 89
+      },
+      {
+        "header": "Fixation",
+        "cd": "12s",
+        "len": 389
+      },
+      {
+        "header": "Contact Fixation",
+        "cd": "16s",
+        "len": 656
+      },
+      {
+        "header": "Rock Throw",
+        "cd": "10s",
+        "len": 114
+      },
+      {
+        "header": "Press again",
+        "len": 67
+      },
+      {
+        "header": "Werk",
+        "cd": "1.25s",
+        "len": 383
+      },
+      {
+        "header": "Hold",
+        "len": 110
+      },
+      {
+        "header": "Stepping Stones",
+        "cd": "5s",
+        "len": 320
+      },
+      {
+        "header": "Suspended Slam (2 Bars)",
+        "cd": "18s",
+        "len": 414
+      },
+      {
+        "header": "Tapping With Malicious Intent (1 Bar)",
+        "cd": "12s",
+        "len": 358
+      },
+      {
+        "header": "Kinetic Field (3 Bars)",
+        "cd": "30s",
+        "len": 401
+      },
+      {
+        "header": "Kinetic Leap (1 Bar)",
+        "cd": "16s",
+        "len": 506
+      },
+      {
+        "header": "Pilot",
+        "len": 119
+      },
+      {
+        "header": "In air",
+        "len": 143
+      }
+    ]
+  },
+  "the-hustle": {
+    "cardName": "The Hustle",
+    "validItemsCount": 1,
+    "items": [
+      {
+        "header": "Chiseled Like A Rock",
+        "len": 203
+      }
+    ]
+  },
+  "notorious-big": {
+    "cardName": "Notorious B.I.G",
+    "validItemsCount": 18,
+    "items": [
+      {
+        "header": "Death Wish",
+        "len": 83
+      },
+      {
+        "header": "Hate",
+        "len": 250
+      },
+      {
+        "header": "Grudge",
+        "len": 278
+      },
+      {
+        "header": "Hateful Punches",
+        "cd": "14s",
+        "len": 154
+      },
+      {
+        "header": "Insult",
+        "cd": "14s",
+        "len": 182
+      },
+      {
+        "header": "Tumorous Pulse",
+        "cd": "12s",
+        "len": 232
+      },
+      {
+        "header": "Stalk (HOLD)",
+        "cd": "6s",
+        "len": 260
+      },
+      {
+        "header": "Good Luck (3 Bars)",
+        "cd": "30s",
+        "len": 214
+      },
+      {
+        "header": "Vengeful Life",
+        "len": 306
+      },
+      {
+        "header": "Blind",
+        "len": 288
+      },
+      {
+        "header": "Can’t swim",
+        "len": 234
+      },
+      {
+        "header": "Mouthful",
+        "len": 207
+      },
+      {
+        "header": "Consumption",
+        "cd": "10s",
+        "len": 277
+      },
+      {
+        "header": "Symbiosis",
+        "len": 401
+      },
+      {
+        "header": "Starving Tendrils",
+        "cd": "12s",
+        "len": 309
+      },
+      {
+        "header": "Tendril",
+        "len": 90
+      },
+      {
+        "header": "Conceal",
+        "cd": "1.5s",
+        "len": 168
+      },
+      {
+        "header": "Flesh Dome",
+        "cd": "12s",
+        "len": 263
+      }
+    ]
+  },
+  "rolling-stones": {
+    "cardName": "Rolling Stones",
+    "validItemsCount": 16,
+    "items": [
+      {
+        "header": "Stone Deity",
+        "len": 83
+      },
+      {
+        "header": "Spiritual Connection",
+        "len": 144
+      },
+      {
+        "header": "We Are All Slaves Of Fate",
+        "len": 535
+      },
+      {
+        "header": "Ruthlessness Is Mercy",
+        "len": 123
+      },
+      {
+        "header": "Forbidden Throwable",
+        "len": 53
+      },
+      {
+        "header": "It’s Not My Time Yet",
+        "len": 286
+      },
+      {
+        "header": "Within Death’s Reach",
+        "len": 54
+      },
+      {
+        "header": "Unearthed Insight",
+        "len": 42
+      },
+      {
+        "header": "Steintossen",
+        "cd": "10s",
+        "len": 175
+      },
+      {
+        "header": "Sculpted Destruction",
+        "cd": "16s",
+        "len": 186
+      },
+      {
+        "header": "Written in Stone",
+        "cd": "8s",
+        "len": 193
+      },
+      {
+        "header": "Super Glue",
+        "cd": "12s",
+        "len": 238
+      },
+      {
+        "header": "Prolong The Inevitable [3 Bars]",
+        "cd": "25s",
+        "len": 142
+      },
+      {
+        "header": "Passing Time [3 Bars]",
+        "cd": "20s",
+        "len": 182
+      },
+      {
+        "header": "Changing Fate [3 Bars]",
+        "cd": "30s",
+        "len": 248
+      },
+      {
+        "header": "Fated Calm [3 Bars]",
+        "cd": "20s",
+        "len": 192
+      }
+    ]
+  },
+  "harvest": {
+    "cardName": "Harvest",
+    "validItemsCount": 8,
+    "items": [
+      {
+        "header": "Colony Carry [TAP AGAIN TO STOP]",
+        "cd": "25s",
+        "len": 128
+      },
+      {
+        "header": "Harvest Ambush/RECALL [HOLD]",
+        "cd": "0.45s",
+        "len": 230
+      },
+      {
+        "header": "## Harvest Tornado",
+        "cd": "23s",
+        "len": 100
+      },
+      {
+        "header": "Search Party / Command [M1] / Cycle [TAP] /   Recall [HOLD]",
+        "len": 112
+      },
+      {
+        "header": "Command [M1]",
+        "len": 20
+      },
+      {
+        "header": "Poured Into Veins [3 Bars]",
+        "cd": "16s",
+        "len": 145
+      },
+      {
+        "header": "## You want proof?! [4 Bars]",
+        "cd": "35s",
+        "len": 80
+      },
+      {
+        "header": "## Snatch [2 Bars]",
+        "cd": "18s",
+        "len": 161
+      }
+    ]
+  },
+  "tubular-bells": {
+    "cardName": "Tubular Bells",
+    "validItemsCount": 13,
+    "items": [
+      {
+        "header": "Five Animals",
+        "len": 199
+      },
+      {
+        "header": "Fire hydrants (Swan)",
+        "len": 43
+      },
+      {
+        "header": "Nails and gas cans (Dog)",
+        "len": 39
+      },
+      {
+        "header": "Balloon Control",
+        "len": 160
+      },
+      {
+        "header": "Early Pop",
+        "len": 71
+      },
+      {
+        "header": "Inflate Balloon",
+        "len": 231
+      },
+      {
+        "header": "Pick Up Scent",
+        "len": 209
+      },
+      {
+        "header": "Balloon Flower",
+        "cd": "6s",
+        "len": 234
+      },
+      {
+        "header": "Spiked Balloon Swarm",
+        "cd": "16s",
+        "len": 248
+      },
+      {
+        "header": "Balloon Beast [4 Bars]",
+        "cd": "40s",
+        "len": 272
+      },
+      {
+        "header": "Babylonian Balloons [3 Bars]",
+        "cd": "22s",
+        "len": 143
+      },
+      {
+        "header": "Balloon Parade [2 Bars]",
+        "cd": "20s",
+        "len": 197
+      },
+      {
+        "header": "Lead Balloons [3 Bars]",
+        "cd": "24s",
+        "len": 133
+      }
+    ]
+  },
+  "super-fly": {
+    "cardName": "Super Fly",
+    "validItemsCount": 6,
+    "items": [
+      {
+        "header": "## Prisoner Boundary",
+        "len": 202
+      },
+      {
+        "header": "Deploy Power Line",
+        "cd": "12s",
+        "len": 337
+      },
+      {
+        "header": "Screw Volley",
+        "cd": "23s",
+        "len": 146
+      },
+      {
+        "header": "Damage Redirection",
+        "cd": "15s",
+        "len": 253
+      },
+      {
+        "header": "Super Leap",
+        "cd": "35s",
+        "len": 103
+      },
+      {
+        "header": "Tower Reposition",
+        "cd": "75s",
+        "len": 182
+      }
+    ]
+  },
+  "under-world": {
+    "cardName": "Under World",
+    "validItemsCount": 7,
+    "items": [
+      {
+        "header": "Burrow [HOLD]",
+        "cd": "28s",
+        "len": 101
+      },
+      {
+        "header": "Unearth",
+        "cd": "45s",
+        "len": 97
+      },
+      {
+        "header": "Prop Memory",
+        "cd": "29s",
+        "len": 121
+      },
+      {
+        "header": "Tora! Tora! Tora! / Aim Drop [HOLD] / Drop [TAP AGAIN]",
+        "cd": "23s",
+        "len": 156
+      },
+      {
+        "header": "Pilot Mode",
+        "len": 86
+      },
+      {
+        "header": "Underground Illusion Chamber [1 Bar]",
+        "cd": "75s",
+        "len": 120
+      },
+      {
+        "header": "Zero Hour [1 Bar]",
+        "cd": "24s",
+        "len": 112
+      }
+    ]
+  },
+  "walking-heart": {
+    "cardName": "Walking Heart",
+    "validItemsCount": 6,
+    "items": [
+      {
+        "header": "## Spike Extension",
+        "cd": "24s",
+        "len": 220
+      },
+      {
+        "header": "Heel Barrage",
+        "cd": "23s",
+        "len": 54
+      },
+      {
+        "header": "Spike Creation / Charge Stomp [HOLD]",
+        "cd": "28s",
+        "len": 146
+      },
+      {
+        "header": "Ground Impale",
+        "cd": "12s",
+        "len": 393
+      },
+      {
+        "header": "Stomp EX [3 Bars]",
+        "cd": "45s",
+        "len": 116
+      },
+      {
+        "header": "Impale EX [3 Bars]",
+        "cd": "28s",
+        "len": 196
+      }
+    ]
+  },
+  "glory-days": {
+    "cardName": "Glory Days",
+    "validItemsCount": 4,
+    "items": [
+      {
+        "header": "Glory",
+        "cd": "0.3s",
+        "len": 73
+      },
+      {
+        "header": "Reload",
+        "len": 33
+      },
+      {
+        "header": "Knock Knock",
+        "cd": "28s",
+        "len": 66
+      },
+      {
+        "header": "Elevator Trap",
+        "cd": "23s",
+        "len": 101
+      }
+    ]
+  },
+  "smoke-on-the-water": {
+    "cardName": "Smoke On The Water",
+    "validItemsCount": 12,
+    "items": [
+      {
+        "header": "Integrated Stand",
+        "len": 79
+      },
+      {
+        "header": "Heat",
+        "len": 304
+      },
+      {
+        "header": "Bring to a Boil",
+        "cd": "8s",
+        "len": 263
+      },
+      {
+        "header": "Person",
+        "len": 84
+      },
+      {
+        "header": "Super Soaker",
+        "cd": "5s",
+        "len": 162
+      },
+      {
+        "header": "Hot Potato",
+        "cd": "8s",
+        "len": 184
+      },
+      {
+        "header": "Let Off Steam / Vent [HOLD]",
+        "cd": "14s",
+        "len": 201
+      },
+      {
+        "header": "Venting near enemy",
+        "len": 20
+      },
+      {
+        "header": "Flash Boil [3 Bars]",
+        "cd": "24s",
+        "len": 225
+      },
+      {
+        "header": "Pressure Cooker [2 Bars]",
+        "cd": "22s",
+        "len": 227
+      },
+      {
+        "header": "Boil Dry / Find Water [HOLD]",
+        "cd": "18s",
+        "len": 227
+      },
+      {
+        "header": "Superheated Steam [4 Bars]",
+        "cd": "28s",
+        "len": 208
+      }
+    ]
+  },
+  "the-grateful-dead": {
+    "cardName": "The Grateful Dead",
+    "validItemsCount": 7,
+    "items": [
+      {
+        "header": "Ungraceful Aging",
+        "len": 475
+      },
+      {
+        "header": "Withering Mist [TOGGLE]",
+        "cd": "1.5s",
+        "len": 161
+      },
+      {
+        "header": "Rotten Grasp",
+        "cd": "12s",
+        "len": 324
+      },
+      {
+        "header": "One-Armed Barrage",
+        "cd": "23s",
+        "len": 192
+      },
+      {
+        "header": "Senior Citizen [TOGGLE]",
+        "cd": "1s",
+        "len": 249
+      },
+      {
+        "header": "On The Train [3 Bars]",
+        "cd": "30s",
+        "len": 112
+      },
+      {
+        "header": "Ice Pack [3 Bars]",
+        "cd": "40s",
+        "len": 211
+      }
+    ]
+  },
+  "mr-president": {
+    "cardName": "Mr. President",
+    "validItemsCount": 9,
+    "items": [
+      {
+        "header": "Enter Room/Entrap [HOLD]",
+        "cd": "12s",
+        "len": 163
+      },
+      {
+        "header": "Tap Variant",
+        "len": 1
+      },
+      {
+        "header": "Held Variant",
+        "len": 1
+      },
+      {
+        "header": "Room Eject",
+        "cd": "12s",
+        "len": 70
+      },
+      {
+        "header": "Shell Defense",
+        "cd": "45s",
+        "len": 72
+      },
+      {
+        "header": "## BANKEY",
+        "cd": "45s",
+        "len": 257
+      },
+      {
+        "header": "Key Dash",
+        "len": 131
+      },
+      {
+        "header": "## Pilot Mode (LCTRL)",
+        "len": 159
+      },
+      {
+        "header": "Tortoise Toss [2 Bars]",
+        "cd": "20s",
+        "len": 119
+      }
+    ]
+  },
+  "emperor": {
+    "cardName": "Emperor",
+    "validItemsCount": 7,
+    "items": [
+      {
+        "header": "Hol Horse Philosophy [HOLD]",
+        "cd": "55s",
+        "len": 211
+      },
+      {
+        "header": "Blind Shots",
+        "cd": "35s",
+        "len": 302
+      },
+      {
+        "header": "Fan The Hammer [HOLD]",
+        "cd": "23s",
+        "len": 320
+      },
+      {
+        "header": "Tap Variant",
+        "len": 1
+      },
+      {
+        "header": "Emperor Shot [HOLD]",
+        "cd": "28s",
+        "len": 366
+      },
+      {
+        "header": "Held Variant",
+        "len": 20
+      },
+      {
+        "header": "Emperor Pulemet",
+        "cd": "120s",
+        "len": 280
+      }
+    ]
+  },
+  "burning-down-the-house": {
+    "cardName": "Burning Down The House",
+    "validItemsCount": 9,
+    "items": [
+      {
+        "header": "Ghost Piano",
+        "len": 37
+      },
+      {
+        "header": "Grand Piano",
+        "len": 186
+      },
+      {
+        "header": "Ghost Room",
+        "cd": "8s",
+        "len": 209
+      },
+      {
+        "header": "Ghost Storage",
+        "cd": "0.5s",
+        "len": 118
+      },
+      {
+        "header": "Ghost Refreshments",
+        "cd": "0.5s",
+        "len": 188
+      },
+      {
+        "header": "Ghost Revolver",
+        "cd": "3s",
+        "len": 158
+      },
+      {
+        "header": "Temporary Doorway [3 Bars]",
+        "cd": "25s",
+        "len": 180
+      },
+      {
+        "header": "Ghost Pallet",
+        "cd": "6s",
+        "len": 130
+      },
+      {
+        "header": "Ghost Research [3 Bars]",
+        "cd": "10s",
+        "len": 152
+      }
+    ]
+  },
+  "beyond-the-sea": {
+    "cardName": "Beyond the Sea",
+    "validItemsCount": 11,
+    "items": [
+      {
+        "header": "Sunfish Slap/Sunfish Slam [HOLD]",
+        "cd": "28s",
+        "len": 99
+      },
+      {
+        "header": "Tap Variant",
+        "len": 1
+      },
+      {
+        "header": "Held Variant",
+        "len": 1
+      },
+      {
+        "header": "Jellyfish Summon",
+        "cd": "45s",
+        "len": 103
+      },
+      {
+        "header": "Maelstrom",
+        "cd": "23s",
+        "len": 100
+      },
+      {
+        "header": "Riptide",
+        "cd": "28s",
+        "len": 267
+      },
+      {
+        "header": "Pilot Mode",
+        "len": 109
+      },
+      {
+        "header": "Sunfish Sail",
+        "cd": "55s",
+        "len": 107
+      },
+      {
+        "header": "Humu Summon [3 Bars]",
+        "cd": "34s",
+        "len": 111
+      },
+      {
+        "header": "Tsunami [4 Bars]",
+        "cd": "65s",
+        "len": 107
+      },
+      {
+        "header": "Crosscurrent [3 Bars]",
+        "cd": "55s",
+        "len": 82
+      }
+    ]
+  },
+  "magicians-red": {
+    "cardName": "Magician's Red",
+    "validItemsCount": 8,
+    "items": [
+      {
+        "header": "## Crossfire Hurricane / Penta Ankh [HOLD]",
+        "cd": "23s",
+        "len": 329
+      },
+      {
+        "header": "Red Pull",
+        "cd": "28s",
+        "len": 65
+      },
+      {
+        "header": "Flaming Grasp",
+        "cd": "35s",
+        "len": 105
+      },
+      {
+        "header": "Life Detector",
+        "cd": "25s",
+        "len": 242
+      },
+      {
+        "header": "Pilot Mode",
+        "len": 108
+      },
+      {
+        "header": "Elevated Strength",
+        "len": 75
+      },
+      {
+        "header": "Stand Jump",
+        "cd": "2s",
+        "len": 69
+      },
+      {
+        "header": "Red Bind",
+        "len": 173
+      }
+    ]
+  },
+  "death-13": {
+    "cardName": "Death 13",
+    "validItemsCount": 17,
+    "items": [
+      {
+        "header": "Drowsiness",
+        "len": 237
+      },
+      {
+        "header": "Slumber",
+        "len": 210
+      },
+      {
+        "header": "Sleeping Powder",
+        "cd": "14s",
+        "len": 236
+      },
+      {
+        "header": "Sleepwalk",
+        "cd": "28s",
+        "len": 257
+      },
+      {
+        "header": "Pan Smack",
+        "cd": "14s",
+        "len": 166
+      },
+      {
+        "header": "Nightmare",
+        "cd": "40s",
+        "len": 318
+      },
+      {
+        "header": "Taking control of Death 13: (LCtrl)",
+        "len": 1
+      },
+      {
+        "header": "Lali Ho",
+        "len": 784
+      },
+      {
+        "header": "Living Weapon",
+        "cd": "18s",
+        "len": 221
+      },
+      {
+        "header": "Scary Box",
+        "cd": "20s",
+        "len": 117
+      },
+      {
+        "header": "Vanishing Reap",
+        "len": 79
+      },
+      {
+        "header": "Sweeper",
+        "cd": "26s",
+        "len": 171
+      },
+      {
+        "header": "Phantom Mimicry",
+        "cd": "12s",
+        "len": 226
+      },
+      {
+        "header": "Grim Carousel (2 Bars)",
+        "cd": "22s",
+        "len": 233
+      },
+      {
+        "header": "Vanishing Reap (2 Bars)",
+        "cd": "16s",
+        "len": 329
+      },
+      {
+        "header": "Boomerang (1 Bar)",
+        "cd": "9s",
+        "len": 287
+      },
+      {
+        "header": "Phantom Mimicry (NEED TO BE IN DREAM WORLD)",
+        "cd": "12s",
+        "len": 226
+      }
+    ]
+  },
+  "catch-the-rainbow": {
+    "cardName": "Catch The Rainbow",
+    "validItemsCount": 6,
+    "items": [
+      {
+        "header": "## Catch The Rainbow",
+        "len": 83
+      },
+      {
+        "header": "Rain Walking/Floating",
+        "len": 256
+      },
+      {
+        "header": "Hidden Controls",
+        "len": 201
+      },
+      {
+        "header": "Body Projectile",
+        "cd": "28s",
+        "len": 267
+      },
+      {
+        "header": "Motionless Rain",
+        "cd": "45s",
+        "len": 204
+      },
+      {
+        "header": "Triple Shot",
+        "cd": "27s",
+        "len": 96
+      }
+    ]
+  },
+  "silver-chariot": {
+    "cardName": "Silver Chariot",
+    "validItemsCount": 5,
+    "items": [
+      {
+        "header": "Rapier Rush",
+        "cd": "23s",
+        "len": 61
+      },
+      {
+        "header": "Blade Eject",
+        "cd": "30s",
+        "len": 217
+      },
+      {
+        "header": "Your Last Moments",
+        "cd": "34s",
+        "len": 77
+      },
+      {
+        "header": "Armor Toggle",
+        "cd": "20s",
+        "len": 193
+      },
+      {
+        "header": "Stand Jump [1 Bar]",
+        "len": 51
+      }
+    ]
+  },
+  "strength": {
+    "cardName": "Strength",
+    "validItemsCount": 5,
+    "items": [
+      {
+        "header": "Pilot Mode",
+        "len": 159
+      },
+      {
+        "header": "Building Strength / Speed Mode [HOLD]",
+        "cd": "1s",
+        "len": 59
+      },
+      {
+        "header": "Ship Scraps",
+        "cd": "23s",
+        "len": 81
+      },
+      {
+        "header": "Hooked",
+        "cd": "5s",
+        "len": 67
+      },
+      {
+        "header": "Hull Trap",
+        "cd": "5s",
+        "len": 81
+      }
+    ]
+  },
+  "yellow-temperance": {
+    "cardName": "Yellow Temperance",
+    "validItemsCount": 11,
+    "items": [
+      {
+        "header": "Trapped Breath",
+        "len": 424
+      },
+      {
+        "header": "Assimilation",
+        "len": 262
+      },
+      {
+        "header": "Feeding Slime",
+        "len": 255
+      },
+      {
+        "header": "Ravenous Flurry",
+        "cd": "18s",
+        "len": 143
+      },
+      {
+        "header": "Borrowed Face",
+        "cd": "16s",
+        "len": 176
+      },
+      {
+        "header": "Living Armor",
+        "cd": "8s",
+        "len": 341
+      },
+      {
+        "header": "Assimilation",
+        "cd": "8s",
+        "len": 210
+      },
+      {
+        "header": "Crawling Temperance [1 Bar]",
+        "cd": "20s",
+        "len": 198
+      },
+      {
+        "header": "Borrowed Stand [1 Bar]",
+        "cd": "20s",
+        "len": 203
+      },
+      {
+        "header": "Play Dead [3 Bars]",
+        "cd": "25s",
+        "len": 222
+      },
+      {
+        "header": "Assimilation Trail [3 Bars]",
+        "cd": "18s",
+        "len": 197
+      }
+    ]
+  },
+  "yo-yo-ma": {
+    "cardName": "Yo-Yo Ma",
+    "validItemsCount": 13,
+    "items": [
+      {
+        "header": "A Devil in Disguise/Automatic Stand",
+        "len": 206
+      },
+      {
+        "header": "Repulsive",
+        "len": 174
+      },
+      {
+        "header": "Crybaby",
+        "len": 101
+      },
+      {
+        "header": "An Expert Craftsman",
+        "len": 321
+      },
+      {
+        "header": "Tainted Item",
+        "cd": "15s",
+        "len": 296
+      },
+      {
+        "header": "Tap",
+        "len": 30
+      },
+      {
+        "header": "Drooling Menace",
+        "cd": "12s",
+        "len": 207
+      },
+      {
+        "header": "Treacherous Hoarder",
+        "cd": "3s",
+        "len": 219
+      },
+      {
+        "header": "Whispers from Yo-Yo Ma",
+        "cd": "15s",
+        "len": 108
+      },
+      {
+        "header": "Impromptu Camoflauge",
+        "cd": "25s",
+        "len": 186
+      },
+      {
+        "header": "Pestilent Trap",
+        "cd": "10s",
+        "len": 251
+      },
+      {
+        "header": "Hey, What’s That?",
+        "cd": "18s",
+        "len": 142
+      },
+      {
+        "header": "Gourmand Of Spirits",
+        "cd": "35s",
+        "len": 186
+      }
+    ]
+  },
+  "cinderella": {
+    "cardName": "Cinderella",
+    "validItemsCount": 12,
+    "items": [
+      {
+        "header": "Ability Scaling",
+        "len": 110
+      },
+      {
+        "header": "Hair Cut",
+        "cd": "18s",
+        "len": 200
+      },
+      {
+        "header": "Enhancement Selector",
+        "cd": "0.3s",
+        "len": 82
+      },
+      {
+        "header": "Faces and fate",
+        "len": 375
+      },
+      {
+        "header": "Existing Faces",
+        "len": 341
+      },
+      {
+        "header": "Botched Faces: (Lasts 60 seconds)",
+        "len": 288
+      },
+      {
+        "header": "Change of Face",
+        "cd": "8s",
+        "len": 211
+      },
+      {
+        "header": "Special Lipstick / [HOLD: TOGGLE SALES]",
+        "cd": "2s",
+        "len": 115
+      },
+      {
+        "header": "Limb Replacement [4 Bars]",
+        "cd": "40s",
+        "len": 162
+      },
+      {
+        "header": "Moral of The Story [3 Bars]",
+        "cd": "20s",
+        "len": 102
+      },
+      {
+        "header": "Miracle [1 Bar]",
+        "cd": "5s",
+        "len": 232
+      },
+      {
+        "header": "Permanent Body Change [5 Bars]",
+        "cd": "600s",
+        "len": 205
+      }
+    ]
+  },
+  "smooth-operators": {
+    "cardName": "Smooth Operators",
+    "validItemsCount": 10,
+    "items": [
+      {
+        "header": "Injury Shift / Target Yourself [HOLD]",
+        "cd": "14s",
+        "len": 311
+      },
+      {
+        "header": "Rearrange",
+        "cd": "16s",
+        "len": 191
+      },
+      {
+        "header": "Anyone’s Weakness",
+        "cd": "24s",
+        "len": 86
+      },
+      {
+        "header": "Internal Pain",
+        "cd": "22s",
+        "len": 181
+      },
+      {
+        "header": "Colony Formation",
+        "len": 23
+      },
+      {
+        "header": "Pilot Mode",
+        "len": 114
+      },
+      {
+        "header": "Face Lift [2 Bars]",
+        "cd": "18s",
+        "len": 226
+      },
+      {
+        "header": "Zip It [2 Bars]",
+        "cd": "24s",
+        "len": 93
+      },
+      {
+        "header": "Lock Up [2 Bars]",
+        "cd": "25s",
+        "len": 83
+      },
+      {
+        "header": "ISHI! ISHI! ISHI! [3 Bars]",
+        "cd": "35s",
+        "len": 134
+      }
+    ]
+  },
+  "beach-boy": {
+    "cardName": "Beach Boy",
+    "validItemsCount": 19,
+    "items": [
+      {
+        "header": "Ability Scaling",
+        "len": 90
+      },
+      {
+        "header": "For My Bro!",
+        "len": 103
+      },
+      {
+        "header": "Cast Out (Ctrl)",
+        "cd": "1s",
+        "len": 155
+      },
+      {
+        "header": "The Line Carries",
+        "len": 96
+      },
+      {
+        "header": "An Angler’s Hold",
+        "len": 111
+      },
+      {
+        "header": "Big Catches",
+        "len": 100
+      },
+      {
+        "header": "Good Vibrations",
+        "len": 132
+      },
+      {
+        "header": "Quickcast",
+        "cd": "6s",
+        "len": 137
+      },
+      {
+        "header": "Hook Depth",
+        "len": 253
+      },
+      {
+        "header": "Double Snag",
+        "cd": "12s",
+        "len": 158
+      },
+      {
+        "header": "If hooked",
+        "len": 89
+      },
+      {
+        "header": "Set the Hook",
+        "cd": "16s",
+        "len": 175
+      },
+      {
+        "header": "Smashing them into a wall",
+        "len": 48
+      },
+      {
+        "header": "Target Swap",
+        "cd": "2s",
+        "len": 145
+      },
+      {
+        "header": "Targets",
+        "len": 232
+      },
+      {
+        "header": "Focused Fishing",
+        "cd": "3s",
+        "len": 130
+      },
+      {
+        "header": "Fatal Resolve [1 Bar]",
+        "cd": "8s",
+        "len": 166
+      },
+      {
+        "header": "Trophy Catch [3 Bars]",
+        "cd": "18s",
+        "len": 160
+      },
+      {
+        "header": "Fish Filet [2 Bars]",
+        "cd": "14s",
+        "len": 217
+      }
+    ]
+  },
+  "hey-ya": {
+    "cardName": "Hey Ya!",
+    "validItemsCount": 7,
+    "items": [
+      {
+        "header": "Inspiration! / Build Luck [HOLD]",
+        "cd": "9s",
+        "len": 109
+      },
+      {
+        "header": "Lucky Observation",
+        "len": 135
+      },
+      {
+        "header": "Premonition / Believe in Yourself! [HOLD]",
+        "cd": "28s",
+        "len": 86
+      },
+      {
+        "header": "Whispers From Hey Ya!",
+        "cd": "2s",
+        "len": 219
+      },
+      {
+        "header": "Lucky Uppercut",
+        "len": 123
+      },
+      {
+        "header": "Pilot Mode",
+        "len": 159
+      },
+      {
+        "header": "Ride Along",
+        "len": 108
+      }
+    ]
+  },
+  "200-balloons": {
+    "cardName": "200 Balloons",
+    "validItemsCount": 7,
+    "items": [
+      {
+        "header": "Inflating Attacks",
+        "len": 94
+      },
+      {
+        "header": "Sudden Balloons",
+        "cd": "20s",
+        "len": 259
+      },
+      {
+        "header": "Inflate",
+        "cd": "14s",
+        "len": 499
+      },
+      {
+        "header": "MAC-10",
+        "cd": "18s",
+        "len": 198
+      },
+      {
+        "header": "Relentless Counter",
+        "cd": "28s",
+        "len": 371
+      },
+      {
+        "header": "Deflect",
+        "len": 1
+      },
+      {
+        "header": "TOTAL BALLOONS [1 Bar]",
+        "cd": "3s",
+        "len": 240
+      }
+    ]
+  },
+  "the-sun": {
+    "cardName": "The Sun",
+    "validItemsCount": 7,
+    "items": [
+      {
+        "header": "## Up The Heat / Lower The Heat [HOLD]",
+        "cd": "5s",
+        "len": 146
+      },
+      {
+        "header": "Solar Onslaught",
+        "cd": "28s",
+        "len": 68
+      },
+      {
+        "header": "Solar Snipe",
+        "cd": "23s",
+        "len": 85
+      },
+      {
+        "header": "Disguise",
+        "cd": "15s",
+        "len": 112
+      },
+      {
+        "header": "Pilot Mode",
+        "len": 129
+      },
+      {
+        "header": "Solar Flare [2 Bars]",
+        "cd": "28s",
+        "len": 84
+      },
+      {
+        "header": "Callous Sol [4 Bars]",
+        "cd": "45s",
+        "len": 184
+      }
+    ]
+  },
+  "lyin-eyes": {
+    "cardName": "Lyin' Eyes",
+    "validItemsCount": 0,
+    "items": []
+  },
+  "the-mattekudasai": {
+    "cardName": "The MATTEKUDASAI",
+    "validItemsCount": 0,
+    "items": []
+  },
+  "hermit-purple": {
+    "cardName": "Hermit Purple",
+    "validItemsCount": 5,
+    "items": [
+      {
+        "header": "Hermit’s Sling / Swing [TAP] / Pull [HOLD]",
+        "cd": "5s",
+        "len": 266
+      },
+      {
+        "header": "Boulder Hold / Pull Rock / Throw",
+        "cd": "24s",
+        "len": 285
+      },
+      {
+        "header": "Spirit Photography",
+        "cd": "15s",
+        "len": 132
+      },
+      {
+        "header": "Hermit Grasp",
+        "cd": "8s",
+        "len": 202
+      },
+      {
+        "header": "Hermit Grasp EX [1 Bar]",
+        "cd": "16s",
+        "len": 171
+      }
+    ]
+  }
+}

@@ -17,27 +17,8 @@ import { siteConfig } from '../data/site';
         </a>
 
         <p class="text-xs text-emerald-100/80 leading-relaxed max-w-sm">
-          Stand Out Wiki (<a href={siteConfig.url} class="text-amber-300 underline font-bold">standoutwiki.org</a>) is an independent player-driven knowledge base dedicated to Roblox STAND OUT by Studio Umbra: Europa. Featuring verified movesets, exact drop probabilities, real-time codes, tier lists, and progression walkthroughs.
+          Stand Out Wiki (<a href={siteConfig.url} class="text-amber-300 underline font-bold">standoutwiki.org</a>) is an independent player-driven knowledge base dedicated to Roblox STAND OUT by Studio Umbra: Europa. Featuring verified movesets, exact drop probabilities, current codes, tier lists, and progression walkthroughs.
         </p>
-
-        <div class="pt-2 flex items-center gap-3 text-xs">
-          <a
-            href={siteConfig.officialTrelloUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="px-3 py-1.5 rounded-lg bg-emerald-950/80 hover:bg-emerald-900 text-emerald-200 border border-emerald-800 font-bold transition-colors"
-          >
-            Official Trello
-          </a>
-          <a
-            href={siteConfig.officialDiscordUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="px-3 py-1.5 rounded-lg bg-emerald-950/80 hover:bg-emerald-900 text-emerald-200 border border-emerald-800 font-bold transition-colors"
-          >
-            Official Discord
-          </a>
-        </div>
       </div>
 
       {/* Footer Navigation Columns */}
@@ -51,8 +32,6 @@ import { siteConfig } from '../data/site';
               <li>
                 <a
                   href={link.href}
-                  target={link.external ? '_blank' : undefined}
-                  rel={link.external ? 'noopener noreferrer' : undefined}
                   class="text-emerald-100/70 hover:text-amber-200 transition-colors"
                 >
                   {link.label}

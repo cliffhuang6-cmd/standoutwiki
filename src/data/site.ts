@@ -10,10 +10,6 @@ export const siteConfig = {
   iconUrl: 'https://standoutwiki.org/images/brand/stand-out-wiki-icon.png',
   author: 'Stand Out Wiki Editorial Team',
   twitterHandle: '@StandOutWiki',
-  robloxGameUrl: 'https://www.roblox.com/games/128828638194450/STAND-OUT',
-  officialTrelloUrl: 'https://trello.com/b/7IlUxQPN/stand-out-official-trello',
-  officialDiscordUrl: 'https://discord.gg/HtBGQUMSTd',
-  developerGroupUrl: 'https://www.roblox.com/groups/11477678/Sagetempest-Group#!/about',
   
   // Analytics and Verification Configuration
   analytics: {
@@ -75,7 +71,7 @@ export const siteConfig = {
         { label: 'Guides Hub', href: '/guides/', desc: 'All walkthroughs and progression guides' },
         { label: 'Beginner Guide', href: '/guides/beginner-guide/', desc: 'Starter tutorial & first hour guide' },
         { label: 'Controls Guide', href: '/guides/controls/', desc: 'PC, Mobile touch & Controller keybinds' },
-        { label: 'Level Up Fast (1-75)', href: '/guides/level-up-fast/', desc: 'Optimal EXP loop to max level' },
+        { label: 'Level Up Fast (1-50)', href: '/guides/level-up-fast/', desc: 'Optimal EXP loop to max level' },
         { label: 'Farm Dalas / Cash', href: '/guides/farm-dalas/', desc: 'Highest payout cash delivery routes' },
         { label: 'Raids & Dungeons', href: '/guides/raids/', desc: 'Train Raid, Highway Star & 77 Rings' },
         { label: 'World Bosses', href: '/guides/bosses/', desc: 'Spawns, mechanics & guaranteed drops' }
@@ -86,7 +82,7 @@ export const siteConfig = {
       href: '/updates/',
       children: [
         { label: 'Patch Notes & Changelog', href: '/updates/', desc: 'Chronological update timeline' },
-        { label: 'Official Trello & Links', href: '/trello/', desc: 'Verified developer boards & Discord' },
+        { label: 'Trello Board Archive Guide', href: '/trello/', desc: 'Game design structure & card roadmap guide' },
         { label: 'Release Date & History', href: '/release-date/', desc: 'Launch timeline & upcoming roadmap' },
         { label: 'Game FAQ', href: '/faq/', desc: 'Answers to frequently asked questions' }
       ]
@@ -124,7 +120,7 @@ export const siteConfig = {
       links: [
         { label: 'Beginner Guide', href: '/guides/beginner-guide/' },
         { label: 'Game Controls', href: '/guides/controls/' },
-        { label: 'Fast Leveling (1-75)', href: '/guides/level-up-fast/' },
+        { label: 'Fast Leveling (1-50)', href: '/guides/level-up-fast/' },
         { label: 'Dalas Farming', href: '/guides/farm-dalas/' },
         { label: 'Raids Walkthrough', href: '/guides/raids/' },
         { label: 'Bosses & Drops', href: '/guides/bosses/' },
@@ -132,15 +128,14 @@ export const siteConfig = {
       ]
     },
     {
-      title: 'About & Official',
+      title: 'About & Information',
       links: [
         { label: 'About Us', href: '/about/' },
         { label: 'Contact & Feedback', href: '/contact/' },
         { label: 'Privacy Policy', href: '/privacy/' },
         { label: 'Terms of Use', href: '/terms/' },
         { label: 'Update Timeline', href: '/updates/' },
-        { label: 'Official Trello & Discord', href: '/trello/' },
-        { label: 'Play STAND OUT on Roblox', href: 'https://www.roblox.com/games/128828638194450/STAND-OUT', external: true }
+        { label: 'Trello Directory Guide', href: '/trello/' }
       ]
     }
   ]

@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ImageModal from '../components/ImageModal';
+import ArrowCalculator from '../components/ArrowCalculator';
 import { items } from '../data/items';
 
 const arrows = items.filter((i) => i.category === 'Arrow');
@@ -13,91 +15,127 @@ const arrows = items.filter((i) => i.category === 'Arrow');
   schemaType="CollectionPage"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Header -->
     <div class="max-w-3xl mb-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3 border border-emerald-200">
         <span>Gacha Mechanics &amp; Recipes</span>
         <span>•</span>
-        <span>6 Arrow Types</span>
+        <span>{arrows.length} Arrow Types</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
         Stand Out Arrows &amp; Crafting Guide
       </h1>
 
-      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Stand Arrows are the core progression catalysts in Roblox <strong>STAND OUT</strong>. From basic meteorite arrows to specialized Part focus arrows, this guide covers crafting recipes, token shop costs, and drop rules.
+      <p class="mt-4 text-base text-slate-600 leading-relaxed font-medium">
+        Stand Arrows are the core progression catalysts in Studio Umbra's <strong>STAND OUT</strong>. Click any arrow graphic to view an enlarged image preview. Learn crafting recipes, token shop requirements, and mathematically optimal rolling strategies.
       </p>
     </div>
 
     <!-- Arrow Types Catalog -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
       {arrows.map((arrow) => (
-        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between hover:border-emerald-400 transition-all">
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between hover:border-emerald-400 hover:shadow-md transition-all group" id={arrow.slug}>
           <div>
-            <div class="w-16 h-16 rounded-xl bg-slate-100 border border-slate-200 p-2 mb-4 flex items-center justify-center">
-              <img
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-[11px] font-black uppercase tracking-wider rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200">
+                {arrow.rarity || 'Gacha Catalyst'}
+              </span>
+              {arrow.sellPrice && (
+                <span class="text-xs font-mono font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                  {arrow.sellPrice}
+                </span>
+              )}
+            </div>
+
+            {/* Enlarged Image Display (160px height) */}
+            <div class="w-full h-40 rounded-xl bg-slate-50 border border-slate-200/80 p-3 mb-5 flex items-center justify-center overflow-hidden">
+              <ImageModal
+                client:load
                 src={arrow.image || '/images/arrows/mysterious-arrow.webp'}
                 alt={arrow.name}
-                class="w-full h-full object-contain"
-                loading="lazy"
+                title={arrow.name}
+                subtitle={`${arrow.rarity || 'Catalyst'} • ${arrow.sellPrice || 'Special Item'}`}
+                className="w-full h-full flex items-center justify-center"
               />
             </div>
 
-            <h2 class="text-lg font-black text-slate-900">{arrow.name}</h2>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            <h2 class="text-lg font-black text-slate-900 group-hover:text-emerald-800 transition-colors">
+              {arrow.name}
+            </h2>
+
+            <div class="mt-1.5 mb-4 p-2.5 bg-slate-50 rounded-lg border border-slate-100 text-xs text-slate-600">
+              <span class="font-bold text-slate-800 block text-[11px] uppercase tracking-wider mb-0.5">
+                📍 Obtainment:
+              </span>
+              <p class="leading-relaxed">{arrow.obtainMethod}</p>
+            </div>
+
+            <p class="text-sm text-slate-700 leading-relaxed mb-4">
               {arrow.description}
             </p>
+          </div>
 
-            <div class="mt-4 pt-3 border-t border-slate-100 text-xs">
-              <span class="font-bold text-slate-800 block mb-1">Obtain Method:</span>
-              <p class="text-slate-600">{arrow.obtainMethod}</p>
+          {arrow.uses && arrow.uses.length > 0 && (
+            <div class="pt-4 border-t border-slate-100 text-xs text-slate-600">
+              <span class="font-bold text-slate-800 uppercase tracking-wider text-[11px] block mb-2">
+                Gacha Properties:
+              </span>
+              <ul class="space-y-1.5">
+                {arrow.uses.map((use) => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                    <span class="leading-relaxed">{use}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-
-          <div class="mt-4 pt-3 border-t border-slate-100">
-            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 block mb-1.5">
-              Key Properties &amp; Uses:
-            </span>
-            <ul class="space-y-1 text-xs text-slate-600">
-              {arrow.uses.map((u) => (
-                <li class="flex items-start gap-1.5">
-                  <span class="text-emerald-500 font-bold">•</span>
-                  <span>{u}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          )}
         </div>
       ))}
     </div>
 
-    <!-- Crafting Walkthrough -->
-    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6">
-      <h2 class="text-2xl font-black text-slate-900">Arrow Crafting Station Formulas</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-600 leading-relaxed">
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-slate-900 mb-2">1. Upgrading to Lucky &amp; Bizarre Arrows</h3>
-          <p class="mb-2">
-            Never roll basic Mysterious Arrows if hunting for top tiers. Save and merge them at any town Crafting Station:
+    <!-- Interactive Calculator Embed -->
+    <div class="mb-16">
+      <div class="max-w-2xl mb-8">
+        <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Interactive Web Tool</span>
+        <h2 class="text-3xl font-black text-slate-900 mt-1">Arrow Probability Simulator</h2>
+        <p class="text-sm text-slate-500 mt-2">
+          Calculate your exact cumulative statistical chance of pulling Pinnacle or Mythical Stands across Mysterious, Lucky, and Bizarre Arrows.
+        </p>
+      </div>
+
+      <ArrowCalculator client:visible />
+    </div>
+
+    <!-- Crafting Guide -->
+    <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+      <h2 class="text-2xl font-black text-slate-900">How to Craft Summon Arrows</h2>
+      <p class="text-sm text-slate-700 leading-relaxed">
+        Crafting higher-tier summon arrows is essential to bypass common and rare filler rolls. You do not need to rely purely on random world drops.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-600">
+        <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-sm mb-2">Crafting Lucky Arrows</h3>
+          <p class="leading-relaxed mb-3">
+            Approach any <strong>Advanced Crafting Bench</strong> located in the Industrial District or Beach Warehouse. Deposit <strong>1 Mysterious Arrow</strong>, <strong>10 Scrap Metal</strong> (salvaged from scrap cars), and <strong>3 Gold Ingots</strong>. The crafting process takes 30 seconds.
           </p>
-          <ul class="list-disc list-inside space-y-1 font-semibold text-slate-800">
-            <li><strong>Lucky Arrow:</strong> 3x Mysterious Arrows</li>
-            <li><strong>Bizarre Arrow:</strong> 9x Mysterious Arrows</li>
-          </ul>
+          <div class="p-3 bg-white rounded-lg border border-slate-200 font-mono text-[11px] text-emerald-800">
+            Formula: 1x Mysterious Arrow + 10x Scrap + 3x Gold Ingots = 1x Lucky Arrow
+          </div>
         </div>
 
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-slate-900 mb-2">2. Crafting Focus Arrows (Part 3 &amp; Part 5)</h3>
-          <p class="mb-2">
-            To target Star Platinum, The World, or King Crimson without dilution from Parts 4, 6, 7, 8, and 9:
+        <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-sm mb-2">Forging Bizarre Arrows</h3>
+          <p class="leading-relaxed mb-3">
+            Visit the <strong>Master Forge</strong> near the Catacombs. Combine <strong>3 Lucky Arrows</strong>, <strong>1 Refined Meteorite Shard</strong> (from meteor strike events), and <strong>$50,000 Dalas</strong>. Forging guarantees an Epic, Legendary, Mythical, or Pinnacle tier Stand.
           </p>
-          <ul class="list-disc list-inside space-y-1 font-semibold text-slate-800">
-            <li><strong>Part 3 Arrow:</strong> 5x Steel Ingot + 1x Mysterious Arrow</li>
-            <li><strong>Part 5 Arrow:</strong> 5x Steel Ingot + 1x Mysterious Arrow</li>
-          </ul>
+          <div class="p-3 bg-white rounded-lg border border-slate-200 font-mono text-[11px] text-purple-800">
+            Formula: 3x Lucky Arrows + 1x Meteorite Shard + $50k Dalas = 1x Bizarre Arrow
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </Layout>

@@ -2,11 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import { quests } from '../data/quests';
 
+const categories = ['All', 'Storyline', 'Sub-Ability', 'Bounty', 'Side Quest'];
 ---
 
 <Layout
   title="Stand Out Quests & NPCs – Locations, Requirements & Rewards | Stand Out Wiki"
-  description="Complete directory of quests and NPCs in Roblox STAND OUT. Objectives, locations, prerequisites, and rewards for Hamon, Hermit Purple, and Jojosapiens."
+  description="Complete directory of all 17 quests and NPCs in Roblox STAND OUT. Objectives, locations, prerequisites, and rewards for Hamon, Hermit Purple, and Jojosapiens."
   canonicalPath="quests"
   breadcrumbs={[{ label: 'Quests & NPCs' }]}
   schemaType="CollectionPage"
@@ -16,7 +17,7 @@ import { quests } from '../data/quests';
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
         <span>Town &amp; World Directory</span>
         <span>•</span>
-        <span>Quests &amp; Encounters</span>
+        <span>17 Verified Encounters</span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
@@ -24,17 +25,44 @@ import { quests } from '../data/quests';
       </h1>
 
       <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        From unlocking fighting styles like Hamon with Lisa Lisa to acquiring exclusive quest Stands like Hermit Purple and Jojosapiens, browse full quest walkthroughs below.
+        From the 10 core Storyline progression missions and Sub-Ability masteries (Hamon &amp; Vampire) to high-yield Bounties and secret research unlocks, browse complete verified quest requirements and rewards below.
       </p>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center gap-2 mt-6">
+        {categories.map((cat, idx) => (
+          <a
+            href={cat === 'All' ? '#all' : `#${cat.toLowerCase().replace(/\s+/g, '-')}`}
+            class={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all border ${
+              idx === 0
+                ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+                : 'bg-white text-slate-700 border-slate-200 hover:border-emerald-300 hover:bg-slate-50'
+            }`}
+          >
+            {cat} {cat === 'All' ? `(${quests.length})` : `(${quests.filter(q => q.category.includes(cat)).length})`}
+          </a>
+        ))}
+      </div>
     </div>
 
-    <!-- Quests List -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+    <!-- Quests List Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" id="all">
       {quests.map((quest) => (
-        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between hover:border-emerald-400 transition-all">
+        <div
+          id={quest.slug}
+          class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between hover:border-emerald-400 hover:shadow-md transition-all group"
+        >
           <div>
             <div class="flex items-center justify-between gap-2 mb-2">
-              <span class="px-2 py-0.5 text-[10px] font-black uppercase tracking-wider rounded bg-emerald-100 text-emerald-800">
+              <span class={`px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider rounded ${
+                quest.category === 'Storyline'
+                  ? 'bg-blue-100 text-blue-800 border border-blue-200'
+                  : quest.category === 'Sub-Ability'
+                  ? 'bg-amber-100 text-amber-800 border border-amber-200'
+                  : quest.category === 'Bounty'
+                  ? 'bg-rose-100 text-rose-800 border border-rose-200'
+                  : 'bg-emerald-100 text-emerald-800 border border-emerald-200'
+              }`}>
                 {quest.category}
               </span>
               <span class="text-xs font-semibold text-slate-500">
@@ -42,37 +70,59 @@ import { quests } from '../data/quests';
               </span>
             </div>
 
-            <h2 class="text-lg font-black text-slate-900 mt-1">{quest.title}</h2>
+            <h2 class="text-lg font-black text-slate-900 group-hover:text-emerald-700 transition-colors mt-1">
+              {quest.title}
+            </h2>
             <p class="text-xs font-bold text-slate-600 mt-1">
               Quest Giver: <span class="text-emerald-700">{quest.npc}</span>
             </p>
 
             {quest.prerequisites && (
-              <div class="mt-2 text-[11px] text-amber-800 bg-amber-50 p-2 rounded-lg border border-amber-200">
-                <strong>Prerequisite:</strong> {quest.prerequisites}
+              <div class="mt-2.5 text-[11px] text-amber-900 bg-amber-50/80 p-2.5 rounded-xl border border-amber-200">
+                <span class="font-bold">Prerequisite:</span> {quest.prerequisites}
               </div>
             )}
 
             <div class="mt-4 pt-3 border-t border-slate-100">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 block mb-1.5">
-                Objectives:
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2">
+                Quest Objectives:
               </span>
-              <ul class="space-y-1.5 text-xs text-slate-600">
+              <ul class="space-y-2 text-xs text-slate-600">
                 {quest.objectives.map((obj) => (
-                  <li class="flex items-start gap-1.5">
-                    <span class="text-emerald-500 font-bold">✓</span>
-                    <span>{obj}</span>
+                  <li class="flex items-start gap-2">
+                    <span class="text-emerald-500 font-bold shrink-0 mt-0.5">✓</span>
+                    <span class="leading-relaxed">{obj}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
 
-          <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-            <span class="font-bold text-slate-500">Rewards:</span>
-            <div class="flex items-center gap-2 font-mono font-bold text-emerald-700">
-              {quest.rewards.dalas && <span>{quest.rewards.dalas.toLocaleString()} Dalas</span>}
-              {quest.rewards.stand && <span class="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded">{quest.rewards.stand}</span>}
+          <div class="mt-5 pt-4 border-t border-slate-100 space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
+              Guaranteed Rewards:
+            </span>
+            <div class="flex flex-wrap items-center gap-1.5 text-xs font-mono font-bold">
+              {quest.rewards.exp && (
+                <span class="text-teal-700 bg-teal-50 px-2 py-0.5 rounded-lg border border-teal-200">
+                  +{quest.rewards.exp.toLocaleString()} EXP
+                </span>
+              )}
+              {quest.rewards.dalas && (
+                <span class="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-lg border border-emerald-200">
+                  ${quest.rewards.dalas.toLocaleString()}
+                </span>
+              )}
+              {quest.rewards.stand && (
+                <span class="text-purple-700 bg-purple-50 px-2 py-0.5 rounded-lg border border-purple-200">
+                  Stand: {quest.rewards.stand}
+                </span>
+              )}
+              {quest.rewards.items && quest.rewards.items.map((item) => (
+                <span class="text-amber-800 bg-amber-50 px-2 py-0.5 rounded-lg border border-amber-200 text-[11px]">
+                  🎁 {item}
+                </span>
+              ))}
             </div>
           </div>
         </div>

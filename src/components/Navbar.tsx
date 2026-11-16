@@ -73,21 +73,10 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right Action Area (Search, Play Button, Mobile Toggle) */}
+        {/* Right Action Area (Search, Mobile Toggle) */}
         <div className="flex items-center gap-2.5">
           {/* Sitewide Search */}
           <SearchModal />
-
-          {/* External Roblox Game Link */}
-          <a
-            href={siteConfig.robloxGameUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 bg-[#064E4A] hover:bg-[#00675D] text-white rounded-lg text-xs font-bold shadow-sm transition-colors"
-          >
-            <span>Play on Roblox</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
 
           {/* Mobile Hamburger Toggle */}
           <button
@@ -106,14 +95,6 @@ export default function Navbar() {
         <div className="lg:hidden border-t border-slate-200 bg-[#FFFDF3] px-4 pt-3 pb-6 max-h-[85vh] overflow-y-auto space-y-4 shadow-2xl">
           <div className="flex items-center justify-between pb-2 border-b border-slate-200">
             <span className="text-xs font-black uppercase tracking-wider text-slate-500">Navigation Menu</span>
-            <a
-              href={siteConfig.robloxGameUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-bold text-emerald-800 flex items-center gap-1"
-            >
-              Play STAND OUT <ExternalLink className="w-3 h-3" />
-            </a>
           </div>
 
           <div className="space-y-1">

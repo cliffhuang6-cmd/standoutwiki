@@ -17,7 +17,7 @@ export default function CodeCard({ code }: { code: Code }) {
       border: 'border-slate-200 hover:border-emerald-400',
       btn: 'bg-emerald-600 hover:bg-emerald-500 text-white'
     },
-    Unconfirmed: {
+    Unverified: {
       badgeBg: 'bg-amber-100 text-amber-800 border-amber-200',
       border: 'border-slate-200 hover:border-amber-400',
       btn: 'bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold'
@@ -27,7 +27,11 @@ export default function CodeCard({ code }: { code: Code }) {
       border: 'border-slate-200 opacity-60',
       btn: 'bg-slate-200 text-slate-600 hover:bg-slate-300'
     }
-  }[code.status];
+  }[code.status] || {
+    badgeBg: 'bg-slate-100 text-slate-500 border-slate-200',
+    border: 'border-slate-200',
+    btn: 'bg-slate-200 text-slate-600'
+  };
 
   return (
     <div
@@ -74,9 +78,12 @@ export default function CodeCard({ code }: { code: Code }) {
         </div>
       </div>
 
-      <div className="pt-3 border-t border-slate-100 text-xs text-slate-500">
+      <div className="pt-3 border-t border-slate-100 text-xs text-slate-500 space-y-1">
         <p className="line-clamp-2">{code.notes}</p>
-        <span className="text-[10px] text-slate-400 block mt-1">Verified: {code.addedDate}</span>
+        <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+          <span>Source: {code.evidenceSource ? 'Changelog / Release' : 'Community'}</span>
+          <span>Checked: {code.lastCheckedDate || code.addedDate}</span>
+        </div>
       </div>
     </div>
   );

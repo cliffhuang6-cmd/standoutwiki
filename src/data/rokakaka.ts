@@ -2,110 +2,253 @@ import type { RokaMutation } from '../types';
 
 export const rokaMutations: RokaMutation[] = [
   {
-    name: 'Emerald Roka',
-    slug: 'emerald-roka',
-    effect: 'Completely strips and removes your current active Stand, resetting your Stand slot.',
-    removesStand: true,
-    stoneLimbPenalty: 'None upon successful consumption.',
-    specialNotes: 'Removal success rate scales with Roka Quality (Normal: 60%, Good: 85%, Perfect: 100%).'
+    "name": "Emerald Roka",
+    "slug": "emerald-roka",
+    "effect": "Removes your Stand, chances scale with the grade of the Roka.",
+    "removesStand": true,
+    "stoneLimbPenalty": "None upon successful consumption.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Sapphire Roka',
-    slug: 'sapphire-roka',
-    effect: 'Has a 50% chance to purge and remove your Sub-Ability (Hamon or Vampire).',
-    removesSubAbility: true,
-    stoneLimbPenalty: 'None.',
-    specialNotes: 'Grants +10% of your current level EXP bar even if sub-ability removal fails. Cannot be bottled.'
+    "name": "Sapphire Roka",
+    "slug": "sapphire-roka",
+    "effect": "50% chance to remove your Sub-Ability. Grants 10% of your current EXP bar even if removal fails. Cannot be bottled as a splash potion.",
+    "removesSubAbility": true,
+    "stoneLimbPenalty": "None upon successful consumption.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Amethyst Roka',
-    slug: 'amethyst-roka',
-    effect: 'Instantly purges all harmful status effects (Bleed, Burn, Poison, Freeze) and fills EX Awakening meter.',
-    stoneLimbPenalty: 'Turns a random limb to stone for 15s (Higher grades reduce stone penalty duration).',
-    specialNotes: 'Favored in PvP clutch scenarios to restore mode meter under intense debuff pressure.'
+    "name": "Amethyst Roka",
+    "slug": "amethyst-roka",
+    "effect": "Clears harmful statuses and turns a body part to stone. Fills mode and other resource bars instead of healing. Better grades reduce the stone penalties.",
+    "stoneLimbPenalty": "Petrifies right leg for 30 seconds.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Opal Roka',
-    slug: 'opal-roka',
-    effect: 'Special interaction with Time Stop Stands (The World, TWAU, Star Platinum). Grants temporal stability.',
-    stoneLimbPenalty: 'Temporary stone arm (-10% attack speed for 10s).',
-    specialNotes: 'Reduces enemy Time Stop movement penalty by 50% for 60 seconds.'
+    "name": "Peridot Roka",
+    "slug": "peridot-roka",
+    "effect": "Choose one of your two sub-skills to reroll. Get a different base move from the same ability, with no duplicates. Requires a Stand and a sub-ability.",
+    "removesSubAbility": true,
+    "stoneLimbPenalty": "Turns a random limb to stone temporarily.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'DoctorProof Roka',
-    slug: 'doctorproof-roka',
-    effect: 'Rapidly regenerates 65% of max HP over 5 seconds and grants temporary poison immunity.',
-    stoneLimbPenalty: 'Turns left leg to stone (reduced sprint speed for 8s).',
-    specialNotes: 'Higher gardening grade grants full resistance to The Grateful Dead aging mist.'
+    "name": "Opal Roka",
+    "slug": "opal-roka",
+    "effect": "affects , , , ; 10% chance to swap to the other version, 10% chance to lose your Stand; otherwise unchanged.",
+    "stoneLimbPenalty": "Petrifies left arm for 60 seconds.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Carbonated Roka',
-    slug: 'carbonated-roka',
-    effect: 'Fills user with bubbling kinetic energy, boosting dash distance and jump height by 40%.',
-    stoneLimbPenalty: 'Slight stone torso stiffness.',
-    specialNotes: 'Synergizes with aerial Stands like Catch the Rainbow and Walking Heart.'
+    "name": "Attractive Roka",
+    "slug": "attractive-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Antimatter Roka',
-    slug: 'antimatter-roka',
-    effect: 'Creates a localized gravitational collapse around the user, knocking back all surrounding opponents.',
-    stoneLimbPenalty: 'Severe stone limb penalty for 12s.',
-    specialNotes: 'Functions as a panic burst break against infinite combo loops.'
+    "name": "Carbonated Roka",
+    "slug": "carbonated-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Emotional Damage Roka',
-    slug: 'emotional-damage-roka',
-    effect: 'Inflicts psychological confusion on the last player who damaged you, reversing their movement controls.',
-    stoneLimbPenalty: 'Crying facial stone mask for 6s.',
-    specialNotes: 'Humorous Easter egg mutation with legitimate competitive disruption capability.'
+    "name": "DoctorProof Roka",
+    "slug": "doctorproof-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Attractive Roka',
-    slug: 'attractive-roka',
-    effect: 'Draws loose nearby item drops, coins, and fruit directly toward your character inventory within 50 studs.',
-    stoneLimbPenalty: 'Magnetic stone skin.',
-    specialNotes: 'Highly useful when farming large mob camps or raid arenas.'
+    "name": "Antimatter Roka",
+    "slug": "antimatter-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Italianism Roka',
-    slug: 'italianism-roka',
-    effect: 'Boosts physical strike damage by 20% and plays expressive accordion music.',
-    stoneLimbPenalty: 'Right hand locks into an Italian hand gesture stone pose.',
-    specialNotes: 'Applies bonus scaling to Passione Stand movesets (Kraft Work, Beach Boy).'
+    "name": "Emotional Damage Roka",
+    "slug": "emotional-damage-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Overcaffeinated Roka',
-    slug: 'overcaffeinated-roka',
-    effect: 'Reduces all cooldowns by 30% for 15 seconds, allowing high-tempo ability rotation.',
-    stoneLimbPenalty: 'Shaking stone limbs resulting in slight camera jitter.',
-    specialNotes: 'Requires high health to absorb the recoil after effect expires.'
+    "name": "Expired Roka",
+    "slug": "expired-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Personal Space Roka',
-    slug: 'personal-space-roka',
-    effect: 'Projects an invisible 8-stud barrier that pushes melee attackers away.',
-    stoneLimbPenalty: 'Body turns to porous pumice stone.',
-    specialNotes: 'Top-tier defensive consumable against close-range rushdown Stands.'
+    "name": "Fabulous Roka",
+    "slug": "fabulous-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Peachy Roka',
-    slug: 'peachy-roka',
-    effect: 'Cleanse and regeneration fruit. Cures all status debuffs and grants steady HP regen.',
-    stoneLimbPenalty: 'Mild petrification of cheeks and jaw.',
-    specialNotes: 'Standard high-grade medical exchange.'
+    "name": "Italianism Roka",
+    "slug": "italianism-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Too Hot Roka',
-    slug: 'too-hot-roka',
-    effect: 'Sets user on holy fire, granting fire attack properties to all light attacks for 20s.',
-    stoneLimbPenalty: 'Obsidian stone arms that radiate smoke.',
-    specialNotes: 'Synergizes with Magician\'s Red and Hamon fire scaling.'
+    "name": "Peachy Roka",
+    "slug": "peachy-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
   },
   {
-    name: 'Rero Rero Roka',
-    slug: 'rero-rero-roka',
-    effect: 'Grants extreme projectile accuracy and ricochet tracking for 30s.',
-    stoneLimbPenalty: 'Tongue petrifies into a rolling cherry shape.',
-    specialNotes: 'Huge buff for Emperor, TWAU, and Johnny nail shots.'
+    "name": "Overcaffeinated Roka",
+    "slug": "overcaffeinated-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Personal Space Roka",
+    "slug": "personal-space-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Questionable Dragon Roka",
+    "slug": "questionable-dragon-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Root Vision Roka",
+    "slug": "root-vision-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Salty Roka",
+    "slug": "salty-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Slippery Roka",
+    "slug": "slippery-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Seed Machine Roka",
+    "slug": "seed-machine-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Shrinking Roka",
+    "slug": "shrinking-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Sourpuss Roka",
+    "slug": "sourpuss-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Squeaky Clean Roka",
+    "slug": "squeaky-clean-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Sticky Roka",
+    "slug": "sticky-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Stinky Roka",
+    "slug": "stinky-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Suspiciously Healthy Roka",
+    "slug": "suspiciously-healthy-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Brain Freeze Roka",
+    "slug": "brain-freeze-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Bunch of Me Roka",
+    "slug": "bunch-of-me-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Crackling Roka",
+    "slug": "crackling-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Couch Potato Roka",
+    "slug": "couch-potato-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Rero Rero Roka",
+    "slug": "rero-rero-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "Too Hot Roka",
+    "slug": "too-hot-roka",
+    "effect": "Turns a body part to stone to heal you and clear harmful statuses. Better quality improves the exchange.",
+    "stoneLimbPenalty": "Turns a body part to stone.",
+    "specialNotes": "Verified botanical mutation with 3% base harvest probability."
+  },
+  {
+    "name": "07/10/2026 (Rokaka Types, Quest GUI Rework, More...)",
+    "slug": "07-10-2026-rokaka-types-quest-gui-rework-more",
+    "effect": "Added the following roka types Emerald Roka - Chance to remove stand, grants EXP in return (tier scales chance to remove, and exp gained) (this is to go from pure stand, mixed stand, to pure subability) Sapphire Roka - C",
+    "stoneLimbPenalty": "Turns a body part to stone temporarily.",
+    "specialNotes": "Verified botanical mutation from agricultural harvesting."
+  },
+  {
+    "name": "All Rokakakas grow 3x faster inside of the Rokakaka Growing Room (Gang Base)",
+    "slug": "all-rokakakas-grow-3x-faster-inside-of-the-rokakaka-growing-room-gang-base",
+    "effect": "Rare mutated strain grown from cultivated garden soil.",
+    "stoneLimbPenalty": "Turns a body part to stone temporarily.",
+    "specialNotes": "Verified botanical mutation from agricultural harvesting."
   }
 ];
+
+export const rokaMutationsBySlug = new Map(rokaMutations.map((m) => [m.slug, m]));

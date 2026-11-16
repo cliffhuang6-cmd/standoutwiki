@@ -1,75 +1,122 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ImageModal from '../components/ImageModal';
 import { items } from '../data/items';
 
+const categories = ['All', 'Arrow', 'Consumable', 'Material', 'Story', 'Stand Chip'];
 ---
 
 <Layout
-  title="Stand Out Items & Crafting Recipes – Materials & Consumables | Stand Out Wiki"
-  description="Complete items database for Roblox STAND OUT. View crafting recipes, consumable fruit effects, Steel Ingot farming locations, and Stand Chip drops."
+  title="Stand Out Items & Crafting Recipes – Materials, Consumables & Arrows | Stand Out Wiki"
+  description="Complete 28-item database for Roblox STAND OUT. View high-resolution item graphics, crafting bench formulas, consumable fruit effects, Steel Ingot locations, and Stand Chip storage."
   canonicalPath="items"
   breadcrumbs={[{ label: 'Items' }]}
   schemaType="CollectionPage"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Header -->
     <div class="max-w-3xl mb-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
-        <span>Item Encyclopedia</span>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3 border border-emerald-200">
+        <span>Verified Item Encyclopedia</span>
         <span>•</span>
-        <span>Materials &amp; Consumables</span>
+        <span>{items.length} Tracked Game Items</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
         Stand Out Items &amp; Materials
       </h1>
 
-      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Browse the complete item catalog of Roblox <strong>STAND OUT</strong>. Find obtainment sources for crafting components like Steel Ingots and Arrow Parts, consumable fruits, and rare raid Stand Chips.
+      <p class="mt-4 text-base text-slate-600 leading-relaxed font-medium">
+        Browse the complete item catalog of Studio Umbra's <strong>STAND OUT</strong>. Click any item thumbnail to open an enlarged high-resolution image preview. Check obtainment sources for metallurgy materials, consumable recovery fruits, and rare raid Stand Chips.
       </p>
+    </div>
+
+    <!-- Category Filter Notice / Navigation -->
+    <div class="flex flex-wrap items-center gap-2 mb-10 pb-6 border-b border-slate-200 text-xs font-bold">
+      <span class="text-slate-400 uppercase tracking-wider text-[11px] mr-2">Quick Jump:</span>
+      <a href="#arrow" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-colors">
+        Summon Arrows
+      </a>
+      <a href="#consumable" class="px-3 py-1.5 rounded-lg bg-purple-50 text-purple-800 border border-purple-200 hover:bg-purple-100 transition-colors">
+        Consumables &amp; Food
+      </a>
+      <a href="#material" class="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100 transition-colors">
+        Crafting Materials
+      </a>
+      <a href="#story" class="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition-colors">
+        Story Relics &amp; IDs
+      </a>
+      <a href="#stand-chip" class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition-colors">
+        Stand Chips
+      </a>
     </div>
 
     <!-- Items Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((item) => (
-        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between hover:border-emerald-400 transition-all" id={item.slug}>
+        <div
+          class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between hover:border-emerald-400 hover:shadow-md transition-all group"
+          id={item.slug}
+        >
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2 py-0.5 text-[10px] font-black uppercase tracking-wider rounded bg-slate-100 text-slate-700">
+            {/* Card Header & Category Badge */}
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-[11px] font-black uppercase tracking-wider rounded-lg bg-slate-100 text-slate-700 border border-slate-200">
                 {item.category}
               </span>
+              {item.sellPrice && (
+                <span class="text-xs font-mono font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                  {item.sellPrice}
+                </span>
+              )}
             </div>
 
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-14 h-14 rounded-xl bg-slate-50 border border-slate-200 p-2 flex items-center justify-center shrink-0">
-                <img
-                  src={item.image || '/images/items/apple.webp'}
-                  alt={item.name}
-                  class="w-full h-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-              <div>
-                <h2 class="text-base font-black text-slate-900">{item.name}</h2>
-                <p class="text-xs text-slate-500 line-clamp-1 mt-0.5">{item.obtainMethod}</p>
-              </div>
+            {/* Enlarged Image Container (140px-160px visible area) */}
+            <div class="w-full h-40 bg-slate-50 rounded-xl border border-slate-200/80 p-3 mb-5 flex items-center justify-center overflow-hidden">
+              <ImageModal
+                client:load
+                src={item.image || '/images/items/apple.webp'}
+                alt={item.name}
+                title={item.name}
+                subtitle={`Category: ${item.category} • ${item.sellPrice || 'Non-Tradeable'}`}
+                className="w-full h-full flex items-center justify-center"
+              />
             </div>
 
-            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            {/* Title & Obtainment */}
+            <h2 class="text-lg font-black text-slate-900 group-hover:text-emerald-800 transition-colors">
+              {item.name}
+            </h2>
+
+            <div class="mt-1.5 mb-4 p-2.5 bg-slate-50 rounded-lg border border-slate-100 text-xs text-slate-600">
+              <span class="font-bold text-slate-800 block text-[11px] uppercase tracking-wider mb-0.5">
+                📍 Obtainment:
+              </span>
+              <p class="leading-relaxed">{item.obtainMethod}</p>
+            </div>
+
+            {/* Description */}
+            <p class="text-sm text-slate-700 leading-relaxed mb-4">
               {item.description}
             </p>
           </div>
 
-          <div class="pt-3 border-t border-slate-100 text-xs text-slate-600">
-            <span class="font-bold text-slate-800 block mb-1">Key Uses:</span>
-            <ul class="space-y-1">
-              {item.uses.map((u) => (
-                <li class="flex items-start gap-1.5">
-                  <span class="text-emerald-500 font-bold">•</span>
-                  <span>{u}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Key Uses */}
+          {item.uses && item.uses.length > 0 && (
+            <div class="pt-4 border-t border-slate-100 text-xs text-slate-600">
+              <span class="font-bold text-slate-800 uppercase tracking-wider text-[11px] block mb-2">
+                Primary Utilities &amp; Uses:
+              </span>
+              <ul class="space-y-1.5">
+                {item.uses.map((use) => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                    <span class="leading-relaxed">{use}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       ))}
     </div>

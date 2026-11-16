@@ -17,3 +17,11 @@ if (fs.existsSync(sitemapIndex)) {
 } else {
   console.warn('⚠️ Warning: dist/sitemap-index.xml not found during postbuild.');
 }
+
+// Ensure _headers exists in dist/ for Cloudflare Pages HTTP header configuration
+const headersSrc = path.join(rootDir, 'public', '_headers');
+const headersTarget = path.join(distDir, '_headers');
+if (fs.existsSync(headersSrc)) {
+  fs.copyFileSync(headersSrc, headersTarget);
+  console.log('✓ Verified dist/_headers for Cloudflare Pages');
+}

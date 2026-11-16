@@ -1,0 +1,3232 @@
+{
+  "yellow-temperance": {
+    "name": "Yellow Temperance",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "“DO YOU UNDERSTANDDDD!?”",
+        "bodyLen": 396,
+        "bodyPreview": "**The stand of Rubber Soul, one of DIO’s assassins.. Yellow Temperance is a yell"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Trapped Breath",
+        "bodyLen": 428,
+        "bodyPreview": "**Living Armor holds 100 air and uses 5 each second. Hits cost another 1.25 air "
+      },
+      {
+        "header": "Assimilation",
+        "bodyLen": 266,
+        "bodyPreview": "**Repeated hits and contact with slime build up to 10 stacks per enemy. Damage r"
+      },
+      {
+        "header": "Feeding Slime",
+        "bodyLen": 259,
+        "bodyPreview": "**Your damage bonus counts your own Assimilation stacks across every enemy, Ten "
+      },
+      {
+        "header": "Ravenous Flurry",
+        "bodyLen": 151,
+        "bodyPreview": "**Sweep enemies left, then right, before all four tentacles slam them forward an"
+      },
+      {
+        "header": "Borrowed Face",
+        "bodyLen": 184,
+        "bodyPreview": "**Aim near a player or NPC within 300 studs to copy their appearance, name, and "
+      },
+      {
+        "header": "Living Armor",
+        "bodyLen": 349,
+        "bodyPreview": "**Wrap yourself in slime to take 65% less damage and coat nearby players in Assi"
+      },
+      {
+        "header": "TAP [SUIT]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "HOLD [MASK]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Assimilation",
+        "bodyLen": 218,
+        "bodyPreview": "**Spread slime in front of you to consume loose props or finish downed enemies, "
+      },
+      {
+        "header": "Tap [DEVOUR]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Devouring Object",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Hold [SPREAD]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Opponent Standing In Puddle",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "EX [Awakening Moves]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Crawling Temperance [1 Bar]",
+        "bodyLen": 206,
+        "bodyPreview": "**Grow four tentacles that lift you off the ground and carry you quickly for 6 s"
+      },
+      {
+        "header": "Running",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Borrowed Stand [1 Bar]",
+        "bodyLen": 215,
+        "bodyPreview": "**While disguised, shape your slime into their Stand. You can pilot the imitatio"
+      },
+      {
+        "header": "Play Dead [3 Bars]",
+        "bodyLen": 230,
+        "bodyPreview": "**While disguised, prepare to fake your death. The next enemy blow within 8 seco"
+      },
+      {
+        "header": "Assimilation Trail [3 Bars]",
+        "bodyLen": 205,
+        "bodyPreview": "**For 6 seconds, leave slime puddles as you move. Enemies touching them gain Ass"
+      }
+    ]
+  },
+  "yo-yo-ma": {
+    "name": "Yo-Yo Ma",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 332,
+        "bodyPreview": "**“That was a mean thing to do… Treating me like an object… not that I mind”** *"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Stand Mechanics",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "A Devil in Disguise/Automatic Stand",
+        "bodyLen": 210,
+        "bodyPreview": "**Hold E while aiming at someone within 100 studs of the stand to follow them. I"
+      },
+      {
+        "header": "Repulsive",
+        "bodyLen": 178,
+        "bodyPreview": "**Yo-Yo Ma takes no damage, but can be stunned or knocked away. Close hits splas"
+      },
+      {
+        "header": "Crybaby",
+        "bodyLen": 105,
+        "bodyPreview": "**If the user is attacked while piloting the stand, they will cry out and be stu"
+      },
+      {
+        "header": "An Expert Craftsman",
+        "bodyLen": 325,
+        "bodyPreview": "**Talk to Yo-Yo Ma while it is parked or following someone else. It can craft us"
+      },
+      {
+        "header": "Tainted Item",
+        "bodyLen": 304,
+        "bodyPreview": "**Hold to cycle through items, then tap to make one in Yo-Yo Ma’s empty stomach."
+      },
+      {
+        "header": "Hold",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Tap",
+        "bodyLen": 30,
+        "bodyPreview": "(“Eating” the selected object)"
+      },
+      {
+        "header": "Drooling Menace",
+        "bodyLen": 219,
+        "bodyPreview": "**Coat the ground and nearby objects in Acidic Saliva, damaging enemies and leav"
+      },
+      {
+        "header": "Treacherous Hoarder",
+        "bodyLen": 227,
+        "bodyPreview": "**Swallow nearby items to carry them back to you, then interact to collect them."
+      },
+      {
+        "header": "Objects",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Whispers from Yo-Yo Ma",
+        "bodyLen": 116,
+        "bodyPreview": "**Whisper to enemies in front of Yo-Yo Ma, making them deal 20% less damage for "
+      },
+      {
+        "header": "EX: [Awakening Moveset]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Impromptu Camoflauge",
+        "bodyLen": 198,
+        "bodyPreview": "**Make a bush and interact with it to hide inside. You become nearly invisible b"
+      },
+      {
+        "header": "Pestilent Trap",
+        "bodyLen": 263,
+        "bodyPreview": "**Hide mosquitoes in a throwable. Only you can see them before an enemy touches "
+      },
+      {
+        "header": "Hey, What’s That?",
+        "bodyLen": 154,
+        "bodyPreview": "**Make nearby enemies watching Yo-Yo Ma turn to look where it points, giving its"
+      },
+      {
+        "header": "Gourmand Of Spirits",
+        "bodyLen": 198,
+        "bodyPreview": "**Swallow an enemy’s stand for 10 seconds, stopping them from using it. They can"
+      }
+    ]
+  },
+  "cinderella": {
+    "name": "Cinderella",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 398,
+        "bodyPreview": "**“The moral of the story is that miracles take dedication.”** **Aya Tsuji runs "
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ability Scaling",
+        "bodyLen": 114,
+        "bodyPreview": "**Change of Face: Misfortune lasts up to 50% longer (90 seconds) and treatment i"
+      },
+      {
+        "header": "Hair Cut",
+        "bodyLen": 208,
+        "bodyPreview": "**Grab an opponent and give them a messy haircut, acting as a powerful extender."
+      },
+      {
+        "header": "Self [HOLD]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Enhancement Selector",
+        "bodyLen": 90,
+        "bodyPreview": "**Cycle through the faces Cinderella can apply. Hold to go back.** **Base cooldo"
+      },
+      {
+        "header": "Faces and fate",
+        "bodyLen": 379,
+        "bodyPreview": "**Choose one of five faces with Enhancement Selector, then apply it with Change "
+      },
+      {
+        "header": "Existing Faces",
+        "bodyLen": 361,
+        "bodyPreview": "**Angry Face - 25% Damage, 30% Attack Speed** **Lucky Face - Enemy projectiles v"
+      },
+      {
+        "header": "Botched Faces: (Lasts 60 seconds)",
+        "bodyLen": 308,
+        "bodyPreview": "**Angry Face - -15% Attack Speed, -25% Damage.** **Lucky Face - +25% Damage Take"
+      },
+      {
+        "header": "Change of Face",
+        "bodyLen": 219,
+        "bodyPreview": "**Apply a face and its blessing, which lasts until death. Hold to treat yourself"
+      },
+      {
+        "header": "Botch [HOLD]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Self [HOLD]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Special Lipstick / [HOLD: TOGGLE SALES]",
+        "bodyLen": 123,
+        "bodyPreview": "**Throw lipstick to cure a Misfortune you caused. Hold to sell cures to your cli"
+      },
+      {
+        "header": "Toggle Sales [HOLD]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "EX: [Awakening Moves]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Limb Replacement [4 Bars]",
+        "bodyLen": 170,
+        "bodyPreview": "**Mark two people to swap their arms and Strength for the rest of their lives. H"
+      },
+      {
+        "header": "Moral of The Story [3 Bars]",
+        "bodyLen": 110,
+        "bodyPreview": "**Replace someone’s face and hair until they die. Hold to enter a customization "
+      },
+      {
+        "header": "With Code",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Miracle [1 Bar]",
+        "bodyLen": 244,
+        "bodyPreview": "**Let another player permanently change their body, hair, face and markings. Sta"
+      },
+      {
+        "header": "Permanent Body Change [5 Bars]",
+        "bodyLen": 213,
+        "bodyPreview": "**Take a fallen person’s life and disguise someone as them until death, with the"
+      }
+    ]
+  },
+  "smooth-operators": {
+    "name": "Smooth Operators",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 361,
+        "bodyPreview": "**“This is what we’re going to slide. Do it, Smooth Operators!”** **The Stand of"
+      },
+      {
+        "header": "Injury Shift / Target Yourself [HOLD]",
+        "bodyLen": 319,
+        "bodyPreview": "**Lift an injury, healing up to 10/15/20/25% max health with 1/2/3/4 operators. "
+      },
+      {
+        "header": "First use",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Second use",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Rearrange",
+        "bodyLen": 199,
+        "bodyPreview": "**Shift an enemy' body for 8 seconds. One operator targets a leg, two the eyes, "
+      },
+      {
+        "header": "Anyone’s Weakness",
+        "bodyLen": 94,
+        "bodyPreview": "**A low kick that breaks guard and briefly blurs the target’s vision.** **Base c"
+      },
+      {
+        "header": "Internal Pain",
+        "bodyLen": 189,
+        "bodyPreview": "**Send your deployed operators inside an enemy, More operators deal stronger, fa"
+      },
+      {
+        "header": "Colony Formation",
+        "bodyLen": 27,
+        "bodyPreview": "**Deploy/Return Operators**"
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 124,
+        "bodyPreview": "**Summon your stand, Then use ctrl to enter or leave pilot mode**. **(Can travel"
+      },
+      {
+        "header": "Face Lift [2 Bars]",
+        "bodyLen": 234,
+        "bodyPreview": "**Lift someone’s face markings for this life. Use again on another person to app"
+      },
+      {
+        "header": "Zip It [2 Bars]",
+        "bodyLen": 101,
+        "bodyPreview": "**Slide an enemy’s mouth shut, preventing them from chatting for 25 seconds.** *"
+      },
+      {
+        "header": "Lock Up [2 Bars]",
+        "bodyLen": 91,
+        "bodyPreview": "**Send Smooth Operators to seal a nearby door shut for 15 seconds.** **Base cool"
+      },
+      {
+        "header": "ISHI! ISHI! ISHI! [3 Bars]",
+        "bodyLen": 142,
+        "bodyPreview": "**All four operators rush an enemy and steal their health HUD for 10 seconds. Re"
+      },
+      {
+        "header": "On the opponents screen",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      }
+    ]
+  },
+  "beach-boy": {
+    "name": "Beach Boy",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "“Got him! He took the bait!”",
+        "bodyLen": 198,
+        "bodyPreview": "**The stand of Pesci, a member of La Squadra Esecuzioni. Beach Boy is a fishing "
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ability Scaling",
+        "bodyLen": 94,
+        "bodyPreview": "**Ability makes your line longer and your reel stronger. The line can reach up t"
+      },
+      {
+        "header": "For My Bro!",
+        "bodyLen": 107,
+        "bodyPreview": "**Anyone who kills a member of your party is marked for 20 seconds. Your hook si"
+      },
+      {
+        "header": "Cast Out (Ctrl)",
+        "bodyLen": 163,
+        "bodyPreview": "**Steer your hook through walls and floors to catch someone. Use again to stop s"
+      },
+      {
+        "header": "The Line Carries",
+        "bodyLen": 100,
+        "bodyPreview": "**You and your allies can hit the line to damage whoever is hooked. Hamon also t"
+      },
+      {
+        "header": "An Angler’s Hold",
+        "bodyLen": 115,
+        "bodyPreview": "**Being ragdolled or hit with heavy knockback releases whoever you have hooked, "
+      },
+      {
+        "header": "Big Catches",
+        "bodyLen": 104,
+        "bodyPreview": "**Hook a large object, such as a car. Hold M1 to reel yourself toward it, or pre"
+      },
+      {
+        "header": "Quick Pull (R)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Reel (M1)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Good Vibrations",
+        "bodyLen": 136,
+        "bodyPreview": "**While steering the hook inside a wall or underground, nearby people appear as "
+      },
+      {
+        "header": "Objects",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Quickcast",
+        "bodyLen": 145,
+        "bodyPreview": "**Cast your hook toward your aim in a shallow arc. It catches people, sticks int"
+      },
+      {
+        "header": "Hook Depth",
+        "bodyLen": 257,
+        "bodyPreview": "**Hold M1 to reel someone in and build depth. More Strength makes the hook sink "
+      },
+      {
+        "header": "M1 Reel",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "R Tear: (With Depth)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Double Snag",
+        "bodyLen": 166,
+        "bodyPreview": "**Whip the hook twice. Landing both hits causes bleeding. If someone is already "
+      },
+      {
+        "header": "If hooked",
+        "bodyLen": 93,
+        "bodyPreview": "**(Tearing heart out and proccing bleed, then re-entering with half the depth: 7"
+      },
+      {
+        "header": "Set the Hook",
+        "bodyLen": 183,
+        "bodyPreview": "**Drive the hook deeper (25%) and fling your catch. Move sideways to throw them "
+      },
+      {
+        "header": "Smashing them into a wall",
+        "bodyLen": 52,
+        "bodyPreview": "**(Holding A to fling the enemy to the left side.)**"
+      },
+      {
+        "header": "Target Swap",
+        "bodyLen": 153,
+        "bodyPreview": "**Switch between your catch’s heart, head, arm and leg. Keep 75% of the hook’s d"
+      },
+      {
+        "header": "Targets",
+        "bodyLen": 248,
+        "bodyPreview": "**Heart: causes bleeding when pulled out.** **Head: takes longer to reach. Pulli"
+      },
+      {
+        "header": "EX [Awakening Moves]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Focused Fishing",
+        "bodyLen": 138,
+        "bodyPreview": "**Hold to reel your catch in faster and sink the hook deeper. You cannot move it"
+      },
+      {
+        "header": "Fatal Resolve [1 Bar]",
+        "bodyLen": 178,
+        "bodyPreview": "**Stomp in front of you to finish downed enemies and knock standing enemies away"
+      },
+      {
+        "header": "Execute",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Trophy Catch [3 Bars]",
+        "bodyLen": 172,
+        "bodyPreview": "**Slam a plaque with your last kill mounted on it, then pick it up and throw it."
+      },
+      {
+        "header": "Fish Filet [2 Bars]",
+        "bodyLen": 226,
+        "bodyPreview": "**Try to tear out an eye or limb, with a higher chance at greater depth. Targeti"
+      },
+      {
+        "header": "Head (Eye)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Heart (Execute)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Limb (Arm)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Limb (Leg)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      }
+    ]
+  },
+  "hey-ya": {
+    "name": "Hey Ya!",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 252,
+        "bodyPreview": "**“Lucky you! You’ve got more luck than anyone in the world”** **The Stand of Po"
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Inspiration! / Build Luck [HOLD]",
+        "bodyLen": 117,
+        "bodyPreview": "**Hey Ya! cheers you on, building luck stacks over time. (Needs luck stacks to b"
+      },
+      {
+        "header": "Build Luck",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Lucky Observation",
+        "bodyLen": 143,
+        "bodyPreview": "**Reveal a nearby throwable object and empower it for your next throw.** **Look "
+      },
+      {
+        "header": "Premonition / Believe in Yourself! [HOLD]",
+        "bodyLen": 94,
+        "bodyPreview": "**Tap for a brief counter window, or hold to toggle your lucky dodge.** **Base c"
+      },
+      {
+        "header": "Tap Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Counter Hit",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Held Variant: (Drains luck stack each dodged hit)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Whispers From Hey Ya!",
+        "bodyLen": 231,
+        "bodyPreview": "**Follow Hey Ya!'s advice in time to gain luck and recover a little health.** **"
+      },
+      {
+        "header": "Lucky Uppercut",
+        "bodyLen": 127,
+        "bodyPreview": "**Using 8 stacks of luck with Build Luck will result in you getting the ability "
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 163,
+        "bodyPreview": "**Summon your stand, then use Ctrl to enter or leave pilot control. Your camera "
+      },
+      {
+        "header": "Ride Along",
+        "bodyLen": 112,
+        "bodyPreview": "**While piloting, touch another player with Hey Ya! to attach to them and share "
+      }
+    ]
+  },
+  "200-balloons": {
+    "name": "200 Balloons",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 318,
+        "bodyPreview": "**Ningbo’s Stand can inflate anything he touches, including parts of a person’s "
+      },
+      {
+        "header": "Pose: None",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Inflating Attacks",
+        "bodyLen": 98,
+        "bodyPreview": "**Your own light attacks apply inflations. TOTAL BALLOONS doubles their inflatio"
+      },
+      {
+        "header": "Sudden Balloons",
+        "bodyLen": 271,
+        "bodyPreview": "**Grab an enemy and rapidly inflate their body before dropping them.** **Your ch"
+      },
+      {
+        "header": "Inflate",
+        "bodyLen": 511,
+        "bodyPreview": "**Inflate an enemy or turn a loose object into a exploding balloon. Hold to slam"
+      },
+      {
+        "header": "On person",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Gasoline",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Fire hydrant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Car",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Slam [HOLD]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "MAC-10",
+        "bodyLen": 210,
+        "bodyPreview": "**Fire a rapid burst of silenced bullets towards your cursor.** **Fire the user-"
+      },
+      {
+        "header": "Relentless Counter",
+        "bodyLen": 383,
+        "bodyPreview": "**Counter an attack, grab the attacker by their face, and repeatedly inflate the"
+      },
+      {
+        "header": "Execute (Below 20% HP)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Deflect",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "EX [Awakening Moves]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "TOTAL BALLOONS [1 Bar]",
+        "bodyLen": 248,
+        "bodyPreview": "**Spend 1 EX bar to surround yourself with balloons. Attackers receive an inflat"
+      },
+      {
+        "header": "Inflations",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Projectile Defense",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Drain",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      }
+    ]
+  },
+  "the-sun": {
+    "name": "The Sun",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 268,
+        "bodyPreview": "**“The desert night is often cold… but not tonight.”** **The Stand of Arabia Fat"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "## Up The Heat / Lower The Heat [HOLD]",
+        "bodyLen": 158,
+        "bodyPreview": "**Turn up the heat to strengthen your fire attacks.** **Increasing the heat too "
+      },
+      {
+        "header": "Up The Heat",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Lower The Heat",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Solar Onslaught",
+        "bodyLen": 76,
+        "bodyPreview": "**Bombard your target with concentrated solar rays.** **Base cooldown: 28s**"
+      },
+      {
+        "header": "Solar Snipe",
+        "bodyLen": 93,
+        "bodyPreview": "**Focus the sun’s energy into a long-range beam. (Procs burn on hit)** **Base co"
+      },
+      {
+        "header": "Disguise",
+        "bodyLen": 124,
+        "bodyPreview": "**Hide inside a trashcan to become invisible. (Requires Trashcan)** **Prevents b"
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 135,
+        "bodyPreview": "**Summon your stand, then use Ctrl to enter or leave pilot control. Your camera "
+      },
+      {
+        "header": "Solar Flare [2 Bars]",
+        "bodyLen": 92,
+        "bodyPreview": "**Release a flash of sunlight that burns and blinds nearby enemies.** **Base coo"
+      },
+      {
+        "header": "Callous Sol [4 Bars]",
+        "bodyLen": 192,
+        "bodyPreview": "**Gather the sun’s light into a growing sphere, then hurl it down. The longer it"
+      }
+    ]
+  },
+  "lyin-eyes": {
+    "name": "Lyin' Eyes",
+    "sections": []
+  },
+  "the-mattekudasai": {
+    "name": "The MATTEKUDASAI",
+    "sections": []
+  },
+  "hermit-purple": {
+    "name": "Hermit Purple",
+    "sections": [
+      {
+        "header": "Obtainable by doing [https://trello.com/c/0Ul5K8MW/383-bills-request](https://trello.com/c/0Ul5K8MW/383-bills-request \"smartCard-inline\") (Need to have Hamon and no Stand)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Lore",
+        "bodyLen": 336,
+        "bodyPreview": "**“Did you see it? The thorns from my hand? That is my Stand!”** **The Stand of "
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Hermit’s Sling / Swing [TAP] / Pull [HOLD]",
+        "bodyLen": 274,
+        "bodyPreview": "**Tap to catch a high surface to either side and swing forward through open spac"
+      },
+      {
+        "header": "Tap  Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Hold Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Boulder Hold / Pull Rock / Throw",
+        "bodyLen": 293,
+        "bodyPreview": "**Brace and pull a rock from the ground. While holding it, use slower, heavier b"
+      },
+      {
+        "header": "M1S",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Throw",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Spirit Photography",
+        "bodyLen": 140,
+        "bodyPreview": "**Choose a player from the leaderboard, then smash a camera to develop a photogr"
+      },
+      {
+        "header": "Hermit Grasp",
+        "bodyLen": 216,
+        "bodyPreview": "**Lash out with your vines, pushing nearby enemise outward before pulling them t"
+      },
+      {
+        "header": "Hermit Grasp EX [1 Bar]",
+        "bodyLen": 179,
+        "bodyPreview": "**Aim at an enemy and extend your vines to bind them from afar. Interrupts fligh"
+      }
+    ]
+  },
+  "mr-president": {
+    "name": "Mr. President",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 251,
+        "bodyPreview": "**“There’s a room inside the turtle?!”** **The Stand of the turtle Coco Jumbo. I"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Enter Room/Entrap [HOLD]",
+        "bodyLen": 340,
+        "bodyPreview": "**Enter the turtle’s pocket dimension room**. ([https://trello.com/c/MwfBb1Le/52"
+      },
+      {
+        "header": "Tap Variant",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "Held Variant",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "Room Eject",
+        "bodyLen": 227,
+        "bodyPreview": "**Forcefully eject everyone from the turtle room.** ([https://trello.com/c/MwfBb"
+      },
+      {
+        "header": "Shell Defense",
+        "bodyLen": 80,
+        "bodyPreview": "**Retreat into the shell for a sturdy defensive stance.** **Base cooldown: 45s**"
+      },
+      {
+        "header": "## BANKEY",
+        "bodyLen": 285,
+        "bodyPreview": "**Activate the turtle’s key to change your fighting style.** **Activate near you"
+      },
+      {
+        "header": "Key Dash",
+        "bodyLen": 143,
+        "bodyPreview": "**Activate BANKEY**, then use **Q forward for the Key’s special dash**. **Side a"
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "## Pilot Mode (LCTRL)",
+        "bodyLen": 175,
+        "bodyPreview": "Summon your stand, Then use **Ctrl** to **enter or leave pilot control**. **Your"
+      },
+      {
+        "header": "EX: [Awakening Moves]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Tortoise Toss [2 Bars]",
+        "bodyLen": 127,
+        "bodyPreview": "**Throw Coco Jumbo at an enemy to bring them into your room. Take control of the"
+      }
+    ]
+  },
+  "the-hustle": {
+    "name": "The Hustle",
+    "sections": [
+      {
+        "header": "“The Hustle! Time to do your stuff!”",
+        "bodyLen": 215,
+        "bodyPreview": "**Paco Laburante’s Stand has no body of its own. It lives in his muscles and giv"
+      },
+      {
+        "header": "Chiseled Like A Rock",
+        "bodyLen": 207,
+        "bodyPreview": "**Summoning The Hustle grows muscles on your body. While it’s out you take 10% l"
+      }
+    ]
+  },
+  "notorious-big": {
+    "name": "Notorious B.I.G",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 378,
+        "bodyPreview": "**“GUGURGUURGURUGRUGUR”** **The stand of Carne, one of the Boss’s bodyguards. No"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Death Wish",
+        "bodyLen": 87,
+        "bodyPreview": "**While Notorious B.I.G’s user is alive, every hit against them does 50% more da"
+      },
+      {
+        "header": "Hate",
+        "bodyLen": 255,
+        "bodyPreview": "**Landing hits, getting hurt, Stalking and insulting people  all build Hate, up "
+      },
+      {
+        "header": "Grudge",
+        "bodyLen": 283,
+        "bodyPreview": "**Anyone who hurts you builds a Grudge against you, more the harder they hit, an"
+      },
+      {
+        "header": "Hateful Punches",
+        "bodyLen": 162,
+        "bodyPreview": "**Notorious B.I.G throws a slow barrage of hateful punches. Every hit builds Hat"
+      },
+      {
+        "header": "Insult",
+        "bodyLen": 190,
+        "bodyPreview": "**Hiss and scream insults at everyone around you. Each enemy in range takes 20% "
+      },
+      {
+        "header": "Tumorous Pulse",
+        "bodyLen": 240,
+        "bodyPreview": "**Notorious B.I.G steps out in front of you and smashes the ground, sending a wa"
+      },
+      {
+        "header": "Stalk (HOLD)",
+        "bodyLen": 268,
+        "bodyPreview": "**Hold to stare down an enemy in front of you. While they aren’t looking at you,"
+      },
+      {
+        "header": "Good Luck (3 Bars)",
+        "bodyLen": 222,
+        "bodyPreview": "**Costs 3 EX bars and all of your Hate. Your stand is put away and you burst int"
+      },
+      {
+        "header": "Vengeful Life",
+        "bodyLen": 311,
+        "bodyPreview": "**the moment you would start Bleeding out, Notorious B.I.G emerges and you becom"
+      },
+      {
+        "header": "Blind",
+        "bodyLen": 292,
+        "bodyPreview": "**As Notorious B.I.G you only see a short way through a dark fog. Past that, any"
+      },
+      {
+        "header": "Can’t swim",
+        "bodyLen": 238,
+        "bodyPreview": "**As Notorious B.I.G, deep water (the sea, lakes and pools, not puddles) kills y"
+      },
+      {
+        "header": "Mouthful",
+        "bodyLen": 211,
+        "bodyPreview": "**As Notorious B.I.G, picking up an object swallows it instead of carrying it. A"
+      },
+      {
+        "header": "Consumption",
+        "bodyLen": 289,
+        "bodyPreview": "**Leap forward and latch onto the first enemy or loose object you reach. Enemies"
+      },
+      {
+        "header": "Symbiosis",
+        "bodyLen": 405,
+        "bodyPreview": "**When Consumption kills someone, Notorious B.I.G climbs inside their body and g"
+      },
+      {
+        "header": "Starving Tendrils",
+        "bodyLen": 317,
+        "bodyPreview": "**Tendrils shoot at up to three of the closest things moving around you. Each ha"
+      },
+      {
+        "header": "Pull: (TAP AGAIN)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Tendril",
+        "bodyLen": 94,
+        "bodyPreview": "**Press Q to pull yourself forward with a tendril or attach onto a loose object "
+      },
+      {
+        "header": "Conceal",
+        "bodyLen": 176,
+        "bodyPreview": "**While riding someone’s back, seep into their clothes and vanish completely. Us"
+      },
+      {
+        "header": "Flesh Dome",
+        "bodyLen": 271,
+        "bodyPreview": "**EVASIVE; works while stunned, and can’t be hit out of when used that way. Tend"
+      }
+    ]
+  },
+  "kraft-work": {
+    "name": "Kraft Work",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 324,
+        "bodyPreview": "**“I’m overflowing with hope and motivation!”** **The Stand of Sale, a member of"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Krafted",
+        "bodyLen": 417,
+        "bodyPreview": "**Kraft Work’s heavy attacks, hits from projectiles you froze, Fixation and Kine"
+      },
+      {
+        "header": "Kinetic Control",
+        "bodyLen": 632,
+        "bodyPreview": "**With Kraft Work summoned, block just before a projectile reaches its front to "
+      },
+      {
+        "header": "R/M2 Deflect",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Kinetic Throw",
+        "bodyLen": 93,
+        "bodyPreview": "**When throwing an object, then use R during the windup to lift it and kinetical"
+      },
+      {
+        "header": "Fixation",
+        "bodyLen": 401,
+        "bodyPreview": "**Freeze projectiles, loose throwables, vehicles and piloted Stands around Kraft"
+      },
+      {
+        "header": "Stopping the train",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Stopping projectiles",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Contact Fixation",
+        "bodyLen": 676,
+        "bodyPreview": "**Touch an enemy with Kraft Work to leave them Kineticized, or freeze a loose th"
+      },
+      {
+        "header": "Rock Throw",
+        "bodyLen": 126,
+        "bodyPreview": "**Throw three rocks in a small fan.** **Press again at any point in their flight"
+      },
+      {
+        "header": "Press again",
+        "bodyLen": 71,
+        "bodyPreview": "**(Fixating the rocks, M1ng then and then using Werk to launch them.)**"
+      },
+      {
+        "header": "Werk",
+        "bodyLen": 399,
+        "bodyPreview": "**Tap to release your frozen objects and enemies. Hold to turn nearby Krafted en"
+      },
+      {
+        "header": "Hold",
+        "bodyLen": 114,
+        "bodyPreview": "**(Using the held variant of Werk to turn a marked enemy (Krafted) Kineticized t"
+      },
+      {
+        "header": "Stepping Stones",
+        "bodyLen": 332,
+        "bodyPreview": "**Throw three floating stones to cross gaps or climb higher.** **Aim in a direct"
+      },
+      {
+        "header": "EX Moveset",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Suspended Slam (2 Bars)",
+        "bodyLen": 430,
+        "bodyPreview": "**Touch the ground to create floating rocks for later use.** **The ground erupts"
+      },
+      {
+        "header": "Tapping With Malicious Intent (1 Bar)",
+        "bodyLen": 374,
+        "bodyPreview": "**Kraft Work teleports between up to 5 of your frozen objects and taps them towa"
+      },
+      {
+        "header": "Kinetic Field (3 Bars)",
+        "bodyLen": 413,
+        "bodyPreview": "**Create a field for 10 seconds that freezes projectiles, loose throwables, vehi"
+      },
+      {
+        "header": "Freezing projectiles",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Kinetic Leap (1 Bar)",
+        "bodyLen": 518,
+        "bodyPreview": "**Build force in your own body, then launch through enemies.** **On the ground, "
+      },
+      {
+        "header": "Pilot",
+        "bodyLen": 123,
+        "bodyPreview": "**(Going into pilot and pressing Kinetic Leap to fixate myself, then using M1s t"
+      },
+      {
+        "header": "In air",
+        "bodyLen": 147,
+        "bodyPreview": "**(Jumping into the air and then pressing Kinetic Leap to fixate myself mid-air,"
+      }
+    ]
+  },
+  "rolling-stones": {
+    "name": "Rolling Stones",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 320,
+        "bodyPreview": "**“This stone moves with no regard to my will.”** **The Stand of Scolippi. An au"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Stone Deity",
+        "bodyLen": 87,
+        "bodyPreview": "**Use E to release Rolling Stones. It follows its own targets and cannot be reca"
+      },
+      {
+        "header": "Spiritual Connection",
+        "bodyLen": 148,
+        "bodyPreview": "**use Ctrl to watch from the stone. This only changes your view. If you die, the"
+      },
+      {
+        "header": "We Are All Slaves Of Fate",
+        "bodyLen": 539,
+        "bodyPreview": "**Eight seconds after summon, a random player or NPC becomes Roling Stone’s targ"
+      },
+      {
+        "header": "Ruthlessness Is Mercy",
+        "bodyLen": 127,
+        "bodyPreview": "**If the stone touches its current target, that target dies immediately and pain"
+      },
+      {
+        "header": "Forbidden Throwable",
+        "bodyLen": 57,
+        "bodyPreview": "**Pick up the stone with the normal throwable controls.**"
+      },
+      {
+        "header": "It’s Not My Time Yet",
+        "bodyLen": 290,
+        "bodyPreview": "**While someone else is the stone’s current target, damage to someone holding th"
+      },
+      {
+        "header": "Within Death’s Reach",
+        "bodyLen": 58,
+        "bodyPreview": "**The stone rolls after its target and leaps when close.**"
+      },
+      {
+        "header": "Unearthed Insight",
+        "bodyLen": 46,
+        "bodyPreview": "**The stone changes form as it loses health.**"
+      },
+      {
+        "header": "Damaged",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Destroyed",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Steintossen",
+        "bodyLen": 183,
+        "bodyPreview": "**While holding Rolling Stones as a throwable, launch it in a stronger aimed arc"
+      },
+      {
+        "header": "Sculpted Destruction",
+        "bodyLen": 194,
+        "bodyPreview": "**Strike nearby Rolling Stones with a sledgehammer, sending stone fragments forw"
+      },
+      {
+        "header": "Written in Stone",
+        "bodyLen": 201,
+        "bodyPreview": "**Carve a short message into the top of nearby Rolling Stones. Enter up to 48 ch"
+      },
+      {
+        "header": "Super Glue",
+        "bodyLen": 248,
+        "bodyPreview": "**Hold beside Rolling Stones to kneel and repair 5% of its maximum health every "
+      },
+      {
+        "header": "Prolong The Inevitable [3 Bars]",
+        "bodyLen": 154,
+        "bodyPreview": "**Reset the current target’s hidden timer to its original duration.** **Base coo"
+      },
+      {
+        "header": "Passing Time [3 Bars]",
+        "bodyLen": 194,
+        "bodyPreview": "**Remove half the current target’s starting time from their remaining timer, bri"
+      },
+      {
+        "header": "Changing Fate [3 Bars]",
+        "bodyLen": 260,
+        "bodyPreview": "**Replace the stone’s current target with the nearest eligible person to you, st"
+      },
+      {
+        "header": "Fated Calm [3 Bars]",
+        "bodyLen": 204,
+        "bodyPreview": "**Pause Rolling Stones and its hidden timer. It stops hunting and choosing targe"
+      }
+    ]
+  },
+  "harvest": {
+    "name": "Harvest",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 290,
+        "bodyPreview": "**“They’re my friends… my precious Harvest!”** **The stand of Shigekiyo “Shigech"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Colony Carry [TAP AGAIN TO STOP]",
+        "bodyLen": 136,
+        "bodyPreview": "**The colony scoops you up and hauls you rapidly across any surface (including w"
+      },
+      {
+        "header": "Harvest Ambush/RECALL [HOLD]",
+        "bodyLen": 238,
+        "bodyPreview": "**Tap to plant a Harvest squad on a floor, wall, or ceiling. They ambush enemies"
+      },
+      {
+        "header": "## Harvest Tornado",
+        "bodyLen": 108,
+        "bodyPreview": "**Harvest circles you at high speed, shredding nearby enemies from every directi"
+      },
+      {
+        "header": "Search Party / Command [M1] / Cycle [TAP] /   Recall [HOLD]",
+        "bodyLen": 116,
+        "bodyPreview": "**Send all nine Harvest out to search. The enemies, objects and items they find "
+      },
+      {
+        "header": "Recall [HOLD]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Cycle [TAP]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Command [M1]",
+        "bodyLen": 22,
+        "bodyPreview": "# EX [Awakening Moves]"
+      },
+      {
+        "header": "Poured Into Veins [3 Bars]",
+        "bodyLen": 153,
+        "bodyPreview": "**“I poured it into your veins!” All nine Harvest combine into one concealed tra"
+      },
+      {
+        "header": "## You want proof?! [4 Bars]",
+        "bodyLen": 88,
+        "bodyPreview": "**Harvest quadruples its ranks and overwhelms one marked enemy.** **Base cooldow"
+      },
+      {
+        "header": "## Snatch [2 Bars]",
+        "bodyLen": 169,
+        "bodyPreview": "**Send Harvest to take a consumable from an enemy’s hand and bring it back. Gett"
+      }
+    ]
+  },
+  "tubular-bells": {
+    "name": "Tubular Bells",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 485,
+        "bodyPreview": "**“Your sentence to torture is now repealed! Now! immediately! You are to be exe"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Five Animals",
+        "bodyLen": 203,
+        "bodyPreview": "**Nails and gas cans make dogs, hydrants make swans, trash cans make turtles, si"
+      },
+      {
+        "header": "Trash Can (Turtle)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Empty cars/metal benches (Lion)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Fire hydrants (Swan)",
+        "bodyLen": 47,
+        "bodyPreview": "**(The swan is faster than any other balloon)**"
+      },
+      {
+        "header": "Nails and gas cans (Dog)",
+        "bodyLen": 43,
+        "bodyPreview": "**(The dog is faster when scent tracking)**"
+      },
+      {
+        "header": "Signs (Snake)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Balloon Control",
+        "bodyLen": 164,
+        "bodyPreview": "**Tap Ctrl to cycle through your balloon animals and back to your body. Move tow"
+      },
+      {
+        "header": "Early Pop",
+        "bodyLen": 75,
+        "bodyPreview": "**Press E while piloting to pop the balloon and drop its original object.**"
+      },
+      {
+        "header": "Inflate Balloon",
+        "bodyLen": 235,
+        "bodyPreview": "**Hold while aiming at a metal object to blow it into a balloon animal. Blow lon"
+      },
+      {
+        "header": "Inflate (Hold)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Inflate (Object)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Send (Tap)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Pick Up Scent",
+        "bodyLen": 213,
+        "bodyPreview": "**Hold while aiming at a throwable to collect the scent of its last owner, or so"
+      },
+      {
+        "header": "Balloon Flower",
+        "bodyLen": 242,
+        "bodyPreview": "**Plant a flower in front of you. It takes one second to grow, then blasts enemi"
+      },
+      {
+        "header": "Hit",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Spiked Balloon Swarm",
+        "bodyLen": 256,
+        "bodyPreview": "**Inflate nearby metal into a swarm of small balloons, some covered in spikes. B"
+      },
+      {
+        "header": "EX [Awakening Moves]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Balloon Beast [4 Bars]",
+        "bodyLen": 280,
+        "bodyPreview": "**Combine one of each animal into a T-rex, or five of the same animal into a wea"
+      },
+      {
+        "header": "Weaker Giant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Swallow",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "T-rex",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "T-rex Swallow",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "One of each animal",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Babylonian Balloons [3 Bars]",
+        "bodyLen": 151,
+        "bodyPreview": "**Turn your balloons into swords and fire them forward one after another. They s"
+      },
+      {
+        "header": "Balloon Parade [2 Bars]",
+        "bodyLen": 205,
+        "bodyPreview": "**Fly your balloons together in a circling formation for up to 12 seconds. They "
+      },
+      {
+        "header": "Lead Balloons [3 Bars]",
+        "bodyLen": 141,
+        "bodyPreview": "**Send your balloons above an enemy, then pop them one after another. Their meta"
+      }
+    ]
+  },
+  "super-fly": {
+    "name": "Super Fly",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 306,
+        "bodyPreview": "**“Someone has to stay.”** **The Stand of Toyohiro Kanedaichi, bound to the tran"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "## Prisoner Boundary",
+        "bodyLen": 206,
+        "bodyPreview": "**If you are the tower’s lone prisoner, crossing outside its boundary turns you "
+      },
+      {
+        "header": "Deploy Power Line",
+        "bodyLen": 349,
+        "bodyPreview": "**Throw a power line where you aim. Anyone can click near the top to zip down, o"
+      },
+      {
+        "header": "Screw Volley",
+        "bodyLen": 154,
+        "bodyPreview": "**Fire three screws from the tower. Shiftlock aims them at the target closest to"
+      },
+      {
+        "header": "Damage Redirection",
+        "bodyLen": 261,
+        "bodyPreview": "**Super Fly stores damage from attacks against it. Tap to fire it at your target"
+      },
+      {
+        "header": "Super Leap",
+        "bodyLen": 113,
+        "bodyPreview": "**Hold to pick a ledge on your tower, then release to jump there.** **Base coold"
+      },
+      {
+        "header": "Tower Reposition",
+        "bodyLen": 190,
+        "bodyPreview": "**Send the whole tower spinning into the sky, then bring it down where you’re st"
+      }
+    ]
+  },
+  "under-world": {
+    "name": "Under World",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 399,
+        "bodyPreview": "**“Anything is possible if i use Under World!”** **The Stand of Donatello Versus"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Burrow [HOLD]",
+        "bodyLen": 109,
+        "bodyPreview": "**Dive into the earth and tunnel through the ground. Release to erupt out of gro"
+      },
+      {
+        "header": "Unearth",
+        "bodyLen": 105,
+        "bodyPreview": "**Dig a warrior from the ground’s memory to guard you and attack nearby enemies."
+      },
+      {
+        "header": "Prop Memory",
+        "bodyLen": 129,
+        "bodyPreview": "**Let Under World dig up a random usable object from the ground’s memory. (Gasol"
+      },
+      {
+        "header": "Tora! Tora! Tora! / Aim Drop [HOLD] / Drop [TAP AGAIN]",
+        "bodyLen": 168,
+        "bodyPreview": "**Tap to dig up an Aichi D3A, steer by turning, then tap again to drop three inc"
+      },
+      {
+        "header": "Drop",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 92,
+        "bodyPreview": "**Summon your stand, then use Ctrl to enter or leave pilot control.** # EX [Awak"
+      },
+      {
+        "header": "Underground Illusion Chamber [1 Bar]",
+        "bodyLen": 128,
+        "bodyPreview": "**Dig a chamber beneath the battlefield. Use again while nearby to recreate a vo"
+      },
+      {
+        "header": "Zero Hour [1 Bar]",
+        "bodyLen": 120,
+        "bodyPreview": "**Dig up an A6M Zero for a strafing run, firing its machine guns across a long s"
+      }
+    ]
+  },
+  "walking-heart": {
+    "name": "Walking Heart",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 310,
+        "bodyPreview": "**“I will pierce you through!”** **The Stand of Hato Higashikata. A Stand integr"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "## Spike Extension",
+        "bodyLen": 232,
+        "bodyPreview": "**Extend your heels to reach higher surfaces and enable wall and ceiling movemen"
+      },
+      {
+        "header": "Heel Barrage",
+        "bodyLen": 62,
+        "bodyPreview": "**Rapid-fire kicks with spiked heels.** **Base cooldown: 23s**"
+      },
+      {
+        "header": "Spike Creation / Charge Stomp [HOLD]",
+        "bodyLen": 158,
+        "bodyPreview": "**Stomp the ground to create a field of deadly spikes. (The spike can then be gr"
+      },
+      {
+        "header": "Base Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Held Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Size Difference",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ground Impale",
+        "bodyLen": 403,
+        "bodyPreview": "**Target an opponent near your aim to raise a ground spike and impale them. Aims"
+      },
+      {
+        "header": "Stomp EX [3 Bars]",
+        "bodyLen": 124,
+        "bodyPreview": "**Stomp the ground and erupt a field of spikes in front of you. (All erupted spi"
+      },
+      {
+        "header": "Fully Charged",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Size Difference: (Charged on left)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Impale EX [3 Bars]",
+        "bodyLen": 204,
+        "bodyPreview": "**Extend your heel to impale up to three opponents, carry them outward, and pull"
+      }
+    ]
+  },
+  "glory-days": {
+    "name": "Glory Days",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 145,
+        "bodyPreview": "**“Glory Days.”** **The Stand of Bobby Jean. It is a pure ability Stand that all"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 201,
+        "bodyPreview": "### Gun Controls **Use E to draw the gun and M1 to fire. The magazine must be re"
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Glory",
+        "bodyLen": 81,
+        "bodyPreview": "**Toggle Glory to suspend newly fired rounds in midair.** **Base cooldown: 0.3s*"
+      },
+      {
+        "header": "Release",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Reload",
+        "bodyLen": 37,
+        "bodyPreview": "**Reload your gun Stand’s magazine.**"
+      },
+      {
+        "header": "Knock Knock",
+        "bodyLen": 74,
+        "bodyPreview": "**Kick forward, striking enemies in front of you.** **Base cooldown: 28s**"
+      },
+      {
+        "header": "Elevator Trap",
+        "bodyLen": 109,
+        "bodyPreview": "**Set a hidden crossfire with Glory Days. The bullets close in when an enemy ent"
+      }
+    ]
+  },
+  "smoke-on-the-water": {
+    "name": "Smoke On The Water",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 291,
+        "bodyPreview": "**The stand of an unknown user. Stored in a DISC by Whitesnake, this unnamed abi"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Integrated Stand",
+        "bodyLen": 83,
+        "bodyPreview": "**Press E to activate Boiling Water, You can still use your usual weapon attacks"
+      },
+      {
+        "header": "Heat",
+        "bodyLen": 308,
+        "bodyPreview": "**Heat rises while the Stand is active and when you use its boiling attacks. Abo"
+      },
+      {
+        "header": "Bring to a Boil",
+        "bodyLen": 275,
+        "bodyPreview": "**Boil the water you’re aiming at, including any puddles touching it. The steam "
+      },
+      {
+        "header": "Puddle",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Person",
+        "bodyLen": 88,
+        "bodyPreview": "**(Ignore the puddle below, Super Soaker and Hot Potato proc soaked making them "
+      },
+      {
+        "header": "Highlight (Held)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Super Soaker",
+        "bodyLen": 170,
+        "bodyPreview": "**Fire four arcing shots of water, Each hit leaves a puddle, and enemies hit dir"
+      },
+      {
+        "header": "Hot Potato",
+        "bodyLen": 192,
+        "bodyPreview": "**Throw a water balloon that bursts on impact, soaking nearby enemies and leavin"
+      },
+      {
+        "header": "Let Off Steam / Vent [HOLD]",
+        "bodyLen": 209,
+        "bodyPreview": "**Hold to cool yourself with a growing cloud of steam. Nearby enemies take damag"
+      },
+      {
+        "header": "Venting",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Venting near enemy",
+        "bodyLen": 22,
+        "bodyPreview": "# EX [Awakening Moves]"
+      },
+      {
+        "header": "Flash Boil [3 Bars]",
+        "bodyLen": 233,
+        "bodyPreview": "**Heat the water on a Soaked enemy, then make it burst. If the hit leaves them b"
+      },
+      {
+        "header": "Execute Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Pressure Cooker [2 Bars]",
+        "bodyLen": 235,
+        "bodyPreview": "**Build pressure in a fire hydrant or your flying water balloon until it bursts,"
+      },
+      {
+        "header": "Hydrant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Water Balloon",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Boil Dry / Find Water [HOLD]",
+        "bodyLen": 235,
+        "bodyPreview": "**Boil away a puddle and any puddles touching it. As the water shrinks, the stea"
+      },
+      {
+        "header": "Connected Puddles",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Superheated Steam [4 Bars]",
+        "bodyLen": 216,
+        "bodyPreview": "**Bring your hands together and fire a narrow beam of steam. Turn to aim as it b"
+      }
+    ]
+  },
+  "the-grateful-dead": {
+    "name": "The Grateful Dead",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 312,
+        "bodyPreview": "**“When we truly think “I’ll kill you!” from the bottom of our hearts… by that t"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ungraceful Aging",
+        "bodyLen": 479,
+        "bodyPreview": "**Aging affects allies and enemies. Your neck and shoulders droop as stacks rise"
+      },
+      {
+        "header": "Withering Mist [TOGGLE]",
+        "bodyLen": 169,
+        "bodyPreview": "**Surround Grateful Dead with aging mist, Everyone nearby except you gains Aging"
+      },
+      {
+        "header": "Rotten Grasp",
+        "bodyLen": 332,
+        "bodyPreview": "**When piloting, Grateful Dead holds an enemy for 4 seconds, applies up to 8 Agi"
+      },
+      {
+        "header": "Base Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Pilot Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "One-Armed Barrage",
+        "bodyLen": 200,
+        "bodyPreview": "**Balance on one arm and pummel anyone in front of you with the other. You can t"
+      },
+      {
+        "header": "Senior Citizen [TOGGLE]",
+        "bodyLen": 259,
+        "bodyPreview": "**Age yourself to gain EX over time. Your attacks become 60% slower and your das"
+      },
+      {
+        "header": "On The Train [3 Bars]",
+        "bodyLen": 120,
+        "bodyPreview": "**Spread Withering Mist much farther for 20 seconds. Activates the mist if not a"
+      },
+      {
+        "header": "Ice Pack [3 Bars]",
+        "bodyLen": 219,
+        "bodyPreview": "**Toss a bag of ice for someone else. Touching it clears Aging and protects them"
+      }
+    ]
+  },
+  "emperor": {
+    "name": "Emperor",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 270,
+        "bodyPreview": "**“The gun is mightier than the sword!”** **The stand of Hol Horse. A gun summon"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Hol Horse Philosophy [HOLD]",
+        "bodyLen": 239,
+        "bodyPreview": "**Hold** to run forward quickly, then **release** to stop. Start running in the "
+      },
+      {
+        "header": "Blind Shots",
+        "bodyLen": 326,
+        "bodyPreview": "Fire a group of bullets and guide them by moving your **camera.** Fire a group o"
+      },
+      {
+        "header": "Fan The Hammer [HOLD]",
+        "bodyLen": 364,
+        "bodyPreview": "**Tap** to fire **ricocheting** bullets, or **hold** for a close-range volley th"
+      },
+      {
+        "header": "Tap Variant",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "Held Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Emperor Shot [HOLD]",
+        "bodyLen": 410,
+        "bodyPreview": "**Charge** a blast straight ahead, **Holding** increases its **damage,size,reach"
+      },
+      {
+        "header": "Tap Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Held Variant",
+        "bodyLen": 22,
+        "bodyPreview": "# EX [Awakening Moves]"
+      },
+      {
+        "header": "Emperor Pulemet",
+        "bodyLen": 428,
+        "bodyPreview": "Requires 4 bars of [https://trello.com/c/Kus9CS84/50-awakening-bar](https://trel"
+      }
+    ]
+  },
+  "burning-down-the-house": {
+    "name": "Burning Down The House",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 334,
+        "bodyPreview": "# “The house itself is a ghost.” **The stand of Emporio Alnino. Burning Down The"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ghost Piano",
+        "bodyLen": 41,
+        "bodyPreview": "**There is a working piano in the room.**"
+      },
+      {
+        "header": "Grand Piano",
+        "bodyLen": 194,
+        "bodyPreview": "**Use the piano’s prompt to sit down. Play Giorno’s Theme without a wrong note t"
+      },
+      {
+        "header": "Ghost Room",
+        "bodyLen": 217,
+        "bodyPreview": "**Hold to choose a wall, then release to open a crack. Keep your hand against th"
+      },
+      {
+        "header": "Hold",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Tap",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ghost Storage",
+        "bodyLen": 126,
+        "bodyPreview": "**Set down a throwable inside a ghost room to keep it. Each room holds up to 15."
+      },
+      {
+        "header": "Ghost Refreshments",
+        "bodyLen": 196,
+        "bodyPreview": "**Make the table snacks vanish or bring them back. Eat chocolates for 15% faster"
+      },
+      {
+        "header": "Appear",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Vanish",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Eating",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ghost Revolver",
+        "bodyLen": 168,
+        "bodyPreview": "**Form a ghost revolver and fire once. The shot makes an enemy dodge sideways an"
+      },
+      {
+        "header": "Temporary Doorway [3 Bars]",
+        "bodyLen": 188,
+        "bodyPreview": "**Open a smaller doorway into your room without charging, It lasts 5 seconds. Yo"
+      },
+      {
+        "header": "Ghost Pallet",
+        "bodyLen": 138,
+        "bodyPreview": "**Place a wooden pallet to climb on or cross a gap. Keep up to 3 at once. Each l"
+      },
+      {
+        "header": "Ghost Research [3 Bars]",
+        "bodyLen": 160,
+        "bodyPreview": "**Look up a stand at your computer. Deal 10% more damage to its users and take 1"
+      },
+      {
+        "header": "Selecting a Stand",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Status Effect",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      }
+    ]
+  },
+  "beyond-the-sea": {
+    "name": "Beyond the Sea",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 232,
+        "bodyPreview": "**“You’re simply a ripple trying to stop the inevitable Tsunami.”** **The stand "
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Sunfish Slap/Sunfish Slam [HOLD]",
+        "bodyLen": 111,
+        "bodyPreview": "**Slap your enemy with the full force of a sunfish.** **VARIATION: [HOLD] Sunfis"
+      },
+      {
+        "header": "Tap Variant",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "Held Variant",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "Jellyfish Summon",
+        "bodyLen": 111,
+        "bodyPreview": "**Summon a jellyfish that follows you and retaliates when either of you is attac"
+      },
+      {
+        "header": "Maelstrom",
+        "bodyLen": 108,
+        "bodyPreview": "**Circle a growing whirlpool at high speed and drag nearby enemies into its cent"
+      },
+      {
+        "header": "Riptide",
+        "bodyLen": 283,
+        "bodyPreview": "**Mark where a current begins, then choose its destination to carry enemies with"
+      },
+      {
+        "header": "First Activation",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Second Activation",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 113,
+        "bodyPreview": "**Summon your stand, then use Ctrl to enter or leave pilot control, Your camera "
+      },
+      {
+        "header": "Sunfish Sail",
+        "bodyLen": 121,
+        "bodyPreview": "**M1 while piloting** **Ride the ocean sunfish and sail across the water.** **Ba"
+      },
+      {
+        "header": "Humu Summon [3 Bars]",
+        "bodyLen": 119,
+        "bodyPreview": "**Summon a faster, stronger flying triggerfish that retaliates when either of yo"
+      },
+      {
+        "header": "Tsunami [4 Bars]",
+        "bodyLen": 115,
+        "bodyPreview": "**Raise an immense wave that carries enemies forward and destroys the terrain in"
+      },
+      {
+        "header": "Crosscurrent [3 Bars]",
+        "bodyLen": 90,
+        "bodyPreview": "**Place four points, then activate three linked currents at once.** **Base coold"
+      }
+    ]
+  },
+  "magicians-red": {
+    "name": "Magician's Red",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 260,
+        "bodyPreview": "**“YES, I AM!”** **The Stand of Muhammed Avdol. A powerful Close-Range Stand tha"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "## Crossfire Hurricane / Penta Ankh [HOLD]",
+        "bodyLen": 341,
+        "bodyPreview": "**Launch a flaming ankh, or hold to fire five smaller ones. Stay near Life Detec"
+      },
+      {
+        "header": "Tap Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Hold Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Red Pull",
+        "bodyLen": 73,
+        "bodyPreview": "**Yank an enemy toward you with a fiery tendril.** **Base cooldown: 28s**"
+      },
+      {
+        "header": "Flaming Grasp",
+        "bodyLen": 113,
+        "bodyPreview": "**Grab an enemy and set them on fire. Burns them to ashes if their health is low"
+      },
+      {
+        "header": "Life Detector",
+        "bodyLen": 254,
+        "bodyPreview": "**Mark nearby living enemies within 80 studs so Crossfire Hurricane can track th"
+      },
+      {
+        "header": "Marked Effect",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Tracking",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 112,
+        "bodyPreview": "**Summon your stand, then use Ctrl to enter or leave pilot control. Your camera "
+      },
+      {
+        "header": "Elevated Strength",
+        "bodyLen": 81,
+        "bodyPreview": "**The user can throw heavy objects. (Phone Booths, Cars)** # EX [Awakening Moves"
+      },
+      {
+        "header": "Stand Jump",
+        "bodyLen": 77,
+        "bodyPreview": "**Use your Stand’s power to launch high into the air.** **Base cooldown: 2s**"
+      },
+      {
+        "header": "Red Bind",
+        "bodyLen": 177,
+        "bodyPreview": "**Your stand catches enemies, lifts them into the air, then slams them toward yo"
+      },
+      {
+        "header": "Pilot Version",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      }
+    ]
+  },
+  "death-13": {
+    "name": "Death 13",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "“Lali-ho!”",
+        "bodyLen": 295,
+        "bodyPreview": "**The Stand of Mannish Boy, an eleven month-old baby hired to kill the Joestar g"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Drowsiness",
+        "bodyLen": 241,
+        "bodyPreview": "**Your light and heavy attacks and certain skills add Drowsiness. At 3 stacks, e"
+      },
+      {
+        "header": "Slumber",
+        "bodyLen": 214,
+        "bodyPreview": "**Slumber lasts 6 seconds, up to 12 with more Ability. Taking damage shortens it"
+      },
+      {
+        "header": "Sleeping Powder",
+        "bodyLen": 244,
+        "bodyPreview": "**Blow out a cloud of sleeping powder that grows in size and slowly drifts forwa"
+      },
+      {
+        "header": "Sleepwalk",
+        "bodyLen": 265,
+        "bodyPreview": "**Recover health while sleepwalking for 10 seconds. Hits during the first 2 seco"
+      },
+      {
+        "header": "Counter",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Pan Smack",
+        "bodyLen": 174,
+        "bodyPreview": "**Whack the nearest enemy over the head with a frying pan. It knocks them forwar"
+      },
+      {
+        "header": "Nightmare",
+        "bodyLen": 326,
+        "bodyPreview": "**Kneel and touch a sleeping enemy to take them into a dream for 30 seconds, whe"
+      },
+      {
+        "header": "Taking control of Death 13: (LCtrl)",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "Lali Ho",
+        "bodyLen": 789,
+        "bodyPreview": "**Kneel and touch a sleeping enemy with Nightmare to take them into a dream for "
+      },
+      {
+        "header": "Dream World Moveset",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Living Weapon",
+        "bodyLen": 229,
+        "bodyPreview": "**Three random pieces of furniture rise around Death 13, hang high for a moment,"
+      },
+      {
+        "header": "Scary Box",
+        "bodyLen": 125,
+        "bodyPreview": "**Drop a cage where you aim, trapping the dreamer for 5 seconds. Death 13 can pa"
+      },
+      {
+        "header": "Vanishing Reap",
+        "bodyLen": 83,
+        "bodyPreview": "**Death 13 vanishes, appears infront of the opponent and slashes with its scythe"
+      },
+      {
+        "header": "Sweeper",
+        "bodyLen": 179,
+        "bodyPreview": "**Swing a giant scythe around Death 13 three times. Death 13 can move slowly dur"
+      },
+      {
+        "header": "EX",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Phantom Mimicry",
+        "bodyLen": 234,
+        "bodyPreview": "**Inside the dream world, a shadow Stand forms around Death 13, rushes the dream"
+      },
+      {
+        "header": "EX Moveset",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Grim Carousel (2 Bars)",
+        "bodyLen": 241,
+        "bodyPreview": "**Throw your scythe around you four times, deflecting projectiles and adding 1 D"
+      },
+      {
+        "header": "Deflecting projectiles",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Vanishing Reap (2 Bars)",
+        "bodyLen": 341,
+        "bodyPreview": "**Death 13 vanishes, appears behind a drowsy enemy and slashes with its scythe, "
+      },
+      {
+        "header": "Boomerang (1 Bar)",
+        "bodyLen": 295,
+        "bodyPreview": "**Death 13 hurls its scythe far ahead. If it misses, it whips straight back to y"
+      },
+      {
+        "header": "Phantom Mimicry (NEED TO BE IN DREAM WORLD)",
+        "bodyLen": 234,
+        "bodyPreview": "**Inside the dream world, a shadow Stand forms around Death 13, rushes the dream"
+      }
+    ]
+  },
+  "catch-the-rainbow": {
+    "name": "Catch The Rainbow",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 247,
+        "bodyPreview": "**“I… have the ability to catch the rainbow.”** **The stand of Blackmore. A mask"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "## Catch The Rainbow",
+        "bodyLen": 87,
+        "bodyPreview": "**Catch The Rainbow needs fog, rain, or an active hydrant within 30 studs to be "
+      },
+      {
+        "header": "Rain Walking/Floating",
+        "bodyLen": 260,
+        "bodyPreview": "**Summon your stand, then hold Space for a short moment to begin rising. Release"
+      },
+      {
+        "header": "Hidden Controls",
+        "bodyLen": 205,
+        "bodyPreview": "**While floating, E activates Rain Transport. While hidden, aim at an enemy and "
+      },
+      {
+        "header": "Rain Transport",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Followup",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Body Projectile",
+        "bodyLen": 290,
+        "bodyPreview": "**Detach your  arm and steer it with the camera to grab an enemy.** **Base coold"
+      },
+      {
+        "header": "Motionless Rain",
+        "bodyLen": 217,
+        "bodyPreview": "**Surround yourself with suspended raindrops for projectile defense.** **Your ma"
+      },
+      {
+        "header": "Triple Shot",
+        "bodyLen": 108,
+        "bodyPreview": "**Fire three quick shots with Ol' Reliable.** **Fire three shots toward your mou"
+      }
+    ]
+  },
+  "silver-chariot": {
+    "name": "Silver Chariot",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 283,
+        "bodyPreview": "**“I’m going to turn you into a pin-cushion!”** **The Stand of Jean Pierre Polna"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Rapier Rush",
+        "bodyLen": 69,
+        "bodyPreview": "**A lightning-fast series of rapier thrusts.** **Base cooldown: 23s**"
+      },
+      {
+        "header": "Blade Eject",
+        "bodyLen": 233,
+        "bodyPreview": "**Launch the blade from its hilt as a high-speed projectile. (Can Ricochet)** **"
+      },
+      {
+        "header": "Pick up",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Super Cool Ricochet",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Your Last Moments",
+        "bodyLen": 85,
+        "bodyPreview": "**Deliver a heavy strike that finishes off weakened enemies.** **Base cooldown: "
+      },
+      {
+        "header": "Execution",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Armor Toggle",
+        "bodyLen": 207,
+        "bodyPreview": "**Remove Silver Chariot’s armor for faster attacks, or put it back on.** **Armor"
+      },
+      {
+        "header": "Stand Jump [1 Bar]",
+        "bodyLen": 55,
+        "bodyPreview": "**Use your Stand’s power to launch high into the air.**"
+      }
+    ]
+  },
+  "strength": {
+    "name": "Strength",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 283,
+        "bodyPreview": "**“You’re not a normal monkey, are you?”** **The stand of Forever. Unlike spirit"
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 163,
+        "bodyPreview": "**Summon your stand, then use Ctrl to enter or leave pilot control. Your camera "
+      },
+      {
+        "header": "Building Strength / Speed Mode [HOLD]",
+        "bodyLen": 67,
+        "bodyPreview": "**Toggle between power mode and speed mode.** **Base cooldown: 1s**"
+      },
+      {
+        "header": "Building Strength",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Speed Mode",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ship Scraps",
+        "bodyLen": 89,
+        "bodyPreview": "**Lob ship debris high into the air to land where you’re aiming.** **Base cooldo"
+      },
+      {
+        "header": "Hooked",
+        "bodyLen": 75,
+        "bodyPreview": "**Snag an enemy with a chain hook and reel them in.** **Base cooldown: 5s**"
+      },
+      {
+        "header": "Hull Trap",
+        "bodyLen": 89,
+        "bodyPreview": "**Set a hidden hull plate trap that snares anyone who sets on it.** **Base coold"
+      }
+    ]
+  },
+  "mandom": {
+    "name": "Mandom",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 236,
+        "bodyPreview": "**“Welcome… to the “True Man’s World.”** **The Stand of Ringo Roadagain. By turn"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Two rewind timings",
+        "bodyLen": 57,
+        "bodyPreview": "**Rewind instantly or schedule a rewind with Watch Set.**"
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Rewind",
+        "bodyLen": 100,
+        "bodyPreview": "**Turn back time by 6 seconds, restoring your previous position and health.** **"
+      },
+      {
+        "header": "Ol' Reliable [BASIC ATTACK]",
+        "bodyLen": 70,
+        "bodyPreview": "**Fire a trusty revolver shot at your target.** **Base cooldown: 28s**"
+      },
+      {
+        "header": "First Usage",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Basic Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Deadeye",
+        "bodyLen": 69,
+        "bodyPreview": "**Take careful aim and fire a powerful shot.** **Base cooldown: 35s**"
+      },
+      {
+        "header": "Watch Set",
+        "bodyLen": 224,
+        "bodyPreview": "**Start a countdown that automatically rewinds you and nearby targets.** **Once "
+      },
+      {
+        "header": "EX Moveset",
+        "bodyLen": 213,
+        "bodyPreview": "# TRUE MAN’S WORLD (5 Bars) **Spend a full EX gauge to rewind after a lethal hit"
+      }
+    ]
+  },
+  "heavens-door": {
+    "name": "Heaven's Door",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 305,
+        "bodyPreview": "**“Reality is the lifeblood of entertainment.”** **The Stand of Rohan Kishibe, e"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Book Transmutation",
+        "bodyLen": 70,
+        "bodyPreview": "**Open a target’s face into a readable page.** **Base cooldown: 1s** ‌"
+      },
+      {
+        "header": "Written Command",
+        "bodyLen": 103,
+        "bodyPreview": "**Choose a command to write in the pages of someone you’ve turned into a book.**"
+      },
+      {
+        "header": "Page Rip",
+        "bodyLen": 90,
+        "bodyPreview": "**Grab someone you’ve turned into a book and tear out their page.** **Base coold"
+      },
+      {
+        "header": "Safety Lock",
+        "bodyLen": 103,
+        "bodyPreview": "**Write a command that prevents the next five direct attacks from hitting you.**"
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 86,
+        "bodyPreview": "**Summon your stand, Then press Ctrl to enter or leave pilot.** # EX [Awakening "
+      },
+      {
+        "header": "Manga [3 Bars]",
+        "bodyLen": 109,
+        "bodyPreview": "**Hold up Heaven’s Door’s manga panel. People nearby who look at it turn into bo"
+      },
+      {
+        "header": "Become My Character [4 Bars]",
+        "bodyLen": 104,
+        "bodyPreview": "**Command someone you’ve turned into a book to fight for you with their Stand.**"
+      },
+      {
+        "header": "Chapter Counter [3 Bars]",
+        "bodyLen": 82,
+        "bodyPreview": "**Wait for an attack, then turn the attacker into a book.** **Base cooldown: 35s"
+      }
+    ]
+  },
+  "november-rain": {
+    "name": "November Rain",
+    "sections": []
+  },
+  "highway-star": {
+    "name": "Highway Star",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 145,
+        "bodyPreview": "**Yuya Fungami’s Stand tracks people by scent. It can split into a pack of feet "
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Scent",
+        "bodyLen": 154,
+        "bodyPreview": "**Scented enemies appear on your scent list and are marked through walls. Pursui"
+      },
+      {
+        "header": "Barrage",
+        "bodyLen": 78,
+        "bodyPreview": "**Unleash a rapid flurry of punches on your opponent.** **Base cooldown: 14s**"
+      },
+      {
+        "header": "Scent Trap",
+        "bodyLen": 298,
+        "bodyPreview": "**Aim at a throwable to coat it in scent, or aim at the ground to throw a fake M"
+      },
+      {
+        "header": "Arrow",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Object",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Pursuit",
+        "bodyLen": 425,
+        "bodyPreview": "**Tap to send Highway Star after your selected Scented target within 600 studs. "
+      },
+      {
+        "header": "Recall: (HOLD)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Footprints",
+        "bodyLen": 203,
+        "bodyPreview": "**A perfect block as Pursuit’s feet land turns them away; once they are on, only"
+      },
+      {
+        "header": "Nutrient Siphon",
+        "bodyLen": 249,
+        "bodyPreview": "**Highway Star grabs an enemy in front of it and drains their health to heal you"
+      },
+      {
+        "header": "Nutrients",
+        "bodyLen": 350,
+        "bodyPreview": "**Stand attacks and draining enemies fill your Nutrients, up to 100. Stored Nutr"
+      },
+      {
+        "header": "Foot Form",
+        "bodyLen": 230,
+        "bodyPreview": "**Hold the summon key to split Highway Star into a pack of feet. While piloting,"
+      },
+      {
+        "header": "Climbing",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Footprint Flurry",
+        "bodyLen": 225,
+        "bodyPreview": "**In Foot Form, strike enemies in front of you with a flurry of feet. Hits apply"
+      },
+      {
+        "header": "EX Moveset",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "I’m so Handsome (2 Bars)",
+        "bodyLen": 169,
+        "bodyPreview": "**Pose with Highway Star to recover 25% of your maximum health and gain 40 Nutri"
+      },
+      {
+        "header": "DEEEEP SNIFF (3 Bars)",
+        "bodyLen": 148,
+        "bodyPreview": "**Take a deep breath to detect enemies within 1,000 studs and apply Scented for "
+      },
+      {
+        "header": "Footprint Storm (3 Bars)",
+        "bodyLen": 294,
+        "bodyPreview": "**Sweep a wave of feet in front of you. Enemies caught in it are stuck repeatedl"
+      }
+    ]
+  },
+  "big-mouth-strikes-again": {
+    "name": "Big Mouth Strikes Again",
+    "sections": []
+  },
+  "king-crimson": {
+    "name": "King Crimson (Full)",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 242,
+        "bodyPreview": "**Diavolo’s King Crimson erases a span of time, leaving only its results. Epitap"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 160,
+        "bodyPreview": "# Doppio Mode: [https://trello.com/c/iMDvFDrd/407-king-crimson-doppio-moveset](h"
+      },
+      {
+        "header": "---",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "King Of The Court (Alter Ego)",
+        "bodyLen": 146,
+        "bodyPreview": "**After three Frog Phone calls, the user unleashes King Crimson in its full pote"
+      },
+      {
+        "header": "Two Identities",
+        "bodyLen": 220,
+        "bodyPreview": "**Use ALTER EGO in the character customizer to change your other form’s appearan"
+      },
+      {
+        "header": "Barrage",
+        "bodyLen": 81,
+        "bodyPreview": "**Hammer the enemy with a two-second barrage of punches.** **Base cooldown: 23s*"
+      },
+      {
+        "header": "Chop",
+        "bodyLen": 206,
+        "bodyPreview": "**Stun the enemy with a blockable chop to extend a combo. A successful hit recov"
+      },
+      {
+        "header": "Cutting off left arm",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Decree",
+        "bodyLen": 181,
+        "bodyPreview": "**An armored, guard-breaking strike that can be parried. Hit from behind to impa"
+      },
+      {
+        "header": "From behind",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Epitaph",
+        "bodyLen": 275,
+        "bodyPreview": "**Dodge up to two hits over two seconds, or three once both arms are out. Move l"
+      },
+      {
+        "header": "Tandem Combo [2 Bars]",
+        "bodyLen": 145,
+        "bodyPreview": "**Send King Crimson behind an enemy for three hits. The last knocks them away. Y"
+      },
+      {
+        "header": "Time Skip [1 Bar] / HOLD: PREVIEW / RELEASE: SKIP",
+        "bodyLen": 268,
+        "bodyPreview": "**Skip 2 seconds within 100 studs. Moves people, projectiles and cars forward. A"
+      },
+      {
+        "header": "Time Erase [2 Bars] / HOLD: DOUBLE / TAP: ERASE OR END",
+        "bodyLen": 354,
+        "bodyPreview": "**Leave a double behind and move unseen. Hold to choose whether it fights, runs "
+      },
+      {
+        "header": "Blood Blind [1 Bar]",
+        "bodyLen": 191,
+        "bodyPreview": "**Spend 5 health to fling blood into an enemy’s eyes, blinding them for 3 second"
+      }
+    ]
+  },
+  "the-world": {
+    "name": "The World",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 264,
+        "bodyPreview": "**“This is The World’s true power!”** **The Stand of DIO. A Close-Range Power Ty"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Barrage",
+        "bodyLen": 78,
+        "bodyPreview": "**Unleash a rapid flurry of punches on your opponent.** **Base cooldown: 23s**"
+      },
+      {
+        "header": "Pilot Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Knife Throw [HOLD IN TIMESTOP]",
+        "bodyLen": 111,
+        "bodyPreview": "**Throw a volley of knives at your cursor’s position. (Useable with unsummoned s"
+      },
+      {
+        "header": "Timestop Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Hole Puncher",
+        "bodyLen": 98,
+        "bodyPreview": "**Time-skip forward and punch a hole clean through your opponent’s guard.** **Ba"
+      },
+      {
+        "header": "Head Slam",
+        "bodyLen": 93,
+        "bodyPreview": "**Slam the opponent’s head down, leaving an opening for a follow-up.** **Base co"
+      },
+      {
+        "header": "Tandem Flank [2 Bars]",
+        "bodyLen": 104,
+        "bodyPreview": "**You and your Stand barrage from both sides.** **Base cooldown: 45s** **(Heavy "
+      },
+      {
+        "header": "Stand Jump [1 Bar]",
+        "bodyLen": 77,
+        "bodyPreview": "**Use your Stand’s power to launch high into the air.** **Base cooldown: 2s**"
+      },
+      {
+        "header": "Time Stop / Road Roller [TAP AGAIN] / Quick Time Stop [HOLD] [4 Bars]",
+        "bodyLen": 163,
+        "bodyPreview": "**Freeze time. Higher ability makes it last longer; 100 Ability doubles the base"
+      },
+      {
+        "header": "Quick Time Stop (Held)",
+        "bodyLen": 95,
+        "bodyPreview": "**Using Quick Time Stop cuts half your original timestop duration in exchange fo"
+      },
+      {
+        "header": "Road Roller",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Overwriting Time Stop",
+        "bodyLen": 2,
+        "bodyPreview": "##"
+      }
+    ]
+  },
+  "star-platinum": {
+    "name": "Star Platinum",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 264,
+        "bodyPreview": "# **“I’ll be the judge!”** **The Stand of Jotaro Kujo. One of the most powerful "
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Barrage / Rage Finish [HOLD]",
+        "bodyLen": 78,
+        "bodyPreview": "**Unleash a rapid flurry of punches on your opponent.** **Base cooldown: 23s**"
+      },
+      {
+        "header": "Rage Finish (HOLD)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Star Finger",
+        "bodyLen": 89,
+        "bodyPreview": "**Extend Star Platinum’s finger to strike from mid-range.** **Base cooldown: 35s"
+      },
+      {
+        "header": "Hold",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ora Smash",
+        "bodyLen": 114,
+        "bodyPreview": "**Wind up a heavy ORA punch that sends enemies flying. (Can be held to extend it"
+      },
+      {
+        "header": "Held Variant",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Inhale",
+        "bodyLen": 167,
+        "bodyPreview": "**Hold to draw enemies, loose objects and cars toward Star Platinum. The pull st"
+      },
+      {
+        "header": "Pulling Objects",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Platinum Parry",
+        "bodyLen": 73,
+        "bodyPreview": "**Hold F. Press M1 to try to catch a projectile, or R/M2 to deflect it.**"
+      },
+      {
+        "header": "R/M2 (Deflect)",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "M1 (Catch)",
+        "bodyLen": 46,
+        "bodyPreview": "**(Caught and thrown)** # EX [Awakening Moves]"
+      },
+      {
+        "header": "Stand Jump [1 Bar]",
+        "bodyLen": 77,
+        "bodyPreview": "**Use your Stand’s power to launch high into the air.** **Base cooldown: 2s**"
+      },
+      {
+        "header": "Time Stop In-Air Variant",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "Tandem Flank [2 Bars]",
+        "bodyLen": 69,
+        "bodyPreview": "**You and your stand attack from both sides.** **Base cooldown: 45s**"
+      },
+      {
+        "header": "Time Stop / Quick Time Stop [HOLD]",
+        "bodyLen": 162,
+        "bodyPreview": "**Freeze time. Higher ability makes it last longer; 100 Ability doubles the base"
+      },
+      {
+        "header": "Overwriting Time Stop",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Quick Time Stop (Held)",
+        "bodyLen": 95,
+        "bodyPreview": "**Using Quick Time Stop cuts half your original timestop duration in exchange fo"
+      }
+    ]
+  },
+  "jojosapiens": {
+    "name": "Jojosapiens",
+    "sections": []
+  },
+  "the-world-alternative-universe": {
+    "name": "The World: Alternative Universe",
+    "sections": [
+      {
+        "header": "Lore",
+        "bodyLen": 276,
+        "bodyPreview": "**“I, Diego Brando, shall seize the corpse!”** **The Stand of Diego Brando from "
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M1 Light Combo & M2 Attack",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Barrage",
+        "bodyLen": 78,
+        "bodyPreview": "**Unleash a rapid flurry of punches on your opponent.** **Base cooldown: 23s**"
+      },
+      {
+        "header": "Pilot Variant:  (Currently Glitched)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Deadly Shot / Follow-up [TAP AGAIN AFTER HIT]",
+        "bodyLen": 78,
+        "bodyPreview": "**Fire a powerful, high-caliber bullet at your target.** **Base cooldown: 7s**"
+      },
+      {
+        "header": "Follow-up",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Hole Puncher",
+        "bodyLen": 98,
+        "bodyPreview": "**Time-skip forward and punch a hole clean through your opponent’s guard.** **Ba"
+      },
+      {
+        "header": "Pilot Mode",
+        "bodyLen": 92,
+        "bodyPreview": "**Summon your stand, then use Ctrl to enter or leave pilot control.** # EX [Awak"
+      },
+      {
+        "header": "Tandem Flank [2 Bars]",
+        "bodyLen": 79,
+        "bodyPreview": "**You and your Stand barrage together from both sides.** **Base cooldown: 45s**"
+      },
+      {
+        "header": "Stand Jump [1 Bar]",
+        "bodyLen": 77,
+        "bodyPreview": "**Use your Stand’s power to launch high into the air.** **Base cooldown: 2s**"
+      },
+      {
+        "header": "Time Stop / Quick Time Stop [HOLD] [4 Bars]",
+        "bodyLen": 162,
+        "bodyPreview": "**Freeze time. Higher Ability makes it last longer; 100 Ability doubles the base"
+      },
+      {
+        "header": "Quick Time Stop (Held)",
+        "bodyLen": 95,
+        "bodyPreview": "**Using Quick Time Stop cuts half your original timestop duration in exchange fo"
+      },
+      {
+        "header": "Overwriting Timestop",
+        "bodyLen": 2,
+        "bodyPreview": "##"
+      }
+    ]
+  },
+  "star-platinum-the-world": {
+    "name": "Star Platinum: The World",
+    "sections": [
+      {
+        "header": "## Lore",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "“I’ll be the judge!”",
+        "bodyLen": 213,
+        "bodyPreview": "**The Stand of Jotaro Kujo, now known as Star Platinum: The World. It  retains S"
+      },
+      {
+        "header": "Pose",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Bane of Rats",
+        "bodyLen": 212,
+        "bodyPreview": "**Use H to send your Stand to collect a frozen knife, nail, bullet or throwable."
+      },
+      {
+        "header": "Punching a projectile away",
+        "bodyLen": 1,
+        "bodyPreview": "‌"
+      },
+      {
+        "header": "Platinum Parry",
+        "bodyLen": 95,
+        "bodyPreview": "**With your stand summoned, hold F. Press m1 to try to catch a projectile or R t"
+      },
+      {
+        "header": "M1",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "M2",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Moveset",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Ora Blitz",
+        "bodyLen": 213,
+        "bodyPreview": "**Send Star Platinum forward in a barrage that carries enemies along.** **Deflec"
+      },
+      {
+        "header": "Bearing Toss",
+        "bodyLen": 201,
+        "bodyPreview": "**Flick a steel bearing that stuns and knocks enemies back. Headshots knock them"
+      },
+      {
+        "header": "Headshot",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "I’m Wide Open",
+        "bodyLen": 154,
+        "bodyPreview": "**Counter an attack by appearing behind the attacker, then throw a heavy punch t"
+      },
+      {
+        "header": "Hit",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Time Jump / HOLD: PREVIEW / RELEASE: JUMP",
+        "bodyLen": 360,
+        "bodyPreview": "**Hold to choose where you’ll appear, then release to jump there instantly. In s"
+      },
+      {
+        "header": "EX: [Awakening Moveset]",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Campfire",
+        "bodyLen": 712,
+        "bodyPreview": "**Build a campfire in front of your Stand. Interact to sit and recover health, e"
+      },
+      {
+        "header": "Resting",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Tandem Rushdown [2 Bars]",
+        "bodyLen": 320,
+        "bodyPreview": "**Star Platinum rushes an enemy from the front, barrages them, then slams them i"
+      },
+      {
+        "header": "Panic Time Stop / Short [TAP] /  Full [HOLD]",
+        "bodyLen": 590,
+        "bodyPreview": "**Tap for a short Time Stop, or hold for the full duration. Both reach 150 studs"
+      },
+      {
+        "header": "Short (20s cooldown)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Long: (60s cooldown)",
+        "bodyLen": 0,
+        "bodyPreview": ""
+      },
+      {
+        "header": "Timestop Movement",
+        "bodyLen": 86,
+        "bodyPreview": "**(Moving in opponent’s timestop for a split second and then becoming frozen aga"
+      }
+    ]
+  }
+}

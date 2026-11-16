@@ -58,9 +58,12 @@ export interface Stand {
 export interface Code {
   code: string;
   reward: string;
-  status: 'Active' | 'Unconfirmed' | 'Expired';
+  status: 'Active' | 'Unverified' | 'Expired';
   isNewServerOnly: boolean;
   addedDate: string;
+  lastCheckedDate: string;
+  expiryDate?: string;
+  evidenceSource: string;
   notes: string;
 }
 
@@ -128,6 +131,19 @@ export interface UpdateLog {
   bugFixes?: string[];
 }
 
+export interface GuideSection {
+  id: string;
+  title: string;
+  content: string;
+  steps?: string[];
+  tips?: string[];
+  warning?: string;
+  table?: {
+    headers: string[];
+    rows: string[][];
+  };
+}
+
 export interface Guide {
   slug: string;
   title: string;
@@ -136,4 +152,5 @@ export interface Guide {
   readingTime: string;
   updatedDate: string;
   tableOfContents: { id: string; title: string }[];
+  sections: GuideSection[];
 }

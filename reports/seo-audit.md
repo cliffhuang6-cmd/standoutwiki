@@ -59,7 +59,7 @@ Sitemap: https://standoutwiki.org/sitemap.xml
 | `stand out hamon` / `lisa lisa quest` | Style Progression | `https://standoutwiki.org/hamon/` | Stand Out Hamon Guide – Lisa Lisa Quest & Breathing Styles | Stand Out Hamon Training & Style Progression |
 | `stand out vampire` / `stone mask` | Style Progression | `https://standoutwiki.org/vampire/` | Stand Out Vampire Guide – Stone Mask, Blood Bar & Shadow Cloak | Stand Out Vampire Guide & Bloodlust Mechanics |
 | `stand out accessories` / `dio set bonus` | Endgame Equipment | `https://standoutwiki.org/accessories/` | Stand Out Accessories & Gear Sets – Drops, Stats & Synergies | Stand Out Accessories & Armor Sets |
-| `stand out level up fast` / `stand out guide` | Early Game Progression | `https://standoutwiki.org/guides/level-up-fast/` | Fast Leveling Guide (1-75) – Stand Out Wiki | Level 1 to 75 Fast EXP Progression Route |
+| `stand out level up fast` / `stand out guide` | Early Game Progression | `https://standoutwiki.org/guides/level-up-fast/` | Fast Leveling Guide (1-50) – Stand Out Wiki | Level 1 to 50 Fast EXP Progression Route |
 
 ---
 
@@ -67,7 +67,7 @@ Sitemap: https://standoutwiki.org/sitemap.xml
 
 ### Core Meta Tag Standards
 1. **Title Length**: 50–60 characters; brand suffix `– Stand Out Wiki` appended cleanly.
-2. **Meta Description**: 140–160 characters; actionable action verbs (`Explore`, `Calculate`, `Master`, `Redeem`), exact stats embedded (`44+ Stands`, `Level 75 cap`, `35 mutations`).
+2. **Meta Description**: 140–160 characters; actionable action verbs (`Explore`, `Calculate`, `Master`, `Redeem`), exact stats embedded (`43 Stands`, `Level 50 cap`, `35 mutations`).
 3. **Open Graph**:
    - `og:site_name`: `Stand Out Wiki`
    - `og:type`: `website` (or `article` for detailed guides)
@@ -128,7 +128,7 @@ The entire site features rich, validated JSON-LD schema across multiple object h
 3. **IndexNow Pre-Configuration**:
    - Key: `9e3bf17482a5490bb59e51cfa82d7031`
    - Verification Key Endpoint: `https://standoutwiki.org/9e3bf17482a5490bb59e51cfa82d7031.txt`
-   - Automation Script: `scripts/indexnow.mjs` (Submits all 88 URLs directly to Bing & Yandex upon post-deployment execution).
+   - Automation Script: `scripts/indexnow.mjs` (Submits all 87 canonical URLs directly to Bing & Yandex upon post-deployment execution).
 
 ---
 
