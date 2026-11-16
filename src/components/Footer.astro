@@ -1,5 +1,11 @@
 ---
 import { siteConfig } from '../data/site';
+
+interface Props {
+  isHome?: boolean;
+}
+
+const { isHome = false } = Astro.props;
 ---
 
 <footer class="bg-[#042F2E] text-slate-300 pt-16 pb-12 border-t border-[#064E4A]">
@@ -19,6 +25,14 @@ import { siteConfig } from '../data/site';
         <p class="text-xs text-emerald-100/80 leading-relaxed max-w-sm">
           Stand Out Wiki (<a href={siteConfig.url} class="text-amber-300 underline font-bold">standoutwiki.org</a>) is an independent player-driven knowledge base dedicated to Roblox STAND OUT by Studio Umbra: Europa. Featuring verified movesets, exact drop probabilities, current codes, tier lists, and progression walkthroughs.
         </p>
+
+        {isHome && (
+          <div class="pt-2">
+            <a href="https://openhunts.com" target="_blank" title="OpenHunts Club">
+              <img alt="OpenHunts Club Member" height="105" src="https://cdn.openhunts.com/badges/club.webp" style="width: 195px; height: auto;" width="486" />
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Footer Navigation Columns */}
