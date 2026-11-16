@@ -1,0 +1,83 @@
+---
+import { siteConfig } from '../data/site';
+---
+
+<footer class="bg-[#042F2E] text-slate-300 pt-16 pb-12 border-t border-[#064E4A]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 pb-12 border-b border-emerald-900/60">
+      {/* Brand Column */}
+      <div class="col-span-2 space-y-4">
+        <a href="/" class="inline-block">
+          <img
+            src="/images/brand/stand-out-wiki-logo.webp"
+            alt="Stand Out Wiki Brand Logo"
+            class="h-10 w-auto object-contain brightness-110"
+            loading="lazy"
+          />
+        </a>
+
+        <p class="text-xs text-emerald-100/80 leading-relaxed max-w-sm">
+          Stand Out Wiki (<a href={siteConfig.url} class="text-amber-300 underline font-bold">standoutwiki.org</a>) is an independent player-driven knowledge base dedicated to Roblox STAND OUT by Studio Umbra: Europa. Featuring verified movesets, exact drop probabilities, real-time codes, tier lists, and progression walkthroughs.
+        </p>
+
+        <div class="pt-2 flex items-center gap-3 text-xs">
+          <a
+            href={siteConfig.officialTrelloUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3 py-1.5 rounded-lg bg-emerald-950/80 hover:bg-emerald-900 text-emerald-200 border border-emerald-800 font-bold transition-colors"
+          >
+            Official Trello
+          </a>
+          <a
+            href={siteConfig.officialDiscordUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3 py-1.5 rounded-lg bg-emerald-950/80 hover:bg-emerald-900 text-emerald-200 border border-emerald-800 font-bold transition-colors"
+          >
+            Official Discord
+          </a>
+        </div>
+      </div>
+
+      {/* Footer Navigation Columns */}
+      {siteConfig.footerLinks.map((col) => (
+        <div>
+          <h4 class="text-xs font-black uppercase tracking-wider text-amber-300 mb-3">
+            {col.title}
+          </h4>
+          <ul class="space-y-2 text-xs">
+            {col.links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  target={link.external ? '_blank' : undefined}
+                  rel={link.external ? 'noopener noreferrer' : undefined}
+                  class="text-emerald-100/70 hover:text-amber-200 transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    {/* Bottom Legal & Non-Affiliation Disclaimer */}
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-emerald-100/60 gap-4">
+      <div class="space-y-1 text-center md:text-left">
+        <p>© 2026 Stand Out Wiki (standoutwiki.org). All rights reserved.</p>
+        <p class="text-[11px] text-emerald-200/50">
+          Disclaimer: Stand Out Wiki is an independent fan-created documentation resource. This website is not endorsed by, directly affiliated with, maintained, or sponsored by Roblox Corporation or Studio Umbra: Europa. JoJo's Bizarre Adventure is property of Hirohiko Araki, Shueisha, and David Production.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs font-semibold shrink-0">
+        <a href="/privacy/" class="hover:text-emerald-200">Privacy Policy</a>
+        <a href="/terms/" class="hover:text-emerald-200">Terms of Service</a>
+        <a href="/contact/" class="hover:text-emerald-200">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>

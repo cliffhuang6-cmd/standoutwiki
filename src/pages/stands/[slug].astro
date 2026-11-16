@@ -1,0 +1,350 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { stands, standsBySlug } from '../../data/stands';
+import type { Stand } from '../../types';
+
+export function getStaticPaths() {
+  return stands.map((stand) => ({
+    params: { slug: stand.slug },
+    props: { stand },
+  }));
+}
+
+interface Props {
+  stand: Stand;
+}
+
+const { stand } = Astro.props;
+
+const rarityBadgeClasses: Record<string, string> = {
+  Pinnacle: 'bg-rose-100 text-rose-800 border-rose-200',
+  Mythical: 'bg-amber-100 text-amber-900 border-amber-200',
+  Legendary: 'bg-purple-100 text-purple-900 border-purple-200',
+  Epic: 'bg-sky-100 text-sky-900 border-sky-200',
+  Rare: 'bg-emerald-100 text-emerald-900 border-emerald-200',
+  Evolution: 'bg-teal-100 text-teal-900 border-teal-200',
+  'Alternative Universe': 'bg-indigo-100 text-indigo-900 border-indigo-200',
+  Quest: 'bg-blue-100 text-blue-900 border-blue-200',
+};
+
+// Find related stands from same JoJo Part or evolution tree
+const relatedStands = stands
+  .filter((s) => s.slug !== stand.slug && (s.jojoPart === stand.jojoPart || s.rarity === stand.rarity))
+  .slice(0, 4);
+---
+
+<Layout
+  title={`${stand.name} – How to Get, Moveset & Build | Stand Out Wiki`}
+  description={`Complete guide to ${stand.name} in Roblox STAND OUT. View full moveset, keybinds, frame cooldowns, Ability stat scaling, optimal PvP/Raid builds, and obtainment.`}
+  canonicalPath={`stands/${stand.slug}`}
+  ogImage={`https://standoutwiki.org${stand.image}`}
+  ogType="article"
+  breadcrumbs={[
+    { label: 'Stands', href: '/stands/' },
+    { label: stand.name }
+  ]}
+  schemaType="Article"
+  dateModified={stand.verifiedDate}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Stand Entity Hero Banner -->
+    <div class="bg-white rounded-3xl border border-slate-200 p-6 md:p-10 shadow-sm mb-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Stand Visual (Left 5 Cols) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md">
+            <img
+              src={stand.image}
+              alt={`${stand.name} character pose in Roblox STAND OUT`}
+              class="w-full h-full object-cover object-top"
+              loading="eager"
+            />
+            <span class={`absolute top-3 right-3 px-3 py-1 text-xs font-black uppercase tracking-wider rounded-lg border shadow-sm ${
+              rarityBadgeClasses[stand.rarity] || 'bg-slate-100 text-slate-800'
+            }`}>
+              {stand.rarity}
+            </span>
+          </div>
+        </div>
+
+        <!-- Stand Overview Details (Right 7 Cols) -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-bold text-xs">
+              {stand.jojoPart}
+            </span>
+            <span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 font-bold text-xs">
+              {stand.combatRole} Role
+            </span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white font-mono text-xs font-bold">
+              Status: {stand.status}
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+            {stand.name}
+          </h1>
+
+          <p class="text-sm font-semibold text-slate-600">
+            Canonical User: <strong class="text-slate-900">{stand.canonicalUser}</strong>
+          </p>
+
+          <!-- Lore Quote -->
+          <blockquote class="p-4 rounded-xl bg-slate-50 border-l-4 border-emerald-600 text-xs text-slate-700 italic leading-relaxed">
+            "{stand.lore}"
+          </blockquote>
+
+          <!-- Tier Ratings Grid -->
+          <div class="pt-2 grid grid-cols-3 gap-3">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center">
+              <span class="text-[11px] font-bold text-slate-500 uppercase block">PvP Tier</span>
+              <span class="text-xl font-black font-mono text-rose-600">{stand.tier.pvp}</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center">
+              <span class="text-[11px] font-bold text-slate-500 uppercase block">Raid Tier</span>
+              <span class="text-xl font-black font-mono text-emerald-600">{stand.tier.raid}</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center">
+              <span class="text-[11px] font-bold text-slate-500 uppercase block">Farming Tier</span>
+              <span class="text-xl font-black font-mono text-amber-600">{stand.tier.farming}</span>
+            </div>
+          </div>
+
+          <!-- Obtainment Summary -->
+          <div class="pt-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1">
+              How to Obtain:
+            </span>
+            <p class="text-xs text-slate-700 leading-relaxed font-medium">
+              {stand.obtainMethod}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Tabs / Sections -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Left 2 Columns: Moveset & Passives -->
+      <div class="lg:col-span-2 space-y-10">
+        <!-- Moveset Section -->
+        <section class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
+          <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
+            <div>
+              <h2 class="text-2xl font-black text-slate-900">Complete Moveset &amp; Keybinds</h2>
+              <p class="text-xs text-slate-500 mt-0.5">Verified PC keybinds, cooldowns, and damage scaling.</p>
+            </div>
+            <span class="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">
+              {stand.moveset.length} Moves Documented
+            </span>
+          </div>
+
+          <div class="space-y-4">
+            {stand.moveset.map((move) => (
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 transition-colors">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <div class="flex items-center gap-2">
+                    <kbd class="px-2.5 py-1 bg-slate-900 text-white font-mono font-black text-xs rounded-md shadow-xs">
+                      {move.key}
+                    </kbd>
+                    <h3 class="font-black text-sm text-slate-900">
+                      {move.name}
+                    </h3>
+                  </div>
+
+                  <div class="flex items-center gap-2 text-xs">
+                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-700 font-semibold text-[11px]">
+                      {move.type}
+                    </span>
+                    {move.cooldown && (
+                      <span class="font-mono text-slate-500 font-bold">
+                        ⏱️ {move.cooldown}
+                      </span>
+                    )}
+                    {move.damage && (
+                      <span class="font-mono font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded text-[11px]">
+                        💥 {move.damage}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                <p class="text-xs text-slate-600 leading-relaxed mt-2">
+                  {move.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Passives & Trait Mechanics -->
+        <section class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
+          <h2 class="text-xl font-black text-slate-900 mb-4">Passives &amp; Combat Mechanics</h2>
+          <div class="space-y-3">
+            {stand.passives.map((passive) => (
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <h3 class="font-bold text-sm text-slate-900 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  {passive.name}
+                </h3>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  {passive.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Ability Stat Scaling -->
+        {stand.abilityScaling && (
+          <section class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
+            <h2 class="text-xl font-black text-slate-900 mb-2">Ability Point Scaling Parameters</h2>
+            <p class="text-xs text-slate-500 mb-4">
+              How investing stat points into the <strong>Ability</strong> attribute directly impacts {stand.name}:
+            </p>
+            <ul class="space-y-2 text-xs text-slate-700">
+              {stand.abilityScaling.map((scale, i) => (
+                <li class="flex items-start gap-2 bg-emerald-50/70 p-3 rounded-lg border border-emerald-100">
+                  <span class="text-emerald-700 font-bold shrink-0 mt-0.5">✦</span>
+                  <span>{scale}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <!-- Pros & Cons -->
+        <section class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
+          <h2 class="text-xl font-black text-slate-900 mb-4">Strengths &amp; Weaknesses</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-emerald-50/60 border border-emerald-200">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-emerald-900 mb-2">
+                Pros &amp; Strengths
+              </h3>
+              <ul class="space-y-1.5 text-xs text-emerald-950">
+                {stand.pros.map((pro) => (
+                  <li class="flex items-start gap-1.5">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span>{pro}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-xl bg-rose-50/60 border border-rose-200">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-rose-900 mb-2">
+                Cons &amp; Limitations
+              </h3>
+              <ul class="space-y-1.5 text-xs text-rose-950">
+                {stand.cons.map((con) => (
+                  <li class="flex items-start gap-1.5">
+                    <span class="text-rose-600 font-bold">✕</span>
+                    <span>{con}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stand FAQs -->
+        <section class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
+          <h2 class="text-xl font-black text-slate-900 mb-4">{stand.name} FAQ</h2>
+          <div class="space-y-4">
+            {stand.faqs.map((faq) => (
+              <div class="border-b border-slate-100 pb-3 last:border-0 last:pb-0">
+                <h3 class="font-bold text-sm text-slate-900 mb-1">{faq.q}</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <!-- Right 1 Column: Recommended Build & Gear -->
+      <div class="space-y-8">
+        <!-- Recommended Build Card -->
+        <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-xl">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Competitive Recommendation</span>
+          <h2 class="text-lg font-black mt-1">Recommended Stat Build</h2>
+          <p class="text-xs text-slate-400 mt-1">Optimized for max Level 75 (225 total points):</p>
+
+          <div class="mt-5 space-y-3">
+            <div class="flex items-center justify-between p-2.5 bg-slate-800 rounded-lg text-xs">
+              <span class="text-rose-300 font-semibold">Health Points</span>
+              <span class="font-mono font-black text-white">{stand.recommendedBuild.points.health} pts</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 bg-slate-800 rounded-lg text-xs">
+              <span class="text-amber-300 font-semibold">Damage Points</span>
+              <span class="font-mono font-black text-white">{stand.recommendedBuild.points.damage} pts</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 bg-slate-800 rounded-lg text-xs">
+              <span class="text-teal-300 font-semibold">Ability Points</span>
+              <span class="font-mono font-black text-white">{stand.recommendedBuild.points.ability} pts</span>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-slate-800">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+              Recommended Fighting Style:
+            </span>
+            <div class="text-xs font-bold text-emerald-400">
+              {stand.recommendedBuild.subAbility}
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+              Gear Synergy Advice:
+            </span>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              {stand.recommendedBuild.synergyNotes}
+            </p>
+          </div>
+
+          <div class="mt-6">
+            <a
+              href={`/guides/level-up-fast/#build-maker?stand=${stand.slug}&h=${stand.recommendedBuild.points.health}&d=${stand.recommendedBuild.points.damage}&a=${stand.recommendedBuild.points.ability}`}
+              class="block w-full py-2.5 bg-emerald-600 hover:bg-emerald-500 text-center font-bold text-xs rounded-xl text-white transition-colors"
+            >
+              Open in Build Maker Tool →
+            </a>
+          </div>
+        </div>
+
+        <!-- Related Stands from same era -->
+        {relatedStands.length > 0 && (
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+            <h2 class="text-sm font-black uppercase tracking-wider text-slate-700 mb-4">
+              Related Stands from {stand.jojoPart.split(':')[0]}
+            </h2>
+            <div class="space-y-3">
+              {relatedStands.map((rel) => (
+                <a
+                  href={`/stands/${rel.slug}/`}
+                  class="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group"
+                >
+                  <img
+                    src={rel.image}
+                    alt={rel.name}
+                    loading="lazy"
+                    class="w-10 h-10 object-cover rounded-lg bg-slate-100 border border-slate-200 shrink-0"
+                  />
+                  <div class="min-w-0 flex-1">
+                    <h3 class="font-bold text-xs text-slate-900 group-hover:text-emerald-700 truncate">
+                      {rel.name}
+                    </h3>
+                    <p class="text-[11px] text-slate-500 truncate">{rel.canonicalUser}</p>
+                  </div>
+                  <span class="text-[10px] font-mono font-bold text-slate-400">
+                    {rel.rarity}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</Layout>

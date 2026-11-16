@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const shopItems = [
+  { name: '1x Stand Arrow', cost: '39 Robux', value: 'Low', desc: 'Single arrow roll. F2P players can easily obtain these from starter quests and bounties.' },
+  { name: '3x Stand Arrows', cost: '79 Robux', value: 'Moderate', desc: 'Allows crafting 1x Lucky Arrow at the Crafting Station.' },
+  { name: '9x Stand Arrows', cost: '199 Robux', value: 'High', desc: 'Instantly provides enough arrows to craft 1x Bizarre Arrow (4.4% Pinnacle odds).' },
+  { name: 'Character Slot Unlock', cost: '499 Robux', value: 'Best Value', desc: 'Permanently bypasses the 100K Dalas and 30-Stand requirement to grant an extra character profile.' },
+  { name: '2x EXP Booster (1 Hour)', cost: '149 Robux', value: 'Good for Leveling', desc: 'Doubles all mob, quest, and bounty EXP gains. Stacks with story milestones.' },
+  { name: '2x Dalas Booster (1 Hour)', cost: '149 Robux', value: 'Moderate', desc: 'Doubles cash drops from bounties and deliveries. Great when running lettuce routes.' }
+];
+---
+
+<Layout
+  title="Stand Out Gamepasses & Shop Items – Robux Value & Perks | Stand Out Wiki"
+  description="Comprehensive breakdown of Roblox STAND OUT gamepasses and developer shop products. Analyze Robux value, character slot unlocks, and booster efficiency."
+  canonicalPath="gamepasses"
+  breadcrumbs={[{ label: 'Gamepasses & Shop' }]}
+  schemaType="Article"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+        <span>Monetization &amp; Economy</span>
+        <span>•</span>
+        <span>Developer Products</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+        Stand Out Gamepasses &amp; Shop Guide
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Studio Umbra designed Roblox <strong>STAND OUT</strong> to be fully playable and completable as a free-to-play player. Below is an objective analysis of all in-game Robux purchases, separating must-haves from skippable conveniences.
+      </p>
+    </div>
+
+    <!-- Shop Items Grid -->
+    <div class="space-y-4 mb-12">
+      {shopItems.map((item) => (
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-3">
+              <h2 class="text-base font-black text-slate-900">{item.name}</h2>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                {item.cost}
+              </span>
+            </div>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed max-w-xl">
+              {item.desc}
+            </p>
+          </div>
+
+          <div class="shrink-0">
+            <span class={`px-3 py-1 rounded-full text-xs font-bold ${
+              item.value === 'Best Value' ? 'bg-emerald-100 text-emerald-800 border border-emerald-200' : 'bg-slate-100 text-slate-700'
+            }`}>
+              {item.value}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- F2P Assessment -->
+    <div class="bg-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-xl">
+      <h3 class="text-lg font-black text-amber-400 mb-2">Free-to-Play Verdict</h3>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        You do <strong>not</strong> need to spend Robux to reach Level 75, craft Bizarre Arrows, or evolve into SPTW. Every arrow variant is craftable through free gameplay (Arrow Parts from meteors, Steel from Big Chop, and tokens from Passione Train Raids). Spend Robux only if you want immediate profile slots or accelerated leveling time.
+      </p>
+    </div>
+  </div>
+</Layout>

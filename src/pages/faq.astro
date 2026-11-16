@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    category: 'Stands & Awakening',
+    q: 'How do I awaken my first Stand?',
+    a: 'Complete the initial starter tutorial to receive a guaranteed Mysterious Arrow in your inventory. Hold the arrow and press the primary action button to summon your initial Stand.'
+  },
+  {
+    category: 'Stands & Awakening',
+    q: 'Why can’t I roll Super Fly, Rolling Stones, or Cinderella?',
+    a: 'Studio Umbra excluded 7 utility/non-combat Stands from the pre-storyline arrow pool (Super Fly, Rolling Stones, Cinderella, Burning Down the House, Catch the Rainbow, Strength, and Lyin\' Eyes). Once you finish Storyline Quest 10, they unlock permanently in all your future arrow rolls.'
+  },
+  {
+    category: 'Stands & Awakening',
+    q: 'Does STAND OUT have a guaranteed pity counter?',
+    a: 'No. Every arrow pull is an independent Bernoulli trial. However, crafting Lucky Arrows (3x) or Bizarre Arrows (9x) mathematically excludes lower tiers, significantly raising your odds of pulling Pinnacle (up to 4.4%) and Mythical (up to 37.7%) tiers.'
+  },
+  {
+    category: 'Combat & Mechanics',
+    q: 'How does the Time Stop overwrite mechanic work?',
+    a: 'If an enemy activates Time Stop (Star Platinum or The World), any player who also owns a Time Stop Stand can press their Time Stop ability inside the frozen time to overwrite the dimension, allowing both users to fight within the stopped temporal field.'
+  },
+  {
+    category: 'Combat & Mechanics',
+    q: 'What is the Anti-Teaming mechanic?',
+    a: 'To prevent unfair gang ganking in public servers, STAND OUT automatically grants approximately 1 full second of complete invulnerability (i-frames) when two or more opponents strike a player in quick succession.'
+  },
+  {
+    category: 'Progression & Leveling',
+    q: 'What is the maximum level in STAND OUT?',
+    a: 'The current maximum level cap is Level 75. Every level grants 3 Stat Points, allowing for 225 total points allocated between Health, Damage, and Ability.'
+  },
+  {
+    category: 'Progression & Leveling',
+    q: 'How do I unlock additional Character Slots?',
+    a: 'You can unlock up to 3 slots by unlocking 30 unique Stands, completing the main storyline, and paying 100,000 Dalas to the town registrar (or purchasing the instant Robux unlock).'
+  }
+];
+---
+
+<Layout
+  title="Stand Out FAQ – Frequently Asked Questions | Stand Out Wiki"
+  description="Answers to common questions about Roblox STAND OUT. Learn about arrow pity, anti-teaming i-frames, Time Stop overwrites, and level 75 caps."
+  canonicalPath="faq"
+  breadcrumbs={[{ label: 'FAQ' }]}
+  schemaType="FAQPage"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+        <span>Knowledge Base</span>
+        <span>•</span>
+        <span>Verified Player Answers</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+        Frequently Asked Questions
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Find immediate, factual answers to common questions about Roblox <strong>STAND OUT</strong> mechanics, Stand drops, combat systems, and account progression.
+      </p>
+    </div>
+
+    <!-- FAQ Accordion / Cards -->
+    <div class="space-y-4">
+      {faqs.map((faq) => (
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <span class="text-[10px] font-black uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded mb-2 inline-block">
+            {faq.category}
+          </span>
+          <h2 class="text-base font-black text-slate-900 mt-1">{faq.q}</h2>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            {faq.a}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

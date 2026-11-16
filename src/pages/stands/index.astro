@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import StandCard from '../../components/StandCard.astro';
+import { stands } from '../../data/stands';
+
+const rarities = ['All', 'Pinnacle', 'Mythical', 'Legendary', 'Epic', 'Rare', 'Evolution', 'Alternative Universe', 'Quest'];
+const parts = ['All', 'Part 3', 'Part 4', 'Part 5', 'Part 6', 'Part 7', 'Part 8', 'Part 9'];
+---
+
+<Layout
+  title="All Stands – Stand Out Database & Roster | Stand Out Wiki"
+  description="Complete Stand database for Roblox STAND OUT. Browse all 44+ verified Stands with moveset tables, frame cooldowns, canon users, JoJo parts, and rarities."
+  canonicalPath="stands"
+  breadcrumbs={[{ label: 'Stands' }]}
+  schemaType="CollectionPage"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Header -->
+    <div class="max-w-3xl mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+        <span>Verified Playable Roster</span>
+        <span>•</span>
+        <span>{stands.length} Documented Stands</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+        Stand Out Stand Database
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Explore every Stand currently implemented in Roblox <strong>STAND OUT</strong>. From time-stopping Pinnacle powerhouses like Star Platinum and The World to intricate Part 9 tactical abilities like November Rain, browse complete movesets, damage scaling, and build recommendations.
+      </p>
+    </div>
+
+    <!-- Stand Roster Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {stands.map((stand) => (
+        <StandCard stand={stand} />
+      ))}
+    </div>
+
+    <!-- Bottom Explanatory Guide -->
+    <div class="mt-16 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6">
+      <h2 class="text-2xl font-black text-slate-900">How Stands Work in STAND OUT</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-600 leading-relaxed">
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+          <h3 class="font-extrabold text-sm text-slate-900 mb-1.5">1. Arrow Obtainment</h3>
+          <p>
+            Stands are summoned by piercing your character with Stand Arrows. Use <strong>Mysterious Arrows</strong> for general awakening, or craft <strong>Lucky</strong> (3x) and <strong>Bizarre</strong> (9x) arrows to exclude lower tiers and boost Pinnacle odds up to 4.4%.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+          <h3 class="font-extrabold text-sm text-slate-900 mb-1.5">2. Ability Stat Scaling</h3>
+          <p>
+            Unlike many fighting games with flat move values, STAND OUT heavily scales moveset parameters based on your invested <strong>Ability points</strong>. Time Stop durations, trap persistence, and projectile count scale up to +50% at high investment.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+          <h3 class="font-extrabold text-sm text-slate-900 mb-1.5">3. Stand Storage &amp; Swapping</h3>
+          <p>
+            Don't worry about losing your rare Stand when rerolling. Visit <strong>D'Arby</strong> in the town casino to store active Stands onto Stand Chips or unlock secondary character slots via Storyline Quest 10 and 100,000 Dalas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

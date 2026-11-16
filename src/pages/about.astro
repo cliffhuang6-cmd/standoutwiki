@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../data/site';
+---
+
+<Layout
+  title="About Stand Out Wiki – Independent Roblox Community Database | Stand Out Wiki"
+  description="Learn about Stand Out Wiki, our mission, data verification methodology, and the independent community team behind the definitive Roblox STAND OUT guide."
+  canonicalPath="about"
+  breadcrumbs={[{ label: 'About Us' }]}
+  schemaType="Article"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+        <span>About Our Initiative</span>
+        <span>•</span>
+        <span>Independent Wiki Project</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+        About Stand Out Wiki
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Stand Out Wiki (<a href={siteConfig.url} class="text-emerald-700 underline font-bold">standoutwiki.org</a>) is an independent, community-driven knowledge base created by passionate players to serve the global community of the Roblox action RPG <strong>STAND OUT</strong>, developed by Studio Umbra: Europa.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 text-sm text-slate-600 leading-relaxed">
+      <h2 class="text-2xl font-black text-slate-900">Our Mission &amp; Editorial Standards</h2>
+      <p>
+        Too many Roblox game wikis are filled with unverified rumors, stale code lists, fake gacha pity counters, or copy-pasted generic text. Stand Out Wiki was founded to establish a higher standard:
+      </p>
+
+      <ul class="list-disc list-inside space-y-2 text-xs font-medium text-slate-700">
+        <li><strong>Factual Verification:</strong> Every moveset, damage scaling parameter, cooldown, and drop rate is verified against developer cards on the official Trello release boards and live game testing.</li>
+        <li><strong>Mathematical Transparency:</strong> We never invent drop rates. When game mechanics rely on Bernoulli trials or focus arrows, we provide exact mathematical formulations.</li>
+        <li><strong>Active Maintenance:</strong> Promo codes and update changelogs are audited during each Studio Umbra patch deployment.</li>
+      </ul>
+
+      <h2 class="text-xl font-black text-slate-900 pt-4">Legal Disclaimer &amp; Fair Use</h2>
+      <p class="text-xs text-slate-500 leading-relaxed">
+        Stand Out Wiki is an independent fan resource and is <strong>not</strong> an official website of Roblox Corporation or Studio Umbra: Europa. JoJo's Bizarre Adventure is property of Hirohiko Araki, Shueisha, and David Production. All trademarks, character names, and in-game assets are referenced under fair use doctrine for non-profit informational, educational, and commentary purposes.
+      </p>
+    </div>
+  </div>
+</Layout>

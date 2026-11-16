@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Page Not Found (404) | Stand Out Wiki"
+  description="The page you were looking for does not exist on Stand Out Wiki."
+  canonicalPath="404"
+  noindex={true}
+>
+  <div class="max-w-2xl mx-auto px-4 py-24 text-center">
+    <div class="w-20 h-20 rounded-2xl bg-rose-100 text-rose-800 flex items-center justify-center font-black text-3xl mx-auto mb-6">
+      404
+    </div>
+
+    <h1 class="text-3xl font-black text-slate-900 tracking-tight">
+      Stand Out of Range
+    </h1>
+
+    <p class="mt-3 text-sm text-slate-600 leading-relaxed max-w-md mx-auto">
+      You've drifted outside the pilot range of your Stand. The page you are looking for has been moved, renamed, or never existed.
+    </p>
+
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+      <a
+        href="/"
+        class="px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-xl transition-colors"
+      >
+        Return to Home →
+      </a>
+      <a
+        href="/stands/"
+        class="px-5 py-2.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-800 font-bold text-xs rounded-xl transition-colors"
+      >
+        Browse Stands Database
+      </a>
+      <a
+        href="/codes/"
+        class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs rounded-xl transition-colors"
+      >
+        Active Codes
+      </a>
+    </div>
+  </div>
+</Layout>

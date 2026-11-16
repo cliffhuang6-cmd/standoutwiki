@@ -1,0 +1,896 @@
+[
+  {
+    "file": "/images/stands/yellow-temperance.webp",
+    "entity": "Yellow Temperance",
+    "type": "stand",
+    "width": 267,
+    "height": 409,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/yo-yo-ma.webp",
+    "entity": "Yo-Yo Ma",
+    "type": "stand",
+    "width": 600,
+    "height": 473,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/cinderella.webp",
+    "entity": "Cinderella",
+    "type": "stand",
+    "width": 374,
+    "height": 446,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/smooth-operators.webp",
+    "entity": "Smooth Operators",
+    "type": "stand",
+    "width": 600,
+    "height": 459,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/beach-boy.webp",
+    "entity": "Beach Boy",
+    "type": "stand",
+    "width": 527,
+    "height": 541,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/hey-ya.webp",
+    "entity": "Hey Ya!",
+    "type": "stand",
+    "width": 295,
+    "height": 359,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/200-balloons.webp",
+    "entity": "200 Balloons",
+    "type": "stand",
+    "width": 318,
+    "height": 199,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/the-sun.webp",
+    "entity": "The Sun",
+    "type": "stand",
+    "width": 399,
+    "height": 459,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/lyin-eyes.webp",
+    "entity": "Lyin' Eyes",
+    "type": "stand",
+    "width": 369,
+    "height": 490,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/the-mattekudasai.webp",
+    "entity": "The MATTEKUDASAI",
+    "type": "stand",
+    "width": 226,
+    "height": 263,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/hermit-purple.webp",
+    "entity": "Hermit Purple",
+    "type": "stand",
+    "width": 373,
+    "height": 407,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/mr-president.webp",
+    "entity": "Mr. President",
+    "type": "stand",
+    "width": 354,
+    "height": 288,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/the-hustle.webp",
+    "entity": "The Hustle",
+    "type": "stand",
+    "width": 600,
+    "height": 221,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/notorious-big.webp",
+    "entity": "Notorious B.I.G",
+    "type": "stand",
+    "width": 314,
+    "height": 418,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/kraft-work.webp",
+    "entity": "Kraft Work",
+    "type": "stand",
+    "width": 600,
+    "height": 337,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/rolling-stones.webp",
+    "entity": "Rolling Stones",
+    "type": "stand",
+    "width": 496,
+    "height": 351,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/harvest.webp",
+    "entity": "Harvest",
+    "type": "stand",
+    "width": 374,
+    "height": 358,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/tubular-bells.webp",
+    "entity": "Tubular Bells",
+    "type": "stand",
+    "width": 600,
+    "height": 577,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/super-fly.webp",
+    "entity": "Super Fly",
+    "type": "stand",
+    "width": 466,
+    "height": 600,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/under-world.webp",
+    "entity": "Under World",
+    "type": "stand",
+    "width": 412,
+    "height": 462,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/walking-heart.webp",
+    "entity": "Walking Heart",
+    "type": "stand",
+    "width": 360,
+    "height": 482,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/glory-days.webp",
+    "entity": "Glory Days",
+    "type": "stand",
+    "width": 355,
+    "height": 485,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/smoke-on-the-water.webp",
+    "entity": "Smoke On The Water",
+    "type": "stand",
+    "width": 433,
+    "height": 553,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/the-grateful-dead.webp",
+    "entity": "The Grateful Dead",
+    "type": "stand",
+    "width": 399,
+    "height": 372,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/emperor.webp",
+    "entity": "Emperor",
+    "type": "stand",
+    "width": 473,
+    "height": 600,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/kiss-kizz.webp",
+    "entity": "Kiss (Kizz)",
+    "type": "stand",
+    "width": 600,
+    "height": 337,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/burning-down-the-house.webp",
+    "entity": "Burning Down The House",
+    "type": "stand",
+    "width": 600,
+    "height": 419,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/beyond-the-sea.webp",
+    "entity": "Beyond the Sea",
+    "type": "stand",
+    "width": 506,
+    "height": 560,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/magicians-red.webp",
+    "entity": "Magician's Red",
+    "type": "stand",
+    "width": 370,
+    "height": 467,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/death-13.webp",
+    "entity": "Death 13",
+    "type": "stand",
+    "width": 600,
+    "height": 337,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/catch-the-rainbow.webp",
+    "entity": "Catch The Rainbow",
+    "type": "stand",
+    "width": 498,
+    "height": 546,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/silver-chariot.webp",
+    "entity": "Silver Chariot",
+    "type": "stand",
+    "width": 393,
+    "height": 508,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/strength.webp",
+    "entity": "Strength",
+    "type": "stand",
+    "width": 600,
+    "height": 311,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/mandom.webp",
+    "entity": "Mandom",
+    "type": "stand",
+    "width": 313,
+    "height": 475,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/heavens-door.webp",
+    "entity": "Heaven's Door",
+    "type": "stand",
+    "width": 404,
+    "height": 510,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/november-rain.webp",
+    "entity": "November Rain",
+    "type": "stand",
+    "width": 436,
+    "height": 600,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/highway-star.webp",
+    "entity": "Highway Star",
+    "type": "stand",
+    "width": 600,
+    "height": 340,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/big-mouth-strikes-again.webp",
+    "entity": "Big Mouth Strikes Again",
+    "type": "stand",
+    "width": 330,
+    "height": 449,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/king-crimson-doppio-moveset.webp",
+    "entity": "King Crimson (Doppio Moveset)",
+    "type": "stand",
+    "width": 379,
+    "height": 450,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/king-crimson-full.webp",
+    "entity": "King Crimson (Full)",
+    "type": "stand",
+    "width": 272,
+    "height": 367,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/the-world.webp",
+    "entity": "The World",
+    "type": "stand",
+    "width": 350,
+    "height": 494,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/star-platinum.webp",
+    "entity": "Star Platinum",
+    "type": "stand",
+    "width": 429,
+    "height": 600,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/jojosapiens.webp",
+    "entity": "Jojosapiens",
+    "type": "stand",
+    "width": 600,
+    "height": 316,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/hermit-purple.webp",
+    "entity": "Hermit Purple",
+    "type": "stand",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/the-world-alternative-universe.webp",
+    "entity": "The World: Alternative Universe",
+    "type": "stand",
+    "width": 374,
+    "height": 419,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/stands/star-platinum-the-world.webp",
+    "entity": "Star Platinum: The World",
+    "type": "stand",
+    "width": 361,
+    "height": 461,
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/lava-rock.webp",
+    "entity": "Lava Rock",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/blue-diamond.webp",
+    "entity": "Blue Diamond",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/phone.webp",
+    "entity": "Phone",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/signed-documents.webp",
+    "entity": "Signed Documents",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/apple.webp",
+    "entity": "Apple",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/arrows/arrow-part.webp",
+    "entity": "Arrow Part",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/arrows/mysterious-arrow.webp",
+    "entity": "Mysterious Arrow",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/arrows/lucky-arrow.webp",
+    "entity": "Lucky Arrow",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/arrows/bizarre-arrow.webp",
+    "entity": "Bizarre Arrow",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/arrows/mysterious-arrow-part-5.webp",
+    "entity": "Mysterious Arrow [Part 5]",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/mysterious-rock.webp",
+    "entity": "Mysterious Rock",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/arrows/mysterious-arrow-part-3.webp",
+    "entity": "Mysterious Arrow [Part 3]",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/wood.webp",
+    "entity": "Wood",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/steel-ingot.webp",
+    "entity": "Steel Ingot",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/black-umbrella.webp",
+    "entity": "Black Umbrella",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/your-id.webp",
+    "entity": "Your ID",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/jodios-id.webp",
+    "entity": "Jodio's ID",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/dragonas-id.webp",
+    "entity": "Dragona's ID",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/charming-mans-id.webp",
+    "entity": "Charming Man's ID",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/stone-mask.webp",
+    "entity": "Stone Mask",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/stand-chip.webp",
+    "entity": "Stand Chip",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/glass.webp",
+    "entity": "Glass",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/metal-detector.webp",
+    "entity": "Metal Detector",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/scrap.webp",
+    "entity": "Scrap",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/2x-exp-booster.webp",
+    "entity": "2x Exp Booster",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/2x-coins-booster.webp",
+    "entity": "2x Coins Booster",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/guitar.webp",
+    "entity": "Guitar",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/items/pogo-stick.webp",
+    "entity": "Pogo Stick",
+    "type": "item",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/emerald-roka.webp",
+    "entity": "Emerald Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/sapphire-roka.webp",
+    "entity": "Sapphire Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/amethyst-roka.webp",
+    "entity": "Amethyst Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/opal-roka.webp",
+    "entity": "Opal Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/attractive-roka.webp",
+    "entity": "Attractive Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/carbonated-roka.webp",
+    "entity": "Carbonated Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/doctorproof-roka.webp",
+    "entity": "DoctorProof Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/antimatter-roka.webp",
+    "entity": "Antimatter Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/emotional-damage-roka.webp",
+    "entity": "Emotional Damage Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/expired-roka.webp",
+    "entity": "Expired Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/fabulous-roka.webp",
+    "entity": "Fabulous Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/italianism-roka.webp",
+    "entity": "Italianism Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/peachy-roka.webp",
+    "entity": "Peachy Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/overcaffeinated-roka.webp",
+    "entity": "Overcaffeinated Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/personal-space-roka.webp",
+    "entity": "Personal Space Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/questionable-dragon-roka.webp",
+    "entity": "Questionable Dragon Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/root-vision-roka.webp",
+    "entity": "Root Vision Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/salty-roka.webp",
+    "entity": "Salty Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/slippery-roka.webp",
+    "entity": "Slippery Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/seed-machine-roka.webp",
+    "entity": "Seed Machine Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/shrinking-roka.webp",
+    "entity": "Shrinking Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/sourpuss-roka.webp",
+    "entity": "Sourpuss Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/squeaky-clean-roka.webp",
+    "entity": "Squeaky Clean Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/sticky-roka.webp",
+    "entity": "Sticky Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/stinky-roka.webp",
+    "entity": "Stinky Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/suspiciously-healthy-roka.webp",
+    "entity": "Suspiciously Healthy Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/brain-freeze-roka.webp",
+    "entity": "Brain Freeze Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/bunch-of-me-roka.webp",
+    "entity": "Bunch of Me Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/crackling-roka.webp",
+    "entity": "Crackling Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/couch-potato-roka.webp",
+    "entity": "Couch Potato Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/rero-rero-roka.webp",
+    "entity": "Rero Rero Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/rokakaka/too-hot-roka.webp",
+    "entity": "Too Hot Roka",
+    "type": "rokakaka",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/locations/train-raid.webp",
+    "entity": "Train Raid",
+    "type": "locations",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/locations/train-shop.webp",
+    "entity": "Train Shop",
+    "type": "locations",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/locations/highway-star-raid.webp",
+    "entity": "Highway Star Raid",
+    "type": "locations",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/locations/highway-star-shop.webp",
+    "entity": "Highway Star Shop",
+    "type": "locations",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/locations/77-rings-raid.webp",
+    "entity": "77 Rings Raid",
+    "type": "locations",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/locations/77-rings-shop.webp",
+    "entity": "77 Rings Shop",
+    "type": "locations",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/cop.webp",
+    "entity": "Cop",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/hubert.webp",
+    "entity": "Hubert",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/charming-man.webp",
+    "entity": "Charming Man",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/wild-cat-size.webp",
+    "entity": "Wild Cat Size",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/rohan-kishibe.webp",
+    "entity": "Rohan Kishibe",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/diamotch-guard.webp",
+    "entity": "Diamotch Guard",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/bobby-jean.webp",
+    "entity": "Bobby Jean",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/land-registry-security.webp",
+    "entity": "Land Registry Security",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/key-west.webp",
+    "entity": "Key West",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/ningbo.webp",
+    "entity": "Ningbo",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/laem-chabang.webp",
+    "entity": "Laem Chabang",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/vampire.webp",
+    "entity": "Vampire",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/leprechaun.webp",
+    "entity": "Leprechaun",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/training-humu.webp",
+    "entity": "Training Humu",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/seal.webp",
+    "entity": "Seal",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/pesci.webp",
+    "entity": "Pesci",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/prosciutto.webp",
+    "entity": "Prosciutto",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/yo-yo-ma.webp",
+    "entity": "Yo-Yo Ma",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/food-safety-agency-inspector.webp",
+    "entity": "Food Safety Agency Inspector",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/swat.webp",
+    "entity": "SWAT",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/ceo-of-fighting.webp",
+    "entity": "CEO of Fighting",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  },
+  {
+    "file": "/images/bosses/stand-user.webp",
+    "entity": "Stand User",
+    "type": "bosses",
+    "source": "Developer Official Asset (Studio Umbra)"
+  }
+]

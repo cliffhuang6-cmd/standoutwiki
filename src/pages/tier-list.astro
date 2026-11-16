@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TierListFilter from '../components/TierListFilter';
+
+---
+
+<Layout
+  title="Stand Out Tier List – Best Stands for PvP, Raids & Farming | Stand Out Wiki"
+  description="Roblox STAND OUT tier list for November 2026. Ranked tiers for 1v1 PvP combat, Passione Train Raids, and Dalas farming speeds. Verified moveset analysis."
+  canonicalPath="tier-list"
+  breadcrumbs={[{ label: 'Tier List' }]}
+  schemaType="CollectionPage"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="max-w-3xl mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-xs font-bold mb-3 border border-rose-200">
+        <span>Competitive Meta Analysis</span>
+        <span>•</span>
+        <span>November 2026 Season</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+        Stand Out Tier List
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Welcome to the definitive competitive tier list for Roblox <strong>STAND OUT</strong>. Rather than offering a generic, single-dimensional list, we rank every Stand across three distinct game loops: <strong>1v1 PvP Duels</strong>, <strong>Endgame Raids &amp; Boss Dungeons</strong>, and <strong>Dalas Cash Farming Speed</strong>.
+      </p>
+    </div>
+
+    <!-- Interactive Tier List Component -->
+    <div class="mb-16">
+      <TierListFilter client:load />
+    </div>
+
+    <!-- Tier Criteria Explanations -->
+    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6">
+      <h2 class="text-2xl font-black text-slate-900">Tier Ranking Criteria &amp; Methodology</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-600 leading-relaxed">
+        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <h3 class="font-extrabold text-sm text-rose-800 mb-2">PvP Combat Evaluation</h3>
+          <p>
+            PvP rankings prioritize frame data, combo confirm reliability from basic M1 light attacks, presence of unreactable guardbreaks, i-frame defensive tools (such as King Crimson Time Erase or Mandom Rewind), and Time Stop overwrite viability.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <h3 class="font-extrabold text-sm text-emerald-800 mb-2">Raid &amp; PvE Evaluation</h3>
+          <p>
+            Raid viability is judged by multi-target sustained DPS against dense minion waves (such as 77 Rings graveyard mobs), super armor penetration, crowd disruption, and group survival utility (such as Mr. President sanctuary or November Rain crushing downpours).
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <h3 class="font-extrabold text-sm text-amber-800 mb-2">Farming &amp; Economy Evaluation</h3>
+          <p>
+            Farming speed is determined by mob wipe efficiency for bounty loops, traversal velocity across town, and exclusive resource foraging passives like Shigechi's Harvest Search Party or lettuce dealer crop bonuses.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

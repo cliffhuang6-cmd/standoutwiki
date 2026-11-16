@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { guides } from '../../data/guides';
+
+const categories = ['All', 'Starter', 'Combat & Moves', 'Progression', 'Endgame & Raids', 'Economy'];
+---
+
+<Layout
+  title="Stand Out Guides Hub – Beginner Tutorials, Raids & Farming | Stand Out Wiki"
+  description="Master Roblox STAND OUT with our comprehensive walkthrough guides. Fast leveling to level 75, Dalas farming routes, arrow crafting, and boss dungeons."
+  canonicalPath="guides"
+  breadcrumbs={[{ label: 'Guides' }]}
+  schemaType="CollectionPage"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="max-w-3xl mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold mb-3 border border-purple-200">
+        <span>Strategy &amp; Walkthroughs</span>
+        <span>•</span>
+        <span>{guides.length} Expert Guides</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+        Stand Out Guides Hub
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Whether you just awakened your first Stand or are preparing to conquer the 77 Rings Knight Raid, our comprehensive, step-by-step walkthroughs provide optimal progression paths.
+      </p>
+    </div>
+
+    <!-- Guides Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      {guides.map((g) => (
+        <a
+          href={`/guides/${g.slug}/`}
+          class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between hover:border-purple-400 hover:shadow-md transition-all group"
+        >
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3">
+              <span class="px-2 py-0.5 rounded font-black text-[10px] uppercase tracking-wider bg-purple-100 text-purple-800">
+                {g.category}
+              </span>
+              <span class="text-slate-400 font-medium">{g.readingTime}</span>
+            </div>
+
+            <h2 class="text-base font-black text-slate-900 group-hover:text-purple-800 transition-colors">
+              {g.title}
+            </h2>
+
+            <p class="text-xs text-slate-600 line-clamp-3 mt-2 leading-relaxed">
+              {g.description}
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-700">
+            <span>Read Walkthrough →</span>
+            <span class="text-slate-400 text-[10px]">Updated {g.updatedDate}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

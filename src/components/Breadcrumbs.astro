@@ -1,0 +1,52 @@
+---
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="py-3 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-xs">
+  <ol class="flex items-center flex-wrap gap-1.5 text-slate-500" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+      <a href="/" itemprop="item" class="hover:text-emerald-700 font-medium">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content="1" />
+      <span class="mx-1.5 text-slate-300">/</span>
+    </li>
+
+    {items.map((item, index) => {
+      const position = index + 2;
+      const isLast = index === items.length - 1;
+
+      return (
+        <li
+          itemprop="itemListElement"
+          itemscope
+          itemtype="https://schema.org/ListItem"
+          class="flex items-center"
+        >
+          {isLast || !item.href ? (
+            <span itemprop="name" class="text-slate-900 font-bold" aria-current="page">
+              {item.label}
+            </span>
+          ) : (
+            <>
+              <a href={item.href} itemprop="item" class="hover:text-emerald-700 font-medium">
+                <span itemprop="name">{item.label}</span>
+              </a>
+              <span class="mx-1.5 text-slate-300">/</span>
+            </>
+          )}
+          <meta itemprop="position" content={position.toString()} />
+        </li>
+      );
+    })}
+  </ol>
+</nav>

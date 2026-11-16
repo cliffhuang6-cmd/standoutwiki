@@ -1,0 +1,317 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StandCard from '../components/StandCard.astro';
+import CodeCard from '../components/CodeCard';
+import ArrowCalculator from '../components/ArrowCalculator';
+import TierListFilter from '../components/TierListFilter';
+import { stands } from '../data/stands';
+import { codes } from '../data/codes';
+import { updateLogs } from '../data/updates';
+import { guides } from '../data/guides';
+import { siteConfig } from '../data/site';
+
+const featuredStands = stands.filter((s) => ['Pinnacle', 'Mythical', 'Evolution'].includes(s.rarity)).slice(0, 8);
+const activeCodes = codes.filter((c) => c.status === 'Active');
+const latestUpdate = updateLogs[0];
+---
+
+<Layout
+  title="Stand Out Wiki – Roblox Stands, Codes, Tier List & Guides"
+  description="The definitive English database for Roblox STAND OUT by Studio Umbra: Europa. Complete movesets, exact arrow probabilities, working codes, tier lists, and progression guides."
+  canonicalPath=""
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-emerald-950 via-teal-950 to-slate-900 text-white py-16 md:py-24 overflow-hidden border-b border-emerald-900/50">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#10B981_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <!-- Live status badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-bold mb-6 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Updated for November 2026 • Verified Studio Umbra Game Data</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white">
+          The Definitive <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">STAND OUT</span> Roblox Wiki
+        </h1>
+
+        <p class="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-medium">
+          Comprehensive, uncompromised game database for Studio Umbra's premier JoJo action RPG. Explore <strong>44+ verified Stand movesets</strong>, exact arrow drop math, 100% active codes, competitive tier lists, and deep crafting walkthroughs.
+        </p>
+
+        <!-- Call-to-Action Buttons -->
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href="/stands/"
+            class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm shadow-lg shadow-emerald-900/30 transition-all"
+          >
+            Explore All Stands →
+          </a>
+          <a
+            href="/codes/"
+            class="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm shadow-lg shadow-amber-900/20 transition-all flex items-center gap-1.5"
+          >
+            <span>Active Codes</span>
+            <span class="px-1.5 py-0.2 text-[11px] rounded bg-slate-950 text-amber-300 font-mono">
+              {activeCodes.length} Working
+            </span>
+          </a>
+          <a
+            href="/tier-list/"
+            class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm backdrop-blur-xs transition-all border border-white/10"
+          >
+            PvP &amp; Raid Tier List
+          </a>
+        </div>
+
+        <!-- Metric Badges -->
+        <div class="mt-10 pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center sm:text-left">
+          <div>
+            <div class="text-2xl font-black font-mono text-emerald-400">44+</div>
+            <div class="text-xs text-slate-400 font-semibold mt-0.5">Verified Stands</div>
+          </div>
+          <div>
+            <div class="text-2xl font-black font-mono text-amber-400">100%</div>
+            <div class="text-xs text-slate-400 font-semibold mt-0.5">Tested Codes</div>
+          </div>
+          <div>
+            <div class="text-2xl font-black font-mono text-teal-400">35</div>
+            <div class="text-xs text-slate-400 font-semibold mt-0.5">Roka Mutations</div>
+          </div>
+          <div>
+            <div class="text-2xl font-black font-mono text-rose-400">Level 75</div>
+            <div class="text-xs text-slate-400 font-semibold mt-0.5">Max Level Cap</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Working Codes Section -->
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 gap-2 border-b border-slate-100">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Instant Redemption</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-0.5">Stand Out Working Codes</h2>
+        </div>
+        <a href="/codes/" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1">
+          View all codes &amp; expired history →
+        </a>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {activeCodes.map((c) => (
+          <CodeCard client:load code={c} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Directories Hub -->
+  <section class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Wiki Navigation</span>
+        <h2 class="text-3xl font-black text-slate-900 mt-1">Core Knowledge Bases &amp; Tools</h2>
+        <p class="text-sm text-slate-500 mt-2">
+          Everything you need to master STAND OUT. Filter characters, verify exact gacha math, plan level 75 builds, and follow raid strategies.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Stand Database -->
+        <a href="/stands/" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-black text-lg mb-4 group-hover:scale-105 transition-transform">
+            ⚡
+          </div>
+          <h3 class="text-lg font-black text-slate-900 group-hover:text-emerald-800">All Stands Database</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Full moveset tables, frame cooldowns, EX skills, ability scaling formulas, and PvP matchups for every character in the game.
+          </p>
+          <span class="text-xs font-bold text-emerald-700 mt-4 block">Browse Roster →</span>
+        </a>
+
+        <!-- Tier List -->
+        <a href="/tier-list/" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-rose-500 hover:shadow-lg transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center font-black text-lg mb-4 group-hover:scale-105 transition-transform">
+            ⚔️
+          </div>
+          <h3 class="text-lg font-black text-slate-900 group-hover:text-rose-800">Competitive Tier List</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Dynamic 3-mode rankings covering 1v1 PvP Colosseum, Passione Train Raids, and Dalas cash farming speeds.
+          </p>
+          <span class="text-xs font-bold text-rose-700 mt-4 block">Check Rankings →</span>
+        </a>
+
+        <!-- Arrow Chances & Rates -->
+        <a href="/stand-rarity/" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-amber-500 hover:shadow-lg transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-black text-lg mb-4 group-hover:scale-105 transition-transform">
+            🎯
+          </div>
+          <h3 class="text-lg font-black text-slate-900 group-hover:text-amber-800">Arrow Rates &amp; Odds</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Mathematical breakdown of Mysterious, Lucky, Bizarre, and Part 3/5 Focus Arrows with the Bernoulli cumulative odds calculator.
+          </p>
+          <span class="text-xs font-bold text-amber-700 mt-4 block">Calculate Odds →</span>
+        </a>
+
+        <!-- Rokakaka & Mutations -->
+        <a href="/rokakaka/" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-teal-500 hover:shadow-lg transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-black text-lg mb-4 group-hover:scale-105 transition-transform">
+            🌱
+          </div>
+          <h3 class="text-lg font-black text-slate-900 group-hover:text-teal-800">Rokakaka &amp; Mutations</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Stand reset mechanics, 35 unique fruit mutations, stone petrification exchange penalties, and 3x Gang greenhouse speeds.
+          </p>
+          <span class="text-xs font-bold text-teal-700 mt-4 block">Inspect Mutations →</span>
+        </a>
+
+        <!-- Hamon & Vampire Styles -->
+        <a href="/sub-abilities/" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-lg transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center font-black text-lg mb-4 group-hover:scale-105 transition-transform">
+            🩸
+          </div>
+          <h3 class="text-lg font-black text-slate-900 group-hover:text-indigo-800">Sub-Abilities &amp; Styles</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Lisa Lisa's Hamon training quest (Jonathan, Caesar, and Zeppeli paths), Stone Mask Vampire mechanics, and daylight protection.
+          </p>
+          <span class="text-xs font-bold text-indigo-700 mt-4 block">View Fighting Styles →</span>
+        </a>
+
+        <!-- Guides Hub -->
+        <a href="/guides/" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-purple-500 hover:shadow-lg transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center font-black text-lg mb-4 group-hover:scale-105 transition-transform">
+            📖
+          </div>
+          <h3 class="text-lg font-black text-slate-900 group-hover:text-purple-800">Walkthrough Guides</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            18 comprehensive guides: Level 1-75 fast EXP loop, keybinds on PC/mobile, Dalas delivery farming, and Passione train raids.
+          </p>
+          <span class="text-xs font-bold text-purple-700 mt-4 block">Read Guides →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Stands Showcase -->
+  <section class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 gap-2 border-b border-slate-100">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Top Tier Roster</span>
+          <h2 class="text-2xl font-black text-slate-900 mt-0.5">Featured Pinnacle &amp; Mythical Stands</h2>
+        </div>
+        <a href="/stands/" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1">
+          Explore all 44 Stands →
+        </a>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {featuredStands.map((stand) => (
+          <StandCard stand={stand} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Arrow Calculator Tool Section -->
+  <section class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-8">
+        <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Interactive Web Tool</span>
+        <h2 class="text-3xl font-black text-slate-900 mt-1">Arrow Probability Simulator</h2>
+        <p class="text-sm text-slate-500 mt-2">
+          Calculate your exact cumulative statistical chance of pulling Pinnacle or Mythical Stands across Mysterious, Lucky, and Bizarre Arrows.
+        </p>
+      </div>
+
+      <ArrowCalculator client:visible />
+    </div>
+  </section>
+
+  <!-- Interactive Tier List Section -->
+  <section class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-8">
+        <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Competitive Analysis</span>
+        <h2 class="text-3xl font-black text-slate-900 mt-1">Live Stand Out Tier Rankings</h2>
+        <p class="text-sm text-slate-500 mt-2">
+          Switch between PvP, Raid PvE, and Farming speed tiers to identify the best Stands for your current playstyle.
+        </p>
+      </div>
+
+      <TierListFilter client:visible />
+    </div>
+  </section>
+
+  <!-- Latest Update Patch Notes Banner -->
+  {latestUpdate && (
+    <section class="py-12 bg-slate-900 text-white border-b border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400">
+              <span>Latest Studio Umbra Patch</span>
+              <span>•</span>
+              <span>{latestUpdate.date}</span>
+            </div>
+            <h3 class="text-xl font-bold mt-1 text-white">{latestUpdate.title}</h3>
+            <p class="text-xs text-slate-300 mt-1 max-w-2xl">{latestUpdate.summary}</p>
+          </div>
+          <a
+            href="/updates/"
+            class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-xs shrink-0 transition-colors"
+          >
+            Read Full Changelog →
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Common Questions</span>
+        <h2 class="text-3xl font-black text-slate-900 mt-1">Frequently Asked Questions</h2>
+        <p class="text-sm text-slate-500 mt-2">
+          Quick answers to the most common questions asked by new and returning STAND OUT players.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-extrabold text-base text-slate-900">How do I get my first Stand in STAND OUT?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            You receive a free, guaranteed Mysterious Arrow immediately after completing the initial starter tutorial. Open your backpack, hold the arrow, and use it to awaken a Stand. Check our <a href="/guides/first-stand/" class="text-emerald-700 font-bold underline">First Stand Guide</a> for starter evaluation.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-extrabold text-base text-slate-900">Why am I unable to roll certain Stands before beating the story?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Studio Umbra locked 7 non-combat / high-utility Stands from rolling before completing Storyline Quest 10: Super Fly, Rolling Stones, Cinderella, Burning Down the House, Catch the Rainbow, Strength, and Lyin' Eyes. Once you finish the story, they are permanently added to your arrow pool.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-extrabold text-base text-slate-900">How do I remove or reset my current Stand?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Eat an <strong>Emerald Rokakaka</strong> fruit (obtained via gardening or market trade). Consuming it removes your Stand while keeping your level and fighting style intact. Alternatively, slotting your current Stand into D'Arby's Stand Storage safely banks it.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-extrabold text-base text-slate-900">What is the current maximum level cap in STAND OUT?</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            The maximum character level is <strong>Level 75</strong>. Each level grants 3 Stat Points, giving players 225 total Stat Points to allocate across Health, Damage, and Ability attributes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,175 @@
+---
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { siteConfig } from '../data/site';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  breadcrumbs?: BreadcrumbItem[];
+  schemaType?: 'WebSite' | 'Article' | 'FAQPage' | 'CollectionPage';
+  dateModified?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonicalPath = '',
+  ogImage = siteConfig.ogImage,
+  ogType = 'website',
+  breadcrumbs,
+  schemaType = 'WebSite',
+  dateModified = '2026-11-16',
+  noindex = false,
+} = Astro.props;
+
+// Ensure trailing slash on canonical URL
+const cleanPath = canonicalPath.startsWith('/') ? canonicalPath.slice(1) : canonicalPath;
+const normalizedPath = cleanPath ? (cleanPath.endsWith('/') ? cleanPath : `${cleanPath}/`) : '';
+const canonicalUrl = `${siteConfig.url}/${normalizedPath}`;
+
+// Check environment for analytics and robots
+const isProd = import.meta.env.PROD;
+// Explicit indexing control: disabled by default until SITE_INDEXABLE=true is set
+const isSiteIndexable = siteConfig.indexable && !noindex;
+
+// JSON-LD structured data
+const schemaData = {
+  '@context': 'https://schema.org',
+  '@type': schemaType,
+  name: title,
+  description: description,
+  url: canonicalUrl,
+  inLanguage: 'en-US',
+  publisher: {
+    '@type': 'Organization',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: {
+      '@type': 'ImageObject',
+      url: siteConfig.logoUrl,
+    },
+  },
+  ...(ogType === 'article' && {
+    dateModified: dateModified,
+    datePublished: '2026-10-20',
+  }),
+};
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon & Brand Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#064E4A" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Global Tailwind Stylesheet -->
+    <link rel="stylesheet" href="/styles/global.css" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    {/* Explicit Search Indexing Control */}
+    {isSiteIndexable ? (
+      <meta name="robots" content="index, follow" />
+    ) : (
+      <meta name="robots" content="noindex, follow" />
+    )}
+    <script is:inline>
+      if (typeof window !== 'undefined' && window.location.hostname.endsWith('pages.dev')) {
+        let meta = document.querySelector('meta[name="robots"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.name = 'robots';
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', 'noindex, follow');
+      }
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content={siteConfig.name} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+    {/* Verification Placeholders for GSC, Bing Webmaster */}
+    {siteConfig.analytics.googleSearchConsoleVerification && (
+      <meta name="google-site-verification" content={siteConfig.analytics.googleSearchConsoleVerification} />
+    )}
+    {siteConfig.analytics.bingWebmasterVerification && (
+      <meta name="msvalidate.01" content={siteConfig.analytics.bingWebmasterVerification} />
+    )}
+
+    {/* Google Analytics 4: Strictly Production Only */}
+    {isProd && siteConfig.analytics.googleAnalyticsId && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.analytics.googleAnalyticsId}`}></script>
+        <script define:vars={{ gaId: siteConfig.analytics.googleAnalyticsId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaId, { send_page_view: true });
+        </script>
+      </>
+    )}
+
+    {/* Microsoft Clarity: Strictly Production Only */}
+    {isProd && siteConfig.analytics.microsoftClarityId && (
+      <script define:vars={{ clarityId: siteConfig.analytics.microsoftClarityId }}>
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", clarityId);
+      </script>
+    )}
+  </head>
+
+  <body class="bg-[#FFFDF3] text-[#163C3A] font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-200 selection:text-emerald-950">
+    <Navbar client:load />
+
+    {breadcrumbs && breadcrumbs.length > 0 && (
+      <Breadcrumbs items={breadcrumbs} />
+    )}
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

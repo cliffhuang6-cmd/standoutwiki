@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../data/site';
+---
+
+<Layout
+  title="Contact & Feedback – Stand Out Wiki | Stand Out Wiki"
+  description="Contact the Stand Out Wiki editorial team. Submit game data corrections, report outdated codes, or suggest new interactive tools."
+  canonicalPath="contact"
+  breadcrumbs={[{ label: 'Contact' }]}
+  schemaType="Article"
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+        <span>Editorial Feedback</span>
+        <span>•</span>
+        <span>Community Support</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+        Contact Stand Out Wiki
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Have a correction for a Stand moveset, an unconfirmed code to report, or an idea for a new interactive calculator? We welcome community contributions.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 text-xs text-slate-600 leading-relaxed">
+      <div>
+        <h2 class="text-base font-black text-slate-900 mb-1">Direct Editorial Email</h2>
+        <p>For data corrections, wiki suggestions, or editorial feedback, reach out to us at:</p>
+        <a
+          href={`mailto:${siteConfig.contactEmail}`}
+          class="mt-2 font-mono font-bold text-sm text-emerald-800 bg-emerald-50 hover:bg-emerald-100 p-3 rounded-lg border border-emerald-200 inline-block transition-colors"
+        >
+          {siteConfig.contactEmail}
+        </a>
+      </div>
+
+      <div class="pt-4 border-t border-slate-100">
+        <h2 class="text-base font-black text-slate-900 mb-1">Official Game Channels</h2>
+        <p>
+          Please note that Stand Out Wiki is an independent documentation platform and cannot restore lost Roblox inventory items or handle in-game moderation. For direct Studio Umbra game support, please visit:
+        </p>
+        <div class="mt-3 flex flex-wrap gap-3">
+          <a
+            href={siteConfig.officialDiscordUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3.5 py-2 rounded-lg bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors"
+          >
+            Studio Umbra Discord ↗
+          </a>
+          <a
+            href={siteConfig.developerGroupUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3.5 py-2 rounded-lg bg-slate-900 text-white font-bold hover:bg-slate-800 transition-colors"
+          >
+            Studio Umbra Roblox Group ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

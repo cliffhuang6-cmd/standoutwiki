@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../data/site';
+---
+
+<Layout
+  title="Terms of Service – Stand Out Wiki | Stand Out Wiki"
+  description="Terms of service and acceptable use policy for Stand Out Wiki (standoutwiki.org)."
+  canonicalPath="terms"
+  breadcrumbs={[{ label: 'Terms of Service' }]}
+  schemaType="Article"
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <h1 class="text-3xl font-black text-slate-900 mb-6">Terms of Service</h1>
+    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 text-xs text-slate-600 leading-relaxed">
+      <p>Last updated: November 16, 2026</p>
+
+      <h2 class="text-base font-bold text-slate-900">1. Acceptance of Terms</h2>
+      <p>
+        By accessing or using Stand Out Wiki (<a href={siteConfig.url} class="text-emerald-700 underline font-bold">standoutwiki.org</a>), you agree to be bound by these Terms of Service. If you do not agree, please do not use this site.
+      </p>
+
+      <h2 class="text-base font-bold text-slate-900">2. Independent Fan Initiative</h2>
+      <p>
+        Stand Out Wiki is an independent, non-profit community project created by fans for fans. We are not affiliated with, endorsed by, or representing Roblox Corporation, Studio Umbra: Europa, Hirohiko Araki, Shueisha, or David Production.
+      </p>
+
+      <h2 class="text-base font-bold text-slate-900">3. Informational Accuracy &amp; Game Changes</h2>
+      <p>
+        Game balance numbers, moveset hitboxes, drop percentages, and promo codes are subject to change at any time by the game developers. While we verify all data against official Trello boards and live patches, we cannot guarantee that information will never experience temporary desync following unannounced hotfixes.
+      </p>
+
+      <h2 class="text-base font-bold text-slate-900">4. Prohibited Uses</h2>
+      <p>
+        You may not use automated scripts to excessively scrape, overload, or launch denial of service attacks against our web infrastructure.
+      </p>
+    </div>
+  </div>
+</Layout>

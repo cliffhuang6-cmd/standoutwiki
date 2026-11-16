@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../data/site';
+
+---
+
+<Layout
+  title="Stand Out Trello & Official Links – Studio Umbra Discord & Game | Stand Out Wiki"
+  description="Verified directory of official links for Roblox STAND OUT. Access the official developer Trello boards, Studio Umbra Discord, Roblox group, and game portal."
+  canonicalPath="trello"
+  breadcrumbs={[{ label: 'Official Links & Trello' }]}
+  schemaType="Article"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+        <span>Verified First-Party Portals</span>
+        <span>•</span>
+        <span>Official Community Hubs</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+        Stand Out Official Trello &amp; Community Links
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Looking for direct developer channels for Roblox <strong>STAND OUT</strong>? Below is the verified directory of official links maintained by <strong>Studio Umbra: Europa</strong>.
+      </p>
+    </div>
+
+    <!-- Links Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+      <!-- Official Trello -->
+      <a
+        href={siteConfig.officialTrelloUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all group flex flex-col justify-between"
+      >
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center font-black text-xl mb-3">
+            📋
+          </div>
+          <h2 class="text-lg font-black text-slate-900 group-hover:text-emerald-700">
+            Official Stand Out Trello
+          </h2>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            The developer board containing cards for every Stand moveset, status effect, boss stat, and world event.
+          </p>
+        </div>
+        <span class="text-xs font-bold text-emerald-700 mt-4 block">Open Trello Board ↗</span>
+      </a>
+
+      <!-- Official Discord -->
+      <a
+        href={siteConfig.officialDiscordUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-indigo-500 hover:shadow-md transition-all group flex flex-col justify-between"
+      >
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center font-black text-xl mb-3">
+            💬
+          </div>
+          <h2 class="text-lg font-black text-slate-900 group-hover:text-indigo-700">
+            Official Studio Umbra Discord
+          </h2>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Join over 100K members for instant patch alerts, sneak peeks, server shutdown notices, and community code drops.
+          </p>
+        </div>
+        <span class="text-xs font-bold text-indigo-700 mt-4 block">Join Discord Server ↗</span>
+      </a>
+
+      <!-- Roblox Group -->
+      <a
+        href={siteConfig.developerGroupUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-amber-500 hover:shadow-md transition-all group flex flex-col justify-between"
+      >
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-black text-xl mb-3">
+            👥
+          </div>
+          <h2 class="text-lg font-black text-slate-900 group-hover:text-amber-700">
+            Studio Umbra: Europa Group
+          </h2>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Joining the official Roblox group is recommended to unlock developer product bonuses and verify code redemptions.
+          </p>
+        </div>
+        <span class="text-xs font-bold text-amber-700 mt-4 block">View Roblox Group ↗</span>
+      </a>
+
+      <!-- Roblox Game -->
+      <a
+        href={siteConfig.robloxGameUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-rose-500 hover:shadow-md transition-all group flex flex-col justify-between"
+      >
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center font-black text-xl mb-3">
+            🎮
+          </div>
+          <h2 class="text-lg font-black text-slate-900 group-hover:text-rose-700">
+            Play STAND OUT on Roblox
+          </h2>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Direct link to the active Roblox game experience. Check player count, thumbs up milestones, and servers.
+          </p>
+        </div>
+        <span class="text-xs font-bold text-rose-700 mt-4 block">Launch Game ↗</span>
+      </a>
+    </div>
+  </div>
+</Layout>

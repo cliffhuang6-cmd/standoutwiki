@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seedTypes = [
+  { name: 'Rokaka Seed', time: '18 mins', basePrice: '1,200 Dalas', desc: 'Can produce 35 rare mutations with unique status effects.' },
+  { name: 'Apple Seed', time: '12 mins', basePrice: '600 Dalas', desc: 'Fruit cleanses and resets your active Sub-Ability style.' },
+  { name: 'Cherry Seed', time: '5 mins', basePrice: '250 Dalas', desc: 'Fast turnaround crop ideal for completing daily delivery contracts.' },
+  { name: 'Dragon Fruit Seed', time: '20 mins', basePrice: '1,800 Dalas', desc: 'Exotic fruit with high vendor resale value.' },
+  { name: 'Tomato Seed', time: '8 mins', basePrice: '350 Dalas', desc: 'Essential culinary crop for town restaurant supply quests.' },
+  { name: 'Watermelon Seed', time: '15 mins', basePrice: '900 Dalas', desc: 'Heavy hydrating produce for cooling during desert travel.' }
+];
+---
+
+<Layout
+  title="Stand Out Gardening Guide – Seeds, Pots, Water & Roka Farm | Stand Out Wiki"
+  description="Complete gardening guide for Roblox STAND OUT. Learn how to grow crops, use Mysterious Fertilizer, unlock 35 Rokakaka mutations, and utilize the Gang Base 3x greenhouse."
+  canonicalPath="gardening"
+  breadcrumbs={[{ label: 'Gardening Guide' }]}
+  schemaType="Article"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+        <span>Agriculture &amp; Economy</span>
+        <span>•</span>
+        <span>Greenhouse Cultivation</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+        Stand Out Gardening &amp; Agriculture Guide
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Gardening in Roblox <strong>STAND OUT</strong> is both a primary cash-generating activity and the exclusive method for cultivating Rokakaka fruits, resets, and mutation potions. Master soil preparation, hydration, and greenhouse perks.
+      </p>
+    </div>
+
+    <!-- 4 Steps of Gardening -->
+    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 mb-12">
+      <h2 class="text-2xl font-black text-slate-900">How Gardening Works</h2>
+
+      <div class="space-y-6 text-xs text-slate-600 leading-relaxed">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white font-black flex items-center justify-center shrink-0">1</div>
+          <div>
+            <h3 class="font-bold text-sm text-slate-900">Place a Garden Pot</h3>
+            <p class="mt-1">
+              Purchase personal <strong>Garden Pots</strong> from <strong>Big Chop</strong> or craft them at any Crafting Station using Wood and Steel Ingots.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white font-black flex items-center justify-center shrink-0">2</div>
+          <div>
+            <h3 class="font-bold text-sm text-slate-900">Fill with Dirt &amp; Plant Seeds</h3>
+            <p class="mt-1">
+              Equip rich garden dirt, fill your pot, and plant any crop seed (such as Apple or Rokaka Seed).
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white font-black flex items-center justify-center shrink-0">3</div>
+          <div>
+            <h3 class="font-bold text-sm text-slate-900">Hydrate with Ice Water &amp; Fertilize</h3>
+            <p class="mt-1">
+              Water your sprout using <strong>Ice Water</strong> canisters. Adding <strong>Mysterious Fertilizer</strong> accelerates growth time by 35% and improves the final crop grade.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white font-black flex items-center justify-center shrink-0">4</div>
+          <div>
+            <h3 class="font-bold text-sm text-slate-900">Harvest &amp; Check Mutations</h3>
+            <p class="mt-1">
+              Once fully grown, harvest the produce. Rokakaka plants trigger a 3% baseline mutation chance to yield specialized fruits like Emerald or Sapphire Rokas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seed Catalog Table -->
+    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-12">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-xl font-black text-slate-900">Crop &amp; Seed Catalog</h2>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-bold uppercase tracking-wider">
+              <th class="py-3 px-4">Seed Type</th>
+              <th class="py-3 px-4">Growth Duration</th>
+              <th class="py-3 px-4">Vendor Resale</th>
+              <th class="py-3 px-4">Primary Purpose</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            {seedTypes.map((seed) => (
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 font-bold text-slate-900">{seed.name}</td>
+                <td class="py-3 px-4 font-mono text-slate-600">{seed.time}</td>
+                <td class="py-3 px-4 font-mono font-bold text-emerald-700">{seed.basePrice}</td>
+                <td class="py-3 px-4">{seed.desc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Gang Base Greenhouse Perk -->
+    <div class="bg-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-xl">
+      <h3 class="text-lg font-black text-amber-400 mb-2">⚡ 3x Speedup: Gang Base Rokakaka Greenhouse</h3>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        Gang organizations can unlock the <strong>Rokakaka Growing Room</strong> inside their shared Gang Base. All crops planted inside this climate-controlled greenhouse grow at <strong>300% speed (3x faster)</strong>, cutting an 18-minute Rokaka cycle down to just 6 minutes!
+      </p>
+    </div>
+  </div>
+</Layout>

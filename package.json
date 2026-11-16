@@ -1,0 +1,33 @@
+{
+  "name": "stand-out-wiki",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Comprehensive Roblox STAND OUT Wiki, Database, Tier List, Tools, and Guides",
+  "scripts": {
+    "build:css": "tailwindcss -i src/styles/global.css -o public/styles/global.css --minify",
+    "dev": "npm run build:css && astro dev --host",
+    "start": "astro dev",
+    "build": "npm run build:css && node scripts/verify-build-config.mjs && astro check && astro build && node scripts/postbuild.mjs",
+    "preview": "astro preview --host",
+    "astro": "astro",
+    "verify:content": "node scripts/verify-content.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.2.1",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^5.1.5",
+    "astro": "^5.4.2",
+    "autoprefixer": "^10.6.2",
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3"
+  }
+}
