@@ -96,17 +96,6 @@ const schemaData = {
     ) : (
       <meta name="robots" content="noindex, follow" />
     )}
-    <script is:inline>
-      if (typeof window !== 'undefined' && window.location.hostname.endsWith('pages.dev')) {
-        let meta = document.querySelector('meta[name="robots"]');
-        if (!meta) {
-          meta = document.createElement('meta');
-          meta.name = 'robots';
-          document.head.appendChild(meta);
-        }
-        meta.setAttribute('content', 'noindex, follow');
-      }
-    </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={ogType} />

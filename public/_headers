@@ -1,5 +1,19 @@
 /*
-  X-Robots-Tag: noindex, follow
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, follow
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex, follow
+
+https://*.pages.dev/*
+  X-Robots-Tag: noindex, follow
+
+https://standoutwiki-6gv.pages.dev/*
+  X-Robots-Tag: noindex, follow
+
+https://standoutwiki.pages.dev/*
+  X-Robots-Tag: noindex, follow

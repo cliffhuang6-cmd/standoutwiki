@@ -20,8 +20,8 @@ export const siteConfig = {
     indexNowKey: '9e3bf17482a5490bb59e51cfa82d7031',
   },
 
-  // Indexing switch: controlled explicitly by SITE_INDEXABLE (default false until user explicitly requests open indexing)
-  indexable: (typeof process !== 'undefined' && process.env?.SITE_INDEXABLE === 'true') || import.meta.env?.SITE_INDEXABLE === 'true',
+  // Indexing switch: released for production indexing. Disabled only if SITE_INDEXABLE === 'false'
+  indexable: (typeof process !== 'undefined' && process.env?.SITE_INDEXABLE === 'false') ? false : (import.meta.env?.SITE_INDEXABLE === 'false' ? false : true),
 
   navigation: [
     {

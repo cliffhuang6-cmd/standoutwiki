@@ -25,3 +25,18 @@ if (fs.existsSync(headersSrc)) {
   fs.copyFileSync(headersSrc, headersTarget);
   console.log('✓ Verified dist/_headers for Cloudflare Pages');
 }
+
+// Post-build indexing validation
+const indexHtmlPath = path.join(distDir, 'index.html');
+if (fs.existsSync(indexHtmlPath)) {
+  const indexHtml = fs.readFileSync(indexHtmlPath, 'utf-8');
+  if (indexHtml.includes('content="noindex')) {
+    console.error('❌ Postbuild Error: dist/index.html must not contain noindex!');
+    process.exit(1);
+  } else if (!indexHtml.includes('content="index, follow"')) {
+    console.error('❌ Postbuild Error: dist/index.html must declare index, follow!');
+    process.exit(1);
+  } else {
+    console.log('✓ Verified dist/index.html declares index, follow');
+  }
+}

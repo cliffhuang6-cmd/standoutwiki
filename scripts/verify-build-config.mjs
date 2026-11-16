@@ -40,6 +40,17 @@ if (!siteConfig.includes("url: 'https://standoutwiki.org'") || !siteConfig.inclu
   console.log('✓ Verified src/data/site.ts domain configuration');
 }
 
+// 4. Verify _headers configuration
+const headersPath = path.join(rootDir, 'public', '_headers');
+const headers = fs.readFileSync(headersPath, 'utf-8');
+const rootBlock = headers.split('https://')[0];
+if (rootBlock.includes('X-Robots-Tag: noindex')) {
+  console.error('❌ Error: Root /* in public/_headers must not contain noindex!');
+  errors++;
+} else {
+  console.log('✓ Verified public/_headers root block permits indexing');
+}
+
 if (errors > 0) {
   console.error('\n❌ Build configuration check failed!');
   process.exit(1);
