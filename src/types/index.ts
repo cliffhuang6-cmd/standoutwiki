@@ -67,6 +67,29 @@ export interface Code {
   notes: string;
 }
 
+export interface NavChild {
+  label: string;
+  href: string;
+  desc?: string;
+}
+
+export interface NavItem {
+  label: string;
+  href: string;
+  badge?: string;
+  children?: NavChild[];
+}
+
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+
+export interface FooterColumn {
+  title: string;
+  links: FooterLink[];
+}
+
 export interface Item {
   slug: string;
   name: string;

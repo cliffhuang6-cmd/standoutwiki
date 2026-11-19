@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ArrowCalculator from '../components/ArrowCalculator';
+import BuildMaker from '../components/BuildMaker';
+import RokaMixer from '../components/RokaMixer';
+---
+
+<Layout
+  title="Stand Out Tools & Calculators – Arrow Odds, Build Maker & Roka Mixer | Stand Out Wiki"
+  description="Free interactive tools for Roblox STAND OUT. Calculate Stand Arrow Bernoulli odds, build 150-point character stats, and look up 33 Rokakaka mutation formulas."
+  canonicalPath="tools"
+  breadcrumbs={[{ label: 'Tools' }]}
+  schemaType="CollectionPage"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Header -->
+    <div class="max-w-3xl mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+        <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+        <span>Interactive Player Utilities</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+        STAND OUT Tools &amp; Calculators
+      </h1>
+
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+        Optimize your Roblox <strong>STAND OUT</strong> playthrough with our interactive suite of tools. Calculate realistic arrow roll chances with exact Bernoulli mathematics, plan your 150-point character stat distribution, and look up Rokakaka mutation formulas.
+      </p>
+
+      <!-- Quick Anchor Pills -->
+      <div class="flex flex-wrap gap-2.5 mt-6">
+        <a
+          href="#calculator"
+          class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 shadow-sm transition-all"
+        >
+          🏹 Arrow Probability Calc
+        </a>
+        <a
+          href="#build-maker"
+          class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 shadow-sm transition-all"
+        >
+          ⚔️ 150-Point Build Maker
+        </a>
+        <a
+          href="#mixer"
+          class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 shadow-sm transition-all"
+        >
+          🧪 Rokakaka Mutation Mixer
+        </a>
+      </div>
+    </div>
+
+    <!-- Tool 1: Arrow Probability Calculator -->
+    <section id="calculator" class="mb-16 scroll-mt-24">
+      <div class="border-b border-slate-200 pb-4 mb-6">
+        <div class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-emerald-700">
+          <span>Calculator 01</span>
+          <span>•</span>
+          <span>Bernoulli Probability Engine</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">
+          Stand Arrow Probability Calculator
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">
+          Calculate the statistical probability of obtaining Pinnacle, Mythical, Legendary, or Epic tier Stands based on the number of arrows you use.
+        </p>
+      </div>
+
+      <ArrowCalculator client:load />
+    </section>
+
+    <!-- Tool 2: 150-Point Build Maker -->
+    <section id="build-maker" class="mb-16 scroll-mt-24">
+      <div class="border-b border-slate-200 pb-4 mb-6">
+        <div class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-emerald-700">
+          <span>Calculator 02</span>
+          <span>•</span>
+          <span>Max Level 50 Stat Allocation</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">
+          150-Point Stat Simulator &amp; Build Maker
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">
+          Distribute your 150 skill points (3 points per level from 1 to 50) across Health, Stand Damage, and Ability Power. Load presets for Tank, Burst DPS, or Hybrid builds.
+        </p>
+      </div>
+
+      <BuildMaker client:load />
+    </section>
+
+    <!-- Tool 3: Rokakaka Mutation Mixer -->
+    <section id="mixer" class="mb-16 scroll-mt-24">
+      <div class="border-b border-slate-200 pb-4 mb-6">
+        <div class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-emerald-700">
+          <span>Calculator 03</span>
+          <span>•</span>
+          <span>Garden Agriculture &amp; Mutations</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">
+          Rokakaka Mutation Mixer &amp; Recipe Lookup
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">
+          Discover all 33 Rokakaka fruit mutation outcomes, status cleanses, and greenhouse farming growth times.
+        </p>
+      </div>
+
+      <RokaMixer client:load />
+    </section>
+  </div>
+</Layout>

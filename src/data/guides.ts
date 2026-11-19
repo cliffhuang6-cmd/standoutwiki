@@ -140,6 +140,10 @@ export const guides: Guide[] = [
         "title": "Mobile Touch Controls & Aim-Lock"
       },
       {
+        "id": "gamepad-layout",
+        "title": "Gamepad & Console Controls (Xbox / PS)"
+      },
+      {
         "id": "advanced-tech",
         "title": "Advanced Mechanics: Pilot & Perfect Block"
       },
@@ -221,6 +225,55 @@ export const guides: Guide[] = [
           "Increase touch button transparency in the in-game settings to maximize peripheral combat visibility.",
           "Use the dedicated Lock-On button to prevent camera drift during high-speed mobile PvP battles."
         ]
+      },
+      {
+        "id": "gamepad-layout",
+        "title": "Gamepad & Console Controls (Xbox / PS)",
+        "content": "STAND OUT natively supports modern game controllers across Xbox, PlayStation, and PC gamepad inputs. Triggers handle core attacks and defensive blocking, while face buttons and bumper modifiers activate mapped Stand skills.",
+        "table": {
+          "headers": [
+            "Button (Xbox / PS)",
+            "Combat Action",
+            "Details"
+          ],
+          "rows": [
+            [
+              "RT / R2",
+              "Light Attack",
+              "Primary basic combo sequence"
+            ],
+            [
+              "RB / R1",
+              "Heavy Finisher",
+              "Guardbreak strike against holding blocks"
+            ],
+            [
+              "LT / L2",
+              "Block / Guard",
+              "Tap on incoming hitbox for Perfect Block parry"
+            ],
+            [
+              "LB / L1",
+              "Dash / Evade",
+              "Evasive roll with startup invulnerability"
+            ],
+            [
+              "Y, B, X / △, ○, □",
+              "Stand Skills",
+              "Assigned special moves and offensive skills"
+            ],
+            [
+              "R3 (Right Stick)",
+              "Lock-On Toggle",
+              "Focus camera target on nearest opponent"
+            ],
+            [
+              "D-Pad",
+              "Sub-Abilities & Items",
+              "Quick slots for consumables and potions"
+            ]
+          ]
+        }
       },
       {
         "id": "advanced-tech",
@@ -973,11 +1026,11 @@ export const guides: Guide[] = [
   },
   {
     "slug": "evolve-stands",
-    "title": "Stand Evolution Guide: SP to SPTW & TW to TWAU Requirements",
+    "title": "Stand Evolution Guide: How to Get SPTW & TWAU in Stand Out",
     "category": "Progression",
-    "description": "Complete evolution walkthrough in Stand Out. Level 50 cap requirements, Opal Rokakaka farming, Major Tom quests, and preserving combat masteries.",
+    "description": "Complete guide on how to get SPTW (Star Platinum: The World) and TWAU in Roblox STAND OUT. View Level 50 requirements, Opal Rokakaka farming, moveset changes, and failure safeguards.",
     "readingTime": "6 min read",
-    "updatedDate": "2026-11-16",
+    "updatedDate": "2026-11-19",
     "tableOfContents": [
       {
         "id": "evolution-overview",
@@ -985,15 +1038,15 @@ export const guides: Guide[] = [
       },
       {
         "id": "sp-to-sptw",
-        "title": "Star Platinum to SPTW Awakening Ritual"
+        "title": "How to Get SPTW: Star Platinum Awakening Ritual"
       },
       {
         "id": "tw-to-twau",
-        "title": "The World to Alternate Universe Diego Transition"
+        "title": "How to Get TWAU: Diego Brando Transition"
       },
       {
         "id": "opal-roka",
-        "title": "Finding and Consuming Opal Rokakaka"
+        "title": "Finding and Consuming Opal Rokakaka (Opal Roka)"
       },
       {
         "id": "stat-preservation",
@@ -1004,7 +1057,7 @@ export const guides: Guide[] = [
       {
         "id": "evolution-overview",
         "title": "Evolution Requirements & Level 50 Cap",
-        "content": "Evolving a base Stand into its pinnacle Evolution or Alternative Universe variant is the ultimate progression goal in STAND OUT. To qualify for evolution, your character must reach the maximum Level 50 cap, possess full Stand mastery on the base Stand, and acquire the rare Opal Rokakaka mutation fruit.",
+        "content": "Evolving a base Stand into its pinnacle Evolution or Alternative Universe variant is the ultimate progression milestone in STAND OUT. To evolve your Stand, you must fulfill three non-negotiable requirements: 1. Reach the maximum character Level 50 cap; 2. Possess the base Stand (Star Platinum or The World); 3. Acquire 1x Opal Rokakaka mutation fruit. Consuming an Opal Rokakaka triggers an equivalent exchange awakening cutscene, permanently upgrading your moveset.",
         "table": {
           "headers": [
             "Base Stand",
@@ -1016,13 +1069,13 @@ export const guides: Guide[] = [
             [
               "Star Platinum",
               "Star Platinum: The World (SPTW)",
-              "1 Opal Rokakaka",
+              "1x Opal Rokakaka",
               "Level 50 Cap"
             ],
             [
               "The World",
               "The World: Alternative Universe (TWAU)",
-              "1 Opal Rokakaka",
+              "1x Opal Rokakaka",
               "Level 50 Cap"
             ],
             [
@@ -1036,33 +1089,34 @@ export const guides: Guide[] = [
       },
       {
         "id": "sp-to-sptw",
-        "title": "Star Platinum to SPTW Awakening Ritual",
-        "content": "Evolving Star Platinum into Star Platinum: The World (SPTW) transforms your moveset. SPTW gains Bane of Rats (catching and redirecting frozen bullets and knives), Platinum Parry (catching projectile attacks with F + M1), and enhanced Time Stop with extended duration.",
+        "title": "How to Get SPTW: Star Platinum Awakening Ritual",
+        "content": "To get SPTW (Star Platinum: The World) in STAND OUT: 1. Reach character Level 50; 2. Summon Star Platinum (press Q); 3. Hold an Opal Rokakaka in your active hotbar slot; 4. Click to eat the Opal Rokakaka. You will enter a 10-second awakening cutscene during which your Stand permanently transforms into SPTW. SPTW gains Bane of Rats (catching/redirecting frozen projectiles), Platinum Parry (countering physical rushes), and an extended 5-second Time Stop dimension with devastating Beatdown strings.",
         "steps": [
-          "Ensure your character is Level 50 with Star Platinum currently summoned.",
-          "Hold the Opal Rokakaka in your active hotbar slot.",
-          "Click to consume the fruit; your character will enter a 10-second awakening cutscene.",
-          "Verify your new SPTW Stand moveset and allocate your awakened attribute points."
+          "Ensure your character has reached the Level 50 maximum cap before starting.",
+          "Press Q to summon your base Star Platinum Stand.",
+          "Select the Opal Rokakaka (Opal Roka) from your hotbar inventory.",
+          "Click LMB to consume the fruit; your character will freeze in a 10-second stone petrification cutscene.",
+          "Verify your new SPTW moveset in the ability menu and allocate your 150 skill points."
         ]
       },
       {
         "id": "tw-to-twau",
-        "title": "The World to Alternate Universe Diego Transition",
-        "content": "Consuming an Opal Roka with base The World transforms the Stand into Diego Brando's Alternative Universe variant (TWAU). TWAU introduces mounted agility, revolver marksmanship, explosive wire traps, and a faster 3.5s Time Stop that recharges significantly quicker.",
+        "title": "How to Get TWAU: Diego Brando Transition",
+        "content": "To get TWAU (The World: Alternative Universe): 1. Reach Level 50; 2. Summon The World; 3. Consume an Opal Rokakaka. Consuming an Opal Roka with base The World transforms the Stand into Diego Brando's Alternative Universe variant (TWAU). TWAU trades base The World's pure physical brawl for superior mid-range agility, revolving firearm shots, razor wire explosive traps, and a fast 3.5s Time Stop with rapid cooldown rotation.",
         "tips": [
-          "TWAU excels at mid-range zoning and kiting, making it significantly stronger than base The World in open-world Gang Wars."
+          "TWAU excels at mid-range zoning and kiting, making it significantly stronger than base The World in open-world Gang Wars and territorial skirmishes."
         ]
       },
       {
         "id": "opal-roka",
-        "title": "Finding and Consuming Opal Rokakaka",
-        "content": "Opal Rokakaka is a mythical agricultural mutation. It has a base 3% mutation chance when planting standard Rokakaka seeds. Applying Mysterious Fertilizer and cultivating in a Gang Greenhouse maximizes your chances of harvesting an Opal Roka.",
-        "warning": "Do not eat an Opal Roka while holding an ineligible Stand (like Beach Boy or Cinderella); eating it on a non-evolution Stand will merely reset your Stand without evolving."
+        "title": "Finding and Consuming Opal Rokakaka (Opal Roka)",
+        "content": "Opal Rokakaka (Opal Roka) is a mythical agricultural mutation fruit. It has a base 3.5% mutation chance when harvesting standard Rokakaka seeds planted in a greenhouse pot with High-Grade Mineral Fertilizer. It can also drop from Endgame Raid MVP chests (Passione Train or 77 Rings) on Nightmare difficulty, or purchased from the underground midnight dealer for $50,000 Dalas.",
+        "warning": "Do not eat an Opal Roka below Level 50 or while holding an ineligible Stand (like Beach Boy or Cinderella); eating it on an ineligible Stand will reset your Stand without evolving!"
       },
       {
         "id": "stat-preservation",
         "title": "Retaining Skill Mastery & Sub-Abilities",
-        "content": "Unlike standard Rokakakas which reset your Sub-Ability and player level, Stand Evolution preserves your Hamon or Vampire mastery completely intact. Your 150 allocated stat points remain assigned, allowing immediate competitive deployment.",
+        "content": "Unlike standard Rokakakas which reset your Sub-Ability and player level, Stand Evolution preserves your Hamon or Vampire mastery completely intact. Your 150 allocated stat points remain assigned, allowing immediate competitive deployment in PvP Colosseum or high-tier raids.",
         "tips": [
           "Visit the cosmetic boutique in downtown Honolulu to refine your facial enhancements after evolution to optimize your secondary passive stats."
         ]

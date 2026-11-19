@@ -33,9 +33,12 @@ const { items } = Astro.props;
           class="flex items-center"
         >
           {isLast || !item.href ? (
-            <span itemprop="name" class="text-slate-900 font-bold" aria-current="page">
-              {item.label}
-            </span>
+            <>
+              <span itemprop="name" class="text-slate-900 font-bold" aria-current="page">
+                {item.label}
+              </span>
+              <meta itemprop="item" content={item.href || Astro.url.href} />
+            </>
           ) : (
             <>
               <a href={item.href} itemprop="item" class="hover:text-emerald-700 font-medium">

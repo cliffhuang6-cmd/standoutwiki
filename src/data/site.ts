@@ -1,4 +1,28 @@
-export const siteConfig = {
+import type { NavItem, FooterColumn } from '../types';
+
+export const siteConfig: {
+  name: string;
+  shortName: string;
+  domain: string;
+  url: string;
+  contactEmail: string;
+  description: string;
+  ogImage: string;
+  logoUrl: string;
+  iconUrl: string;
+  author: string;
+  twitterHandle: string;
+  analytics: {
+    googleAnalyticsId: string;
+    microsoftClarityId: string;
+    googleSearchConsoleVerification: string;
+    bingWebmasterVerification: string;
+    indexNowKey: string;
+  };
+  indexable: boolean;
+  navigation: NavItem[];
+  footerLinks: FooterColumn[];
+} = {
   name: 'Stand Out Wiki',
   shortName: 'Stand Out Wiki',
   domain: 'standoutwiki.org',
@@ -28,12 +52,17 @@ export const siteConfig = {
       label: 'Stands',
       href: '/stands/',
       children: [
-        { label: 'All Stands Database', href: '/stands/', desc: 'Complete roster with movesets and damage' },
-        { label: 'Tier List', href: '/tier-list/', desc: 'Ranked tiers for PvP, Raids & Farming' },
-        { label: 'Stand Rarity & Rates', href: '/stand-rarity/', desc: 'Verified drop percentages & pity math' },
-        { label: 'Stand Arrows', href: '/stand-arrows/', desc: 'Mysterious, Lucky, Bizarre & Focus arrows' },
+        { label: 'All Stands Database', href: '/stands/', desc: 'Complete roster with movesets and stats' },
+        { label: 'Stand Evolution Guide', href: '/guides/evolve-stands/', desc: 'SPTW & TWAU awakening requirements' },
+        { label: 'Arrows & Drop Rates', href: '/stand-arrows/', desc: 'Mysterious, Lucky, Bizarre & Focus rates' },
+        { label: 'Stand Rarity & Pity Math', href: '/stand-rarity/', desc: 'Verified drop percentages & pity math' },
         { label: 'Stand Storage', href: '/stand-storage/', desc: "D'Arby chips & slot management" }
       ]
+    },
+    {
+      label: 'Tier List',
+      href: '/tier-list/',
+      badge: 'Ranked'
     },
     {
       label: 'Codes',
@@ -41,27 +70,26 @@ export const siteConfig = {
       badge: 'Active'
     },
     {
-      label: 'Tools',
-      href: '/tier-list/',
-      children: [
-        { label: 'Tier List Ranking', href: '/tier-list/', desc: 'Interactive PvP, Raid, and Farming rankings' },
-        { label: 'Arrow Probability Calc', href: '/stand-rarity/#calculator', desc: 'Bernoulli probability odds calculator' },
-        { label: 'Stats & Build Maker', href: '/guides/level-up-fast/#build-maker', desc: 'Interactive 150-point stat simulator' },
-        { label: 'Rokakaka Mixer & Seeds', href: '/rokakaka/#mixer', desc: '33 mutation formulas & garden seeds' }
-      ]
-    },
-    {
-      label: 'Mechanics',
+      label: 'Items & Systems',
       href: '/items/',
       children: [
         { label: 'Items & Materials', href: '/items/', desc: 'Consumables, crafting and boss drops' },
-        { label: 'Accessories & Sets', href: '/accessories/', desc: 'Gear stat bonuses and set synergies' },
         { label: 'Rokakaka Mutations', href: '/rokakaka/', desc: 'Stand reset mechanics & 33 mutations' },
+        { label: 'Accessories & Sets', href: '/accessories/', desc: 'Gear stat bonuses and set synergies' },
         { label: 'Gardening System', href: '/gardening/', desc: 'Crops, soil, watering & greenhouse' },
         { label: 'Sub-Abilities & Styles', href: '/sub-abilities/', desc: 'Hamon, Vampire & Unarmed mastery' },
-        { label: 'Quests & NPCs', href: '/quests/', desc: 'Storyline, bounties, and NPC map' },
-        { label: 'Gang System & Base', href: '/gang-wars/', desc: 'Territory, gang perks & base rooms' },
+        { label: 'Gang System & Territory', href: '/gang-wars/', desc: 'Base rooms, territory & gang perks' },
         { label: 'Gamepasses & Shop', href: '/gamepasses/', desc: 'Robux products and slot value' }
+      ]
+    },
+    {
+      label: 'Tools',
+      href: '/tools/',
+      children: [
+        { label: 'Tools Hub Directory', href: '/tools/', desc: 'All interactive calculators & simulators' },
+        { label: 'Arrow Probability Calc', href: '/tools/#calculator', desc: 'Bernoulli probability odds calculator' },
+        { label: '150-Point Build Maker', href: '/tools/#build-maker', desc: 'Max Level 50 stat simulator' },
+        { label: 'Rokakaka Mutation Mixer', href: '/tools/#mixer', desc: '33 mutation formulas & garden seeds' }
       ]
     },
     {
@@ -70,72 +98,64 @@ export const siteConfig = {
       children: [
         { label: 'Guides Hub', href: '/guides/', desc: 'All walkthroughs and progression guides' },
         { label: 'Beginner Guide', href: '/guides/beginner-guide/', desc: 'Starter tutorial & first hour guide' },
-        { label: 'Controls Guide', href: '/guides/controls/', desc: 'PC, Mobile touch & Controller keybinds' },
+        { label: 'Controls & Keybinds', href: '/guides/controls/', desc: 'PC, Mobile touch & Controller keybinds' },
         { label: 'Level Up Fast (1-50)', href: '/guides/level-up-fast/', desc: 'Optimal EXP loop to max level' },
-        { label: 'Farm Dalas / Cash', href: '/guides/farm-dalas/', desc: 'Highest payout cash delivery routes' },
+        { label: 'Dalas Farming Routes', href: '/guides/farm-dalas/', desc: 'Highest payout cash delivery routes' },
         { label: 'Raids & Dungeons', href: '/guides/raids/', desc: 'Train Raid, Highway Star & 77 Rings' },
-        { label: 'World Bosses', href: '/guides/bosses/', desc: 'Spawns, mechanics & guaranteed drops' }
-      ]
-    },
-    {
-      label: 'Updates',
-      href: '/updates/',
-      children: [
-        { label: 'Patch Notes & Changelog', href: '/updates/', desc: 'Chronological update timeline' },
-        { label: 'Trello Board Archive Guide', href: '/trello/', desc: 'Game design structure & card roadmap guide' },
-        { label: 'Release Date & History', href: '/release-date/', desc: 'Launch timeline & upcoming roadmap' },
-        { label: 'Game FAQ', href: '/faq/', desc: 'Answers to frequently asked questions' }
+        { label: 'World Bosses & Drops', href: '/guides/bosses/', desc: 'Spawns, mechanics & guaranteed drops' },
+        { label: 'Quests & NPC Locations', href: '/quests/', desc: 'Storyline, bounties, and NPC map' }
       ]
     }
   ],
 
   footerLinks: [
     {
-      title: 'Database',
+      title: 'Stands & Strategy',
       links: [
-        { label: 'All Stands', href: '/stands/' },
-        { label: 'Tier List', href: '/tier-list/' },
-        { label: 'Stand Arrows', href: '/stand-arrows/' },
-        { label: 'Stand Rarity & Rates', href: '/stand-rarity/' },
-        { label: 'Items & Crafting', href: '/items/' },
-        { label: 'Accessories & Sets', href: '/accessories/' },
-        { label: 'Quests & NPCs', href: '/quests/' }
+        { label: 'All Stands Database', href: '/stands/' },
+        { label: 'PvP & PvE Tier List', href: '/tier-list/' },
+        { label: 'Stand Evolution Guide', href: '/guides/evolve-stands/' },
+        { label: 'Arrows & Drop Rates', href: '/stand-arrows/' },
+        { label: 'Stand Rarity & Pity', href: '/stand-rarity/' },
+        { label: 'Stand Storage', href: '/stand-storage/' }
       ]
     },
     {
-      title: 'Systems & Tools',
+      title: 'Game Systems & Items',
       links: [
         { label: 'Stand Out Codes', href: '/codes/' },
+        { label: 'Items & Materials', href: '/items/' },
         { label: 'Rokakaka Mutations', href: '/rokakaka/' },
-        { label: 'Gardening Guide', href: '/gardening/' },
-        { label: 'Hamon Guide', href: '/hamon/' },
-        { label: 'Vampire Guide', href: '/vampire/' },
-        { label: 'Stand Storage', href: '/stand-storage/' },
-        { label: 'Gang System', href: '/gang-wars/' },
-        { label: 'Gamepasses', href: '/gamepasses/' }
+        { label: 'Gardening System', href: '/gardening/' },
+        { label: 'Accessories & Sets', href: '/accessories/' },
+        { label: 'Sub-Abilities & Styles', href: '/sub-abilities/' },
+        { label: 'Gang System & Territory', href: '/gang-wars/' },
+        { label: 'Gamepasses & Shop', href: '/gamepasses/' }
       ]
     },
     {
-      title: 'Walkthroughs',
+      title: 'Guides & Walkthroughs',
       links: [
-        { label: 'Beginner Guide', href: '/guides/beginner-guide/' },
-        { label: 'Game Controls', href: '/guides/controls/' },
+        { label: 'Beginner Starter Guide', href: '/guides/beginner-guide/' },
+        { label: 'Game Controls & Keybinds', href: '/guides/controls/' },
         { label: 'Fast Leveling (1-50)', href: '/guides/level-up-fast/' },
-        { label: 'Dalas Farming', href: '/guides/farm-dalas/' },
-        { label: 'Raids Walkthrough', href: '/guides/raids/' },
-        { label: 'Bosses & Drops', href: '/guides/bosses/' },
-        { label: 'Evolving Stands', href: '/guides/evolve-stands/' }
+        { label: 'Dalas Cash Farming', href: '/guides/farm-dalas/' },
+        { label: 'Raids & Dungeons', href: '/guides/raids/' },
+        { label: 'World Bosses & Drops', href: '/guides/bosses/' },
+        { label: 'Quests & NPC Locations', href: '/quests/' }
       ]
     },
     {
       title: 'About & Information',
       links: [
+        { label: 'Tools Directory', href: '/tools/' },
         { label: 'About Us', href: '/about/' },
         { label: 'Contact & Feedback', href: '/contact/' },
         { label: 'Privacy Policy', href: '/privacy/' },
-        { label: 'Terms of Use', href: '/terms/' },
-        { label: 'Update Timeline', href: '/updates/' },
-        { label: 'Trello Directory Guide', href: '/trello/' }
+        { label: 'Terms of Service', href: '/terms/' },
+        { label: 'Patch Notes & Updates', href: '/updates/' },
+        { label: 'Trello Board Directory', href: '/trello/' },
+        { label: 'Game FAQ', href: '/faq/' }
       ]
     }
   ]

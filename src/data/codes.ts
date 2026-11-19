@@ -2,12 +2,22 @@ import type { Code } from '../types';
 
 export const codes: Code[] = [
   {
+    code: '100KLIKESHUGE',
+    reward: '3x Mysterious Arrows, 1x Lucky Arrow, 3x Arrow Parts & 333 Dalas',
+    status: 'Active',
+    isNewServerOnly: true,
+    addedDate: '2026-11-16',
+    lastCheckedDate: '2026-11-19',
+    evidenceSource: 'Official 100K Likes community celebration milestone',
+    notes: 'Requires joining a newly generated server instance created after the 100K update. Grants premium arrows and currency.'
+  },
+  {
     code: 'SORRY4SHUTDOWN',
     reward: '2x Mysterious Arrows & 500 Dalas',
     status: 'Active',
     isNewServerOnly: false,
     addedDate: '2026-11-15',
-    lastCheckedDate: '2026-11-16',
+    lastCheckedDate: '2026-11-19',
     evidenceSource: 'Official emergency shutdown patch announcement',
     notes: 'Released following server restart maintenance. Redeemable across all updated servers.'
   },
@@ -17,7 +27,7 @@ export const codes: Code[] = [
     status: 'Active',
     isNewServerOnly: true,
     addedDate: '2026-11-14',
-    lastCheckedDate: '2026-11-16',
+    lastCheckedDate: '2026-11-19',
     evidenceSource: '50,000 community likes milestone celebration',
     notes: 'Requires joining a newly generated server instance created after the milestone patch.'
   },
@@ -27,9 +37,9 @@ export const codes: Code[] = [
     status: 'May Be Expired',
     isNewServerOnly: true,
     addedDate: '2026-11-15',
-    lastCheckedDate: '2026-11-16',
+    lastCheckedDate: '2026-11-19',
     evidenceSource: '100K likes milestone announcement',
-    notes: 'May be restricted to specific regional servers or temporarily inactive.'
+    notes: 'Alternative shorthand code variant reported on select servers. If this fails, redeem 100KLIKESHUGE instead.'
   },
   {
     code: 'RELEASE',

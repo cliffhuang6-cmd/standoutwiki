@@ -123,6 +123,94 @@ const relatedStands = stands
       </div>
     </div>
 
+    {/* Contextual Evolution & Variant Banner */}
+    {stand.slug === 'star-platinum' && (
+      <div class="mb-10 p-5 rounded-2xl bg-purple-50 border border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Stand Evolution Available</span>
+          <h3 class="text-base font-black text-slate-900 mt-1">Awaken into Star Platinum: The World (SPTW)</h3>
+          <p class="text-xs text-slate-600 mt-0.5">Reach Level 50 and consume an Opal Rokakaka to unlock extended Time Stop, Beatdown, and Platinum Parry.</p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a href="/guides/evolve-stands/" class="px-4 py-2 rounded-xl bg-purple-600 text-white font-bold text-xs hover:bg-purple-700 transition-colors">
+            SPTW Guide →
+          </a>
+          <a href="/stands/star-platinum-the-world/" class="px-4 py-2 rounded-xl bg-white border border-purple-300 text-purple-800 font-bold text-xs hover:bg-purple-50 transition-colors">
+            SPTW Moveset →
+          </a>
+        </div>
+      </div>
+    )}
+
+    {stand.slug === 'star-platinum-the-world' && (
+      <div class="mb-10 p-5 rounded-2xl bg-purple-50 border border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Evolution Origin</span>
+          <h3 class="text-base font-black text-slate-900 mt-1">Awakened Form of Star Platinum</h3>
+          <p class="text-xs text-slate-600 mt-0.5">Unlocked by consuming an Opal Rokakaka with Star Platinum active at the Level 50 cap.</p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a href="/guides/evolve-stands/" class="px-4 py-2 rounded-xl bg-purple-600 text-white font-bold text-xs hover:bg-purple-700 transition-colors">
+            Evolution Guide →
+          </a>
+          <a href="/stands/star-platinum/" class="px-4 py-2 rounded-xl bg-white border border-purple-300 text-purple-800 font-bold text-xs hover:bg-purple-50 transition-colors">
+            Base Star Platinum →
+          </a>
+        </div>
+      </div>
+    )}
+
+    {stand.slug === 'the-world' && (
+      <div class="mb-10 p-5 rounded-2xl bg-amber-50 border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Alternative Universe</span>
+          <h3 class="text-base font-black text-slate-900 mt-1">The World: Alternative Universe (TWAU)</h3>
+          <p class="text-xs text-slate-600 mt-0.5">Looking for Diego Brando's ranged gun and wire-trap variant? View the TWAU moveset and evolution requirements.</p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a href="/guides/evolve-stands/" class="px-4 py-2 rounded-xl bg-amber-600 text-white font-bold text-xs hover:bg-amber-700 transition-colors">
+            Evolution Guide →
+          </a>
+          <a href="/stands/the-world-alternative-universe/" class="px-4 py-2 rounded-xl bg-white border border-amber-300 text-amber-800 font-bold text-xs hover:bg-amber-50 transition-colors">
+            TWAU Profile →
+          </a>
+        </div>
+      </div>
+    )}
+
+    {stand.slug === 'the-world-alternative-universe' && (
+      <div class="mb-10 p-5 rounded-2xl bg-amber-50 border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Alternative Universe</span>
+          <h3 class="text-base font-black text-slate-900 mt-1">Diego Brando's Variant of The World</h3>
+          <p class="text-xs text-slate-600 mt-0.5">Alternate timeline Stand specialized in revolver shots, razor wire traps, and fast 3.5s Time Stop cooldowns.</p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a href="/guides/evolve-stands/" class="px-4 py-2 rounded-xl bg-amber-600 text-white font-bold text-xs hover:bg-amber-700 transition-colors">
+            Evolution Guide →
+          </a>
+          <a href="/stands/the-world/" class="px-4 py-2 rounded-xl bg-white border border-amber-300 text-amber-800 font-bold text-xs hover:bg-amber-50 transition-colors">
+            Base The World →
+          </a>
+        </div>
+      </div>
+    )}
+
+    {stand.slug === 'king-crimson' && (
+      <div class="mb-10 p-5 rounded-2xl bg-rose-50 border border-rose-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-rose-700 bg-rose-100 px-2 py-0.5 rounded">Competitive Mastery</span>
+          <h3 class="text-base font-black text-slate-900 mt-1">King Crimson: Doppio Mode &amp; Time Erase Guide</h3>
+          <p class="text-xs text-slate-600 mt-0.5">Learn the 3-stage frog phone transformation, invincible Time Erase repositioning, and Epitaph counter setups.</p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a href="/guides/king-crimson/" class="px-4 py-2 rounded-xl bg-rose-600 text-white font-bold text-xs hover:bg-rose-700 transition-colors">
+            Read KC Guide →
+          </a>
+        </div>
+      </div>
+    )}
+
     <!-- Main Content Tabs / Sections -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <!-- Left 2 Columns: Moveset & Passives -->
