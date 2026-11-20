@@ -5,6 +5,8 @@ import { stands } from '../../data/stands';
 
 const rarities = ['All', 'Pinnacle', 'Mythical', 'Legendary', 'Epic', 'Rare', 'Evolution', 'Alternative Universe', 'Quest'];
 const parts = ['All', 'Part 3', 'Part 4', 'Part 5', 'Part 6', 'Part 7', 'Part 8', 'Part 9'];
+
+import AdsterraBanner from '../../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -31,6 +33,9 @@ const parts = ['All', 'Part 3', 'Part 4', 'Part 5', 'Part 6', 'Part 7', 'Part 8'
         Explore every Stand currently implemented in Roblox <strong>STAND OUT</strong>. From time-stopping Pinnacle powerhouses like Star Platinum and The World to intricate Part 9 tactical abilities like November Rain, browse complete movesets, damage scaling, and build recommendations.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
 
     <!-- Stand Roster Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

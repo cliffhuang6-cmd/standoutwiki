@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { siteConfig } from '../data/site';
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -35,5 +37,8 @@ import { siteConfig } from '../data/site';
         You may not use automated scripts to excessively scrape, overload, or launch denial of service attacks against our web infrastructure.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
   </div>
 </Layout>

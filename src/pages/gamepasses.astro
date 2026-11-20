@@ -9,6 +9,8 @@ const shopItems = [
   { name: '2x EXP Booster (1 Hour)', cost: '149 Robux', value: 'Good for Leveling', desc: 'Doubles all mob, quest, and bounty EXP gains. Stacks with story milestones.' },
   { name: '2x Dalas Booster (1 Hour)', cost: '149 Robux', value: 'Moderate', desc: 'Doubles cash drops from bounties and deliveries. Great when running lettuce routes.' }
 ];
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -34,6 +36,9 @@ const shopItems = [
         Studio Umbra designed Roblox <strong>STAND OUT</strong> to be fully playable and completable as a free-to-play player. Below is an objective analysis of all in-game Robux purchases, separating must-haves from skippable conveniences.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
 
     <!-- Shop Items Grid -->
     <div class="space-y-4 mb-12">

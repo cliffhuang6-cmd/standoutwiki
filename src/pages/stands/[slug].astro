@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import AdsterraBanner from '../../components/AdsterraBanner.astro';
 import { stands, standsBySlug } from '../../data/stands';
 import type { Stand } from '../../types';
 
@@ -122,6 +123,9 @@ const relatedStands = stands
         </div>
       </div>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-8" />
 
     {/* Contextual Evolution & Variant Banner */}
     {stand.slug === 'star-platinum' && (

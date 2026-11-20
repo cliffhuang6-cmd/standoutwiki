@@ -9,6 +9,8 @@ const seedTypes = [
   { name: 'Tomato Seed', time: '8 mins', basePrice: '350 Dalas', desc: 'Essential culinary crop for town restaurant supply quests.' },
   { name: 'Watermelon Seed', time: '15 mins', basePrice: '900 Dalas', desc: 'Heavy hydrating produce for cooling during desert travel.' }
 ];
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -34,6 +36,9 @@ const seedTypes = [
         Gardening in Roblox <strong>STAND OUT</strong> is both a primary cash-generating activity and the exclusive method for cultivating Rokakaka fruits, resets, and mutation potions. Master soil preparation, hydration, and greenhouse perks.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
 
     <!-- 4 Steps of Gardening -->
     <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 mb-12">

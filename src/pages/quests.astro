@@ -32,6 +32,8 @@ const questCategories = [
     description: 'Local neighborhood errands, botanical seed requests, and scrap collection tasks providing useful baseline items.',
   },
 ];
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -57,6 +59,9 @@ const questCategories = [
         From the 10 core Storyline progression missions and Sub-Ability masteries (Hamon &amp; Vampire) to high-yield Bounties and secret research unlocks, browse complete verified quest requirements and rewards below.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
 
     <!-- Walkthrough Cross-Link Banner -->
     <div class="mb-10 p-5 rounded-2xl bg-blue-50/70 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4">

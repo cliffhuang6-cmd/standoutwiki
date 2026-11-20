@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { updateLogs } from '../data/updates';
 
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -27,6 +29,9 @@ import { updateLogs } from '../data/updates';
         Stay up to date with every patch, balance pass, and content addition pushed by Studio Umbra: Europa for Roblox <strong>STAND OUT</strong>. Verified directly against official release announcements.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
 
     <!-- Timeline of Updates -->
     <div class="space-y-8">

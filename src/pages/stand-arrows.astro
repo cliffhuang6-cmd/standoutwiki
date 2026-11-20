@@ -5,6 +5,8 @@ import ArrowCalculator from '../components/ArrowCalculator';
 import { items } from '../data/items';
 
 const arrows = items.filter((i) => i.category === 'Arrow');
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -31,6 +33,9 @@ const arrows = items.filter((i) => i.category === 'Arrow');
         Stand Arrows are the core progression catalysts in Studio Umbra's <strong>STAND OUT</strong>. Click any arrow graphic to view an enlarged image preview. Learn crafting recipes, token shop requirements, and mathematically optimal rolling strategies.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
 
     <!-- Arrow Types Catalog -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">

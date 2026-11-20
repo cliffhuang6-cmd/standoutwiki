@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import CodeCard from '../components/CodeCard';
 import { recentCodes, expiredCodes } from '../data/codes';
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -27,6 +29,9 @@ import { recentCodes, expiredCodes } from '../data/codes';
         Looking for the latest free promo codes for Roblox <strong>STAND OUT</strong>? Below you will find every active and recent code for free Lucky Arrows, Mysterious Arrows, and Dalas cash. Copy any code and redeem it directly inside the in-game Smartphone app.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
 
     <!-- Stand Out Codes Section (Active & Recent) -->
     <section class="mb-14">

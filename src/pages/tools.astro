@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import ArrowCalculator from '../components/ArrowCalculator';
 import BuildMaker from '../components/BuildMaker';
 import RokaMixer from '../components/RokaMixer';
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -66,6 +68,9 @@ import RokaMixer from '../components/RokaMixer';
           Calculate the statistical probability of obtaining Pinnacle, Mythical, Legendary, or Epic tier Stands based on the number of arrows you use.
         </p>
       </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
 
       <ArrowCalculator client:load />
     </section>

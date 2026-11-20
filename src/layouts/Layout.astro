@@ -2,7 +2,6 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import AdsterraBanner from '../components/AdsterraBanner.astro';
 import { siteConfig } from '../data/site';
 
 interface BreadcrumbItem {
@@ -159,8 +158,6 @@ const schemaData = {
     <main class="flex-1">
       <slot />
     </main>
-
-    <AdsterraBanner />
 
     <Footer isHome={canonicalPath === ''} />
   </body>

@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -20,6 +22,9 @@ import Layout from '../layouts/Layout.astro';
     <p class="mt-3 text-sm text-slate-600 leading-relaxed max-w-md mx-auto">
       You've drifted outside the pilot range of your Stand. The page you are looking for has been moved, renamed, or never existed.
     </p>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="my-8 max-w-xl mx-auto" />
 
     <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
       <a

@@ -40,6 +40,8 @@ const categorySections = [
     description: "Memory chips utilized by D'Arby in the casino cellar to safely store and switch Stand slots.",
   },
 ];
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -66,6 +68,9 @@ const categorySections = [
         Browse the complete item catalog of Studio Umbra's <strong>STAND OUT</strong>. Click any item thumbnail to open an enlarged high-resolution image preview. Check obtainment sources for metallurgy materials, consumable recovery fruits, and rare raid Stand Chips.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
 
     <!-- High-Demand Relics Quick Access Banner -->
     <div class="mb-10 p-5 rounded-2xl bg-amber-50/70 border border-amber-200">

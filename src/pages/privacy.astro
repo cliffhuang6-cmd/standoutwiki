@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { siteConfig } from '../data/site';
+
+import AdsterraBanner from '../components/AdsterraBanner.astro';
 ---
 
 <Layout
@@ -35,5 +37,8 @@ import { siteConfig } from '../data/site';
         If you have questions regarding this privacy policy or wish to submit feedback, contact our team at: <a href={`mailto:${siteConfig.contactEmail}`} class="text-emerald-700 font-bold underline">{siteConfig.contactEmail}</a>.
       </p>
     </div>
+
+    <!-- Top Above-The-Fold Adsterra Native Banner -->
+    <AdsterraBanner className="mb-10" />
   </div>
 </Layout>

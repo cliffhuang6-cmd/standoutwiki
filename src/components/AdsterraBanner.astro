@@ -1,13 +1,23 @@
 ---
 // src/components/AdsterraBanner.astro
 // Reusable Adsterra Native Banner component for Stand Out Wiki
+interface Props {
+  theme?: 'light' | 'dark';
+  className?: string;
+}
+
+const { theme = 'light', className = '' } = Astro.props;
 ---
 
-<aside class="adsterra-banner-wrapper w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 my-4" aria-label="Sponsored Content">
-  <div class="adsterra-banner-container overflow-hidden rounded-2xl bg-white/70 border border-slate-200/80 p-4 sm:p-6 shadow-xs">
-    <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center justify-between">
+<aside class={`adsterra-banner-wrapper w-full ${className}`} aria-label="Sponsored Content">
+  <div class={`adsterra-banner-container overflow-hidden rounded-2xl border p-4 sm:p-5 shadow-xs ${
+    theme === 'dark' 
+      ? 'bg-slate-900/80 border-emerald-500/30 text-emerald-300' 
+      : 'bg-white/80 border-slate-200/90 text-slate-700'
+  }`}>
+    <div class="text-[11px] font-bold uppercase tracking-wider mb-2 flex items-center justify-between opacity-80">
       <span>Sponsored Content</span>
-      <span class="text-[10px] text-slate-400 font-normal">Advertisement</span>
+      <span class="text-[10px] font-normal opacity-70">Advertisement</span>
     </div>
     <div class="min-h-[160px] flex items-center justify-center w-full">
       <script is:inline async="async" data-cfasync="false" src="https://bauval.org/21/5acaf1a7c60cb8bca924bc58e632bc21"></script>
