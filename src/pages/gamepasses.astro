@@ -10,7 +10,8 @@ const shopItems = [
   { name: '2x Dalas Booster (1 Hour)', cost: '149 Robux', value: 'Moderate', desc: 'Doubles cash drops from bounties and deliveries. Great when running lettuce routes.' }
 ];
 
-import AdsterraBanner from '../components/AdsterraBanner.astro';
+import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
+import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -37,8 +38,8 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
       </p>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Native Banner -->
-    <AdsterraBanner className="mb-10" />
+    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
+    <AdLeaderboard className="mb-10" />
 
     <!-- Shop Items Grid -->
     <div class="space-y-4 mb-12">
@@ -66,6 +67,9 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
         </div>
       ))}
     </div>
+
+    <!-- Mid-Page Adsterra Native Banner -->
+    <AdNative className="my-10" />
 
     <!-- F2P Assessment -->
     <div class="bg-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-xl">

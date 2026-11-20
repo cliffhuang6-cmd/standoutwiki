@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import AdsterraBanner from '../../components/AdsterraBanner.astro';
+import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
+import AdRectangle from '../../components/ads/AdRectangle.astro';
 import { stands, standsBySlug } from '../../data/stands';
 import type { Stand } from '../../types';
 
@@ -124,8 +125,8 @@ const relatedStands = stands
       </div>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Native Banner -->
-    <AdsterraBanner className="mb-8" />
+    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
+    <AdLeaderboard className="mb-8" />
 
     {/* Contextual Evolution & Variant Banner */}
     {stand.slug === 'star-platinum' && (
@@ -403,6 +404,9 @@ const relatedStands = stands
             </a>
           </div>
         </div>
+
+        <!-- Adsterra 300x250 Medium Rectangle in Sidebar -->
+        <AdRectangle className="my-6 mx-auto" />
 
         <!-- Related Stands from same era -->
         {relatedStands.length > 0 && (

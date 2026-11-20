@@ -1,0 +1,71 @@
+---
+// src/components/ads/AdRectangle.astro
+// Adsterra 300x250 Medium Rectangle (MPU)
+// Key: 1cd15e0c9cd4615eb2f2bb7e822a10bc
+// Isolated in friendly iframe to prevent global atOptions collision and CSS leaks.
+
+interface Props {
+  className?: string;
+  theme?: 'light' | 'dark';
+}
+
+const { className = '', theme = 'light' } = Astro.props;
+const slotId = 'ad-rect-' + Math.random().toString(36).substring(2, 9);
+const adKey = '1cd15e0c9cd4615eb2f2bb7e822a10bc';
+const adWidth = 300;
+const adHeight = 250;
+---
+
+<aside class:list={['adsterra-rectangle-slot flex flex-col items-center justify-center my-4', className]} aria-label="Advertisement">
+  <div class:list={[
+    'adsterra-card rounded-2xl border p-2.5 flex flex-col items-center justify-center shadow-xs transition-all w-[320px] max-w-full overflow-hidden',
+    theme === 'dark'
+      ? 'bg-slate-900/90 border-emerald-500/30 text-emerald-300'
+      : 'bg-white/90 border-slate-200/90 text-slate-700'
+  ]}>
+    <div class="text-[10px] font-bold uppercase tracking-wider mb-1.5 flex items-center justify-between w-full px-1 opacity-70">
+      <span>Advertisement</span>
+      <span class="text-[9px] font-normal opacity-60">Sponsored</span>
+    </div>
+
+    <!-- 300x250 Adsterra Banner Container -->
+    <div
+      id={slotId}
+      class="flex items-center justify-center overflow-hidden min-h-[250px] w-[300px]"
+    >
+    </div>
+  </div>
+</aside>
+
+<script is:inline define:vars={{ slotId, adKey, adWidth, adHeight }}>
+  (function() {
+    var container = document.getElementById(slotId);
+    if (!container) return;
+
+    var iframe = document.createElement('iframe');
+    iframe.style.border = 'none';
+    iframe.style.overflow = 'hidden';
+    iframe.scrolling = 'no';
+    iframe.setAttribute('title', 'Advertisement');
+    iframe.width = String(adWidth);
+    iframe.height = String(adHeight);
+
+    var iframeHtml = '<!DOCTYPE html><html><head><meta charset="utf-8">' +
+      '<style>body{margin:0;padding:0;overflow:hidden;background:transparent;display:flex;justify-content:center;align-items:center;}</style>' +
+      '</head><body>' +
+      '<scr' + 'ipt type="text/javascript" data-cfasync="false">' +
+      'atOptions = {' +
+      "  'key' : '" + adKey + "'," +
+      "  'format' : 'iframe'," +
+      "  'height' : " + adHeight + "," +
+      "  'width' : " + adWidth + "," +
+      "  'params' : {}" +
+      '};' +
+      '</scr' + 'ipt>' +
+      '<scr' + 'ipt type="text/javascript" data-cfasync="false" src="https://bauval.org/22/' + adKey + '"></scr' + 'ipt>' +
+      '</body></html>';
+
+    iframe.srcdoc = iframeHtml;
+    container.appendChild(iframe);
+  })();
+</script>

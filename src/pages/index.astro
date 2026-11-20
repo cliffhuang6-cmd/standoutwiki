@@ -4,7 +4,8 @@ import StandCard from '../components/StandCard.astro';
 import CodeCard from '../components/CodeCard';
 import ArrowCalculator from '../components/ArrowCalculator';
 import TierListFilter from '../components/TierListFilter';
-import AdsterraBanner from '../components/AdsterraBanner.astro';
+import AdRectangle from '../components/ads/AdRectangle.astro';
+import AdNative from '../components/ads/AdNative.astro';
 import { stands } from '../data/stands';
 import { codes } from '../data/codes';
 import { updateLogs } from '../data/updates';
@@ -95,9 +96,9 @@ const latestUpdate = updateLogs[0];
           </div>
         </div>
 
-        <!-- Above-the-fold Adsterra Native Banner in Hero -->
+        <!-- Above-the-fold Adsterra 300x250 Medium Rectangle in Hero -->
         <div class="lg:col-span-5 w-full flex justify-center">
-          <AdsterraBanner theme="dark" className="max-w-xl" />
+          <AdRectangle theme="dark" className="max-w-xs" />
         </div>
       </div>
     </div>
@@ -231,6 +232,11 @@ const latestUpdate = updateLogs[0];
       </div>
     </div>
   </section>
+
+  <!-- Mid-Page Adsterra Native Banner -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <AdNative className="my-8" />
+  </div>
 
   <!-- Interactive Arrow Calculator Tool Section -->
   <section class="py-16 bg-slate-50 border-b border-slate-200">

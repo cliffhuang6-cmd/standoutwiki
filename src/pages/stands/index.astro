@@ -6,7 +6,8 @@ import { stands } from '../../data/stands';
 const rarities = ['All', 'Pinnacle', 'Mythical', 'Legendary', 'Epic', 'Rare', 'Evolution', 'Alternative Universe', 'Quest'];
 const parts = ['All', 'Part 3', 'Part 4', 'Part 5', 'Part 6', 'Part 7', 'Part 8', 'Part 9'];
 
-import AdsterraBanner from '../../components/AdsterraBanner.astro';
+import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
+import AdNative from '../../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -34,8 +35,8 @@ import AdsterraBanner from '../../components/AdsterraBanner.astro';
       </p>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Native Banner -->
-    <AdsterraBanner className="mb-10" />
+    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
+    <AdLeaderboard className="mb-10" />
 
     <!-- Stand Roster Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -43,6 +44,9 @@ import AdsterraBanner from '../../components/AdsterraBanner.astro';
         <StandCard stand={stand} />
       ))}
     </div>
+
+    <!-- Mid-Page Adsterra Native Banner -->
+    <AdNative className="my-12" />
 
     <!-- Bottom Explanatory Guide -->
     <div class="mt-16 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6">

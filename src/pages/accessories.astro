@@ -5,7 +5,8 @@ import { accessories } from '../data/accessories';
 const setAccessories = accessories.filter((a) => a.setBonus);
 const standaloneAccessories = accessories.filter((a) => !a.setBonus);
 
-import AdsterraBanner from '../components/AdsterraBanner.astro';
+import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
+import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -32,8 +33,8 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
       </p>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Native Banner -->
-    <AdsterraBanner className="mb-10" />
+    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
+    <AdLeaderboard className="mb-10" />
 
     <!-- Set Bonuses Showcase -->
     <section class="mb-14">
@@ -72,6 +73,9 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
         ))}
       </div>
     </section>
+
+    <!-- Mid-Page Adsterra Native Banner -->
+    <AdNative className="my-10" />
 
     <!-- Standalone Accessories -->
     <section>

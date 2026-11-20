@@ -3,7 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import TierListFilter from '../components/TierListFilter';
 
 
-import AdsterraBanner from '../components/AdsterraBanner.astro';
+import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
+import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -30,8 +31,8 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
       </p>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Native Banner -->
-    <AdsterraBanner className="mb-10" />
+    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
+    <AdLeaderboard className="mb-10" />
 
     <!-- Interactive Tier List Component -->
     <div class="mb-16">
@@ -65,6 +66,9 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
         </div>
       </div>
     </div>
+
+    <!-- Mid-Page Adsterra Native Banner -->
+    <AdNative className="my-12" />
 
     <!-- Editorial Deep-Dive: S-Tier & Meta Stand Analysis -->
     <section class="space-y-10 mb-14">

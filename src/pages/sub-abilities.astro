@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 
 
-import AdsterraBanner from '../components/AdsterraBanner.astro';
+import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
+import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -29,8 +30,8 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
       </p>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Native Banner -->
-    <AdsterraBanner className="mb-10" />
+    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
+    <AdLeaderboard className="mb-10" />
 
     <!-- The Two Core Disciplines -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -102,6 +103,9 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
         </div>
       </div>
     </div>
+
+    <!-- Mid-Page Adsterra Native Banner -->
+    <AdNative className="my-10" />
 
     <!-- How to Reset Sub-Abilities -->
     <div class="bg-slate-900 text-white rounded-3xl p-8 shadow-xl">

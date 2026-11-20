@@ -41,7 +41,8 @@ const categorySections = [
   },
 ];
 
-import AdsterraBanner from '../components/AdsterraBanner.astro';
+import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
+import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -69,8 +70,8 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
       </p>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Native Banner -->
-    <AdsterraBanner className="mb-10" />
+    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
+    <AdLeaderboard className="mb-10" />
 
     <!-- High-Demand Relics Quick Access Banner -->
     <div class="mb-10 p-5 rounded-2xl bg-amber-50/70 border border-amber-200">
@@ -218,5 +219,8 @@ import AdsterraBanner from '../components/AdsterraBanner.astro';
         );
       })}
     </div>
+
+    <!-- Catalog End Adsterra Native Banner -->
+    <AdNative className="my-10" />
   </div>
 </Layout>
