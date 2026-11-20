@@ -2,7 +2,7 @@
 // src/components/ads/AdRectangle.astro
 // Adsterra 300x250 Medium Rectangle (MPU)
 // Key: 1cd15e0c9cd4615eb2f2bb7e822a10bc
-// Isolated in friendly iframe to prevent global atOptions collision and CSS leaks.
+// Clean dynamic script injection to ensure valid domain Referer.
 
 interface Props {
   className?: string;
@@ -12,8 +12,6 @@ interface Props {
 const { className = '', theme = 'light' } = Astro.props;
 const slotId = 'ad-rect-' + Math.random().toString(36).substring(2, 9);
 const adKey = '1cd15e0c9cd4615eb2f2bb7e822a10bc';
-const adWidth = 300;
-const adHeight = 250;
 ---
 
 <aside class:list={['adsterra-rectangle-slot flex flex-col items-center justify-center my-4', className]} aria-label="Advertisement">
@@ -37,35 +35,23 @@ const adHeight = 250;
   </div>
 </aside>
 
-<script is:inline define:vars={{ slotId, adKey, adWidth, adHeight }}>
+<script is:inline define:vars={{ slotId, adKey }}>
   (function() {
     var container = document.getElementById(slotId);
     if (!container) return;
 
-    var iframe = document.createElement('iframe');
-    iframe.style.border = 'none';
-    iframe.style.overflow = 'hidden';
-    iframe.scrolling = 'no';
-    iframe.setAttribute('title', 'Advertisement');
-    iframe.width = String(adWidth);
-    iframe.height = String(adHeight);
+    window.atOptions = {
+      'key' : adKey,
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
 
-    var iframeHtml = '<!DOCTYPE html><html><head><meta charset="utf-8">' +
-      '<style>body{margin:0;padding:0;overflow:hidden;background:transparent;display:flex;justify-content:center;align-items:center;}</style>' +
-      '</head><body>' +
-      '<scr' + 'ipt type="text/javascript" data-cfasync="false">' +
-      'atOptions = {' +
-      "  'key' : '" + adKey + "'," +
-      "  'format' : 'iframe'," +
-      "  'height' : " + adHeight + "," +
-      "  'width' : " + adWidth + "," +
-      "  'params' : {}" +
-      '};' +
-      '</scr' + 'ipt>' +
-      '<scr' + 'ipt type="text/javascript" data-cfasync="false" src="https://bauval.org/22/' + adKey + '"></scr' + 'ipt>' +
-      '</body></html>';
-
-    iframe.srcdoc = iframeHtml;
-    container.appendChild(iframe);
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.setAttribute('data-cfasync', 'false');
+    s.src = 'https://bauval.org/22/' + adKey;
+    container.appendChild(s);
   })();
 </script>
