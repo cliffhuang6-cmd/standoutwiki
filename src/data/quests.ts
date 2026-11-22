@@ -195,7 +195,7 @@ export const quests: Quest[] = [
     "npc": "Diavolo / Boss Avatar",
     "category": "Storyline",
     "location": "Colosseum Ruins",
-    "prerequisites": "Level 50 Cap & Storyline 9 Complete",
+    "prerequisites": "Level 50+ & Storyline 9 Complete",
     "objectives": [
       "Enter the ancient Colosseum arena under the blood moon.",
       "Survive Diavolo's Time Erase and counter his Epitaph forecast.",
@@ -276,7 +276,7 @@ export const quests: Quest[] = [
     "npc": "Major Tom",
     "category": "Sub-Ability",
     "location": "O'ahu Summit Observatory",
-    "prerequisites": "Level 50 Cap & 7,500 Catalog Sales",
+    "prerequisites": "Level 50+ & 7,500 Catalog Sales",
     "objectives": [
       "Visit Major Tom at the top of the Astronomical Observatory.",
       "Answer 20 historical JoJo trivia questions with 100% accuracy (0/20).",
@@ -335,7 +335,7 @@ export const quests: Quest[] = [
     "npc": "Bounty Board App",
     "category": "Bounty",
     "location": "Train Station Platform 3",
-    "prerequisites": "Level 50 Cap & Smartphone Equipped",
+    "prerequisites": "Level 50+ & Smartphone Equipped",
     "objectives": [
       "Accept the elite bounty contract.",
       "Defeat both Prosciutto (The Grateful Dead) and Pesci (Beach Boy) within 10 minutes.",

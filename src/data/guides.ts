@@ -220,7 +220,7 @@ export const guides: Guide[] = [
       {
         "id": "mobile-layout",
         "title": "Mobile Touch Controls & Aim-Lock",
-        "content": "The mobile interface features a circular virtual joystick on the left screen and a dynamic radial action pad on the right. Tapping the target icon enables Target Aim-Lock, locking your Stand skills onto the nearest player or hostile NPC. Skill buttons are laid out in a semi-circle around the primary attack button.",
+        "content": "The mobile interface features a circular virtual joystick on the left screen and a dynamic radial action pad on the right. Tapping the target icon enables Target Aim-Lock. Following the Nov 15 update, mobile players can enable 'Block Input: Toggle' in settings (allowing one tap to block and another to unblock) and smoothly swipe the camera while pressing light or heavy attacks.",
         "tips": [
           "Increase touch button transparency in the in-game settings to maximize peripheral combat visibility.",
           "Use the dedicated Lock-On button to prevent camera drift during high-speed mobile PvP battles."
@@ -293,7 +293,7 @@ export const guides: Guide[] = [
   },
   {
     "slug": "level-up-fast",
-    "title": "How to Level Up Fast in Stand Out: 1 to 50 EXP Route",
+    "title": "How to Level Up Fast in Stand Out: 1 to 75 EXP Route",
     "category": "Progression",
     "description": "Fastest verified leveling methods in Stand Out. Optimize storyline progression, mob farming loops, daily bounties, and EXP booster usage.",
     "readingTime": "7 min read",
@@ -324,7 +324,7 @@ export const guides: Guide[] = [
       {
         "id": "level-cap",
         "title": "Level Cap & Stat Point Breakdown",
-        "content": "The current level cap in STAND OUT is Level 50. Every level up awards 3 Stat Points, giving a maximum total of 150 Stat Points to allocate across three primary attributes: Health, Damage, and Ability. Health scales maximum HP pool and natural regeneration rate; Damage increases baseline M1 light combos and physical heavy strikes; Ability boosts cooldown recovery speed, projectile scaling, and signature skill potency.",
+        "content": "Per the updated official Trello Stats card, the current live maximum level in STAND OUT is Level 75 (awarding 3 Stat Points per level for 225 total Stat Points, with a 166 single-stat cap verified in the Nov 16 combat update; legacy cards previously listed Level 50 / 150 points). Health scales maximum HP pool (up to 300 HP at 166 Health) and natural regeneration; Damage increases baseline M1 light combos and physical heavy strikes (up to 2.3x at 166 Strength); Ability boosts cooldown recovery speed, signature skill scaling, and Time Stop duration (doubled at 100 Ability).",
         "table": {
           "headers": [
             "Level Range",
@@ -352,10 +352,16 @@ export const guides: Guide[] = [
               "Tier 2 Accessories & Crafting Bench"
             ],
             [
-              "Levels 41 - 50",
-              "Passione Train Raid & SWAT Captain",
+              "Levels 41 - 55",
+              "Passione Train Raid & Highway Star",
               "95,000 EXP/hr",
-              "Stand Evolution & Level 50 Mastery"
+              "Stand Evolution & Tier 3 Gear"
+            ],
+            [
+              "Levels 56 - 75",
+              "77 Rings Raid & DIO Shrine Boss",
+              "145,000 EXP/hr",
+              "Level 75 Cap & 166 Stat Cap Builds"
             ]
           ]
         }
@@ -1201,7 +1207,7 @@ export const guides: Guide[] = [
       {
         "id": "path-branches",
         "title": "Jonathan vs Caesar vs Zeppeli Specializations",
-        "content": "At Hamon Mastery Level 3, Lisa Lisa allows you to choose one of three specialization paths. Jonathan Path provides maximum raw physical scaling and guardbreak pressure; Caesar Path offers exceptional ranged bubbles for zoning; Zeppeli Path provides the iconic Zoom Punch stun extender that chains cleanly into Stand combos.",
+        "content": "At Hamon Mastery Level 3, Lisa Lisa allows you to choose one of three specialization paths. Jonathan Path provides maximum raw physical scaling and guardbreak pressure; Caesar Path offers exceptional ranged bubbles for zoning; Zeppeli Path provides the iconic Zoom Punch stun extender. Crucially, as of the Nov 16 update, Zeppeli and Caesar Hamon automatically infuse Hamon into your Stand strikes passively without requiring manual breathing, and the Hamon training mask can now be re-obtained if lost.",
         "tips": [
           "Jonathan Path is recommended for aggressive melee brawlers, while Caesar Path is ideal for tactical zoning playstyles."
         ]
@@ -1266,7 +1272,7 @@ export const guides: Guide[] = [
       {
         "id": "blood-meter",
         "title": "Blood Bar Drain Rate & M2 Siphon Mechanics",
-        "content": "Vampires replace their natural stamina bar with a crimson Blood Bar. The Blood Bar slowly drains over time during combat. Pressing RMB (or M2 Blood Drain) lunges forward to seize an enemy and drink their blood, rapidly restoring your health pool and refilling your Blood Bar to 100%.",
+        "content": "Vampires replace their natural stamina bar with a crimson Blood Bar. As of the Nov 15/16 overhaul, Vampires continuously regenerate natural HP as long as blood is present in their pool. Furthermore, maximum Blood capacity now scales directly with your Ability stat, allowing players to store up to 250 Blood with max Ability investment. Pressing RMB (M2 Blood Drain) lunges forward to siphon blood, restoring HP and refilling your gauge.",
         "table": {
           "headers": [
             "Vampire Ability",
@@ -1313,7 +1319,7 @@ export const guides: Guide[] = [
       {
         "id": "sunlight-penalty",
         "title": "Surviving Daylight with the Shadow Cloak",
-        "content": "Direct sunlight is fatal to Vampires, dealing 5% max HP damage every second during daytime. To survive daylight, you must either stay indoors within buildings and subway tunnels, or craft the protective Shadow Cloak at the workbench using 5 Silk Cloth and 2 Shadow Fragments.",
+        "content": "Direct sunlight is fatal to Vampires, dealing 5% max HP damage every second during daytime. To survive daylight, players must equip the protective Vampire Cloak (or Shadow Cloak). Following the Nov 16 update, your protective cloak stays securely equipped until you lose 25% of your HP in combat, followed by a 20-second grace window upon re-equipping during which the cloak cannot be knocked off by enemy hits. Wall-walking has also been officially restored for pure Vampires.",
         "warning": "Taking off your Shadow Cloak during broad daylight will cause your character to burst into flames within 2 seconds. Never unequip it outside."
       },
       {
@@ -1359,7 +1365,7 @@ export const guides: Guide[] = [
       {
         "id": "raid-entry",
         "title": "Passione Train & 77 Rings Requirements",
-        "content": "Raids represent the pinnacle collaborative content in STAND OUT. Passione Train Raid unlocks at Level 45 and pits 4 players against moving train car waves before fighting Boss Prosciutto & Pesci. The 77 Rings Raid unlocks at Level 50 in the ancient catacombs, featuring multi-tiered puzzle traps and the SWAT Commander encounter.",
+        "content": "Raids represent the pinnacle collaborative content in STAND OUT. Passione Train Raid unlocks at Level 45 and pits 4 players against moving train car waves before fighting Boss Prosciutto & Pesci. The 77 Rings Raid is started through Donatello in Honolulu, featuring a 5-stage trial: Graveyard undead waves, broken bridge parkour, Training Hall, Tarkus boss fight, frozen mountain scaling with hypothermia campfires, and the Shrine of DIO boss battle. Following the Nov 16 update, defeating any raid boss grants an instant 100% full health heal, losing a raid no longer incurs a cooldown penalty, and Top 3 weekly raid leaderboard finishers receive the exclusive Heaven's Door Prime Stand Chip.",
         "table": {
           "headers": [
             "Raid Name",
@@ -1497,7 +1503,7 @@ export const guides: Guide[] = [
       {
         "id": "telegraph-counters",
         "title": "Recognizing Red AOE Indicators & Parries",
-        "content": "All world boss heavy attacks display bright red telegraph markers on the ground 1.5 seconds before impact. Never attempt to standard block red telegraph attacks; they are guaranteed guardbreaks that stagger your character for 3 seconds. Instead, use your Q-dash iframes to roll directly through the attack.",
+        "content": "All world boss heavy attacks display bright red telegraph markers on the ground 1.5 seconds before impact. Never attempt to standard block red telegraph attacks; they are guaranteed guardbreaks that stagger your character for 3 seconds. Following the Nov 15 combat balance update, the evasive skill cooldown on EVERY boss in the game was increased by 6.0 seconds, opening up much larger punish windows after dodging. Slaying any world boss also immediately restores 100% of your maximum health.",
         "tips": [
           "The SWAT Captain's Riot Shield slam can be Perfect Blocked by tapping F the millisecond his shield flashes yellow."
         ]
@@ -2010,6 +2016,320 @@ export const guides: Guide[] = [
         "content": "By pairing your starter Stand with the Hamon Sub-Ability and acquiring early accessories like the Student Uniform or Leather Gloves, a Rare Stand like Yellow Temperance can comfortably carry you all the way to Level 50 endgame raid content.",
         "tips": [
           "Focus stat points evenly into Health (50) and Damage (50) during your first 35 levels for maximum survivability."
+        ]
+      }
+    ]
+  }
+,
+  {
+    "slug": "combat-mechanics",
+    "title": "Stand Out Combat Mechanics Guide: Perfect Block, Posture & Combos",
+    "category": "Combat & Moves",
+    "description": "Master the complete combat system in Roblox STAND OUT. In-depth guide covering the 0.12s Perfect Block parry window, 35-50 Block Posture HP, Barrage Clash chip reduction, Combo Damage Scaling, Dash cancelling, and Time Stop overwrites.",
+    "readingTime": "9 min read",
+    "updatedDate": "2026-11-22",
+    "tableOfContents": [
+      { "id": "perfect-block", "title": "Perfect Block & Parry Timing (0.12s Window)" },
+      { "id": "block-posture", "title": "Block Posture HP & Guard Break Mechanics" },
+      { "id": "barrage-clashes", "title": "Barrage Clash Chip Damage (25% Rate)" },
+      { "id": "combo-scaling", "title": "Combo Damage Scaling & Anti-Teaming i-Frames" },
+      { "id": "hp-movement-scaling", "title": "Movement Speed Scaling by Current HP" },
+      { "id": "dash-m1-links", "title": "Dash Cooldown (1.2s) & M1 Combo Chains" },
+      { "id": "time-stop-mechanics", "title": "Time Stop Durations & Overwriting Tech" }
+    ],
+    "sections": [
+      {
+        "id": "perfect-block",
+        "title": "Perfect Block & Parry Timing (0.12s Window)",
+        "content": "Perfect Blocking is the core defensive skill separating intermediate players from elite duelists. By pressing Block (F) just as an incoming guardbreak attack connects within a precise 0.12-second window (buffed from 0.10s in the Nov 15 update), you completely negate the attack, inflict 0.20 seconds of severe endlag on the attacker, and instantly restore 20% of your maximum Block Posture HP up to full.",
+        "tips": [
+          "Watch opponent startup animations rather than projectile trails to time your 0.12s parry window.",
+          "A successful parry leaves the attacker vulnerable to an unblockable M1 combo or heavy M2 counter.",
+          "Multi-hit guardbreaks can be parried on their initial contact frame to stop the entire attack sequence."
+        ],
+        "table": {
+          "headers": ["Combat Metric", "Current Value", "Pre-Patch Value", "Tactical Impact"],
+          "rows": [
+            ["Parry Window", "0.12 seconds", "0.10 seconds", "+20% easier timing window to punish predictable guardbreaks"],
+            ["Attacker Endlag", "0.20 seconds", "0.00 seconds", "Guarantees free counter-attack before opponent can dodge"],
+            ["Block HP Restored", "20% Max Posture", "0%", "Allows defensive resets even under sustained pressure"]
+          ]
+        }
+      },
+      {
+        "id": "block-posture",
+        "title": "Block Posture HP & Guard Break Mechanics",
+        "content": "Blocking in Stand Out relies on an internal Posture gauge. Guard capacity starts at 35 Block HP at Level 1 and scales up to 50 Block HP at max level. Block HP regeneration begins 2.5 seconds after your last blocked hit and regenerates at 1.25 to 2.5 HP per second based on level. At 166 effective Health, both guard capacity and regeneration rate are boosted by 30%.",
+        "steps": [
+          "Blocked hits drain Posture based on the incoming raw damage of the attack.",
+          "An M1 combo finisher inflicts twice its normal damage against enemy guard posture.",
+          "The opening hit of a blockable grab drains 50% of the full grab sequence damage against guard.",
+          "Guard sparks fade from bright white toward deep red as Posture diminishes.",
+          "The hit that completely drains guard Posture is safely absorbed; the immediate next hit breaks guard.",
+          "Shattering an enemy guard leaves them stunned and immediately restores 50% of their base guard HP."
+        ],
+        "warning": "Guard-breaking moves (such as Star Platinum's Ora Smash or Heaven's Door Prime's Book Rush) shatter guard immediately regardless of current Posture HP."
+      },
+      {
+        "id": "barrage-clashes",
+        "title": "Barrage Clash Chip Damage (25% Rate)",
+        "content": "When two players initiate stand barrages (E) into each other simultaneously, a Barrage Clash triggers. Following the November 16 combat tuning, Barrage Clashes now inflict only 25% of each hit as chip damage (massively reduced from the oppressive 65% chip damage rate previously). This makes clashes much safer for testing opponent reaction times without losing half your health bar.",
+        "tips": [
+          "Use barrage clashes to stall out enemy awakening buffs or reposition team members.",
+          "If your barrage is nearing its final strike, buffer a Dash (Q) or Evasive to avoid the opponent's finisher."
+        ]
+      },
+      {
+        "id": "combo-scaling",
+        "title": "Combo Damage Scaling & Anti-Teaming i-Frames",
+        "content": "To prevent unfair infinite true combos and one-shot touch-of-death sequences, Stand Out implements dynamic Combo Damage Scaling. Against other players, each attacker builds a separate combo tracking the percentage of your max HP dealt. Once an attacker has dealt 50% of your maximum HP, their next hit suffers a 25% damage reduction. If the combo continues past 99% of your max HP, damage reduction increases to 40%.",
+        "steps": [
+          "Direct physical and Stand hits refresh the 2.5-second combo tracking window.",
+          "Chip damage and Damage Over Time (DOT) count toward active combo totals but do not refresh the window.",
+          "Anti-Teaming Protection: When 2 or more players hit the same target in rapid succession, the defender receives approximately 1.0 second of complete invulnerability frames (i-frames)."
+        ],
+        "tips": [
+          "Reset your combo strings every 2.5 seconds in PvP to ensure attacks deal 100% unscaled damage.",
+          "In Gang Wars or multi-man battles, stagger attacks with allies to prevent triggering enemy Anti-Teaming i-frames."
+        ]
+      },
+      {
+        "id": "hp-movement-scaling",
+        "title": "Movement Speed Scaling by Current HP",
+        "content": "Your character's movement agility is directly tied to your remaining health pool. At full HP (100%), you move at 100% of baseline sprinting speed. When reduced to 50% HP, your walkspeed slows to 82%. At critical health (1% HP or below), movement drops to 65% of normal speed. Healing through sub-abilities, items, or Crazy Diamond moves restores your speed along this exact curve.",
+        "tips": [
+          "High Health builds (166 Health = 300 HP) stay above the 50% HP threshold longer, preserving optimal movement speed.",
+          "Use mobility tools like Kiss's Double Trouble (+50% leg speed) or Enrico's Gear (+15% walkspeed) to offset low-HP slowdown."
+        ]
+      },
+      {
+        "id": "dash-m1-links",
+        "title": "Dash Cooldown (1.2s) & M1 Combo Chains",
+        "content": "Mobility and basic attacks received substantial overhauls in mid-November. Dash cooldown is now standardized at 1.20 seconds for all characters (reduced from ~1.7s previously), calculated the moment you initiate the dash. Stand M1 hitboxes are 5% wider and reach slightly behind the Stand to prevent close-range whiffs. The recovery endlag after the final M1 in a string is 0.85s on miss/block and 0.70s on hit, with every M1 link stunning the target 0.16s past the next blow.",
+        "steps": [
+          "M2 Recovery De-linked: You can now execute a heavy M2 attack immediately following an M1 combo without cooldown delay.",
+          "Dash Cancelling: Initiating a normal dash near the conclusion of a light attack preserves the next punch in the string.",
+          "Mobile Blocking Toggle: Mobile players can enable toggle blocking in settings, allowing single-tap guard and fluid camera swiping."
+        ]
+      },
+      {
+        "id": "time-stop-mechanics",
+        "title": "Time Stop Durations & Overwriting Tech",
+        "content": "Time Stop (TS) remains one of the premier mechanics in Stand Out, available to Star Platinum, The World, SPTW, and TWAU. As of the Nov 16 update, Full Time Stop lasts 5.0 seconds at base Ability up to 10.0 seconds at max Ability (down from 6s to 14s). Quick Time Stop lasts 2.5 seconds base up to 6.0 seconds max (down from 3s to 7s). At 100 Ability, Time Stop duration doubles.",
+        "steps": [
+          "Overwriting Time Stop: If an opponent initiates Time Stop, any player holding a Time Stop stand can press their TS input during the freeze to overwrite and seize control of the freeze window.",
+          "Road Roller Tuning: Road Roller now flies higher into the sky, lands approximately 2.0s after activation, and requires 1 EX Bar.",
+          "Anti-Camping: Combat-tagged players who jump into the ocean to stall out Time Stop or combat tags are now attacked by a predatory offshore shark."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "77-rings-raid",
+    "title": "77 Rings Raid Guide: Stages, Tarkus & DIO Boss Strategy",
+    "category": "Endgame & Raids",
+    "description": "Complete dungeon guide for the 77 Rings Bizarre Adventure raid in Roblox STAND OUT. Wave-by-wave walkthrough covering Donatello entry, graveyard undead waves, broken bridge parkour, hypothermia campfires, Tarkus & DIO boss strategies, and Raid Shop token rewards.",
+    "readingTime": "11 min read",
+    "updatedDate": "2026-11-22",
+    "tableOfContents": [
+      { "id": "entry-reqs", "title": "Raid Entry & Party Requirements" },
+      { "id": "stage-1", "title": "Stage 1: Graveyard Undead Gauntlet" },
+      { "id": "stage-2", "title": "Stage 2: Broken Bridge Parkour & Trainee Knights" },
+      { "id": "stage-3", "title": "Stage 3: Training Hall & Tarkus Boss Encounter" },
+      { "id": "stage-4", "title": "Stage 4: Frozen Mountain Ascent & Hypothermia" },
+      { "id": "stage-5", "title": "Stage 5: Shrine of DIO Boss Battle" },
+      { "id": "rewards-shop", "title": "77 Rings Drops, Token Shop & Leaderboard Chips" }
+    ],
+    "sections": [
+      {
+        "id": "entry-reqs",
+        "title": "Raid Entry & Party Requirements",
+        "content": "The 77 Rings Bizarre Adventure is an endgame dungeon challenge set in an ancient, brutal knights' training ground. Players enter the raid by speaking to Donatello in the Honolulu underground. While solo runs are viable for high-damage Pinnacle Stand builds, running in a coordinated party of 2 to 4 players is strongly recommended for consistent clears.",
+        "steps": [
+          "Location: Speak to Donatello in the Honolulu sewer catacombs.",
+          "Recommended Level: Level 35 to 75 (max stat allocation recommended for survivability).",
+          "Team Size: 1 to 4 players (scaling mob health based on party headcount).",
+          "No Cooldown Penalty: Failing or dying inside the raid no longer triggers a cooldown timer.",
+          "Boss Kill Full Heal: Defeating any raid boss instantly heals your character to 100% HP."
+        ],
+        "tips": [
+          "Equip Hamon (Jonathan or Zeppeli Path) for passive +25% bonus damage against undead knights and DIO.",
+          "Carry at least 2 Hot Cocoa or Warm Broth consumables to counter cold stacks during mountain scaling."
+        ]
+      },
+      {
+        "id": "stage-1",
+        "title": "Stage 1: Graveyard Undead Gauntlet",
+        "content": "Upon spawning into the ancient graveyard, the iron gates slam shut behind you. You must survive 3 consecutive waves of undead knights emerging from tombs. Each wave consists of 4 to 8 undead enemies with aggressive gap-closers and sweeping blade swings.",
+        "steps": [
+          "Wave 1: Basic Skeleton Knights (low HP, vulnerable to AoE barrages).",
+          "Wave 2: Armored Husk Knights with shields (require heavy M2 attacks or guardbreaks to crack).",
+          "Wave 3: Undead Berserkers with high movement speed and lunging cleaves.",
+          "Gather near the center crypt so mob spawns funnel together into your Stand's AoE attacks."
+        ],
+        "warning": "The Nov 16 patch resolved a bug where players were permanently locked out if the cemetery gate closed. All party members now spawn inside the combat arena automatically."
+      },
+      {
+        "id": "stage-2",
+        "title": "Stage 2: Broken Bridge Parkour & Trainee Knights",
+        "content": "Stage 2 begins with a challenging platforming sequence across a crumbling mountain chasm. Spikes jut periodically from broken bridge platforms, and freezing winds apply early hypothermia stacks if you linger too long.",
+        "steps": [
+          "Time your jumps between stone bridge fragments to avoid retractable spike floor traps.",
+          "Use double jump and ledge climbing to scramble up sheer cliffs without tumbling into the abyss.",
+          "At the foot of the mountain, defeat a wave of unarmed Trainee Knights using heavy fist strikes.",
+          "Ascend the spiraling mountain trail to reach the iron door of the Training Hall."
+        ],
+        "tips": [
+          "Stands with vertical mobility (such as Kiss's Return Trip, Super Fly, or The Hustle) can bypass tricky bridge gaps.",
+          "Trainee Knights have no ranged attacks; maintain distance and pick them off with projectiles."
+        ]
+      },
+      {
+        "id": "stage-3",
+        "title": "Stage 3: Training Hall & Tarkus Boss Encounter",
+        "content": "Enter the subterranean Training Hall and fight through armored Hall Guards while dodging floor spikes and collapsing tile traps. Once past the gauntlet, you are locked into the arena chamber of Tarkus, a towering knight boss empowered by vampiric strength.",
+        "steps": [
+          "Dodge Tarkus's Chain Crush: Tarkus winds up an enormous chain that deals devastating guardbreak damage in a 30-stud cone.",
+          "Parry his Heavy Stomp: The stomp has a distinct 0.5s telegraph that matches the 0.12s Perfect Block window.",
+          "Avoid the Vampiric Slam: When Tarkus roars and leaps into the ceiling, dash away to avoid the AoE ground impact.",
+          "After Tarkus falls, navigate the miniature escape labyrinth to emerge onto the upper frozen ridge."
+        ],
+        "tips": [
+          "Tarkus has high physical armor but takes 30% increased damage from Hamon Overdrive strikes.",
+          "His evasive skill cooldown was increased by 6 seconds in the Nov 15 update, giving larger punish windows."
+        ]
+      },
+      {
+        "id": "stage-4",
+        "title": "Stage 4: Frozen Mountain Ascent & Hypothermia",
+        "content": "The most punishing environmental hazard in the raid is the frozen mountain climb. A severe blizzard constantly builds hypothermia stacks on your character. If your cold meter reaches 100%, you suffer rapid damage over time and an 80% walkspeed penalty.",
+        "steps": [
+          "Monitor your Cold Gauge on the right side of the screen.",
+          "Stand near burning Campfires along the climb path to instantly warm up and purge cold stacks.",
+          "Watch for falling icicle shadows on the ground; getting hit inflicts heavy stagger and freezing.",
+          "Leap across narrow ice bridges and scale the final rock wall to reach DIO's mountain shrine."
+        ]
+      },
+      {
+        "id": "stage-5",
+        "title": "Stage 5: Shrine of DIO Boss Battle",
+        "content": "The climax of the 77 Rings Raid pits your party against an empowered boss incarnation of DIO. DIO possesses enhanced Vampiric abilities, rapid teleportation dashes, Space Ripper Stingy Eyes eye lasers, and the ability to summon elite zombie knights.",
+        "steps": [
+          "Watch for Space Ripper Stingy Eyes: DIO raises both hands to his brow; dodge horizontally or parry.",
+          "Clear Knight Summons: When DIO channels his summon at 66% and 33% HP, focus down the 3 minion knights immediately.",
+          "Beware Contact Freeze: If DIO's hands glow cyan, do not engage in close M1 trades or your Stand will be frozen.",
+          "Slay DIO to complete the raid: Defeating DIO triggers an instant 100% full heal and spawns the reward chest."
+        ],
+        "tips": [
+          "Hamon users can nullify DIO's contact freeze using Sunlight Yellow Overdrive super armor.",
+          "Time Stop stands can freeze DIO during his minion summoning phase to interrupt the cast."
+        ]
+      },
+      {
+        "id": "rewards-shop",
+        "title": "77 Rings Drops, Token Shop & Leaderboard Chips",
+        "content": "Completing the 77 Rings Raid rewards Raid Tokens, Dalas cash, EXP, and rolls for rare crafting materials including Pluck sword parts and Stone Masks. Tokens can be redeemed at the 77 Rings Shop NPC outside the entrance.",
+        "table": {
+          "headers": ["Shop Item", "Token Price", "Usage & Value"],
+          "rows": [
+            ["Mysterious Arrow", "7 Tokens", "Standard Stand summoning arrow (~0.50% Pinnacle chance)"],
+            ["4x Arrow Parts", "8 Tokens", "Essential crafting component for Lucky and Bizarre Arrows"],
+            ["Stone Mask", "10 Tokens", "Required consumable to awaken the Vampire Sub-Ability"],
+            ["Lucky Arrow", "40 Tokens", "Guarantees Rare or higher Stand with 1.5% Pinnacle rate"],
+            ["Bizarre Arrow", "80 Tokens", "Premier crafting arrow with 4.4% Pinnacle rate (excludes low tiers)"]
+          ]
+        },
+        "tips": [
+          "Weekly Leaderboard Rewards: Finishing in the Top 3 of the weekly 77 Rings clear time leaderboard awards the exclusive Heaven's Door Prime Stand Chip!",
+          "Hard difficulty mode yields double token drops and higher Pluck fragment drop rates."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "stand-out-skins",
+    "title": "Stand Out Skins & Alt Colors Guide: Unlocks, Customizer & Catalog",
+    "category": "Progression",
+    "description": "Comprehensive guide to Stand Skins and Alternative Color Schemes in Roblox STAND OUT. How to unlock and equip Alt 1-3 palettes via the Phone (Z) app, quest requirements, Catalog supporter tiers, and exclusive cosmetic titles.",
+    "readingTime": "8 min read",
+    "updatedDate": "2026-11-22",
+    "tableOfContents": [
+      { "id": "how-skins-work", "title": "How Alt Stand Colors Work in Stand Out" },
+      { "id": "prerequisites", "title": "Prerequisites: Phone (Z) & Meryl Mei Qi" },
+      { "id": "how-to-equip", "title": "Step-by-Step: Equipping & Swapping Alt Skins" },
+      { "id": "roster-availability", "title": "Full Stand Roster Skin Availability (36 Stands)" },
+      { "id": "catalog-supporters", "title": "Catalog Supporter Ranks & Exclusive Rewards" },
+      { "id": "customizer-settings", "title": "Customizer Settings, Poses & Emote Wheel" }
+    ],
+    "sections": [
+      {
+        "id": "how-skins-work",
+        "title": "How Alt Stand Colors Work in Stand Out",
+        "content": "Unlike many JoJo Roblox games that lock alternate Stand skins behind 0.01% lucky arrow rolls, Studio Umbra: Europa designed Stand Out's Alternative Color Schemes as quest-obtainable cosmetic palettes. Every player who unlocks a Stand can earn its Alt 1, Alt 2, and Alt 3 color schemes through gameplay milestones. Alt skins are strictly cosmetic and carry zero combat stat buffs or hidden damage multipliers.",
+        "tips": [
+          "Official Trello notes: If an alt color appears slightly untextured or off in-game, it is a developer placeholder while textures are refined.",
+          "Equipping an Alt skin does not consume arrows or risk rerolling your current Stand."
+        ]
+      },
+      {
+        "id": "prerequisites",
+        "title": "Prerequisites: Phone (Z) & Meryl Mei Qi",
+        "content": "To access the skin customization interface, you must complete the early storyline prerequisites to unlock your in-game Smartphone.",
+        "steps": [
+          "Complete Hey Ya!'s introductory beach tutorial on starting the game.",
+          "Travel to the Iko Iko boutique shop in Downtown Honolulu.",
+          "Speak with NPC Meryl Mei Qi to receive your in-game Phone.",
+          "Press Z (or tap the Phone icon on mobile) to bring up the device application menu."
+        ]
+      },
+      {
+        "id": "how-to-equip",
+        "title": "Step-by-Step: Equipping & Swapping Alt Skins",
+        "content": "Once your Phone is unlocked, swapping between unlocked color palettes can be done anytime outside active combat.",
+        "steps": [
+          "Ensure your desired Stand is currently equipped (Stands stored with D'Arby cannot have skins modified until withdrawn).",
+          "Open your Phone by pressing Z on PC or tapping the Phone widget on mobile.",
+          "Tap the 'Alt Stand Colors' application on the home screen.",
+          "Select your active Stand from the roster list.",
+          "Choose between Default, Alt 1, Alt 2, or Alt 3 palettes and confirm.",
+          "Summon your Stand (E) to view the freshly applied color scheme."
+        ],
+        "warning": "You cannot swap skins while in combat or during an active gang war match."
+      },
+      {
+        "id": "roster-availability",
+        "title": "Full Stand Roster Skin Availability (36 Stands)",
+        "content": "Currently, 36 core Stands feature dedicated Alt 1, Alt 2, and Alt 3 color schemes documented on the official developer board (totaling 108 distinct cosmetic variants). Iconic examples include manga-colored Star Platinum (purple/teal Alt 1), shadow-armored The World (obsidian/gold Alt 2), and crimson-white King Crimson.",
+        "tips": [
+          "Newer Stands (November Rain, Kiss, Big Mouth Strikes Again, Lyin' Eyes, The MATTEKUDASAI) and exclusive forms (SPTW, TWAU, Heaven's Door Prime) have baseline textures and will receive their Alt cards in future patch cycles."
+        ]
+      },
+      {
+        "id": "catalog-supporters",
+        "title": "Catalog Supporter Ranks & Exclusive Rewards",
+        "content": "The in-game Catalog allows players to publish custom outfits, accessories, and builds. When other players save or purchase your public creations, they become your supporters. Earning supporters unlocks prestigious ranks, cosmetic gear, and exclusive Stand chips.",
+        "table": {
+          "headers": ["Supporter Rank", "Supporters Required", "Unlocked Rewards"],
+          "rows": [
+            ["ROUGH SKETCH", "10 Supporters", "Rohan's Earrings accessory"],
+            ["STORYBOARD", "25 Supporters", "Rohan's G-Pen accessory"],
+            ["INKED", "100 Supporters", "Heaven's Door Hat + 2,500 Dalas"],
+            ["SERIALIZED", "500 Supporters", "Rohan's Pants accessory"],
+            ["BESTSELLER", "2,000 Supporters", "Rohan's Jacket + 10,000 Dalas"],
+            ["MASTERPIECE", "4,000 Supporters", "Gradient Name chat styling"],
+            ["HEAVEN'S DOOR", "8,000 Supporters", "Builder+ Title & Heaven's Door Prime Stand Chip"]
+          ]
+        }
+      },
+      {
+        "id": "customizer-settings",
+        "title": "Customizer Settings, Poses & Emote Wheel",
+        "content": "Beyond color palettes, players can customize their character's presence using the expanded pose and emote system.",
+        "steps": [
+          "Press P to execute your Stand's signature JoJo pose (charges EX gauge at 1%/sec).",
+          "Press L to open the 67-Emote Wheel; players can rotate freely during emote animations.",
+          "Visit the Photography Room in Lenny's garage to capture high-res screenshots for the in-game Gallery app.",
+          "Toggle 'Map Clutter' in settings to remove ambient debris and maximize performance in 60 FPS combat."
         ]
       }
     ]

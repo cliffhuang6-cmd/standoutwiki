@@ -37,7 +37,7 @@ export const rokaMutations: RokaMutation[] = [
     slug: 'opal-roka',
     effect: 'Catalyzes pinnacle Stand evolution: affects Star Platinum (to SPTW) and The World (to TWAU). Grants a 10% chance to evolve to counterpart, 10% chance to lose Stand, otherwise unchanged.',
     stoneLimbPenalty: 'Full-body petrification during the 10-second transformation cutscene.',
-    specialNotes: 'Requires character to reach max Level 50 cap before consuming.'
+    specialNotes: 'Requires character to reach Level 50+ before consuming.'
   },
   {
     name: 'Attractive Roka',

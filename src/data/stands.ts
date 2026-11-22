@@ -374,7 +374,7 @@ export const stands: Stand[] = [
       "farming": "S"
     },
     "status": "Evolution",
-    "obtainMethod": "Obtainable by consuming an Opal Roka while having base Star Platinum active and reaching Level 50.",
+    "obtainMethod": "Obtainable by consuming an Opal Roka while having base Star Platinum active (requires Level 50+).",
     "lore": "Star Platinum: The World is a powerful Stand possessed by Jotaro Kujo in Part 4: Diamond is Unbreakable.",
     "image": "/images/stands/star-platinum-the-world.webp",
     "combatRole": "Offense",
@@ -472,7 +472,7 @@ export const stands: Stand[] = [
     "faqs": [
       {
         "q": "How do I obtain Star Platinum: The World in STAND OUT?",
-        "a": "Obtainable by consuming an Opal Roka while having base Star Platinum active and reaching Level 50."
+        "a": "Obtainable by consuming an Opal Roka while having base Star Platinum active (requires Level 50+)."
       },
       {
         "q": "What combat role does Star Platinum: The World fulfill?",
@@ -746,7 +746,7 @@ export const stands: Stand[] = [
       "raid": "S+",
       "farming": "S+"
     },
-    "status": "In Testing",
+    "status": "Playable",
     "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 9 focus items.",
     "lore": "November Rain is a powerful Stand possessed by Jodio Joestar in Part 9: The JOJOLands.",
     "image": "/images/stands/november-rain.webp",
@@ -1218,7 +1218,7 @@ export const stands: Stand[] = [
       "raid": "A+",
       "farming": "A"
     },
-    "status": "In Testing",
+    "status": "Playable",
     "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 9 focus items.",
     "lore": "Big Mouth Strikes Again is a powerful Stand possessed by Charming Man in Part 9: The JOJOLands.",
     "image": "/images/stands/big-mouth-strikes-again.webp",
@@ -1472,7 +1472,7 @@ export const stands: Stand[] = [
       "raid": "A",
       "farming": "A"
     },
-    "status": "In Testing",
+    "status": "Playable",
     "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 9 focus items.",
     "lore": "The Hustle is a powerful Stand possessed by Paco Laburante in Part 9: The JOJOLands.",
     "image": "/images/stands/the-hustle.webp",
@@ -4728,7 +4728,7 @@ export const stands: Stand[] = [
       "raid": "B",
       "farming": "C"
     },
-    "status": "In Testing",
+    "status": "Playable",
     "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 9 focus items.",
     "lore": "Lyin' Eyes is a powerful Stand possessed by Laem Chabang in Part 9: The JOJOLands.",
     "image": "/images/stands/lyin-eyes.webp",
@@ -4835,7 +4835,7 @@ export const stands: Stand[] = [
       "raid": "B",
       "farming": "B"
     },
-    "status": "In Testing",
+    "status": "Playable",
     "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 9 focus items.",
     "lore": "The MATTEKUDASAI is a powerful Stand possessed by Usagi Alohaoe in Part 9: The JOJOLands.",
     "image": "/images/stands/the-mattekudasai.webp",
@@ -5045,6 +5045,243 @@ export const stands: Stand[] = [
       }
     ],
     "verifiedDate": "2026-11-16"
+  }
+,
+  {
+    "slug": "kiss",
+    "name": "Kiss",
+    "canonicalUser": "Ermes Costello",
+    "jojoPart": "Part 6: Stone Ocean",
+    "rarity": "Rare",
+    "tier": {
+      "pvp": "A+",
+      "raid": "S",
+      "farming": "A"
+    },
+    "status": "Playable",
+    "obtainMethod": "Awakened from Mysterious Arrows (~50% tier share in Rare pool), Lucky Arrows, or Bizarre Arrows. Officially added to the live game on November 10, 2026.",
+    "lore": "Ermes Costello's Stand creates stickers that duplicate whatever they touch. Removing a sticker forces the two copies violently back together, damaging them as they merge. She uses this power to duplicate limbs, turn objects into traps, and pull herself toward distant targets.",
+    "image": "/images/stands/kiss.webp",
+    "combatRole": "Utility",
+    "passives": [
+      {
+        "name": "Sticker Replication & Merge Physics",
+        "description": "Kiss can deploy up to 6 stickers on enemies, objects, or limbs. Spent stickers regenerate every 4 seconds. Peeling stickers via Sticker Rip (G) reunites duplicates, dealing collision damage to enemies caught between them. Peeling enemy limbs applies specialized debuffs: arm deals 8 damage and slows attacks for 4s, leg deals 7 damage and slows movement for 4s, and head deals 13 damage with extended stun and 3s vision blur."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Sticker Placement / Throw",
+        "type": "Utility",
+        "cooldown": "4s",
+        "damage": "Variable Debuff",
+        "description": "Tap to place a sticker on an enemy or throwable within reach. Hold to throw a sticker up to 120 studs. You can maintain up to six stickers simultaneously. Placing on enemies can be blocked or perfect blocked."
+      },
+      {
+        "key": "E",
+        "name": "Kizz Olala",
+        "type": "Barrage",
+        "cooldown": "14s",
+        "damage": "Rapid Multi-Kick",
+        "description": "Deliver a rapid kick barrage. The final kick strains opponent guards (can be perfect blocked), knocks them back, and automatically places an arm sticker on anyone who lacks one. Follow up with G to peel for bonus damage and attack slow."
+      },
+      {
+        "key": "R",
+        "name": "Yeet",
+        "type": "Attack",
+        "cooldown": "12s",
+        "damage": "8 Dmg + Ragdoll",
+        "description": "Kiss flies to the enemy or throwable nearest your cursor within 22 studs, lifts them overhead, and violently heaves them in camera direction. Enemies take 8 damage and ragdoll for 1 second. Stickered prop copies fly three times farther and hurt anyone they hit."
+      },
+      {
+        "key": "F",
+        "name": "Double Trouble",
+        "type": "Utility",
+        "cooldown": "16s",
+        "damage": "+50% Buff",
+        "description": "Spend two stickers to duplicate your limbs for 12 seconds: aim cursor above screen center for arms (+50% light attack damage) or below center for legs (+50% movement speed and jump power). Hold while aiming at another player to apply to them instead."
+      },
+      {
+        "key": "G",
+        "name": "Sticker Rip",
+        "type": "Attack",
+        "cooldown": "1s",
+        "damage": "7-13 Dmg / Collision",
+        "description": "Command Kiss to fly to an active sticker within 50 studs and rip it off, forcing copies to snap back together. Merging objects deal high damage to intervening players. Peeling limb stickers applies devastating slow and vision blur."
+      },
+      {
+        "key": "T (Hold) + LMB",
+        "name": "Body Double",
+        "type": "Awakening / EX",
+        "cooldown": "30s",
+        "exCost": "3 EX Bars",
+        "damage": "50% Banked Dmg",
+        "description": "Slap a sticker on an enemy to tear off a full body double that anyone can hit, carry, or throw. The double banks 50% of all damage it takes. Press G to rip the sticker and snap the double back into the target, dealing all banked damage at once, or carry it to drag them to you."
+      },
+      {
+        "key": "T (Hold) + E",
+        "name": "Thread Recall",
+        "type": "Awakening / EX",
+        "cooldown": "22s",
+        "exCost": "2 EX Bars",
+        "damage": "12 Dmg + Pull",
+        "description": "Kiss flies up to 32 studs to latch on and swipe a copy of enemy clothing. Hold for up to 60 seconds. Tap again to yank the enemy right to your feet, or hold to launch the copy back into them for 12 damage."
+      },
+      {
+        "key": "T (Hold) + R",
+        "name": "Return Trip",
+        "type": "Movement",
+        "cooldown": "18s",
+        "exCost": "1 EX Bar",
+        "damage": "Prop Flight",
+        "description": "Grab a stickered object and ride the magnetic pull toward its original counterpart. Press jump mid-transit to dismount early while retaining high directional momentum."
+      }
+    ],
+    "abilityScaling": [
+      "Ability points extend the duration and magnet pull range of Double Trouble and Return Trip.",
+      "Higher Ability stat shortens sticker replenishment cooldown down to 2.5s."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 60,
+        "damage": 55,
+        "ability": 110
+      },
+      "subAbility": "Hamon (Zeppeli Path)",
+      "synergyNotes": "Double Trouble arm duplication stacks with Zeppeli Hamon light attacks for insane DPS, while leg duplication enables untouchable zoning and gap-closing."
+    },
+    "pros": [
+      "Extreme tactical versatility with sticker props, limb duplication, and body doubles",
+      "Body Double (3 EX) banks 50% damage for burst one-shot setups in team fights",
+      "Short 1s cooldown on Sticker Rip allows continuous pressure and movement disruption"
+    ],
+    "cons": [
+      "Sticker placement requires accurate cursor aiming and can be blocked or parried",
+      "Requires tracking up to 6 active stickers and 12 object duplicates",
+      "Lower baseline raw punch damage without Double Trouble active"
+    ],
+    "faqs": [
+      {
+        "q": "How do you get Kiss (Kizz) in Stand Out?",
+        "a": "Kiss was officially released in the November 10, 2026 update and can be awakened with standard Mysterious Arrows (~50% tier share in the Rare pool) or Lucky/Bizarre Arrows."
+      },
+      {
+        "q": "How does Body Double work?",
+        "a": "Place a sticker on an enemy to rip off a double. Any damage dealt to the double is banked at 50% value. When you press G, the double snaps back into the enemy, instantly delivering all accumulated damage."
+      }
+    ],
+    "verifiedDate": "2026-11-22"
+  },
+  {
+    "slug": "heavens-door-prime",
+    "name": "Heaven's Door Prime",
+    "canonicalUser": "Rohan Kishibe",
+    "jojoPart": "Part 4: Diamond is Unbreakable",
+    "rarity": "Pinnacle",
+    "tier": {
+      "pvp": "Z",
+      "raid": "S+",
+      "farming": "S"
+    },
+    "status": "Playable",
+    "obtainMethod": "Obtained via exclusive Stand Chip awarded to Top 3 weekly Leaderboard finishers in any Raid (77 Rings, Train Raid, Highway Star) or Bounty Hunters leaderboard, top Builder sales, or by achieving 8,000 Catalog supporters (Builder+ / Heaven's Door rank).",
+    "lore": "The ascended, ultimate form of Rohan Kishibe's Stand encountered in Hawaii. While physically elegant, it wields absolute authority over human biology and consciousness—transmuting opponents into living manuscripts, inscribing binding commands, and commandeering enemies to fight as obedient pawns.",
+    "image": "/images/stands/heavens-door-prime.webp",
+    "combatRole": "Disruption",
+    "passives": [
+      {
+        "name": "Manuscript Authority & 166 Stat Scaling",
+        "description": "Heaven's Door Prime possesses unmatched Ability scaling. At 166 Ability, Book Transmutation reaches 17.5 stud range with a full 2-second book duration, Written Command range extends from 18 to 25 studs with 50% boosted healing and burn damage, and Become My Character extends mind control duration to 20 seconds with 85-stud guard detection."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Pen Barrage",
+        "type": "Barrage",
+        "cooldown": "20s",
+        "damage": "Rapid Slashing",
+        "description": "Sweep your Stand's G-Pen through a rapid, blockable barrage of artistic slashes. Damage scales 70% with Strength and 30% with Ability."
+      },
+      {
+        "key": "E",
+        "name": "Book Transmutation",
+        "type": "Attack",
+        "cooldown": "22s",
+        "damage": "Face Unfold / Stun",
+        "description": "Turn an enemy's face into an open manuscript for 1.5–2 seconds (scales with Ability). Travels faster than base Heaven's Door with longer reach. Allows regular blocks but cannot be perfect blocked. Closes prematurely if either player takes damage."
+      },
+      {
+        "key": "R",
+        "name": "Written Command",
+        "type": "Utility",
+        "cooldown": "15s",
+        "damage": "Multi-Command Effect",
+        "description": "Write on a book target, or hold to write on yourself. Commands: Burn (2.5s fire), Blind (5s vision blur), Reveal Cooldowns (12s insight), Restore 30 Health, or Grant Unstoppable (5s super armor). At 166 Ability, command durations, healing, and damage rise by 50%."
+      },
+      {
+        "key": "G",
+        "name": "Book Rush",
+        "type": "Heavy",
+        "cooldown": "25s",
+        "damage": "3s Unblockable Book",
+        "description": "Rush Heaven's Door forward to turn touched enemies into books for 3 full seconds. Completely bypasses both standard blocks and perfect blocks!"
+      },
+      {
+        "key": "T (Hold) + E",
+        "name": "Manga",
+        "type": "Awakening / EX",
+        "cooldown": "45s",
+        "exCost": "3 EX Bars",
+        "damage": "15 Base + AoE Book",
+        "description": "Hold up Heaven's Door's original manga manuscript. Deals 15 base damage and turns all nearby players within a 32–40 stud radius into books for 3–3.5s based on Ability. Bypasses perfect blocks completely."
+      },
+      {
+        "key": "T (Hold) + R",
+        "name": "Become My Character",
+        "type": "Awakening / EX",
+        "cooldown": "120s",
+        "exCost": "4 EX Bars",
+        "damage": "Puppet Control",
+        "description": "Command someone you have turned into a book to fight for you with their Stand! At 166 Ability, puppet duration rises from 12s to 20s, application range from 15 to 22 studs, and automated enemy guard detection to 85 studs."
+      }
+    ],
+    "abilityScaling": [
+      "At 166 Ability: Book Transmutation reaches 17.5 studs and 2s duration (80% Ability / 20% Strength scaling).",
+      "At 166 Ability: Written Command range increases to 25 studs, with 50% stronger healing, burning, and buffs.",
+      "At 166 Ability: Become My Character puppet duration extends to 20 seconds."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 59,
+        "damage": 0,
+        "ability": 166
+      },
+      "subAbility": "Vampire (Stone Mask)",
+      "synergyNotes": "Maximize Ability to the hard 166 cap for 20-second mind control and max book range, paired with Vampire for passive night regeneration and Space Ripper Stingy Eyes."
+    },
+    "pros": [
+      "Top-tier crowd control with unblockable Book Rush and 40-stud AoE Manga EX",
+      "Become My Character mind control turns enemy players into combat allies for up to 20 seconds",
+      "Written Command offers self-healing, super armor, vision blur, and burning versatility"
+    ],
+    "cons": [
+      "Extreme obtainment difficulty: requires Top 3 weekly raid/bounty leaderboards or 8,000 Catalog supporters",
+      "High cooldowns on major skills (Book Rush 25s, Manga 45s, Become My Character 120s)",
+      "Book Transmutation closes immediately if Rohan takes incoming damage"
+    ],
+    "faqs": [
+      {
+        "q": "How do you get Heaven's Door Prime?",
+        "a": "Heaven's Door Prime is an Exclusive Stand. You can unlock its Stand Chip by placing in the Top 3 of the weekly reset on any Raid leaderboard (77 Rings, Train Raid, Highway Star), reaching Top 3 Bounty Hunters, or earning 8,000 supporters through the in-game Catalog."
+      },
+      {
+        "q": "What is the difference between Heaven's Door and Heaven's Door Prime?",
+        "a": "Heaven's Door Prime features faster projectile travel, unblockable Book Rush (G), higher Ability scaling up to 166 SP, and the game-changing Become My Character EX move that mind controls enemies to fight for you."
+      }
+    ],
+    "verifiedDate": "2026-11-22"
   }
 ];
 

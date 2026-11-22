@@ -3,8 +3,9 @@ import { Shield, Zap, Heart, RotateCcw, Save, Share2, Check, Award, Sparkles } f
 import { stands } from '../data/stands';
 import { accessories } from '../data/accessories';
 
-const MAX_LEVEL = 50;
-const MAX_STAT_POINTS = MAX_LEVEL * 3; // 150 points
+const MAX_LEVEL = 75;
+const MAX_STAT_POINTS = MAX_LEVEL * 3; // 225 points
+const SINGLE_STAT_CAP = 166; // Live single-stat cap verified from Nov 16 patch notes
 
 const SUB_ABILITIES = [
   { id: 'none', name: 'None (Pure Stand)', desc: 'Standard Stand combat without sub-ability moveset' },
@@ -36,9 +37,9 @@ export default function BuildMaker() {
     const sub = params.get('sub');
 
     if (stand && stands.some((s) => s.slug === stand)) setSelectedStandSlug(stand);
-    if (!isNaN(h)) setHealthPoints(Math.max(0, Math.min(150, h)));
-    if (!isNaN(d)) setDamagePoints(Math.max(0, Math.min(150, d)));
-    if (!isNaN(a)) setAbilityPoints(Math.max(0, Math.min(150, a)));
+    if (!isNaN(h)) setHealthPoints(Math.max(0, Math.min(SINGLE_STAT_CAP, h)));
+    if (!isNaN(d)) setDamagePoints(Math.max(0, Math.min(SINGLE_STAT_CAP, d)));
+    if (!isNaN(a)) setAbilityPoints(Math.max(0, Math.min(SINGLE_STAT_CAP, a)));
     if (sub && SUB_ABILITIES.some((s) => s.id === sub)) setSelectedSubAbility(sub);
   }, []);
 
@@ -81,14 +82,15 @@ export default function BuildMaker() {
   const handlePointChange = (setter: (n: number) => void, current: number, delta: number) => {
     const target = current + delta;
     if (target < 0) return;
+    if (target > SINGLE_STAT_CAP) return;
     if (delta > 0 && remainingPoints <= 0) return;
     setter(target);
   };
 
   const resetBuild = () => {
-    setHealthPoints(50);
-    setDamagePoints(50);
-    setAbilityPoints(50);
+    setHealthPoints(75);
+    setDamagePoints(75);
+    setAbilityPoints(75);
   };
 
   const copyShareLink = () => {
@@ -130,7 +132,7 @@ export default function BuildMaker() {
             Interactive Stat Simulator
           </div>
           <h3 className="text-xl font-black tracking-tight mt-0.5">Stand Out Character Build &amp; Stats Maker</h3>
-          <p className="text-xs text-emerald-200">Max Level 50 Cap • 150 Available Stat Points • Set Bonus Calculations</p>
+          <p className="text-xs text-emerald-200">Level 75 Live Cap • 225 Available Stat Points • 166 Single-Stat Cap (Level 50 / 150 SP legacy support)</p>
         </div>
 
         <div className="flex items-center gap-2">
@@ -235,12 +237,12 @@ export default function BuildMaker() {
                 <input
                   type="range"
                   min="0"
-                  max="150"
+                  max={SINGLE_STAT_CAP}
                   value={healthPoints}
                   onChange={(e) => {
                     const val = parseInt(e.target.value);
                     const diff = val - healthPoints;
-                    if (diff <= remainingPoints) setHealthPoints(val);
+                    if (diff <= remainingPoints && val <= SINGLE_STAT_CAP) setHealthPoints(val);
                   }}
                   className="w-full accent-rose-600 h-2 bg-slate-200 rounded-lg cursor-pointer"
                 />
@@ -273,12 +275,12 @@ export default function BuildMaker() {
                 <input
                   type="range"
                   min="0"
-                  max="150"
+                  max={SINGLE_STAT_CAP}
                   value={damagePoints}
                   onChange={(e) => {
                     const val = parseInt(e.target.value);
                     const diff = val - damagePoints;
-                    if (diff <= remainingPoints) setDamagePoints(val);
+                    if (diff <= remainingPoints && val <= SINGLE_STAT_CAP) setDamagePoints(val);
                   }}
                   className="w-full accent-amber-600 h-2 bg-slate-200 rounded-lg cursor-pointer"
                 />
@@ -311,12 +313,12 @@ export default function BuildMaker() {
                 <input
                   type="range"
                   min="0"
-                  max="150"
+                  max={SINGLE_STAT_CAP}
                   value={abilityPoints}
                   onChange={(e) => {
                     const val = parseInt(e.target.value);
                     const diff = val - abilityPoints;
-                    if (diff <= remainingPoints) setAbilityPoints(val);
+                    if (diff <= remainingPoints && val <= SINGLE_STAT_CAP) setAbilityPoints(val);
                   }}
                   className="w-full accent-teal-600 h-2 bg-slate-200 rounded-lg cursor-pointer"
                 />

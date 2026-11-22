@@ -86,13 +86,13 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
       </div>
     )}
 
-    {(guide.slug === 'level-up-fast' || guide.slug === 'star-platinum' || guide.slug === 'the-world' || guide.slug === 'king-crimson') && (
+    {(guide.slug === 'level-up-fast' || guide.slug === 'star-platinum' || guide.slug === 'the-world' || guide.slug === 'king-crimson' || guide.slug === 'combat-mechanics') && (
       <div id="build-maker" class="scroll-mt-24 mb-12">
         <div class="mb-3">
           <span class="text-xs font-black uppercase tracking-wider text-purple-800 bg-purple-100 px-2 py-0.5 rounded-full">
             Interactive Stat Calculator
           </span>
-          <h2 class="text-lg font-black text-slate-900 mt-1">Plan Your Character Stat Point Distribution (150 SP Max)</h2>
+          <h2 class="text-lg font-black text-slate-900 mt-1">Plan Your Character Stat Point Distribution (Level 75 / 225 SP Cap)</h2>
         </div>
         <BuildMaker client:load />
       </div>

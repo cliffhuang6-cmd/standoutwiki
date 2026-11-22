@@ -88,7 +88,7 @@ export const siteConfig: {
       children: [
         { label: 'Tools Hub Directory', href: '/tools/', desc: 'All interactive calculators & simulators' },
         { label: 'Arrow Probability Calc', href: '/tools/#calculator', desc: 'Bernoulli probability odds calculator' },
-        { label: '150-Point Build Maker', href: '/tools/#build-maker', desc: 'Max Level 50 stat simulator' },
+        { label: '225-Point Build Maker', href: '/tools/#build-maker', desc: 'Max Level 75 stat simulator' },
         { label: 'Rokakaka Mutation Mixer', href: '/tools/#mixer', desc: '33 mutation formulas & garden seeds' }
       ]
     },
@@ -97,9 +97,12 @@ export const siteConfig: {
       href: '/guides/',
       children: [
         { label: 'Guides Hub', href: '/guides/', desc: 'All walkthroughs and progression guides' },
+        { label: 'Combat Mechanics & Parry', href: '/guides/combat-mechanics/', desc: '0.12s parry window, posture & combos' },
         { label: 'Beginner Guide', href: '/guides/beginner-guide/', desc: 'Starter tutorial & first hour guide' },
         { label: 'Controls & Keybinds', href: '/guides/controls/', desc: 'PC, Mobile touch & Controller keybinds' },
-        { label: 'Level Up Fast (1-50)', href: '/guides/level-up-fast/', desc: 'Optimal EXP loop to max level' },
+        { label: 'Level Up Fast (1-75)', href: '/guides/level-up-fast/', desc: 'Optimal EXP loop to max level' },
+        { label: '77 Rings Raid Guide', href: '/guides/77-rings-raid/', desc: 'Tarkus & DIO boss strategies' },
+        { label: 'Stand Skins & Alt Colors', href: '/guides/stand-out-skins/', desc: 'Unlock and equip Alt 1-3 color schemes' },
         { label: 'Dalas Farming Routes', href: '/guides/farm-dalas/', desc: 'Highest payout cash delivery routes' },
         { label: 'Raids & Dungeons', href: '/guides/raids/', desc: 'Train Raid, Highway Star & 77 Rings' },
         { label: 'World Bosses & Drops', href: '/guides/bosses/', desc: 'Spawns, mechanics & guaranteed drops' },
@@ -136,9 +139,12 @@ export const siteConfig: {
     {
       title: 'Guides & Walkthroughs',
       links: [
+        { label: 'Combat Mechanics & Parry', href: '/guides/combat-mechanics/' },
         { label: 'Beginner Starter Guide', href: '/guides/beginner-guide/' },
         { label: 'Game Controls & Keybinds', href: '/guides/controls/' },
-        { label: 'Fast Leveling (1-50)', href: '/guides/level-up-fast/' },
+        { label: 'Fast Leveling (1-75)', href: '/guides/level-up-fast/' },
+        { label: '77 Rings Raid Guide', href: '/guides/77-rings-raid/' },
+        { label: 'Stand Skins & Alt Colors', href: '/guides/stand-out-skins/' },
         { label: 'Dalas Cash Farming', href: '/guides/farm-dalas/' },
         { label: 'Raids & Dungeons', href: '/guides/raids/' },
         { label: 'World Bosses & Drops', href: '/guides/bosses/' },
