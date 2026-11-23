@@ -5282,6 +5282,753 @@ export const stands: Stand[] = [
       }
     ],
     "verifiedDate": "2026-11-22"
+  },
+  {
+    "slug": "crazy-diamond",
+    "name": "Crazy Diamond",
+    "canonicalUser": "Josuke Higashikata",
+    "jojoPart": "Part 4: Diamond is Unbreakable",
+    "rarity": "Pinnacle",
+    "tier": {
+      "pvp": "S+",
+      "raid": "S+",
+      "farming": "S"
+    },
+    "status": "Playable",
+    "obtainMethod": "Awakened from the Arrow Pool using Mysterious Arrows (~0.50% Pinnacle tier chance), Lucky Arrows (~1.50%), or Bizarre Arrows (~4.40%).",
+    "lore": "Josuke Higashikata’s Crazy Diamond can punch a wall to pieces and put it back together. It can mend someone else’s wounds the same way. Josuke can’t use it on himself or bring anyone back from the dead.",
+    "image": "/images/stands/crazy-diamond.webp",
+    "combatRole": "Support",
+    "passives": [
+      {
+        "name": "Restoration Mode",
+        "description": "Tap G to heal enemies and allies. A full light combo restores up to 20 health before bonuses; a heavy restores 8. Healing can still stagger or push the target. Enough healing during bleedout gets them back on their feet. Crazy Diamond cannot heal its own user or bring back the dead."
+      },
+      {
+        "name": "Reconstruction",
+        "description": "Release over damaged scenery or a vehicle to repair it. Broken prop pieces rebuild in front of the user. Aim at a standing wall, staircase or pillar to lower it, and use wall rubble to raise it again."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Dora Light Combo",
+        "type": "Attack",
+        "description": "Four-strike punch combo. In Restoration Mode, heals up to 20 health before bonuses instead of dealing damage."
+      },
+      {
+        "key": "E",
+        "name": "Dora Barrage",
+        "type": "Barrage",
+        "cooldown": "23s",
+        "damage": "Heavy Guardbreak",
+        "description": "Punch in quick succession and finish with a guardbreak punch. In Restoration Mode, restores 30 health, or 45 at 151 Ability. During Rage the barrage lasts longer and Crazy Diamond can move while punching."
+      },
+      {
+        "key": "R",
+        "name": "Crazy Uppercut",
+        "type": "Heavy",
+        "cooldown": "18s",
+        "damage": "Launch / Guardbreak",
+        "description": "Launch the target with a rising punch. In Restoration Mode, becomes Fixed Donut, grabbing the target, healing them 20 to 30 HP, and clearing negative status effects."
+      },
+      {
+        "key": "T",
+        "name": "Shining Kick",
+        "type": "Attack",
+        "cooldown": "28s",
+        "damage": "Knockdown",
+        "description": "Hold to kick farther, then release where aiming. Charging raises the chance of breaking a leg. Automatically tracks airborne targets. Kicking a Diamond Wall shatters it into projectiles."
+      },
+      {
+        "key": "Y",
+        "name": "Blood Knife",
+        "type": "Attack",
+        "cooldown": "15s",
+        "damage": "Ranged Slash",
+        "description": "Send a slash of blood forward. Anyone hit bleeds and drops crystalline glass shards that can be used for homing attacks."
+      },
+      {
+        "key": "F",
+        "name": "Diamond Wall",
+        "type": "Utility",
+        "cooldown": "20s",
+        "description": "Raise a solid protective wall of reconstructed earth and diamond matter to block incoming projectiles and physical charges."
+      },
+      {
+        "key": "G",
+        "name": "Toggle Restoration Mode",
+        "type": "Utility",
+        "cooldown": "1s",
+        "description": "Toggle between combat damage mode and healing restoration mode."
+      },
+      {
+        "key": "V",
+        "name": "Fresh Pair Of Underwear",
+        "type": "Awakening / EX",
+        "exCost": "1 Bar",
+        "cooldown": "25s",
+        "damage": "Grab & Delayed Barrage",
+        "description": "Grabs through enemy block, heals on contact, and triggers a delayed high-damage barrage 3 seconds later that scales with the amount of health restored."
+      },
+      {
+        "key": "B",
+        "name": "Homing Shards",
+        "type": "Awakening / EX",
+        "exCost": "2 Bars",
+        "cooldown": "30s",
+        "damage": "Tracking Projectiles",
+        "description": "Hurls blood-infused glass shards that automatically home in on marked enemies, dealing heavy piercing damage."
+      }
+    ],
+    "abilityScaling": [
+      "Ability increases Healing Barrage from 30 up to 45 HP at 151+ Ability.",
+      "Ability increases Fixed Donut healing from 20 up to 30 HP.",
+      "Strength scales Dora Barrage and Shining Kick physical damage."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 120,
+        "damage": 55,
+        "ability": 50
+      },
+      "subAbility": "Zeppeli Hamon",
+      "synergyNotes": "Zeppeli Hamon enhances Crazy Diamond melee combos and defense while allowing strong emergency heals."
+    },
+    "pros": [
+      "Best hybrid healer and brawler in the game",
+      "Capable of reviving teammates during bleedout",
+      "Can deconstruct and repair walls and vehicles in PvP and Raids",
+      "True unblockable EX grab with Fresh Pair Of Underwear"
+    ],
+    "cons": [
+      "Cannot heal oneself with Restoration Mode",
+      "High cooldowns on Dora Barrage (23s) and Shining Kick (28s)",
+      "Restoration Mode requires active management to avoid accidentally healing enemies in combat"
+    ],
+    "faqs": [
+      {
+        "q": "How do you revive players with Crazy Diamond?",
+        "a": "Toggle Restoration Mode with G and hit a downed ally who is bleeding out with light attacks or Dora Barrage. Restoring enough health gets them back on their feet."
+      },
+      {
+        "q": "Can Crazy Diamond repair vehicles?",
+        "a": "Yes, Crazy Diamond Reconstruction passive allows Josuke to repair cars and environmental objects by aiming and releasing over damaged machinery."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
+  },
+  {
+    "slug": "the-hand",
+    "name": "The Hand",
+    "canonicalUser": "Okuyasu Nijimura",
+    "jojoPart": "Part 4: Diamond is Unbreakable",
+    "rarity": "Mythical",
+    "tier": {
+      "pvp": "S",
+      "raid": "S",
+      "farming": "A+"
+    },
+    "status": "Playable",
+    "obtainMethod": "Awakened from the Arrow Pool using Mysterious Arrows (~1.5% Mythical tier chance), Lucky Arrows (~4.5%), or Bizarre Arrows (~12%).",
+    "lore": "Okuyasu Nijimura’s The Hand erases whatever its right palm scrapes away. The space on either side closes the gap instantly.",
+    "image": "/images/stands/the-hand.webp",
+    "combatRole": "Offense",
+    "passives": [
+      {
+        "name": "Erased Limbs",
+        "description": "Erasure, Erasure Leap, Bring to Me, Rib Breaker’s grab and Erasure Combo each have a 10% chance to erase an enemy arm and a separate 5% chance to erase a leg. Damaged limbs heavily penalize enemy speed and combat capabilities."
+      },
+      {
+        "name": "Projectile Erasure",
+        "description": "Right-palm scraping swipes automatically erase incoming projectiles directly in front of The Hand."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Right Palm Scrapes",
+        "type": "Attack",
+        "damage": "Heavy Strikes",
+        "description": "Heavy punches scaling equally with Strength and Ability."
+      },
+      {
+        "key": "E",
+        "name": "Barrage",
+        "type": "Barrage",
+        "cooldown": "23s",
+        "damage": "Heavy Guardbreak",
+        "description": "A slower flurry of heavy punches, ending in a guardbreak palm scrape that can be perfect blocked."
+      },
+      {
+        "key": "R",
+        "name": "Erasure",
+        "type": "Heavy",
+        "cooldown": "22s",
+        "damage": "20–42 Erasure Damage",
+        "description": "Suck nearby enemies into your erasure, then swipe with The Hand’s right palm. Deals 20-42 damage, breaks guard, stuns for 0.75s, and destroys terrain and walls."
+      },
+      {
+        "key": "T",
+        "name": "Rib Breaker",
+        "type": "Heavy",
+        "cooldown": "20s",
+        "damage": "Grab / 10-24 Damage",
+        "description": "Grab an enemy through their guard and drive a knee into their ribs, dealing 10-24 damage and stunning for 1.4 seconds for guaranteed follow-up."
+      },
+      {
+        "key": "Y",
+        "name": "Erasure Leap",
+        "type": "Movement",
+        "cooldown": "12s",
+        "damage": "10-24 Damage",
+        "description": "Erase space ahead to dash 47 to 141 studs toward your cursor, taking nearby characters along. Strikes for 10-24 damage on arrival."
+      },
+      {
+        "key": "G",
+        "name": "Pilot Mode",
+        "type": "Utility",
+        "cooldown": "5s",
+        "description": "Release The Hand to pilot it independently within range."
+      },
+      {
+        "key": "V",
+        "name": "Bring to Me",
+        "type": "Awakening / EX",
+        "exCost": "1 Bar",
+        "cooldown": "20s",
+        "damage": "4-12 Damage",
+        "description": "Erase space to pull enemies from up to 87 studs into punching range. Marked enemies move 20% slower and are stunned for 0.3s."
+      },
+      {
+        "key": "B",
+        "name": "Erasure Combo",
+        "type": "Awakening / EX",
+        "exCost": "2 Bars",
+        "cooldown": "28s",
+        "damage": "28-60 Damage",
+        "description": "Swipe with right palm, followed by two punches dealing 28-60 damage, ragdolling enemies for 1.2s."
+      },
+      {
+        "key": "H",
+        "name": "ZA HANDO... ZA WARUDO!",
+        "type": "Awakening / EX",
+        "exCost": "5 Bars",
+        "cooldown": "60s",
+        "damage": "Catastrophic Space Collapse",
+        "description": "Massive arena-wide erasure that collapses space around all enemies in range."
+      }
+    ],
+    "abilityScaling": [
+      "Ability increases Erasure Leap travel distance from 47 studs up to 141 studs at 166 Ability.",
+      "Ability increases Bring to Me range from 67.2 studs up to 87.36 studs.",
+      "Strength and Ability contribute equally to Erasure and Barrage damage."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 100,
+        "damage": 65,
+        "ability": 60
+      },
+      "subAbility": "Vampire",
+      "synergyNotes": "Vampire blood drain and dash synergize with The Hand devastating grab stuns and space-erasing pulls."
+    },
+    "pros": [
+      "High-damage true guardbreak with Erasure",
+      "Long-range space pull with Bring to Me",
+      "Incredible mobility via Erasure Leap (up to 141 studs)",
+      "Chance to sever limbs, permanently debuffing opponents during battle"
+    ],
+    "cons": [
+      "Relatively slow barrage startup compared to Star Platinum",
+      "Requires precise cursor aiming for Erasure Leap and Bring to Me",
+      "High EX cost for ultimate awakening moves"
+    ],
+    "faqs": [
+      {
+        "q": "Can The Hand erase walls and scenery?",
+        "a": "Yes, Erasure physically deletes destructible obstacles and breakable walls, allowing bypass of buildings."
+      },
+      {
+        "q": "What triggers the limb erasure passive?",
+        "a": "Erasure, Erasure Leap, Bring to Me, and Rib Breaker each roll a 10% chance to sever an arm and 5% chance to sever a leg."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
+  },
+  {
+    "slug": "bad-company",
+    "name": "Bad Company",
+    "canonicalUser": "Keicho Nijimura",
+    "jojoPart": "Part 4: Diamond is Unbreakable",
+    "rarity": "Mythical",
+    "tier": {
+      "pvp": "S",
+      "raid": "S+",
+      "farming": "S"
+    },
+    "status": "Playable",
+    "obtainMethod": "Awakened from the Arrow Pool using Mysterious Arrows (~1.5% Mythical tier chance), Lucky Arrows (~4.5%), or Bizarre Arrows (~12%).",
+    "lore": "Keicho Nijimura commands Bad Company, a miniature army of riflemen, Green Berets, tanks and attack helicopters. Their weapons fire live rounds.",
+    "image": "/images/stands/bad-company.webp",
+    "combatRole": "Zoner",
+    "passives": [
+      {
+        "name": "Military Might",
+        "description": "Starts with 14 Military Might: 3 Infantry units (2 Might each), 1 Green Beret unit (2 Might), 1 Tank (3 Might), and 1 Attack Helicopter (3 Might). Units destroyed by enemies take 25 seconds to replenish unless dismissed manually."
+      },
+      {
+        "name": "Squad Specialization",
+        "description": "Tanks take 50% reduced projectile damage and fire cannon shells. Helicopters alternate between gunfire and rockets. Green Berets remain stealthed until within 10 studs, ambushing and stabbing for 4 seconds."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Infantry Volley",
+        "type": "Attack",
+        "damage": "Bullet Flurry",
+        "description": "Commands stationed infantry riflemen to fire concentrated bursts of live ammunition."
+      },
+      {
+        "key": "E",
+        "name": "Focus Fire",
+        "type": "Attack",
+        "cooldown": "10s",
+        "damage": "Ability Scaling",
+        "description": "Mark an enemy for 6 seconds. All riflemen, tanks, and helicopters in range immediately open fire on the marked target. Damage scales 100% with Ability."
+      },
+      {
+        "key": "R",
+        "name": "Maneuver",
+        "type": "Movement",
+        "cooldown": "1s",
+        "description": "Send the selected unit squad to hold a tactical perimeter up to 60 studs away."
+      },
+      {
+        "key": "T",
+        "name": "ATTENTIONNN",
+        "type": "Utility",
+        "cooldown": "1s",
+        "description": "Call all deployed units back to Keicho immediate side."
+      },
+      {
+        "key": "Y",
+        "name": "Paratroopers",
+        "type": "Utility",
+        "cooldown": "18s",
+        "description": "Drop five riflemen by parachute where aiming, creating a fresh Infantry unit (requires 2 open Military Might)."
+      },
+      {
+        "key": "G",
+        "name": "Unit Type / Select All",
+        "type": "Utility",
+        "cooldown": "1s",
+        "description": "Tap G to cycle through active unit types; selected type gains +25% bonus damage. Hold G to select the entire army at once."
+      },
+      {
+        "key": "V",
+        "name": "Full Scale Warfare",
+        "type": "Awakening / EX",
+        "exCost": "2 Bars",
+        "cooldown": "48s",
+        "damage": "All-Out Barrage",
+        "description": "Instantly calls in military reinforcements to fill every empty squad slot in the army for 6 seconds."
+      },
+      {
+        "key": "B",
+        "name": "Atomic Strike",
+        "type": "Awakening / EX",
+        "exCost": "3 Bars",
+        "cooldown": "75s",
+        "damage": "Massive Explosive / Burn",
+        "description": "Launches a tactical silo missile. You have 3 seconds to aim the descending warhead, dealing massive AOE damage and setting survivors on fire. Scales 100% with Ability."
+      }
+    ],
+    "abilityScaling": [
+      "Focus Fire damage scales 100% with Ability points.",
+      "Atomic Strike explosion radius and burn damage scale 100% with Ability points."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 100,
+        "damage": 25,
+        "ability": 100
+      },
+      "subAbility": "Caesar Hamon",
+      "synergyNotes": "Heavy Ability investment maximizes Focus Fire and Atomic Strike damage, while Caesar Hamon bubbles keep melee brawlers away."
+    },
+    "pros": [
+      "Unmatched battlefield zoning and constant suppressing fire",
+      "Autonomous units can hold choke points and defend objectives",
+      "Tanks absorb incoming projectiles",
+      "Atomic Strike deals massive area-of-effect damage in team fights and raids"
+    ],
+    "cons": [
+      "Destroyed squads incur a 25s replacement penalty",
+      "Low direct melee personal defense without troops stationed nearby",
+      "Requires high Ability stat to deal optimal damage"
+    ],
+    "faqs": [
+      {
+        "q": "How does Military Might work?",
+        "a": "You have a cap of 14 Might. Infantry and Green Berets cost 2, while Tanks and Helicopters cost 3. When a unit dies, its Might is locked for 25 seconds."
+      },
+      {
+        "q": "Can you pilot units directly?",
+        "a": "Yes, pressing Ctrl allows you to directly lead selected units, including flying helicopters and ambushing with Green Berets."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
+  },
+  {
+    "slug": "the-lock",
+    "name": "The Lock",
+    "canonicalUser": "Tamami Kobayashi",
+    "jojoPart": "Part 4: Diamond is Unbreakable",
+    "rarity": "Legendary",
+    "tier": {
+      "pvp": "A+",
+      "raid": "B",
+      "farming": "A"
+    },
+    "status": "Playable",
+    "obtainMethod": "Awakened from the Arrow Pool using Mysterious Arrows (~5.0% Legendary tier chance), Lucky Arrows (~15.0%), or Bizarre Arrows.",
+    "lore": "Tamami Kobayashi manifests The Lock upon anyone burdened by guilt. As guilt grows in the victim heart, the lock expands and weighs them down.",
+    "image": "/images/stands/the-lock.webp",
+    "combatRole": "Disruption",
+    "passives": [
+      {
+        "name": "Heart Attack (Guilt Scaling)",
+        "description": "Opponents who damage Tamami or hit his traps accumulate Guilt points. As Guilt accumulates, a massive physical brass padlock appears and grows on the target chest, reducing their move speed, jump height, and posture recovery."
+      },
+      {
+        "name": "Pardon & Decay",
+        "description": "Aim at a wearer within 35 studs and press G to pardon them. When hitting a locked target, light punches remove 2 Guilt and heavies remove 8. Out of combat, Guilt decays at 9 points/sec after 13 seconds."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Gauntlet Strikes",
+        "type": "Attack",
+        "damage": "Blunt Strikes",
+        "description": "Light punches that wear down enemy posture while reducing their Guilt points on hit."
+      },
+      {
+        "key": "E",
+        "name": "Tense Up",
+        "type": "Counter",
+        "cooldown": "10s",
+        "description": "Cower in fear for 0.85s. Catching a direct hit negates all damage and flings Tamami backward. The attacker gains Guilt equal to the damage negated (min. 10). Successful counter halves cooldown."
+      },
+      {
+        "key": "R",
+        "name": "Lock Toss",
+        "type": "Heavy",
+        "cooldown": "12s",
+        "damage": "Ragdoll & Concussion",
+        "description": "Lift a giant padlock overhead and throw it forward. Direct hits knock back, ragdoll, and concuss the target."
+      },
+      {
+        "key": "T",
+        "name": "Schrodinger Cat",
+        "type": "Utility",
+        "exCost": "1 Bar",
+        "cooldown": "20s",
+        "description": "Set down a cardboard box trap for up to 2 minutes. The first enemy to damage or drive over it instantly gains 50 Guilt."
+      },
+      {
+        "key": "Y",
+        "name": "Settlement",
+        "type": "Awakening / EX",
+        "exCost": "1 Bar",
+        "cooldown": "24s",
+        "damage": "Dalas Extortion",
+        "description": "Force a locked target to pay 20 Dalas per lock tier (up to 100 Dalas). Once paid, the lock is removed and Guilt resets to 0."
+      },
+      {
+        "key": "V",
+        "name": "Heavy Conscience",
+        "type": "Awakening / EX",
+        "exCost": "2 Bars",
+        "cooldown": "20s",
+        "damage": "Ground Slam",
+        "description": "Point forward to violently slam any enemy wearing a lock into the ground. Holds targets down for 1 to 3 seconds depending on lock size."
+      },
+      {
+        "key": "B",
+        "name": "Lock and Roll",
+        "type": "Awakening / EX",
+        "exCost": "2 Bars",
+        "cooldown": "25s",
+        "damage": "Pin & Stun",
+        "description": "At 30+ Guilt, pin the wearer to a nearby wall, lamp post, or vehicle for 3.5s to 10s. Allows Tamami to drive away with them attached."
+      }
+    ],
+    "abilityScaling": [
+      "Ability increases Lock and Roll pin duration.",
+      "Ability increases Heavy Conscience slam damage."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 120,
+        "damage": 40,
+        "ability": 65
+      },
+      "subAbility": "Vampire",
+      "synergyNotes": "Vampire survivability and passive regen complement The Lock defensive counter-play and guilt buildup."
+    },
+    "pros": [
+      "Punishes aggressive players heavily via Tense Up counter",
+      "Guilt slows down enemies and sets up guaranteed crowd-control",
+      "Can pin enemies to moving vehicles with Lock and Roll",
+      "Settlement generates easy cash from NPCs in PvE"
+    ],
+    "cons": [
+      "Low offensive burst damage on standard moves",
+      "Guilt naturally decays after 13 seconds without combat",
+      "Requires opponents to attack or step on traps to build Guilt"
+    ],
+    "faqs": [
+      {
+        "q": "How do you give opponents a Lock?",
+        "a": "Catch an opponent attack with Tense Up or have them step on or run over Schrodinger Cat to inflict Guilt, which manifests the Lock."
+      },
+      {
+        "q": "What does Settlement do?",
+        "a": "Settlement extorts 20 to 100 Dalas from a locked enemy, resetting their Guilt while putting coins directly into your pocket."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
+  },
+  {
+    "slug": "cheap-trick",
+    "name": "Cheap Trick",
+    "canonicalUser": "Masazo Kinoto",
+    "jojoPart": "Part 4: Diamond is Unbreakable",
+    "rarity": "Epic",
+    "tier": {
+      "pvp": "A",
+      "raid": "C",
+      "farming": "B"
+    },
+    "status": "Playable",
+    "obtainMethod": "Awakened from the Arrow Pool using Mysterious Arrows (~10.0% Epic tier chance), Lucky Arrows, or Bizarre Arrows.",
+    "lore": "A Stand that clings to its host back and turns attention against them. Cheap Trick cannot be directly unsummoned by its host and seeks to trick enemies into viewing the host back.",
+    "image": "/images/stands/cheap-trick.webp",
+    "combatRole": "Disruption",
+    "passives": [
+      {
+        "name": "Back Clinger",
+        "description": "Cheap Trick permanently clings to the user spine. Host cannot put Cheap Trick away. Any player who looks directly at the host exposed back causes heavy mental damage and triggers host death, transferring the Stand."
+      },
+      {
+        "name": "Host Vulnerability",
+        "description": "Host permanently takes 10% increased damage from behind and attracts NPC aggression from double the normal radius."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Parasitic Scratch",
+        "type": "Attack",
+        "damage": "Fast Chip Damage",
+        "description": "Quick parasitic claw swipes from the host shoulder."
+      },
+      {
+        "key": "E",
+        "name": "Cry For Help",
+        "type": "Utility",
+        "cooldown": "12s",
+        "description": "Shriek loudly, forcing nearby enemies and NPCs to turn their camera perspective directly toward the host."
+      },
+      {
+        "key": "R",
+        "name": "Insult!",
+        "type": "Attack",
+        "cooldown": "10s",
+        "damage": "Provocation / EX Gain",
+        "description": "Gain 15% EX meter while insulting opponents, provoking nearby enemy NPCs and forcing enemy players to rush the host with a light attack."
+      },
+      {
+        "key": "T",
+        "name": "Taunt",
+        "type": "Utility",
+        "cooldown": "12s",
+        "description": "Lower the host or target damage resistance by 15% for 5 seconds."
+      },
+      {
+        "key": "Y",
+        "name": "SCREAM!",
+        "type": "Attack",
+        "cooldown": "20s",
+        "damage": "Stun & Deafen",
+        "description": "Screams directly into the ear of the target or host, stunning them for the duration of the animation and deafening them for 10 seconds."
+      },
+      {
+        "key": "V",
+        "name": "Powerful Grip",
+        "type": "Awakening / EX",
+        "exCost": "1 Bar",
+        "cooldown": "14s",
+        "damage": "True Spinal Damage",
+        "description": "Violently squeezes the host spine, dealing true damage and stunning them for 1 second."
+      }
+    ],
+    "abilityScaling": [
+      "Ability increases Insult EX meter gain from 15% up to 25%.",
+      "Ability extends SCREAM stun duration."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 120,
+        "damage": 25,
+        "ability": 80
+      },
+      "subAbility": "Jonathan Hamon",
+      "synergyNotes": "High Health helps withstand Cheap Trick self-damage while Jonathan Hamon defense mitigates back-stab vulnerabilities."
+    },
+    "pros": [
+      "Forces enemy players to look at your back, triggering instant defeat conditions in PvP",
+      "Generates rapid EX meter via Insult!",
+      "SCREAM provides a reliable point-blank stun and deafen",
+      "Extremely chaotic and disruptive in team battles"
+    ],
+    "cons": [
+      "Permanently active and cannot be unsummoned",
+      "Host suffers defensive debuffs and increased NPC aggression",
+      "Difficult to play in solo raids"
+    ],
+    "faqs": [
+      {
+        "q": "Can you unsummon Cheap Trick?",
+        "a": "No, Cheap Trick cannot be unsummoned normally. You must use a Rokakaka fruit or have someone look at your back while you die to transfer it."
+      },
+      {
+        "q": "What happens when an enemy looks at your back?",
+        "a": "Viewing Cheap Trick on someone back rips off the host back, killing the host and transferring Cheap Trick to the viewer."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
+  },
+  {
+    "slug": "dolly-dagger",
+    "name": "Dolly Dagger",
+    "canonicalUser": "Vittorio Cataldi",
+    "jojoPart": "Part 5: Golden Wind (Purple Haze Feedback)",
+    "rarity": "Pinnacle",
+    "tier": {
+      "pvp": "S+",
+      "raid": "A",
+      "farming": "B"
+    },
+    "status": "Playable",
+    "obtainMethod": "Exclusive competitive reward obtained by reaching 1850 ELO in Ranked Mode Beta.",
+    "lore": "Vittorio Cataldi carries Dolly Dagger, a Stand bound to a Scottish dirk dagger. When someone is reflected in the blade, seven tenths of the damage dealt to Vittorio passes to them.",
+    "image": "/images/stands/dolly-dagger.webp",
+    "combatRole": "Speed / Hit-and-Run",
+    "passives": [
+      {
+        "name": "Reflective Dagger",
+        "description": "With Dolly Dagger equipped, landing your 5th M1 inflicts 3 seconds of Bleed. While the dagger is stuck in an opponent or planted into the ground, you fight with unarmed fists until retrieving it with Pull Free."
+      },
+      {
+        "name": "Damage Redirection",
+        "description": "While an enemy face is captured in the blade via Capture Reflection or Shed the Blame, 70% of all incoming damage suffered by Vittorio is instantly transferred to that enemy."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Dagger Combo",
+        "type": "Attack",
+        "damage": "5-Hit Bleed Combo",
+        "description": "With the dagger in hand, land your 5th M1 to inflict 3 seconds of Bleed. When unarmed, attacks become rapid fist strikes."
+      },
+      {
+        "key": "E",
+        "name": "Swift Stabs",
+        "type": "Attack",
+        "cooldown": "9s",
+        "damage": "Bleed & Knockdown",
+        "description": "Stab twice in rapid succession. The second stab makes your opponent bleed and knocks them off their feet."
+      },
+      {
+        "key": "R",
+        "name": "Sinking Suspicion",
+        "type": "Heavy",
+        "cooldown": "12s",
+        "damage": "Guardbreak Grab",
+        "description": "Grab an opponent through their guard and drive Dolly Dagger into them. Press again up close to pull it free, knocking them down and inflicting severe bleed."
+      },
+      {
+        "key": "T",
+        "name": "Disregard",
+        "type": "Attack",
+        "cooldown": "13s",
+        "damage": "Thrown Dagger / Headshot",
+        "description": "Throw Dolly Dagger where aiming. Headshots deal massive bonus damage. A clean hit leaves the dagger stuck in the target. On a miss, it boomerangs back, cutting enemies in its path."
+      },
+      {
+        "key": "Y",
+        "name": "Steadier Than Hands",
+        "type": "Utility",
+        "cooldown": "22s",
+        "description": "Drive Dolly Dagger into the ground. While staying within 12 studs, 100% of incoming attack damage reflects back to whoever dealt it. Press again within 45 studs to trigger Phantasmagoria Burst, blinding nearby foes."
+      },
+      {
+        "key": "G",
+        "name": "Capture Reflection",
+        "type": "Utility",
+        "cooldown": "5s",
+        "description": "Hold G and aim at an enemy within 30 studs for 1.5 seconds. Their face stays reflected in the blade for 15 seconds, enabling Shed the Blame damage transfer."
+      },
+      {
+        "key": "V",
+        "name": "Shed the Blame",
+        "type": "Awakening / EX",
+        "exCost": "2 Bars",
+        "cooldown": "20s",
+        "damage": "70% Damage Reflection",
+        "description": "Capture a face first, then spend 2 EX bars. For 12 seconds, the reflected enemy suffers 70% of each combat hit meant for Vittorio."
+      }
+    ],
+    "abilityScaling": [
+      "Ability extends Steadier Than Hands reflection duration and Phantasmagoria Burst blind time.",
+      "Strength increases Dagger Combo and Swift Stabs bleed ticks."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 120,
+        "damage": 55,
+        "ability": 50
+      },
+      "subAbility": "Vampire",
+      "synergyNotes": "Vampire night regeneration and blood pool allow Vittorio to survive incoming blows while reflecting 70% of all damage directly back to opponents."
+    },
+    "pros": [
+      "Devastating 70% damage reflection with Shed the Blame",
+      "100% ground reflection zone with Steadier Than Hands",
+      "Unblockable grab and dagger planting with Sinking Suspicion",
+      "High-mobility ranged poke with boomerang Disregard throw"
+    ],
+    "cons": [
+      "Requires reaching 1850 ELO in Ranked Mode Beta to unlock",
+      "Fighting unarmed while dagger is planted or embedded removes dagger skills",
+      "Reflected damage cannot directly deliver the final finishing blow"
+    ],
+    "faqs": [
+      {
+        "q": "How do you unlock Dolly Dagger?",
+        "a": "Dolly Dagger is exclusively unlocked by achieving 1850 ELO in the Ranked Mode Beta playlist (requires Level 60+)."
+      },
+      {
+        "q": "How does Shed the Blame work?",
+        "a": "First hold G to capture an opponent reflection in the blade for 1.5s, then press V with 2 EX bars. For 12 seconds, 70% of all damage you take transfers to them."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
   }
 ];
 

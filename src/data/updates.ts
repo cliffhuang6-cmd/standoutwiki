@@ -2,6 +2,37 @@ import type { UpdateLog } from '../types';
 
 export const updateLogs: UpdateLog[] = [
   {
+    date: '2026-11-22',
+    title: 'Update 1: Six New Stands, Ranked Mode Beta, Pluck & Gang Overhaul',
+    summary: 'Roblox STAND OUT Update 1 introduces 6 new Stands (Crazy Diamond, The Hand, Bad Company, The Lock, Cheap Trick, Dolly Dagger), competitive Ranked Mode Beta, Universal Evasive mechanic, Pluck weapon movesets, Fruit Company & Vampire gang factions, and full car tuning system.',
+    changes: [
+      'Added 6 new playable Stands: Crazy Diamond (Pinnacle), The Hand (Mythical), Bad Company (Mythical), The Lock (Legendary), Cheap Trick (Epic), and Dolly Dagger (Exclusive 1850 ELO Ranked Reward).',
+      'Added Ranked Mode [Beta]: 1v1 competitive arena matchmaking with seasonal ELO ratings (Level 60 entry requirement).',
+      'Added Universal Evasive mechanic: Press X (default key) at 1 EX Bar to break out of hitstun or ragdoll, knock nearby enemies away, and deal 10 burst damage (base cooldown: 45s).',
+      'Pluck weapon movesets officially enabled for Jonathan Hamon and Vampire fighting styles.',
+      'Added new Gang Base Factions: Fruit Company (boosted crop growth and mutation speed) and Vampire (mysterious pit and blood reservoir amenities).',
+      'Added Car Tuning System: Upgrade vehicles via Garage Lifts with custom engines (Tuned, Racing, Torque, Supercharged), armor plating, sport/racing/ceramic brakes, bull bar bumpers, security systems, and emergency self-destruct fuses.',
+      'Stand Slot & Builder expansion: Added another free Stand Slot, added a free progression path to unlock Builder, and enabled automatic per-minute progress saving for accessories.',
+      'Gardening rebalance: Private server growth speed adjusted to 0.5x; plant packaging provides a +20% value bonus; excess Rokakakas can now be sold to Big Chop at night.',
+      'Star Platinum & SPTW tuning: Damage toned down across the board; Ora Smash animation remade and bufferable; added new Star Platinum EX ability.',
+      'King Crimson tuning: Overall damage readjusted; Decree improved; Blood Blind reworked; added tandem combo; persistence adjusted from 3x to 1x.',
+      'Beyond the Sea & Big Mouth balance: Jellyfish and Humu HP nerfed with internal hit cooldowns; chip damage reduced 20%; Big Mouth shank barrage and Go for the Throat damage reduced.',
+      'Hamon & Vampire balance: Caesar Hamon healing scaling adjusted; Zeppeli Hamon Sendo Wave Kick steerable with combo extensions; Tornado Overdrive 25% faster with guardbreak on final hit; Vampires can execute downed enemies to prevent revive.',
+      'Added active promo codes: CRAZYDIAMOND and 200KLIKESMASSIVE. Retired code: 100KLIKESHUGE.'
+    ],
+    bugFixes: [
+      'Fixed Cheap Trick being able to damage and kill quest NPCs.',
+      'Fixed Vampire eye lasers stacking damage inside Stand barrages.',
+      'Fixed greenhouse placement restrictions on gang base second floors.',
+      'Fixed Vampire hypnosis breaking time stop state transitions.',
+      'Empowered Pluck M1s now receive their full intended scaling boost.',
+      'Fixed player being able to hold two Pluck swords simultaneously.',
+      'Fixed keybind discrepancies between main game and Ranked Mode.',
+      'Fixed stray Josuke model in Morioh building.',
+      'Console players can now edit keyboard and mouse binds in settings menu.'
+    ]
+  },
+  {
     date: '2026-11-16',
     title: 'Combat Scaling & Stat Overhaul Patch',
     summary: 'Major tuning for stat caps and Time Stop durations, barrage clash chip reduction, leaderboards Heaven\'s Door Prime rewards, and 100KLIKESHUGE milestone code.',

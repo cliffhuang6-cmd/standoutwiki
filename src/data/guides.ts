@@ -2035,7 +2035,8 @@ export const guides: Guide[] = [
       { "id": "combo-scaling", "title": "Combo Damage Scaling & Anti-Teaming i-Frames" },
       { "id": "hp-movement-scaling", "title": "Movement Speed Scaling by Current HP" },
       { "id": "dash-m1-links", "title": "Dash Cooldown (1.2s) & M1 Combo Chains" },
-      { "id": "time-stop-mechanics", "title": "Time Stop Durations & Overwriting Tech" }
+      { "id": "time-stop-mechanics", "title": "Time Stop Durations & Overwriting Tech" },
+      { "id": "universal-evasive", "title": "Universal Evasive (Burst Break Mechanic)" }
     ],
     "sections": [
       {
@@ -2120,6 +2121,22 @@ export const guides: Guide[] = [
           "Overwriting Time Stop: If an opponent initiates Time Stop, any player holding a Time Stop stand can press their TS input during the freeze to overwrite and seize control of the freeze window.",
           "Road Roller Tuning: Road Roller now flies higher into the sky, lands approximately 2.0s after activation, and requires 1 EX Bar.",
           "Anti-Camping: Combat-tagged players who jump into the ocean to stall out Time Stop or combat tags are now attacked by a predatory offshore shark."
+        ]
+      },
+      {
+        "id": "universal-evasive",
+        "title": "Universal Evasive (Burst Break Mechanic)",
+        "content": "Introduced in Update 1, Universal Evasive gives every player a guaranteed defensive combo breaker regardless of their equipped Stand. Triggered with the X key (or dedicated mobile HUD button), your character unleashes a burst of energy that immediately breaks hitstun, knocks back nearby assailants, and clears active ragdoll animations.",
+        "steps": [
+          "Keybind / Activation: Press X key while grounded or caught in an enemy combo chain.",
+          "EX Gauge Requirement: Consumes exactly 1 EX Bar (25% of your total EX meter). Cannot be activated if meter is empty.",
+          "Base Cooldown: 45.0 seconds. Can be monitored on your screen edge cooldown tracker.",
+          "Defensive Burst Damage: Releases a small kinetic shockwave inflicting 10 flat damage to all enemies within 8 studs.",
+          "Combo Breaker Utility: Cancels true hitstun and ragdoll states, granting 0.40s of intangibility to roll away."
+        ],
+        "tips": [
+          "Do not waste Universal Evasive on simple light M1 taps; save your 1 EX Bar to break high-damage setups like The Hand's Erasure Leap or Crazy Diamond's Restoration Wall traps.",
+          "If an opponent baits out your Universal Evasive early, you are vulnerable to full 40-hit combo scaling for the next 45 seconds."
         ]
       }
     ]
@@ -2333,7 +2350,191 @@ export const guides: Guide[] = [
         ]
       }
     ]
+  },
+  {
+    "slug": "ranked-mode",
+    "title": "Stand Out Ranked Mode Guide: ELO Tiers, 1v1 Arena & Dolly Dagger",
+    "category": "Endgame & Raids",
+    "description": "Comprehensive guide to 1v1 Ranked Mode in Roblox STAND OUT. Learn Level 60 entry requirements, Best-of-3 arena rules, ELO tiers, and how to reach 1,850 ELO to unlock the exclusive Pinnacle Stand Dolly Dagger.",
+    "readingTime": "8 min read",
+    "updatedDate": "2026-11-22",
+    "tableOfContents": [
+      { "id": "entry-requirements", "title": "Entry Requirements & Matchmaking Format" },
+      { "id": "competitive-rules", "title": "Competitive Rules & Arena Mechanics" },
+      { "id": "elo-tier-structure", "title": "ELO Rating Tiers & Division Thresholds" },
+      { "id": "dolly-dagger-unlock", "title": "1,850 ELO Milestone: Unlocking Dolly Dagger" },
+      { "id": "top-meta-picks", "title": "Ranked Meta Stand Tier Picks & Matchups" },
+      { "id": "penalty-system", "title": "Combat Tag Leaver Penalties & Anti-Disconnect" }
+    ],
+    "sections": [
+      {
+        "id": "entry-requirements",
+        "title": "Entry Requirements & Matchmaking Format",
+        "content": "Ranked Mode Beta is the premier competitive 1v1 arena experience in STAND OUT. Designed for endgame players who have perfected their parry timings and builds, the queue matches combatants worldwide based on hidden MMR and visible ELO score.",
+        "steps": [
+          "Level Gate: Requires Level 60 minimum. Standless characters and players below Level 60 cannot enter the queue.",
+          "Queue Access: Enter matchmaking via the in-game Phone app under the Ranked icon, or speak to the Arena Gatekeeper at the Stadium.",
+          "Format: Best-of-3 round format inside enclosed gladiator arenas (no environmental out-of-bounds stalling).",
+          "Match Clock: 3 minutes per round. If the timer expires, the duelist with higher remaining HP percentage wins the round."
+        ],
+        "tips": [
+          "Reach max Level 75 and allocate all 225 stat points before entering Ranked, as raw HP and Power stats directly affect combo survival.",
+          "Warm up parry timings in free-for-all public servers first to calibrate your 0.12s reaction window."
+        ]
+      },
+      {
+        "id": "competitive-rules",
+        "title": "Competitive Rules & Arena Mechanics",
+        "content": "To ensure pure skill-based combat, Ranked Mode introduces standardized competitive restrictions that prevent consumable abuse and infinite stalling.",
+        "steps": [
+          "Consumable Lock: Healing items, food, drinks, and Rokakaka fruits cannot be consumed once inside the arena.",
+          "Sub-Ability Integration: Hamon (Jonathan, Caesar, Zeppeli) and Vampire are fully permitted with their respective gauge mechanics.",
+          "Universal Evasive: Players have access to the X-key Universal Evasive (45s base cooldown, costs 1 EX Bar).",
+          "Time Stop Global Cap: Time Stop duration inside Ranked matches is capped to prevent unreactable 100-to-0 rounds."
+        ],
+        "warning": "Disabling player shadows or using uncapped FPS external injectors that tamper with physics ticks is monitored and subject to competitive matchmaking bans."
+      },
+      {
+        "id": "elo-tier-structure",
+        "title": "ELO Rating Tiers & Division Thresholds",
+        "content": "All players begin their competitive journey at 1,000 baseline ELO. Winning matches earns between +18 and +32 ELO depending on the opponent's rating differential, while defeats deduct a similar amount.",
+        "table": {
+          "headers": ["Rank Tier", "ELO Range", "Division Badge", "Seasonal Rewards"],
+          "rows": [
+            ["Bronze", "1,000 – 1,199 ELO", "Bronze Crest", "5,000 Dalas + 1 Lucky Arrow"],
+            ["Silver", "1,200 – 1,399 ELO", "Silver Crest", "15,000 Dalas + 2 Lucky Arrows"],
+            ["Gold", "1,400 – 1,599 ELO", "Gold Crest", "30,000 Dalas + Bizarre Arrow"],
+            ["Platinum", "1,600 – 1,749 ELO", "Platinum Crest", "50,000 Dalas + Platinum Nameplate"],
+            ["Diamond", "1,750 – 1,849 ELO", "Diamond Crest", "75,000 Dalas + Glowing Diamond Aura"],
+            ["Master", "1,850 – 2,099 ELO", "Master Crest", "Dolly Dagger Stand Chip + Exclusive Ranked Title"],
+            ["Pinnacle (Top 50)", "2,100+ ELO", "Grandmaster Crest", "Golden Stand Aura + Top 50 Leaderboard Badge"]
+          ]
+        }
+      },
+      {
+        "id": "dolly-dagger-unlock",
+        "title": "1,850 ELO Milestone: Unlocking Dolly Dagger",
+        "content": "The crowning achievement of Ranked Mode Beta is reaching 1,850 ELO (Master division). Upon reaching this rating, the system automatically deposits the Dolly Dagger Stand Chip into your inventory or D'Arby vault. Dolly Dagger (inspired by Purple Haze Feedback's Vittorio Cataldi) features unparalleled damage-reflection counterplay (70% standard reflect, 100% ground pin reflect), making it one of the most fearsome duelists in the entire game.",
+        "steps": [
+          "Reach 1,850 ELO in standard 1v1 Ranked ladder.",
+          "Collect your Dolly Dagger Chip directly from the ranked rewards tab in your Phone.",
+          "Even if your rating subsequently drops below 1,850 later in the season, your unlocked Dolly Dagger chip is permanent."
+        ],
+        "tips": [
+          "Dolly Dagger excels against burst brawlers like Star Platinum, The Hand, and Crazy Diamond by turning their high-damage swings back onto themselves."
+        ]
+      },
+      {
+        "id": "top-meta-picks",
+        "title": "Ranked Meta Stand Tier Picks & Matchups",
+        "content": "In Season 1, mobility, burst punishers, and defensive counters dominate the high-ELO ladder.",
+        "steps": [
+          "Crazy Diamond (Z Tier): Immense close-quarters boxing, Restoration Wall terrain control, and Bearing Shot ranged poke.",
+          "Star Platinum & SPTW (Z Tier): Reliable 0.12s parry punishes, Ora Smash guardbreak, and Time Stop combo extensions.",
+          "The Hand (S+ Tier): 20-42 damage Erasure strikes with high limb-removal threat and Erasure Leap gap-closers.",
+          "The Lock (S Tier): Inflicts guilt stacks on aggressive opponents, punishing overzealous barrage spammers with heavy extortion slows."
+        ]
+      },
+      {
+        "id": "penalty-system",
+        "title": "Combat Tag Leaver Penalties & Anti-Disconnect",
+        "content": "Quitting or disconnecting during an active Ranked match triggers automatic forfeiture.",
+        "steps": [
+          "Leaving during an active match counts as an immediate 0-2 match loss.",
+          "The leaver loses 40 ELO flat (double normal loss penalty).",
+          "Repeated combat disconnects within 24 hours incur an escalating 15-minute to 2-hour queue timeout."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "car-tuning",
+    "title": "Stand Out Car Tuning Guide: Upgrades, Parts & Customization",
+    "category": "Progression",
+    "description": "Master vehicle mechanics and car tuning in Roblox STAND OUT. In-depth guide to using the Gang Car Lift, installing V6/V8/Twin Turbo engines, defensive armor plating, security alarms, and self-destruct devices.",
+    "readingTime": "7 min read",
+    "updatedDate": "2026-11-22",
+    "tableOfContents": [
+      { "id": "car-lift-access", "title": "Accessing the Car Lift (Gang Garage & Lenny's)" },
+      { "id": "engine-tuning", "title": "Engine & Transmission Upgrades (Speed & Acceleration)" },
+      { "id": "armor-reinforcement", "title": "Armor Plating, Reinforced Windows & Bumpers" },
+      { "id": "utility-electronics", "title": "Utility Systems: Alarms, Radar Jammer & Self-Destruct" },
+      { "id": "costs-rep-requirements", "title": "Upgrade Costs & Gang Reputation Requirements" },
+      { "id": "tactical-vehicle-combat", "title": "Vehicle Combat Tactics & Stand Synergy" }
+    ],
+    "sections": [
+      {
+        "id": "car-lift-access",
+        "title": "Accessing the Car Lift (Gang Garage & Lenny's)",
+        "content": "Update 1 overhauled vehicle mechanics in STAND OUT, converting standard street cars into customizable tactical assets. To tune your vehicle, you must drive onto a specialized hydraulic Car Lift.",
+        "steps": [
+          "Public Car Lift: Located inside Lenny's Auto Repair shop downtown. Accessible by all players for standard Dalas fees.",
+          "Gang Car Lift: Gangs that capture territory or purchase a Gang Garage unlock private car lifts offering 20% discount on all tuning parts.",
+          "Activation: Drive your vehicle onto the yellow boundary markers on the lift, exit the driver seat, and interact with the wall control console."
+        ],
+        "tips": [
+          "Always repair vehicle body health at Lenny's before applying performance mods, as wrecked chassis cannot support high-tier engines."
+        ]
+      },
+      {
+        "id": "engine-tuning",
+        "title": "Engine & Transmission Upgrades (Speed & Acceleration)",
+        "content": "Upgrading your vehicle's powerplant determines top speed, acceleration curves, and hill-climbing torque across Honolulu.",
+        "table": {
+          "headers": ["Engine Tier", "Top Speed", "Acceleration Bonus", "Cost (Dalas)", "Reqs"],
+          "rows": [
+            ["Stock Inline-4", "45 studs/sec", "Baseline (1.0x)", "Free / Default", "None"],
+            ["Tuned V6 Engine", "65 studs/sec", "+30% Acceleration", "12,500 Dalas", "Level 20"],
+            ["High-Torque V8", "85 studs/sec", "+65% Acceleration", "35,000 Dalas", "Level 40"],
+            ["Twin Turbo Supercharger", "110 studs/sec", "+110% Acceleration", "80,000 Dalas", "Level 60 + Gang Rep 3"]
+          ]
+        }
+      },
+      {
+        "id": "armor-reinforcement",
+        "title": "Armor Plating, Reinforced Windows & Bumpers",
+        "content": "Vehicles are frequently targeted by enemy Stand barrages, Highway Star traps, and projectile fire during gang cargo transport. Defensive upgrades increase vehicle hit points and shield occupants from stray bullets.",
+        "steps": [
+          "Heavy Plating: Increases car base HP from 250 up to 750 HP, absorbing significant explosive and barrage damage.",
+          "Reinforced Bumper: Transforms your front grill into a battering ram, dealing up to 45 crash damage to enemies on foot.",
+          "Bulletproof Glass: Prevents snipers and pistol users from shooting the driver through front and side windows.",
+          "Offroad Tires: Eliminates traction loss when driving across sand dunes, grass verges, and mountainous slopes."
+        ]
+      },
+      {
+        "id": "utility-electronics",
+        "title": "Utility Systems: Alarms, Radar Jammer & Self-Destruct",
+        "content": "Advanced electronics turn your car into a high-tech fortress or a devastating ambush weapon.",
+        "steps": [
+          "Security Alarm: Sounds a loud klaxon and triggers a localized 5-second stun if an unauthorized player attempts to hotwire your car.",
+          "Radar Jammer: Hides your vehicle icon and passengers from enemy Huber and minimap tracking.",
+          "Self-Destruct Module: Installed in the glove compartment. The driver can trigger a 3-second countdown that detonates the vehicle for 120 massive AOE damage to surrounding enemies."
+        ],
+        "warning": "Triggering Self-Destruct destroys your car chassis, requiring a tow retrieval fee at Lenny's to respawn the vehicle."
+      },
+      {
+        "id": "costs-rep-requirements",
+        "title": "Upgrade Costs & Gang Reputation Requirements",
+        "content": "Top-tier vehicle parts require both financial investment in Dalas and standing within your Gang syndicate.",
+        "steps": [
+          "Complete Gang Cargo Deliveries to accumulate Gang Reputation tokens.",
+          "Gang members holding rank of Lieutenant or higher can authorize communal garage funds for vehicle fleet tuning.",
+          "Discounts: Upgrades purchased at a territory-controlled Gang Garage are discounted by 20% compared to Lenny's public garage."
+        ]
+      },
+      {
+        "id": "tactical-vehicle-combat",
+        "title": "Vehicle Combat Tactics & Stand Synergy",
+        "content": "Certain Stands synergize extraordinarily well with tuned vehicles.",
+        "tips": [
+          "Crazy Diamond Synergy: Crazy Diamond's Reconstruction (H) can instantly repair wrecked or smoking vehicles back to 100% HP during high-speed chases.",
+          "Bad Company Synergy: Soldiers and Tanks can fire from the back of an armored flatbed truck, creating a mobile artillery fortress.",
+          "The Hand Synergy: The Hand can use Bring to Me (E) while riding shotgun to pull fleeing enemy drivers straight out of their cockpits."
+        ]
+      }
+    ]
   }
+
 ];
 
 export const guidesBySlug = new Map(guides.map((g) => [g.slug, g]));
