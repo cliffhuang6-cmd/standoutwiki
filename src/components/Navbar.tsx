@@ -175,7 +175,7 @@ export default function Navbar() {
                     onMouseEnter={() => handleMouseEnter(item.label)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <div className="bg-white/98 backdrop-blur-md rounded-2xl shadow-2xl shadow-slate-900/12 border border-slate-200/90 p-2.5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+                    <div className="bg-white rounded-2xl shadow-2xl shadow-slate-900/15 border border-slate-200 p-2.5 max-h-[calc(100vh-5rem)] overflow-y-auto">
                       {/* Items Grid/List */}
                       {config.isMegaMenu ? (
                         <div className="grid grid-cols-2 gap-1.5">
