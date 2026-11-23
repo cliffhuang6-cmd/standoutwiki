@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Swords, Key, Wrench } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, X, ChevronDown, ChevronRight, Swords, Key, Wrench } from 'lucide-react';
 import { siteConfig } from '../data/site';
 import SearchModal from './SearchModal';
 
@@ -7,6 +7,8 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [currentPath, setCurrentPath] = useState<string>('');
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -14,8 +16,48 @@ export default function Navbar() {
     }
   }, []);
 
+  // Keyboard navigation & click outside listeners
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveDropdown(null);
+        setMobileMenuOpen(false);
+      }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleMouseEnter = (label: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setActiveDropdown(label);
+  };
+
+  const handleMouseLeave = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 120);
+  };
+
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
+    setActiveDropdown((prev) => (prev === label ? null : label));
   };
 
   const isItemActive = (href: string, children?: { href: string }[]) => {
@@ -26,6 +68,48 @@ export default function Navbar() {
       return true;
     }
     return false;
+  };
+
+  const getDropdownConfig = (label: string) => {
+    if (label === 'Guides') {
+      return {
+        widthClass: 'w-[540px]',
+        alignClass: 'right-0',
+        isMegaMenu: true,
+        hubHref: '/guides/',
+        hubText: 'View All Guides',
+        subtitle: 'Comprehensive walkthroughs & boss guides'
+      };
+    }
+    if (label === 'Items & Systems') {
+      return {
+        widthClass: 'w-[340px]',
+        alignClass: 'left-0',
+        isMegaMenu: false,
+        hubHref: '/items/',
+        hubText: 'View Items & Systems',
+        subtitle: 'Game mechanics, consumables & gear'
+      };
+    }
+    if (label === 'Tools') {
+      return {
+        widthClass: 'w-[320px]',
+        alignClass: 'right-0',
+        isMegaMenu: false,
+        hubHref: '/tools/',
+        hubText: 'View Tools Directory',
+        subtitle: 'Calculators & build simulators'
+      };
+    }
+    // Stands
+    return {
+      widthClass: 'w-[320px]',
+      alignClass: 'left-0',
+      isMegaMenu: false,
+      hubHref: '/stands/',
+      hubText: 'View Stand Database',
+      subtitle: 'Movesets, stats & tier rankings'
+    };
   };
 
   return (
@@ -41,27 +125,29 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
+        <nav ref={navRef} className="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
           {siteConfig.navigation.map((item) => {
-            const hasChildren = item.children && item.children.length > 0;
+            const hasChildren = Boolean(item.children && item.children.length > 0);
             const active = isItemActive(item.href, item.children);
+            const isOpen = activeDropdown === item.label;
+            const config = hasChildren ? getDropdownConfig(item.label) : null;
 
             return (
               <div
                 key={item.label}
-                className="relative group"
-                onMouseEnter={() => hasChildren && setActiveDropdown(item.label)}
-                onMouseLeave={() => hasChildren && setActiveDropdown(null)}
+                className="relative"
+                onMouseEnter={() => hasChildren && handleMouseEnter(item.label)}
+                onMouseLeave={() => hasChildren && handleMouseLeave()}
               >
                 <a
                   href={item.href}
                   className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-bold transition-all ${
-                    active
+                    active || isOpen
                       ? 'text-emerald-950 bg-emerald-100/90 shadow-xs'
                       : 'text-[#163C3A] hover:text-emerald-900 hover:bg-emerald-50/70'
                   }`}
                   aria-haspopup={hasChildren ? 'true' : undefined}
-                  aria-expanded={hasChildren ? activeDropdown === item.label : undefined}
+                  aria-expanded={hasChildren ? isOpen : undefined}
                 >
                   <span>{item.label}</span>
                   {item.badge && (
@@ -73,34 +159,113 @@ export default function Navbar() {
                       {item.badge}
                     </span>
                   )}
-                  {hasChildren && <ChevronDown className="w-3.5 h-3.5 opacity-60 transition-transform group-hover:rotate-180" />}
+                  {hasChildren && (
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 opacity-60 transition-transform duration-200 ${
+                        isOpen ? 'rotate-180 text-emerald-900 opacity-100' : ''
+                      }`}
+                    />
+                  )}
                 </a>
 
                 {/* Dropdown Menu */}
-                {hasChildren && activeDropdown === item.label && (
-                  <div className="absolute left-0 top-full pt-1.5 w-68 animate-fade-in z-50">
-                    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-2 divide-y divide-slate-100">
-                      {item.children?.map((child) => {
-                        const childActive = currentPath === child.href;
-                        return (
-                          <a
-                            key={child.label}
-                            href={child.href}
-                            className={`flex flex-col px-3 py-2 rounded-xl transition-colors group ${
-                              childActive ? 'bg-emerald-50 text-emerald-900' : 'hover:bg-emerald-50'
-                            }`}
-                          >
-                            <span className={`text-xs font-bold ${childActive ? 'text-emerald-900 font-extrabold' : 'text-slate-900 group-hover:text-emerald-800'}`}>
-                              {child.label}
-                            </span>
-                            {child.desc && (
-                              <span className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">
-                                {child.desc}
-                              </span>
-                            )}
-                          </a>
-                        );
-                      })}
+                {hasChildren && isOpen && config && (
+                  <div
+                    className={`absolute top-full pt-1.5 z-50 ${config.alignClass} ${config.widthClass} max-w-[calc(100vw-2rem)] animate-in fade-in slide-in-from-top-1 duration-150`}
+                    onMouseEnter={() => handleMouseEnter(item.label)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="bg-white/98 backdrop-blur-md rounded-2xl shadow-2xl shadow-slate-900/12 border border-slate-200/90 p-2.5 max-h-[calc(100vh-5rem)] overflow-y-auto">
+                      {/* Items Grid/List */}
+                      {config.isMegaMenu ? (
+                        <div className="grid grid-cols-2 gap-1.5">
+                          {item.children?.map((child) => {
+                            const childActive = currentPath === child.href;
+                            return (
+                              <a
+                                key={child.label}
+                                href={child.href}
+                                className={`group/item flex flex-col px-3 py-2.5 rounded-xl transition-all duration-150 ${
+                                  childActive
+                                    ? 'bg-emerald-50 text-emerald-950 font-semibold ring-1 ring-emerald-200/60'
+                                    : 'text-slate-800 hover:bg-emerald-50/70 hover:text-emerald-900'
+                                }`}
+                              >
+                                <div className="flex items-center justify-between gap-1.5">
+                                  <span
+                                    className={`text-[13px] font-bold tracking-tight leading-snug transition-colors ${
+                                      childActive
+                                        ? 'text-emerald-950 font-extrabold'
+                                        : 'text-slate-900 group-hover/item:text-emerald-900'
+                                    }`}
+                                  >
+                                    {child.label}
+                                  </span>
+                                  {childActive && (
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" aria-hidden="true" />
+                                  )}
+                                </div>
+                                {child.desc && (
+                                  <span className="text-[11px] text-slate-500 group-hover/item:text-slate-600 line-clamp-1 mt-0.5 leading-normal font-normal">
+                                    {child.desc}
+                                  </span>
+                                )}
+                              </a>
+                            );
+                          })}
+                        </div>
+                      ) : (
+                        <div className="flex flex-col gap-1">
+                          {item.children?.map((child) => {
+                            const childActive = currentPath === child.href;
+                            return (
+                              <a
+                                key={child.label}
+                                href={child.href}
+                                className={`group/item flex flex-col px-3 py-2.5 rounded-xl transition-all duration-150 ${
+                                  childActive
+                                    ? 'bg-emerald-50 text-emerald-950 font-semibold ring-1 ring-emerald-200/60'
+                                    : 'text-slate-800 hover:bg-emerald-50/70 hover:text-emerald-900'
+                                }`}
+                              >
+                                <div className="flex items-center justify-between gap-1.5">
+                                  <span
+                                    className={`text-[13px] font-bold tracking-tight leading-snug transition-colors ${
+                                      childActive
+                                        ? 'text-emerald-950 font-extrabold'
+                                        : 'text-slate-900 group-hover/item:text-emerald-900'
+                                    }`}
+                                  >
+                                    {child.label}
+                                  </span>
+                                  {childActive && (
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" aria-hidden="true" />
+                                  )}
+                                </div>
+                                {child.desc && (
+                                  <span className="text-[11px] text-slate-500 group-hover/item:text-slate-600 line-clamp-1 mt-0.5 leading-normal font-normal">
+                                    {child.desc}
+                                  </span>
+                                )}
+                              </a>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      {/* Dropdown Footer Hub Link */}
+                      <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between px-2.5 py-1">
+                        <span className="text-[11px] font-medium text-slate-400">
+                          {config.subtitle}
+                        </span>
+                        <a
+                          href={config.hubHref}
+                          className="inline-flex items-center gap-1 text-xs font-extrabold text-emerald-700 hover:text-emerald-800 transition-colors group/link"
+                        >
+                          <span>{config.hubText}</span>
+                          <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -149,6 +314,7 @@ export default function Navbar() {
                       type="button"
                       onClick={() => toggleDropdown(item.label)}
                       className="flex items-center justify-between w-full py-2.5 text-sm font-extrabold text-[#163C3A]"
+                      aria-expanded={activeDropdown === item.label}
                     >
                       <div className="flex items-center gap-2">
                         <span>{item.label}</span>
@@ -159,23 +325,35 @@ export default function Navbar() {
                         )}
                       </div>
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform ${
+                        className={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item.label ? 'rotate-180 text-emerald-700' : 'text-slate-400'
                         }`}
                       />
                     </button>
                     {activeDropdown === item.label && (
-                      <div className="pl-3 pb-2 space-y-1 bg-slate-50/70 rounded-xl p-2 mb-1">
-                        {item.children.map((child) => (
-                          <a
-                            key={child.label}
-                            href={child.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="block py-1.5 px-2 rounded-lg text-xs font-semibold text-slate-700 hover:text-emerald-900 hover:bg-emerald-100/50"
-                          >
-                            {child.label}
-                          </a>
-                        ))}
+                      <div className="pl-2 pb-2 space-y-1 bg-slate-50/80 rounded-xl p-2 mb-1">
+                        {item.children.map((child) => {
+                          const childActive = currentPath === child.href;
+                          return (
+                            <a
+                              key={child.label}
+                              href={child.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={`block py-2 px-2.5 rounded-lg text-xs font-semibold transition-colors ${
+                                childActive
+                                  ? 'bg-emerald-100 text-emerald-950 font-bold'
+                                  : 'text-slate-700 hover:text-emerald-900 hover:bg-emerald-100/50'
+                              }`}
+                            >
+                              <div className="font-bold">{child.label}</div>
+                              {child.desc && (
+                                <div className="text-[10px] text-slate-500 font-normal line-clamp-1 mt-0.5">
+                                  {child.desc}
+                                </div>
+                              )}
+                            </a>
+                          );
+                        })}
                       </div>
                     )}
                   </div>
