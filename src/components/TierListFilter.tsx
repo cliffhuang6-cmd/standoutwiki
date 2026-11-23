@@ -193,7 +193,7 @@ export default function TierListFilter() {
                       className="flex items-center gap-3 p-2.5 rounded-xl border border-slate-100 hover:border-emerald-300 hover:bg-emerald-50/50 transition-all group"
                     >
                       <img
-                        src={stand.image}
+                        src={`${stand.image}?v=2`}
                         alt={stand.name}
                         loading="lazy"
                         className="w-12 h-12 object-cover rounded-lg bg-slate-100 shrink-0 border border-slate-200 group-hover:scale-105 transition-transform"
