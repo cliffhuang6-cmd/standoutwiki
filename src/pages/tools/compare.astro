@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import StandCompare from '../../components/StandCompare';
+import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
+import AdNative from '../../components/ads/AdNative.astro';
+
+const popularMatchups = [
+  { s1: 'star-platinum', s2: 'the-world', label: 'Star Platinum vs The World', desc: 'The classic Part 3 rivalry: Ora vs Muda, Time Stop overwrite mechanics & knife volleys.' },
+  { s1: 'the-world', s2: 'the-world-alternative-universe', label: 'The World vs TWAU', desc: 'DIO vs Diego: Comparing classic Road Roller burst with TWAU wire traps & gasoline matches.' },
+  { s1: 'star-platinum', s2: 'king-crimson', label: 'Star Platinum vs King Crimson', desc: 'Pinnacle clash: 5s Time Stop & Platinum Parry vs Epitaph counters & Time Erase.' },
+  { s1: 'crazy-diamond', s2: 'the-hand', label: 'Crazy Diamond vs The Hand', desc: 'Morioh duo: Restoration walls & blood homing vs devastating unblockable spatial erasure.' }
+];
+---
+
+<Layout
+  title="Stand Comparison Tool – Compare Movesets, Cooldowns & Stats | Stand Out Wiki"
+  description="Compare any 2 or 3 Stands side-by-side in Roblox STAND OUT. Compare verified movesets, frame cooldowns, ability scaling, tier rankings, and recommended builds."
+  canonicalPath="tools/compare"
+  breadcrumbs={[
+    { label: 'Tools', href: '/tools/' },
+    { label: 'Stand Comparison' }
+  ]}
+  schemaType="WebApplication"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Header -->
+    <div class="max-w-3xl mb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-black uppercase tracking-wider mb-3 border border-amber-200">
+        <span>Interactive Analysis Tool</span>
+        <span>•</span>
+        <span>Side-by-Side Verification</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+        STAND OUT Stand Comparison Tool
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+        Compare verified gameplay kits, frame cooldowns, and movesets side-by-side. Choose any 2 or 3 Stands below to contrast their combat roles, passives, tier ratings, and recommended 225-point stat allocations.
+      </p>
+    </div>
+
+    <!-- Above-The-Fold Ad -->
+    <AdLeaderboard className="mb-10" />
+
+    <!-- Popular Matchups Quick Jump -->
+    <div class="mb-10 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+      <h3 class="text-xs font-black uppercase tracking-wider text-slate-400 mb-3">Popular Comparison Matchups:</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {popularMatchups.map((m) => (
+          <a
+            href={`/tools/compare/?s1=${m.s1}&s2=${m.s2}`}
+            class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/50 transition-all text-left group"
+          >
+            <strong class="text-xs font-black text-slate-900 group-hover:text-amber-900 transition-colors block mb-1">
+              {m.label} &rarr;
+            </strong>
+            <p class="text-[11px] text-slate-500 leading-snug">{m.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Interactive Comparison Component -->
+    <StandCompare client:load />
+
+    <!-- Mid-Page Native Ad -->
+    <AdNative className="my-14" />
+
+    <!-- Explanatory Guide & FAQ -->
+    <div class="mt-14 bg-white rounded-3xl border border-slate-200 p-8 shadow-sm space-y-8">
+      <div>
+        <h2 class="text-2xl font-black text-slate-900 mb-3">How to Use the Stand Comparison Tool</h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Use the selector buttons above each column to choose which Stands to analyze. You can click <strong>Add 3rd Stand</strong> to compare trio matchups, or click <strong>Share Comparison</strong> to copy a shareable URL containing your exact selected stands for community discussion or theorycrafting.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-100 text-xs">
+        <div>
+          <h4 class="font-extrabold text-slate-900 text-sm mb-1">True Cooldown Metrics</h4>
+          <p class="text-slate-600 leading-relaxed">
+            All cooldowns reflect official Update 1 server tick values. Cooldowns are evaluated without cooldown reduction gear, giving you an authentic baseline comparison.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-extrabold text-slate-900 text-sm mb-1">Role &amp; Posture Balance</h4>
+          <p class="text-slate-600 leading-relaxed">
+            Stands labeled <em>Offense</em> prioritize guardbreak frame traps, while <em>Zoners</em> and <em>Disruptors</em> rely on ground hazards and movement denial.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-extrabold text-slate-900 text-sm mb-1">Pity &amp; Rarity Context</h4>
+          <p class="text-slate-600 leading-relaxed">
+            Remember that Pinnacle Stands have a base ~0.50% Mysterious Arrow rate (boosted to 4.4% via Bizarre Arrows). Compare starter alternatives before resetting your active slots.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

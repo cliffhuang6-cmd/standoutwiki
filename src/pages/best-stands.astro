@@ -1,0 +1,374 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { standsBySlug } from '../data/stands';
+import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
+import AdNative from '../components/ads/AdNative.astro';
+
+// Filter stands for key roles
+const pvpTop = ['star-platinum', 'the-world', 'king-crimson', 'dolly-dagger', 'mandom', 'kraft-work']
+  .map(slug => standsBySlug.get(slug))
+  .filter(Boolean);
+
+const raidTop = ['star-platinum-the-world', 'king-crimson', 'the-world-alternative-universe', 'magicians-red', 'death-13']
+  .map(slug => standsBySlug.get(slug))
+  .filter(Boolean);
+
+const farmingTop = ['harvest', 'yo-yo-ma', 'smooth-operators', 'november-rain']
+  .map(slug => standsBySlug.get(slug))
+  .filter(Boolean);
+
+const guardbreakTop = ['the-hand', 'crazy-diamond', 'the-hustle', 'star-platinum']
+  .map(slug => standsBySlug.get(slug))
+  .filter(Boolean);
+
+const supportTop = ['crazy-diamond', 'cinderella', 'mr-president']
+  .map(slug => standsBySlug.get(slug))
+  .filter(Boolean);
+
+const beginnerTop = ['beach-boy', 'yellow-temperance', 'smooth-operators', '200-balloons']
+  .map(slug => standsBySlug.get(slug))
+  .filter(Boolean);
+---
+
+<Layout
+  title="Best Stands in Stand Out – Top Tier Picks by Role (PvP, Raids, Farming) | Stand Out Wiki"
+  description="Discover the best Stands in Roblox STAND OUT for every gameplay role. Expert breakdown for 1v1 PvP duels, 77 Rings raid DPS, Dalas farming routes, guardbreaking, and beginner starters."
+  canonicalPath="best-stands"
+  breadcrumbs={[{ label: 'Best Stands' }]}
+  schemaType="Article"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Hero Header -->
+    <div class="max-w-3xl mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-black uppercase tracking-wider mb-3 border border-amber-200">
+        <span>Meta Strategy &amp; Role Analysis</span>
+        <span>•</span>
+        <span>Update 1 Balanced</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+        Best Stands in STAND OUT: Top Picks by Role
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+        In Roblox <strong>STAND OUT</strong>, raw tier letters do not tell the whole story. A Pinnacle Stand like Star Platinum dominates close-quarters 1v1 duels, but Shigechi's Harvest or Jodio's November Rain will drastically out-farm it during Dalas and produce runs. Below is the comprehensive situational breakdown of the best Stands in the game, categorized by the exact job you need done.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-3 text-xs font-bold">
+        <a href="#pvp" class="px-3.5 py-1.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition-colors">
+          Best PvP Stands &darr;
+        </a>
+        <a href="#raids" class="px-3.5 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition-colors">
+          Best Raid &amp; Boss DPS &darr;
+        </a>
+        <a href="#farming" class="px-3.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-colors">
+          Best Farming &amp; Cash &darr;
+        </a>
+        <a href="#guardbreak" class="px-3.5 py-1.5 rounded-lg bg-sky-50 text-sky-800 border border-sky-200 hover:bg-sky-100 transition-colors">
+          Best Guardbreakers &darr;
+        </a>
+        <a href="#beginner" class="px-3.5 py-1.5 rounded-lg bg-purple-50 text-purple-800 border border-purple-200 hover:bg-purple-100 transition-colors">
+          Best Beginner Picks &darr;
+        </a>
+        <a href="/tier-list/" class="px-3.5 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+          View Complete Tier List &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Above-the-fold Ad -->
+    <AdLeaderboard className="mb-12" />
+
+    <!-- Section 1: Best Overall & 1v1 PvP Stands -->
+    <section id="pvp" class="mb-16 scroll-mt-24">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-rose-700">Arena &amp; Ranked Domination</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">Best PvP &amp; 1v1 Stands</h2>
+        </div>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-900 border border-rose-200">
+          Ranked Arena Meta
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 mb-8 leading-relaxed max-w-4xl">
+        PvP combat in STAND OUT revolves around frame advantage, parry timings (0.12s window), and true combo confirms into heavy damage. These Stands provide the most oppressive neutral game, reliable combo extenders, and defensive counters against enemy burst.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {pvpTop.map((stand) => stand && (
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-rose-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 text-xs font-black uppercase tracking-wider rounded-md bg-rose-100 text-rose-800 border border-rose-200">
+                  {stand.rarity}
+                </span>
+                <span class="text-xs font-bold text-slate-500 font-mono">PvP: Tier {stand.tier.pvp}</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 mb-1">{stand.name}</h3>
+              <p class="text-xs font-semibold text-slate-500 mb-3">{stand.canonicalUser} • {stand.jojoPart}</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">{stand.lore}</p>
+              
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs space-y-1 mb-4">
+                <strong class="text-slate-800 block text-[11px] uppercase tracking-wider">Why It Dominates PvP:</strong>
+                <ul class="list-disc list-inside text-slate-600 space-y-0.5">
+                  {stand.pros.slice(0, 2).map((pro) => (
+                    <li>{pro}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <a
+              href={`/stands/${stand.slug}/`}
+              class="w-full py-2.5 text-center text-xs font-bold rounded-xl bg-slate-900 text-white hover:bg-rose-700 transition-colors mt-2"
+            >
+              View Full {stand.name} Moveset &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section 2: Best Raid & Dungeon DPS Stands -->
+    <section id="raids" class="mb-16 scroll-mt-24">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-amber-700">77 Rings &amp; Passione Train</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">Best Raid &amp; Boss DPS Stands</h2>
+        </div>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-200">
+          High Sustained DPS
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 mb-8 leading-relaxed max-w-4xl">
+        Raids like the 77 Rings trial and the Passione Train demand high sustained DPS, widespread area-of-effect (AoE) crowd clearing for zombie hordes, and super-armor answers to multi-phase bosses like Tarkus and DIO.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {raidTop.map((stand) => stand && (
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:border-amber-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 text-xs font-black uppercase tracking-wider rounded-md bg-amber-100 text-amber-800 border border-amber-200">
+                  {stand.rarity}
+                </span>
+                <span class="text-xs font-bold text-slate-500 font-mono">Raid: Tier {stand.tier.raid}</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 mb-1">{stand.name}</h3>
+              <p class="text-xs font-semibold text-slate-500 mb-3">{stand.canonicalUser} • {stand.jojoPart}</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">{stand.lore}</p>
+              
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs space-y-1 mb-4">
+                <strong class="text-slate-800 block text-[11px] uppercase tracking-wider">Raid Strengths:</strong>
+                <ul class="list-disc list-inside text-slate-600 space-y-0.5">
+                  {stand.pros.slice(0, 2).map((pro) => (
+                    <li>{pro}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <a
+              href={`/stands/${stand.slug}/`}
+              class="w-full py-2.5 text-center text-xs font-bold rounded-xl bg-slate-900 text-white hover:bg-amber-700 transition-colors mt-2"
+            >
+              View Full {stand.name} Moveset &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Mid-Page Native Ad -->
+    <AdNative className="my-12" />
+
+    <!-- Section 3: Best Farming & Economy Stands -->
+    <section id="farming" class="mb-16 scroll-mt-24">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-700">Dalas &amp; Material Foraging</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">Best Farming &amp; Economy Stands</h2>
+        </div>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-900 border border-emerald-200">
+          Max Currency / Hr
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 mb-8 leading-relaxed max-w-4xl">
+        Accumulating Dalas for car upgrades, casino wagers, and crafting Bizarre Arrows requires rapid mob clear, automatic item collection, or exceptional transit mobility across Honolulu.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {farmingTop.map((stand) => stand && (
+          <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 text-[11px] font-black uppercase tracking-wider rounded bg-emerald-100 text-emerald-800">
+                  {stand.rarity}
+                </span>
+                <span class="text-xs font-bold text-slate-500 font-mono">Farm: {stand.tier.farming}</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-900 mt-1">{stand.name}</h3>
+              <p class="text-xs text-slate-500 mb-3">{stand.canonicalUser}</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">{stand.lore}</p>
+            </div>
+
+            <a
+              href={`/stands/${stand.slug}/`}
+              class="w-full py-2 text-center text-xs font-bold rounded-lg bg-emerald-700 text-white hover:bg-emerald-800 transition-colors"
+            >
+              View Stand &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section 4: Best Guardbreakers -->
+    <section id="guardbreak" class="mb-16 scroll-mt-24">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-sky-700">Posture &amp; Turtle Breakers</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">Best Guardbreak Stands</h2>
+        </div>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-sky-100 text-sky-900 border border-sky-200">
+          Heavy Armor Counters
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 mb-8 leading-relaxed max-w-4xl">
+        Facing defensive opponents who hold block and fish for perfect parries? These Stands pack unblockable heavy strikes, posture-crushing spatial erasures, and command grabs that completely shatter turtling tactics.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {guardbreakTop.map((stand) => stand && (
+          <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:border-sky-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 text-[11px] font-black uppercase tracking-wider rounded bg-sky-100 text-sky-800">
+                  {stand.rarity}
+                </span>
+                <span class="text-xs font-bold text-slate-500 font-mono">PvP: {stand.tier.pvp}</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-900 mt-1">{stand.name}</h3>
+              <p class="text-xs text-slate-500 mb-3">{stand.canonicalUser}</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">{stand.lore}</p>
+            </div>
+
+            <a
+              href={`/stands/${stand.slug}/`}
+              class="w-full py-2 text-center text-xs font-bold rounded-lg bg-sky-700 text-white hover:bg-sky-800 transition-colors"
+            >
+              View Stand &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section: Best Support & Healing Stands -->
+    <section id="support" class="mb-16 scroll-mt-24">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-rose-700">Team Utility &amp; Squad Survival</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">Best Support &amp; Healing Stands</h2>
+        </div>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-900 border border-rose-200">
+          Squad Force Multipliers
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 mb-8 leading-relaxed max-w-4xl">
+        Conquering endgame challenges like the 77 Rings Raid or winning coordinated Gang Wars demands vital support capabilities. These Stands excel at restoring party health, providing portable sanctuary rooms, or altering ally posture recovery.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {supportTop.map((stand) => stand && (
+          <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:border-rose-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 text-[11px] font-black uppercase tracking-wider rounded bg-rose-100 text-rose-800">
+                  {stand.rarity}
+                </span>
+                <span class="text-xs font-bold text-slate-500 font-mono">Role: Support</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-900 mt-1">{stand.name}</h3>
+              <p class="text-xs text-slate-500 mb-3">{stand.canonicalUser}</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">{stand.lore}</p>
+            </div>
+
+            <a
+              href={`/stands/${stand.slug}/`}
+              class="w-full py-2 text-center text-xs font-bold rounded-lg bg-rose-700 text-white hover:bg-rose-800 transition-colors"
+            >
+              View Stand &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section 5: Best Beginner Starter Stands -->
+    <section id="beginner" class="mb-16 scroll-mt-24">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-purple-700">Early Game &amp; Low Arrow Rerolls</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">Best Beginner &amp; Rare Tier Stands</h2>
+        </div>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-900 border border-purple-200">
+          Easy Progression
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 mb-8 leading-relaxed max-w-4xl">
+        You do not need a 0.5% Pinnacle Stand to comfortably beat the Storyline campaign. These high-drop-rate Rare and Epic Stands offer forgiving super armor, health absorption, or auto-tracking projectiles that carry new players through the first 30 levels with zero frustration.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {beginnerTop.map((stand) => stand && (
+          <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:border-purple-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 text-[11px] font-black uppercase tracking-wider rounded bg-purple-100 text-purple-800">
+                  {stand.rarity}
+                </span>
+                <span class="text-xs font-bold text-slate-500 font-mono">Starter Friendly</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-900 mt-1">{stand.name}</h3>
+              <p class="text-xs text-slate-500 mb-3">{stand.canonicalUser}</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">{stand.lore}</p>
+            </div>
+
+            <a
+              href={`/stands/${stand.slug}/`}
+              class="w-full py-2 text-center text-xs font-bold rounded-lg bg-purple-700 text-white hover:bg-purple-800 transition-colors"
+            >
+              View Stand &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Bottom Strategy Summary & Cross Links -->
+    <div class="p-8 rounded-3xl bg-slate-900 text-white space-y-4">
+      <h3 class="text-2xl font-black">Finding Your Personal Main</h3>
+      <p class="text-sm text-slate-300 leading-relaxed max-w-3xl">
+        Every Stand in STAND OUT benefits from stat point scaling (up to Level 75 with 225 stat points) and Sub-Ability synergies (Jonathan Hamon for physical overdrive, Caesar Hamon for projectile bubbles, or Vampire for regeneration). Use our interactive tools to test builds and compare abilities:
+      </p>
+      <div class="flex flex-wrap gap-4 pt-2 text-xs font-bold">
+        <a href="/tools/compare/" class="px-4 py-2.5 rounded-xl bg-amber-500 text-slate-950 hover:bg-amber-400 transition-colors">
+          Compare Any 2 Stands Side-by-Side &rarr;
+        </a>
+        <a href="/tools/#build-maker" class="px-4 py-2.5 rounded-xl bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 transition-colors">
+          225-Point Stat Build Simulator &rarr;
+        </a>
+        <a href="/stand-arrows/" class="px-4 py-2.5 rounded-xl bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 transition-colors">
+          Arrow Odds &amp; Pity Math &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

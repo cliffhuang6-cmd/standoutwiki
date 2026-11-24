@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import StandCard from '../../components/StandCard.astro';
 import { stands } from '../../data/stands';
 
-const rarities = ['All', 'Pinnacle', 'Mythical', 'Legendary', 'Epic', 'Rare', 'Evolution', 'Alternative Universe', 'Quest'];
-const parts = ['All', 'Part 3', 'Part 4', 'Part 5', 'Part 6', 'Part 7', 'Part 8', 'Part 9'];
+const playableStands = stands.filter(s => s.status !== 'Historical');
+const historicalStands = stands.filter(s => s.status === 'Historical');
 
 import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
 import AdNative from '../../components/ads/AdNative.astro';
@@ -21,9 +21,11 @@ import AdNative from '../../components/ads/AdNative.astro';
     <!-- Header -->
     <div class="max-w-3xl mb-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
-        <span>Verified Playable Roster</span>
+        <span>{playableStands.length} Live Playable Stands</span>
         <span>•</span>
-        <span>{stands.length} Documented Stands</span>
+        <span>{historicalStands.length} Historical Kits</span>
+        <span>•</span>
+        <span>{stands.length} Total Documented</span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
@@ -31,22 +33,56 @@ import AdNative from '../../components/ads/AdNative.astro';
       </h1>
 
       <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Explore every Stand currently implemented in Roblox <strong>STAND OUT</strong>. From time-stopping Pinnacle powerhouses like Star Platinum and The World to intricate Part 9 tactical abilities like November Rain, browse complete movesets, damage scaling, and build recommendations.
+        Explore every Stand implemented in Roblox <strong>STAND OUT</strong>. From time-stopping Pinnacle powerhouses like Star Platinum and The World to intricate Part 9 tactical abilities like November Rain, browse complete movesets, damage scaling, and build recommendations.
       </p>
     </div>
 
     <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
     <AdLeaderboard className="mb-10" />
 
-    <!-- Stand Roster Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      {stands.map((stand) => (
-        <StandCard stand={stand} />
-      ))}
+    <!-- Active Playable Roster -->
+    <div class="mb-14">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <h2 class="text-2xl font-black text-slate-900 tracking-tight">
+          Live Playable Stands ({playableStands.length})
+        </h2>
+        <span class="text-xs font-bold text-slate-500">Active Summon & Evolution Pool</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {playableStands.map((stand) => (
+          <StandCard stand={stand} />
+        ))}
+      </div>
     </div>
 
     <!-- Mid-Page Adsterra Native Banner -->
     <AdNative className="my-12" />
+
+    <!-- Historical Pre-Rework Reference Archive -->
+    {historicalStands.length > 0 && (
+      <div class="mb-14 bg-slate-50 rounded-3xl border border-slate-200 p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-6 border-b border-slate-200">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-extrabold mb-1">
+              <span>⚠️ Vaulted Archive</span>
+            </div>
+            <h2 class="text-2xl font-black text-slate-900 tracking-tight">
+              Historical & Pre-Rework Kits ({historicalStands.length})
+            </h2>
+          </div>
+          <p class="text-xs text-slate-600 max-w-md">
+            These Stands were removed from active Arrow summon banners pending complete mechanical reworks. Preserved here for moveset and timing reference.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {historicalStands.map((stand) => (
+            <StandCard stand={stand} />
+          ))}
+        </div>
+      </div>
+    )}
 
     <!-- Bottom Explanatory Guide -->
     <div class="mt-16 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6">

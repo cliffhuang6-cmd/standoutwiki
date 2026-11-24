@@ -1,0 +1,461 @@
+{
+  "https://standout.wiki/quests/": [],
+  "https://standoutgame.org/guides/storyline/": [
+    {
+      "headers": [
+        "Chapter",
+        "What to do",
+        "EXP",
+        "Coins",
+        "Introduction",
+        "Hey Ya's Tutorial #1.#1",
+        "Hey Ya's Tutorial #2.#2",
+        "Talk to the Stranger#3",
+        "Meet Meryl Mei Qi#2",
+        "Go to Rohan's Villa#3",
+        "Locate the Hidden Vault#4",
+        "Escape With the Diamond#5",
+        "Get clear of the Villa#6",
+        "Wild Cat Size#7"
+      ],
+      "rows": [
+        [
+          "Introduction",
+          "Meet Hey Ya! in the opening scene.Trello card NpyNq7Vy",
+          "—",
+          "—"
+        ],
+        [
+          "Hey Ya's Tutorial #1.#1",
+          "Practice sprinting and dashing, then follow the marker toward the roadside encounter.Trello card u6yEILr3",
+          "—",
+          "—"
+        ],
+        [
+          "Hey Ya's Tutorial #2.#2",
+          "Defeat the officer. Use light attacks, heavy attacks and blocking as prompted.Trello card l2dxHdwJ",
+          "50",
+          "500"
+        ],
+        [
+          "Talk to the Stranger#3",
+          "Speak to Jodio and follow his lead to Meryl at IKO IKO.Trello card zKb2JVha",
+          "—",
+          "—"
+        ],
+        [
+          "Meet Meryl Mei Qi#2",
+          "Get the heist briefing and receive the Phone.Trello card f5tLUiqn",
+          "300",
+          "100"
+        ],
+        [
+          "Go to Rohan's Villa#3",
+          "Reach the villa and check movable fixtures for the vault trigger. Crouch to avoid the cameras.Trello card NCNag4El",
+          "—",
+          "—"
+        ],
+        [
+          "Locate the Hidden Vault#4",
+          "Trigger the vault mechanism.Trello card WH3XYd6L",
+          "500",
+          "200"
+        ],
+        [
+          "Escape With the Diamond#5",
+          "Take the diamond and escape the villa. The card also lists the Blue Diamond and Lava Rock as rewards.Trello card N3jbhNj4",
+          "700",
+          "350"
+        ],
+        [
+          "Get clear of the Villa#6",
+          "Get off Rohan’s grounds.Trello card vwbbZ8Gp",
+          "400",
+          "75"
+        ],
+        [
+          "Wild Cat Size#7",
+          "Defeat the three Cat Size cats.Trello card pxtYLic5",
+          "700",
+          "200"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "Chapter",
+        "What to do",
+        "EXP",
+        "Coins",
+        "Test the Lava Rock at Diamotch#8",
+        "Enter Diamotch#9",
+        "Private Watch Showing#10",
+        "Accused on Camera#11",
+        "Defeat Diamotch Security#12",
+        "Find the Returned Watch#13",
+        "Proven Inocent#14",
+        "Tell Jodio It Returned#15",
+        "Open the Food Bag#16",
+        "Charming Man Ambush#17",
+        "Return to Iko Iko#18",
+        "Report to Meryl Mei#19"
+      ],
+      "rows": [
+        [
+          "Test the Lava Rock at Diamotch#8",
+          "Talk to Jodio about trying the Lava Rock at Diamotch.Trello card m1aDLpnm",
+          "450",
+          "—"
+        ],
+        [
+          "Enter Diamotch#9",
+          "Ask the staff to show you the luxury watches.Trello card KA98PYsF",
+          "450",
+          "—"
+        ],
+        [
+          "Private Watch Showing#10",
+          "Sit down for the private watch presentation.Trello card kVgSddCH",
+          "450",
+          "—"
+        ],
+        [
+          "Accused on Camera#11",
+          "Respond to the guard confronting you about the security footage.Trello card rxzrOkB7",
+          "500",
+          "—"
+        ],
+        [
+          "Defeat Diamotch Security#12",
+          "Defeat both members of Diamotch security.Trello card TNpJ7VHQ",
+          "650",
+          "—"
+        ],
+        [
+          "Find the Returned Watch#13",
+          "Pick up the watch that returned. The card lists a Silver Watch reward.Trello card kpIZEQfX",
+          "450",
+          "—"
+        ],
+        [
+          "Proven Inocent#14",
+          "Listen to the shop employee’s apology.Trello card aaXdSaw7",
+          "450",
+          "—"
+        ],
+        [
+          "Tell Jodio It Returned#15",
+          "Report the returned watch to Jodio.Trello card Ru0lkx2Q",
+          "450",
+          "—"
+        ],
+        [
+          "Open the Food Bag#16",
+          "Open the bag Jodio gives you.Trello card TYA2QXeF",
+          "450",
+          "—"
+        ],
+        [
+          "Charming Man Ambush#17",
+          "Win the fight against Charming Man.Trello card oaCmEUQN",
+          "800",
+          "750"
+        ],
+        [
+          "Return to Iko Iko#18",
+          "Head back to IKO IKO.Trello card 8aFetzUR",
+          "450",
+          "—"
+        ],
+        [
+          "Report to Meryl Mei#19",
+          "Hand the diamond and watch to Meryl.Trello card rwAOE0jg",
+          "500",
+          "—"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "Chapter",
+        "What to do",
+        "EXP",
+        "Coins",
+        "The Good Stuff: Grow#19.5",
+        "Go to the Land Registry#20",
+        "Request HOWLER Deeds#21",
+        "Touch the HOWLER Deeds#22",
+        "Exit the Registry#23",
+        "Report to Jodio#24",
+        "Bags' Groove Symptoms#25",
+        "Carry Usagi to Safety#26",
+        "Go to the Hospital#27",
+        "Congressman White's Tablet#28",
+        "Find the MRI Room#29",
+        "Scan Usagi#30",
+        "Extract Bags' Groove#31",
+        "Defeat Bobby Jean#32",
+        "Secure Yokohama's Documents#33",
+        "Report to Meryl at Iko Iko#34",
+        "D'Arby's Wager#34.5"
+      ],
+      "rows": [
+        [
+          "The Good Stuff: Grow#19.5",
+          "Follow the growing task shown in the game. Written steps were unavailable on this card.Trello card ekIO5AT9",
+          "—",
+          "—"
+        ],
+        [
+          "Go to the Land Registry#20",
+          "Reach the land registry.Trello card 26Tn0Kh9",
+          "500",
+          "—"
+        ],
+        [
+          "Request HOWLER Deeds#21",
+          "Ask the clerk for the HOWLER deeds.Trello card NrJM5DSJ",
+          "500",
+          "—"
+        ],
+        [
+          "Touch the HOWLER Deeds#22",
+          "Bring the Lava Rock into contact with the deeds.Trello card vGaAgtaF",
+          "600",
+          "—"
+        ],
+        [
+          "Exit the Registry#23",
+          "Leave the land registry.Trello card dSsbf2bv",
+          "450",
+          "—"
+        ],
+        [
+          "Report to Jodio#24",
+          "Tell Jodio that you touched the deeds.Trello card MgWUJ2SC",
+          "750",
+          "500"
+        ],
+        [
+          "Bags' Groove Symptoms#25",
+          "Ask Jodio about the hospital plan.Trello card Z7B1kZNH",
+          "550",
+          "—"
+        ],
+        [
+          "Carry Usagi to Safety#26",
+          "Pick up Usagi to carry him away.Trello card lKqxqush",
+          "550",
+          "—"
+        ],
+        [
+          "Go to the Hospital#27",
+          "Reach the hospital entrance.Trello card stY1DAde",
+          "550",
+          "—"
+        ],
+        [
+          "Congressman White's Tablet#28",
+          "Use the congressman’s tablet to file the HOWLER land claim.Trello card l5dePuHx",
+          "600",
+          "—"
+        ],
+        [
+          "Find the MRI Room#29",
+          "Find the hospital’s MRI room.Trello card NWcNZbC7",
+          "550",
+          "—"
+        ],
+        [
+          "Scan Usagi#30",
+          "Run an MRI scan on Usagi.Trello card LMfZIbSu",
+          "—",
+          "—"
+        ],
+        [
+          "Extract Bags' Groove#31",
+          "Extract five Bags’ Groove units.Trello card K1A4dVYL",
+          "650",
+          "—"
+        ],
+        [
+          "Defeat Bobby Jean#32",
+          "Win the fight against Bobby Jean.Trello card AGcIMmzN",
+          "900",
+          "550"
+        ],
+        [
+          "Secure Yokohama's Documents#33",
+          "Examine Yokohama’s documents.Trello card 3jGWqCIc",
+          "750",
+          "—"
+        ],
+        [
+          "Report to Meryl at Iko Iko#34",
+          "Take the documents back to Meryl at IKO IKO.Trello card 526nQoMZ",
+          "1,500",
+          "—"
+        ],
+        [
+          "D'Arby's Wager#34.5",
+          "Follow D’Arby’s wager prompt. Check the linked storage guide for how the system works.Trello card Xmi3JWmh",
+          "—",
+          "—"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "Chapter",
+        "What to do",
+        "EXP",
+        "Coins",
+        "Complete 5 Side Activities#35",
+        "Complete 1 Elimination#35.5",
+        "The Debt Collection#36",
+        "Board The Megayacht#37",
+        "Under Question#38",
+        "A Message in the Textbook#39",
+        "Too Late at the Office#40",
+        "Return to IKO IKO#41",
+        "200 Balloons#42",
+        "Return to the Yacht#43",
+        "The Deal Is Still Live#44",
+        "Track Key West#45",
+        "Defeat Key West#46",
+        "Howler on the Upper Deck#47",
+        "The Last of the Lava Rock#48",
+        "Thank YOU For Playing! (WIP)"
+      ],
+      "rows": [
+        [
+          "Complete 5 Side Activities#35",
+          "Complete five activities from bounties, eliminations or side quests.Trello card oF3Y2n9h",
+          "—",
+          "—"
+        ],
+        [
+          "Complete 1 Elimination#35.5",
+          "Complete one elimination.Trello card yaQjBGrA",
+          "—",
+          "—"
+        ],
+        [
+          "The Debt Collection#36",
+          "Review the debt and the crew’s plan for boarding.Trello card 684CVn3t",
+          "—",
+          "—"
+        ],
+        [
+          "Board The Megayacht#37",
+          "Approve three crew IDs, then wait for Jodio and the crew to board.Trello card BH2R00Hp",
+          "—",
+          "—"
+        ],
+        [
+          "Under Question#38",
+          "Present the required packet twice.Trello card Qc7NOsYe",
+          "—",
+          "—"
+        ],
+        [
+          "A Message in the Textbook#39",
+          "Read the three Queen references.Trello card 4c1tXhnc",
+          "—",
+          "—"
+        ],
+        [
+          "Too Late at the Office#40",
+          "Examine the bloodstain and return to IKO IKO.Trello card J938JMzd",
+          "—",
+          "—"
+        ],
+        [
+          "Return to IKO IKO#41",
+          "Rendezvous with the group at IKO IKO.Trello card JaWIFKcG",
+          "—",
+          "—"
+        ],
+        [
+          "200 Balloons#42",
+          "Defeat Ningbo and Laem Chabang.Trello card Qmw0Kcj6",
+          "—",
+          "—"
+        ],
+        [
+          "Return to the Yacht#43",
+          "Return to the yacht and speak with Howler.Trello card WcF5pHwu",
+          "—",
+          "—"
+        ],
+        [
+          "The Deal Is Still Live#44",
+          "Complete the three prompts for Howler’s cash test.Trello card QFxLf2R0",
+          "—",
+          "—"
+        ],
+        [
+          "Track Key West#45",
+          "Examine the gap to track Key West.Trello card F86sunqV",
+          "—",
+          "—"
+        ],
+        [
+          "Defeat Key West#46",
+          "Complete both Key West fight objectives.Trello card RMvUXAeR",
+          "—",
+          "—"
+        ],
+        [
+          "Howler on the Upper Deck#47",
+          "Meet back up with the crew on the upper deck.Trello card XCokeikC",
+          "—",
+          "—"
+        ],
+        [
+          "The Last of the Lava Rock#48",
+          "Witness the arrest, recover the signed papers, follow the crew and remain aboard the escape raft.Trello card KyIQaMkL",
+          "—",
+          "—"
+        ],
+        [
+          "Thank YOU For Playing! (WIP)",
+          "The board places a work-in-progress credits card here.Trello card T950yiPv",
+          "—",
+          "—"
+        ]
+      ]
+    }
+  ],
+  "https://standoutgame.org/guides/quests/": [],
+  "https://standoutgame.org/guides/side-quests-and-bounties/": [
+    {
+      "headers": [
+        "Clear",
+        "Documented reward",
+        "Repeat reward",
+        "First clear",
+        "Fifth clear",
+        "Tenth clear"
+      ],
+      "rows": [
+        [
+          "Repeat reward",
+          "1,500 Dalas, 3 Mysterious Arrows and one random Rokakaka seed. The card lists a very low chance of a Yo-Yo Ma or Harvest Stand Chip without a numeric rate."
+        ],
+        [
+          "First clear",
+          "Trader’s Sticky Hat"
+        ],
+        [
+          "Fifth clear",
+          "Coat of a Dedicated Bodyguard"
+        ],
+        [
+          "Tenth clear",
+          "Treasure of the Lettuce Dealer"
+        ]
+      ]
+    }
+  ]
+}

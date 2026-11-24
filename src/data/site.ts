@@ -52,7 +52,8 @@ export const siteConfig: {
       label: 'Stands',
       href: '/stands/',
       children: [
-        { label: 'All Stands Database', href: '/stands/', desc: 'Complete roster with movesets and stats' },
+        { label: 'All Stands Database', href: '/stands/', desc: 'Complete 55-Stand roster with movesets and stats' },
+        { label: 'Best Stands by Role', href: '/best-stands/', desc: 'Top PvP 1v1, Raids, PvE & Starter recommendations' },
         { label: 'Stand Evolution Guide', href: '/guides/evolve-stands/', desc: 'SPTW & TWAU awakening requirements' },
         { label: 'Arrows & Drop Rates', href: '/stand-arrows/', desc: 'Mysterious, Lucky, Bizarre & Focus rates' },
         { label: 'Stand Rarity & Pity Math', href: '/stand-rarity/', desc: 'Verified drop percentages & pity math' },
@@ -73,9 +74,12 @@ export const siteConfig: {
       label: 'Items & Systems',
       href: '/items/',
       children: [
-        { label: 'Items & Materials', href: '/items/', desc: 'Consumables, crafting and boss drops' },
+        { label: 'Items & Materials (32)', href: '/items/', desc: 'Consumables, crafting, Pluck parts and boss drops' },
+        { label: 'Catalog & Supporter Perks', href: '/catalog/', desc: '7 Creator ranks & Heaven\'s Door Prime unlock' },
+        { label: 'Stats & Ability Scaling', href: '/stats/', desc: 'Max Level 75 scaling, HP/DMG curves & builds' },
+        { label: 'Quests & NPC Directory (82)', href: '/quests/', desc: '54 Chapters, 12 side quests & 13 bounties' },
         { label: 'Rokakaka Mutations', href: '/rokakaka/', desc: 'Stand reset mechanics & 33 mutations' },
-        { label: 'Accessories & Sets', href: '/accessories/', desc: 'Gear stat bonuses and set synergies' },
+        { label: 'Accessories & Sets (62)', href: '/accessories/', desc: 'Gear stat bonuses and 8 set synergies' },
         { label: 'Gardening System', href: '/gardening/', desc: 'Crops, soil, watering & greenhouse' },
         { label: 'Sub-Abilities & Styles', href: '/sub-abilities/', desc: 'Hamon, Vampire & Unarmed mastery' },
         { label: 'Gang System & Territory', href: '/gang-wars/', desc: 'Base rooms, territory & gang perks' },
@@ -86,6 +90,7 @@ export const siteConfig: {
       label: 'Tools',
       href: '/tools/',
       children: [
+        { label: 'Stand Comparison Tool', href: '/tools/compare/', desc: 'Compare 2-3 Stands side-by-side with full movesets' },
         { label: 'Tools Hub Directory', href: '/tools/', desc: 'All interactive calculators & simulators' },
         { label: 'Arrow Probability Calc', href: '/tools/#calculator', desc: 'Bernoulli probability odds calculator' },
         { label: '225-Point Build Maker', href: '/tools/#build-maker', desc: 'Max Level 75 stat simulator' },
@@ -96,19 +101,19 @@ export const siteConfig: {
       label: 'Guides',
       href: '/guides/',
       children: [
-        { label: 'Guides Hub', href: '/guides/', desc: 'All walkthroughs and progression guides' },
+        { label: 'Guides Hub (35)', href: '/guides/', desc: 'All walkthroughs and progression guides' },
+        { label: 'Storyline Walkthrough', href: '/guides/storyline/', desc: 'Full 54-chapter campaign walkthrough' },
+        { label: 'Highway Star Raid Guide', href: '/guides/highway-star-raid/', desc: 'Tunnel chase, Yuya boss & loot table' },
+        { label: '77 Rings Raid Guide', href: '/guides/77-rings-raid/', desc: 'Tarkus & DIO boss strategies' },
+        { label: 'Side Quests Guide', href: '/guides/side-quests/', desc: 'All 12 optional missions & rewards' },
+        { label: 'Daily Bounties Guide', href: '/guides/bounties/', desc: '13 Wanted targets, mechanics & bounties' },
+        { label: 'Secret Stands & Unlocks', href: '/guides/secret-stands/', desc: 'Alternative Universe, Jojosapiens & Prime' },
         { label: 'Combat Mechanics & Parry', href: '/guides/combat-mechanics/', desc: '0.12s parry window, posture & combos' },
         { label: 'Beginner Guide', href: '/guides/beginner-guide/', desc: 'Starter tutorial & first hour guide' },
         { label: 'Controls & Keybinds', href: '/guides/controls/', desc: 'PC, Mobile touch & Controller keybinds' },
         { label: 'Level Up Fast (1-75)', href: '/guides/level-up-fast/', desc: 'Optimal EXP loop to max level' },
-        { label: '77 Rings Raid Guide', href: '/guides/77-rings-raid/', desc: 'Tarkus & DIO boss strategies' },
         { label: 'Ranked Mode & ELO', href: '/guides/ranked-mode/', desc: '1v1 arena rules & Dolly Dagger unlock' },
-        { label: 'Car Tuning & Garage', href: '/guides/car-tuning/', desc: 'Vehicle upgrades, armor & self-destruct' },
-        { label: 'Stand Skins & Alt Colors', href: '/guides/stand-out-skins/', desc: 'Unlock and equip Alt 1-3 color schemes' },
-        { label: 'Dalas Farming Routes', href: '/guides/farm-dalas/', desc: 'Highest payout cash delivery routes' },
-        { label: 'Raids & Dungeons', href: '/guides/raids/', desc: 'Train Raid, Highway Star & 77 Rings' },
-        { label: 'World Bosses & Drops', href: '/guides/bosses/', desc: 'Spawns, mechanics & guaranteed drops' },
-        { label: 'Quests & NPC Locations', href: '/quests/', desc: 'Storyline, bounties, and NPC map' }
+        { label: 'Car Tuning & Garage', href: '/guides/car-tuning/', desc: 'Vehicle upgrades, armor & self-destruct' }
       ]
     }
   ],
@@ -118,6 +123,8 @@ export const siteConfig: {
       title: 'Stands & Strategy',
       links: [
         { label: 'All Stands Database', href: '/stands/' },
+        { label: 'Best Stands by Role', href: '/best-stands/' },
+        { label: 'Stand Comparison Tool', href: '/tools/compare/' },
         { label: 'PvP & PvE Tier List', href: '/tier-list/' },
         { label: 'Stand Evolution Guide', href: '/guides/evolve-stands/' },
         { label: 'Arrows & Drop Rates', href: '/stand-arrows/' },
@@ -129,30 +136,32 @@ export const siteConfig: {
       title: 'Game Systems & Items',
       links: [
         { label: 'Stand Out Codes', href: '/codes/' },
-        { label: 'Items & Materials', href: '/items/' },
+        { label: 'Items & Materials (32)', href: '/items/' },
+        { label: 'Catalog Ranks & Rewards', href: '/catalog/' },
+        { label: 'Stats & Ability Scaling', href: '/stats/' },
+        { label: 'Quests & NPC Directory', href: '/quests/' },
         { label: 'Rokakaka Mutations', href: '/rokakaka/' },
+        { label: 'Accessories & Sets (62)', href: '/accessories/' },
         { label: 'Gardening System', href: '/gardening/' },
-        { label: 'Accessories & Sets', href: '/accessories/' },
         { label: 'Sub-Abilities & Styles', href: '/sub-abilities/' },
-        { label: 'Gang System & Territory', href: '/gang-wars/' },
         { label: 'Gamepasses & Shop', href: '/gamepasses/' }
       ]
     },
     {
       title: 'Guides & Walkthroughs',
       links: [
+        { label: 'Full Storyline Walkthrough', href: '/guides/storyline/' },
+        { label: 'Highway Star Raid Guide', href: '/guides/highway-star-raid/' },
+        { label: '77 Rings Raid Guide', href: '/guides/77-rings-raid/' },
+        { label: 'Side Quests & Bounties', href: '/guides/side-quests/' },
+        { label: 'Secret Stands & Unlocks', href: '/guides/secret-stands/' },
         { label: 'Combat Mechanics & Parry', href: '/guides/combat-mechanics/' },
         { label: 'Beginner Starter Guide', href: '/guides/beginner-guide/' },
         { label: 'Game Controls & Keybinds', href: '/guides/controls/' },
         { label: 'Fast Leveling (1-75)', href: '/guides/level-up-fast/' },
-        { label: '77 Rings Raid Guide', href: '/guides/77-rings-raid/' },
         { label: 'Ranked Mode Guide', href: '/guides/ranked-mode/' },
-        { label: 'Car Tuning Guide', href: '/guides/car-tuning/' },
-        { label: 'Stand Skins & Alt Colors', href: '/guides/stand-out-skins/' },
-        { label: 'Dalas Cash Farming', href: '/guides/farm-dalas/' },
         { label: 'Raids & Dungeons', href: '/guides/raids/' },
-        { label: 'World Bosses & Drops', href: '/guides/bosses/' },
-        { label: 'Quests & NPC Locations', href: '/quests/' }
+        { label: 'World Bosses & Drops', href: '/guides/bosses/' }
       ]
     },
     {

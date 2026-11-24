@@ -38,8 +38,8 @@ import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
-  title="Stand Out Quests & NPCs – Locations, Requirements & Rewards | Stand Out Wiki"
-  description="Complete directory of all 17 quests and NPCs in Roblox STAND OUT. Objectives, locations, prerequisites, and rewards for Hamon, Hermit Purple, and Jojosapiens."
+  title="Stand Out Quests & NPCs – Storyline, Bounties & Rewards | Stand Out Wiki"
+  description={`Complete directory of all ${quests.length} quests, storyline chapters, and NPCs in Roblox STAND OUT. Objectives, locations, prerequisites, and rewards for the full 54-chapter storyline, side quests, Hamon trials, and bounty contracts.`}
   canonicalPath="quests"
   breadcrumbs={[{ label: 'Quests & NPCs' }]}
   schemaType="CollectionPage"
@@ -57,7 +57,7 @@ import AdNative from '../components/ads/AdNative.astro';
       </h1>
 
       <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
-        From the 10 core Storyline progression missions and Sub-Ability masteries (Hamon &amp; Vampire) to high-yield Bounties and secret research unlocks, browse complete verified quest requirements and rewards below.
+        From the full 54-chapter Storyline campaign spanning the Rohan Villa Heist, Diamotch luxury watch theft, and offshore Megayacht raid to Sub-Ability masteries (Hamon &amp; Vampire) and all 13 daily bounty contracts, explore complete verified quest objectives and rewards.
       </p>
     </div>
 
@@ -68,7 +68,7 @@ import AdNative from '../components/ads/AdNative.astro';
     <div class="mb-10 p-5 rounded-2xl bg-blue-50/70 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
         <span class="text-xs font-black uppercase tracking-wider text-blue-800">Campaign Walkthrough</span>
-        <h3 class="text-base font-black text-slate-900 mt-0.5">Need help beating Chapters 1 through 10?</h3>
+        <h3 class="text-base font-black text-slate-900 mt-0.5">Need help beating all Storyline Chapters?</h3>
         <p class="text-xs text-slate-600 mt-0.5">Follow our detailed Storyline Walkthrough for boss tactics, Meryl Mei Qi delivery routes, and story-locked arrow pool unlocks.</p>
       </div>
       <a href="/guides/storyline/" class="px-4 py-2 rounded-xl bg-blue-700 text-white font-bold text-xs hover:bg-blue-800 transition-colors shrink-0">
@@ -85,20 +85,23 @@ import AdNative from '../components/ads/AdNative.astro';
       >
         All Quests ({quests.length})
       </a>
-      {questCategories.map((cat) => (
-        <a
-          href={`#${cat.id}`}
-          class={`px-3 py-1.5 rounded-lg border font-bold transition-colors bg-white text-slate-700 border-slate-200 hover:border-emerald-300 hover:bg-slate-50`}
-        >
-          {cat.name.split(' ')[0]} ({quests.filter(q => q.category === cat.category).length})
-        </a>
-      ))}
+      {questCategories.map((cat) => {
+        const count = quests.filter(q => cat.id === 'side-quest' ? (q.category === 'Side Quest' || q.category === 'Daily Quest') : q.category === cat.category).length;
+        return (
+          <a
+            href={`#${cat.id}`}
+            class={`px-3 py-1.5 rounded-lg border font-bold transition-colors bg-white text-slate-700 border-slate-200 hover:border-emerald-300 hover:bg-slate-50`}
+          >
+            {cat.name.split(' ')[0]} ({count})
+          </a>
+        );
+      })}
     </div>
 
     <!-- Category Sections -->
     <div class="space-y-14" id="all">
       {questCategories.map((cat) => {
-        const catQuests = quests.filter((q) => q.category === cat.category);
+        const catQuests = quests.filter((q) => cat.id === 'side-quest' ? (q.category === 'Side Quest' || q.category === 'Daily Quest') : q.category === cat.category);
         return (
           <section id={cat.id} class="scroll-mt-24">
             <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 mb-6 border-b border-slate-200">

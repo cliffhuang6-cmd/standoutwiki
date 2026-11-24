@@ -1,0 +1,712 @@
+{
+  "accessories": [
+    {
+      "name": "Blackmore's Jacket",
+      "slug": "blackmore-s-jacket",
+      "equippedText": "+2 Ability · +2 Damage · +4 Health",
+      "health": 4,
+      "damage": 2,
+      "ability": 2,
+      "special": "",
+      "setBonus": "None",
+      "source": "Not published"
+    },
+    {
+      "name": "Blackmore's Mask",
+      "slug": "blackmore-s-mask",
+      "equippedText": "No bonuses",
+      "health": 0,
+      "damage": 0,
+      "ability": 0,
+      "special": "No bonuses",
+      "setBonus": "None",
+      "source": "Not published"
+    },
+    {
+      "name": "Blackmore's Pants",
+      "slug": "blackmore-s-pants",
+      "equippedText": "+1 Ability · +2 Damage · +1 Health",
+      "health": 1,
+      "damage": 2,
+      "ability": 1,
+      "special": "",
+      "setBonus": "None",
+      "source": "Not published"
+    },
+    {
+      "name": "Bobby Jean's Hat",
+      "slug": "bobby-jean-s-hat",
+      "equippedText": "+2 Ability · +2 Damage · +5% Bullet Damage",
+      "health": 0,
+      "damage": 2,
+      "ability": 2,
+      "special": "+5% Bullet Damage",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Charming Man's Jacket",
+      "slug": "charming-man-s-jacket",
+      "equippedText": "+2 Ability · +2 Damage · +3 Health",
+      "health": 3,
+      "damage": 2,
+      "ability": 2,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Charming Man's Pants",
+      "slug": "charming-man-s-pants",
+      "equippedText": "+2 Ability · +2 Damage · +4 Health",
+      "health": 4,
+      "damage": 2,
+      "ability": 2,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Cloak",
+      "slug": "cloak",
+      "equippedText": "No stat line. Protects vampires from sunlight until enemies deal a quarter of your health, and it cannot be knocked off for 20 seconds after you put it back on",
+      "health": 0,
+      "damage": 0,
+      "ability": 0,
+      "special": "No stat line. Protects vampires from sunlight until enemies deal a quarter of your health, and it cannot be knocked off for 20 seconds after you put it back on",
+      "setBonus": "None",
+      "source": "the 77 Rings raid"
+    },
+    {
+      "name": "Coat of a Dedicated Bodyguard",
+      "slug": "coat-of-a-dedicated-bodyguard",
+      "equippedText": "+10 Strength · +5 Health · +5% Guard",
+      "health": 5,
+      "damage": 0,
+      "ability": 0,
+      "special": "+10 Strength · +5% Guard",
+      "setBonus": "None",
+      "source": "Yo-Yo, What the hell, Ma?! (Exclusive to the fifth clear)"
+    },
+    {
+      "name": "D'Arby's Jacket",
+      "slug": "d-arby-s-jacket",
+      "equippedText": "+3 Ability · +2 Damage · +3 Health",
+      "health": 3,
+      "damage": 2,
+      "ability": 3,
+      "special": "",
+      "setBonus": "With D'Arby's Pants: +10% Money earned",
+      "source": "Obtained from D'arby's Rematch"
+    },
+    {
+      "name": "D'Arby's Pants",
+      "slug": "d-arby-s-pants",
+      "equippedText": "+2 Ability · +1 Damage · +3 Health",
+      "health": 3,
+      "damage": 1,
+      "ability": 2,
+      "special": "",
+      "setBonus": "With D'Arby's Jacket: +10% Money earned",
+      "source": "Obtained from D'arby's Rematch"
+    },
+    {
+      "name": "DIO's Jacket",
+      "slug": "dio-s-jacket",
+      "equippedText": "+15 Ability · +10 Damage · +5 Health",
+      "health": 5,
+      "damage": 10,
+      "ability": 15,
+      "special": "",
+      "setBonus": "With DIO's Pants: +20 Ability",
+      "source": "Drops from DIO"
+    },
+    {
+      "name": "DIO's Pants",
+      "slug": "dio-s-pants",
+      "equippedText": "+15 Ability · +5 Damage · +5 Health",
+      "health": 5,
+      "damage": 5,
+      "ability": 15,
+      "special": "",
+      "setBonus": "With DIO's Jacket: +20 Ability",
+      "source": "Drops from DIO"
+    },
+    {
+      "name": "Dragona's Jacket",
+      "slug": "dragona-s-jacket",
+      "equippedText": "+2 Ability · +3 Damage · +4 Health",
+      "health": 4,
+      "damage": 3,
+      "ability": 2,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Dragona's Pants",
+      "slug": "dragona-s-pants",
+      "equippedText": "+1 Ability · +2 Damage · +2 Health",
+      "health": 2,
+      "damage": 2,
+      "ability": 1,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Enrico's Jacket",
+      "slug": "enrico-s-jacket",
+      "equippedText": "+6 Ability · +10 Damage · +7 Health",
+      "health": 7,
+      "damage": 10,
+      "ability": 6,
+      "special": "",
+      "setBonus": "With Enrico's Pants: +15% Walkspeed",
+      "source": "Not published"
+    },
+    {
+      "name": "Enrico's Pants",
+      "slug": "enrico-s-pants",
+      "equippedText": "+6 Ability · +10 Damage · +6 Health",
+      "health": 6,
+      "damage": 10,
+      "ability": 6,
+      "special": "",
+      "setBonus": "With Enrico's Jacket: +15% Walkspeed",
+      "source": "Not published"
+    },
+    {
+      "name": "FSA Hat",
+      "slug": "fsa-hat",
+      "equippedText": "+2 Health · +10% Growth Speed",
+      "health": 2,
+      "damage": 0,
+      "ability": 0,
+      "special": "+10% Growth Speed",
+      "setBonus": "None",
+      "source": "Food Safety Agency"
+    },
+    {
+      "name": "Hand Of Fate",
+      "slug": "hand-of-fate",
+      "equippedText": "+3 Ability · +7 Strength · +3 Health",
+      "health": 3,
+      "damage": 0,
+      "ability": 3,
+      "special": "+7 Strength ·",
+      "setBonus": "None",
+      "source": "The Statue of Sorrow (if Rolling Stones lured)"
+    },
+    {
+      "name": "Hawaii Warrior's Jacket",
+      "slug": "hawaii-warrior-s-jacket",
+      "equippedText": "+1 Ability · +4 Damage · +1 Health",
+      "health": 1,
+      "damage": 4,
+      "ability": 1,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bubble Practice"
+    },
+    {
+      "name": "Heaven's Door Hat",
+      "slug": "heaven-s-door-hat",
+      "equippedText": "+5 Ability · +2 Strength · +4 Health · +3% Guard",
+      "health": 4,
+      "damage": 0,
+      "ability": 5,
+      "special": "+2 Strength · +3% Guard",
+      "setBonus": "None",
+      "source": "Obtained by reaching INKED in the Catalog tab"
+    },
+    {
+      "name": "Howler's Jacket",
+      "slug": "howler-s-jacket",
+      "equippedText": "+3 Ability · +3 Damage · +5 Health",
+      "health": 5,
+      "damage": 3,
+      "ability": 3,
+      "special": "",
+      "setBonus": "None",
+      "source": "Obtainable from HOWLER Crates"
+    },
+    {
+      "name": "Howler's Pants",
+      "slug": "howler-s-pants",
+      "equippedText": "+2 Ability · +3 Damage · +4 Health",
+      "health": 4,
+      "damage": 3,
+      "ability": 2,
+      "special": "",
+      "setBonus": "None",
+      "source": "Obtainable from HOWLER Crates"
+    },
+    {
+      "name": "Jodio's Earrings",
+      "slug": "jodio-s-earrings",
+      "equippedText": "+3 Ability · +3 Health",
+      "health": 3,
+      "damage": 0,
+      "ability": 3,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Jodio's Jacket",
+      "slug": "jodio-s-jacket",
+      "equippedText": "+3 Ability · +7 Health",
+      "health": 7,
+      "damage": 0,
+      "ability": 3,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Jodio's Pants",
+      "slug": "jodio-s-pants",
+      "equippedText": "+2 Ability · +6 Health",
+      "health": 6,
+      "damage": 0,
+      "ability": 2,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Jotaro's Jacket",
+      "slug": "jotaro-s-jacket",
+      "equippedText": "+5 Ability · +15 Damage · +5 Health",
+      "health": 5,
+      "damage": 15,
+      "ability": 5,
+      "special": "",
+      "setBonus": "With Jotaro's Pants: +15 Ability, more Rage Finish damage, +10% EX Gain and +1 second of Time Stop",
+      "source": "Drops from Jotaro"
+    },
+    {
+      "name": "Jotaro's Pants",
+      "slug": "jotaro-s-pants",
+      "equippedText": "+5 Ability · +15 Damage · +5 Health",
+      "health": 5,
+      "damage": 15,
+      "ability": 5,
+      "special": "",
+      "setBonus": "With Jotaro's Jacket: +15 Ability, more Rage Finish damage, +10% EX Gain and +1 second of Time Stop",
+      "source": "Drops from Jotaro"
+    },
+    {
+      "name": "Key West's Jacket",
+      "slug": "key-west-s-jacket",
+      "equippedText": "+3 Ability · +2 Damage · +4 Health",
+      "health": 4,
+      "damage": 2,
+      "ability": 3,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Key West's Pants",
+      "slug": "key-west-s-pants",
+      "equippedText": "+2 Ability · +4 Damage · +3 Health",
+      "health": 3,
+      "damage": 4,
+      "ability": 2,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Laem Chabang's Holster",
+      "slug": "laem-chabang-s-holster",
+      "equippedText": "+6 Ability · +5% Bullet Damage",
+      "health": 0,
+      "damage": 0,
+      "ability": 6,
+      "special": "+5% Bullet Damage",
+      "setBonus": "None",
+      "source": "Drops from Ocean Crates and Sand (Metal Detecting)"
+    },
+    {
+      "name": "Laem Chabang's Jacket",
+      "slug": "laem-chabang-s-jacket",
+      "equippedText": "+4 Ability · +1 Damage · +4 Health",
+      "health": 4,
+      "damage": 1,
+      "ability": 4,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Ocean Crates and Sand (Metal Detecting)"
+    },
+    {
+      "name": "Laem Chabang's Pants",
+      "slug": "laem-chabang-s-pants",
+      "equippedText": "+2 Ability · +2 Damage · +2 Health",
+      "health": 2,
+      "damage": 2,
+      "ability": 2,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Ocean Crates and Sand (Metal Detecting)"
+    },
+    {
+      "name": "Meryl Mei Qi's Jacket",
+      "slug": "meryl-mei-qi-s-jacket",
+      "equippedText": "+1 Damage · +2 Health",
+      "health": 2,
+      "damage": 1,
+      "ability": 0,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Meryl Mei Qi's Necklace",
+      "slug": "meryl-mei-qi-s-necklace",
+      "equippedText": "+3 Ability",
+      "health": 0,
+      "damage": 0,
+      "ability": 3,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Crash Course"
+    },
+    {
+      "name": "Meryl Mei Qi's Pants",
+      "slug": "meryl-mei-qi-s-pants",
+      "equippedText": "+3 Damage · +1 Health",
+      "health": 1,
+      "damage": 3,
+      "ability": 0,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Meryl Mei Qi's Shoulder Bows",
+      "slug": "meryl-mei-qi-s-shoulder-bows",
+      "equippedText": "+4 Health",
+      "health": 4,
+      "damage": 0,
+      "ability": 0,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Crash Course"
+    },
+    {
+      "name": "Ningbo's Hat",
+      "slug": "ningbo-s-hat",
+      "equippedText": "+1 Damage · +5 Health · +5% Fire Resistance",
+      "health": 5,
+      "damage": 1,
+      "ability": 0,
+      "special": "+5% Fire Resistance",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Ningbo's Jacket",
+      "slug": "ningbo-s-jacket",
+      "equippedText": "+1 Ability · +6 Damage · +3 Health",
+      "health": 3,
+      "damage": 6,
+      "ability": 1,
+      "special": "",
+      "setBonus": "With Ningbo's Pants: +15% Fire resistance",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Ningbo's Pants",
+      "slug": "ningbo-s-pants",
+      "equippedText": "+1 Ability · +3 Damage · +3 Health",
+      "health": 3,
+      "damage": 3,
+      "ability": 1,
+      "special": "",
+      "setBonus": "With Ningbo's Jacket: +15% Fire resistance",
+      "source": "Not published"
+    },
+    {
+      "name": "Paco's Hat",
+      "slug": "paco-s-hat",
+      "equippedText": "No bonuses",
+      "health": 0,
+      "damage": 0,
+      "ability": 0,
+      "special": "No bonuses",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Paco's Jacket",
+      "slug": "paco-s-jacket",
+      "equippedText": "+4 Damage · +6 Health",
+      "health": 6,
+      "damage": 4,
+      "ability": 0,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Paco's Pants",
+      "slug": "paco-s-pants",
+      "equippedText": "+1 Ability · +4 Damage · +3 Health",
+      "health": 3,
+      "damage": 4,
+      "ability": 1,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Pesci's Jacket",
+      "slug": "pesci-s-jacket",
+      "equippedText": "+6 Ability · +8 Damage · +8 Health · +5% Water Stand Damage",
+      "health": 8,
+      "damage": 8,
+      "ability": 6,
+      "special": "+5% Water Stand Damage",
+      "setBonus": "None",
+      "source": "Train Raid or Train Shop"
+    },
+    {
+      "name": "Record Keeper's Monocle",
+      "slug": "record-keeper-s-monocle",
+      "equippedText": "Jodio +13 Ability, -5 Strength, +1 Health, +15% Trail Speed · Big Chop -2 Ability, -2 Strength, +9 Health, +15% Trail Speed · Lettuce Trader +7 Ability, -5 Strength, +6 Health, +25% Trail Speed · Meryl Mei Qi +5 Ability, +5 Strength, +3 Health, +15% Trail Speed. All four carry Keeper's Instinct",
+      "health": 1,
+      "damage": 0,
+      "ability": 13,
+      "special": "Jodio , -5 Strength, , +15% Trail Speed · Big Chop , -2 Strength, , +15% Trail Speed · Lettuce Trader , -5 Strength, , +25% Trail Speed · Meryl Mei Qi , +5 Strength, , +15% Trail Speed. All four carry Keeper's Instinct",
+      "setBonus": "None",
+      "source": "Museum Errands"
+    },
+    {
+      "name": "Ripple Training Mask",
+      "slug": "ripple-training-mask",
+      "equippedText": "+3 Ability",
+      "health": 0,
+      "damage": 0,
+      "ability": 3,
+      "special": "",
+      "setBonus": "None",
+      "source": "Bought from Lisa Lisa"
+    },
+    {
+      "name": "Rohan's Earrings",
+      "slug": "rohan-s-earrings",
+      "equippedText": "+3 Ability · +1 Strength · +2 Health · +3% Recovery",
+      "health": 2,
+      "damage": 0,
+      "ability": 3,
+      "special": "+1 Strength · +3% Recovery",
+      "setBonus": "None",
+      "source": "Obtained by reaching ROUGH SKETCH in the Catalog tab"
+    },
+    {
+      "name": "Rohan's G-Pen",
+      "slug": "rohan-s-g-pen",
+      "equippedText": "+5 Ability · +3 Strength · +3% Money Earned",
+      "health": 0,
+      "damage": 0,
+      "ability": 5,
+      "special": "+3 Strength · +3% Money Earned",
+      "setBonus": "None",
+      "source": "Obtained by reaching STORYBOARD in the Catalog tab"
+    },
+    {
+      "name": "Rohan's Jacket",
+      "slug": "rohan-s-jacket",
+      "equippedText": "+12 Ability · +8 Strength · +8 Health · +8% Recovery",
+      "health": 8,
+      "damage": 0,
+      "ability": 12,
+      "special": "+8 Strength · +8% Recovery",
+      "setBonus": "With Rohan's Pants: +10 Ability and +5% Money earned",
+      "source": "Obtained by reaching BESTSELLER in the Catalog tab"
+    },
+    {
+      "name": "Rohan's Pants",
+      "slug": "rohan-s-pants",
+      "equippedText": "+8 Ability · +6 Strength · +6 Health · +5% Walkspeed",
+      "health": 6,
+      "damage": 0,
+      "ability": 8,
+      "special": "+6 Strength · +5% Walkspeed",
+      "setBonus": "With Rohan's Jacket: +10 Ability and +5% Money earned",
+      "source": "Obtained by reaching SERIALIZED in the Catalog tab"
+    },
+    {
+      "name": "Shigechi's Jacket",
+      "slug": "shigechi-s-jacket",
+      "equippedText": "No bonuses",
+      "health": 0,
+      "damage": 0,
+      "ability": 0,
+      "special": "No bonuses",
+      "setBonus": "With Shigechi's Pants: +10% Money earned",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Shigechi's Pants",
+      "slug": "shigechi-s-pants",
+      "equippedText": "No bonuses",
+      "health": 0,
+      "damage": 0,
+      "ability": 0,
+      "special": "No bonuses",
+      "setBonus": "With Shigechi's Jacket: +10% Money earned",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Slave Of Fate",
+      "slug": "slave-of-fate",
+      "equippedText": "+5 Ability · +3 Strength · +5 Health",
+      "health": 5,
+      "damage": 0,
+      "ability": 5,
+      "special": "+3 Strength ·",
+      "setBonus": "None",
+      "source": "The Statue of Sorrow (if caught by Rolling Stones)"
+    },
+    {
+      "name": "STAND OUT Badge",
+      "slug": "stand-out-badge",
+      "equippedText": "+1 Health · +1 Ability · +1 Strength",
+      "health": 1,
+      "damage": 0,
+      "ability": 1,
+      "special": "+1 Strength",
+      "setBonus": "None",
+      "source": "Given to players who finished the storyline, or who joined in the first 24 hours and finished the tutorial"
+    },
+    {
+      "name": "SWAT Backpack",
+      "slug": "swat-backpack",
+      "equippedText": "+6 Health",
+      "health": 6,
+      "damage": 0,
+      "ability": 0,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "SWAT Jacket",
+      "slug": "swat-jacket",
+      "equippedText": "+2 Damage · +5 Health",
+      "health": 5,
+      "damage": 2,
+      "ability": 0,
+      "special": "",
+      "setBonus": "With SWAT Pants: +5% Damage Resistance",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "SWAT Pants",
+      "slug": "swat-pants",
+      "equippedText": "+2 Damage · +5 Health",
+      "health": 5,
+      "damage": 2,
+      "ability": 0,
+      "special": "",
+      "setBonus": "With SWAT Jacket: +5% Damage Resistance",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Tarkus's Helmet",
+      "slug": "tarkus-s-helmet",
+      "equippedText": "+1 Strength · +3 Health · -10% Walk Speed · +5% Damage Resistance",
+      "health": 3,
+      "damage": 0,
+      "ability": 0,
+      "special": "+1 Strength · -10% Walk Speed · +5% Damage Resistance",
+      "setBonus": "None",
+      "source": "the 77 Rings raid"
+    },
+    {
+      "name": "This Coat is on Fire",
+      "slug": "this-coat-is-on-fire",
+      "equippedText": "+10 Strength · +5 Health · +10% Fire Resistance",
+      "health": 5,
+      "damage": 0,
+      "ability": 0,
+      "special": "+10 Strength · +10% Fire Resistance",
+      "setBonus": "None",
+      "source": "Clean Business"
+    },
+    {
+      "name": "Trader's Sticky Hat",
+      "slug": "trader-s-sticky-hat",
+      "equippedText": "+6 Ability · +3 Strength · +10% Crouch Speed · +20% Search Party luck · Yo-Yo Ma's favourite",
+      "health": 0,
+      "damage": 0,
+      "ability": 6,
+      "special": "+3 Strength · +10% Crouch Speed · +20% Search Party luck · Yo-Yo Ma's favourite",
+      "setBonus": "None",
+      "source": "Yo-Yo, What the hell, Ma?! (Exclusive to the first clear)"
+    },
+    {
+      "name": "Treasure of the Lettuce Dealer",
+      "slug": "treasure-of-the-lettuce-dealer",
+      "equippedText": "-6 Ability · -15 Strength · -5 Health · +15% Crop sale price · +2% Delivery pay per gardening level · +5% Seed discount",
+      "health": -5,
+      "damage": 0,
+      "ability": -6,
+      "special": "-15 Strength · +15% Crop sale price · +2% Delivery pay per gardening level · +5% Seed discount",
+      "setBonus": "None",
+      "source": "Yo-Yo, What the hell, Ma?! (Exclusive to the tenth clear)"
+    },
+    {
+      "name": "Usagi's Backpack",
+      "slug": "usagi-s-backpack",
+      "equippedText": "+3 Ability · +2 Health",
+      "health": 2,
+      "damage": 0,
+      "ability": 3,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    },
+    {
+      "name": "Usagi's Pants",
+      "slug": "usagi-s-pants",
+      "equippedText": "+2 Damage · +4 Ability",
+      "health": 0,
+      "damage": 2,
+      "ability": 4,
+      "special": "",
+      "setBonus": "None",
+      "source": "Drops from Bounties"
+    }
+  ],
+  "pairs": [
+    {
+      "pair": "D'Arby's Jacket + D'Arby's Pants",
+      "bonus": "+10% Money earned"
+    },
+    {
+      "pair": "DIO's Jacket + DIO's Pants",
+      "bonus": "+20 Ability"
+    },
+    {
+      "pair": "Enrico's Jacket + Enrico's Pants",
+      "bonus": "+15% Walkspeed"
+    },
+    {
+      "pair": "Jotaro's Jacket + Jotaro's Pants",
+      "bonus": "+15 Ability, more Rage Finish damage, +10% EX Gain and +1 second of Time Stop"
+    },
+    {
+      "pair": "Ningbo's Jacket + Ningbo's Pants",
+      "bonus": "+15% Fire resistance"
+    },
+    {
+      "pair": "Rohan's Jacket + Rohan's Pants",
+      "bonus": "+10 Ability and +5% Money earned"
+    }
+  ]
+}

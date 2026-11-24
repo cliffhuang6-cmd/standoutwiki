@@ -37,11 +37,13 @@ export default function TierListFilter() {
   const [rarityFilter, setRarityFilter] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const rarities = ['All', 'Pinnacle', 'Mythical', 'Legendary', 'Epic', 'Rare', 'Evolution', 'Alternative Universe', 'Quest'];
+  const rarities = ['All', 'Pinnacle', 'Exclusive', 'Mythical', 'Legendary', 'Epic', 'Rare', 'Evolution', 'Alternative Universe', 'Quest', 'Historical'];
 
   const filteredStands = useMemo(() => {
     return stands.filter((s) => {
-      const matchesRarity = rarityFilter === 'All' || s.rarity === rarityFilter;
+      // Historical stands only shown if explicitly selected in rarity filter
+      if (s.status === 'Historical' && rarityFilter !== 'Historical') return false;
+      const matchesRarity = rarityFilter === 'All' || s.rarity === rarityFilter || (rarityFilter === 'Historical' && s.status === 'Historical');
       const matchesQuery = s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            s.canonicalUser.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            s.jojoPart.toLowerCase().includes(searchQuery.toLowerCase());

@@ -486,14 +486,14 @@ export const stands: Stand[] = [
     "name": "The World: Alternative Universe",
     "canonicalUser": "Diego Brando (AU)",
     "jojoPart": "Part 7: Steel Ball Run",
-    "rarity": "Alternative Universe",
+    "rarity": "Evolution",
     "tier": {
       "pvp": "S+",
       "raid": "S",
       "farming": "A+"
     },
-    "status": "Alternative Universe",
-    "obtainMethod": "Obtainable by using an Opal Roka while having base The World active.",
+    "status": "Evolution",
+    "obtainMethod": "Alternate Universe evolution of The World. Obtained by using an Opal Rokakaka on a max-level The World for a 10% swap chance, or through specialized Part 7 Diego quests.",
     "lore": "The World: Alternative Universe is a powerful Stand possessed by Diego Brando (AU) in Part 7: Steel Ball Run.",
     "image": "/images/stands/the-world-alternative-universe.webp",
     "combatRole": "Zoner",
@@ -5052,14 +5052,14 @@ export const stands: Stand[] = [
     "name": "Kiss",
     "canonicalUser": "Ermes Costello",
     "jojoPart": "Part 6: Stone Ocean",
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "tier": {
       "pvp": "A+",
       "raid": "S",
       "farming": "A"
     },
     "status": "Playable",
-    "obtainMethod": "Awakened from Mysterious Arrows (~50% tier share in Rare pool), Lucky Arrows, or Bizarre Arrows. Officially added to the live game on November 10, 2026.",
+    "obtainMethod": "Awakened using Mysterious Arrows (Legendary tier ~2.5% pool), Lucky Arrows (34.0%), or Bizarre Arrows (57.9%).",
     "lore": "Ermes Costello's Stand creates stickers that duplicate whatever they touch. Removing a sticker forces the two copies violently back together, damaging them as they merge. She uses this power to duplicate limbs, turn objects into traps, and pull herself toward distant targets.",
     "image": "/images/stands/kiss.webp",
     "combatRole": "Utility",
@@ -5178,14 +5178,14 @@ export const stands: Stand[] = [
     "name": "Heaven's Door Prime",
     "canonicalUser": "Rohan Kishibe",
     "jojoPart": "Part 4: Diamond is Unbreakable",
-    "rarity": "Pinnacle",
+    "rarity": "Exclusive",
     "tier": {
       "pvp": "Z",
       "raid": "S+",
       "farming": "S"
     },
     "status": "Playable",
-    "obtainMethod": "Obtained via exclusive Stand Chip awarded to Top 3 weekly Leaderboard finishers in any Raid (77 Rings, Train Raid, Highway Star) or Bounty Hunters leaderboard, top Builder sales, or by achieving 8,000 Catalog supporters (Builder+ / Heaven's Door rank).",
+    "obtainMethod": "Unlocked via Catalog Supporter Rank 7 (Heaven\'s Door tier with 50+ supporter milestones) or elite seasonal Raid Leaderboard placement. Not rollable from standard arrows.",
     "lore": "The ascended, ultimate form of Rohan Kishibe's Stand encountered in Hawaii. While physically elegant, it wields absolute authority over human biology and consciousness—transmuting opponents into living manuscripts, inscribing binding commands, and commandeering enemies to fight as obedient pawns.",
     "image": "/images/stands/heavens-door-prime.webp",
     "combatRole": "Disruption",
@@ -5288,7 +5288,7 @@ export const stands: Stand[] = [
     "name": "Crazy Diamond",
     "canonicalUser": "Josuke Higashikata",
     "jojoPart": "Part 4: Diamond is Unbreakable",
-    "rarity": "Pinnacle",
+    "rarity": "Exclusive",
     "tier": {
       "pvp": "S+",
       "raid": "S+",
@@ -5917,14 +5917,14 @@ export const stands: Stand[] = [
     "name": "Dolly Dagger",
     "canonicalUser": "Vittorio Cataldi",
     "jojoPart": "Part 5: Golden Wind (Purple Haze Feedback)",
-    "rarity": "Pinnacle",
+    "rarity": "Exclusive",
     "tier": {
       "pvp": "S+",
       "raid": "A",
       "farming": "B"
     },
     "status": "Playable",
-    "obtainMethod": "Exclusive competitive reward obtained by reaching 1850 ELO in Ranked Mode Beta.",
+    "obtainMethod": "Achieve 1850+ ELO in the 1v1 Ranked Arena. Exclusive competitive milestone reward; not rollable from standard or lucky arrows.",
     "lore": "Vittorio Cataldi carries Dolly Dagger, a Stand bound to a Scottish dirk dagger. When someone is reflected in the blade, seven tenths of the damage dealt to Vittorio passes to them.",
     "image": "/images/stands/dolly-dagger.webp",
     "combatRole": "Speed / Hit-and-Run",
@@ -6026,6 +6026,327 @@ export const stands: Stand[] = [
       {
         "q": "How does Shed the Blame work?",
         "a": "First hold G to capture an opponent reflection in the blade for 1.5s, then press V with 2 EX bars. For 12 seconds, 70% of all damage you take transfers to them."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
+  }
+,
+{
+    "slug": "cat-size",
+    "name": "Cat Size",
+    "canonicalUser": "Wild Cats",
+    "jojoPart": "Part 9: The JOJOLands",
+    "rarity": "Historical",
+    "tier": {
+      "pvp": "B",
+      "raid": "C",
+      "farming": "B"
+    },
+    "status": "Historical",
+    "obtainMethod": "Historical Kit (Pre-rework reference). Temporarily removed from the active Arrow summon pool pending an official ability rework.",
+    "lore": "Cat Size is an elusive feline Stand from Part 9: The JOJOLands. In STAND OUT, it previously served as a pre-rework arrow kit featuring pounce attacks and string-based crowd control traps.",
+    "image": "/images/stands/cat-size.webp",
+    "combatRole": "Disruption",
+    "passives": [
+      {
+        "name": "Feline Agility",
+        "description": "Reduces fall damage by 50% and provides silent footsteps when crouched."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Cat Claw Pounce",
+        "type": "Attack",
+        "cooldown": "25s",
+        "damage": "Combative Strike",
+        "description": "Leap forward with razor claws, dealing rapid slashing damage on contact."
+      },
+      {
+        "key": "E",
+        "name": "String Entangle",
+        "type": "Heavy",
+        "cooldown": "30s",
+        "damage": "Guardbreak Trap",
+        "description": "Cast microscopic string wires across the terrain that snare passing targets, disabling movement for 2.5s."
+      },
+      {
+        "key": "R",
+        "name": "Camouflage Hiss",
+        "type": "Utility",
+        "cooldown": "20s",
+        "damage": "Debuff / Blind",
+        "description": "Emit a startling hiss that briefly blinds nearby opponents and grants a temporary burst of walk speed."
+      }
+    ],
+    "abilityScaling": [
+      "String Entangle snare duration scales up to 3.5s with Ability stat.",
+      "Cat Claw Pounce slash damage scales with Physical Strength."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 75,
+        "damage": 50,
+        "ability": 100
+      },
+      "subAbility": "Jonathan Hamon",
+      "synergyNotes": "Utilize string trap setups to guarantee heavy Hamon overdrives on immobilized targets."
+    },
+    "pros": [
+      "Exceptional ambush potential with string traps",
+      "Strong vertical mobility with pounce jumps",
+      "Silent movement facilitates unexpected ganks"
+    ],
+    "cons": [
+      "Removed from current arrow summon pools pending rework",
+      "Lower baseline health pool compared to Pinnacle stands",
+      "Ineffective in large multi-target Raid boss encounters"
+    ],
+    "faqs": [
+      {
+        "q": "Can Cat Size still be rolled from Mysterious Arrows?",
+        "a": "No. Cat Size was officially removed from active summon banners and is currently classified as a historical pre-rework reference kit."
+      },
+      {
+        "q": "When will Cat Size return to the game?",
+        "a": "Developers have confirmed Cat Size is slated for a complete mechanical rework in a future post-Update 1 patch."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
+  },
+  {
+    "slug": "john-rod",
+    "name": "John Rod",
+    "canonicalUser": "Cryptid Organism",
+    "jojoPart": "Part 9: The JOJOLands",
+    "rarity": "Historical",
+    "tier": {
+      "pvp": "A",
+      "raid": "B",
+      "farming": "B"
+    },
+    "status": "Historical",
+    "obtainMethod": "Historical Kit (Pre-rework reference). Removed from active summon tables pending an official mechanics revamp.",
+    "lore": "John Rod is an aerial atmospheric Stand inspired by cryptid rod phenomena. It previously featured airborne mode shifting and high-velocity flight charges before being archived for balance redesign.",
+    "image": "/images/stands/john-rod.webp",
+    "combatRole": "Speed / Hit-and-Run",
+    "passives": [
+      {
+        "name": "Atmospheric Glide",
+        "description": "Holding Space mid-air activates a high-speed thermal glide with reduced gravity."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Sky Piercing Rod",
+        "type": "Attack",
+        "cooldown": "22s",
+        "damage": "Combative Strike",
+        "description": "Hurl high-velocity biological rods that pierce straight through enemy guard frames."
+      },
+      {
+        "key": "E",
+        "name": "Sky Shift",
+        "type": "Movement",
+        "cooldown": "35s",
+        "damage": "Reposition / Flight",
+        "description": "Transform into high-altitude flight mode, evading ground hazards and re-engaging from above."
+      },
+      {
+        "key": "R",
+        "name": "Atmospheric Shock",
+        "type": "Heavy",
+        "cooldown": "28s",
+        "damage": "Shockwave AoE",
+        "description": "Divebomb into the earth, creating an atmospheric pressure wave that knocks back surrounding foes."
+      }
+    ],
+    "abilityScaling": [
+      "Atmospheric Shock divebomb radius and stun scale with Ability.",
+      "Sky Piercing Rod projectile speed scales with Damage."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 60,
+        "damage": 65,
+        "ability": 100
+      },
+      "subAbility": "Vampire",
+      "synergyNotes": "Aerial flight allows daytime sunlight avoidance when paired with roof and cave navigation."
+    },
+    "pros": [
+      "Top-tier vertical movement and escape routes",
+      "Piercing projectiles bypass basic guard",
+      "Strong hit-and-run harassment in open arenas"
+    ],
+    "cons": [
+      "Currently unrollable in live arrow pools",
+      "Long cooldown on flight transform",
+      "Vulnerable to long-range projectile snipers while hovering"
+    ],
+    "faqs": [
+      {
+        "q": "How do I get John Rod right now?",
+        "a": "John Rod is currently vaulted in the pre-rework archive and cannot be obtained through standard gameplay or arrows until its official revamp lands."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
+  },
+  {
+    "slug": "tower-of-gray",
+    "name": "Tower of Gray",
+    "canonicalUser": "Gray Fly",
+    "jojoPart": "Part 3: Stardust Crusaders",
+    "rarity": "Historical",
+    "tier": {
+      "pvp": "A",
+      "raid": "C",
+      "farming": "B"
+    },
+    "status": "Historical",
+    "obtainMethod": "Historical Kit (Pre-rework reference). Temporarily removed from active arrow rolls pending trajectory reworks.",
+    "lore": "Tower of Gray is a stag beetle Stand possessing supersonic flight agility and a lethal predatory tongue. Removed from the live arrow pool while developers rework its flight path and hitboxes.",
+    "image": "/images/stands/tower-of-gray.webp",
+    "combatRole": "Speed / Hit-and-Run",
+    "passives": [
+      {
+        "name": "Supersonic Evasion",
+        "description": "Grants a passive 15% evasion chance against standard single-target projectiles."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Needle Dart",
+        "type": "Attack",
+        "cooldown": "18s",
+        "damage": "Rapid Pierce",
+        "description": "Dart forward in an erratic zigzag trajectory, tearing through opponents with supersonic mandibles."
+      },
+      {
+        "key": "E",
+        "name": "Blinding Buzz",
+        "type": "Utility",
+        "cooldown": "30s",
+        "damage": "Disorientation",
+        "description": "Generate high-frequency wing vibrations that scramble opponent screen controls and sound cues."
+      },
+      {
+        "key": "R",
+        "name": "Tongue Drill",
+        "type": "Heavy",
+        "cooldown": "32s",
+        "damage": "Heavy Guardbreak",
+        "description": "Unfurl a concealed barbed tongue to rip through guard postures and inflict bleed."
+      }
+    ],
+    "abilityScaling": [
+      "Tongue Drill bleed ticks scale with Ability stat.",
+      "Needle Dart burst damage scales with Physical Strength."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 55,
+        "damage": 70,
+        "ability": 100
+      },
+      "subAbility": "Jonathan Hamon",
+      "synergyNotes": "Blinding Buzz ensures uninterrupted Hamon charging during combat resets."
+    },
+    "pros": [
+      "Extremely erratic movement makes tracking difficult",
+      "Heavy guardbreak attack with bleed damage",
+      "High passive evasion against ranged attacks"
+    ],
+    "cons": [
+      "Temporarily archived and not obtainable via arrows",
+      "Fragile posture against heavy AoE slams",
+      "Low impact in PvE raid boss DPS rotations"
+    ],
+    "faqs": [
+      {
+        "q": "Why was Tower of Gray removed from arrows?",
+        "a": "Its flight trajectory caused hitbox desync issues in earlier builds, prompting the developers to vault it for a full trajectory rework."
+      }
+    ],
+    "verifiedDate": "2026-11-23"
+  },
+  {
+    "slug": "west-end-girl",
+    "name": "West End Girl",
+    "canonicalUser": "Unknown Syndicate",
+    "jojoPart": "Part 9: The JOJOLands",
+    "rarity": "Historical",
+    "tier": {
+      "pvp": "A",
+      "raid": "B",
+      "farming": "B"
+    },
+    "status": "Historical",
+    "obtainMethod": "Historical Kit (Pre-rework reference). Removed from active summon tables pending developer redesign.",
+    "lore": "West End Girl is an environmental spatial Stand that creates physical voids and gap traps for movement and ambush tactics. Archived as a historical reference pending full gameplay polish.",
+    "image": "/images/stands/west-end-girl.webp",
+    "combatRole": "Zoner",
+    "passives": [
+      {
+        "name": "Void Sense",
+        "description": "Detects enemies moving near created gaps and displays a proximity alert on your screen."
+      }
+    ],
+    "moveset": [
+      {
+        "key": "LMB",
+        "name": "Gap Trap",
+        "type": "Utility",
+        "cooldown": "24s",
+        "damage": "Entrapment",
+        "description": "Open a dimensional gap in the surface that pulls in enemies and prevents sprinting."
+      },
+      {
+        "key": "E",
+        "name": "Spatial Traverse",
+        "type": "Movement",
+        "cooldown": "32s",
+        "damage": "Teleportation",
+        "description": "Step into an open gap to instantly emerge at a linked location up to 40 studs away."
+      },
+      {
+        "key": "R",
+        "name": "Void Collapse",
+        "type": "Heavy",
+        "cooldown": "35s",
+        "damage": "Heavy Implosion",
+        "description": "Forcefully slam all open gaps shut, crushing enemies trapped inside with immense spatial pressure."
+      }
+    ],
+    "abilityScaling": [
+      "Void Collapse implosion damage scales directly with Ability.",
+      "Gap Trap snare duration increases with higher Ability points."
+    ],
+    "recommendedBuild": {
+      "points": {
+        "health": 70,
+        "damage": 55,
+        "ability": 100
+      },
+      "subAbility": "Jonathan Hamon",
+      "synergyNotes": "Position gap traps to funnel enemies directly into charged Sunlight Yellow Overdrives."
+    },
+    "pros": [
+      "Superior territory control and positional denial",
+      "Fast instant-traverse between linked spatial gaps",
+      "High burst damage upon collapsing multiple traps"
+    ],
+    "cons": [
+      "Currently vaulted as a historical pre-rework entry",
+      "Requires high setup time in fast-paced 1v1 arenas",
+      "Gaps are visible to attentive opponents who can sidestep them"
+    ],
+    "faqs": [
+      {
+        "q": "Is West End Girl rollable with Bizarre Arrows?",
+        "a": "No. Like Cat Size and Tower of Gray, West End Girl is archived in the pre-rework historical category and cannot be rolled."
       }
     ],
     "verifiedDate": "2026-11-23"

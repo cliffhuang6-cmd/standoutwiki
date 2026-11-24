@@ -258,7 +258,7 @@ export const guides: Guide[] = [
               "Evasive roll with startup invulnerability"
             ],
             [
-              "Y, B, X / △, ○, □",
+              "Y, B, X / \u25b3, \u25cb, \u25a1",
               "Stand Skills",
               "Assigned special moves and offensive skills"
             ],
@@ -534,7 +534,7 @@ export const guides: Guide[] = [
       {
         "id": "lucky-rates",
         "title": "Drop Probabilities & 1.5% Pinnacle Math",
-        "content": "The Lucky Arrow represents the primary bridge between standard arrow grinding and high-rarity Stand acquisition. Unlike standard Mysterious Arrows which feature a baseline ~0.50% Pinnacle tier probability, Lucky Arrows elevate Pinnacle Stand chances to an impressive 1.5%—a 3x statistical improvement. Furthermore, Common and low Rare tier outcomes are drastically suppressed.",
+        "content": "The Lucky Arrow represents the primary bridge between standard arrow grinding and high-rarity Stand acquisition. Unlike standard Mysterious Arrows which feature a baseline ~0.50% Pinnacle tier probability, Lucky Arrows elevate Pinnacle Stand chances to an impressive 1.5%\u2014a 3x statistical improvement. Furthermore, Common and low Rare tier outcomes are drastically suppressed.",
         "table": {
           "headers": [
             "Stand Rarity",
@@ -1537,117 +1537,123 @@ export const guides: Guide[] = [
   },
   {
     "slug": "storyline",
-    "title": "Stand Out Storyline Walkthrough: Quests 1 to 10 & NPC Locations",
+    "title": "Stand Out Storyline Walkthrough: Full 54-Chapter Campaign Guide",
     "category": "Progression",
-    "description": "Complete story quest guide in Stand Out. Step-by-step walkthrough for Quests 1 to 10, exact NPC locations, Meryl Mei Qi tasks, and story rewards.",
-    "readingTime": "8 min read",
-    "updatedDate": "2026-11-16",
+    "description": "Complete walkthrough for all 54 Storyline chapters in Roblox STAND OUT. Rohan Villa Heist, Diamotch watch theft, hospital MRI infiltration, megayacht raid, and Lava Rock mystery.",
+    "readingTime": "14 min read",
+    "updatedDate": "2026-11-24",
     "tableOfContents": [
       {
-        "id": "act-one",
-        "title": "Quests 1 to 5: Honolulu Streets to Downtown"
+        "id": "campaign-overview",
+        "title": "Main Campaign Overview & Act Structure"
       },
       {
-        "id": "act-two",
-        "title": "Quests 6 to 10: Mista, Bucciarati & Train Station"
+        "id": "act-1-rohan-villa",
+        "title": "Act I: Honolulu Streets & Rohan Villa Heist (Ch. 1-14)"
       },
       {
-        "id": "npc-directory",
-        "title": "Exact NPC Locations & Dialogue Coordinates"
+        "id": "act-2-diamotch-howler",
+        "title": "Act II: Diamotch Watch & HOWLER Land Deeds (Ch. 15-28)"
       },
       {
-        "id": "storyline-rewards",
-        "title": "Huber Phone, Stand Storage Chips & EXP"
+        "id": "act-3-hospital-mri",
+        "title": "Act III: Hospital Infiltration & Bobby Jean (Ch. 29-41)"
       },
       {
-        "id": "level-50-transition",
-        "title": "Completing the Main Campaign & Endgame"
+        "id": "act-4-megayacht-climax",
+        "title": "Act IV: Megayacht Raid & Key West Finale (Ch. 42-54)"
+      },
+      {
+        "id": "storyline-bosses",
+        "title": "Storyline Boss Tactics & Evasion Strategies"
+      },
+      {
+        "id": "campaign-rewards",
+        "title": "Campaign Completion Rewards & Endgame Transition"
       }
     ],
     "sections": [
       {
-        "id": "act-one",
-        "title": "Quests 1 to 5: Honolulu Streets to Downtown",
-        "content": "The first chapter of STAND OUT introduces players to the criminal underworld of Honolulu. Beginning with the Tutorial Instructor, Quest 2 introduces Meryl Mei Qi for the driving delivery task that unlocks the Smartphone. Quest 3 tasks you with investigating Billy in the back alley, while Quests 4 and 5 require clearing out street thugs and recovering stolen Stand arrows.",
-        "table": {
-          "headers": [
-            "Quest #",
-            "Quest Name",
-            "Primary NPC",
-            "Objective",
-            "Key Reward"
-          ],
-          "rows": [
-            [
-              "Quest 1",
-              "Awakening Call",
-              "Tutorial Instructor",
-              "Complete basic combat drills",
-              "1 Mysterious Arrow, 500 Dalas"
-            ],
-            [
-              "Quest 2",
-              "Delivery Duty",
-              "Meryl Mei Qi",
-              "Drive cargo across town",
-              "Smartphone & Huber Taxi Unlock"
-            ],
-            [
-              "Quest 3",
-              "Alley Informant",
-              "Billy",
-              "Interrogate 3 delinquent thugs",
-              "1,200 EXP, 800 Dalas"
-            ],
-            [
-              "Quest 4",
-              "Stolen Shards",
-              "Guido Mista",
-              "Defeat 5 Passione Grunts",
-              "Tier 1 Stand Storage Chip"
-            ],
-            [
-              "Quest 5",
-              "Downtown Clash",
-              "Bruno Bucciarati",
-              "Defeat Bruno in a 1v1 duel",
-              "Sticky Fingers Pass & 5,000 EXP"
-            ]
-          ]
-        }
+        "id": "campaign-overview",
+        "title": "Main Campaign Overview & Act Structure",
+        "content": "Roblox STAND OUT's primary narrative campaign spans 54 core storyline chapters structured across four dramatic Acts set in modern Hawaii (Part 9 inspired). Progressing through the main storyline is the fastest method to level up from Level 1 to Level 50+, unlocking essential quality-of-life systems including the Huber Taxi Travel app on your smartphone, Stand Storage Chips, Sub-Ability slots, and access to endgame Raids (Highway Star, Train, and 77 Rings). You can inspect every individual quest requirement, objective, and reward in our comprehensive Quests Database at /quests/.",
+        "tips": [
+          "Always activate the local Payphone or Fast Travel station near each quest hub to cut down cross-city running time.",
+          "If you ever get separated from your quest objective, open your Phone (P) or Quest Log (L) to track the active gold waypoint beacon."
+        ]
       },
       {
-        "id": "act-two",
-        "title": "Quests 6 to 10: Mista, Bucciarati & Train Station",
-        "content": "Act Two escalates the conflict into a full war against rogue Passione squads. Quest 6 requires solving the sewer gate puzzle beneath the fountain. Quest 7 sends you to the Harbor to confront Bobby Jean. Quests 8 and 9 culminate at the Train Station, unlocking the Passione Train Raid, while Quest 10 pits you against the mysterious Boss shadow.",
+        "id": "act-1-rohan-villa",
+        "title": "Act I: Honolulu Streets & Rohan Villa Heist (Ch. 1-14)",
+        "content": "Act I introduces Jodio Joestar, Dragona, Paco, and team coordinator Meryl Mei Qi at the high school. After proving your street combat abilities against local corrupt police officers and gang thugs in Chapters 1-6, Meryl briefs the squad on the primary objective: infiltrating the secluded luxury villa belonging to the renowned Japanese mangaka Rohan Kishibe. Chapters 7-14 guide players through scaling the villa cliffs, disabling exterior security cameras, evading robotic patrol hounds, and securing the 24-carat natural raw diamond from the villa's reinforced display safe.",
         "steps": [
-          "Quest 6: Enter the Sewers and turn the 3 water pressure valves.",
-          "Quest 7: Defeat Bobby Jean at the Pier and retrieve the stolen disc.",
-          "Quest 8: Speak to the Station Master to unlock the subway fast travel nodes.",
-          "Quest 9: Clear the Train Station ambush without letting NPCs perish.",
-          "Quest 10: Face the Boss avatar to complete the main storyline campaign."
+          "Chapter 1-3: Complete the Hey Ya! tutorial and defeat the corrupt precinct cops in Downtown Honolulu.",
+          "Chapter 4-6: Meet Meryl Mei Qi at the high school guidance office to accept the crew initiation assignment.",
+          "Chapter 7-10: Drive to the Diamond Head cliffside estate and bypass the estate's motion-sensor floodlights.",
+          "Chapter 11-14: Infiltrate the master studio, defeat the Heavens Door automated defense manifestations, and extract the raw diamond."
+        ],
+        "tips": [
+          "During the villa stealth segment, use crouch (C) behind display counters to avoid triggering the laser alarm grid.",
+          "Completing Chapter 14 awards 3,500 Dalas, 1 Lucky Arrow, and the Pink Dark Boy Sketchbook accessory."
         ]
       },
       {
-        "id": "npc-directory",
-        "title": "Exact NPC Locations & Dialogue Coordinates",
-        "content": "Key NPC locations across the world map: Tutorial Instructor (Central Plaza, [120, 15, -45]), Meryl Mei Qi (Downtown Parking, [340, 15, 210]), Billy (Alley behind Casino, [180, 15, 95]), Guido Mista (Diner Rooftop, [220, 45, 130]), Bruno Bucciarati (Train Station Entrance, [-150, 15, 410]).",
+        "id": "act-2-diamotch-howler",
+        "title": "Act II: Diamotch Watch & HOWLER Land Deeds (Ch. 15-28)",
+        "content": "Following the villa extraction, Act II shifts focus to tracing the origins of the mysterious Lava Rock acquired alongside the diamond. The crew must appraise the high-end Diamotch luxury watch at the Waikiki jewelry boutique (Chapters 15-18). However, Charming Man ambushes the boutique, utilizing sand-camouflage mimicry that tests your parry and aerial evasion skills. After neutralizing Charming Man and bringing him into the alliance, Chapters 19-28 lead into investigating HOWLER Company's fraudulent infrastructure land deeds across Oahu.",
+        "steps": [
+          "Chapter 15-18: Deliver the Diamotch watch to the appraisal boutique in Waikiki Shopping Plaza.",
+          "Chapter 19-21: Defeat Charming Man in the rooftop alley shootout by timing parries against his dagger burst flurry.",
+          "Chapter 22-25: Infiltrate the HOWLER Land Registry office in Honolulu Civic Center to retrieve cadastral survey maps.",
+          "Chapter 26-28: Ambush HOWLER enforcers in the mountain industrial quarry to intercept land development documents."
+        ],
+        "warning": "Charming Man's sand dash leaves invisible slivers that blind your screen for 2.5 seconds if hit without blocking."
+      },
+      {
+        "id": "act-3-hospital-mri",
+        "title": "Act III: Hospital Infiltration & Bobby Jean (Ch. 29-41)",
+        "content": "In Act III, Usagi Arakaki falls severely ill after exposure to microscopic enemy Stand vectors, forcing the team to infiltrate Honolulu Memorial Hospital. Chapters 29-34 involve stealthily navigating patient wings, retrieving sterile diagnostic medical equipment, and securing the MRI scanning room. Chapters 35-41 escalate into one of the campaign's most demanding boss encounters against Bobby Jean and his Stand 'Glory Days', who manipulates bullet velocities inside the enclosed magnetic MRI chamber.",
+        "steps": [
+          "Chapter 29-32: Escort Usagi into Honolulu Memorial Hospital triage and obtain pharmacy clearance codes.",
+          "Chapter 33-36: Secure the diagnostic radiological suite while fending off automated medical drones.",
+          "Chapter 37-41: Defeat Bobby Jean inside the MRI chamber by utilizing magnetic line-of-sight columns and exploiting reload windows."
+        ],
         "tips": [
-          "Use the GPS App on your Smartphone to drop automatic waypoint beacons directly onto any story NPC."
+          "Bobby Jean's slowed bullets can be guardbroken or dodged with Stand Jump (T); never stand still when he fires his magnum.",
+          "Defeating Bobby Jean drops the Glory Days Holster accessory and 18,000 EXP."
         ]
       },
       {
-        "id": "storyline-rewards",
-        "title": "Huber Phone, Stand Storage Chips & EXP",
-        "content": "Completing all 10 storyline quests awards over 120,000 total EXP (taking a fresh character directly to Level 35+), $35,000 Dalas, 2 free Stand Storage Chips, 3 Mysterious Arrows, and 1 Lucky Arrow.",
-        "warning": "Never abandon a storyline quest midway; doing so resets your dialogue stage and requires re-fighting previous quest mobs."
+        "id": "act-4-megayacht-climax",
+        "title": "Act IV: Megayacht Raid & Key West Finale (Ch. 42-54)",
+        "content": "The climactic fourth Act moves the battle offshore. The crew commandeers high-speed offshore powerboats to intercept HOWLER's fortified megayacht cruising through territorial waters (Chapters 42-47). Players must clear multi-deck security squads, disable the ship's dual engine turbines, and survive Bags Groove's internal organ attacks. Chapters 48-54 culminate in the dramatic confrontation at the offshore Key West lighthouse sanctuary, unlocking the true resonance mechanism of the Lava Rock.",
+        "steps": [
+          "Chapter 42-45: Board the megayacht lower hull, disable engine room coolant pumps, and secure the lower bilge.",
+          "Chapter 46-49: Ascend the upper staterooms, neutralize heavy bodyguards, and destroy Bags Groove injection nodes.",
+          "Chapter 50-54: Final boss confrontation at the Key West cliffside lighthouse; unlock the Lava Rock resonance."
+        ],
+        "tips": [
+          "Equip high AoE stands like Star Platinum, Magician's Red, or King Crimson to clear the crowded yacht corridors quickly.",
+          "Finishing Chapter 54 rewards the permanent Lava Rock item, 1 Stand Storage Chip, and unlocks the 77 Rings Raid."
+        ]
       },
       {
-        "id": "level-50-transition",
-        "title": "Completing the Main Campaign & Endgame",
-        "content": "Upon finishing Storyline Quest 10, your character transitions into the Endgame phase. Daily Bounties, World Bosses, Passione Train Raids, and 77 Rings Raids unlock full reward multipliers, paving your path to Level 50 and Stand Evolution.",
+        "id": "storyline-bosses",
+        "title": "Storyline Boss Tactics & Evasion Strategies",
+        "content": "Storyline bosses possess hyper-armor phases and specialized guardbreak mechanics that punish standard combo spam. For Rohan (Ch. 14), avoid his direct line-of-sight to prevent Heaven's Door page immobilizations. For Charming Man (Ch. 21), hold guard against his triple slash and punish the 1.2s recovery delay with heavy knockbacks. For Bobby Jean (Ch. 41), memorize his bullet velocity changes: when purple distortion halos appear, bullets travel at 30% speed and detonate upon proximity\u2014use Q-dash invulnerability frames to cross hazard zones safely.",
+        "steps": [
+          "Recognize boss telegraph animations (red ground circles and blue eye flashes).",
+          "Do not waste your Universal Evasive (Space during hitstun) on light combo openers; save it for boss ultimate strings.",
+          "Use high-scaling ranged projectiles or parry-counters to interrupt long channel animations."
+        ]
+      },
+      {
+        "id": "campaign-rewards",
+        "title": "Campaign Completion Rewards & Endgame Transition",
+        "content": "Clearing all 54 storyline chapters provides over 120,000 total EXP (taking a fresh character from Level 1 straight to the Level 50+ threshold), approximately 35,000 Dalas, 3 Mysterious Arrows, 1 Lucky Arrow, 2 Stand Storage Expansion Chips, and the essential Lava Rock quest item. Once completed, your character is fully equipped with 150+ Stat Points, unlocking immediate entry into Highway Star Raid (Level 35+), 77 Rings Raid (Level 50+), and Ranked 1v1 PvP Arena matchmaking at /best-stands/.",
         "tips": [
-          "Speak to Major Tom in the observatory after Quest 10 to begin the secret Jojosapiens research questline."
+          "Allocate your newly earned 150+ stat points into your Stand's primary scaling attribute (Damage or Ability) using our Stats Guide at /stats/.",
+          "Visit Daniel J. D'Arby in the Royal Palm Casino cellar with your new Dalas to unlock additional Stand storage slots."
         ]
       }
     ]
@@ -1755,7 +1761,7 @@ export const guides: Guide[] = [
       {
         "id": "crafting-economy",
         "title": "Profit Margins on Crafting vs Selling Raw Mats",
-        "content": "Selling raw Scrap Metal to merchants yields only $50 Dalas per piece. However, crafting that scrap into Lucky Arrows and selling them to other players via the Player Trade Hub nets upwards of $35,000 Dalas per arrow—a 700% value markup.",
+        "content": "Selling raw Scrap Metal to merchants yields only $50 Dalas per piece. However, crafting that scrap into Lucky Arrows and selling them to other players via the Player Trade Hub nets upwards of $35,000 Dalas per arrow\u2014a 700% value markup.",
         "tips": [
           "Always craft raw materials into finished goods before trading on the player market."
         ]
@@ -2019,8 +2025,7 @@ export const guides: Guide[] = [
         ]
       }
     ]
-  }
-,
+  },
   {
     "slug": "combat-mechanics",
     "title": "Stand Out Combat Mechanics Guide: Perfect Block, Posture & Combos",
@@ -2029,14 +2034,38 @@ export const guides: Guide[] = [
     "readingTime": "9 min read",
     "updatedDate": "2026-11-22",
     "tableOfContents": [
-      { "id": "perfect-block", "title": "Perfect Block & Parry Timing (0.12s Window)" },
-      { "id": "block-posture", "title": "Block Posture HP & Guard Break Mechanics" },
-      { "id": "barrage-clashes", "title": "Barrage Clash Chip Damage (25% Rate)" },
-      { "id": "combo-scaling", "title": "Combo Damage Scaling & Anti-Teaming i-Frames" },
-      { "id": "hp-movement-scaling", "title": "Movement Speed Scaling by Current HP" },
-      { "id": "dash-m1-links", "title": "Dash Cooldown (1.2s) & M1 Combo Chains" },
-      { "id": "time-stop-mechanics", "title": "Time Stop Durations & Overwriting Tech" },
-      { "id": "universal-evasive", "title": "Universal Evasive (Burst Break Mechanic)" }
+      {
+        "id": "perfect-block",
+        "title": "Perfect Block & Parry Timing (0.12s Window)"
+      },
+      {
+        "id": "block-posture",
+        "title": "Block Posture HP & Guard Break Mechanics"
+      },
+      {
+        "id": "barrage-clashes",
+        "title": "Barrage Clash Chip Damage (25% Rate)"
+      },
+      {
+        "id": "combo-scaling",
+        "title": "Combo Damage Scaling & Anti-Teaming i-Frames"
+      },
+      {
+        "id": "hp-movement-scaling",
+        "title": "Movement Speed Scaling by Current HP"
+      },
+      {
+        "id": "dash-m1-links",
+        "title": "Dash Cooldown (1.2s) & M1 Combo Chains"
+      },
+      {
+        "id": "time-stop-mechanics",
+        "title": "Time Stop Durations & Overwriting Tech"
+      },
+      {
+        "id": "universal-evasive",
+        "title": "Universal Evasive (Burst Break Mechanic)"
+      }
     ],
     "sections": [
       {
@@ -2049,11 +2078,31 @@ export const guides: Guide[] = [
           "Multi-hit guardbreaks can be parried on their initial contact frame to stop the entire attack sequence."
         ],
         "table": {
-          "headers": ["Combat Metric", "Current Value", "Pre-Patch Value", "Tactical Impact"],
+          "headers": [
+            "Combat Metric",
+            "Current Value",
+            "Pre-Patch Value",
+            "Tactical Impact"
+          ],
           "rows": [
-            ["Parry Window", "0.12 seconds", "0.10 seconds", "+20% easier timing window to punish predictable guardbreaks"],
-            ["Attacker Endlag", "0.20 seconds", "0.00 seconds", "Guarantees free counter-attack before opponent can dodge"],
-            ["Block HP Restored", "20% Max Posture", "0%", "Allows defensive resets even under sustained pressure"]
+            [
+              "Parry Window",
+              "0.12 seconds",
+              "0.10 seconds",
+              "+20% easier timing window to punish predictable guardbreaks"
+            ],
+            [
+              "Attacker Endlag",
+              "0.20 seconds",
+              "0.00 seconds",
+              "Guarantees free counter-attack before opponent can dodge"
+            ],
+            [
+              "Block HP Restored",
+              "20% Max Posture",
+              "0%",
+              "Allows defensive resets even under sustained pressure"
+            ]
           ]
         }
       },
@@ -2149,13 +2198,34 @@ export const guides: Guide[] = [
     "readingTime": "11 min read",
     "updatedDate": "2026-11-22",
     "tableOfContents": [
-      { "id": "entry-reqs", "title": "Raid Entry & Party Requirements" },
-      { "id": "stage-1", "title": "Stage 1: Graveyard Undead Gauntlet" },
-      { "id": "stage-2", "title": "Stage 2: Broken Bridge Parkour & Trainee Knights" },
-      { "id": "stage-3", "title": "Stage 3: Training Hall & Tarkus Boss Encounter" },
-      { "id": "stage-4", "title": "Stage 4: Frozen Mountain Ascent & Hypothermia" },
-      { "id": "stage-5", "title": "Stage 5: Shrine of DIO Boss Battle" },
-      { "id": "rewards-shop", "title": "77 Rings Drops, Token Shop & Leaderboard Chips" }
+      {
+        "id": "entry-reqs",
+        "title": "Raid Entry & Party Requirements"
+      },
+      {
+        "id": "stage-1",
+        "title": "Stage 1: Graveyard Undead Gauntlet"
+      },
+      {
+        "id": "stage-2",
+        "title": "Stage 2: Broken Bridge Parkour & Trainee Knights"
+      },
+      {
+        "id": "stage-3",
+        "title": "Stage 3: Training Hall & Tarkus Boss Encounter"
+      },
+      {
+        "id": "stage-4",
+        "title": "Stage 4: Frozen Mountain Ascent & Hypothermia"
+      },
+      {
+        "id": "stage-5",
+        "title": "Stage 5: Shrine of DIO Boss Battle"
+      },
+      {
+        "id": "rewards-shop",
+        "title": "77 Rings Drops, Token Shop & Leaderboard Chips"
+      }
     ],
     "sections": [
       {
@@ -2247,13 +2317,37 @@ export const guides: Guide[] = [
         "title": "77 Rings Drops, Token Shop & Leaderboard Chips",
         "content": "Completing the 77 Rings Raid rewards Raid Tokens, Dalas cash, EXP, and rolls for rare crafting materials including Pluck sword parts and Stone Masks. Tokens can be redeemed at the 77 Rings Shop NPC outside the entrance.",
         "table": {
-          "headers": ["Shop Item", "Token Price", "Usage & Value"],
+          "headers": [
+            "Shop Item",
+            "Token Price",
+            "Usage & Value"
+          ],
           "rows": [
-            ["Mysterious Arrow", "7 Tokens", "Standard Stand summoning arrow (~0.50% Pinnacle chance)"],
-            ["4x Arrow Parts", "8 Tokens", "Essential crafting component for Lucky and Bizarre Arrows"],
-            ["Stone Mask", "10 Tokens", "Required consumable to awaken the Vampire Sub-Ability"],
-            ["Lucky Arrow", "40 Tokens", "Guarantees Rare or higher Stand with 1.5% Pinnacle rate"],
-            ["Bizarre Arrow", "80 Tokens", "Premier crafting arrow with 4.4% Pinnacle rate (excludes low tiers)"]
+            [
+              "Mysterious Arrow",
+              "7 Tokens",
+              "Standard Stand summoning arrow (~0.50% Pinnacle chance)"
+            ],
+            [
+              "4x Arrow Parts",
+              "8 Tokens",
+              "Essential crafting component for Lucky and Bizarre Arrows"
+            ],
+            [
+              "Stone Mask",
+              "10 Tokens",
+              "Required consumable to awaken the Vampire Sub-Ability"
+            ],
+            [
+              "Lucky Arrow",
+              "40 Tokens",
+              "Guarantees Rare or higher Stand with 1.5% Pinnacle rate"
+            ],
+            [
+              "Bizarre Arrow",
+              "80 Tokens",
+              "Premier crafting arrow with 4.4% Pinnacle rate (excludes low tiers)"
+            ]
           ]
         },
         "tips": [
@@ -2271,12 +2365,30 @@ export const guides: Guide[] = [
     "readingTime": "8 min read",
     "updatedDate": "2026-11-22",
     "tableOfContents": [
-      { "id": "how-skins-work", "title": "How Alt Stand Colors Work in Stand Out" },
-      { "id": "prerequisites", "title": "Prerequisites: Phone (Z) & Meryl Mei Qi" },
-      { "id": "how-to-equip", "title": "Step-by-Step: Equipping & Swapping Alt Skins" },
-      { "id": "roster-availability", "title": "Full Stand Roster Skin Availability (36 Stands)" },
-      { "id": "catalog-supporters", "title": "Catalog Supporter Ranks & Exclusive Rewards" },
-      { "id": "customizer-settings", "title": "Customizer Settings, Poses & Emote Wheel" }
+      {
+        "id": "how-skins-work",
+        "title": "How Alt Stand Colors Work in Stand Out"
+      },
+      {
+        "id": "prerequisites",
+        "title": "Prerequisites: Phone (Z) & Meryl Mei Qi"
+      },
+      {
+        "id": "how-to-equip",
+        "title": "Step-by-Step: Equipping & Swapping Alt Skins"
+      },
+      {
+        "id": "roster-availability",
+        "title": "Full Stand Roster Skin Availability (36 Stands)"
+      },
+      {
+        "id": "catalog-supporters",
+        "title": "Catalog Supporter Ranks & Exclusive Rewards"
+      },
+      {
+        "id": "customizer-settings",
+        "title": "Customizer Settings, Poses & Emote Wheel"
+      }
     ],
     "sections": [
       {
@@ -2326,15 +2438,47 @@ export const guides: Guide[] = [
         "title": "Catalog Supporter Ranks & Exclusive Rewards",
         "content": "The in-game Catalog allows players to publish custom outfits, accessories, and builds. When other players save or purchase your public creations, they become your supporters. Earning supporters unlocks prestigious ranks, cosmetic gear, and exclusive Stand chips.",
         "table": {
-          "headers": ["Supporter Rank", "Supporters Required", "Unlocked Rewards"],
+          "headers": [
+            "Supporter Rank",
+            "Supporters Required",
+            "Unlocked Rewards"
+          ],
           "rows": [
-            ["ROUGH SKETCH", "10 Supporters", "Rohan's Earrings accessory"],
-            ["STORYBOARD", "25 Supporters", "Rohan's G-Pen accessory"],
-            ["INKED", "100 Supporters", "Heaven's Door Hat + 2,500 Dalas"],
-            ["SERIALIZED", "500 Supporters", "Rohan's Pants accessory"],
-            ["BESTSELLER", "2,000 Supporters", "Rohan's Jacket + 10,000 Dalas"],
-            ["MASTERPIECE", "4,000 Supporters", "Gradient Name chat styling"],
-            ["HEAVEN'S DOOR", "8,000 Supporters", "Builder+ Title & Heaven's Door Prime Stand Chip"]
+            [
+              "ROUGH SKETCH",
+              "10 Supporters",
+              "Rohan's Earrings accessory"
+            ],
+            [
+              "STORYBOARD",
+              "25 Supporters",
+              "Rohan's G-Pen accessory"
+            ],
+            [
+              "INKED",
+              "100 Supporters",
+              "Heaven's Door Hat + 2,500 Dalas"
+            ],
+            [
+              "SERIALIZED",
+              "500 Supporters",
+              "Rohan's Pants accessory"
+            ],
+            [
+              "BESTSELLER",
+              "2,000 Supporters",
+              "Rohan's Jacket + 10,000 Dalas"
+            ],
+            [
+              "MASTERPIECE",
+              "4,000 Supporters",
+              "Gradient Name chat styling"
+            ],
+            [
+              "HEAVEN'S DOOR",
+              "8,000 Supporters",
+              "Builder+ Title & Heaven's Door Prime Stand Chip"
+            ]
           ]
         }
       },
@@ -2359,12 +2503,30 @@ export const guides: Guide[] = [
     "readingTime": "8 min read",
     "updatedDate": "2026-11-22",
     "tableOfContents": [
-      { "id": "entry-requirements", "title": "Entry Requirements & Matchmaking Format" },
-      { "id": "competitive-rules", "title": "Competitive Rules & Arena Mechanics" },
-      { "id": "elo-tier-structure", "title": "ELO Rating Tiers & Division Thresholds" },
-      { "id": "dolly-dagger-unlock", "title": "1,850 ELO Milestone: Unlocking Dolly Dagger" },
-      { "id": "top-meta-picks", "title": "Ranked Meta Stand Tier Picks & Matchups" },
-      { "id": "penalty-system", "title": "Combat Tag Leaver Penalties & Anti-Disconnect" }
+      {
+        "id": "entry-requirements",
+        "title": "Entry Requirements & Matchmaking Format"
+      },
+      {
+        "id": "competitive-rules",
+        "title": "Competitive Rules & Arena Mechanics"
+      },
+      {
+        "id": "elo-tier-structure",
+        "title": "ELO Rating Tiers & Division Thresholds"
+      },
+      {
+        "id": "dolly-dagger-unlock",
+        "title": "1,850 ELO Milestone: Unlocking Dolly Dagger"
+      },
+      {
+        "id": "top-meta-picks",
+        "title": "Ranked Meta Stand Tier Picks & Matchups"
+      },
+      {
+        "id": "penalty-system",
+        "title": "Combat Tag Leaver Penalties & Anti-Disconnect"
+      }
     ],
     "sections": [
       {
@@ -2399,15 +2561,55 @@ export const guides: Guide[] = [
         "title": "ELO Rating Tiers & Division Thresholds",
         "content": "All players begin their competitive journey at 1,000 baseline ELO. Winning matches earns between +18 and +32 ELO depending on the opponent's rating differential, while defeats deduct a similar amount.",
         "table": {
-          "headers": ["Rank Tier", "ELO Range", "Division Badge", "Seasonal Rewards"],
+          "headers": [
+            "Rank Tier",
+            "ELO Range",
+            "Division Badge",
+            "Seasonal Rewards"
+          ],
           "rows": [
-            ["Bronze", "1,000 – 1,199 ELO", "Bronze Crest", "5,000 Dalas + 1 Lucky Arrow"],
-            ["Silver", "1,200 – 1,399 ELO", "Silver Crest", "15,000 Dalas + 2 Lucky Arrows"],
-            ["Gold", "1,400 – 1,599 ELO", "Gold Crest", "30,000 Dalas + Bizarre Arrow"],
-            ["Platinum", "1,600 – 1,749 ELO", "Platinum Crest", "50,000 Dalas + Platinum Nameplate"],
-            ["Diamond", "1,750 – 1,849 ELO", "Diamond Crest", "75,000 Dalas + Glowing Diamond Aura"],
-            ["Master", "1,850 – 2,099 ELO", "Master Crest", "Dolly Dagger Stand Chip + Exclusive Ranked Title"],
-            ["Pinnacle (Top 50)", "2,100+ ELO", "Grandmaster Crest", "Golden Stand Aura + Top 50 Leaderboard Badge"]
+            [
+              "Bronze",
+              "1,000 \u2013 1,199 ELO",
+              "Bronze Crest",
+              "5,000 Dalas + 1 Lucky Arrow"
+            ],
+            [
+              "Silver",
+              "1,200 \u2013 1,399 ELO",
+              "Silver Crest",
+              "15,000 Dalas + 2 Lucky Arrows"
+            ],
+            [
+              "Gold",
+              "1,400 \u2013 1,599 ELO",
+              "Gold Crest",
+              "30,000 Dalas + Bizarre Arrow"
+            ],
+            [
+              "Platinum",
+              "1,600 \u2013 1,749 ELO",
+              "Platinum Crest",
+              "50,000 Dalas + Platinum Nameplate"
+            ],
+            [
+              "Diamond",
+              "1,750 \u2013 1,849 ELO",
+              "Diamond Crest",
+              "75,000 Dalas + Glowing Diamond Aura"
+            ],
+            [
+              "Master",
+              "1,850 \u2013 2,099 ELO",
+              "Master Crest",
+              "Dolly Dagger Stand Chip + Exclusive Ranked Title"
+            ],
+            [
+              "Pinnacle (Top 50)",
+              "2,100+ ELO",
+              "Grandmaster Crest",
+              "Golden Stand Aura + Top 50 Leaderboard Badge"
+            ]
           ]
         }
       },
@@ -2455,12 +2657,30 @@ export const guides: Guide[] = [
     "readingTime": "7 min read",
     "updatedDate": "2026-11-22",
     "tableOfContents": [
-      { "id": "car-lift-access", "title": "Accessing the Car Lift (Gang Garage & Lenny's)" },
-      { "id": "engine-tuning", "title": "Engine & Transmission Upgrades (Speed & Acceleration)" },
-      { "id": "armor-reinforcement", "title": "Armor Plating, Reinforced Windows & Bumpers" },
-      { "id": "utility-electronics", "title": "Utility Systems: Alarms, Radar Jammer & Self-Destruct" },
-      { "id": "costs-rep-requirements", "title": "Upgrade Costs & Gang Reputation Requirements" },
-      { "id": "tactical-vehicle-combat", "title": "Vehicle Combat Tactics & Stand Synergy" }
+      {
+        "id": "car-lift-access",
+        "title": "Accessing the Car Lift (Gang Garage & Lenny's)"
+      },
+      {
+        "id": "engine-tuning",
+        "title": "Engine & Transmission Upgrades (Speed & Acceleration)"
+      },
+      {
+        "id": "armor-reinforcement",
+        "title": "Armor Plating, Reinforced Windows & Bumpers"
+      },
+      {
+        "id": "utility-electronics",
+        "title": "Utility Systems: Alarms, Radar Jammer & Self-Destruct"
+      },
+      {
+        "id": "costs-rep-requirements",
+        "title": "Upgrade Costs & Gang Reputation Requirements"
+      },
+      {
+        "id": "tactical-vehicle-combat",
+        "title": "Vehicle Combat Tactics & Stand Synergy"
+      }
     ],
     "sections": [
       {
@@ -2481,12 +2701,42 @@ export const guides: Guide[] = [
         "title": "Engine & Transmission Upgrades (Speed & Acceleration)",
         "content": "Upgrading your vehicle's powerplant determines top speed, acceleration curves, and hill-climbing torque across Honolulu.",
         "table": {
-          "headers": ["Engine Tier", "Top Speed", "Acceleration Bonus", "Cost (Dalas)", "Reqs"],
+          "headers": [
+            "Engine Tier",
+            "Top Speed",
+            "Acceleration Bonus",
+            "Cost (Dalas)",
+            "Reqs"
+          ],
           "rows": [
-            ["Stock Inline-4", "45 studs/sec", "Baseline (1.0x)", "Free / Default", "None"],
-            ["Tuned V6 Engine", "65 studs/sec", "+30% Acceleration", "12,500 Dalas", "Level 20"],
-            ["High-Torque V8", "85 studs/sec", "+65% Acceleration", "35,000 Dalas", "Level 40"],
-            ["Twin Turbo Supercharger", "110 studs/sec", "+110% Acceleration", "80,000 Dalas", "Level 60 + Gang Rep 3"]
+            [
+              "Stock Inline-4",
+              "45 studs/sec",
+              "Baseline (1.0x)",
+              "Free / Default",
+              "None"
+            ],
+            [
+              "Tuned V6 Engine",
+              "65 studs/sec",
+              "+30% Acceleration",
+              "12,500 Dalas",
+              "Level 20"
+            ],
+            [
+              "High-Torque V8",
+              "85 studs/sec",
+              "+65% Acceleration",
+              "35,000 Dalas",
+              "Level 40"
+            ],
+            [
+              "Twin Turbo Supercharger",
+              "110 studs/sec",
+              "+110% Acceleration",
+              "80,000 Dalas",
+              "Level 60 + Gang Rep 3"
+            ]
           ]
         }
       },
@@ -2533,8 +2783,1202 @@ export const guides: Guide[] = [
         ]
       }
     ]
+  },
+  {
+    "slug": "highway-star-raid",
+    "title": "Highway Star Raid Guide: Mechanics, Yuya Boss & Drops",
+    "category": "Endgame & Raids",
+    "description": "Complete strategy guide for the Highway Star Raid in STAND OUT. Master tunnel chase mechanics, room traps, Yuya Fungami boss phases, and exclusive drops.",
+    "readingTime": "9 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "entry-reqs",
+        "title": "Raid Entry & Level Requirements"
+      },
+      {
+        "id": "tunnel-chase",
+        "title": "Stage 1: High-Speed Tunnel Chase (60 km/h)"
+      },
+      {
+        "id": "trap-room",
+        "title": "Stage 2: Scent Trap & Flesh Room"
+      },
+      {
+        "id": "yuya-boss",
+        "title": "Boss Fight: Yuya Fungami"
+      },
+      {
+        "id": "loot-table",
+        "title": "Drop Rates & Raid Shop Tokens"
+      }
+    ],
+    "sections": [
+      {
+        "id": "entry-reqs",
+        "title": "Raid Entry & Level Requirements",
+        "content": "The Highway Star Raid is an intense mid-to-endgame instance unlocked at Level 35. Located in the abandoned highway bypass tunnel on the northern edge of Honolulu, players can queue solo or in squads of up to 4 players. Speaking with the Tunnel Lookout NPC opens the difficulty selector between Normal and Hard modes.",
+        "steps": [
+          "Reach Level 35 or higher through storyline progression or bounty farming.",
+          "Travel to the North Bypass Tunnel near the mountain pass.",
+          "Speak with the Tunnel Lookout to open the queue lobby.",
+          "Assemble a squad of 1-4 players (1 frontliner with super armor recommended)."
+        ],
+        "tips": [
+          "Equip stamina and walkspeed accessories like Enrico's Pants or Stardust Crusader gear to maintain sprint velocity during tunnel obstacles.",
+          "Avoid heavy low-mobility Stands unless paired with high-mobility Sub-Abilities like Caesar Hamon."
+        ]
+      },
+      {
+        "id": "tunnel-chase",
+        "title": "Stage 1: High-Speed Tunnel Chase (60 km/h)",
+        "content": "Stage 1 takes place in a crumbling subterranean tunnel where Highway Star's disembodied footsteps pursue the squad at a relentless 60 km/h. Players must sprint while vaulting over crashed sedans, avoiding electrified puddles, and timing evasive dashes when Highway Star marks a squad member with the scent tracker.",
+        "steps": [
+          "Sprint continuously along the yellow lane divider line.",
+          "Use Stand Jump (T) or double-dash to clear vehicle blockades.",
+          "If marked with the Scent Tracker icon, veer towards side alcoves to break line-of-sight.",
+          "Reach the blast door safety checkpoint within 90 seconds."
+        ],
+        "warning": "Getting caught by the pursuit footsteps inflicts Nutrient Drain, siphoning 25% of your total health and converting it into a boss heal."
+      },
+      {
+        "id": "trap-room",
+        "title": "Stage 2: Scent Trap & Flesh Room",
+        "content": "Inside the ruined diagnostic clinic, the team enters an illusory flesh room where disembodied hands emerge from walls and floors. Squad members must eliminate 12 room apparitions while managing rapidly draining oxygen. Breaking 3 ventilation grates across the ceiling clears the miasma.",
+        "tips": [
+          "Use wide-clearing AoE attacks like Star Finger or November Rain's Heavy Downpour to clear apparitions quickly.",
+          "Designate one fast player to break the high wall grates using ranged projectiles."
+        ]
+      },
+      {
+        "id": "yuya-boss",
+        "title": "Boss Fight: Yuya Fungami",
+        "content": "Yuya Fungami fights from hospital bed traction before breaking free in Phase 2. In Phase 1, he commands Highway Star clones to execute multi-directional pounces. In Phase 2 (below 50% HP), Yuya gains high-speed motor gliding, creating scent traps and delivering rapid 30-hit nutrient-draining barrages.",
+        "steps": [
+          "Phase 1 (100%-50% HP): Focus DPS on the central bed while parrying incoming clone dashes with F.",
+          "Watch for the 'Scent Lock' prompt: execute a Universal Evasive (X) immediately to break free.",
+          "Phase 2 (50%-0% HP): Bait Yuya's high-speed motor charge into tunnel walls to trigger a 3-second stun window.",
+          "Unload high-damage awakenings (Time Stop or Heavy Overdrives) during his wall collision recovery."
+        ]
+      },
+      {
+        "id": "loot-table",
+        "title": "Drop Rates & Raid Shop Tokens",
+        "content": "Clearing the Highway Star Raid awards Highway Star Tokens and rare drops:",
+        "table": {
+          "headers": [
+            "Difficulty",
+            "Drop Item",
+            "Drop Chance",
+            "Raid Tokens"
+          ],
+          "rows": [
+            [
+              "Normal",
+              "Highway Star Stand Chip",
+              "1.5%",
+              "12-15 Tokens"
+            ],
+            [
+              "Normal",
+              "Speedster Leather Jacket",
+              "8.0%",
+              "12-15 Tokens"
+            ],
+            [
+              "Hard",
+              "Highway Star Stand Chip",
+              "4.0%",
+              "25-30 Tokens"
+            ],
+            [
+              "Hard",
+              "Yuya's Traction Frame (Accessory)",
+              "2.5%",
+              "25-30 Tokens"
+            ],
+            [
+              "Hard",
+              "1x Lucky Arrow",
+              "10.0%",
+              "25-30 Tokens"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "side-quests",
+    "title": "Stand Out Side Quests Guide: All 12 Quests, NPCs & Locations",
+    "category": "Progression",
+    "description": "Complete directory and walkthrough for all 12 side quests in Roblox STAND OUT. Objectives, requirements, NPC spots, and exclusive accessory rewards.",
+    "readingTime": "11 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "overview",
+        "title": "Side Quests Overview & Mechanics"
+      },
+      {
+        "id": "weather-quests",
+        "title": "Weather-Dependent Quests (Rain & Fog)"
+      },
+      {
+        "id": "school-quests",
+        "title": "McKinley High School Quests"
+      },
+      {
+        "id": "museum-quests",
+        "title": "Museum & Lore Quests"
+      },
+      {
+        "id": "rewards-summary",
+        "title": "Exclusive Accessory Rewards Summary"
+      }
+    ],
+    "sections": [
+      {
+        "id": "overview",
+        "title": "Side Quests Overview & Mechanics",
+        "content": "Side quests in STAND OUT offer essential progression milestones beyond the main storyline. Unlike repeatable daily bounties, side quests reward unique equippable accessories (such as Blackmore's Set, Hand of Fate, Record Keeper's Monocle, and Trader's Sticky Hat) that cannot be obtained through standard mob grinding.",
+        "tips": [
+          "Check the in-game weather icon before seeking out weather-dependent quest givers like Blackmore or the Old Lady.",
+          "Many side quests require specific story chapters completed before the NPC will offer dialogue."
+        ]
+      },
+      {
+        "id": "weather-quests",
+        "title": "Weather-Dependent Quests (Rain & Fog)",
+        "content": "Two major side quests require specific dynamic server weather events: Catch The Rainbow (Rain) and The Statue of Sorrow (Fog).",
+        "steps": [
+          "Catch The Rainbow: Wait for rain in Honolulu. Head to the McKinley High School courtyard behind the gym to find Blackmore. Follow the rainbow trajectory to defeat the leprechaun, seize the cauldron, and deliver it before sunshine resumes.",
+          "The Statue of Sorrow: Wait for dense fog. Speak with the Old Lady behind IKO IKO. Inspect the cracked fissures near Angelo Rock, defeat the CEO of Fighting, and lure Rolling Stones into the containment net."
+        ],
+        "warning": "During The Statue of Sorrow, if Rolling Stones makes physical contact with your character, you receive the Slave of Fate accessory instead of the Hand of Fate."
+      },
+      {
+        "id": "school-quests",
+        "title": "McKinley High School Quests",
+        "content": "McKinley High School is a major quest hub featuring Usagi Alohaoe and Bobby. Usagi offers 'Bandit Problem' (defeating 5 perimeter thugs for a Mysterious Arrow), while Bobby provides 'Bubble Practice' (creating 50 Hamon bubbles and defeating Training Humu for the Hawaii Warrior's Jacket)."
+      },
+      {
+        "id": "museum-quests",
+        "title": "Museum & Lore Quests",
+        "content": "The Honolulu Museum of History houses two critical end-game side quests: Museum Errands and Space Oddity.",
+        "steps": [
+          "Museum Errands: Speak with the Receptionist, inspect 4 historical exhibits, retrieve land records, and obtain a signature from Meryl, Big Chop, Lettuce Trader, or Jodio to claim the Record Keeper's Monocle.",
+          "Space Oddity: Unlocked only after indexing 45+ Stands. Meet Major Tom behind the grand staircase, collect 16 academic surveys across Oahu, deliver papers to D'Arby, and craft 1 Bizarre Arrow to unlock the exclusive Jojosapiens Stand Chip."
+        ]
+      },
+      {
+        "id": "rewards-summary",
+        "title": "Exclusive Accessory Rewards Summary",
+        "content": "Key accessories exclusive to side quest completions:",
+        "table": {
+          "headers": [
+            "Quest Name",
+            "NPC Giver",
+            "Primary Reward",
+            "Key Stat Buff"
+          ],
+          "rows": [
+            [
+              "Catch The Rainbow",
+              "Blackmore",
+              "Blackmore's Set",
+              "+2 Ability, +2 Damage, +4 HP"
+            ],
+            [
+              "The Statue of Sorrow",
+              "Old Lady",
+              "Hand Of Fate",
+              "+3 Ability, +7 Strength, +3 HP"
+            ],
+            [
+              "Museum Errands",
+              "Receptionist",
+              "Record Keeper's Monocle",
+              "+13 Ability / +15% Trail Speed"
+            ],
+            [
+              "Bubble Practice",
+              "Bobby",
+              "Hawaii Warrior's Jacket",
+              "+1 Ability, +4 Damage, +1 HP"
+            ],
+            [
+              "Yo-Yo, What the hell, Ma?!",
+              "Lettuce Trader",
+              "Trader's Sticky Hat",
+              "+6 Ability, +3 Strength, +10% Crouch"
+            ],
+            [
+              "Space Oddity",
+              "Major Tom",
+              "Jojosapiens Stand Chip",
+              "Permanent Stand Unlock"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "bounties",
+    "title": "Stand Out Bounties Guide: All 13 Contracts, Timers & Rewards",
+    "category": "Economy",
+    "description": "Complete guide to all 13 daily bounty contracts in Roblox STAND OUT. Contract requirements, fail conditions, death limits, and clothing drop tables.",
+    "readingTime": "10 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "bounty-system",
+        "title": "How Bounties Work & Phone App"
+      },
+      {
+        "id": "contract-table",
+        "title": "All 13 Bounty Contracts Breakdown"
+      },
+      {
+        "id": "timer-rules",
+        "title": "Timers, Death Limits & Failure Rules"
+      },
+      {
+        "id": "loot-pools",
+        "title": "Exclusive Outfit & Stand Chip Drops"
+      }
+    ],
+    "sections": [
+      {
+        "id": "bounty-system",
+        "title": "How Bounties Work & Phone App",
+        "content": "Bounties are repeatable, timed combat contracts that serve as the primary source of Dalas currency, Mysterious Arrows, and exclusive character accessories (Jodio's, Paco's, Rohan's, and Usagi's clothing lines). Once you receive the Smartphone from Meryl Mei Qi in Storyline Chapter 4, you can accept bounties remotely anywhere on the map or visit Bounty Officer Petyr downtown.",
+        "tips": [
+          "Always activate the Phone contract interface immediately upon joining a server to check high-tier rewards.",
+          "Bounties with death limits (like 4-death or 8-death limits) fail instantly if your party wipes; play cautiously."
+        ]
+      },
+      {
+        "id": "contract-table",
+        "title": "All 13 Bounty Contracts Breakdown",
+        "content": "Verified specifications for all 13 official bounty contracts in STAND OUT:",
+        "table": {
+          "headers": [
+            "Contract Title",
+            "Time Limit",
+            "Death Limit",
+            "Target Location",
+            "Key Outfit / Reward"
+          ],
+          "rows": [
+            [
+              "Dispose of the Vampires",
+              "12:00",
+              "None",
+              "Cemetery District",
+              "Stone Mask / Mysterious Arrow"
+            ],
+            [
+              "Cheap Jewelry, Expensive Problem",
+              "10:00",
+              "4 Deaths",
+              "Galleria Arcade",
+              "Dragona's Set"
+            ],
+            [
+              "Save Chubby Baby",
+              "10:00",
+              "8 Deaths",
+              "Waikiki Reef",
+              "Mysterious Arrows"
+            ],
+            [
+              "Trust me on This One",
+              "09:36",
+              "None",
+              "Warehouse Vents",
+              "Usagi's Backpack & Pants"
+            ],
+            [
+              "Your Personal Helper Friend",
+              "09:36",
+              "8 Deaths",
+              "Construction Site",
+              "Jodio's Outfit Set"
+            ],
+            [
+              "Three Wishes",
+              "12:00",
+              "None",
+              "Bazaar Courtyard",
+              "Rohan's Clothing Set"
+            ],
+            [
+              "Small Change, Big Problem",
+              "10:00",
+              "None",
+              "Central Park",
+              "Shigechi's Set"
+            ],
+            [
+              "Missing Frog",
+              "09:00",
+              "4 Deaths",
+              "Waterfall Basin",
+              "Rokaka Seed"
+            ],
+            [
+              "Paco's Challenge",
+              "09:00",
+              "None",
+              "Muscle Beach",
+              "Paco's Jacket & Pants"
+            ],
+            [
+              "Rohan's Drawing Contest",
+              "09:00",
+              "None",
+              "Rohan's Villa",
+              "Rohan's G-Pen & Earrings"
+            ],
+            [
+              "Usagi's Karaoke Night",
+              "10:00",
+              "None",
+              "Neon Karaoke",
+              "Usagi's Accessories"
+            ],
+            [
+              "Four Iced Teas",
+              "10:00",
+              "None",
+              "Seaside Drink Stand",
+              "Lucky Arrow"
+            ],
+            [
+              "D'Arby's Rematch",
+              "10:00",
+              "None",
+              "Casino VIP Table",
+              "D'Arby's Set & Stand Chip"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "timer-rules",
+        "title": "Timers, Death Limits & Failure Rules",
+        "content": "Every bounty contract operates on strict mission constraints. If the timer reaches 00:00 or your party exceeds the allotted death count, the contract terminates immediately with zero payout. Additionally, logging out or switching servers while a bounty is active forfeits the contract fee.",
+        "steps": [
+          "Check the death limit badge on the top-right HUD before engaging the target.",
+          "Use crowd control moves (such as Star Finger or String Entangle) to isolate elite targets.",
+          "In 4-death contracts like Missing Frog, do not attempt solo melee rushing if health is below 50%."
+        ]
+      },
+      {
+        "id": "loot-pools",
+        "title": "Exclusive Outfit & Stand Chip Drops",
+        "content": "Bounty rewards roll from specific loot pools upon completion. Standard contracts award 1,500 to 3,500 Dalas and 1x Mysterious Arrow. Elite bounties (like D'Arby's Rematch) offer rare Stand Storage Chips and the complete D'Arby Outfit Set (+10% permanent Dalas boost)."
+      }
+    ]
+  },
+  {
+    "slug": "secret-stands",
+    "title": "Secret Stands Guide: How to Get Jojosapiens, SPTW, TWAU & Exclusive Kits",
+    "category": "Progression",
+    "description": "Unlock every non-arrow secret Stand in STAND OUT. Detailed guides for Jojosapiens research, Star Platinum: The World, TWAU Opal Roka swap, and Dolly Dagger.",
+    "readingTime": "12 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "overview",
+        "title": "Secret & Non-Arrow Stands Overview"
+      },
+      {
+        "id": "jojosapiens",
+        "title": "Jojosapiens: Space Oddity Questline"
+      },
+      {
+        "id": "sptw-evolution",
+        "title": "Star Platinum: The World (SPTW)"
+      },
+      {
+        "id": "twau-swap",
+        "title": "The World: Alternative Universe (TWAU)"
+      },
+      {
+        "id": "exclusive-ranked",
+        "title": "Ranked & Supporter Stands (Dolly Dagger & HP Prime)"
+      }
+    ],
+    "sections": [
+      {
+        "id": "overview",
+        "title": "Secret & Non-Arrow Stands Overview",
+        "content": "While most Stands in STAND OUT can be rolled from Mysterious Arrows, several elite Stands are completely excluded from the arrow table. These secret Stands require specialized evolution items, high-tier competitive rankings, or extensive multi-step questlines to unlock.",
+        "tips": [
+          "Do not waste Lucky or Bizarre Arrows trying to roll SPTW, TWAU, or Jojosapiens; their probability on arrows is strictly 0.00%.",
+          "Ensure your character is at least Level 60-75 before attempting secret Stand evolutions."
+        ]
+      },
+      {
+        "id": "jojosapiens",
+        "title": "Jojosapiens: Space Oddity Questline",
+        "content": "Jojosapiens is a special Part 9 cultural Stand that cannot be obtained through arrows. Unlocking it requires the 'Space Oddity' questline initiated with Major Tom behind the grand staircase in the Honolulu Museum of History. You must have unlocked at least 45 unique Stands in your Stand Index before Major Tom will talk to you.",
+        "steps": [
+          "Index 45+ Stands using arrows and storage chips.",
+          "Speak with Major Tom beneath the Museum staircase to accept Space Oddity.",
+          "Search Oahu for all 16 academic field survey scrolls.",
+          "Bring the survey papers to Daniel J. D'Arby in the Royal Palm Casino cellar.",
+          "Craft 1 Bizarre Arrow at a Master Workbench (9 Mysterious Arrows or 3 Lucky Arrows + Shard).",
+          "Deliver the Bizarre Arrow to Major Tom to receive the permanent Jojosapiens Stand Chip."
+        ]
+      },
+      {
+        "id": "sptw-evolution",
+        "title": "Star Platinum: The World (SPTW)",
+        "content": "Star Platinum: The World is the premier direct combat evolution in the game. To evolve your base Star Platinum into SPTW, your character must reach Level 75 with maxed 100 Ability points. Consuming an Opal Rokakaka while holding Star Platinum triggers the evolution sequence.",
+        "steps": [
+          "Obtain Star Platinum from Mysterious Arrows (~0.50%) or Part 3 Focus Arrows (5.0%).",
+          "Level up your character to Level 75 (max level cap) and allocate at least 100 points into Ability.",
+          "Acquire an Opal Rokakaka via gardening mutation (3.0% base) or 77 Rings raid drop.",
+          "Equip Star Platinum, consume the Opal Rokakaka, and confirm the evolution prompt."
+        ]
+      },
+      {
+        "id": "twau-swap",
+        "title": "The World: Alternative Universe (TWAU)",
+        "content": "The World: Alternative Universe is an alternate universe variant armed with revolvers, wire tripmines, and compact Time Stop. Using an Opal Rokakaka on a Level 75 The World provides a documented 10% swap chance to morph the Stand into TWAU.",
+        "steps": [
+          "Reach Level 75 with The World equipped.",
+          "Obtain an Opal Rokakaka.",
+          "Consume the Opal Roka. If the 10% swap triggers, The World transforms permanently into TWAU.",
+          "If the swap fails, the Opal Roka functions as a safe stat clean without petrification."
+        ]
+      },
+      {
+        "id": "exclusive-ranked",
+        "title": "Ranked & Supporter Stands (Dolly Dagger & HP Prime)",
+        "content": "Two Stands possess the 'Exclusive' rarity tier and cannot be obtained via standard gameplay loops: Dolly Dagger requires reaching 1850+ ELO in the 1v1 Ranked Arena, while Heaven's Door Prime requires Catalog Supporter Rank 7 (50+ lifetime supporter purchases) or top seasonal Raid leaderboard placement."
+      }
+    ]
+  },
+  {
+    "slug": "locations-and-npcs",
+    "title": "Stand Out Locations & NPCs Guide: Full World Map & Merchant Spots",
+    "category": "Progression",
+    "description": "Navigate the entire STAND OUT map. Find all NPC trainers, black market dealers, crafting workbenches, raid portals, and safe zones across Honolulu.",
+    "readingTime": "11 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "honolulu-map",
+        "title": "World Map & Districts Overview"
+      },
+      {
+        "id": "merchants-trainers",
+        "title": "Key Merchants & Ability Trainers"
+      },
+      {
+        "id": "benches-storage",
+        "title": "Crafting Benches & Storage Locations"
+      },
+      {
+        "id": "raid-portals",
+        "title": "Raid Entrances & Dungeon Waypoints"
+      }
+    ],
+    "sections": [
+      {
+        "id": "honolulu-map",
+        "title": "World Map & Districts Overview",
+        "content": "Roblox STAND OUT takes place across an expansive urban recreation of Oahu, Hawaii. The map is divided into 5 distinct zones: Central Honolulu Plaza (safe zone & tutorial), Downtown Commercial Galleria (IKO IKO & Diamotch), Harbor Marina Docks (ferry & shipping crates), Kailua Hilltop (Rohan's luxury villa), and the North Mountain Pass (High school & Raid tunnels).",
+        "tips": [
+          "Use the Smartphone Huber app to fast travel between unlocked district taxi stands for 50 Dalas.",
+          "Combat zones outside Central Plaza permit open PvP; stay alert near dark alleyways."
+        ]
+      },
+      {
+        "id": "merchants-trainers",
+        "title": "Key Merchants & Ability Trainers",
+        "content": "Notable NPC locations throughout the world:",
+        "table": {
+          "headers": [
+            "NPC Name",
+            "Role / Service",
+            "Zone / District",
+            "Coordinates / Landmark"
+          ],
+          "rows": [
+            [
+              "Tutorial Instructor",
+              "Starter Combat Training",
+              "Central Plaza",
+              "Main Fountain Square"
+            ],
+            [
+              "Meryl Mei Qi",
+              "Storyline & Heist Operations",
+              "Downtown",
+              "IKO IKO Boutique"
+            ],
+            [
+              "Lisa Lisa",
+              "Hamon Master Trainer",
+              "Venice Canal Grounds",
+              "Roman Training Pillar"
+            ],
+            [
+              "Daniel J. D'Arby",
+              "Stand Storage & Chip Vault",
+              "Casino Cellar",
+              "Royal Palm Casino B1"
+            ],
+            [
+              "Big Chop",
+              "Botanical Seeds & Gardening",
+              "Greenhouse Gardens",
+              "North Botanical Park"
+            ],
+            [
+              "Lenny the Mechanic",
+              "Vehicle Upgrades & Garage",
+              "Auto Repair Yard",
+              "Industrial District"
+            ],
+            [
+              "Blackmore",
+              "Catch The Rainbow Quest",
+              "McKinley High",
+              "Behind Gymnasium (Rain Only)"
+            ],
+            [
+              "Lettuce Trader",
+              "Daily Fruit & Chip Trade",
+              "Market Street",
+              "Produce Stall (Sunny Only)"
+            ],
+            [
+              "Major Tom",
+              "Space Oddity / Jojosapiens",
+              "Museum of History",
+              "Beneath Grand Staircase"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "benches-storage",
+        "title": "Crafting Benches & Storage Locations",
+        "content": "Crafting workbenches are situated near major transit hubs. The Central Workshop bench crafts basic Mysterious Arrows and Steel Ingots. The Advanced Master Forge is located in the industrial foundry district near Lenny's garage, required for crafting Lucky and Bizarre Arrows."
+      },
+      {
+        "id": "raid-portals",
+        "title": "Raid Entrances & Dungeon Waypoints",
+        "content": "Raid queuing waypoints are stationed outside the main city: Passione Train Raid departs from Honolulu Central Station track 3; Highway Star Raid is located at the North Bypass Tunnel; and the 77 Rings Raid portal sits at the Ancient Colosseum ruins past the northern mountain pass."
+      }
+    ]
+  },
+  {
+    "slug": "enemy-drops",
+    "title": "Stand Out Enemies & Drops Guide: Mobs, Elites, Bosses & Rates",
+    "category": "Combat & Moves",
+    "description": "Complete drop tables for all enemies in Roblox STAND OUT. Street thugs, police officers, syndicate elites, world bosses, and guaranteed material drops.",
+    "readingTime": "10 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "common-mobs",
+        "title": "Street Thugs & Common Enemies"
+      },
+      {
+        "id": "elite-enemies",
+        "title": "Syndicate Enforcers & Police Officers"
+      },
+      {
+        "id": "world-bosses",
+        "title": "World Bosses & Special Drop Pools"
+      },
+      {
+        "id": "drop-multipliers",
+        "title": "Farming Multipliers & Shigechi Harvest"
+      }
+    ],
+    "sections": [
+      {
+        "id": "common-mobs",
+        "title": "Street Thugs & Common Enemies",
+        "content": "Common street enemies spawn continuously throughout alleyways and industrial sectors. Defeating them provides reliable baseline EXP, Dalas currency, and foundational crafting materials like Scrap Metal and Arrow Parts.",
+        "table": {
+          "headers": [
+            "Enemy Type",
+            "Health (HP)",
+            "Level Range",
+            "Guaranteed Drops",
+            "Rare Drops"
+          ],
+          "rows": [
+            [
+              "Street Thug",
+              "80 HP",
+              "Lv 1-10",
+              "15-30 Dalas, 50 EXP",
+              "Scrap Metal (15%)"
+            ],
+            [
+              "Delinquent Brawler",
+              "150 HP",
+              "Lv 10-20",
+              "35-60 Dalas, 120 EXP",
+              "Arrow Part (10%)"
+            ],
+            [
+              "Harbor Smuggler",
+              "220 HP",
+              "Lv 20-35",
+              "75-120 Dalas, 250 EXP",
+              "Steel Ingot (8%)"
+            ],
+            [
+              "Graveyard Undead",
+              "180 HP",
+              "Lv 25-40",
+              "50 Dalas, 200 EXP",
+              "Human Blood Vial (12%)"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "elite-enemies",
+        "title": "Syndicate Enforcers & Police Officers",
+        "content": "Elite enemies feature super armor, blocking capabilities, and telegraphed guardbreak attacks. Corrupt Police Officers drop Civilian IDs and police car keys, while Passione Syndicate Enforcers drop high-tier forging ores and focus items.",
+        "tips": [
+          "Use a heavy attack (R) immediately when an elite enemy initiates their block posture to trigger a guardbreak.",
+          "Elite enemies have a 0.25s parry cooldown; bait their swings before unleashing full 4-hit light combos."
+        ]
+      },
+      {
+        "id": "world-bosses",
+        "title": "World Bosses & Special Drop Pools",
+        "content": "World Bosses spawn on fixed timers across Honolulu. Defeating them grants massive server-wide bounties and exclusive gear:",
+        "table": {
+          "headers": [
+            "Boss Name",
+            "Spawn Timer",
+            "Health (HP)",
+            "Location",
+            "Exclusive Drops"
+          ],
+          "rows": [
+            [
+              "Rohan Kishibe",
+              "30 Minutes",
+              "350 HP",
+              "Rohan's Villa Study",
+              "Heaven's Door Hat / G-Pen"
+            ],
+            [
+              "Ningbo (200 Balloons)",
+              "45 Minutes",
+              "280 HP",
+              "Shopping Promenade",
+              "Ningbo's Hat & Pants"
+            ],
+            [
+              "Charming Man",
+              "45 Minutes",
+              "225 HP",
+              "Harbor Pier 4",
+              "Charming Man's Outfit"
+            ],
+            [
+              "Hubert (The World)",
+              "60 Minutes",
+              "550 HP",
+              "Construction Top",
+              "1x Lucky Arrow / The World Chip"
+            ],
+            [
+              "DIO Phantom",
+              "90 Minutes",
+              "1,200 HP",
+              "Ancient Shrine Crypt",
+              "Stone Mask / DIO's Set"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "drop-multipliers",
+        "title": "Farming Multipliers & Shigechi Harvest",
+        "content": "Equipping Shigechi's Stand (Harvest) grants a passive +25% item drop rate from all common and elite mobs. Pairing Harvest with the 2x Dalas Coin Booster consumable and D'Arby's Set increases net currency gain by over 140%."
+      }
+    ]
+  },
+  {
+    "slug": "world-events",
+    "title": "Stand Out World Events Guide: Meteors, Airdrops & Boss Spawns",
+    "category": "Progression",
+    "description": "Master dynamic world events in STAND OUT. Meteor crashes, supply airdrops, server weather cycles, and high-tier loot timings.",
+    "readingTime": "9 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "event-types",
+        "title": "Dynamic World Events Overview"
+      },
+      {
+        "id": "meteor-crashes",
+        "title": "Meteorite Crash Sites (Stand Materials)"
+      },
+      {
+        "id": "supply-airdrops",
+        "title": "Supply Crate Airdrops"
+      },
+      {
+        "id": "weather-cycles",
+        "title": "Weather Cycles: Sunny, Rain & Fog"
+      }
+    ],
+    "sections": [
+      {
+        "id": "event-types",
+        "title": "Dynamic World Events Overview",
+        "content": "World events in STAND OUT occur dynamically on global server timers. When an event triggers, a server-wide audio cue and chat banner alert all active players. Competing for these events yields the highest concentration of Bizarre Arrows, rare crafting minerals, and exclusive weather-locked quest access."
+      },
+      {
+        "id": "meteor-crashes",
+        "title": "Meteorite Crash Sites (Stand Materials)",
+        "content": "Every 60 to 90 minutes, a glowing golden meteor crashes into an exterior district (Waikiki Beach, Kailua Ridge, or North Forest). The impact crater produces high heat and spawns 3 to 5 harvestable Meteorite Shards and Mysterious Rocks.",
+        "steps": [
+          "Watch for the fiery atmospheric trail crossing the sky.",
+          "Rush to the impact coordinates marked by a rising smoke plume.",
+          "Use a pickaxe or heavy Stand punch to extract Meteorite Shards from the central rock.",
+          "Prepare for open PvP combat; meteor sites disable safe zone protections."
+        ],
+        "tips": [
+          "Meteorite Shards are mandatory ingredients for forging Bizarre Arrows at Master Forges."
+        ]
+      },
+      {
+        "id": "supply-airdrops",
+        "title": "Supply Crate Airdrops",
+        "content": "Cargo planes periodically drop parachuted supply crates across industrial docks and public parks. Crates contain military consumables, high-tier Dalas cash bundles ($5,000 to $15,000), 2x EXP Boosters, and rare Steel Ingots.",
+        "warning": "Opening an airdrop requires holding E for 10 uninterrupted seconds. Any incoming damage resets your capture progress."
+      },
+      {
+        "id": "weather-cycles",
+        "title": "Weather Cycles: Sunny, Rain & Fog",
+        "content": "Server weather shifts every 20-30 minutes. Rain activates Blackmore's 'Catch The Rainbow' quest and boosts water stand damage (Catch The Rainbow, Smoke On The Water). Fog spawns the Old Lady and Angelo Rock fissures. Clear sunny weather is required to find the Lettuce Trader."
+      }
+    ]
+  },
+  {
+    "slug": "phone-and-travel",
+    "title": "Stand Out Phone & Fast Travel Guide: Huber, Contacts & Bounties",
+    "category": "Starter",
+    "description": "How to unlock and use the Smartphone in STAND OUT. Huber taxi travel, remote bounty acceptance, gift codes, and contact management.",
+    "readingTime": "8 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "unlock-phone",
+        "title": "How to Unlock the Smartphone"
+      },
+      {
+        "id": "huber-travel",
+        "title": "Huber Fast Travel System & Taxi Stands"
+      },
+      {
+        "id": "phone-apps",
+        "title": "Phone Applications: Bounties, Bank & Gifts"
+      },
+      {
+        "id": "tips-shortcuts",
+        "title": "Keybind Shortcuts & Efficiency Tips"
+      }
+    ],
+    "sections": [
+      {
+        "id": "unlock-phone",
+        "title": "How to Unlock the Smartphone",
+        "content": "The Smartphone is the single most important utility item in STAND OUT. You receive it permanently from Meryl Mei Qi upon completing Storyline Chapter 4 ('Meet Meryl Mei Qi') at IKO IKO. Once unlocked, pressing the P key opens your phone interface anywhere outside active combat.",
+        "steps": [
+          "Complete Storyline Chapters 1 through 3.",
+          "Report to Meryl Mei Qi at the IKO IKO boutique.",
+          "Receive the Smartphone as an essential campaign completion reward.",
+          "Press P on PC or tap the Phone HUD icon on mobile to launch the interface."
+        ]
+      },
+      {
+        "id": "huber-travel",
+        "title": "Huber Fast Travel System & Taxi Stands",
+        "content": "The Huber taxi app allows instant teleportation between unlocked district taxi stations across Oahu. Teleporting costs a nominal fee of $50 to $100 Dalas, eliminating tedious cross-map walking during delivery missions.",
+        "table": {
+          "headers": [
+            "Taxi Stand Destination",
+            "Zone",
+            "Fare Cost",
+            "Nearby Landmark"
+          ],
+          "rows": [
+            [
+              "Central Plaza Station",
+              "Central District",
+              "$50 Dalas",
+              "Tutorial Plaza & Fountain"
+            ],
+            [
+              "IKO IKO Downtown",
+              "Commercial District",
+              "$50 Dalas",
+              "Boutique & Diamotch Jewelers"
+            ],
+            [
+              "Harbor Marina Docks",
+              "Waterfront District",
+              "$75 Dalas",
+              "Ferry Terminal & Cargo Storage"
+            ],
+            [
+              "Kailua Hilltop",
+              "Residential Ridge",
+              "$100 Dalas",
+              "Rohan Kishibe's Villa"
+            ],
+            [
+              "North Bypass Tunnel",
+              "Mountain Pass",
+              "$100 Dalas",
+              "Highway Star Raid Entrance"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "phone-apps",
+        "title": "Phone Applications: Bounties, Bank & Gifts",
+        "content": "The phone operating system includes several built-in apps: Bounties (accept contracts remotely without visiting Petyr), Bank (view cash balance and transfer Dalas to gang vaults), and Gifts (redeem promotional codes directly from the screen)."
+      },
+      {
+        "id": "tips-shortcuts",
+        "title": "Keybind Shortcuts & Efficiency Tips",
+        "content": "Pressing P while driving a car automatically engages the GPS waypoint to your nearest active storyline marker. Note: The phone cannot be pulled up while you are ragdolled, guardbroken, or during active Raid boss phases."
+      }
+    ]
+  },
+  {
+    "slug": "eliminations-and-parties",
+    "title": "Stand Out Eliminations & Parties Guide: Squad Combat & Bounty XP",
+    "category": "Combat & Moves",
+    "description": "Master squad dynamics and player eliminations in STAND OUT. Group EXP sharing, party buffs, bounty hunting, and PvP combat rewards.",
+    "readingTime": "9 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "party-system",
+        "title": "Creating & Managing Squad Parties"
+      },
+      {
+        "id": "exp-sharing",
+        "title": "Party EXP & Dalas Sharing Rules"
+      },
+      {
+        "id": "eliminations",
+        "title": "Player Eliminations & Bounty Points"
+      },
+      {
+        "id": "synergies",
+        "title": "Ideal Squad Compositions"
+      }
+    ],
+    "sections": [
+      {
+        "id": "party-system",
+        "title": "Creating & Managing Squad Parties",
+        "content": "STAND OUT supports squad parties of up to 4 players. Inviting friends to your party prevents friendly fire during chaotic AoE attacks and shares quest progress for mob-clearing objectives.",
+        "steps": [
+          "Open your player roster list in the game menu.",
+          "Click the '+' invite button next to a player's username.",
+          "Once accepted, squad members gain green health bars above their avatars and shared radar markers."
+        ]
+      },
+      {
+        "id": "exp-sharing",
+        "title": "Party EXP & Dalas Sharing Rules",
+        "content": "When members are within 150 studs of each other, all mob kill EXP and Dalas currency are shared equally with a +15% squad bonus. This makes 4-player grinding at the Graveyard or Harbor Docks substantially faster than solo leveling.",
+        "tips": [
+          "Ensure squad members remain within visual range; straying past 150 studs disables EXP sharing.",
+          "Storyline boss kills register for all party members simultaneously if everyone lands at least 1 hit."
+        ]
+      },
+      {
+        "id": "eliminations",
+        "title": "Player Eliminations & Bounty Points",
+        "content": "Registering player eliminations in open PvP zones or the 1v1 Ranked Arena grants Bounty Points. High bounty players appear on the public board with red name tags; hunting them down awards up to $10,000 Dalas per takedown.",
+        "warning": "Killing passive civilian players repeatedly flags you as a Notorious Outlaw, allowing anyone to attack you without reputation loss."
+      },
+      {
+        "id": "synergies",
+        "title": "Ideal Squad Compositions",
+        "content": "For 77 Rings raids and gang wars, the optimal party composition consists of: 1 Main Tank / Disrupter (The Hustle or White Snake), 1 Time Stop Burst DPS (Star Platinum or The World), 1 Long-Range Zoner (November Rain or Emperor), and 1 Support Healer (Crazy Diamond or Cinderella)."
+      }
+    ]
+  },
+  {
+    "slug": "customizer",
+    "title": "Stand Out Customizer & Builder Guide: Outfits, Colors & Pose Styles",
+    "category": "Starter",
+    "description": "How to customize your Stand and avatar in STAND OUT. Color palettes, Alt 1-3 skins, customizer tools, and builder perks.",
+    "readingTime": "8 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "customizer-basics",
+        "title": "Accessing the Customizer Station"
+      },
+      {
+        "id": "alt-palettes",
+        "title": "Stand Alt Colors & Palette Swaps"
+      },
+      {
+        "id": "avatar-clothing",
+        "title": "Equipping Accessories & Outfits"
+      },
+      {
+        "id": "pose-animations",
+        "title": "Custom Summon Poses & Taunts"
+      }
+    ],
+    "sections": [
+      {
+        "id": "customizer-basics",
+        "title": "Accessing the Customizer Station",
+        "content": "The Customizer is located inside the IKO IKO fashion boutique downtown and the Central Plaza salon. Interacting with the full-length dressing mirror opens the customization interface, allowing you to recolor Stand auras, adjust clothing layers, and set signature summon poses.",
+        "steps": [
+          "Visit IKO IKO boutique in Downtown Honolulu.",
+          "Interact with the dressing mirror station (Press E).",
+          "Select between Stand Appearance, Character Apparel, and Pose Animations."
+        ]
+      },
+      {
+        "id": "alt-palettes",
+        "title": "Stand Alt Colors & Palette Swaps",
+        "content": "Every Stand has 3 alternative colorway palettes (Alt 1, Alt 2, and Alt 3) inspired by official JoJo manga color spreads and anime color transitions. Unlocking alt skins requires either reaching Master Level 50 with that Stand or redeeming Catalog Supporter cosmetics.",
+        "table": {
+          "headers": [
+            "Stand",
+            "Default Color",
+            "Alt 1 Colorway",
+            "Alt 2 Colorway",
+            "Alt 3 Colorway"
+          ],
+          "rows": [
+            [
+              "Star Platinum",
+              "Classic Violet / Teal",
+              "Manga Emerald Green",
+              "Ova Platinum White",
+              "All-Star Blue"
+            ],
+            [
+              "The World",
+              "Golden Yellow",
+              "Shadow DIO Charcoal",
+              "Awakened Blood Red",
+              "Diego Turquoise"
+            ],
+            [
+              "King Crimson",
+              "Crimson Red / White",
+              "Anime Lavender Blue",
+              "Diavolo Monochrome",
+              "Epitaph Green"
+            ],
+            [
+              "November Rain",
+              "Navy Blue / Silver",
+              "Golden Wind Gold",
+              "Tropical Sunset Pink",
+              "Slate Charcoal"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "avatar-clothing",
+        "title": "Equipping Accessories & Outfits",
+        "content": "Unlike standard Roblox avatar customization, accessories in STAND OUT (like DIO's Jacket or Blackmore's Mask) attach directly over your character model and confer active gameplay stat buffs alongside their visual design."
+      },
+      {
+        "id": "pose-animations",
+        "title": "Custom Summon Poses & Taunts",
+        "content": "Pressing B triggers your character's equipped Stand Summon Pose. You can unlock dynamic poses (such as Jotaro's Point, DIO's Wryyy, and Jodio's Finger Rain) through catalog rank achievements or story milestone badges."
+      }
+    ]
+  },
+  {
+    "slug": "metal-detecting",
+    "title": "Stand Out Metal Detecting Guide: Beach Digging, Scrap & Loot Table",
+    "category": "Economy",
+    "description": "How to get and use the Metal Detector in STAND OUT. Best treasure digging spots, beeping radar cues, and rare accessory salvage.",
+    "readingTime": "8 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "how-to-get",
+        "title": "How to Get the Metal Detector"
+      },
+      {
+        "id": "detecting-mechanics",
+        "title": "How Metal Detecting Works (Radar Cues)"
+      },
+      {
+        "id": "best-spots",
+        "title": "Best Digging Locations Across Oahu"
+      },
+      {
+        "id": "loot-table",
+        "title": "Metal Detecting Loot Table & Rates"
+      }
+    ],
+    "sections": [
+      {
+        "id": "how-to-get",
+        "title": "How to Get the Metal Detector",
+        "content": "The Handheld Metal Detector is a specialized salvage tool purchased from the Harbor Tool Merchant for $3,500 Dalas, or crafted at a Crafting Bench using 3x Steel Ingots, 5x Scrap Metal, and 1x Electrical Wire.",
+        "steps": [
+          "Earn $3,500 Dalas through initial storyline missions or daily bounties.",
+          "Visit the Harbor Marina and speak with Tool Merchant Kai.",
+          "Purchase the Handheld Metal Detector and place it on your hotbar (Key 4 or 5)."
+        ]
+      },
+      {
+        "id": "detecting-mechanics",
+        "title": "How Metal Detecting Works (Radar Cues)",
+        "content": "Equip the Metal Detector and walk slowly across sand or soft dirt terrain. As you approach buried metallic loot, the detector emits increasingly rapid audio beeps and a circular radar HUD pulses from yellow to glowing red. When directly over the treasure node, press LMB to unearth the cache.",
+        "tips": [
+          "Wear headphones to accurately distinguish high-frequency rapid beeps indicating high-tier loot nodes.",
+          "Digging nodes despawn if left unexcavated for more than 45 seconds after activation."
+        ]
+      },
+      {
+        "id": "best-spots",
+        "title": "Best Digging Locations Across Oahu",
+        "content": "Top metal detecting routes include: Waikiki Beach shoreline (high coin & watch drops), Harbor Sand Spit (scrap metal & steel ingots), and the Riverbank Delta near the waterfall (Laem Chabang accessories & rare arrow parts)."
+      },
+      {
+        "id": "loot-table",
+        "title": "Metal Detecting Loot Table & Rates",
+        "content": "Verified salvage rates from metal detecting nodes:",
+        "table": {
+          "headers": [
+            "Salvaged Item",
+            "Tier Category",
+            "Drop Chance",
+            "Average Value"
+          ],
+          "rows": [
+            [
+              "Scrap Metal (x3-x5)",
+              "Common Material",
+              "45.0%",
+              "$500 Dalas Crafting Value"
+            ],
+            [
+              "Steel Ingot (x1-x2)",
+              "Uncommon Material",
+              "25.0%",
+              "$1,500 Dalas"
+            ],
+            [
+              "Arrow Part (x1)",
+              "Rare Crafting",
+              "15.0%",
+              "Essential for Arrows"
+            ],
+            [
+              "Dalas Cash Cache ($1k-$3k)",
+              "Currency",
+              "10.0%",
+              "Instant Cash"
+            ],
+            [
+              "Laem Chabang's Holster",
+              "Epic Accessory",
+              "3.5%",
+              "+6 Ability / +5% Bullet Dmg"
+            ],
+            [
+              "Mysterious Arrow (Intact)",
+              "Summon Item",
+              "1.5%",
+              "Instant Stand Summon"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "minigames",
+    "title": "Stand Out Minigames Guide: Casino Card Games, Batting & Dalas Payouts",
+    "category": "Economy",
+    "description": "Complete guide to all minigames in Roblox STAND OUT. Royal Palm Casino games, batting cages, training drills, and maximizing payouts.",
+    "readingTime": "9 min read",
+    "updatedDate": "2026-11-23",
+    "tableOfContents": [
+      {
+        "id": "casino-games",
+        "title": "Royal Palm Casino: Poker & Go Fish"
+      },
+      {
+        "id": "batting-cages",
+        "title": "Batting Cages & Precision Training"
+      },
+      {
+        "id": "speed-trials",
+        "title": "Vehicle Street Rallies & Delivery Runs"
+      },
+      {
+        "id": "payout-strategies",
+        "title": "Maximizing Minigame Currency Payouts"
+      }
+    ],
+    "sections": [
+      {
+        "id": "casino-games",
+        "title": "Royal Palm Casino: Poker & Go Fish",
+        "content": "Located in the Entertainment District, the Royal Palm Casino is the premier recreational hub in STAND OUT. Inside, players can wager Dalas at high-stakes tables. The cellar hosts Daniel J. D'Arby, where winning his Go Fish duel unlocks permanent Stand Storage slots and the D'Arby Outfit Set.",
+        "tips": [
+          "Never wager more than 25% of your total Dalas on a single round of casino games.",
+          "Wear D'Arby's Jacket and Pants to receive a permanent +10% bonus payout on all casino winnings."
+        ]
+      },
+      {
+        "id": "batting-cages",
+        "title": "Batting Cages & Precision Training",
+        "content": "The Honolulu Batting Cages test timing and parry precision. Pitching machines launch high-speed baseballs that require exact 0.12s melee swings or F-blocks to reflect. Achieving a Perfect 20 streak awards the Slugger Title and 1,500 Dalas.",
+        "steps": [
+          "Enter the batting cage enclosure and pay the 50 Dalas machine fee.",
+          "Time your LMB swing when the incoming ball passes the red target circle.",
+          "Chain 10 consecutive home runs to unlock double score multipliers."
+        ]
+      },
+      {
+        "id": "speed-trials",
+        "title": "Vehicle Street Rallies & Delivery Runs",
+        "content": "Street vehicle rallies challenge players to race customized tuner hatchbacks through checkpoint gates across Honolulu without crashing. Completing gold-medal time trials awards engine modification parts and heavy vehicle armor plates."
+      },
+      {
+        "id": "payout-strategies",
+        "title": "Maximizing Minigame Currency Payouts",
+        "content": "To maximize Dalas generation, cycle between high-yield minigames during server cooldowns: complete 1 batting streak, run 1 casino table round with D'Arby gear equipped, and finish with a timed food delivery route for optimal hourly currency yield."
+      }
+    ]
   }
-
 ];
 
 export const guidesBySlug = new Map(guides.map((g) => [g.slug, g]));

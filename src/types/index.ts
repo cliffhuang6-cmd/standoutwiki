@@ -1,5 +1,5 @@
-export type Rarity = 'Rare' | 'Epic' | 'Legendary' | 'Mythical' | 'Pinnacle' | 'Evolution' | 'Quest' | 'Alternative Universe';
-export type StandStatus = 'Playable' | 'Evolution' | 'Quest' | 'In Testing' | 'Rework Pending' | 'Unreleased' | 'Alternative Universe';
+export type Rarity = 'Rare' | 'Epic' | 'Legendary' | 'Mythical' | 'Pinnacle' | 'Evolution' | 'Quest' | 'Alternative Universe' | 'Exclusive' | 'Historical';
+export type StandStatus = 'Playable' | 'Evolution' | 'Quest' | 'In Testing' | 'Rework Pending' | 'Unreleased' | 'Alternative Universe' | 'Historical';
 export type TierRank = 'Z' | 'S+' | 'S' | 'A+' | 'A' | 'B' | 'C';
 
 export interface Move {
@@ -115,7 +115,7 @@ export interface Accessory {
     setName: string;
     requiredPieces: string[];
     effect: string;
-  };
+  } | null;
   dropsFrom: string;
   image?: string;
 }
@@ -123,10 +123,13 @@ export interface Accessory {
 export interface Quest {
   slug: string;
   title: string;
+  chapter?: string;
   npc: string;
   category: 'Storyline' | 'Sub-Ability' | 'Side Quest' | 'Daily Quest' | 'Bounty';
   location: string;
+  requiredLevel?: number;
   prerequisites?: string;
+  nextQuest?: string;
   objectives: string[];
   rewards: {
     dalas?: number;

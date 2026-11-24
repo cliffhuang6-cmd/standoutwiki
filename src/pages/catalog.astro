@@ -1,0 +1,247 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
+import AdNative from '../components/ads/AdNative.astro';
+
+const catalogRanks = [
+  {
+    rank: 'Rank 1: Rough Sketch',
+    req: '1 Supporter Purchase',
+    rewardName: "Rohan's Earrings",
+    rewardType: 'Accessory (Face/Ears)',
+    bonuses: '+3 Ability · +1 Strength · +2 Health · +3% Posture Recovery',
+    desc: 'The starter supporter milestone. Awards Rohan Kishibe’s signature silver pen nib earrings.'
+  },
+  {
+    rank: 'Rank 2: Storyboard',
+    req: '3 Supporter Purchases',
+    rewardName: "Rohan's G-Pen",
+    rewardType: 'Accessory / Weapon Item',
+    bonuses: '+5 Ability · +3 Strength · +3% Dalas Earned from mob kills and deliveries',
+    desc: 'Awarded to budding supporters. Provides a permanent passive boost to in-game currency earnings.'
+  },
+  {
+    rank: 'Rank 3: Inked',
+    req: '6 Supporter Purchases',
+    rewardName: "Heaven's Door Hat",
+    rewardType: 'Accessory (Headwear)',
+    bonuses: '+5 Ability · +2 Strength · +4 Health · +3% Guard Posture',
+    desc: 'Classic fedora adorned with golden ribbon accents, enhancing overall guard resistance against heavy guardbreaks.'
+  },
+  {
+    rank: 'Rank 4: Serialized',
+    req: '12 Supporter Purchases',
+    rewardName: "Rohan's Pants",
+    rewardType: 'Accessory (Legs / 2-Piece Set)',
+    bonuses: '+8 Ability · +6 Strength · +6 Health · +5% Walkspeed & Sprint Agility',
+    desc: "Forms the Mangaka Elite Set with Rohan's Jacket (+10 Ability & +5% Money bonus when both are worn)."
+  },
+  {
+    rank: 'Rank 5: Bestseller',
+    req: '25 Supporter Purchases',
+    rewardName: "Rohan's Jacket",
+    rewardType: 'Accessory (Torso / 2-Piece Set)',
+    bonuses: '+12 Ability · +8 Strength · +8 Health · +8% Health & Posture Recovery',
+    desc: 'High-tier cosmetic torso armor offering substantial all-around stat buffs and set pairing synergy.'
+  },
+  {
+    rank: 'Rank 6: Masterpiece',
+    req: '35 Supporter Purchases',
+    rewardName: 'Masterpiece Creator Title & Customizer Swaps',
+    rewardType: 'Customizer & Title Unlock',
+    bonuses: 'Exclusive in-game golden chat badge and 4 premium colorway palette swaps',
+    desc: 'Showcases elite patron status across all public servers with permanent visual customizer unlocks.'
+  },
+  {
+    rank: 'Rank 7: Heaven\'s Door',
+    req: '50+ Supporter Purchases',
+    rewardName: "Heaven's Door Prime (Exclusive Stand)",
+    rewardType: 'Exclusive Stand Awakening',
+    bonuses: 'Full Stand Unlock with upgraded Safety Lock, Memory Rewriting, and Reality Manipulation',
+    desc: "The pinnacle supporter reward. Unlocks the Exclusive Heaven's Door Prime Stand, which cannot be rolled from any Stand Arrow."
+  }
+];
+---
+
+<Layout
+  title="Stand Out Catalog Guide – 7 Supporter Ranks, Rewards & Heaven's Door Prime | Stand Out Wiki"
+  description="Complete guide to the Catalog system in Roblox STAND OUT. Discover all 7 supporter ranks from Rough Sketch to Heaven's Door, exclusive accessories, and Stand rewards."
+  canonicalPath="catalog"
+  breadcrumbs={[{ label: 'Catalog & Ranks' }]}
+  schemaType="Article"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Hero Header -->
+    <div class="max-w-3xl mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 text-violet-800 text-xs font-black uppercase tracking-wider mb-3 border border-violet-200">
+        <span>Game Systems</span>
+        <span>•</span>
+        <span>Creator &amp; Supporter Economy</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+        Stand Out Catalog: 7 Supporter Ranks &amp; Rewards
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+        The <strong>Catalog</strong> in Roblox STAND OUT is an integrated in-game marketplace where community-designed cosmetic accessories, hats, and outfits are showcased and traded. Supporting content creators unlocks tiered supporter ranks, rewarding players with exclusive high-stat accessories and the coveted <strong>Heaven's Door Prime</strong> Stand.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-3 text-xs font-bold">
+        <a href="#how-it-works" class="px-3.5 py-1.5 rounded-lg bg-violet-50 text-violet-800 border border-violet-200 hover:bg-violet-100 transition-colors">
+          How It Works &darr;
+        </a>
+        <a href="#ranks" class="px-3.5 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition-colors">
+          The 7 Ranks &amp; Rewards &darr;
+        </a>
+        <a href="#heavens-door-prime" class="px-3.5 py-1.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition-colors">
+          Heaven's Door Prime Unlock &darr;
+        </a>
+        <a href="/accessories/" class="px-3.5 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+          All 62 Accessories &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Top Above-the-fold Ad -->
+    <AdLeaderboard className="mb-12" />
+
+    <!-- Section 1: How the Catalog Works -->
+    <section id="how-it-works" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mb-6">What Is the Catalog &amp; How It Works</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center font-black text-lg mb-4">
+            1
+          </div>
+          <h3 class="text-lg font-black text-slate-900 mb-2">Browse Player Creations</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Open the in-game Catalog tab to browse hundreds of user-submitted avatar items, custom clothing, and 3D accessories designed by verified community creators.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-black text-lg mb-4">
+            2
+          </div>
+          <h3 class="text-lg font-black text-slate-900 mb-2">Support Sellers &amp; Creators</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Every qualifying item purchased through the Catalog awards direct creator royalty cuts and advances your personal lifetime Supporter Progress bar.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg mb-4">
+            3
+          </div>
+          <h3 class="text-lg font-black text-slate-900 mb-2">Claim Exclusive Rewards</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Reaching designated support tiers permanently unlocks exclusive high-stat accessories (Rohan's Set), titles, and unique gameplay Stand variants.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: The 7 Ranks and Rewards Table -->
+    <section id="ranks" class="mb-16 scroll-mt-24">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-violet-700">Progression Ladder</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">The Seven Catalog Ranks</h2>
+        </div>
+        <span class="text-xs font-bold text-slate-500">Official Milestone Schedule</span>
+      </div>
+
+      <div class="space-y-4">
+        {catalogRanks.map((r) => (
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-violet-300 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1 max-w-xl">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-md bg-violet-100 text-violet-800 font-extrabold text-xs">
+                  {r.rank}
+                </span>
+                <span class="text-xs font-bold text-amber-700 font-mono">
+                  {r.req}
+                </span>
+              </div>
+              <h3 class="text-lg font-black text-slate-900">{r.rewardName}</h3>
+              <p class="text-xs text-slate-600">{r.desc}</p>
+            </div>
+
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-700 font-mono shrink-0 md:text-right max-w-xs">
+              <span class="font-bold block text-[10px] uppercase tracking-wider text-slate-400 mb-0.5">Stat Bonuses</span>
+              {r.bonuses}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Mid-Page Native Ad -->
+    <AdNative className="my-12" />
+
+    <!-- Section 3: Heaven's Door Prime Spotlight -->
+    <section id="heavens-door-prime" class="mb-16 scroll-mt-24">
+      <div class="p-8 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <span class="px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30 text-xs font-black uppercase tracking-wider">
+              Exclusive Stand Reward
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black tracking-tight">
+              Heaven's Door Prime
+            </h2>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              <strong>Heaven's Door Prime</strong> is an Exclusive variant of Rohan Kishibe's Stand, awarded strictly to players who achieve Catalog Supporter Rank 7 (Heaven's Door rank with 50+ total community supporter purchases) or elite seasonal Raid Leaderboard placements.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs">
+              <div class="p-3 rounded-xl bg-slate-800 border border-slate-700">
+                <strong class="text-violet-400 block mb-1">Reality Writing (EX Awakening)</strong>
+                Allows the user to command-rewrite opponent action buffers, temporarily disabling evasive dashes and EX bars.
+              </div>
+              <div class="p-3 rounded-xl bg-slate-800 border border-slate-700">
+                <strong class="text-violet-400 block mb-1">Safety Lock Posture</strong>
+                Parries incoming attacks into an automatic forced book-mode stun, leaving targets vulnerable to combos.
+              </div>
+            </div>
+            <div class="pt-2">
+              <a
+                href="/stands/heavens-door-prime/"
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-violet-600 text-white font-bold text-xs hover:bg-violet-500 transition-colors"
+              >
+                View Full Heaven's Door Prime Moveset &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex justify-center">
+            <div class="relative w-48 aspect-square rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 flex items-center justify-center p-4">
+              <img
+                src="/images/stands/heavens-door-prime.webp?v=2"
+                alt="Heaven's Door Prime character pose in Roblox STAND OUT"
+                class="w-full h-full object-cover object-top rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-links -->
+    <div class="p-6 rounded-2xl bg-white border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <h4 class="text-base font-black text-slate-900">Looking for other accessory sets and stats?</h4>
+        <p class="text-xs text-slate-500 mt-0.5">Explore how Rohan's Set combines with other gear to reach +150 Ability.</p>
+      </div>
+      <div class="flex gap-3">
+        <a href="/accessories/" class="px-4 py-2 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors">
+          Accessories Database &rarr;
+        </a>
+        <a href="/stats/" class="px-4 py-2 rounded-xl bg-violet-100 text-violet-900 font-bold text-xs hover:bg-violet-200 transition-colors">
+          Stats &amp; Scaling Guide &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

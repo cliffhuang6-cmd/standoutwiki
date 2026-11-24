@@ -4,7 +4,7 @@ import BuildMaker from '../../components/BuildMaker';
 import ArrowCalculator from '../../components/ArrowCalculator';
 import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
 import AdNative from '../../components/ads/AdNative.astro';
-import { guides, guidesBySlug } from '../../data/guides';
+import { guides } from '../../data/guides';
 
 export function getStaticPaths() {
   return guides.map((guide) => ({

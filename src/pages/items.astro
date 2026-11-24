@@ -47,7 +47,7 @@ import AdNative from '../components/ads/AdNative.astro';
 
 <Layout
   title="Stand Out Items & Crafting Recipes – Materials, Consumables & Arrows | Stand Out Wiki"
-  description="Complete 28-item database for Roblox STAND OUT. View high-resolution item graphics, crafting bench formulas, consumable fruit effects, Steel Ingot locations, and Stand Chip storage."
+  description={`Complete ${items.length}-item database for Roblox STAND OUT. View high-resolution item graphics, crafting bench formulas, consumable fruit effects, Steel Ingot locations, and Stand Chip storage.`}
   canonicalPath="items"
   breadcrumbs={[{ label: 'Items' }]}
   schemaType="CollectionPage"
@@ -181,7 +181,10 @@ import AdNative from '../components/ads/AdNative.astro';
 
                   {/* Title & Obtainment */}
                   <h3 class="text-base font-black text-slate-900 group-hover:text-emerald-800 transition-colors">
-                    {item.name}
+                    <a href={`/items/${item.slug}/`} class="hover:underline flex items-center justify-between">
+                      <span>{item.name}</span>
+                      <span class="text-xs text-emerald-600 font-bold">&rarr;</span>
+                    </a>
                   </h3>
 
                   <div class="mt-1.5 mb-3 p-2 bg-slate-50 rounded-lg border border-slate-100 text-xs text-slate-600">

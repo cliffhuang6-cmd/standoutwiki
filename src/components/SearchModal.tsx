@@ -58,7 +58,7 @@ export default function SearchModal() {
         title: item.name,
         subtitle: `${item.category} • ${item.description.slice(0, 70)}...`,
         category: 'Item',
-        url: `/items/#${item.slug}`,
+        url: `/items/${item.slug}/`,
         badge: item.category
       });
     });
@@ -89,6 +89,10 @@ export default function SearchModal() {
 
     // Key Systems
     const systems = [
+      { title: 'Best Stands by Role', url: '/best-stands/', desc: 'Top PvP 1v1, Raids, PvE & Starter recommendations' },
+      { title: 'Stand Comparison Tool', url: '/tools/compare/', desc: 'Compare 2-3 Stands side-by-side with movesets' },
+      { title: 'Stats & Ability Scaling', url: '/stats/', desc: 'Max Level 75 scaling, HP/DMG curves & builds' },
+      { title: 'Catalog Ranks & Rewards', url: '/catalog/', desc: '7 Creator ranks & Heaven\'s Door Prime unlock' },
       { title: 'Tier List (PvP & Raid)', url: '/tier-list/', desc: 'Complete competitive Stand rankings' },
       { title: 'Stand Arrows Guide', url: '/stand-arrows/', desc: 'Mysterious, Lucky, Bizarre rates' },
       { title: 'Stand Rarity & Chances', url: '/stand-rarity/', desc: 'Bernoulli probability & roll tables' },
@@ -97,8 +101,8 @@ export default function SearchModal() {
       { title: 'Rokakaka Fruit Mutations', url: '/rokakaka/', desc: 'Stand reset & 33 mutations' },
       { title: 'Gardening & Crops', url: '/gardening/', desc: 'Seeds, soil, water & greenhouse' },
       { title: 'Stand Storage & D\'Arby', url: '/stand-storage/', desc: 'Stand chips and slots' },
-      { title: 'Quests & NPC Directory', url: '/quests/', desc: 'Story quests & bounty targets' },
-      { title: 'Accessories & Sets', url: '/accessories/', desc: 'DIO, Jotaro, SWAT gear sets' }
+      { title: 'Quests & NPC Directory', url: '/quests/', desc: '54 Chapters, 12 side quests & 13 bounties' },
+      { title: 'Accessories & Sets', url: '/accessories/', desc: '62 items across 8 gear sets' }
     ];
     systems.forEach((sys) => {
       list.push({

@@ -1,0 +1,295 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BuildMaker from '../components/BuildMaker';
+import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
+import AdNative from '../components/ads/AdNative.astro';
+
+const scalingTable = [
+  { stand: 'Star Platinum', scalingType: 'Ability (Heavy)', keyMove: 'Time Stop (5s -> 10s max), Star Finger, Inhale Pull', optimalRatio: '100 Ability / 50 Damage / 75 Health' },
+  { stand: 'The World', scalingType: 'Ability (Heavy)', keyMove: 'Time Stop (5s -> 10s max), Knife Volley Barrage, Road Roller', optimalRatio: '100 Ability / 50 Damage / 75 Health' },
+  { stand: 'King Crimson', scalingType: 'Hybrid (Damage + Ability)', keyMove: 'Epitaph Counter, Time Erase reposition, Donut strike', optimalRatio: '80 Ability / 75 Damage / 70 Health' },
+  { stand: 'November Rain', scalingType: 'Ability (Heavy)', keyMove: 'Heavy Downpour crushing rain, Concrete Pillar Slam', optimalRatio: '100 Ability / 45 Damage / 80 Health' },
+  { stand: 'Highway Star', scalingType: 'Ability (Medium)', keyMove: 'Nutrient Drain siphon ticks, Scent Tracking sprint', optimalRatio: '75 Ability / 60 Damage / 90 Health' },
+  { stand: 'Mandom', scalingType: 'Ability (Threshold)', keyMove: '6-Second Rewind cooldown reduction, Quickdraw pistol', optimalRatio: '75 Ability / 75 Damage / 75 Health' },
+  { stand: 'The Hustle', scalingType: 'Physical Damage (Heavy)', keyMove: 'Muscle Grab, Kinetic Slam, Grapple Body Throw', optimalRatio: '30 Ability / 100 Damage / 95 Health' },
+  { stand: 'Silver Chariot', scalingType: 'Physical Damage (Heavy)', keyMove: 'Rapier Barrage, Armor Off Blitz, Afterimage Rush', optimalRatio: '40 Ability / 100 Damage / 85 Health' },
+  { stand: 'Crazy Diamond', scalingType: 'Hybrid (Damage + Ability)', keyMove: 'Restoration Wall, Blood Dart Tracking, Heavy Dorarara', optimalRatio: '75 Ability / 75 Damage / 75 Health' },
+  { stand: 'The Hand', scalingType: 'Damage + Ability', keyMove: 'Spatial Erasure Guardbreak, Void Pull', optimalRatio: '65 Ability / 85 Damage / 75 Health' },
+  { stand: 'Harvest', scalingType: 'Ability (Special)', keyMove: 'Swarm Foraging Dalas multiplier, Injection needle stun', optimalRatio: '80 Ability / 45 Damage / 100 Health' },
+  { stand: 'Pluck (Sword Weapon)', scalingType: 'Strength + Hamon', keyMove: 'Sword thrust flurry, Hamon conductivity overdrive', optimalRatio: '60 Ability / 90 Damage / 75 Health' }
+];
+---
+
+<Layout
+  title="Stand Out Stats Guide – Stat Points, Ability Scaling & Max Level 75 Builds | Stand Out Wiki"
+  description="Master the stats system in Roblox STAND OUT. Understand Health, Damage, and Ability scaling, the 225-point Level 75 cap, accessory stacking, and optimal builds."
+  canonicalPath="stats"
+  breadcrumbs={[{ label: 'Stats & Scaling' }]}
+  schemaType="Article"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Hero Header -->
+    <div class="max-w-3xl mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-black uppercase tracking-wider mb-3 border border-teal-200">
+        <span>Mechanics Guide</span>
+        <span>•</span>
+        <span>Max Level 75 (225 Points)</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+        Stand Out Stats &amp; Ability Scaling Guide
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+        Allocating your stat points correctly is the difference between dominating ranked duels and losing trades. Every level grants 3 Stat Points up to the current Level 75 cap (225 points total). Here is how Health, Damage, and Ability mathematically scale your character in combat.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-3 text-xs font-bold">
+        <a href="#attributes" class="px-3.5 py-1.5 rounded-lg bg-teal-50 text-teal-800 border border-teal-200 hover:bg-teal-100 transition-colors">
+          Attribute Breakdown &darr;
+        </a>
+        <a href="#scaling-table" class="px-3.5 py-1.5 rounded-lg bg-sky-50 text-sky-800 border border-sky-200 hover:bg-sky-100 transition-colors">
+          Stand Scaling Table &darr;
+        </a>
+        <a href="#simulator" class="px-3.5 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition-colors">
+          Build Simulator Tool &darr;
+        </a>
+        <a href="#accessories" class="px-3.5 py-1.5 rounded-lg bg-purple-50 text-purple-800 border border-purple-200 hover:bg-purple-100 transition-colors">
+          Accessory Stat Bonuses &darr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Top Above-The-Fold Ad -->
+    <AdLeaderboard className="mb-12" />
+
+    <!-- Section 1: The Three Core Attributes -->
+    <section id="attributes" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mb-6">How the 3 Core Attributes Scale</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Health Card -->
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-rose-100 text-rose-800 font-black text-xs uppercase tracking-wider">
+                Defensive Core
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-500">Max: 100 Pts</span>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 mb-2">Health (HP &amp; Posture)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Increases your base health pool and posture bar threshold. Higher Health prevents you from being guardbroken easily by heavy attacks and increases your survivability against true combo burst damage.
+            </p>
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs space-y-1">
+              <div class="flex justify-between text-slate-600">
+                <span>Base HP at Lv 1:</span>
+                <span class="font-bold text-slate-900">100 HP</span>
+              </div>
+              <div class="flex justify-between text-slate-600">
+                <span>Per 10 Stat Points:</span>
+                <span class="font-bold text-rose-700">+25 Max HP</span>
+              </div>
+              <div class="flex justify-between text-slate-600">
+                <span>At 100 Health:</span>
+                <span class="font-bold text-rose-700">350 Max HP</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-500 mt-4 italic">
+            Recommended for Raid frontliners and beginner survival builds.
+          </p>
+        </div>
+
+        <!-- Damage Card -->
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-800 font-black text-xs uppercase tracking-wider">
+                Physical Power
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-500">Max: 100 Pts</span>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 mb-2">Damage (Physical Strength)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Governs your basic physical attack damage, including 4-hit light combos (LMB), heavy guardbreaks (R), sprint dash strikes, and equipped melee weapon styles like the Pluck sword.
+            </p>
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs space-y-1">
+              <div class="flex justify-between text-slate-600">
+                <span>Affects:</span>
+                <span class="font-bold text-slate-900">M1 Combos &amp; M2 Heavies</span>
+              </div>
+              <div class="flex justify-between text-slate-600">
+                <span>Per 10 Stat Points:</span>
+                <span class="font-bold text-amber-700">+8% Physical Scaling</span>
+              </div>
+              <div class="flex justify-between text-slate-600">
+                <span>Synergy:</span>
+                <span class="font-bold text-amber-700">The Hustle, Silver Chariot</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-500 mt-4 italic">
+            Essential for aggressive brawler Stands that rely on close-range boxing combos.
+          </p>
+        </div>
+
+        <!-- Ability Card -->
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-teal-100 text-teal-800 font-black text-xs uppercase tracking-wider">
+                Stand &amp; Sub-Ability
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-500">Max: 100 Pts</span>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 mb-2">Ability (Special Scaling)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Directly scales active Stand special moves (E, R, T, Y, G, H keys), EX awakening durations, Hamon Overdrive damage, and the maximum length of Time Stop (Star Platinum and The World scale from 5s up to 10s).
+            </p>
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs space-y-1">
+              <div class="flex justify-between text-slate-600">
+                <span>Affects:</span>
+                <span class="font-bold text-slate-900">Stand Movesets &amp; Overdrives</span>
+              </div>
+              <div class="flex justify-between text-slate-600">
+                <span>Time Stop Scaling:</span>
+                <span class="font-bold text-teal-700">+0.5s per 10 Ability points</span>
+              </div>
+              <div class="flex justify-between text-slate-600">
+                <span>Synergy:</span>
+                <span class="font-bold text-teal-700">SP, TW, KC, November Rain</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-500 mt-4 italic">
+            The single highest DPS multiplier for Pinnacle, Mythical, and Evolution Stands.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Ability Scaling by Stand Table -->
+    <section id="scaling-table" class="mb-16 scroll-mt-24">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-sky-700">Moveset Scaling Matrix</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">Ability Scaling by Stand</h2>
+        </div>
+        <span class="text-xs font-bold text-slate-500">Verified Hitbox &amp; Move Formulas</span>
+      </div>
+
+      <p class="text-sm text-slate-600 mb-6 leading-relaxed max-w-4xl">
+        Not all Stand abilities scale the same way. The table below details whether each major Stand gains more damage from raw Physical Strength or high Ability investment, along with the optimal 225-point stat distribution:
+      </p>
+
+      <div class="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
+        <table class="w-full text-left text-xs text-slate-600">
+          <thead class="bg-slate-50 text-slate-900 font-extrabold uppercase tracking-wider text-[11px] border-b border-slate-200">
+            <tr>
+              <th class="py-3.5 px-4">Stand / Style</th>
+              <th class="py-3.5 px-4">Primary Scaling</th>
+              <th class="py-3.5 px-4">Moves Most Affected</th>
+              <th class="py-3.5 px-4">Optimal Level 75 Distribution</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            {scalingTable.map((row) => (
+              <tr class="hover:bg-slate-50/80 transition-colors">
+                <td class="py-3 px-4 font-black text-slate-900 whitespace-nowrap">
+                  {row.stand}
+                </td>
+                <td class="py-3 px-4 font-bold text-teal-800">
+                  {row.scalingType}
+                </td>
+                <td class="py-3 px-4 text-slate-600">
+                  {row.keyMove}
+                </td>
+                <td class="py-3 px-4 font-mono font-bold text-slate-800">
+                  {row.optimalRatio}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Mid-Page Native Ad -->
+    <AdNative className="my-12" />
+
+    <!-- Section 3: Interactive Build Simulator -->
+    <section id="simulator" class="mb-16 scroll-mt-24">
+      <div class="mb-8">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-amber-700">Interactive Tool</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">225-Point Stat Build Simulator</h2>
+        <p class="text-sm text-slate-600 mt-1">
+          Adjust Health, Damage, and Ability sliders to simulate your character build at Level 75. Select preset archetypes or customize your own:
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-sm">
+        <BuildMaker client:load />
+      </div>
+    </section>
+
+    <!-- Section 4: Accessory Stat Stacking -->
+    <section id="accessories" class="mb-16 scroll-mt-24">
+      <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-purple-700">Equipment Overlap</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">How Accessories Add to Stats</h2>
+        </div>
+        <a href="/accessories/" class="text-xs font-bold text-purple-700 hover:underline">
+          View All 62 Accessories &rarr;
+        </a>
+      </div>
+
+      <p class="text-sm text-slate-600 mb-6 leading-relaxed max-w-4xl">
+        Accessories in STAND OUT provide flat additive bonuses that stack directly on top of your 225 raw allocated stat points. This means a player with 100 Ability wearing the complete DIO Set (+15 Jacket, +15 Pants, +20 Set Bonus) effectively reaches an unprecedented <strong>150 Ability</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <h3 class="text-lg font-black text-slate-900 mb-2">Maximized Ability Set (DIO's World Set)</h3>
+          <p class="text-xs text-slate-600 mb-4">
+            Equipping DIO's Jacket (+15 Ability, +10 Damage, +5 HP) and DIO's Pants (+15 Ability, +5 Damage, +5 HP) triggers the +20 Ability set bonus.
+          </p>
+          <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 text-xs font-mono font-bold text-teal-900 space-y-1">
+            <div>Base Stat Cap: 100 Ability</div>
+            <div>Equipment Bonus: +50 Flat Ability</div>
+            <div class="text-teal-700 font-extrabold">Total Effective Ability: 150 Points (Max 10s Time Stop)</div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <h3 class="text-lg font-black text-slate-900 mb-2">Balanced Combat Set (Stardust Crusader Set)</h3>
+          <p class="text-xs text-slate-600 mb-4">
+            Equipping Jotaro's Jacket (+15 Damage, +5 Ability, +5 HP) and Jotaro's Pants (+15 Damage, +5 Ability, +5 HP) triggers +15 Ability, +10% EX Gain, and +1 second of Time Stop.
+          </p>
+          <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs font-mono font-bold text-amber-900 space-y-1">
+            <div>Physical Damage Bonus: +30 Flat Damage</div>
+            <div>Equipment Ability Bonus: +25 Flat Ability</div>
+            <div class="text-amber-800 font-extrabold">Bonus Effect: +10% EX Charge Speed + 1s Extra Time Stop</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <div class="p-8 rounded-3xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="text-2xl font-black">Ready to test your Stand build?</h3>
+        <p class="text-xs text-slate-400 mt-1">Check our full database of movesets or compare two Stands head-to-head.</p>
+      </div>
+      <div class="flex gap-3">
+        <a href="/tools/compare/" class="px-4 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs hover:bg-amber-400 transition-colors">
+          Compare Stands &rarr;
+        </a>
+        <a href="/stands/" class="px-4 py-2.5 rounded-xl bg-slate-800 text-white border border-slate-700 font-bold text-xs hover:bg-slate-700 transition-colors">
+          All Stands &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

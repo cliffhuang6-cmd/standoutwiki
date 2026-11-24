@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
 import AdRectangle from '../../components/ads/AdRectangle.astro';
-import { stands, standsBySlug } from '../../data/stands';
+import { stands } from '../../data/stands';
 import type { Stand } from '../../types';
 
 export function getStaticPaths() {
@@ -20,6 +20,8 @@ const { stand } = Astro.props;
 
 const rarityBadgeClasses: Record<string, string> = {
   Pinnacle: 'bg-rose-100 text-rose-800 border-rose-200',
+  Exclusive: 'bg-violet-100 text-violet-900 border-violet-200',
+  Historical: 'bg-slate-200 text-slate-800 border-slate-300',
   Mythical: 'bg-amber-100 text-amber-900 border-amber-200',
   Legendary: 'bg-purple-100 text-purple-900 border-purple-200',
   Epic: 'bg-sky-100 text-sky-900 border-sky-200',
@@ -49,6 +51,14 @@ const relatedStands = stands
   dateModified={stand.verifiedDate}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    {stand.status === 'Historical' && (
+      <div class="mb-8 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-sm flex items-start gap-3 shadow-xs">
+        <span class="text-xl leading-none">⚠️</span>
+        <div>
+          <strong class="font-black">Historical / Pre-Rework Reference Archive:</strong> {stand.name} is currently archived and removed from active Arrow summon tables pending an official gameplay rework. The stats, abilities, and mechanics below describe the verified pre-rework reference kit.
+        </div>
+      </div>
+    )}
     <!-- Stand Entity Hero Banner -->
     <div class="bg-white rounded-3xl border border-slate-200 p-6 md:p-10 shadow-sm mb-12">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -296,7 +306,7 @@ const relatedStands = stands
               How investing stat points into the <strong>Ability</strong> attribute directly impacts {stand.name}:
             </p>
             <ul class="space-y-2 text-xs text-slate-700">
-              {stand.abilityScaling.map((scale, i) => (
+              {stand.abilityScaling.map((scale) => (
                 <li class="flex items-start gap-2 bg-emerald-50/70 p-3 rounded-lg border border-emerald-100">
                   <span class="text-emerald-700 font-bold shrink-0 mt-0.5">✦</span>
                   <span>{scale}</span>

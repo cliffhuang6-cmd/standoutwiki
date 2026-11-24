@@ -1,0 +1,200 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { items } from '../../data/items';
+import type { Item } from '../../types';
+import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
+import AdNative from '../../components/ads/AdNative.astro';
+
+export function getStaticPaths() {
+  // Exclude manual static routes to avoid any collision
+  const manualRoutes = ['pluck', 'opal-rokakaka', 'shadow-cloak'];
+  return items
+    .filter((it) => !manualRoutes.includes(it.slug))
+    .map((item) => ({
+      params: { slug: item.slug },
+      props: { item },
+    }));
+}
+
+interface Props {
+  item: Item;
+}
+
+const { item } = Astro.props;
+
+// Related items from same category
+const relatedItems = items
+  .filter((i) => i.slug !== item.slug && (i.category === item.category || i.rarity === item.rarity))
+  .slice(0, 4);
+
+const categoryBadgeClasses: Record<string, string> = {
+  Arrow: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+  Consumable: 'bg-purple-100 text-purple-800 border-purple-200',
+  Material: 'bg-blue-100 text-blue-800 border-blue-200',
+  Story: 'bg-amber-100 text-amber-800 border-amber-200',
+  'Stand Chip': 'bg-rose-100 text-rose-800 border-rose-200',
+};
+---
+
+<Layout
+  title={`${item.name} in Stand Out – How to Get, Rates & Uses | Stand Out Wiki`}
+  description={`Complete guide to ${item.name} in Roblox STAND OUT. Discover obtainment methods, crafting recipes, drop sources, trade value, and combat mechanics.`}
+  canonicalPath={`items/${item.slug}`}
+  breadcrumbs={[
+    { label: 'Items', href: '/items/' },
+    { label: item.name }
+  ]}
+  schemaType="Article"
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Header Badge & Title -->
+    <div class="max-w-3xl mb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-3 border shadow-xs">
+        <span class={`px-2 py-0.5 rounded ${categoryBadgeClasses[item.category] || 'bg-slate-100 text-slate-800'}`}>
+          {item.category}
+        </span>
+        {item.rarity && (
+          <>
+            <span class="text-slate-300">•</span>
+            <span class="text-slate-600 font-bold">{item.rarity} Tier</span>
+          </>
+        )}
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+        {item.name} in STAND OUT
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+        {item.description}
+      </p>
+    </div>
+
+    <!-- Top Above-The-Fold Ad -->
+    <AdLeaderboard className="mb-10" />
+
+    <!-- Quick Fact Summary Card -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm mb-10">
+      <div>
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Item Type</div>
+        <div class="text-base font-black text-slate-900 mt-1">{item.category}</div>
+      </div>
+      <div>
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Trade Valuation</div>
+        <div class="text-base font-black text-emerald-800 mt-1 font-mono">{item.sellPrice || 'Non-Tradeable'}</div>
+      </div>
+      <div>
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Primary Obtainment</div>
+        <div class="text-xs font-bold text-amber-800 mt-1 line-clamp-2">{item.obtainMethod.split(',')[0]}</div>
+      </div>
+      <div>
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Verification Status</div>
+        <div class="text-xs font-bold text-slate-700 mt-1 flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Verified Update 1
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14">
+      <!-- Left Column: Item Graphic & Visual (5 Cols) -->
+      <div class="lg:col-span-5">
+        <div class="sticky top-20 bg-white rounded-3xl border border-slate-200 p-6 shadow-sm flex flex-col items-center text-center">
+          <div class="w-full aspect-square max-w-xs rounded-2xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center justify-center overflow-hidden">
+            <img
+              src={item.image || '/images/items/apple.webp'}
+              alt={`${item.name} in Roblox STAND OUT`}
+              class="w-full h-full object-contain hover:scale-105 transition-transform"
+              loading="eager"
+            />
+          </div>
+          <h3 class="text-lg font-black text-slate-900">{item.name}</h3>
+          <p class="text-xs text-slate-500 font-mono mt-0.5">{item.category} Item</p>
+
+          <div class="w-full mt-4 pt-4 border-t border-slate-100 flex justify-between text-xs">
+            <span class="text-slate-400 font-bold uppercase">Estimated Worth:</span>
+            <span class="font-mono font-bold text-emerald-800">{item.sellPrice || 'Story Artifact'}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Mechanics, Acquisition & Uses (7 Cols) -->
+      <div class="lg:col-span-7 space-y-8">
+        <!-- How to Get Section -->
+        <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-4 flex items-center gap-2">
+            <span>📍</span> How to Get {item.name}
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+            In STAND OUT, {item.name} can be obtained through the following verified methods and spawn routes:
+          </p>
+          <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 text-xs sm:text-sm text-amber-950 font-medium leading-relaxed">
+            {item.obtainMethod}
+          </div>
+        </section>
+
+        <!-- Primary Uses & Combat Effects -->
+        <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-4 flex items-center gap-2">
+            <span>⚡</span> Uses &amp; In-Game Mechanics
+          </h2>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+            {item.uses && item.uses.map((use, idx) => (
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black flex items-center justify-center shrink-0 mt-0.5">
+                  {idx + 1}
+                </span>
+                <span class="leading-relaxed">{use}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <!-- Data Transparency Alert -->
+        <section class="bg-slate-50 rounded-2xl border border-slate-200 p-5 text-xs text-slate-600 space-y-1">
+          <strong class="text-slate-800 block text-[11px] font-black uppercase tracking-wider">
+            Data Verification Notice:
+          </strong>
+          <p>
+            Drop percentages, crafting ratios, and shop prices reflect active Update 1 game servers. Where exact backend hit probabilities are unpublished by developers, rates are evaluated through mathematical pity distributions.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Mid-Page Native Ad -->
+    <AdNative className="my-10" />
+
+    <!-- Related Items from Same Category -->
+    {relatedItems.length > 0 && (
+      <section class="mb-14">
+        <h2 class="text-2xl font-black text-slate-900 mb-6">Related {item.category} Items</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {relatedItems.map((rel) => (
+            <a
+              href={`/items/${rel.slug}/`}
+              class="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all group flex flex-col justify-between"
+            >
+              <div>
+                <div class="w-full aspect-square bg-slate-50 rounded-xl border border-slate-100 p-2 mb-3 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={rel.image || '/images/items/apple.webp'}
+                    alt={rel.name}
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform"
+                  />
+                </div>
+                <h4 class="text-sm font-black text-slate-900 group-hover:text-emerald-800 transition-colors">
+                  {rel.name}
+                </h4>
+                <p class="text-[11px] text-slate-500 mt-0.5">{rel.category}</p>
+              </div>
+              <span class="text-xs font-mono font-bold text-emerald-700 mt-3 block">
+                {rel.sellPrice || 'Special'} &rarr;
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</Layout>

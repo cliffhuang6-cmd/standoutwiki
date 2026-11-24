@@ -21,7 +21,7 @@ export const items: Item[] = [
     "name": "Lucky Arrow",
     "category": "Arrow",
     "description": "An enriched, polished Stand Arrow that completely filters out low-tier rolls. Guarantees Epic rarity or higher, boosting Pinnacle Stand odds to 1.5%.",
-    "obtainMethod": "Crafted at Advanced Crafting Bench (1 Mysterious Arrow, 10 Scrap Metal, 3 Gold Ingots) or 90-minute world spawns.",
+    "obtainMethod": "Crafted at Advanced Crafting Bench with 3x Mysterious Arrows, purchased from Passione Train Shop for 25 Tokens, or 90-minute world spawns.",
     "image": "/images/arrows/lucky-arrow.webp",
     "rarity": "Legendary",
     "sellPrice": "$25,000 Dalas",
@@ -36,7 +36,7 @@ export const items: Item[] = [
     "name": "Bizarre Arrow",
     "category": "Arrow",
     "description": "The premier summon artifact in STAND OUT. Offers a staggering 4.4% Pinnacle rate (62x standard) and completely eliminates both Common and Rare pools.",
-    "obtainMethod": "Passione Train Raid (Nightmare difficulty MVP chest drop) or Master Forge crafting (3 Lucky Arrows + 1 Meteorite Shard + $50k).",
+    "obtainMethod": "Crafted at Master Forge with 9x Mysterious Arrows (or 3x Lucky Arrows + 1 Meteorite Shard), purchased from Train Shop for 75 Tokens, or Nightmare Train Raid MVP drop.",
     "image": "/images/arrows/bizarre-arrow.webp",
     "rarity": "Pinnacle",
     "sellPrice": "$75,000 Dalas",
@@ -51,7 +51,7 @@ export const items: Item[] = [
     "name": "Mysterious Arrow [Part 3]",
     "category": "Arrow",
     "description": "An ancient arrow inscribed with Egyptian hieroglyphs. Exclusively awakens Stands from JoJo Part 3: Stardust Crusaders, with elevated 5% rates for SP and The World.",
-    "obtainMethod": "Specialist Vendor in Cairo Bazaar or crafting with 1 Mysterious Arrow + 1 Cairo Relic.",
+    "obtainMethod": "Crafted at Crafting Bench with 1x Mysterious Arrow + 5x Steel Ingot, or Cairo Bazaar vendor for $8,000 Dalas.",
     "image": "/images/arrows/mysterious-arrow-part-3.webp",
     "rarity": "Epic",
     "sellPrice": "$8,000 Dalas",
@@ -66,7 +66,7 @@ export const items: Item[] = [
     "name": "Mysterious Arrow [Part 5]",
     "category": "Arrow",
     "description": "A golden beetle clings to this arrow's head. Exclusively awakens Stands from JoJo Part 5: Golden Wind, featuring a 5% boosted chance for King Crimson.",
-    "obtainMethod": "Passione Contraband Caches in Venice or crafting with 1 Mysterious Arrow + 1 Passione Brooch.",
+    "obtainMethod": "Crafted at Crafting Bench with 1x Mysterious Arrow + 5x Steel Ingot, or dropped from Passione Train Raid cars.",
     "image": "/images/arrows/mysterious-arrow-part-5.webp",
     "rarity": "Epic",
     "sellPrice": "$8,000 Dalas",
@@ -110,14 +110,14 @@ export const items: Item[] = [
     "name": "Ancient Stone Mask",
     "category": "Consumable",
     "description": "The Aztec relic crafted by Kars. Consuming or activating this mask at night transforms the user into a Vampire, granting blood siphon, hyper-regeneration, and eye laser beams.",
-    "obtainMethod": "Catacombs Crypt raid drop, world boss DIO defeat reward, or Black Market Dealer for $15,000 Dalas.",
+    "obtainMethod": "DIO Boss Fight drop, purchased from Passione Train Shop for 40 Tokens, or 77 Rings Raid (20% Hard clear / 10 Tokens at 77 Rings Shop).",
     "image": "/images/items/stone-mask.webp",
     "rarity": "Legendary",
     "sellPrice": "$7,500 Dalas",
     "uses": [
-      "Transforms the player into a Vampire Sub-Ability user when activated at night.",
-      "Unlocks the crimson Blood Bar, Space Ripper Stingy Eyes, and Vaporizing Freeze.",
-      "Imposes severe daytime sunlight burning penalties unless protected by a Shadow Cloak."
+      "Pierces the user's skull to awaken the Vampire sub-ability.",
+      "Grants high life-steal, freezing touch, and Space Ripper Stingy Eyes.",
+      "Requires wearing the Shadow Cloak to prevent daylight sunlight burn damage."
     ]
   },
   {
@@ -198,14 +198,14 @@ export const items: Item[] = [
     "name": "Fresh Apple",
     "category": "Consumable",
     "description": "A crisp, sweet apple harvested from orchard trees or garden plots. Restores health over time and cures minor combat exhaustion.",
-    "obtainMethod": "Grown from Apple Seeds (18 min growth cycle) or harvested from fruit trees outside town.",
+    "obtainMethod": "Harvested from mature apple trees grown in personal/gang garden pots (seeds bought from Big Chop) or random street fruit drop.",
     "image": "/images/items/apple.webp",
     "rarity": "Common",
     "sellPrice": "$150 Dalas (Raw) / $875 (Packaged Jar)",
     "uses": [
-      "Restores 35 HP instantly and cleanses mild bleeding status.",
-      "Can be packaged into Jars of Apples at the packaging station for 25% profit markup.",
-      "Ingredient in brewing high-stamina cider potions."
+      "Consuming this grown fruit safely resets your Sub-Ability (Jonathan/Caesar Hamon or Vampire).",
+      "Restores 50 Health and clears minor debuffs upon consumption.",
+      "Alternative to Sapphire Roka for players wishing to switch fighting styles without stat loss."
     ]
   },
   {
@@ -402,6 +402,66 @@ export const items: Item[] = [
     "uses": [
       "Doubles all Dalas income earned from lettuce trading, mob drops, and quest rewards for 1 hour.",
       "Optimal booster to activate prior to turning in large batches of greenhouse crates."
+    ]
+  },
+  {
+    "slug": "pluck",
+    "name": "Pluck Sword",
+    "category": "Material",
+    "description": "The legendary blade of Luck and Pluck from Part 1. A premier martial weapon style in STAND OUT that combines rapid thrust combos with lethal Hamon conductivity.",
+    "obtainMethod": "Forged by the Ancient Blacksmith using Pluck Blade Fragments dropped by Tarkus and DIO in the 77 Rings Raid.",
+    "image": "/images/items/pluck.webp",
+    "rarity": "Legendary",
+    "sellPrice": "$50,000 Dalas",
+    "uses": [
+      "Equippable martial weapon style featuring rapid multi-hit thrusts and aerial lunges.",
+      "Possesses 100% Hamon conductivity: enhances all Hamon overdrive skills when wielded.",
+      "Unlocks unique EX Awakening sword movesets for Jonathan Hamon users."
+    ]
+  },
+  {
+    "slug": "opal-rokakaka",
+    "name": "Opal Rokakaka",
+    "category": "Consumable",
+    "description": "A rare iridescent mutation of the legendary Rokakaka fruit. Triggers genetic stand evolutions on max-level Time Stop powerhouses.",
+    "obtainMethod": "Extremely rare 3.0% base botanical harvest mutation (3.5% with Mysterious Fertilizer), or elite 77 Rings raid clear.",
+    "image": "/images/rokakaka/opal-rokakaka.webp",
+    "rarity": "Pinnacle",
+    "sellPrice": "$80,000 Dalas",
+    "uses": [
+      "Used on Level 75 Star Platinum to attempt evolution into Star Platinum: The World (SPTW).",
+      "Used on Level 75 The World for a 10% swap chance to evolve into The World: Alternative Universe (TWAU).",
+      "Provides complete mutation reset without limb petrification penalties."
+    ]
+  },
+  {
+    "slug": "rokakaka",
+    "name": "Rokakaka Fruit",
+    "category": "Consumable",
+    "description": "The fundamental reset fruit of STAND OUT. Consuming this fruit removes your active Stand, allowing you to roll fresh summons from Stand Arrows.",
+    "obtainMethod": "Grown in garden pots from Rokaka Seeds (Big Chop), 45-minute world spawns, or repeatable NPC daily tasks.",
+    "image": "/images/items/rokakaka.webp",
+    "rarity": "Common",
+    "sellPrice": "$1,000 Dalas",
+    "uses": [
+      "Resets your current active Stand back to Standless state.",
+      "Essential for rerolling abilities when Stand Storage slots are full.",
+      "Base botanical specimen that can mutate into 33 distinct specialized Rokakaka variants."
+    ]
+  },
+  {
+    "slug": "shadow-cloak",
+    "name": "Shadow Cloak",
+    "category": "Material",
+    "description": "A heavy woven protective garment imbued with ancient shade weave. Shields vampires from deadly daylight sunlight rays.",
+    "obtainMethod": "Hard mode drop reward from the 77 Rings Raid or purchased from the 77 Rings Raid Shop for 15 Tokens.",
+    "image": "/images/items/shadow-cloak.webp",
+    "rarity": "Epic",
+    "sellPrice": "$35,000 Dalas",
+    "uses": [
+      "Equipped in the back/torso accessory slot to shield Vampire players from daylight sun damage.",
+      "Sunlight protection remains active until enemies deal 25% of your maximum health in combat.",
+      "Cannot be knocked off by opponents for 20 seconds after being re-equipped."
     ]
   }
 ];
