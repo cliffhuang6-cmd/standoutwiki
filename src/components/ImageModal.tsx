@@ -46,6 +46,13 @@ export default function ImageModal({ src, alt, title, subtitle, className = '' }
           alt={alt}
           className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200"
           loading="lazy"
+          onError={(e) => {
+            // Defensive fallback
+            const target = e.currentTarget;
+            if (!target.src.includes('apple.webp')) {
+              target.src = '/images/items/apple.webp';
+            }
+          }}
         />
         <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none rounded-xl">
           <span className="p-1.5 rounded-lg bg-white/90 text-slate-900 shadow-md">
@@ -90,6 +97,12 @@ export default function ImageModal({ src, alt, title, subtitle, className = '' }
                 src={src}
                 alt={alt}
                 className="max-h-[60vh] max-w-full w-auto h-auto object-contain drop-shadow-md"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('apple.webp')) {
+                    target.src = '/images/items/apple.webp';
+                  }
+                }}
               />
             </div>
 
