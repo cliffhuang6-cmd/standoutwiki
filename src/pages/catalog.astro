@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 
 const catalogRanks = [
   {
@@ -103,9 +101,6 @@ const catalogRanks = [
       </div>
     </div>
 
-    <!-- Top Above-the-fold Ad -->
-    <AdLeaderboard className="mb-12" />
-
     <!-- Section 1: How the Catalog Works -->
     <section id="how-it-works" class="mb-16 scroll-mt-24">
       <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mb-6">What Is the Catalog &amp; How It Works</h2>
@@ -177,9 +172,6 @@ const catalogRanks = [
         ))}
       </div>
     </section>
-
-    <!-- Mid-Page Native Ad -->
-    <AdNative className="my-12" />
 
     <!-- Section 3: Heaven's Door Prime Spotlight -->
     <section id="heavens-door-prime" class="mb-16 scroll-mt-24">

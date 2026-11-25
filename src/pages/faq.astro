@@ -39,8 +39,6 @@ const faqs = [
   }
 ];
 
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -67,9 +65,6 @@ import AdNative from '../components/ads/AdNative.astro';
       </p>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
-
     <!-- FAQ Accordion / Cards -->
     <div class="space-y-4">
       {faqs.map((faq) => (
@@ -85,7 +80,5 @@ import AdNative from '../components/ads/AdNative.astro';
       ))}
     </div>
 
-    <!-- End-of-FAQ Adsterra Native Banner -->
-    <AdNative className="my-10" />
   </div>
 </Layout>

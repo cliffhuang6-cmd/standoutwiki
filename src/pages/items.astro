@@ -41,8 +41,6 @@ const categorySections = [
   },
 ];
 
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -69,9 +67,6 @@ import AdNative from '../components/ads/AdNative.astro';
         Browse the complete item catalog of Studio Umbra's <strong>STAND OUT</strong>. Click any item thumbnail to open an enlarged high-resolution image preview. Check obtainment sources for metallurgy materials, consumable recovery fruits, and rare raid Stand Chips.
       </p>
     </div>
-
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
 
     <!-- High-Demand Relics Quick Access Banner -->
     <div class="mb-10 p-5 rounded-2xl bg-amber-50/70 border border-amber-200">
@@ -223,7 +218,5 @@ import AdNative from '../components/ads/AdNative.astro';
       })}
     </div>
 
-    <!-- Catalog End Adsterra Native Banner -->
-    <AdNative className="my-10" />
   </div>
 </Layout>

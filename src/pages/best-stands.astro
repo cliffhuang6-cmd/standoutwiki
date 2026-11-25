@@ -1,8 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { standsBySlug } from '../data/stands';
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 
 // Filter stands for key roles
 const pvpTop = ['star-platinum', 'the-world', 'king-crimson', 'dolly-dagger', 'mandom', 'kraft-work']
@@ -75,9 +73,6 @@ const beginnerTop = ['beach-boy', 'yellow-temperance', 'smooth-operators', '200-
         </a>
       </div>
     </div>
-
-    <!-- Above-the-fold Ad -->
-    <AdLeaderboard className="mb-12" />
 
     <!-- Section 1: Best Overall & 1v1 PvP Stands -->
     <section id="pvp" class="mb-16 scroll-mt-24">
@@ -180,9 +175,6 @@ const beginnerTop = ['beach-boy', 'yellow-temperance', 'smooth-operators', '200-
         ))}
       </div>
     </section>
-
-    <!-- Mid-Page Native Ad -->
-    <AdNative className="my-12" />
 
     <!-- Section 3: Best Farming & Economy Stands -->
     <section id="farming" class="mb-16 scroll-mt-24">

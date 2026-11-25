@@ -10,8 +10,6 @@ const shopItems = [
   { name: '2x Dalas Booster (1 Hour)', cost: '149 Robux', value: 'Moderate', desc: 'Doubles cash drops from bounties and deliveries. Great when running lettuce routes.' }
 ];
 
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -37,9 +35,6 @@ import AdNative from '../components/ads/AdNative.astro';
         Studio Umbra designed Roblox <strong>STAND OUT</strong> to be fully playable and completable as a free-to-play player. Below is an objective analysis of all in-game Robux purchases, separating must-haves from skippable conveniences.
       </p>
     </div>
-
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
 
     <!-- Shop Items Grid -->
     <div class="space-y-4 mb-12">
@@ -67,9 +62,6 @@ import AdNative from '../components/ads/AdNative.astro';
         </div>
       ))}
     </div>
-
-    <!-- Mid-Page Adsterra Native Banner -->
-    <AdNative className="my-10" />
 
     <!-- F2P Assessment -->
     <div class="bg-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-xl">

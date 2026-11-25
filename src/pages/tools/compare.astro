@@ -1,8 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import StandCompare from '../../components/StandCompare';
-import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
-import AdNative from '../../components/ads/AdNative.astro';
 
 const popularMatchups = [
   { s1: 'star-platinum', s2: 'the-world', label: 'Star Platinum vs The World', desc: 'The classic Part 3 rivalry: Ora vs Muda, Time Stop overwrite mechanics & knife volleys.' },
@@ -40,9 +38,6 @@ const popularMatchups = [
       </p>
     </div>
 
-    <!-- Above-The-Fold Ad -->
-    <AdLeaderboard className="mb-10" />
-
     <!-- Popular Matchups Quick Jump -->
     <div class="mb-10 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
       <h3 class="text-xs font-black uppercase tracking-wider text-slate-400 mb-3">Popular Comparison Matchups:</h3>
@@ -63,9 +58,6 @@ const popularMatchups = [
 
     <!-- Interactive Comparison Component -->
     <StandCompare client:load />
-
-    <!-- Mid-Page Native Ad -->
-    <AdNative className="my-14" />
 
     <!-- Explanatory Guide & FAQ -->
     <div class="mt-14 bg-white rounded-3xl border border-slate-200 p-8 shadow-sm space-y-8">

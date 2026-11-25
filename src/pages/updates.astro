@@ -2,9 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import { updateLogs } from '../data/updates';
 
-
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -30,9 +27,6 @@ import AdNative from '../components/ads/AdNative.astro';
         Stay up to date with every patch, balance pass, and content addition pushed by Studio Umbra: Europa for Roblox <strong>STAND OUT</strong>. Verified directly against official release announcements.
       </p>
     </div>
-
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
 
     <!-- Timeline of Updates -->
     <div class="space-y-8">
@@ -86,7 +80,5 @@ import AdNative from '../components/ads/AdNative.astro';
       ))}
     </div>
 
-    <!-- End-of-Feed Adsterra Native Banner -->
-    <AdNative className="my-10" />
   </div>
 </Layout>

@@ -5,8 +5,6 @@ import { accessories } from '../data/accessories';
 const setAccessories = accessories.filter((a) => a.setBonus);
 const standaloneAccessories = accessories.filter((a) => !a.setBonus);
 
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -32,9 +30,6 @@ import AdNative from '../components/ads/AdNative.astro';
         Accessories in Roblox <strong>STAND OUT</strong> grant substantial flat stat boosts to Health, Damage, and Ability attributes. Equipping matching 2-piece sets triggers powerful synergistic set bonuses like extended Time Stop or permanent walkspeed buffs.
       </p>
     </div>
-
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
 
     <!-- Set Bonuses Showcase -->
     <section class="mb-14">
@@ -73,9 +68,6 @@ import AdNative from '../components/ads/AdNative.astro';
         ))}
       </div>
     </section>
-
-    <!-- Mid-Page Adsterra Native Banner -->
-    <AdNative className="my-10" />
 
     <!-- Standalone Accessories -->
     <section>

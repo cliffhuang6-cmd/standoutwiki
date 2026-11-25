@@ -6,8 +6,6 @@ import { items } from '../data/items';
 
 const arrows = items.filter((i) => i.category === 'Arrow');
 
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -34,9 +32,6 @@ import AdNative from '../components/ads/AdNative.astro';
         Stand Arrows are the core progression catalysts in Studio Umbra's <strong>STAND OUT</strong>. Click any arrow graphic to view an enlarged image preview. Learn crafting recipes, token shop requirements, and mathematically optimal rolling strategies.
       </p>
     </div>
-
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
 
     <!-- Arrow Types Catalog -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -100,9 +95,6 @@ import AdNative from '../components/ads/AdNative.astro';
         </div>
       ))}
     </div>
-
-    <!-- Mid-Page Adsterra Native Banner -->
-    <AdNative className="my-10" />
 
     <!-- Interactive Calculator Embed -->
     <div class="mb-16">

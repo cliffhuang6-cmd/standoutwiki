@@ -6,8 +6,6 @@ import { stands } from '../../data/stands';
 const playableStands = stands.filter(s => s.status !== 'Historical');
 const historicalStands = stands.filter(s => s.status === 'Historical');
 
-import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
-import AdNative from '../../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -37,9 +35,6 @@ import AdNative from '../../components/ads/AdNative.astro';
       </p>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
-
     <!-- Active Playable Roster -->
     <div class="mb-14">
       <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
@@ -55,9 +50,6 @@ import AdNative from '../../components/ads/AdNative.astro';
         ))}
       </div>
     </div>
-
-    <!-- Mid-Page Adsterra Native Banner -->
-    <AdNative className="my-12" />
 
     <!-- Historical Pre-Rework Reference Archive -->
     {historicalStands.length > 0 && (

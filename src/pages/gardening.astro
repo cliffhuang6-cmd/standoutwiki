@@ -10,8 +10,6 @@ const seedTypes = [
   { name: 'Watermelon Seed', time: '15 mins', basePrice: '900 Dalas', desc: 'Heavy hydrating produce for cooling during desert travel.' }
 ];
 
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -37,9 +35,6 @@ import AdNative from '../components/ads/AdNative.astro';
         Gardening in Roblox <strong>STAND OUT</strong> is both a primary cash-generating activity and the exclusive method for cultivating Rokakaka fruits, resets, and mutation potions. Master soil preparation, hydration, and greenhouse perks.
       </p>
     </div>
-
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
 
     <!-- 4 Steps of Gardening -->
     <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 mb-12">
@@ -147,7 +142,5 @@ import AdNative from '../components/ads/AdNative.astro';
       </a>
     </div>
 
-    <!-- End-of-Catalog Adsterra Native Banner -->
-    <AdNative className="my-10" />
   </div>
 </Layout>

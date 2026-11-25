@@ -1,8 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BuildMaker from '../components/BuildMaker';
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 
 const scalingTable = [
   { stand: 'Star Platinum', scalingType: 'Ability (Heavy)', keyMove: 'Time Stop (5s -> 10s max), Star Finger, Inhale Pull', optimalRatio: '100 Ability / 50 Damage / 75 Health' },
@@ -59,9 +57,6 @@ const scalingTable = [
         </a>
       </div>
     </div>
-
-    <!-- Top Above-The-Fold Ad -->
-    <AdLeaderboard className="mb-12" />
 
     <!-- Section 1: The Three Core Attributes -->
     <section id="attributes" class="mb-16 scroll-mt-24">
@@ -214,9 +209,6 @@ const scalingTable = [
         </table>
       </div>
     </section>
-
-    <!-- Mid-Page Native Ad -->
-    <AdNative className="my-12" />
 
     <!-- Section 3: Interactive Build Simulator -->
     <section id="simulator" class="mb-16 scroll-mt-24">

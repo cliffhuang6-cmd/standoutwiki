@@ -4,8 +4,6 @@ import { guides } from '../../data/guides';
 
 const categories = ['All', 'Starter', 'Combat & Moves', 'Progression', 'Endgame & Raids', 'Economy'];
 
-import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
-import AdNative from '../../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -31,9 +29,6 @@ import AdNative from '../../components/ads/AdNative.astro';
         Whether you just awakened your first Stand or are preparing to conquer the 77 Rings Knight Raid, our comprehensive, step-by-step walkthroughs provide optimal progression paths.
       </p>
     </div>
-
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
 
     <!-- Guides Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -67,7 +62,5 @@ import AdNative from '../../components/ads/AdNative.astro';
       ))}
     </div>
 
-    <!-- Catalog End Adsterra Native Banner -->
-    <AdNative className="my-10" />
   </div>
 </Layout>

@@ -4,8 +4,6 @@ import ArrowCalculator from '../components/ArrowCalculator';
 import BuildMaker from '../components/BuildMaker';
 import RokaMixer from '../components/RokaMixer';
 
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -95,9 +93,6 @@ import AdNative from '../components/ads/AdNative.astro';
         </p>
       </div>
 
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
-
       <ArrowCalculator client:load />
     </section>
 
@@ -119,9 +114,6 @@ import AdNative from '../components/ads/AdNative.astro';
 
       <BuildMaker client:load />
     </section>
-
-    <!-- Mid-Tools Adsterra Native Banner -->
-    <AdNative className="my-12" />
 
     <!-- Tool 3: Rokakaka Mutation Mixer -->
     <section id="mixer" class="mb-16 scroll-mt-24">

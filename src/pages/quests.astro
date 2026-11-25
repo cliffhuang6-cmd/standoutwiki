@@ -33,8 +33,6 @@ const questCategories = [
   },
 ];
 
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -60,9 +58,6 @@ import AdNative from '../components/ads/AdNative.astro';
         From the full 54-chapter Storyline campaign spanning the Rohan Villa Heist, Diamotch luxury watch theft, and offshore Megayacht raid to Sub-Ability masteries (Hamon &amp; Vampire) and all 13 daily bounty contracts, explore complete verified quest objectives and rewards.
       </p>
     </div>
-
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
 
     <!-- Walkthrough Cross-Link Banner -->
     <div class="mb-10 p-5 rounded-2xl bg-blue-50/70 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -197,7 +192,5 @@ import AdNative from '../components/ads/AdNative.astro';
       })}
     </div>
 
-    <!-- End-of-Quests Adsterra Native Banner -->
-    <AdNative className="my-10" />
   </div>
 </Layout>

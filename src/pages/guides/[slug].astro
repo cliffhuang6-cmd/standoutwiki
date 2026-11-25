@@ -2,8 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import BuildMaker from '../../components/BuildMaker';
 import ArrowCalculator from '../../components/ArrowCalculator';
-import AdLeaderboard from '../../components/ads/AdLeaderboard.astro';
-import AdNative from '../../components/ads/AdNative.astro';
 import { guides } from '../../data/guides';
 
 export function getStaticPaths() {
@@ -52,9 +50,6 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
         {guide.description}
       </p>
     </div>
-
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
 
     <!-- Table of Contents -->
     <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm mb-12">
@@ -205,9 +200,6 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
         <ArrowCalculator client:load />
       </div>
     )}
-
-    <!-- Content Break Adsterra Native Banner -->
-    <AdNative className="my-12" />
 
     <!-- Related Guides Footer -->
     {relatedGuides.length > 0 && (

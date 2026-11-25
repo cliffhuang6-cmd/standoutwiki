@@ -3,8 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import CodeCard from '../components/CodeCard';
 import { recentCodes, expiredCodes } from '../data/codes';
 
-import AdLeaderboard from '../components/ads/AdLeaderboard.astro';
-import AdNative from '../components/ads/AdNative.astro';
 ---
 
 <Layout
@@ -31,9 +29,6 @@ import AdNative from '../components/ads/AdNative.astro';
       </p>
     </div>
 
-    <!-- Top Above-The-Fold Adsterra Responsive Leaderboard -->
-    <AdLeaderboard className="mb-10" />
-
     <!-- Stand Out Codes Section (Active & Recent) -->
     <section class="mb-14">
       <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
@@ -54,9 +49,6 @@ import AdNative from '../components/ads/AdNative.astro';
         ))}
       </div>
     </section>
-
-    <!-- Mid-Page Adsterra Native Banner -->
-    <AdNative className="my-10" />
 
     <!-- Expired Codes Section -->
     {expiredCodes.length > 0 && (
