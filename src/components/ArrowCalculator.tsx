@@ -18,7 +18,7 @@ const arrowConfigs: ArrowConfig[] = [
     name: 'Mysterious Arrow (Standard)',
     costDesc: 'Basic drops, 3x Arrow Parts + 1x Steel, or 7 Train Tokens',
     targets: [
-      { label: 'Pinnacle Tier (SP, The World, King Crimson)', rate: 0.005, desc: '~0.5% base chance (matches Lucky 1-(1-p)^3=1.5%)' },
+      { label: 'Pinnacle Tier (SP, TW, KC, Crazy Diamond)', rate: 0.005, desc: '~0.5% base chance (matches Lucky 1-(1-p)^3=1.5%)' },
       { label: 'Mythical Sub-Tier (November Rain, Highway Star, etc.)', rate: 0.05, desc: '~5.0% estimated tier chance' },
       { label: 'Legendary Tier (Kiss, Silver Chariot, Magician\'s Red)', rate: 0.145, desc: '~14.5% tier chance' },
       { label: 'Epic Tier (Kraft Work, The Hustle, Harvest)', rate: 0.35, desc: '~35.0% tier chance' },
@@ -28,9 +28,9 @@ const arrowConfigs: ArrowConfig[] = [
   {
     id: 'lucky',
     name: 'Lucky Arrow (Rare Excluded)',
-    costDesc: 'Craft with 3x Mysterious Arrows or 25 Train Tokens',
+    costDesc: 'Craft with 3x Mysterious Arrows + $10k or buy for 17 Train Tokens',
     targets: [
-      { label: 'Pinnacle Tier (1.5% Verified)', rate: 0.015, desc: 'Official developer rate: 1.5%' },
+      { label: 'Pinnacle Tier (1.5% Verified — SP, TW, KC, CD)', rate: 0.015, desc: 'Official developer rate: 1.5%' },
       { label: 'Mythical Tier (22.1% Verified)', rate: 0.221, desc: 'Official developer rate: 22.1%' },
       { label: 'Legendary Tier (34.0% Verified)', rate: 0.340, desc: 'Official developer rate: 34.0%' },
       { label: 'Epic Tier (42.5% Verified)', rate: 0.425, desc: 'Official developer rate: 42.5%' }
@@ -39,9 +39,9 @@ const arrowConfigs: ArrowConfig[] = [
   {
     id: 'bizarre',
     name: 'Bizarre Arrow (Rare & Epic Excluded)',
-    costDesc: 'Craft with 9x Mysterious Arrows or 75 Train Tokens',
+    costDesc: 'Craft with 9x Mysterious Arrows + $25k or buy for 33 Train Tokens',
     targets: [
-      { label: 'Pinnacle Tier (4.4% Verified)', rate: 0.044, desc: 'Official developer rate: 4.4%' },
+      { label: 'Pinnacle Tier (4.4% Verified — SP, TW, KC, CD)', rate: 0.044, desc: 'Official developer rate: 4.4%' },
       { label: 'Mythical Tier (37.7% Verified)', rate: 0.377, desc: 'Official developer rate: 37.7%' },
       { label: 'Legendary Tier (57.9% Verified)', rate: 0.579, desc: 'Official developer rate: 57.9%' }
     ]

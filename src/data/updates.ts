@@ -2,34 +2,79 @@ import type { UpdateLog } from '../types';
 
 export const updateLogs: UpdateLog[] = [
   {
-    date: '2026-11-22',
-    title: 'Update 1: Six New Stands, Ranked Mode Beta, Pluck & Gang Overhaul',
-    summary: 'Roblox STAND OUT Update 1 introduces 6 new Stands (Crazy Diamond, The Hand, Bad Company, The Lock, Cheap Trick, Dolly Dagger), competitive Ranked Mode Beta, Universal Evasive mechanic, Pluck weapon movesets, Fruit Company & Vampire gang factions, and full car tuning system.',
+    date: '2026-11-25',
+    title: 'LEGENDARY Leaderboard Badge & Live Milestone Tracking',
+    summary: 'Studio Umbra deployed the new LEGENDARY Roblox badge (REACHED TOP 10) and pushed live game builds ahead of the 200,000 Likes milestone.',
     changes: [
-      'Added 6 new playable Stands: Crazy Diamond (Pinnacle), The Hand (Mythical), Bad Company (Mythical), The Lock (Legendary), Cheap Trick (Epic), and Dolly Dagger (Exclusive 1850 ELO Ranked Reward).',
-      'Added Ranked Mode [Beta]: 1v1 competitive arena matchmaking with seasonal ELO ratings (Level 60 entry requirement).',
-      'Added Universal Evasive mechanic: Press X (default key) at 1 EX Bar to break out of hitstun or ragdoll, knock nearby enemies away, and deal 10 burst damage (base cooldown: 45s).',
-      'Pluck weapon movesets officially enabled for Jonathan Hamon and Vampire fighting styles.',
-      'Added new Gang Base Factions: Fruit Company (boosted crop growth and mutation speed) and Vampire (mysterious pit and blood reservoir amenities).',
-      'Added Car Tuning System: Upgrade vehicles via Garage Lifts with custom engines (Tuned, Racing, Torque, Supercharged), armor plating, sport/racing/ceramic brakes, bull bar bumpers, security systems, and emergency self-destruct fuses.',
-      'Stand Slot & Builder expansion: Added another free Stand Slot, added a free progression path to unlock Builder, and enabled automatic per-minute progress saving for accessories.',
-      'Gardening rebalance: Private server growth speed adjusted to 0.5x; plant packaging provides a +20% value bonus; excess Rokakakas can now be sold to Big Chop at night.',
-      'Star Platinum & SPTW tuning: Damage toned down across the board; Ora Smash animation remade and bufferable; added new Star Platinum EX ability.',
-      'King Crimson tuning: Overall damage readjusted; Decree improved; Blood Blind reworked; added tandem combo; persistence adjusted from 3x to 1x.',
-      'Beyond the Sea & Big Mouth balance: Jellyfish and Humu HP nerfed with internal hit cooldowns; chip damage reduced 20%; Big Mouth shank barrage and Go for the Throat damage reduced.',
-      'Hamon & Vampire balance: Caesar Hamon healing scaling adjusted; Zeppeli Hamon Sendo Wave Kick steerable with combo extensions; Tornado Overdrive 25% faster with guardbreak on final hit; Vampires can execute downed enemies to prevent revive.',
-      'Added active promo codes: CRAZYDIAMOND and 200KLIKESMASSIVE. Retired code: 100KLIKESHUGE.'
+      'Added the official LEGENDARY badge on Roblox ("REACHED TOP 10"), awarded exclusively to top-10 ranked players (13 earners as of Nov 26).',
+      'Game votes reached ~199.2K likes on Roblox with the official description still teasing "NEXT CODE AT 200K LIKES!" (clarifying that 200KLIKESMASSIVE was the 150K milestone code).'
     ],
     bugFixes: [
-      'Fixed Cheap Trick being able to damage and kill quest NPCs.',
-      'Fixed Vampire eye lasers stacking damage inside Stand barrages.',
-      'Fixed greenhouse placement restrictions on gang base second floors.',
-      'Fixed Vampire hypnosis breaking time stop state transitions.',
-      'Empowered Pluck M1s now receive their full intended scaling boost.',
-      'Fixed player being able to hold two Pluck swords simultaneously.',
-      'Fixed keybind discrepancies between main game and Ranked Mode.',
-      'Fixed stray Josuke model in Morioh building.',
-      'Console players can now edit keyboard and mouse binds in settings menu.'
+      'Server stability hotfixes applied across live Update 1 instances.'
+    ]
+  },
+  {
+    date: '2026-11-24',
+    title: 'Bad Company Rework, Diamond Wall Stun Immunity, 3rd Gang Plot & Combat Hotfixes',
+    summary: 'Complete Bad Company army rework with tripled pilot range, Flanking, Landmine, and Airstrike, alongside Crazy Diamond wall immunity, 3rd Gang Plot, Universal Evasive damage removal, 25,000 Dalas baseless gang raids, and console D-pad rebinds.',
+    changes: [
+      'Bad Company Rework: Pilot range tripled (3x); Maneuver reach increased from 60 to 180 studs and absorbed ATTENTIONNN as its hold recall action.',
+      'Bad Company New Moves: Added Flanking (3s CD) and Landmine (2s CD, 3 charges) to base kit; added Airstrike (2 EX Bars, 32s CD); converted Paratroopers to 1 EX Bar (21s CD) capable of dropping ANY unit type up to 180 studs.',
+      'Bad Company Unit Tuning: Unit HP reduced to Infantry 10 (was 30), Green Berets 5 (was 24), Tanks 45 (was 60), Helicopters 15 (was 36); per-type replacement cooldowns set to 10s / 16s / 25s / 30s.',
+      'Bad Company Combat & Mobility: Piloted Infantry and Green Berets move +50% faster; piloted Helicopters move +100% faster (2x) and fly slightly lower; Tank shells (perfect blockable, guardbreak) and Helicopter missiles (blockable) flash a warning before firing; enemies can dash twice to shake off Green Berets.',
+      'Bad Company Skins & HUD: Completely redid all unit alternate color skins into Urban, Special Forces, and Desert; unit menu can be repositioned in the HUD layout editor.',
+      'Crazy Diamond: Diamond Wall creation is no longer cancelled by stun; added alternate color schemes for Crazy Diamond and Kiss (Kizz).',
+      'Universal Evasive Hotfix: Removed the 10 burst damage from Universal Evasive (cooldown remains 30s, cost 1 EX Bar, default key X); repositioned the mobile Evasive button.',
+      'Gang System & Raids: Added a 3rd Gang Plot; added a 25,000 Dalas upfront option to raid a target gang that has no base (deposit goes into the target player\'s bank if the raid fails).',
+      'Console Controls: Added D-pad binds (hold RT + D-pad Left for cards, D-pad Right to use/cycle toolbar items, D-pad Left for Universal Evasive).',
+      'Trello Testing Watchlist: Added an early placeholder card for Rock Human (Part 8) under "Unfinished / In Testing / Reworking" (no published moveset or release date yet).'
+    ],
+    bugFixes: [
+      'Fixed the mobile stat panel display bug.',
+      'Fixed the Accessory Builder slot issue.'
+    ]
+  },
+  {
+    date: '2026-11-23',
+    title: 'Update 1 Rolling Balance & Raid/Arrow Fixes',
+    summary: 'Follow-up rolling balance patch adjusting Crazy Diamond damage, doubling Jojosapiens Data gain, fixing Highway Star Raid Part 4 Arrow drops, and enabling regular arrow re-rolls for unlocked Heaven\'s Door Prime and Jojosapiens.',
+    changes: [
+      'Crazy Diamond: Increased damage on Crazy Uppercut, Shining Kick, and Tandem Uppercut.',
+      'Jojosapiens: Doubled Data gain to 4 Data per right Questionnaire answer (was 2) and 2 Data per full combo (was 1).',
+      'Exclusive & Quest Arrow Re-Rolls: Players who have already unlocked Heaven\'s Door Prime or Jojosapiens can now re-obtain them from regular arrows.',
+      'Highway Star Raid Drop Fix: Fixed the Highway Star Raid dropping Mysterious Arrow [Part 5] instead of the intended Mysterious Arrow [Part 4].',
+      'Catch The Rainbow: Rain Walk is now capped in Ranked Mode.'
+    ],
+    bugFixes: [
+      'Fixed Heaven\'s Door Prime Book Rush sometimes causing instant kills when snapping a neck.',
+      'Fixed Crazy Diamond Beatdown (Fresh Pair Of Underwear) healing.',
+      'Fixed Bad Company units getting stuck inside roofs or water.',
+      'Fixed Highway Star driver swap issue and Death 13 + Evasive / Yellow Temperance jump bugs.',
+      'Fixed seeds becoming account-bound when redeemed via promo codes.'
+    ]
+  },
+  {
+    date: '2026-11-22',
+    title: 'Update 1: Six New Stands, Ranked Mode Beta, Universal Evasive, Pluck & Gang Factions',
+    summary: 'Major Update 1 release introducing 6 Stands (Crazy Diamond, The Hand, Bad Company, The Lock, Cheap Trick, Dolly Dagger), Ranked Mode Beta (3x points, 5s respawn, health packs removed), Universal Evasive (30s CD evening hotfix), Pluck movesets, and Gang Base Factions.',
+    changes: [
+      'Added 6 new playable Stands: Crazy Diamond (Pinnacle), The Hand (Mythical), Bad Company (Mythical), The Lock (Legendary), Cheap Trick (Epic), and Dolly Dagger (Exclusive 1850 ELO Ranked Reward).',
+      'Universal Evasive: Press X (1 EX Bar) to break hitstun/ragdoll; evening patch reduced cooldown from 45s to 30s and raised max combo damage reduction from 30% to 40%.',
+      'Ranked Mode [Beta] (Level 60+): 1v1 matchmaking with 5-second respawns, health packs removed, tripled (3x) ranked point gain, restored spawn invulnerability, and persistent combat tags between stocks.',
+      'Pluck Weapon Movesets: Enabled specialized Pluck sword moves for Jonathan Hamon and Vampire.',
+      'The Lock Evening Hotfix: Doubled trigger damage needed to apply a lock from 8 to 16, reduced guilt damage reflection tiers, and changed Crushing Guilt to a 1.3s stun + lock break.',
+      'Bad Company Update 1 Tuning: Focus Fire cooldown increased from 10s to 15s (1.75x Ability cap, cancels on subspec move); units fire at half rate during player M1 swings; Atomic Strike impact set to 42.',
+      'Star Platinum: The World & The Hand: SPTW overall damage adjusted +15% in evening pass; The Hand base Erasure gained hyperarmor from windup through swipe, and Bring to Me slow increased to 30%.',
+      'Catch The Rainbow: Added Generic Unbranded Ocarina (5 EX Bars, 90s CD, 30s rain, usable with mask off), buffed Weapons Of Rain and Frozen Knife M1/M2 damage, made Rain Catch steerable, and removed Rain Walk fall damage.',
+      'Gang Base Factions & Garage: Added Fruit Company and Vampire factions; added Security System and Self Destruct garage upgrades; enabled cross-slot gangs.',
+      'Stand Slots, Builder & Gardening: Added another free Stand Slot and a free Builder unlock path; Builder autosaves every minute; private server crop speed raised to 0.5x; packaging adds +20% value; Rokas sellable to Big Chop at night.',
+      'Codes: Added 200KLIKESMASSIVE (150K milestone code) and CRAZYDIAMOND; moved 100KLIKESHUGE to Expired.'
+    ],
+    bugFixes: [
+      'Fixed Time Stop failing to freeze opponents, King Crimson frog spawns, Hamon Pluck moves, and Cheap Trick killing NPCs in Ranked.',
+      'Fixed Vampire Vaporatization Freezing Technique sometimes failing to proc freeze.',
+      'Fixed greenhouse placement on gang base second floors and Vampire hypnosis breaking Time Stop.',
+      'Restored alternate colors for SPTW, Bad Company, and The Hand; revamped Alt Colors phone app.'
     ]
   },
   {
@@ -86,7 +131,7 @@ export const updateLogs: UpdateLog[] = [
     title: 'Kiss (Kizz) Stand Release & Zeppeli Hamon Path',
     summary: 'Released Ermes Costello\'s Stand Kiss to the Rare arrow pool, introduced the Zeppeli Hamon path with Life Giving Overdrive, and added craftable movement gear.',
     changes: [
-      'Added Kiss (Kizz) Stand to the Arrow pool as a Rare tier Stand with limb duplication, Sticker Rip physics, and Body Double EX.',
+      'Added Kiss (Kizz) Stand to the Arrow pool as a Legendary tier Stand with limb duplication, Sticker Rip physics, and Body Double EX.',
       'Added William Anthonio Zeppeli Hamon training path with Life Giving Overdrive healing and revive mechanics.',
       'Added Lenny\'s Mechanic Shop for vehicle scrap purchasing and engine repairs.',
       'Added Photography Room and Gallery App to in-game Smartphone.',

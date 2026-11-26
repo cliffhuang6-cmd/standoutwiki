@@ -82,8 +82,9 @@ export const siteConfig: {
         { label: 'Accessories & Sets (62)', href: '/accessories/', desc: 'Gear stat bonuses and 8 set synergies' },
         { label: 'Gardening System', href: '/gardening/', desc: 'Crops, soil, watering & greenhouse' },
         { label: 'Sub-Abilities & Styles', href: '/sub-abilities/', desc: 'Hamon, Vampire & Unarmed mastery' },
-        { label: 'Gang System & Territory', href: '/gang-wars/', desc: 'Base rooms, territory & gang perks' },
-        { label: 'Gamepasses & Shop', href: '/gamepasses/', desc: 'Robux products and slot value' }
+        { label: 'Badges Database (3)', href: '/badges/', desc: 'LEGENDARY Top 10, BETA #3 & DAY ONE badges' },
+        { label: 'Gang System & Territory', href: '/gang-wars/', desc: '3rd Gang Plot, baseless raids & perks' },
+        { label: 'Gamepasses & Shop', href: '/gamepasses/', desc: 'Robux products, pricing & Free Builder unlock' }
       ]
     },
     {
@@ -101,7 +102,8 @@ export const siteConfig: {
       label: 'Guides',
       href: '/guides/',
       children: [
-        { label: 'Guides Hub (35)', href: '/guides/', desc: 'All walkthroughs and progression guides' },
+        { label: 'Guides Hub (36)', href: '/guides/', desc: 'All walkthroughs and progression guides' },
+        { label: 'Bad Company Rework', href: '/guides/bad-company-rework/', desc: 'Nov 24 squad overhaul, 180-stud Maneuver & Airstrike' },
         { label: 'Storyline Walkthrough', href: '/guides/storyline/', desc: 'Full 54-chapter campaign walkthrough' },
         { label: 'Highway Star Raid Guide', href: '/guides/highway-star-raid/', desc: 'Tunnel chase, Yuya boss & loot table' },
         { label: '77 Rings Raid Guide', href: '/guides/77-rings-raid/', desc: 'Tarkus & DIO boss strategies' },
@@ -136,6 +138,7 @@ export const siteConfig: {
       title: 'Game Systems & Items',
       links: [
         { label: 'Stand Out Codes', href: '/codes/' },
+        { label: 'Stand Out Badges (3)', href: '/badges/' },
         { label: 'Items & Materials (32)', href: '/items/' },
         { label: 'Catalog Ranks & Rewards', href: '/catalog/' },
         { label: 'Stats & Ability Scaling', href: '/stats/' },
@@ -144,12 +147,14 @@ export const siteConfig: {
         { label: 'Accessories & Sets (62)', href: '/accessories/' },
         { label: 'Gardening System', href: '/gardening/' },
         { label: 'Sub-Abilities & Styles', href: '/sub-abilities/' },
+        { label: 'Gang Wars & Territory', href: '/gang-wars/' },
         { label: 'Gamepasses & Shop', href: '/gamepasses/' }
       ]
     },
     {
       title: 'Guides & Walkthroughs',
       links: [
+        { label: 'Bad Company Rework Guide', href: '/guides/bad-company-rework/' },
         { label: 'Full Storyline Walkthrough', href: '/guides/storyline/' },
         { label: 'Highway Star Raid Guide', href: '/guides/highway-star-raid/' },
         { label: '77 Rings Raid Guide', href: '/guides/77-rings-raid/' },

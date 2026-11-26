@@ -49,6 +49,12 @@ export default function CodeCard({ code }: { code: Code }) {
       border: 'border-slate-200 hover:border-emerald-400',
       btn: 'bg-emerald-600 hover:bg-emerald-500 text-white'
     },
+    Unverified: {
+      badgeBg: 'bg-amber-100 text-amber-800 border-amber-200',
+      label: 'Unverified',
+      border: 'border-slate-200 hover:border-amber-400',
+      btn: 'bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold'
+    },
     'May Be Expired': {
       badgeBg: 'bg-amber-100 text-amber-800 border-amber-200',
       label: 'May Be Expired',

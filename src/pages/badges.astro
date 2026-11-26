@@ -1,0 +1,273 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const badges = [
+  {
+    name: 'LEGENDARY',
+    id: '1513144134475124',
+    image: '/images/badges/legendary.webp',
+    alt: 'Stand Out LEGENDARY Roblox badge icon',
+    officialDescription: 'REACHED TOP 10',
+    created: '2026-11-25',
+    status: 'Enabled (Ultra-Rare)',
+    statusColor: 'bg-amber-100 text-amber-900 border-amber-300',
+    cardAccent: 'border-amber-300 bg-gradient-to-br from-amber-50/60 to-white',
+    awardedTotal: '13',
+    awardedPastDay: '14',
+    winRate: '0.0%',
+    howToUnlock:
+      'Place inside the Top 10 on the official STAND OUT leaderboard. Added on November 25, 2026 alongside Ranked Mode ELO multiplier adjustments and the Fortune Leaderboard update.',
+    notes:
+      'Currently the rarest official badge in STAND OUT. Because Ranked Mode awards ELO ratings per 1v1 match (with November 25 tuning adjusting rating gain multipliers), pushing into Top 10 requires consistent Ranked wins or Top 10 leaderboard placement while the season is live.',
+  },
+  {
+    name: 'BETA #3',
+    id: '162729236690171',
+    image: '/images/badges/beta-3.webp',
+    alt: 'Stand Out BETA #3 Roblox badge icon',
+    officialDescription: 'Not specified (Beta Wave #3)',
+    created: '2026-11-03',
+    status: 'Enabled (Active Trigger)',
+    statusColor: 'bg-indigo-100 text-indigo-900 border-indigo-200',
+    cardAccent: 'border-slate-200 bg-white',
+    awardedTotal: '2,372,284',
+    awardedPastDay: '136,475',
+    winRate: '0.19%',
+    howToUnlock:
+      'Play STAND OUT while the BETA #3 participation check is active. Originally introduced for the third Beta test phase and recreated/enabled on November 3, 2026.',
+    notes:
+      'Still actively triggering for over 136,000 sessions per day (0.19% session win rate). Per official patch notes, badge rewards apply across your entire account rather than being locked to a single save slot.',
+  },
+  {
+    name: 'DAY ONE',
+    id: '709598997617936',
+    image: '/images/badges/day-one.webp',
+    alt: 'Stand Out DAY ONE Roblox badge icon',
+    officialDescription: 'Not specified (Launch Window)',
+    created: '2026-11-03',
+    status: 'Enabled (Limited / Low Rate)',
+    statusColor: 'bg-emerald-100 text-emerald-900 border-emerald-200',
+    cardAccent: 'border-slate-200 bg-white',
+    awardedTotal: '523,263',
+    awardedPastDay: '1,124',
+    winRate: '0.002%',
+    howToUnlock:
+      'Join STAND OUT during the Day One release window / qualifying early player verification.',
+    notes:
+      'Noticeably rarer than BETA #3 with just over 523K total owners and a 0.002% daily award rate. If you missed the initial Day One window, eligibility depends on whether the developer keeps legacy claim triggers open.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How many official Roblox badges are in STAND OUT?',
+    a: 'STAND OUT currently has 3 official Roblox badges: LEGENDARY (added November 25, 2026 for reaching Top 10), BETA #3, and DAY ONE (both registered on November 3, 2026).',
+  },
+  {
+    q: 'How do you unlock the LEGENDARY badge in STAND OUT?',
+    a: 'The official Roblox description for LEGENDARY is "REACHED TOP 10". Players unlock it by breaking into the Top 10 on the game leaderboard, coinciding with the November 25 Ranked Mode scoring update.',
+  },
+  {
+    q: 'Are badge rewards slot-bound or account-wide?',
+    a: 'According to official patch notes, badge-linked rewards in STAND OUT were updated to apply globally per Roblox account rather than per individual character save slot.',
+  },
+  {
+    q: 'Why does LEGENDARY show 13 total owners and 14 past-day awards?',
+    a: 'Roblox caches badge totals and past-day award counters on separate refresh intervals, so brand-new badges created within the last 24 hours often display a 1-count variance until daily totals sync.',
+  },
+];
+---
+
+<Layout
+  title="Stand Out Badges Guide – DAY ONE, BETA #3 & LEGENDARY | Stand Out Wiki"
+  description="Complete official database of all 3 Roblox STAND OUT badges: LEGENDARY (Top 10), BETA #3, and DAY ONE. Check live owner counts, badge IDs, unlock conditions, and status."
+  canonicalPath="badges"
+  breadcrumbs={[{ label: 'Badges' }]}
+  schemaType="CollectionPage"
+  dateModified="2026-11-26"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Hero Header -->
+    <div class="max-w-3xl mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-black uppercase tracking-wider mb-3 border border-amber-200">
+        <span>Official Roblox Badge Tracker</span>
+        <span>•</span>
+        <span>Updated Nov 26, 2026</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+        Stand Out Badges Database
+      </h1>
+
+      <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+        Every official Roblox badge currently registered for <strong>STAND OUT</strong>, including live owner totals, win rates, official descriptions, creation dates, and how to unlock rare achievements like the newly added <strong>LEGENDARY (Top 10)</strong> badge.
+      </p>
+    </div>
+
+    <!-- Summary Metrics -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Total Badges</div>
+        <div class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">3 Official</div>
+        <div class="text-xs text-slate-500 mt-1">All currently Enabled on Roblox</div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-amber-50 border border-amber-200 shadow-xs">
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-800">Rarest Badge</div>
+        <div class="text-2xl sm:text-3xl font-black text-amber-950 mt-1">LEGENDARY</div>
+        <div class="text-xs text-amber-800 mt-1">13 total earners (Added Nov 25)</div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-indigo-50 border border-indigo-200 shadow-xs">
+        <div class="text-xs font-bold uppercase tracking-wider text-indigo-800">Most Awarded</div>
+        <div class="text-2xl sm:text-3xl font-black text-indigo-950 mt-1">2.37M+</div>
+        <div class="text-xs text-indigo-800 mt-1">BETA #3 active testers</div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 shadow-xs">
+        <div class="text-xs font-bold uppercase tracking-wider text-emerald-800">Reward Scope</div>
+        <div class="text-2xl sm:text-3xl font-black text-emerald-950 mt-1">Account-Wide</div>
+        <div class="text-xs text-emerald-800 mt-1">Applies across all save slots</div>
+      </div>
+    </div>
+
+    <!-- Detailed Badge Cards -->
+    <section class="space-y-6 mb-14">
+      <h2 class="text-2xl font-black text-slate-900">All Official STAND OUT Badges</h2>
+
+      <div class="grid grid-cols-1 gap-6">
+        {badges.map((badge) => (
+          <article class={`rounded-3xl border p-6 sm:p-8 shadow-sm ${badge.cardAccent}`}>
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+              <div class="shrink-0 flex flex-col items-center">
+                <img
+                  src={badge.image}
+                  alt={badge.alt}
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border border-slate-200 shadow-sm object-cover bg-slate-900"
+                />
+                <span class="mt-2 text-[11px] font-mono text-slate-500">ID: {badge.id}</span>
+              </div>
+
+              <div class="flex-1 min-w-0 space-y-4">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <h3 class="text-2xl font-black text-slate-900">{badge.name}</h3>
+                    <p class="text-xs font-semibold text-slate-500 mt-0.5">
+                      Official Description: <span class="text-slate-800">{badge.officialDescription}</span>
+                    </p>
+                  </div>
+                  <span class={`px-3 py-1 rounded-full text-xs font-bold border ${badge.statusColor}`}>
+                    {badge.status}
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                  <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="text-slate-500 font-semibold">Total Awarded</div>
+                    <div class="font-black text-slate-900 text-sm mt-0.5">{badge.awardedTotal}</div>
+                  </div>
+                  <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="text-slate-500 font-semibold">Past 24h Awards</div>
+                    <div class="font-black text-slate-900 text-sm mt-0.5">{badge.awardedPastDay}</div>
+                  </div>
+                  <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="text-slate-500 font-semibold">Win Rate</div>
+                    <div class="font-black text-slate-900 text-sm mt-0.5">{badge.winRate}</div>
+                  </div>
+                  <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="text-slate-500 font-semibold">Registered Date</div>
+                    <div class="font-black text-slate-900 text-sm mt-0.5 font-mono">{badge.created}</div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                  <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200">
+                    <div class="font-black text-slate-900 uppercase tracking-wider text-[11px] mb-1">
+                      Unlock Condition
+                    </div>
+                    <p>{badge.howToUnlock}</p>
+                  </div>
+                  <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200">
+                    <div class="font-black text-slate-900 uppercase tracking-wider text-[11px] mb-1">
+                      Tracking Notes
+                    </div>
+                    <p>{badge.notes}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-black text-slate-900 mb-4">Badge Comparison Summary</h2>
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xs">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="py-3 px-4 font-bold">Badge</th>
+              <th class="py-3 px-4 font-bold">Badge ID</th>
+              <th class="py-3 px-4 font-bold">Created</th>
+              <th class="py-3 px-4 font-bold">Total Owners</th>
+              <th class="py-3 px-4 font-bold">Requirement</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            {badges.map((b) => (
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 font-black text-slate-900">{b.name}</td>
+                <td class="py-3 px-4 font-mono text-slate-600">{b.id}</td>
+                <td class="py-3 px-4 font-mono text-slate-600">{b.created}</td>
+                <td class="py-3 px-4 font-bold text-slate-800">{b.awardedTotal}</td>
+                <td class="py-3 px-4 text-slate-700">{b.officialDescription}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-black text-slate-900 mb-4">Stand Out Badges FAQ</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {faqs.map((item) => (
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+            <h3 class="font-black text-slate-900 text-sm mb-2">{item.q}</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Links -->
+    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+      <div>
+        <h3 class="text-xl font-black">Chasing the LEGENDARY Top 10 Badge?</h3>
+        <p class="text-xs sm:text-sm text-slate-300 mt-1">
+          Check the Ranked Mode changes, top PvP Stand rankings, and active milestone codes.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3 text-xs font-bold">
+        <a href="/guides/ranked-mode/" class="px-4 py-2.5 rounded-xl bg-amber-500 text-slate-950 hover:bg-amber-400 transition-colors">
+          Ranked Mode Guide &rarr;
+        </a>
+        <a href="/tier-list/" class="px-4 py-2.5 rounded-xl bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 transition-colors">
+          PvP Tier List &rarr;
+        </a>
+        <a href="/updates/" class="px-4 py-2.5 rounded-xl bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 transition-colors">
+          Patch Notes &rarr;
+        </a>
+        <a href="/codes/" class="px-4 py-2.5 rounded-xl bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 transition-colors">
+          Active Codes &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

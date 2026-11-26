@@ -182,10 +182,30 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
       <div class="mt-12 scroll-mt-24" id="build-maker">
         <div class="mb-4">
           <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Interactive Tool</span>
-          <h2 class="text-2xl font-black text-slate-900 mt-1">Level 50 Stat Point Allocator &amp; Build Maker</h2>
-          <p class="text-xs text-slate-500 mt-1">Test attribute allocations up to the 150-point cap and calculate gear synergy bonuses.</p>
+          <h2 class="text-2xl font-black text-slate-900 mt-1">Level 75 Stat Point Allocator &amp; Build Maker</h2>
+          <p class="text-xs text-slate-500 mt-1">Test attribute allocations up to the 225-point cap (166 single-stat max) and calculate gear synergy bonuses.</p>
         </div>
         <BuildMaker client:load />
+      </div>
+    )}
+
+    {/* Contextual Stand Cross-Links for Bad Company Rework Guide */}
+    {guide.slug === 'bad-company-rework' && (
+      <div class="mt-10 p-5 rounded-2xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <div class="text-xs font-black uppercase tracking-wider text-emerald-800">Verified Stand Database</div>
+          <p class="text-sm font-bold text-slate-900 mt-0.5">
+            Inspect full frame data, EX costs, and reworked skins on the Bad Company Stand page.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 shrink-0">
+          <a href="/stands/bad-company/" class="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition-colors">
+            Bad Company Stand Page &rarr;
+          </a>
+          <a href="/tier-list/" class="px-4 py-2 rounded-xl bg-white border border-emerald-200 text-emerald-800 text-xs font-bold hover:bg-emerald-100 transition-colors">
+            Tier List
+          </a>
+        </div>
       </div>
     )}
 

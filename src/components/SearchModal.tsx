@@ -102,7 +102,10 @@ export default function SearchModal() {
       { title: 'Gardening & Crops', url: '/gardening/', desc: 'Seeds, soil, water & greenhouse' },
       { title: 'Stand Storage & D\'Arby', url: '/stand-storage/', desc: 'Stand chips and slots' },
       { title: 'Quests & NPC Directory', url: '/quests/', desc: '54 Chapters, 12 side quests & 13 bounties' },
-      { title: 'Accessories & Sets', url: '/accessories/', desc: '62 items across 8 gear sets' }
+      { title: 'Accessories & Sets', url: '/accessories/', desc: '62 items across 8 gear sets' },
+      { title: 'Stand Out Badges (3)', url: '/badges/', desc: 'LEGENDARY Top 10, BETA #3 & DAY ONE official badges' },
+      { title: 'Bad Company Rework Guide', url: '/guides/bad-company-rework/', desc: 'Nov 24 rework: 180-stud Maneuver, Airstrike, Flanking & Landmine' },
+      { title: 'Gang System & Territory', url: '/gang-wars/', desc: '3rd Gang Plot, 25k Dalas baseless raids & base rooms' }
     ];
     systems.forEach((sys) => {
       list.push({
@@ -224,7 +227,7 @@ export default function SearchModal() {
             {/* Footer Hint */}
             <div className="px-4 py-2.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
               <span>Press <kbd className="font-semibold text-slate-700">ESC</kbd> to close</span>
-              <span>Direct database index: 80+ records</span>
+              <span>Direct database index: 130+ records</span>
             </div>
           </div>
         </div>

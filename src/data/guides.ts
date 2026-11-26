@@ -127,9 +127,9 @@ export const guides: Guide[] = [
     "slug": "controls",
     "title": "Stand Out Controls Guide: PC, Mobile & Console Keybinds",
     "category": "Combat & Moves",
-    "description": "Complete keybind directory for Stand Out. Master PC keyboard controls, mobile touch UI, camera shiftlock, piloting, and controller layouts.",
+    "description": "Complete keybind directory for Stand Out. Master PC keyboard controls (including X Universal Evasive), mobile touch UI, camera shiftlock, piloting, and Nov 24 console D-pad layouts.",
     "readingTime": "5 min read",
-    "updatedDate": "2026-11-16",
+    "updatedDate": "2026-11-26",
     "tableOfContents": [
       {
         "id": "pc-keybinds",
@@ -185,6 +185,11 @@ export const guides: Guide[] = [
               "Invulnerability frames on startup"
             ],
             [
+              "X",
+              "Universal Evasive",
+              "Breaks hitstun/ragdoll for 1 EX Bar (30s CD, 0 DMG)"
+            ],
+            [
               "F",
               "Block / Guard",
               "Tap on connection for Perfect Block parry"
@@ -229,7 +234,7 @@ export const guides: Guide[] = [
       {
         "id": "gamepad-layout",
         "title": "Gamepad & Console Controls (Xbox / PS)",
-        "content": "STAND OUT natively supports modern game controllers across Xbox, PlayStation, and PC gamepad inputs. Triggers handle core attacks and defensive blocking, while face buttons and bumper modifiers activate mapped Stand skills.",
+        "content": "STAND OUT natively supports game controllers across Xbox, PlayStation, and PC. The November 24, 2026 patch standardized console D-pad quick bindings alongside triggers and face buttons (and console players can edit keyboard/mouse binds in settings).",
         "table": {
           "headers": [
             "Button (Xbox / PS)",
@@ -254,23 +259,28 @@ export const guides: Guide[] = [
             ],
             [
               "LB / L1",
-              "Dash / Evade",
-              "Evasive roll with startup invulnerability"
+              "Dash",
+              "1.2s standardized dash cooldown"
             ],
             [
-              "Y, B, X / \u25b3, \u25cb, \u25a1",
+              "D-Pad Left",
+              "Universal Evasive",
+              "Breaks hitstun/ragdoll (1 EX Bar, 30s CD); Hold RT + D-Pad Left toggles cards"
+            ],
+            [
+              "D-Pad Right",
+              "Toolbar Item",
+              "Tap to use selected toolbar item; hold & release to cycle next slot"
+            ],
+            [
+              "Y, B, X / △, ○, □",
               "Stand Skills",
-              "Assigned special moves and offensive skills"
+              "Assigned special moves and EX skills"
             ],
             [
               "R3 (Right Stick)",
               "Lock-On Toggle",
               "Focus camera target on nearest opponent"
-            ],
-            [
-              "D-Pad",
-              "Sub-Abilities & Items",
-              "Quick slots for consumables and potions"
             ]
           ]
         }
@@ -534,7 +544,7 @@ export const guides: Guide[] = [
       {
         "id": "lucky-rates",
         "title": "Drop Probabilities & 1.5% Pinnacle Math",
-        "content": "The Lucky Arrow represents the primary bridge between standard arrow grinding and high-rarity Stand acquisition. Unlike standard Mysterious Arrows which feature a baseline ~0.50% Pinnacle tier probability, Lucky Arrows elevate Pinnacle Stand chances to an impressive 1.5%\u2014a 3x statistical improvement. Furthermore, Common and low Rare tier outcomes are drastically suppressed.",
+        "content": "The Lucky Arrow represents the primary bridge between standard arrow grinding and high-rarity Stand acquisition. Unlike standard Mysterious Arrows which feature a baseline ~0.50% Pinnacle tier probability, Lucky Arrows elevate Pinnacle Stand chances to an impressive 1.5%—a 3x statistical improvement. Furthermore, Common and low Rare tier outcomes are drastically suppressed.",
         "table": {
           "headers": [
             "Stand Rarity",
@@ -1232,9 +1242,9 @@ export const guides: Guide[] = [
     "slug": "vampire",
     "title": "Vampire Sub-Ability Guide: Stone Mask, Blood Bar & Sunlight Gear",
     "category": "Progression",
-    "description": "Reject your humanity with the Vampire Sub-Ability in Stand Out. Master Blood Bar regeneration, Space Ripper Stingy Eyes, and daylight survival with the Shadow Cloak.",
+    "description": "Master the Vampire Sub-Ability in Stand Out. Covers Stone Mask obtainment, 250 max Blood scaling, Vaporatization Freezing Technique (freeze trigger fixed Nov 22), downed Blood Drain execution, and Shadow Cloak protection.",
     "readingTime": "6 min read",
-    "updatedDate": "2026-11-16",
+    "updatedDate": "2026-11-26",
     "tableOfContents": [
       {
         "id": "stone-mask",
@@ -1272,38 +1282,50 @@ export const guides: Guide[] = [
       {
         "id": "blood-meter",
         "title": "Blood Bar Drain Rate & M2 Siphon Mechanics",
-        "content": "Vampires replace their natural stamina bar with a crimson Blood Bar. As of the Nov 15/16 overhaul, Vampires continuously regenerate natural HP as long as blood is present in their pool. Furthermore, maximum Blood capacity now scales directly with your Ability stat, allowing players to store up to 250 Blood with max Ability investment. Pressing RMB (M2 Blood Drain) lunges forward to siphon blood, restoring HP and refilling your gauge.",
+        "content": "Vampires use a Blood Reserve scaling up to 250 Blood at max Ability. You regenerate 20% faster with Blood and 20% slower without it (PvP healing requires blood). In Update 1, Blood Drain can also execute downed enemies to prevent Mandom or Crazy Diamond revives, and the Nov 22 patch fixed Vaporatization Freezing Technique sometimes failing to trigger freeze.",
         "table": {
           "headers": [
             "Vampire Ability",
-            "Blood Cost",
+            "Resource / Mechanic",
             "Cooldown",
             "Combat Effect"
           ],
           "rows": [
             [
-              "Blood Drain (M2)",
-              "Restores +40 Blood",
-              "8s",
-              "Siphons 25 HP & immobilizes target"
+              "Blood Drain",
+              "Refills Blood + Heals",
+              "18s",
+              "Grabs enemy, heals, throws left; executes downed targets"
             ],
             [
               "Space Ripper Stingy Eyes",
-              "25 Blood",
+              "2 HP Cost (+10% Range)",
+              "12s",
+              "Uninterruptible eye lasers; extra headshot damage"
+            ],
+            [
+              "Vaporatization Freezing Technique",
+              "3s Solid Freeze",
               "18s",
-              "High-velocity piercing laser beams"
+              "Freeze trigger fixed Nov 22; heavy blow shatters for +25 DMG"
             ],
             [
-              "Vaporizing Freeze",
-              "30 Blood",
-              "22s",
-              "Counters physical hits; freezes limbs for 3s"
+              "Hypnosis",
+              "Hold to Choose Command",
+              "16s",
+              "Dance, follow, flee, stay, or drop held item"
             ],
             [
-              "Superhuman Leap",
-              "10 Blood",
-              "5s",
-              "Massive vertical leap for rooftop positioning"
+              "Vampiric Retaliation (2 EX)",
+              "Evasive Spin Lasers",
+              "60s",
+              "Usable while stunned/ragdolled; breaks guard (parriable)"
+            ],
+            [
+              "Zombie Transformation (1 EX)",
+              "Up to 3 Zombies",
+              "—",
+              "Raises corpses within 8 studs at 30% HP/DMG"
             ]
           ]
         }
@@ -1640,7 +1662,7 @@ export const guides: Guide[] = [
       {
         "id": "storyline-bosses",
         "title": "Storyline Boss Tactics & Evasion Strategies",
-        "content": "Storyline bosses possess hyper-armor phases and specialized guardbreak mechanics that punish standard combo spam. For Rohan (Ch. 14), avoid his direct line-of-sight to prevent Heaven's Door page immobilizations. For Charming Man (Ch. 21), hold guard against his triple slash and punish the 1.2s recovery delay with heavy knockbacks. For Bobby Jean (Ch. 41), memorize his bullet velocity changes: when purple distortion halos appear, bullets travel at 30% speed and detonate upon proximity\u2014use Q-dash invulnerability frames to cross hazard zones safely.",
+        "content": "Storyline bosses possess hyper-armor phases and specialized guardbreak mechanics that punish standard combo spam. For Rohan (Ch. 14), avoid his direct line-of-sight to prevent Heaven's Door page immobilizations. For Charming Man (Ch. 21), hold guard against his triple slash and punish the 1.2s recovery delay with heavy knockbacks. For Bobby Jean (Ch. 41), memorize his bullet velocity changes: when purple distortion halos appear, bullets travel at 30% speed and detonate upon proximity—use Q-dash invulnerability frames to cross hazard zones safely.",
         "steps": [
           "Recognize boss telegraph animations (red ground circles and blue eye flashes).",
           "Do not waste your Universal Evasive (Space during hitstun) on light combo openers; save it for boss ultimate strings.",
@@ -1662,9 +1684,9 @@ export const guides: Guide[] = [
     "slug": "crafting",
     "title": "Stand Out Crafting Guide: Workbenches, Recipes & Materials",
     "category": "Economy",
-    "description": "Master the crafting system in Stand Out. Workbench locations, recipes for Lucky Arrows and Shadow Cloaks, material spawns, and profit margins.",
+    "description": "Master the crafting system in Stand Out. Verified Workbench recipes for Lucky Arrows (3x Mysterious), Bizarre Arrows (9x Mysterious), Part 3/5 Focus Arrows, Pluck Sword, and 2x EXP/Coin Boosters.",
     "readingTime": "6 min read",
-    "updatedDate": "2026-11-16",
+    "updatedDate": "2026-11-26",
     "tableOfContents": [
       {
         "id": "crafting-benches",
@@ -1691,44 +1713,50 @@ export const guides: Guide[] = [
       {
         "id": "crafting-benches",
         "title": "Workbench Locations Across the City",
-        "content": "Crafting in STAND OUT allows players to forge premium summon arrows, protective accessories, and agricultural tools without spending Robux. Workbenches exist in three tiers: Basic Workbench (Downtown Alley), Advanced Workbench (Industrial Scrap Yard), and Master Forge (Catacombs Entrance). Higher-tier benches are required for advanced blueprints.",
+        "content": "Crafting in STAND OUT takes place at Workbenches (including Big Chop's Garden Workbench and Blacksmith). Crafting consumes bound materials first, and Nov 18 fixed benches failing during another player's Time Stop.",
         "table": {
           "headers": [
-            "Crafting Item",
-            "Required Bench",
-            "Materials Needed",
-            "Crafting Time"
+            "Crafted Item",
+            "Bench / NPC",
+            "Verified Materials Needed",
+            "Notes"
           ],
           "rows": [
             [
+              "Mysterious Arrow",
+              "Basic Workbench",
+              "3x Arrow Parts + 1x Steel Ingot",
+              "Core Stand awakening catalyst"
+            ],
+            [
               "Lucky Arrow",
-              "Advanced Workbench",
-              "1 Mysterious Arrow, 10 Scrap, 3 Gold Ingots",
-              "30s"
+              "Blacksmith / Bench",
+              "3x Mysterious Arrows + 10,000 Dalas",
+              "Excludes Rare tier (1.5% Pinnacle)"
             ],
             [
               "Bizarre Arrow",
-              "Master Forge",
-              "3 Lucky Arrows, 1 Meteorite Shard, $50,000",
-              "60s"
+              "Master Forge / Bench",
+              "9x Mysterious Arrows + 25,000 Dalas",
+              "Excludes Rare & Epic (4.4% Pinnacle)"
             ],
             [
-              "Shadow Cloak",
-              "Basic Workbench",
-              "5 Silk Cloth, 2 Shadow Fragments",
-              "15s"
+              "Mysterious Arrow [Part 3 / 5]",
+              "Workbench",
+              "1x Mysterious Arrow + 5x Steel Ingots",
+              "5% focus rate for SP/TW or KC"
             ],
             [
-              "Heavy Boots",
-              "Basic Workbench",
-              "8 Steel Ingots, 4 Leather Strips",
-              "20s"
+              "Pluck Sword",
+              "Workbench",
+              "Pluck Blade + Pluck Guard + Pluck Handle",
+              "Parts drop in 77 Rings Raid (100 Tokens each)"
             ],
             [
-              "High-Yield Garden Pot",
-              "Basic Workbench",
-              "4 Clay Bricks, 2 Dirt Bags",
-              "10s"
+              "2x EXP / Coins Boosters",
+              "Workbench",
+              "Rokakaka strains",
+              "Higher grade Roka = longer boost duration"
             ]
           ]
         }
@@ -1761,7 +1789,7 @@ export const guides: Guide[] = [
       {
         "id": "crafting-economy",
         "title": "Profit Margins on Crafting vs Selling Raw Mats",
-        "content": "Selling raw Scrap Metal to merchants yields only $50 Dalas per piece. However, crafting that scrap into Lucky Arrows and selling them to other players via the Player Trade Hub nets upwards of $35,000 Dalas per arrow\u2014a 700% value markup.",
+        "content": "Selling raw Scrap Metal to merchants yields only $50 Dalas per piece. However, crafting that scrap into Lucky Arrows and selling them to other players via the Player Trade Hub nets upwards of $35,000 Dalas per arrow—a 700% value markup.",
         "tips": [
           "Always craft raw materials into finished goods before trading on the player market."
         ]
@@ -1772,9 +1800,9 @@ export const guides: Guide[] = [
     "slug": "gardening",
     "title": "Stand Out Gardening Guide: Crops, Greenhouses & Roka Mutations",
     "category": "Economy",
-    "description": "The definitive agricultural guide for Stand Out. Crop growth timers, 3x Gang Greenhouse buffs, produce packaging, and 33 Rokakaka mutation strains.",
+    "description": "The definitive agricultural guide for Stand Out. Covers crop timers, 3x Gang Greenhouse buffs, 20% rain growth bonus, +20% packaged produce value, Big Chop night Rokakaka sales, and 33 Rokakaka mutations.",
     "readingTime": "7 min read",
-    "updatedDate": "2026-11-16",
+    "updatedDate": "2026-11-26",
     "tableOfContents": [
       {
         "id": "gardening-setup",
@@ -1902,8 +1930,8 @@ export const guides: Guide[] = [
       },
       {
         "id": "produce-packaging",
-        "title": "Packaging Crops into Jars for 2.5x Retail Value",
-        "content": "Never sell raw harvested produce directly to basic vendors. Use the packaging station to convert crops into Glass Jars (e.g. Jar of Rokaka, Jar of Apples, Jar of Tomatoes). Packaged jars sell for 2.5x the raw crop value at the Harbor Export Merchant.",
+        "title": "Packaging (+20% Value), Rain Bonus & Night Rokakaka Sales",
+        "content": "Update 1 and November patches introduced major agricultural quality-of-life changes: packaging a plant adds +20% to its sale value, plants at Big Chop's Garden grow 20% faster during natural rain or November Rain, private server growth speed was doubled from 0.25x to 0.5x, and you can now sell excess Rokakakas directly to Big Chop at night (though the Food Safety Agency may ambush the transaction!).",
         "tips": [
           "Purchase empty glass jars in bulk from the Harbor Merchant to minimize packaging overhead costs."
         ]
@@ -2030,9 +2058,9 @@ export const guides: Guide[] = [
     "slug": "combat-mechanics",
     "title": "Stand Out Combat Mechanics Guide: Perfect Block, Posture & Combos",
     "category": "Combat & Moves",
-    "description": "Master the complete combat system in Roblox STAND OUT. In-depth guide covering the 0.12s Perfect Block parry window, 35-50 Block Posture HP, Barrage Clash chip reduction, Combo Damage Scaling, Dash cancelling, and Time Stop overwrites.",
+    "description": "Master the complete combat system in Roblox STAND OUT. Covers the 0.12s Perfect Block parry window, 35-50 Block Posture HP, 25% Barrage Clash chip, 40% Combo Scaling cap, and 30s Universal Evasive (1 EX Bar, X key).",
     "readingTime": "9 min read",
-    "updatedDate": "2026-11-22",
+    "updatedDate": "2026-11-26",
     "tableOfContents": [
       {
         "id": "perfect-block",
@@ -2132,7 +2160,7 @@ export const guides: Guide[] = [
       {
         "id": "combo-scaling",
         "title": "Combo Damage Scaling & Anti-Teaming i-Frames",
-        "content": "To prevent unfair infinite true combos and one-shot touch-of-death sequences, Stand Out implements dynamic Combo Damage Scaling. Against other players, each attacker builds a separate combo tracking the percentage of your max HP dealt. Once an attacker has dealt 50% of your maximum HP, their next hit suffers a 25% damage reduction. If the combo continues past 99% of your max HP, damage reduction increases to 40%.",
+        "content": "To prevent unfair infinite true combos, Stand Out implements dynamic Combo Damage Scaling. Against other players, each attacker builds a separate combo tracking the percentage of your max HP dealt. After dealing 50% of your max HP, their next hit deals 25% less damage. Once they reach 99% HP dealt, maximum combo damage reduction rises to 40% (raised from 30% in the Update 1 evening hotfix).",
         "steps": [
           "Direct physical and Stand hits refresh the 2.5-second combo tracking window.",
           "Chip damage and Damage Over Time (DOT) count toward active combo totals but do not refresh the window.",
@@ -2174,18 +2202,268 @@ export const guides: Guide[] = [
       },
       {
         "id": "universal-evasive",
-        "title": "Universal Evasive (Burst Break Mechanic)",
-        "content": "Introduced in Update 1, Universal Evasive gives every player a guaranteed defensive combo breaker regardless of their equipped Stand. Triggered with the X key (or dedicated mobile HUD button), your character unleashes a burst of energy that immediately breaks hitstun, knocks back nearby assailants, and clears active ragdoll animations.",
+        "title": "Universal Evasive (30s Cooldown Burst Break)",
+        "content": "Introduced in Update 1 and tuned across the Nov 22–24 hotfixes, Universal Evasive gives every player a standardized combo breaker regardless of Stand. Press X (or D-Pad Left on console / mobile Evasive button) to spend 1 EX Bar, break hitstun or ragdoll, and knock nearby attackers away. Note: The initial 45s cooldown was lowered to 30s on Nov 22, and the 10 flat burst damage was removed on Nov 24.",
         "steps": [
-          "Keybind / Activation: Press X key while grounded or caught in an enemy combo chain.",
-          "EX Gauge Requirement: Consumes exactly 1 EX Bar (25% of your total EX meter). Cannot be activated if meter is empty.",
-          "Base Cooldown: 45.0 seconds. Can be monitored on your screen edge cooldown tracker.",
-          "Defensive Burst Damage: Releases a small kinetic shockwave inflicting 10 flat damage to all enemies within 8 studs.",
-          "Combo Breaker Utility: Cancels true hitstun and ragdoll states, granting 0.40s of intangibility to roll away."
+          "Keybind / Activation: Press X on PC (D-Pad Left on Console) while grounded, stunned, or caught in an enemy combo.",
+          "EX Gauge Requirement: Consumes exactly 1 EX Bar (25% of your total EX meter). Cannot be activated with an empty EX bar.",
+          "Base Cooldown: 30.0 seconds (reduced from 45.0s in the Update 1 evening patch). Can also be toggled into the skill list.",
+          "Zero Burst Damage (Nov 24 Hotfix): The original 10 flat burst damage was removed on November 24; Universal Evasive is now a pure defensive knockback and combo breaker."
         ],
         "tips": [
-          "Do not waste Universal Evasive on simple light M1 taps; save your 1 EX Bar to break high-damage setups like The Hand's Erasure Leap or Crazy Diamond's Restoration Wall traps.",
-          "If an opponent baits out your Universal Evasive early, you are vulnerable to full 40-hit combo scaling for the next 45 seconds."
+          "Save your 1 EX Bar to break high-commitment setups like The Hand Erasure Combo or Crazy Diamond launchers.",
+          "If an opponent baits out your Universal Evasive early, you remain vulnerable to full combo chains for the next 30 seconds."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "bad-company-rework",
+    "title": "Bad Company Rework Guide (Nov 24): New Moves, Unit HP, Combos & Counters",
+    "category": "Combat & Moves",
+    "description": "Complete guide to the November 24 Bad Company rework in Roblox STAND OUT. Covers tripled pilot range, 180-stud Maneuver, Flanking, Landmine, Airstrike (2 EX), unit HP nerfs, optimal builds, and counters.",
+    "readingTime": "10 min read",
+    "updatedDate": "2026-11-26",
+    "tableOfContents": [
+      {
+        "id": "before-after",
+        "title": "Rework Breakdown: Before vs. After (Nov 24)"
+      },
+      {
+        "id": "updated-kit",
+        "title": "Complete Reworked Moveset & Unit Stats"
+      },
+      {
+        "id": "optimal-build",
+        "title": "Best Playstyle & Level 75 Stat Build (225 SP)"
+      },
+      {
+        "id": "combos-micro",
+        "title": "Recommended Combos & Squad Micro"
+      },
+      {
+        "id": "pvp-pve",
+        "title": "PvP Ranked vs. PvE Raid Performance"
+      },
+      {
+        "id": "pros-cons-counters",
+        "title": "Pros, Cons & How to Counter Bad Company"
+      },
+      {
+        "id": "faq",
+        "title": "Bad Company Rework FAQ"
+      }
+    ],
+    "sections": [
+      {
+        "id": "before-after",
+        "title": "Rework Breakdown: Before vs. After (Nov 24)",
+        "content": "On November 24, 2026, Studio Umbra: Europa overhauled Bad Company from a passive turret-camping Stand into a high-mobility, micro-intensive tactical army. While every unit took steep HP nerfs and per-type replacement timers, Bad Company gained tripled pilot range, 180-stud deployment reach, two new base moves (Flanking & Landmine), a new 2-EX Airstrike, and universal Paratroopers.",
+        "table": {
+          "headers": [
+            "Mechanic / Stat",
+            "Pre-Rework (Nov 22)",
+            "Post-Rework (Nov 24)",
+            "Gameplay Impact"
+          ],
+          "rows": [
+            [
+              "Pilot Range",
+              "1x Baseline",
+              "3x Tripled Range",
+              "Scout & pressure across entire districts"
+            ],
+            [
+              "Maneuver Distance",
+              "60 Studs",
+              "180 Studs (+Hold Recall)",
+              "Absorbed ATTENTIONNN; 3x perimeter reach"
+            ],
+            [
+              "New Base Moves",
+              "Focus Fire, Maneuver, ATTENTIONNN",
+              "+Flanking (3s) & +Landmine (2s)",
+              "Adds orbiting pressure & 3-charge knockdown traps"
+            ],
+            [
+              "Paratroopers",
+              "Base Move (Infantry only, 18s)",
+              "1 EX Bar (21s, ANY unit type)",
+              "Air-drop Tanks, Helis, or Berets up to 180 studs"
+            ],
+            [
+              "Airstrike",
+              "Not in kit",
+              "2 EX Bars (32s CD)",
+              "3-missile guardbreaking jet strike in pilot range"
+            ],
+            [
+              "Infantry / Beret HP",
+              "30 HP / 24 HP",
+              "10 HP / 5 HP",
+              "Fragile; wiped easily if left unguarded"
+            ],
+            [
+              "Tank / Helicopter HP",
+              "60 HP / 36 HP",
+              "45 HP / 15 HP",
+              "Tanks absorb 50% projectiles; Helis very fragile"
+            ],
+            [
+              "Replacement Cooldowns",
+              "Flat 25s for all units",
+              "10s Inf / 16s Beret / 25s Tank / 30s Heli",
+              "Recall wounded units manually to bypass timers"
+            ],
+            [
+              "Piloted Unit Speed",
+              "1x Baseline",
+              "Inf/Beret +50%, Heli +100% (2x)",
+              "Massive chase and hit-and-run speed"
+            ],
+            [
+              "Alternate Skins",
+              "Legacy recolors",
+              "Urban, Special Forces, Desert",
+              "Every unit model & color scheme redone"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "updated-kit",
+        "title": "Complete Reworked Moveset & Unit Stats",
+        "content": "Bad Company now runs 8 base abilities/passives and 4 EX awakening moves on a strict 14-point Military Might budget (3 Infantry at 2 Might each, 1 Green Beret at 2, 1 Tank at 3, 1 Helicopter at 3). Tap G to cycle unit types (+25% damage bonus for the selected type) or hold G to command the whole army.",
+        "table": {
+          "headers": [
+            "Move / Key",
+            "Cost / Cooldown",
+            "Scaling / Rules",
+            "Tactical Function"
+          ],
+          "rows": [
+            [
+              "Focus Fire (E)",
+              "15s CD (6s mark)",
+              "100% Ability (1.75x at 166)",
+              "All units fire on marked target; ends on sub-ability cast"
+            ],
+            [
+              "Maneuver (R)",
+              "1s CD (180 studs)",
+              "Tap: Hold Spot / Hold: Recall",
+              "Position squads up to 180 studs away or call them back"
+            ],
+            [
+              "Flanking (T)",
+              "3s CD",
+              "50% Ability Bonus",
+              "Single unit type orbits enemy; fires on Focus Fire or Pilot M1"
+            ],
+            [
+              "Landmine (Y)",
+              "2s CD (3 charges)",
+              "100% Ability",
+              "Knockdown mine (22s recharge on hit, 1s on expire)"
+            ],
+            [
+              "Paratroopers (1 EX)",
+              "1 Bar / 21s CD",
+              "Up to 180 studs",
+              "Drops selected unit type (requires open slot & Might)"
+            ],
+            [
+              "Airstrike (2 EX)",
+              "2 Bars / 32s CD",
+              "100% Ability (Guardbreak)",
+              "Jet drops 3 guardbreaking missiles (perfect blockable)"
+            ],
+            [
+              "Full Scale Warfare (3 EX)",
+              "3 Bars / 48s CD",
+              "6s Reinforcements",
+              "Fills all empty squad slots temporarily"
+            ],
+            [
+              "Atomic Strike (4 EX)",
+              "4 Bars / 75s CD",
+              "100% Ability (42 Base + Burn)",
+              "14-stud nuke with 3-second air target window"
+            ]
+          ]
+        },
+        "tips": [
+          "Tank shells and Helicopter missiles now flash a visual warning before firing—Tank shells break guard (perfect blockable) and Helicopter missiles can be blocked normally.",
+          "You can reposition the Bad Company unit status HUD anywhere on your screen via the HUD layout editor."
+        ]
+      },
+      {
+        "id": "optimal-build",
+        "title": "Best Playstyle & Level 75 Stat Build (225 SP)",
+        "content": "Because Focus Fire, Landmine, Airstrike, and Atomic Strike all scale 100% with Ability—while your fragile 5–15 HP squads force you to stay alive manually—the optimal Level 75 (225 SP) allocation balances maximum Ability with durable Health.",
+        "steps": [
+          "Recommended Stats (225 SP): 100 Ability / 85 Health / 40 Damage (or 100 Ability / 100 Health / 25 Damage for Ranked 1v1 survival).",
+          "Best Sub-Ability: Caesar Hamon — Bubble Launcher and Bubble Barrier lock melee rushers away from your body while your army pelts them from range. Avoid Vampire if you rely on long-range daylight zoning without Shadow Cloak.",
+          "Key Accessories: Equip Jotaro's Set (+15 Ability, +10% DMG) or Mangaka Elite Set (+10 Ability) to push Ability past 115–120 for boosted Landmine and Airstrike bursts."
+        ]
+      },
+      {
+        "id": "combos-micro",
+        "title": "Recommended Combos & Squad Micro",
+        "content": "Post-rework Bad Company rewards proactive unit placement and manual recalls rather than dumping all 14 Might into melee range.",
+        "steps": [
+          "1. Standard Zoning Loop: Tap G to select Infantry (+25% dmg) → Flanking (T) onto enemy → Focus Fire (E) → Plant Landmine (Y) at your feet to punish anyone dashing in.",
+          "2. Airstrike Guardbreak Confirm: Bait a block with Helicopter gunfire → Cast Airstrike (2 EX) behind their guard → Follow with Maneuver-recalled Tanks or Paratroopers Tank drop.",
+          "3. Green Beret Stealth Ambush: Select Green Berets → Pilot (Ctrl) within 10 studs to trigger automatic 4s ambush stabs → Immediately place a Landmine under the piloted Beret before it expires.",
+          "4. Might Conservation Rule: Always Hold R (Maneuver Recall) before a 10 HP Infantry squad or 15 HP Helicopter dies to AoE—recalling frees Military Might instantly instead of waiting 10–30 seconds."
+        ]
+      },
+      {
+        "id": "pvp-pve",
+        "title": "PvP Ranked vs. PvE Raid Performance",
+        "content": "In PvP (S Tier), Bad Company dominates open arenas and Gang Wars where tripled Pilot Range and 180-stud Maneuvers let you control territory safely, though sharp duelists can snipe your 15 HP Helicopter out of the air. In PvE Raids like 77 Rings and Highway Star (S+ Tier), Tanks soak boss projectiles at 50% damage reduction while Landmines, Airstrike, and Atomic Strike shred clustered undead waves.",
+        "tips": [
+          "In 77 Rings Stage 1 & 3, station Tanks at choke doorways with Maneuver (R) and save Atomic Strike (4 EX) for Tarkus and DIO.",
+          "Remember: casting a Sub-Ability move cancels an active Focus Fire mark, so finish your Focus Fire window before throwing Hamon bubbles."
+        ]
+      },
+      {
+        "id": "pros-cons-counters",
+        "title": "Pros, Cons & How to Counter Bad Company",
+        "content": "Knowing both Bad Company's strengths and its post-rework vulnerabilities is essential whether you main Keicho's army or fight against it in Ranked.",
+        "table": {
+          "headers": [
+            "Strengths (Pros)",
+            "Weaknesses (Cons)",
+            "How to Counter It"
+          ],
+          "rows": [
+            [
+              "3x Pilot Range & 180-stud Maneuver/Paratroopers",
+              "Paper-thin unit HP (Infantry 10, Berets 5, Heli 15)",
+              "Snipe Helicopters & Infantry first to lock Might for 10–30s"
+            ],
+            [
+              "Flanking + 3-charge Landmines control melee space",
+              "Focus Fire (15s CD) cancels if user casts a Sub-Ability",
+              "Dash twice immediately to shake off Green Beret ambushes"
+            ],
+            [
+              "2-EX Airstrike & 4-EX Atomic Strike huge AoE burst",
+              "Tank (25s) & Heli (30s) replacement cooldowns are punishing",
+              "Watch flash warnings to Perfect Block Tank shells & Airstrike missiles"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "faq",
+        "title": "Bad Company Rework FAQ",
+        "content": "Quick answers to the most common post-rework questions. Visit our main Bad Company Stand page, Tier List, or Best Stands guide for full roster comparisons.",
+        "steps": [
+          "Where did ATTENTIONNN go? ATTENTIONNN was merged into Maneuver (R)—hold R to recall stationed or flanking units.",
+          "Why do my units deal half fire rate when I swing M1? Update 1 reduced unit firing frequency during player M1 swings so Keicho cannot stack full melee + full army DPS simultaneously.",
+          "What are the new Bad Company skins? Urban, Special Forces, and Desert—unlocked and swappable via the Alt Colors Phone app."
         ]
       }
     ]
@@ -2361,9 +2639,9 @@ export const guides: Guide[] = [
     "slug": "stand-out-skins",
     "title": "Stand Out Skins & Alt Colors Guide: Unlocks, Customizer & Catalog",
     "category": "Progression",
-    "description": "Comprehensive guide to Stand Skins and Alternative Color Schemes in Roblox STAND OUT. How to unlock and equip Alt 1-3 palettes via the Phone (Z) app, quest requirements, Catalog supporter tiers, and exclusive cosmetic titles.",
+    "description": "Comprehensive guide to Stand Skins and Alternative Color Schemes in Roblox STAND OUT. Covers the revamped Alt Colors phone app, Bad Company's reworked Urban/Special Forces/Desert skins, and new SPTW, The Hand, Crazy Diamond, and Kiss palettes.",
     "readingTime": "8 min read",
-    "updatedDate": "2026-11-22",
+    "updatedDate": "2026-11-26",
     "tableOfContents": [
       {
         "id": "how-skins-work",
@@ -2427,10 +2705,13 @@ export const guides: Guide[] = [
       },
       {
         "id": "roster-availability",
-        "title": "Full Stand Roster Skin Availability (36 Stands)",
-        "content": "Currently, 36 core Stands feature dedicated Alt 1, Alt 2, and Alt 3 color schemes documented on the official developer board (totaling 108 distinct cosmetic variants). Iconic examples include manga-colored Star Platinum (purple/teal Alt 1), shadow-armored The World (obsidian/gold Alt 2), and crimson-white King Crimson.",
+        "title": "Stand Skin Updates: Bad Company, SPTW, The Hand & Crazy Diamond",
+        "content": "Update 1 (Nov 22) revamped the Alt Colors Phone App and restored/added alternate palettes across key Stands, followed by the November 24 Bad Company rework which completely rebuilt every miniature unit's alternate color schemes into Urban, Special Forces, and Desert variants.",
         "tips": [
-          "Newer Stands (November Rain, Kiss, Big Mouth Strikes Again, Lyin' Eyes, The MATTEKUDASAI) and exclusive forms (SPTW, TWAU, Heaven's Door Prime) have baseline textures and will receive their Alt cards in future patch cycles."
+          "Bad Company (Nov 24 Rework): All unit alt colors completely redone as Urban, Special Forces, and Desert.",
+          "Star Platinum: The World & The Hand (Nov 22): Alternate color palettes restored and updated in the revamped Alt Colors app.",
+          "Crazy Diamond & Kiss (Nov 24): New alternate color schemes added for both Stands.",
+          "Big Mouth Strikes Again & The MATTEKUDASAI: Fixed BMSA alt color tab sizing and MATTEKUDASAI net/structure tracking."
         ]
       },
       {
@@ -2499,9 +2780,9 @@ export const guides: Guide[] = [
     "slug": "ranked-mode",
     "title": "Stand Out Ranked Mode Guide: ELO Tiers, 1v1 Arena & Dolly Dagger",
     "category": "Endgame & Raids",
-    "description": "Comprehensive guide to 1v1 Ranked Mode in Roblox STAND OUT. Learn Level 60 entry requirements, Best-of-3 arena rules, ELO tiers, and how to reach 1,850 ELO to unlock the exclusive Pinnacle Stand Dolly Dagger.",
+    "description": "Comprehensive guide to 1v1 Ranked Mode in Roblox STAND OUT. Covers Level 60 entry, 5s respawns, removed health packs, 3x point gain, 30s Universal Evasive, and unlocking Dolly Dagger at 1,850 ELO.",
     "readingTime": "8 min read",
-    "updatedDate": "2026-11-22",
+    "updatedDate": "2026-11-26",
     "tableOfContents": [
       {
         "id": "entry-requirements",
@@ -2547,12 +2828,13 @@ export const guides: Guide[] = [
       {
         "id": "competitive-rules",
         "title": "Competitive Rules & Arena Mechanics",
-        "content": "To ensure pure skill-based combat, Ranked Mode introduces standardized competitive restrictions that prevent consumable abuse and infinite stalling.",
+        "content": "Ranked Mode Beta enforces strict competitive 1v1 rules updated during Update 1 (Nov 22–24): health packs were completely removed from Ranked arenas, respawn timers are fixed at 5 seconds with restored spawn invulnerability, combat tags remain active between stocks, and Ranked point gain was tripled (3x).",
         "steps": [
-          "Consumable Lock: Healing items, food, drinks, and Rokakaka fruits cannot be consumed once inside the arena.",
-          "Sub-Ability Integration: Hamon (Jonathan, Caesar, Zeppeli) and Vampire are fully permitted with their respective gauge mechanics.",
-          "Universal Evasive: Players have access to the X-key Universal Evasive (45s base cooldown, costs 1 EX Bar).",
-          "Time Stop Global Cap: Time Stop duration inside Ranked matches is capped to prevent unreactable 100-to-0 rounds."
+          "5-Second Respawns & No Health Packs: Health packs are removed in Ranked; respawns take 5 seconds with spawn invulnerability restored.",
+          "Tripled (3x) Point Gain & Persistent Combat Tag: Ranked points earn at 3x rate, and combat tags stay active between stocks to prevent disconnect dodging.",
+          "Consumable Lock & Rain Walk Cap: Healing items, food, and Rokakakas are disabled; Catch The Rainbow Rain Walk height/duration is capped in Ranked.",
+          "Universal Evasive: Press X (1 EX Bar, 30s cooldown, 0 burst damage) to break out of hitstun or ragdoll.",
+          "Time Stop & Bug Fixes: Fixed Time Stop failing to freeze opponents, King Crimson frog spawns, Hamon Pluck moves, and Cheap Trick killing NPCs in Ranked."
         ],
         "warning": "Disabling player shadows or using uncapped FPS external injectors that tamper with physics ticks is monitored and subject to competitive matchmaking bans."
       },
@@ -2570,37 +2852,37 @@ export const guides: Guide[] = [
           "rows": [
             [
               "Bronze",
-              "1,000 \u2013 1,199 ELO",
+              "1,000 – 1,199 ELO",
               "Bronze Crest",
               "5,000 Dalas + 1 Lucky Arrow"
             ],
             [
               "Silver",
-              "1,200 \u2013 1,399 ELO",
+              "1,200 – 1,399 ELO",
               "Silver Crest",
               "15,000 Dalas + 2 Lucky Arrows"
             ],
             [
               "Gold",
-              "1,400 \u2013 1,599 ELO",
+              "1,400 – 1,599 ELO",
               "Gold Crest",
               "30,000 Dalas + Bizarre Arrow"
             ],
             [
               "Platinum",
-              "1,600 \u2013 1,749 ELO",
+              "1,600 – 1,749 ELO",
               "Platinum Crest",
               "50,000 Dalas + Platinum Nameplate"
             ],
             [
               "Diamond",
-              "1,750 \u2013 1,849 ELO",
+              "1,750 – 1,849 ELO",
               "Diamond Crest",
               "75,000 Dalas + Glowing Diamond Aura"
             ],
             [
               "Master",
-              "1,850 \u2013 2,099 ELO",
+              "1,850 – 2,099 ELO",
               "Master Crest",
               "Dolly Dagger Stand Chip + Exclusive Ranked Title"
             ],
@@ -2631,10 +2913,11 @@ export const guides: Guide[] = [
         "title": "Ranked Meta Stand Tier Picks & Matchups",
         "content": "In Season 1, mobility, burst punishers, and defensive counters dominate the high-ELO ladder.",
         "steps": [
-          "Crazy Diamond (Z Tier): Immense close-quarters boxing, Restoration Wall terrain control, and Bearing Shot ranged poke.",
-          "Star Platinum & SPTW (Z Tier): Reliable 0.12s parry punishes, Ora Smash guardbreak, and Time Stop combo extensions.",
-          "The Hand (S+ Tier): 20-42 damage Erasure strikes with high limb-removal threat and Erasure Leap gap-closers.",
-          "The Lock (S Tier): Inflicts guilt stacks on aggressive opponents, punishing overzealous barrage spammers with heavy extortion slows."
+          "Star Platinum & SPTW (Z Tier): Reliable 0.12s parry punishes, +15% Nov 22 SPTW damage buff, and Time Stop combo extensions.",
+          "Crazy Diamond (Pinnacle / S+ Tier): Stun-immune Diamond Wall (Nov 24), buffed Uppercut/Shining Kick/Tandem Uppercut damage, and strong close-range boxing.",
+          "The Hand (S+ Tier): Hyperarmor on base Erasure, 30% Bring to Me slow, and limb-erasing palm strikes.",
+          "Bad Company (S Tier Rework): 180-stud Maneuver/Paratroopers, Flanking orbits, 3-charge Landmines, and 2-EX Airstrike zoning.",
+          "Dolly Dagger (S+ Tier): 70% damage reflection via Shed the Blame and 100% ground zone reflection."
         ]
       },
       {
@@ -2788,9 +3071,9 @@ export const guides: Guide[] = [
     "slug": "highway-star-raid",
     "title": "Highway Star Raid Guide: Mechanics, Yuya Boss & Drops",
     "category": "Endgame & Raids",
-    "description": "Complete strategy guide for the Highway Star Raid in STAND OUT. Master tunnel chase mechanics, room traps, Yuya Fungami boss phases, and exclusive drops.",
+    "description": "Complete strategy guide for the Highway Star Raid in STAND OUT. Start via Donatello outside the Museum of Oahu, master the traffic chase and Yuya Fungami fight, and farm the fixed Part 4 Arrow & Highway Star Chip drops.",
     "readingTime": "9 min read",
-    "updatedDate": "2026-11-23",
+    "updatedDate": "2026-11-26",
     "tableOfContents": [
       {
         "id": "entry-reqs",
@@ -2817,12 +3100,12 @@ export const guides: Guide[] = [
       {
         "id": "entry-reqs",
         "title": "Raid Entry & Level Requirements",
-        "content": "The Highway Star Raid is an intense mid-to-endgame instance unlocked at Level 35. Located in the abandoned highway bypass tunnel on the northern edge of Honolulu, players can queue solo or in squads of up to 4 players. Speaking with the Tunnel Lookout NPC opens the difficulty selector between Normal and Hard modes.",
+        "content": "The Highway Star Bizarre Adventure raid is entered by speaking to Donatello in the park outside the Museum of Oahu (using the generic raid lobby system). Bring a vehicle—Stage 2 requires driving into oncoming traffic while Hey Ya! locates Yuya Fungami. Solo and party runs (1–4 players) are supported on Regular and Hard difficulties.",
         "steps": [
-          "Reach Level 35 or higher through storyline progression or bounty farming.",
-          "Travel to the North Bypass Tunnel near the mountain pass.",
-          "Speak with the Tunnel Lookout to open the queue lobby.",
-          "Assemble a squad of 1-4 players (1 frontliner with super armor recommended)."
+          "Visit Donatello in the park outside the Museum of Oahu to open the Raid selector.",
+          "Select Highway Star Raid and choose Regular or Hard difficulty.",
+          "Ensure you have a vehicle ready for the traffic pursuit objective.",
+          "Note: Hard raids carry a 20-minute cooldown on clear (25 minutes for Regular); losing a raid incurs zero cooldown."
         ],
         "tips": [
           "Equip stamina and walkspeed accessories like Enrico's Pants or Stardust Crusader gear to maintain sprint velocity during tunnel obstacles.",
@@ -2832,12 +3115,12 @@ export const guides: Guide[] = [
       {
         "id": "tunnel-chase",
         "title": "Stage 1: High-Speed Tunnel Chase (60 km/h)",
-        "content": "Stage 1 takes place in a crumbling subterranean tunnel where Highway Star's disembodied footsteps pursue the squad at a relentless 60 km/h. Players must sprint while vaulting over crashed sedans, avoiding electrified puddles, and timing evasive dashes when Highway Star marks a squad member with the scent tracker.",
+        "content": "Highway Star consists of three core objectives: (1) Get Highway Star to half HP, (2) Drive into oncoming traffic while Hey Ya! tracks down where the dead Highway Star user is, and (3) Kill Highway Star. Nurse NPCs also spawn inside the raid instance.",
         "steps": [
-          "Sprint continuously along the yellow lane divider line.",
-          "Use Stand Jump (T) or double-dash to clear vehicle blockades.",
-          "If marked with the Scent Tracker icon, veer towards side alcoves to break line-of-sight.",
-          "Reach the blast door safety checkpoint within 90 seconds."
+          "Phase 1: Burst Highway Star down to 50% HP while avoiding Scent Traps and Nutrient Siphon.",
+          "Phase 2: Spawn your vehicle and drive into oncoming traffic while Hey Ya! pinpoints the user's location.",
+          "Phase 3: Finish off Highway Star; remember that killing a raid boss grants an instant full HP heal.",
+          "Tip: Use Universal Evasive (X, 30s CD) if trapped in Footprint Storm."
         ],
         "warning": "Getting caught by the pursuit footsteps inflicts Nutrient Drain, siphoning 25% of your total health and converting it into a boss heal."
       },
@@ -2864,44 +3147,74 @@ export const guides: Guide[] = [
       {
         "id": "loot-table",
         "title": "Drop Rates & Raid Shop Tokens",
-        "content": "Clearing the Highway Star Raid awards Highway Star Tokens and rare drops:",
+        "content": "Clearing the Highway Star Raid awards Coins, EXP, Highway Star Tokens, and item drops. Crucially, the November 22–23 patch fixed a bug where the raid dropped Part 5 Focus Arrows—it now properly drops Mysterious Arrow [Part 4]!",
         "table": {
           "headers": [
-            "Difficulty",
-            "Drop Item",
-            "Drop Chance",
-            "Raid Tokens"
+            "Reward Item",
+            "Regular Difficulty",
+            "Hard Difficulty",
+            "Highway Star Shop"
           ],
           "rows": [
             [
-              "Normal",
+              "Coins (Dalas)",
+              "2,500 – 3,500",
+              "5,000 – 7,000",
+              "—"
+            ],
+            [
+              "EXP",
+              "1,800 – 2,200 (+15% buff)",
+              "4,000 – 5,000",
+              "—"
+            ],
+            [
               "Highway Star Stand Chip",
-              "1.5%",
-              "12-15 Tokens"
+              "Not Listed",
+              "1.0% Drop",
+              "200 Tokens"
             ],
             [
-              "Normal",
-              "Speedster Leather Jacket",
-              "8.0%",
-              "12-15 Tokens"
+              "Mysterious Arrow [Part 4] (Fixed!)",
+              "3.0% Drop",
+              "5.0% Drop",
+              "40 Tokens"
             ],
             [
-              "Hard",
-              "Highway Star Stand Chip",
-              "4.0%",
-              "25-30 Tokens"
+              "Mysterious Arrow",
+              "62% Drop",
+              "86% Drop",
+              "7 Tokens"
             ],
             [
-              "Hard",
-              "Yuya's Traction Frame (Accessory)",
-              "2.5%",
-              "25-30 Tokens"
+              "Lucky Arrow",
+              "16% Drop",
+              "49% Drop",
+              "17 Tokens"
             ],
             [
-              "Hard",
-              "1x Lucky Arrow",
-              "10.0%",
-              "25-30 Tokens"
+              "Bizarre Arrow",
+              "9.6% Drop",
+              "27% Drop",
+              "33 Tokens"
+            ],
+            [
+              "Arrow Part",
+              "x2–4 (80%)",
+              "x3–5 (79%)",
+              "4x for 8 Tokens"
+            ],
+            [
+              "Steel Ingot",
+              "x3–5 (53%)",
+              "Not Listed",
+              "4x for 10 Tokens"
+            ],
+            [
+              "Stone Mask",
+              "Not Listed",
+              "23% Drop",
+              "40 Tokens"
             ]
           ]
         }
@@ -3187,9 +3500,9 @@ export const guides: Guide[] = [
     "slug": "secret-stands",
     "title": "Secret Stands Guide: How to Get Jojosapiens, SPTW, TWAU & Exclusive Kits",
     "category": "Progression",
-    "description": "Unlock every non-arrow secret Stand in STAND OUT. Detailed guides for Jojosapiens research, Star Platinum: The World, TWAU Opal Roka swap, and Dolly Dagger.",
+    "description": "Unlock every non-arrow secret Stand in STAND OUT: Jojosapiens (2 forms, 14 upgrades, regular arrow re-rolls after unlock), SPTW, TWAU, Dolly Dagger, and Heaven's Door Prime.",
     "readingTime": "12 min read",
-    "updatedDate": "2026-11-23",
+    "updatedDate": "2026-11-26",
     "tableOfContents": [
       {
         "id": "overview",
@@ -3225,7 +3538,7 @@ export const guides: Guide[] = [
       {
         "id": "jojosapiens",
         "title": "Jojosapiens: Space Oddity Questline",
-        "content": "Jojosapiens is a special Part 9 cultural Stand that cannot be obtained through arrows. Unlocking it requires the 'Space Oddity' questline initiated with Major Tom behind the grand staircase in the Honolulu Museum of History. You must have unlocked at least 45 unique Stands in your Stand Index before Major Tom will talk to you.",
+        "content": "Jojosapiens is unlocked through Major Tom's Space Oddity questline inside the Museum of Oahu (requires 45 Stands unlocked). Update 1 doubled Data gain to 4 Data per correct Questionnaire answer and 2 Data per full combo (every 8s), powering 2 transformation forms (Imperfect JoJo at 1 EX Bar and Ultimate JoJo at 3 EX Bars / 42 Data) and 14 Survey Upgrades. Once unlocked, Jojosapiens can also be pulled again from regular arrows (Nov 23).",
         "steps": [
           "Index 45+ Stands using arrows and storage chips.",
           "Speak with Major Tom beneath the Museum staircase to accept Space Oddity.",
@@ -3260,7 +3573,7 @@ export const guides: Guide[] = [
       {
         "id": "exclusive-ranked",
         "title": "Ranked & Supporter Stands (Dolly Dagger & HP Prime)",
-        "content": "Two Stands possess the 'Exclusive' rarity tier and cannot be obtained via standard gameplay loops: Dolly Dagger requires reaching 1850+ ELO in the 1v1 Ranked Arena, while Heaven's Door Prime requires Catalog Supporter Rank 7 (50+ lifetime supporter purchases) or top seasonal Raid leaderboard placement."
+        "content": "Two Stands hold the Exclusive tier: Dolly Dagger (unlock at 1,850 ELO in Ranked Mode Beta) and Heaven's Door Prime (unlock via 8,000 Catalog sales/supporters at Rank 7 or Top 3 weekly resets on Raid, Bounty Hunters, Raid Champions, or Fortune leaderboards). As of November 23, players who have already unlocked Heaven's Door Prime can re-obtain it from regular arrows."
       }
     ]
   },

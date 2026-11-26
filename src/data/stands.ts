@@ -391,59 +391,61 @@ export const stands: Stand[] = [
     "moveset": [
       {
         "key": "LMB",
-        "name": "Punching a projectile away",
+        "name": "M1 Light Combo & Bane of Rats",
         "type": "Attack",
-        "cooldown": "9s",
-        "damage": "Combative Strike",
-        "description": "Executes Punching a projectile away dealing decisive Combative Strike with tactical combat utility."
+        "description": "Fast close-range Stand punches (overall SPTW damage raised +15% in Nov 22 balance pass after Update 1 tuning). Use H (Bane of Rats) to collect or punch frozen projectiles."
       },
       {
         "key": "E",
         "name": "Ora Blitz",
-        "type": "Attack",
+        "type": "Barrage",
         "cooldown": "19s",
-        "damage": "Combative Strike",
-        "description": "Send Star Platinum forward in a barrage that carries enemies along. Deflects incoming projectiles. You can punch and use sub-ability skills during the rush, or use it while piloting."
+        "description": "Send Star Platinum forward in a rushing barrage that carries enemies along and deflects incoming projectiles. Usable while piloting."
       },
       {
         "key": "R",
         "name": "Bearing Toss",
         "type": "Attack",
         "cooldown": "9s",
-        "damage": "Combative Strike",
-        "description": "Flick a steel bearing that stuns and knocks enemies back. Headshots knock them down and blur their vision. Reaches up to 250 studs. Can be blocked and used while piloting."
+        "damage": "250-Stud Headshot Knockdown",
+        "description": "Flick a steel bearing up to 250 studs that stuns and knocks back; headshots knock down and blur vision. Blockable and usable while piloting."
       },
       {
         "key": "T",
-        "name": "I’m Wide Open",
-        "type": "Attack",
+        "name": "I'm Wide Open",
+        "type": "Counter",
         "cooldown": "24s",
-        "damage": "Combative Strike",
-        "description": "Counter an attack by appearing behind the attacker, then throw a heavy punch that knocks them down. They can turn and block it. [Time Jump / HOLD: PREVIEW / RELEASE: JUMP: Hold to choose where you’ll appear, then release to jump there instantly. In shift lock, aim with your movement. Ability Scaling"
+        "description": "Counter an attack by appearing behind the attacker and throwing a heavy knockdown punch (defenders can turn and block it)."
       },
       {
         "key": "Y",
+        "name": "Time Jump",
+        "type": "Movement",
+        "description": "Hold to preview and release to teleport instantly up to 64+ studs (scales with Ability), keeping momentum and breaking NPC targeting. Works summoned or dismissed."
+      },
+      {
+        "key": "T (Hold) + E",
         "name": "Campfire",
-        "type": "Attack",
-        "cooldown": "20s",
-        "damage": "Combative Strike",
-        "description": "Build a campfire in front of your Stand. Interact to sit and recover health, even during combat. Its warmth dries you off, but stepping into the flames burns and briefly stuns you. Build on flat ground in front of your Stand. Including while piloting. Interact to rest and recover 3 health each secon"
-      },
-      {
-        "key": "F",
-        "name": "Tandem Rushdown [2 Bars]",
-        "type": "Barrage",
-        "cooldown": "16s",
-        "damage": "Multi-Hit Rapid DMG",
-        "description": "Star Platinum rushes an enemy from the front, barrages them, then slams them into the ground. You can move and attack once it sets off. Aim at an enemy within 40 studs. The rush can be blocked or parried and ends if you are interrupted or the target gets away. Cannot be used while piloting. Costs 2 "
-      },
-      {
-        "key": "G",
-        "name": "Timestop Movement",
         "type": "Awakening / EX",
+        "exCost": "0 Bars",
+        "cooldown": "20s",
+        "description": "Build a 10s campfire (even in combat or while piloting) that restores 3 HP/s when seated and dries wet status; flames burn and stumble anyone stepping inside."
+      },
+      {
+        "key": "T (Hold) + R",
+        "name": "Tandem Rushdown",
+        "type": "Awakening / EX",
+        "exCost": "2 Bars",
         "cooldown": "45s",
-        "damage": "High Impact / EX",
-        "description": "(Moving in opponent’s timestop for a split second and then becoming frozen again.)"
+        "description": "Star Platinum rushes an enemy within 40 studs, barrages, and slams them down while you remain free to move and attack. Blockable and parriable."
+      },
+      {
+        "key": "T (Hold) + T",
+        "name": "Panic Time Stop (Short Tap / Full Hold)",
+        "type": "Awakening / EX",
+        "exCost": "1 Bar (Tap) / 4 Bars (Hold)",
+        "cooldown": "20s (Short) / 60s (Full)",
+        "description": "Tap for a 1-EX instant Time Stop (2s at 1 Ability, 4s at 100 Ability, works dismissed) or hold with Stand out for a 4-EX full Time Stop (3.5s base, 7s at 100 Ability). Both reach 150 studs and can counter/overwrite enemy Time Stops."
       }
     ],
     "abilityScaling": [
@@ -479,7 +481,7 @@ export const stands: Stand[] = [
         "a": "Star Platinum: The World functions primarily as an authentic Offense Stand with dedicated tools for competitive battles."
       }
     ],
-    "verifiedDate": "2026-11-16"
+    "verifiedDate": "2026-11-26"
   },
   {
     "slug": "the-world-alternative-universe",
@@ -620,84 +622,71 @@ export const stands: Stand[] = [
       "farming": "S+"
     },
     "status": "Quest",
-    "obtainMethod": "Awarded upon completing the dedicated research questline from Major Tom and town NPCs.",
+    "obtainMethod": "Unlocked exclusively by completing Major Tom's Space Oddity questline inside the Museum of Oahu (requires 45 unique Stands unlocked). Rewards the Jojosapiens Stand Chip; once unlocked, it can also be re-obtained from regular arrows (Nov 23 update).",
     "lore": "Jojosapiens is a powerful Stand possessed by Rohan / Jojo Historian in Part 9: The JOJOLands.",
     "image": "/images/stands/jojosapiens.webp",
     "combatRole": "Support",
     "passives": [
       {
-        "name": "Unformed State",
-        "description": "Fights initially in unformed state with increased mobility before manifesting full JoJo human form upon answering survey queries."
+        "name": "Unformed State & Two Transformation Forms",
+        "description": "Starts in Unformed state taking +15% incoming damage and returning to Unformed upon death. Transform early via Imperfect JoJo (1 EX Bar, 8s CD: +5% damage, enables Survey Upgrades, continuous EX drain) or permanently until death at 42 Data via Ultimate JoJo (3 EX Bars, 45s CD: +15% damage, +10% speed, activates all 14 Survey Upgrades)."
       },
       {
-        "name": "Survey Knowledge",
-        "description": "Correct questionnaire responses award Data stacks, permanently enhancing skill range and defense."
+        "name": "Doubled Data & 14 Survey Upgrades",
+        "description": "Earn 4 Data per correct Questionnaire answer or 2 Data per full combo every 8s (doubled in Update 1). Every 3 Data grants 1 of 14 Survey Upgrades (up to 14 total; repeated picks upgrade Tiers I→III): Clean Copy, Second Draft, Open Book I-III, Bizarre Strength I-III, Land Survey I-III, Trick Question I-III, Flanking I-III, Cardboard Surveys I-III, Sticky Notes I-III, Rush Order, Blackout I-III, Paper Cut I-III, Carbon Paper I-III, and Paper Planes I-III."
       }
     ],
     "moveset": [
       {
         "key": "LMB",
-        "name": "Unformed",
+        "name": "Unformed / Manifested Combo",
         "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "Until taking human form, fight as JoJosapiens with your unsummonable unformed self behind you and 15% more incoming damage, returning to this form on death."
+        "description": "Fight alongside your unformed self (taking +15% incoming damage) until transforming via Imperfect JoJo or Ultimate JoJo. Full combo awards 2 Data (8s per target CD)."
       },
       {
         "key": "E",
         "name": "Survey Rush",
         "type": "Barrage",
         "cooldown": "9s",
-        "damage": "Multi-Hit Rapid DMG",
-        "description": "Barrage ahead with blockable arcing papers that cover hit player’s screens in survey popups."
+        "description": "Barrage ahead with blockable arcing survey papers that cover hit opponents' screens in survey popups (upgradable with Cardboard Surveys, Sticky Notes, Paper Cut, and Paper Planes)."
       },
       {
         "key": "R",
         "name": "Final Answer",
-        "type": "Attack",
+        "type": "Heavy",
         "cooldown": "11s",
-        "damage": "Combative Strike",
-        "description": "JoJosapiens dashes in and punches the enemy away, breaking their guard and the scenery in its path."
+        "damage": "Guardbreak + Scenery",
+        "description": "Dash forward and punch the target away, breaking guard and scenery (upgradable with Open Book, Bizarre Strength, Land Survey, Trick Question, Flanking, and Blackout)."
       },
       {
         "key": "T",
         "name": "Loose Papers",
-        "type": "Attack",
+        "type": "Utility",
         "cooldown": "6s",
-        "damage": "Combative Strike",
-        "description": "Throw up to two paper bundles for 15 seconds each to trip and knock down the first enemy stepping on them, with anyone able to pick them up and throw them elsewhere."
+        "description": "Throw up to 2 paper bundles lasting 15s each that trip and knock down the first enemy stepping on them (upgradable with Carbon Paper I-III)."
       },
       {
         "key": "Y",
-        "name": "Questionnare (IN COMBAT)",
-        "type": "Attack",
+        "name": "Questionnaire (In Combat)",
+        "type": "Utility",
         "cooldown": "20s",
-        "damage": "Combative Strike",
-        "description": "Answer a combat JoJo question by clicking one of three answers or pressing its skill key within 8 seconds for 2 Data, starting with three skips and recovering one per three correct answers up to three."
+        "description": "Answer a JoJo trivia question within 8s for 4 Data (doubled from 2). Starts with 3 skips, recovering 1 skip per 3 correct answers."
       },
       {
-        "key": "F",
-        "name": "Data",
-        "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "Earn 2 Data per right answer or 1 Data per full combo against the same enemy once every 8 seconds, excluding allies, your summons and practice targets Keep data when dismissing your Stand, but lose it on death or a Stand change."
+        "key": "T (Hold) + E",
+        "name": "Imperfect JoJo (Form 1)",
+        "type": "Awakening / EX",
+        "exCost": "1 Bar",
+        "cooldown": "8s",
+        "description": "Manifest human form early with +5% damage and active Survey Upgrades until continuous EX drain empties your gauge or you cancel."
       },
       {
-        "key": "G",
-        "name": "Survey Upgrades",
-        "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "Every 3 Data grants one of fourteen upgrade picks from three options, strengthening repeated choices, with details on hover under the meter and any unchosen picks randomized upon becoming Ultimate JoJo. (You can have up to 14 Upgrades.)"
-      },
-      {
-        "key": "H",
-        "name": "Existing Upgrades",
-        "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "Clean Copy - Take 10% less damage while manifested. Second Draft - Imperfect JoJo drains EX 30% slower. Open Book I - Final Answer shows you anyone it hits, through walls, for 3 seconds. Open Book II - Final Answer shows you anyone it hits, through walls, for 6 seconds. Open Book III - Final Answer "
+        "key": "T (Hold) + R",
+        "name": "Ultimate JoJo (Form 2)",
+        "type": "Awakening / EX",
+        "exCost": "3 Bars",
+        "cooldown": "45s",
+        "description": "At 42 Data, transform into the Ultimate JoJo Human until death with +15% damage, +10% movement speed, and all 14 Survey Upgrades active simultaneously."
       }
     ],
     "abilityScaling": [
@@ -733,7 +722,7 @@ export const stands: Stand[] = [
         "a": "Jojosapiens functions primarily as an authentic Support Stand with dedicated tools for competitive battles."
       }
     ],
-    "verifiedDate": "2026-11-16"
+    "verifiedDate": "2026-11-26"
   },
   {
     "slug": "november-rain",
@@ -3448,112 +3437,127 @@ export const stands: Stand[] = [
       "farming": "B"
     },
     "status": "Playable",
-    "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 7 focus items.",
-    "lore": "Catch The Rainbow is a powerful Stand possessed by Blackmore in Part 7: Steel Ball Run.",
+    "obtainMethod": "Unlocked in the Arrow pool after completing the main Storyline (cannot be rolled pre-storyline). Obtainable via Mysterious Arrows, Lucky Arrows (34.0% Legendary), or Bizarre Arrows (57.9% Legendary).",
+    "lore": "“I… have the ability to catch the rainbow.” The mask-like Stand of Blackmore grants control over rain, letting him walk on suspended raindrops or slice enemies with razor-sharp water projectiles.",
     "image": "/images/stands/catch-the-rainbow.webp",
     "combatRole": "Zoner",
     "passives": [
       {
-        "name": "Rain Walking/Floating",
-        "description": "Summon your stand, then hold Space for a short moment to begin rising. Release Jump to keep your height and move horizontally. Hold Z to descend. Sprinting makes horizontal floating faster. Landing ends the float; release and press Jump again afte..."
+        "name": "Weather Requirement & Ocarina Rain",
+        "description": "Catch The Rainbow requires fog, natural rain, an active fire hydrant within 30 studs, or rain summoned via Generic Unbranded Ocarina (5 EX Bars, usable with mask off) to activate its Stand abilities."
       },
       {
-        "name": "Hidden Controls",
-        "description": "While floating, E activates Rain Transport. While hidden, aim at an enemy and press M1 for its teleport follow-up. With the mask on, Ctrl launches Body Projectile. Both extra moves are listed in Moves."
+        "name": "Rain Walking / Floating",
+        "description": "Summon your Stand and hold Space briefly to rise; release Jump to maintain altitude and float horizontally (sprint for faster air travel). Hold Z to descend. As of Update 1, walking down to the ground no longer inflicts fall damage, and Rain Walk is capped in Ranked Mode."
+      },
+      {
+        "name": "Hidden Aerial Controls (Rain Transport)",
+        "description": "While floating in Rain Walk, press E to activate Rain Transport and hide inside the rain; aim at an enemy and press M1 for a teleport ambush follow-up. With the mask on, Left Ctrl launches Body Projectile."
       }
     ],
     "moveset": [
       {
         "key": "LMB",
-        "name": "Catch The Rainbow",
+        "name": "M1 Strikes / Frozen Dagger Slashes",
         "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "Catch The Rainbow needs fog, rain, or an active hydrant within 30 studs to be used."
+        "damage": "Buffed Frozen Knife DMG",
+        "description": "Standard light combo; when Frozen Rain EX is active, M1 and M2 are replaced by bleeding frozen dagger slashes with buffed Update 1 damage."
       },
       {
         "key": "E",
-        "name": "Body Projectile",
+        "name": "Weapons Of Rain",
         "type": "Attack",
-        "cooldown": "28s",
-        "damage": "Combative Strike",
-        "description": "Detach your arm and steer it with the camera to grab an enemy. Weapons Of Rain Fire seven water shots that soak enemies on impact. Aim at your target before casting. The rain bursts also apply water to fire and gasoline they hit."
+        "cooldown": "23s",
+        "damage": "7 Water Shots + Soaked",
+        "description": "Fires seven water projectiles toward your aim that apply Soaked on impact and douse fire/gasoline. Hitbox size, range, and projectile speed were buffed in Update 1."
       },
       {
         "key": "R",
         "name": "Motionless Rain",
-        "type": "Attack",
+        "type": "Utility",
         "cooldown": "45s",
-        "damage": "Combative Strike",
-        "description": "Surround yourself with suspended raindrops for projectile defense. Your mask must be on. The raindrops stay around you until used up; wait for them to clear before creating another set."
+        "description": "Surround yourself with suspended raindrops for projectile defense (mask must be worn). Drops remain until consumed; scales +1 extra drop per arm for every 50 Ability points."
       },
       {
         "key": "T",
         "name": "Triple Shot",
         "type": "Attack",
         "cooldown": "27s",
-        "damage": "Ranged Projectile",
-        "description": "Fire three shots toward your mouse."
+        "damage": "3 Ranged Shots",
+        "description": "Fire three razor-sharp raindrops toward your cursor."
       },
       {
         "key": "Y",
         "name": "Rain Catch",
         "type": "Attack",
         "cooldown": "32s",
-        "damage": "Combative Strike",
-        "description": "Leap up and press again in the air to dive, or dive at once while airborne, catching an enemy through ordinary guard and executing a weakened target. Can be perfect blocked."
+        "damage": "Guard-Bypass Dive & Execute",
+        "blockable": false,
+        "parriable": true,
+        "description": "Leap up and press again midair to dive (or dive immediately while airborne), catching an enemy through ordinary guard and executing weakened targets. Update 1 increased aim range, made the dive steerable, and fixed post-grab jitter. Can be perfect blocked."
       },
       {
-        "key": "F",
-        "name": "In air",
+        "key": "Ctrl",
+        "name": "Body Projectile",
         "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "EX Moves [Awakening Moves]"
+        "cooldown": "28s",
+        "damage": "Steerable Arm Grab",
+        "description": "Requires mask worn. Detach your arm and steer it with your camera to grab distant targets."
       },
       {
-        "key": "G",
-        "name": "Frozen Rain [2 Bars]",
+        "key": "T (Hold) + E",
+        "name": "Frozen Rain",
         "type": "Awakening / EX",
+        "exCost": "2 Bars",
         "cooldown": "35s",
-        "damage": "High Impact / EX",
-        "description": "Form a frozen dagger for 20 seconds, replacing your light and heavy attacks with bleeding slashes that can sever a limb."
+        "damage": "20s Bleed Dagger / Limb Sever",
+        "description": "Forms a frozen rain dagger for 20 seconds, replacing light and heavy attacks with high-damage bleeding slashes capable of severing limbs."
+      },
+      {
+        "key": "T (Hold) + R",
+        "name": "Generic Unbranded Ocarina",
+        "type": "Awakening / EX",
+        "exCost": "5 Bars",
+        "cooldown": "90s",
+        "damage": "30s Summoned Rain",
+        "description": "Play Rhapsody of Rain (low D, F, and high D twice) to summon 30 seconds of rainfall on demand, enabling Catch The Rainbow anywhere. Can be played even with your mask off."
       }
     ],
     "abilityScaling": [
-      "Every 20 Ability points increases signature skill effectiveness and duration.",
-      "Ability points scale projectile velocity and hitbox detection radius."
+      "Motionless Rain creates 1 additional defensive drop per arm for every 50 Ability points invested.",
+      "Higher Ability builds enable faster EX generation for Frozen Rain (2 Bars) and Generic Unbranded Ocarina (5 Bars)."
     ],
     "recommendedBuild": {
       "points": {
-        "health": 40,
-        "damage": 55,
-        "ability": 55
+        "health": 80,
+        "damage": 70,
+        "ability": 75
       },
       "subAbility": "Hamon (Caesar Path)",
-      "synergyNotes": "Pair with DIO or Jotaro gear sets for maximum damage scaling and ability cooldown reduction."
+      "synergyNotes": "Caesar Hamon bubbles complement Catch The Rainbow ranged zoning, while 70 Damage boosts Frozen Rain dagger M1s and 75 Ability adds defensive Motionless Rain droplets."
     },
     "pros": [
-      "Authentic JoJo moveset matching official game mechanics",
-      "Strong competitive versatility across PvP and Raid encounters",
-      "Reliable guardbreak options and combo starters"
+      "Generic Unbranded Ocarina lets you summon 30s of rain on demand—even with the mask off",
+      "Rain Walk offers unmatched aerial positioning with zero fall damage when descending",
+      "Steerable Rain Catch bypasses ordinary guard and executes low-HP targets",
+      "Buffed Weapons Of Rain and Frozen Rain M1/M2 damage in Update 1"
     ],
     "cons": [
-      "Requires strict Ability point investment to optimize scaling",
-      "Punishable recovery frames on whiffed heavy finishers",
-      "Dependent on situational spacing and cooldown pacing"
+      "Generic Unbranded Ocarina requires 5 EX Bars and a long 90s cooldown",
+      "Completely reliant on rain, fog, or hydrants within 30 studs when Ocarina is on cooldown",
+      "Cannot be rolled from arrows until the main storyline is beaten"
     ],
     "faqs": [
       {
-        "q": "How do I obtain Catch The Rainbow in STAND OUT?",
-        "a": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 7 focus items."
+        "q": "How does Generic Unbranded Ocarina work on Catch The Rainbow?",
+        "a": "Spend 5 EX Bars (90s cooldown) to play Rhapsody of Rain (low D, F, and high D twice), summoning 30 seconds of rain so you can use your Stand anywhere. Unlike Body Projectile or Motionless Rain, you can play the ocarina with your mask off."
       },
       {
-        "q": "What combat role does Catch The Rainbow fulfill?",
-        "a": "Catch The Rainbow functions primarily as an authentic Zoner Stand with dedicated tools for competitive battles."
+        "q": "Why can't I roll Catch The Rainbow on a new account?",
+        "a": "Catch The Rainbow is one of 7 storyline-locked utility Stands removed from the arrow pool until you complete the main storyline."
       }
     ],
-    "verifiedDate": "2026-11-16"
+    "verifiedDate": "2026-11-26"
   },
   {
     "slug": "silver-chariot",
@@ -5045,8 +5049,7 @@ export const stands: Stand[] = [
       }
     ],
     "verifiedDate": "2026-11-16"
-  }
-,
+  },
   {
     "slug": "kiss",
     "name": "Kiss",
@@ -5185,7 +5188,7 @@ export const stands: Stand[] = [
       "farming": "S"
     },
     "status": "Playable",
-    "obtainMethod": "Unlocked via Catalog Supporter Rank 7 (Heaven\'s Door tier with 50+ supporter milestones) or elite seasonal Raid Leaderboard placement. Not rollable from standard arrows.",
+    "obtainMethod": "Unlocked via Catalog Supporter Rank 7 (Heaven's Door tier at 8,000 sales/supporters) or Top 3 weekly resets on Raid, Bounty Hunters, Raid Champions, or Fortune leaderboards. Once unlocked, Heaven's Door Prime can be re-obtained from regular arrows (Nov 23 update).",
     "lore": "The ascended, ultimate form of Rohan Kishibe's Stand encountered in Hawaii. While physically elegant, it wields absolute authority over human biology and consciousness—transmuting opponents into living manuscripts, inscribing binding commands, and commandeering enemies to fight as obedient pawns.",
     "image": "/images/stands/heavens-door-prime.webp",
     "combatRole": "Disruption",
@@ -5226,7 +5229,7 @@ export const stands: Stand[] = [
         "type": "Heavy",
         "cooldown": "25s",
         "damage": "3s Unblockable Book",
-        "description": "Rush Heaven's Door forward to turn touched enemies into books for 3 full seconds. Completely bypasses both standard blocks and perfect blocks!"
+        "description": "Rush Heaven's Door forward to turn touched enemies into books for 3 full seconds. Bypasses both standard blocks and perfect blocks (Nov 23 fix: no longer instant-kills when snapping a neck)."
       },
       {
         "key": "T (Hold) + E",
@@ -5274,39 +5277,47 @@ export const stands: Stand[] = [
     "faqs": [
       {
         "q": "How do you get Heaven's Door Prime?",
-        "a": "Heaven's Door Prime is an Exclusive Stand. You can unlock its Stand Chip by placing in the Top 3 of the weekly reset on any Raid leaderboard (77 Rings, Train Raid, Highway Star), reaching Top 3 Bounty Hunters, or earning 8,000 supporters through the in-game Catalog."
+        "a": "Unlock its Stand Chip by placing Top 3 at the weekly reset on Raid leaderboards, Bounty Hunters, Raid Champions, or the Fortune leaderboard, or by reaching 8,000 Catalog sales/supporters. Once unlocked on your account, you can also pull it again from regular arrows."
+      },
+      {
+        "q": "Can you get Heaven's Door Prime from arrows?",
+        "a": "Not initially—it is locked behind Exclusive milestones. However, as of the November 23 patch, players who have already unlocked Heaven's Door Prime can re-obtain it from regular arrows."
       },
       {
         "q": "What is the difference between Heaven's Door and Heaven's Door Prime?",
-        "a": "Heaven's Door Prime features faster projectile travel, unblockable Book Rush (G), higher Ability scaling up to 166 SP, and the game-changing Become My Character EX move that mind controls enemies to fight for you."
+        "a": "Heaven's Door Prime features faster Book Transmutation travel, unblockable Book Rush (G), higher Ability scaling up to 166 SP, and Become My Character (4 EX) to mind-control enemies."
       }
     ],
-    "verifiedDate": "2026-11-22"
+    "verifiedDate": "2026-11-26"
   },
   {
     "slug": "crazy-diamond",
     "name": "Crazy Diamond",
     "canonicalUser": "Josuke Higashikata",
     "jojoPart": "Part 4: Diamond is Unbreakable",
-    "rarity": "Exclusive",
+    "rarity": "Pinnacle",
     "tier": {
       "pvp": "S+",
       "raid": "S+",
       "farming": "S"
     },
     "status": "Playable",
-    "obtainMethod": "Awakened from the Arrow Pool using Mysterious Arrows (~0.50% Pinnacle tier chance), Lucky Arrows (~1.50%), or Bizarre Arrows (~4.40%).",
+    "obtainMethod": "Awakened from the Arrow Pool as a Pinnacle Stand: Mysterious Arrows (~0.5% Pinnacle tier), Lucky Arrows (1.5% Pinnacle), or Bizarre Arrows (4.4% Pinnacle). Not obtainable from Part 3 or Part 5 Focus Arrows.",
     "lore": "Josuke Higashikata’s Crazy Diamond can punch a wall to pieces and put it back together. It can mend someone else’s wounds the same way. Josuke can’t use it on himself or bring anyone back from the dead.",
     "image": "/images/stands/crazy-diamond.webp",
     "combatRole": "Support",
     "passives": [
       {
-        "name": "Restoration Mode",
-        "description": "Tap G to heal enemies and allies. A full light combo restores up to 20 health before bonuses; a heavy restores 8. Healing can still stagger or push the target. Enough healing during bleedout gets them back on their feet. Crazy Diamond cannot heal its own user or bring back the dead."
+        "name": "Restoration Mode (G)",
+        "description": "Tap G to heal enemies and allies. A full light combo restores up to 20 health before bonuses; a heavy restores 8. Healing can still stagger or push the target. Enough healing during bleedout gets allies back on their feet. Crazy Diamond cannot heal its own user or bring back the dead."
       },
       {
         "name": "Reconstruction",
-        "description": "Release over damaged scenery or a vehicle to repair it. Broken prop pieces rebuild in front of the user. Aim at a standing wall, staircase or pillar to lower it, and use wall rubble to raise it again."
+        "description": "Release over damaged scenery or a vehicle to repair it. Broken prop pieces rebuild in front of the user, and deconstructed cubes rebuild the original prop or vehicle. Aim at a standing wall, staircase, or pillar to lower it, or use wall rubble to raise it again."
+      },
+      {
+        "name": "Hair Rage (WHAT DID YOU SAY?)",
+        "description": "With 5 EX bars and Crazy Diamond summoned, nearby opponents (within 24 studs) insulting your hair—or activating the 5-EX skill—triggers Rage. Light attacks deal double damage/healing, heavy Stand punches and eligible base moves deal +15% damage, base cooldowns run 20% faster on foot, and Heaven's Door cannot turn you into a book or write new commands."
       }
     ],
     "moveset": [
@@ -5314,109 +5325,132 @@ export const stands: Stand[] = [
         "key": "LMB",
         "name": "Dora Light Combo",
         "type": "Attack",
-        "description": "Four-strike punch combo. In Restoration Mode, heals up to 20 health before bonuses instead of dealing damage."
+        "damage": "4-Hit / 20 HP Heal (Restore)",
+        "description": "Four-strike punch combo. In Restoration Mode, restores up to 20 health before bonuses (8 HP on Heavy) and can revive downed allies during bleedout."
       },
       {
         "key": "E",
         "name": "Dora Barrage",
         "type": "Barrage",
         "cooldown": "23s",
-        "damage": "Heavy Guardbreak",
-        "description": "Punch in quick succession and finish with a guardbreak punch. In Restoration Mode, restores 30 health, or 45 at 151 Ability. During Rage the barrage lasts longer and Crazy Diamond can move while punching."
+        "damage": "Guardbreak Finisher / 30-45 Heal",
+        "blockable": true,
+        "parriable": true,
+        "description": "Punch in quick succession and finish with a guard-breaking blow (final punch can be perfect blocked). In Restoration Mode, restores 30 HP (45 HP at 151 Ability). During Rage, the barrage lasts longer, allows walking, and leaves the enemy's face crooked until respawn."
       },
       {
         "key": "R",
-        "name": "Crazy Uppercut",
+        "name": "Crazy Uppercut / Fixed Donut / Fresh Pair Of Underwear",
         "type": "Heavy",
         "cooldown": "18s",
-        "damage": "Launch / Guardbreak",
-        "description": "Launch the target with a rising punch. In Restoration Mode, becomes Fixed Donut, grabbing the target, healing them 20 to 30 HP, and clearing negative status effects."
+        "damage": "Buffed Launcher / 20-30 Heal",
+        "description": "Launch the target with a rising punch (damage buffed in Update 1). In Restoration Mode, becomes Fixed Donut, grabbing targets, healing 20-30 HP (30 at 151 Ability), and clearing harmful effects. In Rage with Restoration off, becomes Fresh Pair Of Underwear: grabs through block, heals on contact, and triggers a delayed barrage 3 seconds later that scales with health restored (beatdown healing fixed Nov 22)."
       },
       {
         "key": "T",
         "name": "Shining Kick",
         "type": "Attack",
         "cooldown": "28s",
-        "damage": "Knockdown",
-        "description": "Hold to kick farther, then release where aiming. Charging raises the chance of breaking a leg. Automatically tracks airborne targets. Kicking a Diamond Wall shatters it into projectiles."
+        "damage": "Buffed Leg-Break Kick",
+        "description": "Hold to kick farther, increasing leg-break chance; a 1-second hold knocks enemies off their feet (damage buffed in Update 1). Aim at airborne enemies to chase and launch them. Tracks nearby foes during Rage and shatters Diamond Walls into shorter-range shards."
       },
       {
         "key": "Y",
-        "name": "Blood Knife",
-        "type": "Attack",
-        "cooldown": "15s",
-        "damage": "Ranged Slash",
-        "description": "Send a slash of blood forward. Anyone hit bleeds and drops crystalline glass shards that can be used for homing attacks."
+        "name": "Diamond Wall / Bearing Shot (Restore) / Yo Angelo (Rage)",
+        "type": "Utility",
+        "cooldown": "20s (Wall) / 14s (Bearing)",
+        "description": "Barrage the ground to raise an 80-HP protective wall for 6 seconds that blocks projectiles (Nov 24 update: wall creation is NO LONGER cancelled by stun). Enemy punches tip it back; 3 lights topple it, heavies scatter shards, uppercuts rain rocks. With Restoration on, swaps to Bearing Shot (390-stud projectile, +15% headshot damage, tracks Blood Knife marks). With Rage on (Restore off), swaps to Yo Angelo, turning <10% HP or downed targets into throwable rock statues."
       },
       {
-        "key": "F",
-        "name": "Diamond Wall",
-        "type": "Utility",
-        "cooldown": "20s",
-        "description": "Raise a solid protective wall of reconstructed earth and diamond matter to block incoming projectiles and physical charges."
+        "key": "H",
+        "name": "Blood Knife (Restore Variant)",
+        "type": "Attack",
+        "cooldown": "14s",
+        "damage": "80% Str / 20% Abil",
+        "description": "Send a slash of blood forward. Anyone hit by the slash, trail, or splash is marked for 10 seconds, allowing Bearing Shot to fire homing shards after them."
       },
       {
         "key": "G",
         "name": "Toggle Restoration Mode",
         "type": "Utility",
         "cooldown": "1s",
-        "description": "Toggle between combat damage mode and healing restoration mode."
+        "description": "Toggle between offensive combat mode and Restoration healing mode (swapping Diamond Wall for Bearing Shot and Crazy Uppercut for Fixed Donut)."
       },
       {
-        "key": "V",
-        "name": "Fresh Pair Of Underwear",
+        "key": "T (Hold) + E",
+        "name": "Rock Staircase",
         "type": "Awakening / EX",
         "exCost": "1 Bar",
-        "cooldown": "25s",
-        "damage": "Grab & Delayed Barrage",
-        "description": "Grabs through enemy block, heals on contact, and triggers a delayed high-damage barrage 3 seconds later that scales with the amount of health restored."
+        "cooldown": "6s",
+        "description": "Stand still to raise steps launching enemies up and forward; move forward to ride a slanted pillar knocking foes ahead; cast midair to rise on a straight pillar. 3 light hits topple a pillar; heavy sends it flying."
       },
       {
-        "key": "B",
-        "name": "Homing Shards",
+        "key": "T (Hold) + R",
+        "name": "Tandem Uppercut",
         "type": "Awakening / EX",
         "exCost": "2 Bars",
-        "cooldown": "30s",
-        "damage": "Tracking Projectiles",
-        "description": "Hurls blood-infused glass shards that automatically home in on marked enemies, dealing heavy piercing damage."
+        "cooldown": "45s",
+        "damage": "Buffed EX Launcher",
+        "description": "Send Crazy Diamond behind an enemy to uppercut them back toward you for extended combos (damage increased in Update 1)."
+      },
+      {
+        "key": "T (Hold) + T",
+        "name": "Deconstruction",
+        "type": "Awakening / EX",
+        "exCost": "2 Bars",
+        "cooldown": "16s",
+        "description": "Hold to aim and punch a vehicle, prop, or streetlight into a throwable cube; breaks dropped crafted items into ingredients. Restoring a cube beside an enemy coats them in scrap and slows their attacks for 4s. On a motorcycle, vaults you upward and forward while rebuilding."
+      },
+      {
+        "key": "T (Hold) + Y",
+        "name": "WHAT DID YOU SAY?",
+        "type": "Awakening / EX",
+        "exCost": "5 Bars",
+        "cooldown": "12s",
+        "description": "Forces the nearest opponent within 24 studs to insult your hair and triggers Rage Mode (1 EX bar drained every 12s). Doubles light attack damage/healing, boosts heavy Stand punches and eligible base moves by 15%, speeds up base cooldowns by 20% on foot, and grants immunity to Heaven's Door book transmutation."
       }
     ],
     "abilityScaling": [
-      "Ability increases Healing Barrage from 30 up to 45 HP at 151+ Ability.",
-      "Ability increases Fixed Donut healing from 20 up to 30 HP.",
-      "Strength scales Dora Barrage and Shining Kick physical damage."
+      "Ability increases Healing Barrage (Dora Barrage in Restore) from 30 up to 45 HP at 151 Ability.",
+      "Ability increases Crazy Uppercut / Fixed Donut healing from 20 up to 30 HP at 151 Ability.",
+      "Blood Knife and Bearing Shot scale 80% with Strength and 20% with Ability.",
+      "Dora Barrage, Crazy Uppercut, Shining Kick, and Diamond Wall damage scale with Strength."
     ],
     "recommendedBuild": {
       "points": {
-        "health": 120,
-        "damage": 55,
+        "health": 100,
+        "damage": 75,
         "ability": 50
       },
       "subAbility": "Zeppeli Hamon",
-      "synergyNotes": "Zeppeli Hamon enhances Crazy Diamond melee combos and defense while allowing strong emergency heals."
+      "synergyNotes": "100 Health maximizes survival (since Crazy Diamond cannot heal itself), 75 Damage amplifies Dora Barrage, Uppercut, and Shining Kick buffs, and 50 Ability boosts Blood Knife/Bearing Shot and healing scaling."
     },
     "pros": [
-      "Best hybrid healer and brawler in the game",
-      "Capable of reviving teammates during bleedout",
-      "Can deconstruct and repair walls and vehicles in PvP and Raids",
-      "True unblockable EX grab with Fresh Pair Of Underwear"
+      "Unmatched hybrid team healer and close-range Pinnacle brawler",
+      "Diamond Wall creation is no longer cancelled by stun (Nov 24 buff)",
+      "Can revive allies during bleedout and repair vehicles/scenery via Reconstruction",
+      "Rage Mode doubles light damage/healing and blocks Heaven's Door transmutation"
     ],
     "cons": [
-      "Cannot heal oneself with Restoration Mode",
-      "High cooldowns on Dora Barrage (23s) and Shining Kick (28s)",
-      "Restoration Mode requires active management to avoid accidentally healing enemies in combat"
+      "Cannot heal its own user with Restoration Mode",
+      "Toggling Restoration swaps out Diamond Wall for Bearing Shot",
+      "Rage drains 1 EX bar every 12 seconds and requires full 5 EX bars to start"
     ],
     "faqs": [
       {
-        "q": "How do you revive players with Crazy Diamond?",
-        "a": "Toggle Restoration Mode with G and hit a downed ally who is bleeding out with light attacks or Dora Barrage. Restoring enough health gets them back on their feet."
+        "q": "Is Crazy Diamond Pinnacle or Exclusive rarity?",
+        "a": "Crazy Diamond is officially Pinnacle rarity (listed under Stands (Arrow) on the official Trello). It is rolled from Mysterious (0.5%), Lucky (1.5%), and Bizarre (4.4%) Arrows—not Exclusive."
       },
       {
-        "q": "Can Crazy Diamond repair vehicles?",
-        "a": "Yes, Crazy Diamond Reconstruction passive allows Josuke to repair cars and environmental objects by aiming and releasing over damaged machinery."
+        "q": "Can Diamond Wall be interrupted anymore?",
+        "a": "No. The November 24, 2026 patch updated Crazy Diamond so Diamond Wall creation is no longer cancelled by stun."
+      },
+      {
+        "q": "How do you revive players with Crazy Diamond?",
+        "a": "Toggle Restoration Mode with G and hit a downed ally who is bleeding out using light attacks or Dora Barrage to bring them back onto their feet."
       }
     ],
-    "verifiedDate": "2026-11-23"
+    "verifiedDate": "2026-11-26"
   },
   {
     "slug": "the-hand",
@@ -5466,7 +5500,7 @@ export const stands: Stand[] = [
         "type": "Heavy",
         "cooldown": "22s",
         "damage": "20–42 Erasure Damage",
-        "description": "Suck nearby enemies into your erasure, then swipe with The Hand’s right palm. Deals 20-42 damage, breaks guard, stuns for 0.75s, and destroys terrain and walls."
+        "description": "Suck nearby enemies into your erasure, then swipe with The Hand’s right palm. Deals 20-42 damage, breaks guard, stuns for 0.75s, destroys terrain and walls, and grants hyperarmor from windup through the swipe (Update 1)."
       },
       {
         "key": "T",
@@ -5498,7 +5532,7 @@ export const stands: Stand[] = [
         "exCost": "1 Bar",
         "cooldown": "20s",
         "damage": "4-12 Damage",
-        "description": "Erase space to pull enemies from up to 87 studs into punching range. Marked enemies move 20% slower and are stunned for 0.3s."
+        "description": "Erase space to pull enemies from up to 87.36 studs into punching range. Marked enemies move 30% slower (buffed from 20% in Update 1) and are stunned for 0.3s. Can also catch one loose throwable."
       },
       {
         "key": "B",
@@ -5554,7 +5588,7 @@ export const stands: Stand[] = [
         "a": "Erasure, Erasure Leap, Bring to Me, and Rib Breaker each roll a 10% chance to sever an arm and 5% chance to sever a leg."
       }
     ],
-    "verifiedDate": "2026-11-23"
+    "verifiedDate": "2026-11-26"
   },
   {
     "slug": "bad-company",
@@ -5568,118 +5602,159 @@ export const stands: Stand[] = [
       "farming": "S"
     },
     "status": "Playable",
-    "obtainMethod": "Awakened from the Arrow Pool using Mysterious Arrows (~1.5% Mythical tier chance), Lucky Arrows (~4.5%), or Bizarre Arrows (~12%).",
+    "obtainMethod": "Awakened from the Arrow Pool using Mysterious Arrows (~5.0% Mythical tier chance), Lucky Arrows (22.1% Mythical), or Bizarre Arrows (37.7% Mythical). Part 3 and Part 5 Focus Arrows cannot pull Part 4 Stands.",
     "lore": "Keicho Nijimura commands Bad Company, a miniature army of riflemen, Green Berets, tanks and attack helicopters. Their weapons fire live rounds.",
     "image": "/images/stands/bad-company.webp",
     "combatRole": "Zoner",
     "passives": [
       {
-        "name": "Military Might",
-        "description": "Starts with 14 Military Might: 3 Infantry units (2 Might each), 1 Green Beret unit (2 Might), 1 Tank (3 Might), and 1 Attack Helicopter (3 Might). Units destroyed by enemies take 25 seconds to replenish unless dismissed manually."
+        "name": "Military Might (14-Point Budget & Per-Unit Cooldowns)",
+        "description": "You deploy with 3 Infantry (2 Might each), 1 Green Beret (2 Might), 1 Tank (3 Might), and 1 Attack Helicopter (3 Might), consuming all 14 Military Might. Recalling a unit frees its Might immediately. Destroyed units lock their Might on per-type replacement timers: Infantry 10s, Green Berets 16s, Tanks 25s, and Helicopters 30s."
       },
       {
-        "name": "Squad Specialization",
-        "description": "Tanks take 50% reduced projectile damage and fire cannon shells. Helicopters alternate between gunfire and rockets. Green Berets remain stealthed until within 10 studs, ambushing and stabbing for 4 seconds."
+        "name": "Unit Health & Armor Rules (Nov 24 Rework)",
+        "description": "Following the November 24 rework, unit health pools were reduced across the board: Infantry 10 HP (was 30), Green Berets 5 HP (was 24), Tanks 45 HP (was 60), and Helicopters 15 HP (was 36). Tanks take 50% reduced projectile damage and fire perfect-blockable guardbreaking shells with a flash warning; Helicopters fly lower, take bonus projectile damage, and fire blockable missiles with a flash warning."
+      },
+      {
+        "name": "Green Beret Ambush & Pilot Mobility",
+        "description": "Green Berets stay hidden while piloted; approaching within 10 studs of an enemy makes them leap onto the target for up to 4s of stabbing (1.6 dmg/hit), expending the unit. Enemies can dash twice to throw off attached Green Berets. Piloted Infantry and Green Berets move +50% faster, and piloted Helicopters move +100% faster (2x speed)."
+      },
+      {
+        "name": "Reworked Alt Colors & HUD Layout",
+        "description": "All unit alternate color skins were completely redesigned on November 24 into Urban, Special Forces, and Desert palettes. The Bad Company unit menu can also be repositioned freely via the in-game HUD layout editor."
       }
     ],
     "moveset": [
       {
         "key": "LMB",
-        "name": "Infantry Volley",
+        "name": "Squad Volley / Pilot Attack Order",
         "type": "Attack",
-        "damage": "Bullet Flurry",
-        "description": "Commands stationed infantry riflemen to fire concentrated bursts of live ammunition."
+        "damage": "0.5 Rifle / 0.33 Heli Burst",
+        "description": "Aim at an enemy and click M1 while piloting to order piloted units to attack. During your own player M1 swings, active units fire at half rate."
+      },
+      {
+        "key": "G",
+        "name": "Unit Type / Select All (Hold)",
+        "type": "Utility",
+        "cooldown": "1s",
+        "description": "Tap G to cycle through deployed unit types; the selected type deals +25% bonus damage. Hold G to select the entire army for unified movement or recall (no type bonus)."
+      },
+      {
+        "key": "Ctrl",
+        "name": "Pilot Mode (3x Range)",
+        "type": "Movement",
+        "description": "Press Left Ctrl to directly pilot selected units at 3x pre-rework Pilot Range. Select Helicopters to fly (+100% speed), or Infantry/Green Berets (+50% speed). With All Units selected, you can lead up to 3 units simultaneously."
       },
       {
         "key": "E",
         "name": "Focus Fire",
         "type": "Attack",
-        "cooldown": "10s",
-        "damage": "Ability Scaling",
-        "description": "Mark an enemy for 6 seconds. All riflemen, tanks, and helicopters in range immediately open fire on the marked target. Damage scales 100% with Ability."
+        "cooldown": "15s",
+        "damage": "100% Ability Scaling (1.75x at 166)",
+        "description": "Mark an enemy for 6 seconds so Infantry, Tanks, and Helicopters open fire as soon as the target enters range. Tap again to switch targets. Ends immediately if you cast a Sub-Ability move; cooldown increased from 10s to 15s in Update 1."
       },
       {
         "key": "R",
-        "name": "Maneuver",
+        "name": "Maneuver / Recall (Hold)",
         "type": "Movement",
         "cooldown": "1s",
-        "description": "Send the selected unit squad to hold a tactical perimeter up to 60 studs away."
+        "description": "Tap to send selected units to hold a position up to 180 studs away (tripled from 60 studs). Hold to call back selected units that are holding a spot or flanking (merged former ATTENTIONNN skill). Units you are piloting stay with you."
       },
       {
         "key": "T",
-        "name": "ATTENTIONNN",
-        "type": "Utility",
-        "cooldown": "1s",
-        "description": "Call all deployed units back to Keicho immediate side."
+        "name": "Flanking",
+        "type": "Attack",
+        "cooldown": "3s",
+        "damage": "50% Ability Bonus",
+        "description": "Select one specific unit type and cast on an enemy to make those units circle the target at close range until toggled again. Flanking units fire during Focus Fire or piloted M1 commands. Piloting a flanking type locks your camera onto it as it orbits. Cannot be used with All Units selected."
       },
       {
         "key": "Y",
+        "name": "Landmine",
+        "type": "Utility",
+        "cooldown": "2s",
+        "damage": "100% Ability Scaling",
+        "description": "Plant an armed mine a step in front of you or beneath your piloted unit (3 charges max). Detonates on contact, knocking down and throwing nearby enemies away. Triggered mines recharge in 22s; expired mines recharge in 1s."
+      },
+      {
+        "key": "T (Hold) + E",
         "name": "Paratroopers",
-        "type": "Utility",
-        "cooldown": "18s",
-        "description": "Drop five riflemen by parachute where aiming, creating a fresh Infantry unit (requires 2 open Military Might)."
+        "type": "Awakening / EX",
+        "exCost": "1 Bar",
+        "cooldown": "21s",
+        "description": "Deploy a unit of the selected type anywhere up to 180 studs away (requires an open slot and Military Might). Infantry and Green Berets parachute in, Tanks drop under a heavy parachute, and Helicopters fly down. Drops Infantry if All Units are selected."
       },
       {
-        "key": "G",
-        "name": "Unit Type / Select All",
-        "type": "Utility",
-        "cooldown": "1s",
-        "description": "Tap G to cycle through active unit types; selected type gains +25% bonus damage. Hold G to select the entire army at once."
-      },
-      {
-        "key": "V",
-        "name": "Full Scale Warfare",
+        "key": "T (Hold) + R",
+        "name": "Airstrike",
         "type": "Awakening / EX",
         "exCost": "2 Bars",
-        "cooldown": "48s",
-        "damage": "All-Out Barrage",
-        "description": "Instantly calls in military reinforcements to fill every empty squad slot in the army for 6 seconds."
+        "cooldown": "32s",
+        "damage": "Guardbreak (100% Ability)",
+        "blockable": false,
+        "parriable": true,
+        "description": "A fighter jet dives in from behind and flies to your cursor within pilot range, dropping three missiles in sequence. Each blast breaks guard, can be perfect blocked, and scales 100% with Ability."
       },
       {
-        "key": "B",
-        "name": "Atomic Strike",
+        "key": "T (Hold) + T",
+        "name": "Full Scale Warfare",
         "type": "Awakening / EX",
         "exCost": "3 Bars",
+        "cooldown": "48s",
+        "damage": "All-Out Reinforcements",
+        "description": "Summons temporary reinforcements to fill every empty slot in your army for 6 seconds. Units holding a position fall back to you."
+      },
+      {
+        "key": "T (Hold) + Y",
+        "name": "Atomic Strike",
+        "type": "Awakening / EX",
+        "exCost": "4 Bars",
         "cooldown": "75s",
-        "damage": "Massive Explosive / Burn",
-        "description": "Launches a tactical silo missile. You have 3 seconds to aim the descending warhead, dealing massive AOE damage and setting survivors on fire. Scales 100% with Ability."
+        "damage": "42 Base + Burn (100% Ability)",
+        "description": "Launches a silo warhead with a 3-second aiming window. Strikes enemies within 14 studs of impact and sets survivors on fire. Scales 100% with Ability."
       }
     ],
     "abilityScaling": [
-      "Focus Fire damage scales 100% with Ability points.",
-      "Atomic Strike explosion radius and burn damage scale 100% with Ability points."
+      "Focus Fire scales 100% with Ability (up to 1.75x base damage at 166 Ability).",
+      "Landmine and Airstrike blasts scale 100% with Ability.",
+      "Atomic Strike impact damage and burn damage scale 100% with Ability.",
+      "Flanking gains half the normal Ability damage bonus."
     ],
     "recommendedBuild": {
       "points": {
-        "health": 100,
-        "damage": 25,
+        "health": 85,
+        "damage": 40,
         "ability": 100
       },
       "subAbility": "Caesar Hamon",
-      "synergyNotes": "Heavy Ability investment maximizes Focus Fire and Atomic Strike damage, while Caesar Hamon bubbles keep melee brawlers away."
+      "synergyNotes": "Prioritize Ability to maximize Focus Fire, Landmine, Airstrike, and Atomic Strike damage while maintaining enough Health (85+) to survive rushes if your fragile post-rework squads are wiped."
     },
     "pros": [
-      "Unmatched battlefield zoning and constant suppressing fire",
-      "Autonomous units can hold choke points and defend objectives",
-      "Tanks absorb incoming projectiles",
-      "Atomic Strike deals massive area-of-effect damage in team fights and raids"
+      "Tripled pilot range and 180-stud Maneuver/Paratroopers enable massive map control",
+      "New Flanking and 3-charge Landmine tools create inescapable close-range zoning traps",
+      "2-EX Airstrike provides fast guardbreaking pressure from safe distance",
+      "Piloted Helicopters move 2x faster and Infantry/Green Berets move 50% faster"
     ],
     "cons": [
-      "Destroyed squads incur a 25s replacement penalty",
-      "Low direct melee personal defense without troops stationed nearby",
-      "Requires high Ability stat to deal optimal damage"
+      "Drastically reduced unit HP (Infantry 10, Green Berets 5, Helicopters 15) makes units easy to wipe with AoE",
+      "Destroyed Tanks (25s) and Helicopters (30s) lock Military Might for long periods if not recalled manually",
+      "Focus Fire has a 15s cooldown and cancels immediately upon using a Sub-Ability move"
     ],
     "faqs": [
       {
-        "q": "How does Military Might work?",
-        "a": "You have a cap of 14 Might. Infantry and Green Berets cost 2, while Tanks and Helicopters cost 3. When a unit dies, its Might is locked for 25 seconds."
+        "q": "What changed in the November 24 Bad Company Rework?",
+        "a": "Pilot range tripled, Maneuver reach increased from 60 to 180 studs (absorbing ATTENTIONNN as its hold action), Flanking and Landmine were added as base moves, Airstrike (2 EX) was added, Paratroopers moved to 1 EX and can drop any unit type, unit HP was heavily nerfed across all units with per-type replacement cooldowns (10/16/25/30s), piloted speeds increased, and Urban/Special Forces/Desert skins were completely redone."
       },
       {
-        "q": "Can you pilot units directly?",
-        "a": "Yes, pressing Ctrl allows you to directly lead selected units, including flying helicopters and ambushing with Green Berets."
+        "q": "How do you recall Bad Company units after the rework?",
+        "a": "ATTENTIONNN is no longer a separate keybind. Hold the Maneuver key (R) to recall selected units that are holding a position or flanking back to your side."
+      },
+      {
+        "q": "How do you counter Bad Company in PvP?",
+        "a": "Snipe low-HP Helicopters (15 HP) and Infantry (10 HP) with projectiles to lock their Military Might for 10-30s, dash twice to shake off Green Berets, perfect block Tank shells and Airstrike missiles on their flash warning, and break Focus Fire line of sight."
       }
     ],
-    "verifiedDate": "2026-11-23"
+    "verifiedDate": "2026-11-26"
   },
   {
     "slug": "the-lock",
@@ -5699,12 +5774,12 @@ export const stands: Stand[] = [
     "combatRole": "Disruption",
     "passives": [
       {
-        "name": "Heart Attack (Guilt Scaling)",
-        "description": "Opponents who damage Tamami or hit his traps accumulate Guilt points. As Guilt accumulates, a massive physical brass padlock appears and grows on the target chest, reducing their move speed, jump height, and posture recovery."
+        "name": "Weight of Guilt & Crushing Guilt",
+        "description": "Lock gauntlets deal +20% light and +12% heavy damage with +12% reach. Taking direct damage from the same enemy (8 initial / 16 after Nov 22 hotfix) places a padlock on them. The lock grows at 30, 50, 80, and 100 Guilt, slowing them and reflecting incoming hit damage back at them. At 100 Guilt, Crushing Guilt disables their dash and fills over 25s (60s for bosses), triggering a 1.3s stun and breaking the lock (hotfixed from instant collapse)."
       },
       {
         "name": "Pardon & Decay",
-        "description": "Aim at a wearer within 35 studs and press G to pardon them. When hitting a locked target, light punches remove 2 Guilt and heavies remove 8. Out of combat, Guilt decays at 9 points/sec after 13 seconds."
+        "description": "Aim at a wearer within 35 studs and press G to pardon them. Hitting a locked target removes 2 Guilt on light punches, 8 on heavies, and 4-8 on other hits. Out of combat for 13s, Guilt decays at 9/sec."
       }
     ],
     "moveset": [
@@ -5712,58 +5787,89 @@ export const stands: Stand[] = [
         "key": "LMB",
         "name": "Gauntlet Strikes",
         "type": "Attack",
-        "damage": "Blunt Strikes",
-        "description": "Light punches that wear down enemy posture while reducing their Guilt points on hit."
+        "damage": "+20% LMB / +12% RMB",
+        "description": "Heavy brass gauntlet punches with 12% extended reach that reduce target Guilt on hit."
       },
       {
         "key": "E",
-        "name": "Tense Up",
-        "type": "Counter",
-        "cooldown": "10s",
-        "description": "Cower in fear for 0.85s. Catching a direct hit negates all damage and flings Tamami backward. The attacker gains Guilt equal to the damage negated (min. 10). Successful counter halves cooldown."
+        "name": "Iron Lock Barrage",
+        "type": "Barrage",
+        "cooldown": "16s",
+        "damage": "70% Str / 30% Abil",
+        "description": "Rapidly barrage forward with hand locks, lunging on the final punch to knock the target away."
       },
       {
         "key": "R",
-        "name": "Lock Toss",
+        "name": "Lock Spin",
         "type": "Heavy",
+        "cooldown": "10s",
+        "damage": "Directional Knockback",
+        "description": "Wind up and swing both locks around you, launching enemies in the direction you are facing."
+      },
+      {
+        "key": "T",
+        "name": "Sob Story",
+        "type": "Utility",
+        "cooldown": "14s",
+        "damage": "+15 Guilt (Unblockable)",
+        "description": "Tell a sad story to stagger enemies within 30 studs even through block, inflicting +15 Guilt to every enemy hit."
+      },
+      {
+        "key": "Y",
+        "name": "Guilt Trip",
+        "type": "Counter",
+        "cooldown": "10s",
+        "description": "Tense up in fear for 0.85s. Catching a direct hit negates all damage, launches Tamami backward, halves cooldown, and inflicts Guilt equal to the damage negated (minimum 10). Whiffing leaves you open for 0.22s."
+      },
+      {
+        "key": "F",
+        "name": "Lock Toss",
+        "type": "Attack",
         "cooldown": "12s",
         "damage": "Ragdoll & Concussion",
         "description": "Lift a giant padlock overhead and throw it forward. Direct hits knock back, ragdoll, and concuss the target."
       },
       {
-        "key": "T",
-        "name": "Schrodinger Cat",
+        "key": "G",
+        "name": "Pardon",
         "type": "Utility",
-        "exCost": "1 Bar",
-        "cooldown": "20s",
-        "description": "Set down a cardboard box trap for up to 2 minutes. The first enemy to damage or drive over it instantly gains 50 Guilt."
+        "cooldown": "1s",
+        "description": "Aim at a lock wearer within 35 studs and press G to open their lock. Putting your gauntlets away opens all active locks."
       },
       {
-        "key": "Y",
+        "key": "T (Hold) + E",
+        "name": "Schrodinger's Cat",
+        "type": "Awakening / EX",
+        "exCost": "1 Bar",
+        "cooldown": "20s",
+        "description": "Place a box lasting 2 minutes. The first enemy to damage or drive over it instantly gains 50 Guilt."
+      },
+      {
+        "key": "T (Hold) + R",
         "name": "Settlement",
         "type": "Awakening / EX",
         "exCost": "1 Bar",
         "cooldown": "24s",
-        "damage": "Dalas Extortion",
-        "description": "Force a locked target to pay 20 Dalas per lock tier (up to 100 Dalas). Once paid, the lock is removed and Guilt resets to 0."
+        "damage": "20-100 Dalas",
+        "description": "Force a locked target to pay 20 Dalas per lock size (up to 100), removing their lock and resetting Guilt to 0."
       },
       {
-        "key": "V",
+        "key": "T (Hold) + T",
         "name": "Heavy Conscience",
         "type": "Awakening / EX",
         "exCost": "2 Bars",
         "cooldown": "20s",
-        "damage": "Ground Slam",
-        "description": "Point forward to violently slam any enemy wearing a lock into the ground. Holds targets down for 1 to 3 seconds depending on lock size."
+        "damage": "Slam & 1-3s Hold",
+        "description": "Slam any locked enemy into the ground for 1s to 3s (+0.5s and +6 damage per lock size). Perfect block stops the slam."
       },
       {
-        "key": "B",
+        "key": "T (Hold) + Y",
         "name": "Lock and Roll",
         "type": "Awakening / EX",
         "exCost": "2 Bars",
         "cooldown": "25s",
-        "damage": "Pin & Stun",
-        "description": "At 30+ Guilt, pin the wearer to a nearby wall, lamp post, or vehicle for 3.5s to 10s. Allows Tamami to drive away with them attached."
+        "damage": "3.5-14s Pin",
+        "description": "At 30+ Guilt, pin the target to a nearby prop, lamp post, or vehicle for 3.5s per lock tier (scales with Ability) while halting Guilt decay. You can drive away with them pinned."
       }
     ],
     "abilityScaling": [
@@ -5800,7 +5906,7 @@ export const stands: Stand[] = [
         "a": "Settlement extorts 20 to 100 Dalas from a locked enemy, resetting their Guilt while putting coins directly into your pocket."
       }
     ],
-    "verifiedDate": "2026-11-23"
+    "verifiedDate": "2026-11-26"
   },
   {
     "slug": "cheap-trick",
@@ -6029,9 +6135,8 @@ export const stands: Stand[] = [
       }
     ],
     "verifiedDate": "2026-11-23"
-  }
-,
-{
+  },
+  {
     "slug": "cat-size",
     "name": "Cat Size",
     "canonicalUser": "Wild Cats",

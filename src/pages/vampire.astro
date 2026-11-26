@@ -70,9 +70,9 @@ import Layout from '../layouts/Layout.astro';
     <!-- Core Vampire Mechanics -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
       <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-        <h3 class="font-bold text-sm text-slate-900 mb-2">Nocturnal Regeneration &amp; Blood Gauge</h3>
+        <h3 class="font-bold text-sm text-slate-900 mb-2">Nocturnal Regeneration, Blood Gauge &amp; Execution</h3>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Vampires possess a unique <strong>Blood Meter</strong> that fills by landing physical strikes or executing Blood Drain. When filled, your passive regeneration restores HP up to 3x faster than normal players.
+          Vampires possess a <strong>Blood Reserve</strong> (scales up to 250 with Ability) that fills via Blood Drain or combat hits. Regenerate 20% faster with blood (20% slower without it; PvP recovery requires blood). As of Update 1, Vampires can drain blood from downed enemies to <strong>execute them</strong> and prevent Mandom/Crazy Diamond revives.
         </p>
       </div>
 
@@ -107,25 +107,25 @@ import Layout from '../layouts/Layout.astro';
         <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
           <div class="flex items-center justify-between text-xs">
             <span class="font-bold text-slate-900">Space Ripper Stingy Eyes</span>
-            <span class="font-mono text-emerald-700 font-bold">28 DMG • 18s CD</span>
+            <span class="font-mono text-emerald-700 font-bold">2 HP Cost • 12s CD</span>
           </div>
-          <p class="text-xs text-slate-600 mt-1">High-pressure pressurized fluid lasers shot from pupils. Slices through guards.</p>
+          <p class="text-xs text-slate-600 mt-1">Sweep pressurized fluid lasers across enemies and breakable cover (+10% range buff). Stuns cannot stop the cast; deals bonus headshot damage (unavailable while piloting).</p>
         </div>
 
         <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
           <div class="flex items-center justify-between text-xs">
-            <span class="font-bold text-slate-900">Vaporizing Freeze</span>
-            <span class="font-mono text-emerald-700 font-bold">Freeze Status • 14s CD</span>
+            <span class="font-bold text-slate-900">Vaporatization Freezing Technique</span>
+            <span class="font-mono text-emerald-700 font-bold">3s Freeze • 18s CD</span>
           </div>
-          <p class="text-xs text-slate-600 mt-1">Freezes body moisture on contact, locking opponents in solid ice for 2.5 seconds.</p>
+          <p class="text-xs text-slate-600 mt-1">Freezes an enemy solid for 3 seconds (freeze trigger fixed in Update 1). A heavy blow shatters the ice for +25 extra damage; light hits keep the ice intact and heat melts it.</p>
         </div>
 
         <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
           <div class="flex items-center justify-between text-xs">
             <span class="font-bold text-slate-900">Blood Drain</span>
-            <span class="font-mono text-emerald-700 font-bold">Life Steal • 12s CD</span>
+            <span class="font-mono text-emerald-700 font-bold">Life Steal &amp; Execute • 18s CD</span>
           </div>
-          <p class="text-xs text-slate-600 mt-1">Grabs target by the neck, siphoning 30 HP and refilling your entire Blood Gauge.</p>
+          <p class="text-xs text-slate-600 mt-1">Rush forward to grab and drain blood, refilling your Blood Reserve and healing before throwing left. Can drain downed enemies to execute them and block Mandom/Crazy Diamond revives.</p>
         </div>
       </div>
     </section>

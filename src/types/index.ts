@@ -58,7 +58,7 @@ export interface Stand {
 export interface Code {
   code: string;
   reward: string;
-  status: 'Active' | 'May Be Expired' | 'Expired';
+  status: 'Active' | 'Unverified' | 'May Be Expired' | 'Expired';
   isNewServerOnly: boolean;
   addedDate: string;
   lastCheckedDate?: string;
