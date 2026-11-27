@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdNative from '../components/ads/AdNative.astro';
 import { siteConfig } from '../data/site';
 
 ---
@@ -27,6 +29,8 @@ import { siteConfig } from '../data/site';
         Many players look for the developer Trello to check raw card notes, move cooldowns, and agricultural formulas for Studio Umbra's <strong>STAND OUT</strong>. This guide explains how the board is structured and directs you to our verified, searchable Wiki pages.
       </p>
     </div>
+
+    <AdTopBanner narrow={true} pageType="narrowGuide" className="mb-8 mt-0" />
 
     <!-- Quick Navigation Hub -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12">
@@ -60,6 +64,8 @@ import { siteConfig } from '../data/site';
           While the board contains over 800 cards across 34 categories, raw cards are often fragmented, split across multiple attachments (such as King Crimson being split into separate Doppio and Boss cards), or contain temporary developer shorthand. Our Wiki compiles this raw information into structured, interactive pages with calculators, search filters, and side-by-side comparisons.
         </p>
       </section>
+
+      <AdNative pageType="narrowGuide" className="my-6" />
 
       <!-- Section 2 -->
       <section class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">

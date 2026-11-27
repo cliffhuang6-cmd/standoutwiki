@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import AdTopBanner from '../../components/ads/AdTopBanner.astro';
+import AdNative from '../../components/ads/AdNative.astro';
 import { guides } from '../../data/guides';
 
 const categories = ['All', 'Starter', 'Combat & Moves', 'Progression', 'Endgame & Raids', 'Economy'];
@@ -30,8 +32,10 @@ const categories = ['All', 'Starter', 'Combat & Moves', 'Progression', 'Endgame 
       </p>
     </div>
 
+    <AdTopBanner pageType="hub" className="mb-10 mt-0" />
+
     <!-- Guides Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
       {guides.map((g) => (
         <a
           href={`/guides/${g.slug}/`}
@@ -61,6 +65,8 @@ const categories = ['All', 'Starter', 'Combat & Moves', 'Progression', 'Endgame 
         </a>
       ))}
     </div>
+
+    <AdNative pageType="hub" className="my-8" />
 
   </div>
 </Layout>

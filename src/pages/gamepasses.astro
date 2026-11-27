@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdSidebar from '../components/ads/AdSidebar.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 const gamepasses = [
   {
@@ -59,7 +62,9 @@ const devProducts = [
   schemaType="Article"
   dateModified="2026-11-26"
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-9 min-w-0">
     <div class="mb-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
         <span>Monetization &amp; Economy</span>
@@ -75,6 +80,8 @@ const devProducts = [
         Studio Umbra designed Roblox <strong>STAND OUT</strong> to be 100% playable free-to-play—there is no paid access. Below are all <strong>6 permanent Gamepasses</strong> and <strong>Developer Products</strong> with verified Trello and Roblox Store prices, including the new <strong>Free Builder unlock path</strong> introduced in Update 1.
       </p>
     </div>
+
+    <AdTopBanner narrow={true} pageType="narrowGuide" className="mb-8 mt-0" />
 
     <!-- Free Builder Path Callout -->
     <div class="mb-10 p-6 rounded-2xl bg-violet-50 border border-violet-200 text-violet-950">
@@ -145,12 +152,20 @@ const devProducts = [
       </div>
     </div>
 
+    <AdNative pageType="narrowGuide" className="my-8" />
+
     <!-- F2P Assessment -->
     <div class="bg-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-xl">
       <h3 class="text-lg font-black text-amber-400 mb-2">Free-to-Play Verdict &amp; Community Rewards</h3>
       <p class="text-xs text-slate-300 leading-relaxed">
         You do <strong>not</strong> need to spend Robux to reach Level 75, craft Bizarre Arrows, unlock Builder, or evolve into SPTW. Every Stand and 2x EXP/Coin booster can be earned free in-game, and three one-time Community Rewards (Favorite + Like, Group Join, Friend Invite) each award <strong>1 Stand Arrow + 500 Coins</strong>.
       </p>
+    </div>
+      </div>
+
+      <aside class="lg:col-span-3 flex flex-col items-center lg:items-end space-y-6">
+        <AdSidebar size="160x300" pageType="narrowGuide" sticky={true} className="my-0" />
+      </aside>
     </div>
   </div>
 </Layout>

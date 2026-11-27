@@ -1,0 +1,26 @@
+---
+import AdSlot from './AdSlot.astro';
+
+interface Props {
+  pageType?: string;
+  theme?: 'light' | 'dark';
+  narrow?: boolean;
+  className?: string;
+  includeMobile?: boolean;
+}
+
+const {
+  pageType,
+  theme = 'light',
+  narrow = false,
+  className = 'my-6',
+  includeMobile = true,
+} = Astro.props;
+---
+
+<div class:list={['w-full', className]}>
+  <AdSlot unit={narrow ? 'banner_468x60' : 'banner_728x90'} pageType={pageType} theme={theme} />
+  {includeMobile && (
+    <AdSlot unit="banner_320x50" pageType={pageType} theme={theme} />
+  )}
+</div>

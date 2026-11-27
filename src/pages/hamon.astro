@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdSidebar from '../components/ads/AdSidebar.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 ---
 
@@ -13,7 +16,9 @@ import Layout from '../layouts/Layout.astro';
   ]}
   schemaType="Article"
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-9 min-w-0">
     <div class="mb-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold mb-3 border border-amber-200">
         <span>Sub-Ability Walkthrough</span>
@@ -29,6 +34,8 @@ import Layout from '../layouts/Layout.astro';
         <strong>Hamon (The Ripple)</strong> is one of the most versatile martial fighting styles in Roblox <strong>STAND OUT</strong>. Providing bonus damage against undead enemies, health regeneration, and special Overdrive moves, Hamon can elevate both beginner and endgame Stand builds.
       </p>
     </div>
+
+    <AdTopBanner narrow={true} pageType="narrowGuide" className="mb-8 mt-0" />
 
     <!-- Step-by-Step Acquisition -->
     <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 mb-12">
@@ -76,6 +83,8 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+
+    <AdNative pageType="narrowGuide" className="my-8" />
 
     <!-- The 3 Hamon Paths -->
     <section class="space-y-6 mb-12">
@@ -156,6 +165,12 @@ import Layout from '../layouts/Layout.astro';
       <p>
         If you wish to switch from Jonathan to Caesar or become a Vampire instead, simply eat a mature <strong>Apple</strong> (cultivated from seeds at Big Chop) or consume a <strong>Sapphire Rokakaka</strong> fruit. Your Stand and character level will remain completely intact.
       </p>
+    </div>
+      </div>
+
+      <aside class="lg:col-span-3 flex flex-col items-center lg:items-end space-y-6">
+        <AdSidebar size="160x300" pageType="narrowGuide" sticky={true} className="my-0" />
+      </aside>
     </div>
   </div>
 </Layout>

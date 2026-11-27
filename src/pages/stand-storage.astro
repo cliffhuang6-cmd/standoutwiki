@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdSidebar from '../components/ads/AdSidebar.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 ---
 
@@ -10,7 +13,9 @@ import Layout from '../layouts/Layout.astro';
   breadcrumbs={[{ label: 'Stand Storage' }]}
   schemaType="Article"
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-9 min-w-0">
     <div class="mb-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
         <span>Account Progression</span>
@@ -26,6 +31,8 @@ import Layout from '../layouts/Layout.astro';
         Rolling a rare Pinnacle Stand like Star Platinum or King Crimson is an exciting milestone, but what if you want to test other Stands without losing your prize? Learn how to use <strong>D'Arby Stand Storage</strong> and unlock all 3 character slots.
       </p>
     </div>
+
+    <AdTopBanner narrow={true} pageType="narrowGuide" className="mb-8 mt-0" />
 
     <!-- D'Arby Storage Walkthrough -->
     <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 mb-12">
@@ -102,6 +109,14 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-slate-500 mt-1">Pay the town registrar fee to permanently unlock the slot.</p>
         </div>
       </div>
+    </div>
+
+    <AdNative pageType="narrowGuide" className="my-8" />
+      </div>
+
+      <aside class="lg:col-span-3 flex flex-col items-center lg:items-end space-y-6">
+        <AdSidebar size="160x300" pageType="narrowGuide" sticky={true} className="my-0" />
+      </aside>
     </div>
   </div>
 </Layout>

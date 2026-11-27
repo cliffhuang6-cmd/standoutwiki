@@ -3,6 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 import BuildMaker from '../../components/BuildMaker';
 import ArrowCalculator from '../../components/ArrowCalculator';
 import ControlsReference from '../../components/ControlsReference';
+import AdTopBanner from '../../components/ads/AdTopBanner.astro';
+import AdRectangle from '../../components/ads/AdRectangle.astro';
+import AdSidebar from '../../components/ads/AdSidebar.astro';
+import AdNative from '../../components/ads/AdNative.astro';
 import { guides } from '../../data/guides';
 
 export function getStaticPaths() {
@@ -30,9 +34,11 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
   schemaType="Article"
   dateModified={guide.updatedDate}
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-14">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-8 min-w-0">
     <!-- Guide Header -->
-    <div class="mb-10 pb-8 border-b border-slate-200">
+    <div class="mb-6 pb-6 border-b border-slate-200">
       <div class="flex items-center gap-3 text-xs mb-3">
         <span class="px-2.5 py-1 rounded-full font-black uppercase tracking-wider bg-purple-100 text-purple-800">
           {guide.category}
@@ -51,6 +57,9 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
         {guide.description}
       </p>
     </div>
+
+    <!-- Above-The-Fold Banner (468x60 Desktop main column / 320x50 Mobile) -->
+    <AdTopBanner narrow={true} pageType="guideDetail" className="my-6" />
 
     <!-- Table of Contents -->
     <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm mb-10">
@@ -101,9 +110,13 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
       </div>
     )}
 
+    <!-- Mobile MPU Below Quick Reference / TOC (300x250) -->
+    <AdRectangle device="mobile" pageType="guideDetail" className="my-6" />
+
     <!-- Guide Content Sections -->
     <div class="space-y-12 text-sm text-slate-700 leading-relaxed max-w-none">
       {guide.sections && guide.sections.map((section, idx) => (
+        <>
         <section id={section.id} class="scroll-mt-24 bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
           <h2 class="text-2xl font-black text-slate-900">
             {idx + 1}. {section.title}
@@ -182,6 +195,10 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
             </div>
           )}
         </section>
+        {idx === 0 && (
+          <AdNative pageType="guideDetail" className="my-6" />
+        )}
+        </>
       ))}
     </div>
 
@@ -318,5 +335,24 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
         </div>
       </div>
     )}
+      </div>
+
+      <!-- Desktop Sticky Right Sidebar -->
+      <aside class="lg:col-span-4 space-y-6">
+        <AdRectangle device="desktop" pageType="guideDetail" className="my-0" />
+
+        <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-2.5 text-xs">
+          <span class="text-[11px] font-black uppercase tracking-wider text-purple-700 block">Quick Navigation</span>
+          <h2 class="text-sm font-black text-slate-900">Essential STAND OUT Hubs</h2>
+          <a href="/stands/" class="block p-2.5 rounded-lg bg-slate-50 hover:bg-emerald-50 font-bold text-slate-800">All 55 Stands Database →</a>
+          <a href="/tier-list/" class="block p-2.5 rounded-lg bg-slate-50 hover:bg-emerald-50 font-bold text-slate-800">PvP &amp; Raid Tier List →</a>
+          <a href="/codes/" class="block p-2.5 rounded-lg bg-slate-50 hover:bg-emerald-50 font-bold text-slate-800">Active Working Codes →</a>
+          <a href="/stand-arrows/" class="block p-2.5 rounded-lg bg-slate-50 hover:bg-emerald-50 font-bold text-slate-800">Stand Arrows &amp; Drop Odds →</a>
+          <a href="/guides/" class="block p-2.5 rounded-lg bg-slate-50 hover:bg-emerald-50 font-bold text-slate-800">All Walkthrough Guides →</a>
+        </div>
+
+        <AdSidebar size="160x600" pageType="guideDetail" sticky={true} className="my-2" />
+      </aside>
+    </div>
   </div>
 </Layout>

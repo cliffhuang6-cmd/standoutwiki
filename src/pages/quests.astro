@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdNative from '../components/ads/AdNative.astro';
 import { quests } from '../data/quests';
 
 const questCategories = [
@@ -59,6 +61,8 @@ const questCategories = [
       </p>
     </div>
 
+    <AdTopBanner pageType="hub" className="mb-8 mt-0" />
+
     <!-- Walkthrough Cross-Link Banner -->
     <div class="mb-10 p-5 rounded-2xl bg-blue-50/70 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
@@ -95,9 +99,10 @@ const questCategories = [
 
     <!-- Category Sections -->
     <div class="space-y-14" id="all">
-      {questCategories.map((cat) => {
+      {questCategories.map((cat, catIdx) => {
         const catQuests = quests.filter((q) => cat.id === 'side-quest' ? (q.category === 'Side Quest' || q.category === 'Daily Quest') : q.category === cat.category);
         return (
+          <>
           <section id={cat.id} class="scroll-mt-24">
             <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 mb-6 border-b border-slate-200">
               <div class="flex items-center gap-3">
@@ -188,6 +193,10 @@ const questCategories = [
               ))}
             </div>
           </section>
+          {catIdx === 0 && (
+            <AdNative pageType="hub" className="my-6" />
+          )}
+          </>
         );
       })}
     </div>

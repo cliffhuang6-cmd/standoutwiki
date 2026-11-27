@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import ImageModal from '../components/ImageModal';
 import ArrowCalculator from '../components/ArrowCalculator';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdRectangle from '../components/ads/AdRectangle.astro';
+import AdNative from '../components/ads/AdNative.astro';
 import { items } from '../data/items';
 
 const arrows = items.filter((i) => i.category === 'Arrow');
@@ -51,27 +54,35 @@ const faqSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-    <!-- Header -->
-    <div class="max-w-3xl mb-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3 border border-emerald-200">
-        <span>Summon Pool &amp; Crafting Reference</span>
-        <span>•</span>
-        <span>{arrows.length} Official Arrow Types</span>
+    <!-- Header + Above-The-Fold MPU -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
+      <div class="lg:col-span-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3 border border-emerald-200">
+          <span>Summon Pool &amp; Crafting Reference</span>
+          <span>•</span>
+          <span>{arrows.length} Official Arrow Types</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          Stand Out Arrows, Drop Rates &amp; Crafting Guide
+        </h1>
+
+        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+          Everything you need to summon stronger Stands in Studio Umbra's <strong>STAND OUT</strong>: compare <strong>Mysterious, Lucky, Bizarre, Part 3, Part 4, and Part 5 Arrows</strong>, check exact Train Shop token costs, craft from <strong>Arrow Parts</strong>, and simulate your pull odds below.
+        </p>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs">
+          <a href="#arrow-comparison" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold text-slate-700 hover:border-emerald-500">Arrow Comparison Table ↓</a>
+          <a href="#crafting-recipes" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold text-slate-700 hover:border-emerald-500">Crafting &amp; Arrow Parts ↓</a>
+          <a href="#calculator" class="px-3 py-1.5 rounded-lg bg-emerald-700 text-white font-bold hover:bg-emerald-600">Probability Calculator ↓</a>
+          <a href="/guides/bizarre-arrows/" class="px-3 py-1.5 rounded-lg bg-purple-50 border border-purple-200 font-bold text-purple-900 hover:bg-purple-100">Bizarre Arrow Raid Farming Strategy →</a>
+        </div>
+
+        <AdTopBanner pageType="longSystemGuide" className="mt-6 mb-0" />
       </div>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-        Stand Out Arrows, Drop Rates &amp; Crafting Guide
-      </h1>
-
-      <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
-        Everything you need to summon stronger Stands in Studio Umbra's <strong>STAND OUT</strong>: compare <strong>Mysterious, Lucky, Bizarre, Part 3, Part 4, and Part 5 Arrows</strong>, check exact Train Shop token costs, craft from <strong>Arrow Parts</strong>, and simulate your pull odds below.
-      </p>
-
-      <div class="mt-4 flex flex-wrap gap-2 text-xs">
-        <a href="#arrow-comparison" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold text-slate-700 hover:border-emerald-500">Arrow Comparison Table ↓</a>
-        <a href="#crafting-recipes" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold text-slate-700 hover:border-emerald-500">Crafting &amp; Arrow Parts ↓</a>
-        <a href="#calculator" class="px-3 py-1.5 rounded-lg bg-emerald-700 text-white font-bold hover:bg-emerald-600">Probability Calculator ↓</a>
-        <a href="/guides/bizarre-arrows/" class="px-3 py-1.5 rounded-lg bg-purple-50 border border-purple-200 font-bold text-purple-900 hover:bg-purple-100">Bizarre Arrow Raid Farming Strategy →</a>
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <AdRectangle pageType="longSystemGuide" className="my-0" />
       </div>
     </div>
 
@@ -205,6 +216,8 @@ const faqSchema = {
         </div>
       ))}
     </div>
+
+    <AdNative pageType="longSystemGuide" className="my-10" />
 
     <!-- Interactive Calculator Embed -->
     <div id="calculator" class="scroll-mt-24 mb-16">

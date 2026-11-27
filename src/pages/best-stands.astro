@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdNative from '../components/ads/AdNative.astro';
 import { standsBySlug } from '../data/stands';
 
 // Filter stands for key roles
@@ -74,6 +76,8 @@ const beginnerTop = ['beach-boy', 'yellow-temperance', 'smooth-operators', '200-
       </div>
     </div>
 
+    <AdTopBanner pageType="hub" className="mb-10 mt-0" />
+
     <!-- Section 1: Best Overall & 1v1 PvP Stands -->
     <section id="pvp" class="mb-16 scroll-mt-24">
       <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
@@ -124,6 +128,8 @@ const beginnerTop = ['beach-boy', 'yellow-temperance', 'smooth-operators', '200-
         ))}
       </div>
     </section>
+
+    <AdNative pageType="hub" className="my-10" />
 
     <!-- Section 2: Best Raid & Dungeon DPS Stands -->
     <section id="raids" class="mb-16 scroll-mt-24">

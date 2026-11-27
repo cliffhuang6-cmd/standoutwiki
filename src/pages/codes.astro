@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CodeCard from '../components/CodeCard';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdRectangle from '../components/ads/AdRectangle.astro';
+import AdNative from '../components/ads/AdNative.astro';
 import { recentCodes, expiredCodes } from '../data/codes';
 
 ---
@@ -14,20 +17,28 @@ import { recentCodes, expiredCodes } from '../data/codes';
   dateModified="2026-11-27"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-    <!-- Header -->
-    <div class="max-w-3xl mb-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
-        <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-        <span>Verified November 27, 2026</span>
+    <!-- Header + Above-The-Fold Sidebar MPU -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
+      <div class="lg:col-span-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          <span>Verified November 27, 2026</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          Roblox Stand Out Codes (November 2026)
+        </h1>
+
+        <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+          Looking for the latest free promo codes for Roblox <strong>STAND OUT</strong>? Both <code>REAL200KLIKES</code> (2 Bizarre Arrows + 4,000 Dalas) and <code>THANKFULFORSTANDOUT</code> (3 Mysterious Arrows, 500 Dalas &amp; 1 Hour of 2x EXP) are confirmed active as of November 27, 2026, while older codes like <code>200KLIKESMASSIVE</code> and <code>CRAZYDIAMOND</code> have expired. Copy any code below and redeem it inside the in-game Smartphone Gifts app.
+        </p>
+
+        <AdTopBanner pageType="codes" className="mt-6 mb-0" />
       </div>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-        Roblox Stand Out Codes (November 2026)
-      </h1>
-
-      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Looking for the latest free promo codes for Roblox <strong>STAND OUT</strong>? Both <code>REAL200KLIKES</code> (2 Bizarre Arrows + 4,000 Dalas) and <code>THANKFULFORSTANDOUT</code> (3 Mysterious Arrows, 500 Dalas &amp; 1 Hour of 2x EXP) are confirmed active as of November 27, 2026, while older codes like <code>200KLIKESMASSIVE</code> and <code>CRAZYDIAMOND</code> have expired. Copy any code below and redeem it inside the in-game Smartphone Gifts app.
-      </p>
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <AdRectangle pageType="codes" className="my-0" />
+      </div>
     </div>
 
     <!-- 200K Likes Milestone & Next 250K Likes Goal -->
@@ -67,6 +78,8 @@ import { recentCodes, expiredCodes } from '../data/codes';
           <CodeCard client:load code={c} />
         ))}
       </div>
+
+      <AdNative pageType="codes" className="mt-10 mb-0" />
     </section>
 
     <!-- Expired Codes Section -->

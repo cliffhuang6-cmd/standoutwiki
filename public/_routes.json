@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "include": ["/*"],
+  "exclude": [
+    "/_astro/*",
+    "/images/*",
+    "/styles/*",
+    "/favicon*",
+    "/apple-touch-icon.png",
+    "/site.webmanifest",
+    "/robots.txt",
+    "/sitemap*",
+    "/ads.txt",
+    "/og-image.png",
+    "/9e3bf17482a5490bb59e51cfa82d7031.txt"
+  ]
+}

@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 const catalogRanks = [
   {
@@ -101,6 +103,8 @@ const catalogRanks = [
       </div>
     </div>
 
+    <AdTopBanner pageType="shortSystemGuide" className="mb-10 mt-0" />
+
     <!-- Section 1: How the Catalog Works -->
     <section id="how-it-works" class="mb-16 scroll-mt-24">
       <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mb-6">What Is the Catalog &amp; How It Works</h2>
@@ -137,6 +141,8 @@ const catalogRanks = [
         </div>
       </div>
     </section>
+
+    <AdNative pageType="shortSystemGuide" className="my-10" />
 
     <!-- Section 2: The 7 Ranks and Rewards Table -->
     <section id="ranks" class="mb-16 scroll-mt-24">

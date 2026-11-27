@@ -1,6 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ImageModal from '../../components/ImageModal';
+import AdTopBanner from '../../components/ads/AdTopBanner.astro';
+import AdRectangle from '../../components/ads/AdRectangle.astro';
+import AdSidebar from '../../components/ads/AdSidebar.astro';
+import AdNative from '../../components/ads/AdNative.astro';
 import { stands } from '../../data/stands';
 import type { Stand } from '../../types';
 
@@ -71,7 +75,10 @@ const faqSchema =
 >
   {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <!-- Top Above-The-Fold Leaderboard (728x90 Desktop / 320x50 Mobile) -->
+    <AdTopBanner pageType="standDetail" className="mt-0 mb-6" />
+
     {stand.status === 'Historical' && (
       <div class="mb-8 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-sm flex items-start gap-3 shadow-xs">
         <span class="text-xl leading-none">⚠️</span>
@@ -158,6 +165,9 @@ const faqSchema =
         </div>
       </div>
     </div>
+
+    <!-- Mobile Hero-Bottom MPU (300x250) -->
+    <AdRectangle pageType="standDetail" device="mobile" className="my-6" />
 
     {/* Contextual Special Banners */}
     {stand.slug === 'star-platinum' && (
@@ -429,6 +439,9 @@ const faqSchema =
           </div>
         </section>
 
+        <!-- Mid-Article Sponsored Native Unit -->
+        <AdNative pageType="standDetail" className="my-4" />
+
         <!-- Passives & Trait Mechanics -->
         <section class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
           <h2 class="text-xl font-black text-slate-900 mb-4">Passives &amp; Unique Mechanics</h2>
@@ -688,6 +701,9 @@ const faqSchema =
             </div>
           </div>
         )}
+
+        <!-- Desktop Sticky Skyscraper Sidebar (160x600) -->
+        <AdSidebar size="160x600" pageType="standDetail" sticky={true} className="my-2" />
       </div>
     </div>
   </div>

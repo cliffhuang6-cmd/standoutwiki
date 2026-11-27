@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BuildMaker from '../components/BuildMaker';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 const scalingTable = [
   { stand: 'Star Platinum', scalingType: 'Ability (Heavy)', keyMove: 'Time Stop (5s -> 10s max), Star Finger, Inhale Pull', optimalRatio: '100 Ability / 50 Damage / 75 Health' },
@@ -57,6 +59,8 @@ const scalingTable = [
         </a>
       </div>
     </div>
+
+    <AdTopBanner pageType="longSystemGuide" className="mb-10 mt-0" />
 
     <!-- Section 1: The Three Core Attributes -->
     <section id="attributes" class="mb-16 scroll-mt-24">
@@ -163,6 +167,8 @@ const scalingTable = [
         </div>
       </div>
     </section>
+
+    <AdNative pageType="longSystemGuide" className="my-10" />
 
     <!-- Section 2: Ability Scaling by Stand Table -->
     <section id="scaling-table" class="mb-16 scroll-mt-24">

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
 import { siteConfig } from '../data/site';
 
 ---
@@ -51,6 +52,8 @@ import { siteConfig } from '../data/site';
         </a>
       </div>
     </div>
+
+    <AdTopBanner narrow={true} pageType="info" className="mb-10 mt-0" />
 
     <!-- Who Made STAND OUT & Project Overview -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">

@@ -1,0 +1,29 @@
+---
+import AdSlot from './AdSlot.astro';
+import type { AdDeviceScope } from '../../data/ads';
+
+interface Props {
+  pageType?: string;
+  device?: AdDeviceScope;
+  theme?: 'light' | 'dark';
+  className?: string;
+  sticky?: boolean;
+}
+
+const {
+  pageType,
+  device = 'all',
+  theme = 'light',
+  className = 'my-5',
+  sticky = false,
+} = Astro.props;
+---
+
+<AdSlot
+  unit="banner_300x250"
+  pageType={pageType}
+  deviceOverride={device}
+  theme={theme}
+  className={className}
+  sticky={sticky}
+/>

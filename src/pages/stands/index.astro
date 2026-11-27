@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import StandCard from '../../components/StandCard.astro';
+import AdTopBanner from '../../components/ads/AdTopBanner.astro';
+import AdNative from '../../components/ads/AdNative.astro';
 import { stands } from '../../data/stands';
 
 const playableStands = stands.filter(s => s.status !== 'Historical');
@@ -35,6 +37,8 @@ const historicalStands = stands.filter(s => s.status === 'Historical');
       </p>
     </div>
 
+    <AdTopBanner pageType="hub" className="mb-10 mt-0" />
+
     <!-- Active Playable Roster -->
     <div class="mb-14">
       <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
@@ -49,6 +53,8 @@ const historicalStands = stands.filter(s => s.status === 'Historical');
           <StandCard stand={stand} />
         ))}
       </div>
+
+      <AdNative pageType="hub" className="mt-10 mb-0" />
     </div>
 
     <!-- Historical Pre-Rework Reference Archive -->

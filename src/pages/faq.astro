@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
 
 const faqs = [
   {
@@ -64,6 +65,8 @@ const faqs = [
         Find immediate, factual answers to common questions about Roblox <strong>STAND OUT</strong> mechanics, Stand drops, combat systems, and account progression.
       </p>
     </div>
+
+    <AdTopBanner narrow={true} pageType="narrowGuide" className="mb-8 mt-0" />
 
     <!-- FAQ Accordion / Cards -->
     <div class="space-y-4">

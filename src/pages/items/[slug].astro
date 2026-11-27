@@ -1,5 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import AdTopBanner from '../../components/ads/AdTopBanner.astro';
+import AdRectangle from '../../components/ads/AdRectangle.astro';
+import AdNative from '../../components/ads/AdNative.astro';
 import { items } from '../../data/items';
 import type { Item } from '../../types';
 
@@ -69,7 +72,7 @@ const categoryBadgeClasses: Record<string, string> = {
     </div>
 
     <!-- Quick Fact Summary Card -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm mb-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm mb-6">
       <div>
         <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Item Type</div>
         <div class="text-base font-black text-slate-900 mt-1">{item.category}</div>
@@ -90,11 +93,14 @@ const categoryBadgeClasses: Record<string, string> = {
       </div>
     </div>
 
+    <!-- Top Leaderboard (728x90 Desktop / 320x50 Mobile) -->
+    <AdTopBanner pageType="itemDetail" className="mb-8 mt-0" />
+
     <!-- Main Content Layout -->
     <div class="flex flex-col lg:flex-row gap-8 mb-14 items-start">
-      <!-- Left Column: Item Graphic & Visual -->
-      <div class="w-full lg:w-5/12 shrink-0">
-        <div class="sticky top-20 bg-white rounded-3xl border border-slate-200 p-6 shadow-sm flex flex-col items-center text-center">
+      <!-- Left Column: Item Graphic & Visual + MPU -->
+      <div class="w-full lg:w-5/12 shrink-0 space-y-6">
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm flex flex-col items-center text-center">
           <div class="w-full aspect-square max-w-xs rounded-2xl bg-slate-50 border border-slate-200 p-4 mb-4 flex items-center justify-center overflow-hidden">
             <img
               src={item.image || '/images/items/apple.webp'}
@@ -111,6 +117,8 @@ const categoryBadgeClasses: Record<string, string> = {
             <span class="font-mono font-bold text-emerald-800">{item.sellPrice || 'Story Artifact'}</span>
           </div>
         </div>
+
+        <AdRectangle pageType="itemDetail" sticky={true} className="my-0" />
       </div>
 
       <!-- Right Column: Mechanics, Acquisition & Uses -->
@@ -127,6 +135,8 @@ const categoryBadgeClasses: Record<string, string> = {
             {item.obtainMethod}
           </div>
         </section>
+
+        <AdNative pageType="itemDetail" className="my-2" />
 
         <!-- Primary Uses & Combat Effects -->
         <section class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">

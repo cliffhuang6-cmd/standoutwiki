@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ArrowCalculator from '../components/ArrowCalculator';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 ---
 
@@ -28,6 +30,8 @@ import ArrowCalculator from '../components/ArrowCalculator';
         Understanding arrow drop rates in Roblox <strong>STAND OUT</strong> is critical before spending valuable Dalas or crafting components. Below is the verified mathematical breakdown of rarity tiers across all arrow variants.
       </p>
     </div>
+
+    <AdTopBanner pageType="hub" className="mb-10 mt-0" />
 
     <!-- Rate Comparison Table -->
     <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-14">
@@ -102,6 +106,8 @@ import ArrowCalculator from '../components/ArrowCalculator';
     <div class="mb-14 scroll-mt-24" id="calculator">
       <ArrowCalculator client:load />
     </div>
+
+    <AdNative pageType="hub" className="my-10" />
 
     <!-- Mathematical Formulation & Pity Explanation -->
     <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6">

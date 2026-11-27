@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdRectangle from '../components/ads/AdRectangle.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 const badges = [
   {
@@ -87,21 +90,29 @@ const faqs = [
   dateModified="2026-11-26"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-    <!-- Hero Header -->
-    <div class="max-w-3xl mb-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-black uppercase tracking-wider mb-3 border border-amber-200">
-        <span>Official Roblox Badge Tracker</span>
-        <span>•</span>
-        <span>Updated Nov 26, 2026</span>
+    <!-- Hero Header + Above-The-Fold MPU -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10">
+      <div class="lg:col-span-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-black uppercase tracking-wider mb-3 border border-amber-200">
+          <span>Official Roblox Badge Tracker</span>
+          <span>•</span>
+          <span>Updated Nov 26, 2026</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          Stand Out Badges Database
+        </h1>
+
+        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+          Every official Roblox badge currently registered for <strong>STAND OUT</strong>, including live owner totals, win rates, official descriptions, creation dates, and how to unlock rare achievements like the newly added <strong>LEGENDARY (Top 10)</strong> badge.
+        </p>
+
+        <AdTopBanner narrow={true} pageType="shortSystemGuide" className="mt-6 mb-0" />
       </div>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-        Stand Out Badges Database
-      </h1>
-
-      <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
-        Every official Roblox badge currently registered for <strong>STAND OUT</strong>, including live owner totals, win rates, official descriptions, creation dates, and how to unlock rare achievements like the newly added <strong>LEGENDARY (Top 10)</strong> badge.
-      </p>
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <AdRectangle pageType="shortSystemGuide" className="my-0" />
+      </div>
     </div>
 
     <!-- Summary Metrics -->
@@ -130,6 +141,8 @@ const faqs = [
         <div class="text-xs text-emerald-800 mt-1">Applies across all save slots</div>
       </div>
     </div>
+
+    <AdNative pageType="shortSystemGuide" className="my-8" />
 
     <!-- Detailed Badge Cards -->
     <section class="space-y-6 mb-14">

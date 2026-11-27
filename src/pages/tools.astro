@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import ArrowCalculator from '../components/ArrowCalculator';
 import BuildMaker from '../components/BuildMaker';
 import RokaMixer from '../components/RokaMixer';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdRectangle from '../components/ads/AdRectangle.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 ---
 
@@ -14,47 +17,55 @@ import RokaMixer from '../components/RokaMixer';
   schemaType="CollectionPage"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-    <!-- Header -->
-    <div class="max-w-3xl mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
-        <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-        <span>Interactive Player Utilities</span>
+    <!-- Header + Hero Right MPU -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10">
+      <div class="lg:col-span-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          <span>Interactive Player Utilities</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          STAND OUT Tools &amp; Calculators
+        </h1>
+
+        <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+          Optimize your Roblox <strong>STAND OUT</strong> playthrough with our interactive suite of tools. Calculate realistic arrow roll chances with exact Bernoulli mathematics, plan your 225-point character stat distribution (Level 75 cap), and look up Rokakaka mutation formulas.
+        </p>
+
+        <!-- Quick Anchor Pills -->
+        <div class="flex flex-wrap gap-2.5 mt-6">
+          <a
+            href="/tools/compare/"
+            class="px-3.5 py-1.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-black shadow-sm hover:bg-amber-400 transition-all"
+          >
+            ⚖️ Stand Comparison Tool
+          </a>
+          <a
+            href="#calculator"
+            class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 shadow-sm transition-all"
+          >
+            🏹 Arrow Probability Calc
+          </a>
+          <a
+            href="#build-maker"
+            class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 shadow-sm transition-all"
+          >
+            ⚔️ 225-Point Build Maker
+          </a>
+          <a
+            href="#mixer"
+            class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 shadow-sm transition-all"
+          >
+            🧪 Rokakaka Mutation Mixer
+          </a>
+        </div>
+
+        <AdTopBanner pageType="tools" className="mt-6 mb-0" />
       </div>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-        STAND OUT Tools &amp; Calculators
-      </h1>
-
-      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Optimize your Roblox <strong>STAND OUT</strong> playthrough with our interactive suite of tools. Calculate realistic arrow roll chances with exact Bernoulli mathematics, plan your 225-point character stat distribution (Level 75 cap), and look up Rokakaka mutation formulas.
-      </p>
-
-      <!-- Quick Anchor Pills -->
-      <div class="flex flex-wrap gap-2.5 mt-6">
-        <a
-          href="/tools/compare/"
-          class="px-3.5 py-1.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-black shadow-sm hover:bg-amber-400 transition-all"
-        >
-          ⚖️ Stand Comparison Tool
-        </a>
-        <a
-          href="#calculator"
-          class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 shadow-sm transition-all"
-        >
-          🏹 Arrow Probability Calc
-        </a>
-        <a
-          href="#build-maker"
-          class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 shadow-sm transition-all"
-        >
-          ⚔️ 225-Point Build Maker
-        </a>
-        <a
-          href="#mixer"
-          class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:text-emerald-700 hover:border-emerald-300 shadow-sm transition-all"
-        >
-          🧪 Rokakaka Mutation Mixer
-        </a>
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <AdRectangle pageType="tools" className="my-0" />
       </div>
     </div>
 
@@ -95,6 +106,8 @@ import RokaMixer from '../components/RokaMixer';
 
       <ArrowCalculator client:load />
     </section>
+
+    <AdNative pageType="tools" className="my-10" />
 
     <!-- Tool 2: 225-Point Build Maker -->
     <section id="build-maker" class="mb-16 scroll-mt-24">

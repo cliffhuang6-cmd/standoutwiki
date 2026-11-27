@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdNative from '../components/ads/AdNative.astro';
 import { updateLogs } from '../data/updates';
 
 ---
@@ -29,9 +31,12 @@ import { updateLogs } from '../data/updates';
       </p>
     </div>
 
+    <AdTopBanner narrow={true} pageType="narrowGuide" className="mb-8 mt-0" />
+
     <!-- Timeline of Updates -->
     <div class="space-y-8">
-      {updateLogs.map((log) => (
+      {updateLogs.map((log, logIdx) => (
+        <>
         <article class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm">
           <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-slate-100 mb-4">
             <div>
@@ -78,6 +83,10 @@ import { updateLogs } from '../data/updates';
             )}
           </div>
         </article>
+        {logIdx === 0 && (
+          <AdNative pageType="narrowGuide" className="my-6" />
+        )}
+        </>
       ))}
     </div>
 

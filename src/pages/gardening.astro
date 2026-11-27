@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ImageModal from '../components/ImageModal';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdRectangle from '../components/ads/AdRectangle.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 const supplies = [
   { name: 'Garden Pot', img: '/images/gardening/garden-pot.webp', source: 'Big Chop / Crafting Station (Wood + Steel)', role: 'Required container for each planted seed. Purchase extras from Big Chop to run multiple crops simultaneously.' },
@@ -72,21 +75,29 @@ const faqSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-    <!-- Hero Header -->
-    <div class="max-w-3xl mb-8">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
-        <span>Gardening &amp; Seed Farming</span>
-        <span>•</span>
-        <span>Updated Nov 27, 2026 (Update 1 Data)</span>
+    <!-- Hero Header + Above-The-Fold MPU -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
+      <div class="lg:col-span-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
+          <span>Gardening &amp; Seed Farming</span>
+          <span>•</span>
+          <span>Updated Nov 27, 2026 (Update 1 Data)</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          Stand Out Gardening, Seeds &amp; Farming Guide
+        </h1>
+
+        <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+          Everything you need to farm Dalas, boost Garden EXP, and cultivate rare Rokakaka mutations in Roblox <strong>STAND OUT</strong>. Below are instant answers on <strong>getting more Garden Pots</strong>, <strong>getting Roka seeds</strong>, <strong>offline growth speeds</strong>, and full crop visuals.
+        </p>
+
+        <AdTopBanner narrow={true} pageType="longSystemGuide" className="mt-6 mb-0" />
       </div>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-        Stand Out Gardening, Seeds &amp; Farming Guide
-      </h1>
-
-      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Everything you need to farm Dalas, boost Garden EXP, and cultivate rare Rokakaka mutations in Roblox <strong>STAND OUT</strong>. Below are instant answers on <strong>getting more Garden Pots</strong>, <strong>getting Roka seeds</strong>, <strong>offline growth speeds</strong>, and full crop visuals.
-      </p>
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <AdRectangle pageType="longSystemGuide" className="my-0" />
+      </div>
     </div>
 
     <!-- Quick-Answer Cards for Top GSC Gardening Searches -->
@@ -190,6 +201,8 @@ const faqSchema = {
         </div>
       </section>
     </div>
+
+    <AdNative pageType="longSystemGuide" className="my-8" />
 
     <!-- Full Seed & Crop Table with Localized WebP Thumbnails -->
     <section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-12">

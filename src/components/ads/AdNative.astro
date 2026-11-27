@@ -1,0 +1,23 @@
+---
+import AdSlot from './AdSlot.astro';
+
+interface Props {
+  pageType?: string;
+  theme?: 'light' | 'dark';
+  className?: string;
+}
+
+const {
+  pageType,
+  theme = 'light',
+  className = 'my-8',
+} = Astro.props;
+---
+
+<AdSlot
+  unit="native"
+  pageType={pageType}
+  theme={theme}
+  label="Sponsored Content"
+  className={className}
+/>

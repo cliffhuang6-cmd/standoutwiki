@@ -1,0 +1,35 @@
+---
+import AdSlot from './AdSlot.astro';
+
+interface Props {
+  size?: '160x600' | '160x300' | '300x250';
+  pageType?: string;
+  theme?: 'light' | 'dark';
+  sticky?: boolean;
+  className?: string;
+}
+
+const {
+  size = '160x600',
+  pageType,
+  theme = 'light',
+  sticky = true,
+  className = '',
+} = Astro.props;
+
+const unit =
+  size === '160x300'
+    ? 'banner_160x300'
+    : size === '300x250'
+      ? 'banner_300x250'
+      : 'banner_160x600';
+---
+
+<AdSlot
+  unit={unit}
+  pageType={pageType}
+  deviceOverride="desktop"
+  theme={theme}
+  sticky={sticky}
+  className={className}
+/>

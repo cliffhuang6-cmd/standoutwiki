@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AdTopBanner from '../components/ads/AdTopBanner.astro';
+import AdRectangle from '../components/ads/AdRectangle.astro';
+import AdNative from '../components/ads/AdNative.astro';
 
 ---
 
@@ -11,20 +14,28 @@ import Layout from '../layouts/Layout.astro';
   schemaType="CollectionPage"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-    <div class="max-w-3xl mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold mb-3 border border-indigo-200">
-        <span>Combat Styles</span>
-        <span>•</span>
-        <span>Secondary Movesets</span>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10">
+      <div class="lg:col-span-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold mb-3 border border-indigo-200">
+          <span>Combat Styles</span>
+          <span>•</span>
+          <span>Secondary Movesets</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          Stand Out Sub-Abilities Hub
+        </h1>
+
+        <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+          Sub-Abilities represent supplementary martial arts and supernatural disciplines in Roblox <strong>STAND OUT</strong>. Equipping a Sub-Ability gives you an extra row of active combat moves that execute alongside your primary Stand.
+        </p>
+
+        <AdTopBanner narrow={true} pageType="longSystemGuide" className="mt-6 mb-0" />
       </div>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-        Stand Out Sub-Abilities Hub
-      </h1>
-
-      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Sub-Abilities represent supplementary martial arts and supernatural disciplines in Roblox <strong>STAND OUT</strong>. Equipping a Sub-Ability gives you an extra row of active combat moves that execute alongside your primary Stand.
-      </p>
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <AdRectangle pageType="longSystemGuide" className="my-0" />
+      </div>
     </div>
 
     <!-- The Two Core Disciplines -->
@@ -97,6 +108,8 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+
+    <AdNative pageType="longSystemGuide" className="my-10" />
 
     <!-- Pluck Weapon Movesets & Update 1 Mechanics -->
     <div class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm mb-16">
