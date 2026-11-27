@@ -6,32 +6,143 @@ import { items } from '../data/items';
 
 const arrows = items.filter((i) => i.category === 'Arrow');
 
+const arrowFaqs = [
+  {
+    q: 'What is the difference between a Lucky Arrow and a Bizarre Arrow in STAND OUT?',
+    a: 'A Lucky Arrow removes all Rare Stands from the roll pool (42.5% Epic, 34.0% Legendary, 22.1% Mythical, 1.5% Pinnacle) and matches the Pinnacle probability of 3 Mysterious Arrows. A Bizarre Arrow excludes both Rare and Epic Stands completely (57.9% Legendary, 37.7% Mythical, 4.4% Pinnacle), matching 9 Mysterious Arrows.',
+  },
+  {
+    q: 'How do you craft Lucky Arrows and Bizarre Arrows in STAND OUT?',
+    a: 'Bring Mysterious Arrows and Dalas to the Crafting Station: 3x Mysterious Arrows + $10,000 Dalas crafts 1x Lucky Arrow, while 9x Mysterious Arrows + $25,000 Dalas crafts 1x Bizarre Arrow. You can also craft 1x Mysterious Arrow from 3x Arrow Parts + 1x Steel Ingot.',
+  },
+  {
+    q: 'How do Part 3, Part 4, and Part 5 Focus Arrows work?',
+    a: 'Focus Arrows lock the summon pool strictly to a single JoJo Part. Part 3 Arrow (craft with 5x Steel Ingots + 1x Mysterious Arrow) rolls only Part 3 Stands with Star Platinum and The World each at a flat 5.0% rate. Part 5 Arrow (40 Train Tokens or crafted) boosts King Crimson to 5.0%. Part 4 Arrow drops directly from the Highway Star Raid.',
+  },
+  {
+    q: 'How do you get Arrow Parts (Arrow Shards) and Mysterious Arrows fast?',
+    a: 'The fastest free-to-play loops are Passione Train Raids (buy arrows/parts with Train Tokens at the Train Shop), Metal Detector treasure hunting, Meteor Strike world events, defending Food Safety Agency (FSA) raids (+2 Arrow Parts per defense), Elimination bounties (20% Mysterious Arrow drop), and active promo codes.',
+  },
+  {
+    q: 'Can you roll Catch The Rainbow or Burning Down the House from early Stand Arrows?',
+    a: 'No. Studio Umbra locks 7 Stands (Catch The Rainbow, Burning Down the House, Strength, Cinderella, Rolling Stones, Super Fly, and Lyin’ Eyes) behind completing Storyline Quest Chapter 10. Clear the story before spending Lucky or Bizarre Arrows if you are hunting those.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: arrowFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 
 <Layout
-  title="Stand Out Arrows – Mysterious, Lucky, Bizarre Rates & Crafting | Stand Out Wiki"
-  description="Complete guide to all Stand Arrows in Roblox STAND OUT. Learn how to craft Lucky Arrows and Bizarre Arrows, use Part 3/5 focus arrows, and optimize gacha pulls."
+  title="Stand Out Arrows Guide – Mysterious, Lucky, Bizarre, Part 3/4/5 & Crafting | Stand Out Wiki"
+  description="How to get and craft every Stand Arrow in Roblox STAND OUT. Compare Mysterious, Lucky (1.5% Pinnacle), Bizarre (4.4% Pinnacle), Part 3/4/5 Focus Arrows, Arrow Parts, and Train Shop prices."
   canonicalPath="stand-arrows"
   breadcrumbs={[{ label: 'Stand Arrows' }]}
   schemaType="CollectionPage"
+  dateModified="2026-11-27"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
     <!-- Header -->
     <div class="max-w-3xl mb-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3 border border-emerald-200">
-        <span>Gacha Mechanics &amp; Recipes</span>
+        <span>Summon Pool &amp; Crafting Reference</span>
         <span>•</span>
-        <span>{arrows.length} Arrow Types</span>
+        <span>{arrows.length} Official Arrow Types</span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-        Stand Out Arrows &amp; Crafting Guide
+        Stand Out Arrows, Drop Rates &amp; Crafting Guide
       </h1>
 
-      <p class="mt-4 text-base text-slate-600 leading-relaxed font-medium">
-        Stand Arrows are the core progression catalysts in Studio Umbra's <strong>STAND OUT</strong>. Click any arrow graphic to view an enlarged image preview. Learn crafting recipes, token shop requirements, and mathematically optimal rolling strategies.
+      <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+        Everything you need to summon stronger Stands in Studio Umbra's <strong>STAND OUT</strong>: compare <strong>Mysterious, Lucky, Bizarre, Part 3, Part 4, and Part 5 Arrows</strong>, check exact Train Shop token costs, craft from <strong>Arrow Parts</strong>, and simulate your pull odds below.
       </p>
+
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <a href="#arrow-comparison" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold text-slate-700 hover:border-emerald-500">Arrow Comparison Table ↓</a>
+        <a href="#crafting-recipes" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold text-slate-700 hover:border-emerald-500">Crafting &amp; Arrow Parts ↓</a>
+        <a href="#calculator" class="px-3 py-1.5 rounded-lg bg-emerald-700 text-white font-bold hover:bg-emerald-600">Probability Calculator ↓</a>
+        <a href="/guides/bizarre-arrows/" class="px-3 py-1.5 rounded-lg bg-purple-50 border border-purple-200 font-bold text-purple-900 hover:bg-purple-100">Bizarre Arrow Raid Farming Strategy →</a>
+      </div>
     </div>
+
+    <!-- All-Arrow Master Comparison Table -->
+    <section id="arrow-comparison" class="scroll-mt-24 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-14">
+      <div class="p-5 border-b border-slate-200 bg-slate-50 flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <h2 class="text-xl font-black text-slate-900">All Stand Arrow Types &amp; Verified Drop Odds</h2>
+          <p class="text-xs text-slate-500 mt-0.5">Official Trello roll exclusions, Train Shop prices, and Crafting Station recipes.</p>
+        </div>
+        <a href="/stand-rarity/" class="text-xs font-bold text-emerald-700 hover:underline">Full Rarity Breakdown →</a>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="bg-slate-100/80 border-b border-slate-200 text-slate-600 font-bold uppercase tracking-wider text-[11px]">
+              <th class="py-3 px-4">Arrow Type</th>
+              <th class="py-3 px-4">Excluded Tiers / Pool</th>
+              <th class="py-3 px-4">Pinnacle Rate</th>
+              <th class="py-3 px-4">Crafting / Train Shop</th>
+              <th class="py-3 px-4">Best Use Case</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-slate-900">Mysterious Arrow</td>
+              <td class="py-3 px-4">Full pool (Rare–Pinnacle)</td>
+              <td class="py-3 px-4 font-mono font-bold text-slate-700">~0.5%</td>
+              <td class="py-3 px-4">3x Arrow Parts + 1x Steel • 7 Tokens • 39–199 Robux</td>
+              <td class="py-3 px-4">Starter pulls &amp; bulk Crafting material</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-emerald-900">Lucky Arrow</td>
+              <td class="py-3 px-4">Excludes Rare (42.5% Epic / 34% Leg / 22.1% Myth)</td>
+              <td class="py-3 px-4 font-mono font-bold text-emerald-700">1.5%</td>
+              <td class="py-3 px-4">3x Mysterious + $10,000 • 17 Tokens • Lucky Turkey</td>
+              <td class="py-3 px-4">Cost-efficient Legendary &amp; Mythical hunting</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-purple-900">Bizarre Arrow</td>
+              <td class="py-3 px-4">Excludes Rare &amp; Epic (57.9% Leg / 37.7% Myth)</td>
+              <td class="py-3 px-4 font-mono font-bold text-purple-700">4.4%</td>
+              <td class="py-3 px-4">9x Mysterious + $25,000 • 33 Tokens • Bizarre Turkey</td>
+              <td class="py-3 px-4">Highest odds for Star Platinum, TW, KC &amp; Crazy Diamond</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-sky-900">Part 3 Focus Arrow</td>
+              <td class="py-3 px-4">Part 3 pool only (equal non-Pinnacle share)</td>
+              <td class="py-3 px-4 font-mono font-bold text-sky-700">5% SP / 5% TW</td>
+              <td class="py-3 px-4">1x Mysterious + 5x Steel Ingots</td>
+              <td class="py-3 px-4">Target farming Star Platinum, The World, or Silver Chariot</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-teal-900">Part 4 Focus Arrow</td>
+              <td class="py-3 px-4">Part 4 pool (Crazy Diamond, The Hand, Highway Star, Harvest)</td>
+              <td class="py-3 px-4 font-mono font-bold text-teal-700">Part 4 Focused</td>
+              <td class="py-3 px-4">Fixed drop from <a href="/guides/highway-star-raid/" class="underline font-bold text-emerald-700">Highway Star Raid</a></td>
+              <td class="py-3 px-4">Targeted Morioh / Update 1 Part 4 Stand hunting</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-rose-900">Part 5 Focus Arrow</td>
+              <td class="py-3 px-4">Part 5 pool only (equal non-KC share)</td>
+              <td class="py-3 px-4 font-mono font-bold text-rose-700">5.0% KC</td>
+              <td class="py-3 px-4">1x Mysterious + 5x Steel • 40 Train Tokens</td>
+              <td class="py-3 px-4">Target farming King Crimson, Kraft Work, or Little Bomber/Squad</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <!-- Arrow Types Catalog -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -49,12 +160,11 @@ const arrows = items.filter((i) => i.category === 'Arrow');
               )}
             </div>
 
-            {/* Enlarged Image Display (160px height) */}
             <div class="w-full h-40 rounded-xl bg-slate-50 border border-slate-200/80 p-3 mb-5 flex items-center justify-center overflow-hidden">
               <ImageModal
                 client:load
                 src={arrow.image || '/images/arrows/mysterious-arrow.webp'}
-                alt={arrow.name}
+                alt={`${arrow.name} item icon in Roblox STAND OUT`}
                 title={arrow.name}
                 subtitle={`${arrow.rarity || 'Catalyst'} • ${arrow.sellPrice || 'Special Item'}`}
                 className="w-full h-full flex items-center justify-center"
@@ -67,7 +177,7 @@ const arrows = items.filter((i) => i.category === 'Arrow');
 
             <div class="mt-1.5 mb-4 p-2.5 bg-slate-50 rounded-lg border border-slate-100 text-xs text-slate-600">
               <span class="font-bold text-slate-800 block text-[11px] uppercase tracking-wider mb-0.5">
-                📍 Obtainment:
+                Obtainment:
               </span>
               <p class="leading-relaxed">{arrow.obtainMethod}</p>
             </div>
@@ -97,44 +207,71 @@ const arrows = items.filter((i) => i.category === 'Arrow');
     </div>
 
     <!-- Interactive Calculator Embed -->
-    <div class="mb-16">
+    <div id="calculator" class="scroll-mt-24 mb-16">
       <div class="max-w-2xl mb-8">
         <span class="text-xs font-black uppercase tracking-wider text-emerald-700">Interactive Web Tool</span>
         <h2 class="text-3xl font-black text-slate-900 mt-1">Arrow Probability Simulator</h2>
         <p class="text-sm text-slate-500 mt-2">
-          Calculate your exact cumulative statistical chance of pulling Pinnacle or Mythical Stands across Mysterious, Lucky, and Bizarre Arrows.
+          Calculate your exact cumulative statistical chance of pulling Pinnacle, Mythical, or Part-focused Stands across Mysterious, Lucky, and Bizarre Arrows.
         </p>
       </div>
 
       <ArrowCalculator client:visible />
     </div>
 
-    <!-- Crafting Guide -->
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
-      <h2 class="text-2xl font-black text-slate-900">How to Craft Summon Arrows</h2>
-      <p class="text-sm text-slate-700 leading-relaxed">
-        Crafting higher-tier summon arrows is essential to bypass common and rare filler rolls. You do not need to rely purely on random world drops.
-      </p>
+    <!-- Crafting Guide & Arrow Parts Farming -->
+    <section id="crafting-recipes" class="scroll-mt-24 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-black text-slate-900">How to Craft Summon Arrows &amp; Farm Arrow Parts</h2>
+          <p class="text-sm text-slate-600 mt-1">
+            Combine world-drop Arrow Parts and standard Mysterious Arrows at any Crafting Station instead of relying purely on RNG spawns.
+          </p>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 shrink-0">
+          <img
+            src="/images/arrows/arrow-part.webp"
+            alt="Arrow Part crafting material in STAND OUT"
+            width={48}
+            height={48}
+            loading="lazy"
+            class="w-12 h-12 rounded-lg object-contain bg-white border border-slate-200 p-1"
+          />
+          <div class="text-xs">
+            <strong class="block text-slate-900">Arrow Part Formula</strong>
+            <span class="text-slate-600 font-mono">3x Arrow Parts + 1x Steel = 1x Arrow</span>
+          </div>
+        </div>
+      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-600">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xs text-slate-600">
         <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
           <h3 class="font-bold text-slate-900 text-sm mb-2">Crafting Lucky Arrows</h3>
           <p class="leading-relaxed mb-3">
-            Visit the <strong>Crafting Bench</strong> (or purchase from the Train Shop for <strong>17 Train Tokens</strong>). Combine <strong>3 Mysterious Arrows</strong> and <strong>$10,000 Dalas</strong> to eliminate all Rare-tier outcomes from your summon pool.
+            Visit the <strong>Crafting Bench</strong> (or buy from Train Shop for <strong>17 Train Tokens</strong>). Combines 3 standard pulls into 1 Rare-free roll (1.5% Pinnacle).
           </p>
           <div class="p-3 bg-white rounded-lg border border-slate-200 font-mono text-[11px] text-emerald-800">
-            Formula: 3x Mysterious Arrows + $10,000 Dalas = 1x Lucky Arrow
+            3x Mysterious Arrows + $10,000 Dalas = 1x Lucky Arrow
           </div>
         </div>
 
         <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
           <h3 class="font-bold text-slate-900 text-sm mb-2">Forging Bizarre Arrows</h3>
           <p class="leading-relaxed mb-3">
-            Combine <strong>9 Mysterious Arrows</strong> and <strong>$25,000 Dalas</strong> (or buy for <strong>33 Train Tokens</strong> in the Train Shop). Forging removes both Rare and Epic tiers, raising Pinnacle odds to <strong>4.4%</strong> (Star Platinum, The World, King Crimson, Crazy Diamond).
+            Combine 9 Mysterious Arrows (or buy for <strong>33 Train Tokens</strong> in the Train Shop). Excludes Rare &amp; Epic tiers for a <strong>4.4% Pinnacle rate</strong>.
           </p>
           <div class="p-3 bg-white rounded-lg border border-slate-200 font-mono text-[11px] text-purple-800">
-            Formula: 9x Mysterious Arrows + $25,000 Dalas = 1x Bizarre Arrow
+            9x Mysterious Arrows + $25,000 Dalas = 1x Bizarre Arrow
           </div>
+        </div>
+
+        <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-sm mb-2">Best Ways to Farm Arrow Parts</h3>
+          <ul class="space-y-1.5 leading-relaxed">
+            <li>• <strong>Metal Detector:</strong> Dig burrowed Arrow Parts &amp; shards around Honolulu beaches.</li>
+            <li>• <strong>Meteor Strikes &amp; Raids:</strong> Open Meteorites, clear Passione Train Raids (4 Parts = 8 Tokens), and defend FSA Raids (+2 Parts).</li>
+            <li>• <strong>Elimination Bounties:</strong> 20% Mysterious Arrow drop per bounty clear + Storyline chapters.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -147,24 +284,34 @@ const arrows = items.filter((i) => i.category === 'Arrow');
         </span>
       </div>
       <h2 class="text-xl sm:text-2xl font-black text-amber-950">
-        Story-Locked Utility Stands (41 Standard Arrow Pool)
+        7 Story-Locked Stands (Complete Storyline Before Rolling!)
       </h2>
       <p class="text-xs sm:text-sm text-amber-900/90 mt-2 leading-relaxed">
-        Out of the 51 live Stands in STAND OUT, <strong>7 utility Stands cannot be rolled from early arrows</strong> until you complete the main story progression:
+        Do not burn Lucky or Bizarre Arrows chasing these 7 Stands before completing Storyline Chapter 10—they remain locked out of your summon table until you finish the story campaign (plus remember to bank good pulls in <a href="/stand-storage/" class="underline font-bold">D'Arby's Stand Storage</a> or cleanse weak pulls via <a href="/rokakaka/" class="underline font-bold">Emerald Rokakaka</a>):
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4 text-xs font-bold text-amber-950">
-        <div class="p-2.5 rounded-lg bg-white/80 border border-amber-200">Super Fly</div>
-        <div class="p-2.5 rounded-lg bg-white/80 border border-amber-200">Rolling Stones</div>
-        <div class="p-2.5 rounded-lg bg-white/80 border border-amber-200">Cinderella</div>
-        <div class="p-2.5 rounded-lg bg-white/80 border border-amber-200">Burning Down the House</div>
-        <div class="p-2.5 rounded-lg bg-white/80 border border-amber-200">Catch the Rainbow</div>
-        <div class="p-2.5 rounded-lg bg-white/80 border border-amber-200">Strength</div>
-        <div class="p-2.5 rounded-lg bg-white/80 border border-amber-200">Lyin' Eyes</div>
-        <div class="p-2.5 rounded-lg bg-emerald-100 text-emerald-900 border border-emerald-300">Beat Story First!</div>
+        <a href="/stands/super-fly/" class="p-2.5 rounded-lg bg-white/80 border border-amber-200 hover:border-amber-500">Super Fly</a>
+        <a href="/stands/rolling-stones/" class="p-2.5 rounded-lg bg-white/80 border border-amber-200 hover:border-amber-500">Rolling Stones</a>
+        <a href="/stands/cinderella/" class="p-2.5 rounded-lg bg-white/80 border border-amber-200 hover:border-amber-500">Cinderella</a>
+        <a href="/stands/burning-down-the-house/" class="p-2.5 rounded-lg bg-white/80 border border-amber-200 hover:border-amber-500">Burning Down the House</a>
+        <a href="/stands/catch-the-rainbow/" class="p-2.5 rounded-lg bg-white/80 border border-amber-200 hover:border-amber-500">Catch The Rainbow</a>
+        <a href="/stands/strength/" class="p-2.5 rounded-lg bg-white/80 border border-amber-200 hover:border-amber-500">Strength</a>
+        <a href="/stands/lyin-eyes/" class="p-2.5 rounded-lg bg-white/80 border border-amber-200 hover:border-amber-500">Lyin' Eyes</a>
+        <a href="/codes/" class="p-2.5 rounded-lg bg-emerald-100 text-emerald-900 border border-emerald-300">Claim Free Arrow Codes →</a>
       </div>
-      <p class="text-xs text-amber-900/80 mt-3">
-        Do not waste Lucky or Bizarre Arrows trying to roll Burning Down the House or Cinderella on a fresh character! Complete Chapters 1 through 10 of the story campaign first to unlock their entry into your arrow summon pool.
-      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mt-12 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+      <h2 class="text-2xl font-black text-slate-900 mb-6">Stand Arrows Frequently Asked Questions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {arrowFaqs.map((faq) => (
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-sm text-slate-900 mb-1.5">{faq.q}</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
     </section>
   </div>
 </Layout>

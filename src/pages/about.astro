@@ -5,45 +5,149 @@ import { siteConfig } from '../data/site';
 ---
 
 <Layout
-  title="About Stand Out Wiki – Independent Roblox Community Database | Stand Out Wiki"
-  description="Learn about Stand Out Wiki, our mission, data verification methodology, and the independent community team behind the definitive Roblox STAND OUT guide."
+  title="About Stand Out Wiki – Methodology, Studio Umbra Credits & Directory"
+  description="Learn about Stand Out Wiki (standoutwiki.org), our editorial team, Trello & live patch verification workflow, who created Roblox STAND OUT (Studio Umbra: Europa), and full wiki navigation."
   canonicalPath="about"
   breadcrumbs={[{ label: 'About Us' }]}
   schemaType="Article"
+  dateModified="2026-11-27"
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-    <div class="mb-10">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Header -->
+    <div class="mb-8">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200">
-        <span>About Our Initiative</span>
+        <span>Editorial Standards &amp; Credits</span>
         <span>•</span>
-        <span>Independent Wiki Project</span>
+        <span>Independent Fan Resource</span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
         About Stand Out Wiki
       </h1>
 
-      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Stand Out Wiki (<a href={siteConfig.url} class="text-emerald-700 underline font-bold">standoutwiki.org</a>) is an independent, community-driven knowledge base created by passionate players to serve the global community of the Roblox action RPG <strong>STAND OUT</strong>, developed by Studio Umbra: Europa.
+      <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl">
+        <strong>Stand Out Wiki</strong> (<a href="/" class="text-emerald-700 underline font-bold">standoutwiki.org</a>) is an independent community documentation hub dedicated to accurate moveset frame data, verified summon drop math, gardening mutations, and working promo codes for Roblox <strong>STAND OUT</strong>.
       </p>
     </div>
 
-    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 text-sm text-slate-600 leading-relaxed">
-      <h2 class="text-2xl font-black text-slate-900">Our Mission &amp; Editorial Standards</h2>
-      <p>
-        Too many Roblox game wikis are filled with unverified rumors, stale code lists, fake gacha pity counters, or copy-pasted generic text. Stand Out Wiki was founded to establish a higher standard:
-      </p>
-
-      <ul class="list-disc list-inside space-y-2 text-xs font-medium text-slate-700">
-        <li><strong>Factual Verification:</strong> Every moveset, damage scaling parameter, cooldown, and drop rate is verified against developer cards on the official Trello release boards and live game testing.</li>
-        <li><strong>Mathematical Transparency:</strong> We never invent drop rates. When game mechanics rely on Bernoulli trials or focus arrows, we provide exact mathematical formulations.</li>
-        <li><strong>Active Maintenance:</strong> Promo codes and update changelogs are audited during each Studio Umbra patch deployment.</li>
-      </ul>
-
-      <h2 class="text-xl font-black text-slate-900 pt-4">Legal Disclaimer &amp; Fair Use</h2>
-      <p class="text-xs text-slate-500 leading-relaxed">
-        Stand Out Wiki is an independent fan resource and is <strong>not</strong> an official website of Roblox Corporation or Studio Umbra: Europa. JoJo's Bizarre Adventure is property of Hirohiko Araki, Shueisha, and David Production. All trademarks, character names, and in-game assets are referenced under fair use doctrine for non-profit informational, educational, and commentary purposes.
-      </p>
+    <!-- Quick Redirect Banner for Main Wiki Searchers -->
+    <div class="mb-10 p-5 rounded-2xl bg-emerald-950 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md">
+      <div>
+        <span class="text-[11px] font-black uppercase tracking-wider text-emerald-300">Looking for Game Data?</span>
+        <h2 class="text-lg font-black text-white mt-0.5">Jump Directly to Our Main Databases &amp; Interactive Calculators</h2>
+        <p class="text-xs text-slate-300 mt-1">
+          Explore all 55 Stands, live Tier List rankings, working Promo Codes, PC/Console Controls, and 33 Rokakaka mutations.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-2 shrink-0">
+        <a href="/" class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs transition-colors">
+          Wiki Home Hub →
+        </a>
+        <a href="/stands/" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition-colors">
+          55 Stands
+        </a>
+        <a href="/codes/" class="px-4 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs transition-colors">
+          Active Codes
+        </a>
+      </div>
     </div>
+
+    <!-- Who Made STAND OUT & Project Overview -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-3">
+        <span class="text-[11px] font-black uppercase tracking-wider text-emerald-700">Game Background</span>
+        <h2 class="text-xl font-black text-slate-900">Who Made Roblox STAND OUT?</h2>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Roblox <strong>STAND OUT</strong> is created and actively developed by <strong>Studio Umbra: Europa</strong>. Inspired by <em>JoJo's Bizarre Adventure</em> (spanning Parts 1–9), the game blends technical parry/evasive fighting mechanics with open-world Honolulu &amp; Oahu storyline quests, gang base territory raids, Rokakaka farming, and competitive 1v1 Ranked ladders.
+        </p>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Note: <strong>Stand Out Wiki is completely independent</strong> and is not affiliated with, endorsed by, or operated by Studio Umbra: Europa or Roblox Corporation.
+        </p>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-3">
+        <span class="text-[11px] font-black uppercase tracking-wider text-purple-700">Live Tracking</span>
+        <h2 class="text-xl font-black text-slate-900">How We Verify &amp; Update Wiki Data</h2>
+        <ul class="space-y-2 text-xs text-slate-600 leading-relaxed">
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-600 font-bold shrink-0">✓</span>
+            <span><strong>Official Board Audits:</strong> Every Stand card, cooldown, EX cost, and Rokakaka effect is cross-checked against developer Trello changelog and card records.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-600 font-bold shrink-0">✓</span>
+            <span><strong>Same-Day Patch Sync:</strong> When Studio Umbra deploys balance patches or milestone codes (such as Update 1, the Nov 24 Bad Company rework, or Nov 26 Thanksgiving updates), we update affected pages immediately.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-600 font-bold shrink-0">✓</span>
+            <span><strong>Transparent Math:</strong> Summon probability tables and our interactive calculators use exact Bernoulli probability formulas (<code>1 - (1 - p)<sup>n</sup></code>) without fabricated pity rules.</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Core Wiki Directory Navigation -->
+    <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm mb-10">
+      <div class="mb-5">
+        <h2 class="text-xl font-black text-slate-900">Explore Core Wiki Guides &amp; Tools</h2>
+        <p class="text-xs text-slate-500 mt-1">Direct links to our most-visited STAND OUT guides and interactive tools.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+        <a href="/guides/controls/" class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition-all block">
+          <strong class="text-slate-900 block">Controls &amp; Keybinds</strong>
+          <span class="text-slate-500 mt-1 block">PC Shift Lock, Xbox/PS &amp; Mobile touch layouts</span>
+        </a>
+        <a href="/tier-list/" class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition-all block">
+          <strong class="text-slate-900 block">PvP &amp; Raid Tier List</strong>
+          <span class="text-slate-500 mt-1 block">Updated rankings across PvP, Raids &amp; Farming</span>
+        </a>
+        <a href="/stand-arrows/" class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition-all block">
+          <strong class="text-slate-900 block">Stand Arrows &amp; Odds</strong>
+          <span class="text-slate-500 mt-1 block">Mysterious, Lucky, Bizarre &amp; Focus crafting</span>
+        </a>
+        <a href="/gardening/" class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition-all block">
+          <strong class="text-slate-900 block">Gardening &amp; Seeds</strong>
+          <span class="text-slate-500 mt-1 block">Pots, soil, offline speed &amp; 3x greenhouses</span>
+        </a>
+        <a href="/rokakaka/" class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition-all block">
+          <strong class="text-slate-900 block">Rokakaka &amp; 33 Mutations</strong>
+          <span class="text-slate-500 mt-1 block">Emerald, Sapphire, Opal &amp; Mutation Mixer</span>
+        </a>
+        <a href="/gang-wars/" class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition-all block">
+          <strong class="text-slate-900 block">Gang Wars &amp; Bases</strong>
+          <span class="text-slate-500 mt-1 block">Gang creation, 3 plots, factions &amp; raids</span>
+        </a>
+        <a href="/updates/" class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition-all block">
+          <strong class="text-slate-900 block">Patch Notes Timeline</strong>
+          <span class="text-slate-500 mt-1 block">Chronological Studio Umbra update history</span>
+        </a>
+        <a href="/tools/" class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition-all block">
+          <strong class="text-slate-900 block">Interactive Tools Hub</strong>
+          <span class="text-slate-500 mt-1 block">225 SP Build Maker &amp; Stand Comparison</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact, Corrections & Legal -->
+    <section class="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-5 text-xs text-slate-600 leading-relaxed">
+      <div>
+        <h2 class="text-lg font-black text-slate-900 mb-2">Report Errors, Outdated Stats &amp; Feedback</h2>
+        <p>
+          Spotted a cooldown tweak, stealth balance change, or expired promo code? Email our editorial team directly at{' '}
+          <a href={`mailto:${siteConfig.contactEmail}`} class="text-emerald-700 font-bold underline">
+            {siteConfig.contactEmail}
+          </a>{' '}
+          with the Stand/page name and patch detail so we can verify and update the page in the next deployment cycle.
+        </p>
+      </div>
+
+      <div class="pt-4 border-t border-slate-200">
+        <h2 class="text-base font-black text-slate-900 mb-1.5">Legal Disclaimer &amp; Fair Use</h2>
+        <p class="text-slate-500">
+          Stand Out Wiki (<span class="font-mono">{siteConfig.domain}</span>) is an unofficial, fan-maintained resource and is <strong>not</strong> endorsed by or associated with Roblox Corporation or Studio Umbra: Europa. <em>JoJo's Bizarre Adventure</em> is property of Hirohiko Araki, Shueisha, and David Production. In-game screenshots and reference data are used under fair use for educational and community documentation purposes. See also our{' '}
+          <a href="/privacy/" class="text-emerald-700 underline font-semibold">Privacy Policy</a> and{' '}
+          <a href="/terms/" class="text-emerald-700 underline font-semibold">Terms of Use</a>.
+        </p>
+      </div>
+    </section>
   </div>
 </Layout>

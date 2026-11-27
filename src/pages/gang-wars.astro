@@ -1,126 +1,303 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ImageModal from '../components/ImageModal';
 
+const gangFaqs = [
+  {
+    q: 'How do you make a gang in Roblox STAND OUT?',
+    a: 'Save $25,000 Dalas, equip your Smartphone (Z key after finishing Meryl Mei Qi Quest 2), open the Gangs app, pick your gang name/icon and Faction Type (Passione, Fruit Company, or Vampire), and confirm creation. Since Update 1 (Nov 22), every character slot can belong to its own separate gang.',
+  },
+  {
+    q: 'Where are all the Gang Base locations (Plots) in STAND OUT?',
+    a: 'There are 3 claimable Gang Base Plots on the map: Plot 1 Near the Docks, Plot 2 Near Diamotch, and the 3rd Gang Plot added in the November 24, 2026 patch. Interact with an unclaimed plot to deploy your headquarters, free garage, and growing rooms.',
+  },
+  {
+    q: 'Which Gang Faction Type is best: Passione, Fruit Company, or Vampire?',
+    a: 'Choose Passione for PvP & raid income (+20% Coins & EXP from invasions/eliminations + boosted drops). Choose Fruit Company if you farm Rokakaka mutations (increased crop growth and mutation speed inside your base). Choose Vampire if you run Vampire sub-ability builds (base includes a Mysterious Pit and Blood Filler).',
+  },
+  {
+    q: 'How do Baseless Gang Raids (25,000 Dalas) and Raid Steals work?',
+    a: 'If a rival gang does not have a base currently placed, you can prepay $25,000 Dalas upfront to force-raid them—if your raid fails, your $25,000 deposit transfers straight to the target’s Gang Bank. On successful base raids you steal stored bank funds (Tier 1: 10%, Tier 2: 15%, Tier 3: 25%), smash pots, and choose to reclaim/destroy/spare the base.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: gangFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 
 <Layout
-  title="Stand Out Gang Wars & Base Rooms – Plots, Factions & Raid Guide | Stand Out Wiki"
-  description="Complete guide to the Gang System in Roblox STAND OUT. Covers creating a gang (25,000 Dalas), 3rd Gang Plot, baseless 25,000 Dalas raids, Passione/Fruit Company/Vampire factions, and FSA raids."
+  title="Stand Out Gangs Guide – How to Make a Gang, Base Locations, Types & Wars | Stand Out Wiki"
+  description="How to make a gang in Roblox STAND OUT ($25,000 Dalas), all 3 gang base plot locations (Docks, Diamotch & Nov 24 3rd Plot), Passione/Fruit Company/Vampire types, baseless raids, and FSA defense."
   canonicalPath="gang-wars"
   breadcrumbs={[{ label: 'Gang System & Wars' }]}
   schemaType="Article"
-  dateModified="2026-11-26"
+  dateModified="2026-11-27"
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-    <div class="mb-10">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Hero -->
+    <div class="max-w-3xl mb-8">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-xs font-bold mb-3 border border-rose-200">
-        <span>Multiplayer Organizations</span>
+        <span>Gangs, Bases &amp; Territory Wars</span>
         <span>•</span>
-        <span>Updated Nov 24–26, 2026</span>
+        <span>Updated Nov 27, 2026 (3rd Plot + Update 1)</span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-        Stand Out Gang Wars, Plots &amp; Base Guide
+        Stand Out Gangs, Base Locations &amp; Wars Guide
       </h1>
 
       <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        Gangs in Roblox <strong>STAND OUT</strong> cost <strong>25,000 Dalas</strong> to create via the Phone Gangs app and are <strong>cross-slot</strong> across your character profiles. Band together to claim one of <strong>3 Gang Plots</strong>, choose from three distinct factions, upgrade your garage, fight in competitive Gang Wars (500–750 EXP per match), and raid rival bases.
+        Everything about multiplayer organizations in Roblox <strong>STAND OUT</strong>: how to create a gang via the Smartphone Gangs app (<strong>$25,000 Dalas</strong>), <strong>all 3 Gang Base plot locations</strong>, choosing between <strong>Passione, Fruit Company, and Vampire</strong>, garage upgrades, competitive Gang Wars (500–750 EXP), and base raids.
       </p>
     </div>
 
-    <!-- Gang Factions -->
-    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 mb-10">
+    <!-- Step-by-Step Creation & Member Permissions -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+      <section class="lg:col-span-2 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+        <h2 class="text-2xl font-black text-slate-900">How to Make or Join a Gang (Step-by-Step)</h2>
+        <ol class="space-y-3 text-xs text-slate-600 leading-relaxed">
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-md bg-rose-600 text-white font-black flex items-center justify-center shrink-0">1</span>
+            <span><strong>Save $25,000 Dalas &amp; Unlock Your Phone:</strong> Complete Meryl Mei Qi Quest 2 to get your Smartphone (<a href="/guides/controls/" class="underline font-bold text-emerald-700">Press Z</a>), then earn $25,000 Dalas via Storyline, Bounties, or <a href="/gardening/" class="underline font-bold text-emerald-700">Gardening deliveries</a>.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-md bg-rose-600 text-white font-black flex items-center justify-center shrink-0">2</span>
+            <span><strong>Create in Phone Gangs App:</strong> Open the Gangs app, choose a name/emblem, and pick your <strong>Gang Faction Type</strong>. Per Update 1 (Nov 22), every character slot can belong to its own separate gang!</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-md bg-rose-600 text-white font-black flex items-center justify-center shrink-0">3</span>
+            <span><strong>Manage Permissions &amp; Gang Bank:</strong> Deposit money in the Gang Bank for rooms, furniture, and vehicles. Leaders control separate <em>Place</em> (deploy plot) and <em>Edit</em> (rooms/furniture/painting) permissions per rank.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <span class="text-[11px] font-black uppercase tracking-wider text-slate-500">Gang Economy &amp; Quests</span>
+          <h3 class="text-base font-black text-slate-900 mt-1 mb-3">Gang Bank &amp; Weekly Gang Jobs</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Complete weekly Gang Jobs (such as <em>A Good Week</em> and <em>Clean Up</em> eliminations) to fill your shared Gang Bank for rooms and Garage upgrades.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="aspect-video rounded-lg overflow-hidden border border-slate-200 bg-slate-100">
+            <ImageModal client:load src="/images/gangs/gang-bank.webp" alt="Gang Bank deposit interface in STAND OUT" title="Gang Bank Deposit Menu" className="w-full h-full" />
+          </div>
+          <div class="aspect-video rounded-lg overflow-hidden border border-slate-200 bg-slate-100">
+            <ImageModal client:load src="/images/gangs/gang-jobs.webp" alt="Weekly Gang Jobs interface in STAND OUT" title="Gang Jobs & Rewards" className="w-full h-full" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Gang Factions Comparison with Real Screenshots -->
+    <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6 mb-10">
       <div class="flex flex-wrap items-center justify-between gap-2">
-        <h2 class="text-2xl font-black text-slate-900">Gang Factions &amp; Base Types</h2>
-        <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">Update 1 Expansion</span>
+        <div>
+          <span class="text-[11px] font-black uppercase tracking-wider text-emerald-700">3 Official Factions</span>
+          <h2 class="text-2xl font-black text-slate-900">All Gang Types (Factions), Perks &amp; Exclusive Rooms</h2>
+        </div>
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">Updated Nov 22 (Update 1)</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs text-slate-600 leading-relaxed">
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-indigo-800 mb-2">1. Passione (Default)</h3>
-          <p>
-            Focuses on street dominance and PvP operations. Grants <strong>+20% Coins &amp; EXP</strong> from invasions and eliminations along with boosted drop rates, plus Passione-exclusive furniture and meeting rooms.
-          </p>
+        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden flex flex-col">
+          <div class="aspect-video bg-slate-200">
+            <ImageModal client:load src="/images/gangs/faction-passione.webp" alt="Passione gang faction preview in STAND OUT" title="Passione Faction Base" subtitle="PvP, Raids & +20% Coins/EXP Perks" className="w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-sm text-indigo-800 mb-1.5">1. Passione (Default)</h3>
+            <p>
+              Built for street dominance and PvP invasions. Grants <strong>+20% Coins &amp; EXP</strong> from invasions and eliminations, boosted loot drop rates, and Passione meeting rooms/furniture.
+            </p>
+          </div>
         </div>
 
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-emerald-800 mb-2">2. Fruit Company</h3>
-          <p>
-            Built for agricultural moguls and Rokakaka cultivators. Provides <strong>increased crop growing speed and Rokakaka mutation speed</strong> inside the base, alongside Fruit Company exclusive rooms.
-          </p>
+        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden flex flex-col">
+          <div class="aspect-video bg-slate-200">
+            <ImageModal client:load src="/images/gangs/faction-fruit-company.webp" alt="Fruit Company gang faction preview in STAND OUT" title="Fruit Company Faction Base" subtitle="Gardening & Rokakaka Mutation Speed Perks" className="w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-sm text-emerald-800 mb-1.5">2. Fruit Company</h3>
+            <p>
+              Designed for agricultural squads hunting 33 Roka variants. Increases <strong>crop growth speed and Rokakaka mutation speed</strong> inside your headquarters alongside Fruit Company rooms.
+            </p>
+          </div>
         </div>
 
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-rose-800 mb-2">3. Vampire</h3>
-          <p>
-            Nocturnal faction headquarters featuring a <strong>Mysterious Pit and Blood Reservoir / Filler</strong> amenities for Vampire builds, plus Vampire-exclusive rooms and furniture.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Gang Plots, Facilities & Garage Upgrades -->
-    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6 mb-10">
-      <h2 class="text-2xl font-black text-slate-900">Gang Plots (3 Locations), Base Rooms &amp; Garage</h2>
-      <p class="text-xs text-slate-600 leading-relaxed">
-        With the <strong>November 24, 2026</strong> patch, Studio Umbra added a <strong>3rd Gang Plot</strong> alongside the existing plots near the Docks and Diamotch. Every gang base includes a free Garage and supports separate <em>Place</em> and <em>Edit</em> base permissions for members.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-600 leading-relaxed">
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-emerald-800 mb-2">Rokakaka Greenhouse</h3>
-          <p>
-            Plants in gang bases grow at <strong>2x speed</strong> and Rokakaka strains grow at <strong>3x speed</strong>. You can see pot ownership in shared bases and remove others' empty pots.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-amber-800 mb-2">Garage Upgrades</h3>
-          <p>
-            Update 1 added <strong>Security System</strong> (locks vehicles to gang members only) and <strong>Self Destruct</strong> (detonate abandoned vehicles from the garage lift or driver seat).
-          </p>
-        </div>
-
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-rose-800 mb-2">Combat &amp; Pilot Lock</h3>
-          <p>
-            You cannot enter your gang base while in combat (without an active raid), and you cannot pilot a Stand into combat while your main body hides inside a gang base.
-          </p>
+        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden flex flex-col">
+          <div class="aspect-video bg-slate-200">
+            <ImageModal client:load src="/images/gangs/faction-vampire.webp" alt="Vampire gang faction preview in STAND OUT" title="Vampire Faction Base" subtitle="Mysterious Pit & Blood Filler HQ" className="w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-sm text-rose-800 mb-1.5">3. Vampire</h3>
+            <p>
+              Nocturnal base tailored to <a href="/vampire/" class="underline font-bold text-rose-700">Vampire sub-ability users</a>, featuring a built-in <strong>Mysterious Pit and Blood Filler</strong> plus Vampire-themed rooms and props.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Gang Raids & Baseless 25,000 Dalas Raid -->
-    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-5 mb-10">
-      <h2 class="text-2xl font-black text-slate-900">Gang Raids &amp; 25,000 Dalas Baseless Raid Rule</h2>
-      <div class="space-y-3 text-xs text-slate-600 leading-relaxed">
-        <p>
-          Rival gangs can raid each other's bases to steal stored gang bank money (<strong>Tier 1: 10%</strong>, <strong>Tier 2: 15%</strong>, <strong>Tier 3: 25%</strong>), smash pots, and steal grown plants. Starting a raid also opens the attacker's own base to counter-raids, and defending earns <strong>1.5x reputation</strong>.
+    <!-- All 3 Gang Base Locations (Plots) + Facilities -->
+    <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6 mb-10">
+      <div>
+        <span class="text-[11px] font-black uppercase tracking-wider text-amber-700">Territory Map Spots</span>
+        <h2 class="text-2xl font-black text-slate-900">All 3 Gang Base Plot Locations &amp; Base Upgrades</h2>
+        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+          Look at the Server List before joining—it displays which gang bases are currently placed on that server. Following the <strong>November 24, 2026</strong> patch, there are now <strong>3 Gang Plots</strong> available to claim:
         </p>
-        <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-950">
-          <strong class="block text-xs uppercase tracking-wider text-amber-800 mb-1">Nov 23–24 Patch: 25,000 Dalas Baseless Gang Raid</strong>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        <div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden">
+          <div class="aspect-video bg-slate-200">
+            <ImageModal client:load src="/images/gangs/gang-plot-docks.webp" alt="Gang Base Plot 1 Near the Docks in STAND OUT" title="Plot 1: Near the Docks" subtitle="Coastal gang plot close to Harbor shipping & export zones" className="w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-black text-slate-900 text-sm">Plot 1: Near the Docks</h3>
+            <p class="text-slate-600 mt-1 leading-relaxed">Harbor-side plot offering fast access to water, coastal crops/packaging runs, and Raid escapes.</p>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden">
+          <div class="aspect-video bg-slate-200">
+            <ImageModal client:load src="/images/gangs/gang-plot-diamotch.webp" alt="Gang Base Plot 2 Near Diamotch in STAND OUT" title="Plot 2: Near Diamotch" subtitle="Central urban plot near city quests and PvP hotspots" className="w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-black text-slate-900 text-sm">Plot 2: Near Diamotch</h3>
+            <p class="text-slate-600 mt-1 leading-relaxed">Inland city plot ideal for fast bounty turn-ins, garage deployments, and central skirmishes.</p>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden">
+          <div class="aspect-video bg-slate-200">
+            <ImageModal client:load src="/images/gangs/gang-base-overview.webp" alt="Gang Base exterior & Nov 24 3rd Plot expansion overview in STAND OUT" title="Plot 3: Nov 24 Expansion Plot" subtitle="Added Nov 24, 2026 to relieve contested territory slots" className="w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-black text-slate-900 text-sm">Plot 3: Nov 24 3rd Plot</h3>
+            <p class="text-slate-600 mt-1 leading-relaxed">Introduced on Nov 24 so a third active gang per server can place its headquarters without server-hopping.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2 text-xs text-slate-600 leading-relaxed">
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <div class="aspect-video rounded-lg overflow-hidden bg-slate-200">
+            <ImageModal client:load src="/images/gangs/gang-building-editor.webp" alt="Gang Base Room & Furniture Builder UI in STAND OUT" title="Base Building, Rooms & Pot Ownership" className="w-full h-full" />
+          </div>
+          <h3 class="font-bold text-sm text-emerald-800">Building &amp; 3x Roka Greenhouse</h3>
           <p>
-            You can now prepay <strong>25,000 Dalas</strong> upfront to launch a raid against a target gang that does not currently have an active base placed. If the raid fails, your <strong>25,000 Dalas deposit is automatically transferred into the raided player's bank</strong>.
+            Normal plants grow <strong>2x faster</strong> and Rokakakas grow <strong>3x faster</strong> in Public server Gang Bases. Pot ownership is tagged per member.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <div class="aspect-video rounded-lg overflow-hidden bg-slate-200">
+            <ImageModal client:load src="/images/gangs/gang-garage.webp" alt="Free Gang Base Garage & Vehicle Upgrades in STAND OUT" title="Free Garage + Security & Self Destruct" className="w-full h-full" />
+          </div>
+          <h3 class="font-bold text-sm text-amber-800">Garage Security &amp; Self Destruct</h3>
+          <p>
+            Every base includes a free Garage. Update 1 added <strong>Security System</strong> (locks vehicles to gang members) and <strong>Self Destruct</strong> from the lift or driver seat.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <div class="aspect-video rounded-lg overflow-hidden bg-slate-200">
+            <ImageModal client:load src="/images/gangs/gang-raid-menu.webp" alt="Gang Raid selection interface and theft tier preview in STAND OUT" title="Gang Raids & Combat Anti-Cheese" className="w-full h-full" />
+          </div>
+          <h3 class="font-bold text-sm text-rose-800">Combat Lock &amp; Base Raids</h3>
+          <p>
+            You cannot enter a Gang Base while in combat (outside raids) or pilot Stands out from inside a base to fight. Raid wins let you reclaim or destroy rival HQs.
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Food Safety Agency & Anti-Teaming -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 space-y-3">
-        <h2 class="text-lg font-black text-slate-900">Food Safety Agency (FSA) Raids</h2>
+    <!-- Gang Raids, Baseless 25k Raid & Raid Steal Comparison -->
+    <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5 mb-10">
+      <h2 class="text-2xl font-black text-slate-900">Gang Raids, Steal Tiers &amp; 25,000 Dalas Baseless Raid</h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-200">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider text-[11px]">
+              <th class="py-3 px-4">Raid Type / Tier</th>
+              <th class="py-3 px-4">Trigger Requirement</th>
+              <th class="py-3 px-4">Steal / Reward Mechanics</th>
+              <th class="py-3 px-4">Risk / Counterplay</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr>
+              <td class="py-3 px-4 font-bold text-slate-900">Tier 1–3 Base Raid</td>
+              <td class="py-3 px-4">Attack an enemy Gang Base placed on the server</td>
+              <td class="py-3 px-4">Steal Gang Bank (<strong>T1: 10% • T2: 15% • T3: 25%</strong>), smash pots &amp; take crops</td>
+              <td class="py-3 px-4">Exposes attacker’s base to counter-raids; Defenders earn <strong>1.5x reputation</strong></td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-amber-900">Baseless Gang Raid</td>
+              <td class="py-3 px-4">Prepay <strong>25,000 Dalas</strong> to force-raid a gang with no base</td>
+              <td class="py-3 px-4">Bypass dodging base placement to claim raid win &amp; loot</td>
+              <td class="py-3 px-4">If raid fails, your <strong>25,000 Dalas deposit transfers</strong> to target’s bank</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-bold text-emerald-900">Gang Wars (KOTH / TDM)</td>
+              <td class="py-3 px-4">Queue Casual or Competitive Gang War matches</td>
+              <td class="py-3 px-4"><strong>500–750 EXP</strong> per match, trophies &amp; leaderboard rank</td>
+              <td class="py-3 px-4">Posing only charges EX when holding an active combat tag</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FSA Inspector & Anti-Teaming -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 flex items-start gap-4">
+        <img
+          src="/images/bosses/food-safety-agency-inspector.webp"
+          alt="Food Safety Agency Inspector NPC in Roblox STAND OUT"
+          width={64}
+          height={64}
+          loading="lazy"
+          class="w-16 h-16 rounded-xl object-cover border border-slate-300 shrink-0"
+        />
+        <div class="space-y-2">
+          <h2 class="text-lg font-black text-slate-900">Food Safety Agency (FSA) Inspections</h2>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            FSA Inspectors visit bases growing illegal Rokakakas (or ambush night Roka sales at Big Chop). Comply and lose Rokas, ask for a warrant, or fight Police &amp; SWAT waves to earn <strong>2,500 Coins, 2x Arrow Parts, 1x Mysterious Fertilizer, and 1x Random Seed</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 space-y-2">
+        <h2 class="text-lg font-black text-slate-900">Anti-Teaming Protection in Territory Fights</h2>
         <p class="text-xs text-slate-600 leading-relaxed">
-          FSA Inspectors periodically visit gang bases (or ambush night Rokakaka sales at Big Chop) to seize illegal Rokakaka crops. Resisting or asking for a warrant triggers Police and SWAT waves. Defending the raid awards <strong>2,500 Coins, 2x Arrow Parts, 1x Mysterious Fertilizer, and 1x Random Seed</strong>.
-        </p>
-      </div>
-
-      <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 space-y-3">
-        <h2 class="text-lg font-black text-slate-900">Gang Wars &amp; Anti-Teaming</h2>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Gang Wars feature competitive and casual King of the Hill and Team Deathmatch modes (500–750 EXP per match; posing only charges EX while holding an active combat tag). When 2+ enemies hit the same player in rapid succession, the Anti-Teaming engine grants ~<strong>1 second of i-frames</strong>.
+          When 2 or more opposing gang members hit a solo player in rapid succession, the Anti-Teaming engine triggers ~<strong>1 second of i-frames</strong> and cancels active hitstun so defenders can reposition or Universal Evasive (<code>X</code> / <code>D-Pad Left</code>) out of unfair dogpiles.
         </p>
       </div>
     </div>
+
+    <!-- FAQ -->
+    <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+      <h2 class="text-2xl font-black text-slate-900 mb-6">Gang System Frequently Asked Questions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {gangFaqs.map((faq) => (
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-sm text-slate-900 mb-1.5">{faq.q}</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   </div>
 </Layout>

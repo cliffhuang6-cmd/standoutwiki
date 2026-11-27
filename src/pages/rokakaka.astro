@@ -1,22 +1,128 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import RokaMixer from '../components/RokaMixer';
+import ImageModal from '../components/ImageModal';
 
+const coreRokas = [
+  {
+    name: 'Standard Rokakaka',
+    slug: 'rokakaka',
+    img: '/images/rokakaka/rokakaka.webp',
+    badge: 'Base Crop • 97%',
+    badgeColor: 'bg-slate-100 text-slate-800 border-slate-200',
+    effect: 'Heals health and clears harmful status effects while turning a body part to stone (Equivalent Exchange).',
+    removeTarget: 'Keeps Stand & Sub-Ability',
+    obtain: 'Plant Rokaka Seeds bought from Big Chop in solo pots or Gang Greenhouse; harvests trigger 3% mutation chance.',
+    useCase: 'Fast emergency combat healing, brewing Jars of Rokaka for Harbor export profits (+150% markup), or selling to Big Chop at night.',
+  },
+  {
+    name: 'Emerald Roka',
+    slug: 'emerald-roka',
+    img: '/images/rokakaka/emerald-roka.webp',
+    badge: 'Stand Reset • 3% Mutation',
+    badgeColor: 'bg-emerald-100 text-emerald-900 border-emerald-200',
+    effect: 'Strips your active Stand (with EXP return) so you can use Mysterious, Lucky, or Bizarre Arrows again.',
+    removeTarget: 'Normal: 60% • Good: 85% • Perfect: 100%',
+    obtain: '3% mutation roll when harvesting Rokakaka seeds, or purchase SSS-Rank guarantees for 80 Robux in the Shop.',
+    useCase: 'Essential before rerolling Stands; store valuable Stands with D’Arby Stand Storage first so you never lose a Pinnacle.',
+  },
+  {
+    name: 'Sapphire Roka',
+    slug: 'sapphire-roka',
+    img: '/images/rokakaka/sapphire-roka.webp',
+    badge: 'Sub-Ability Reset • 3% Mutation',
+    badgeColor: 'bg-sky-100 text-sky-900 border-sky-200',
+    effect: '50% chance to cleanse Hamon or Vampire Sub-Ability while preserving your Stand; grants +10% level EXP even on failure.',
+    removeTarget: 'Keeps Stand • Removes Fighting Style',
+    obtain: '3% mutation roll from Rokakaka harvests, or SSS-Rank Robux Shop option (80 Robux). Cannot be brewed in splash jars.',
+    useCase: 'Swapping between Jonathan Hamon, Caesar Hamon, Zeppeli Hamon, and Vampire without wiping your main Stand.',
+  },
+  {
+    name: 'Opal Roka',
+    slug: 'opal-roka',
+    img: '/images/rokakaka/opal-roka.webp',
+    badge: 'Evolution Catalyst • Rare',
+    badgeColor: 'bg-teal-100 text-teal-900 border-teal-200',
+    effect: 'Awakens Star Platinum → Star Platinum: The World (SPTW) or The World → The World: Alternative Universe (TWAU).',
+    removeTarget: 'S-Tier Opal has 0% Stand-wipe risk',
+    obtain: 'High-grade Rokakaka mutations, endgame raids, and milestone promo codes; requires Level 50+ to consume.',
+    useCase: 'Use Good/S-tier grades whenever possible—lower-grade Opals carry a small chance to wipe your Stand instead of evolving.',
+  },
+  {
+    name: 'Amethyst Roka',
+    slug: 'amethyst-roka',
+    img: '/images/rokakaka/amethyst-roka.webp',
+    badge: 'EX Refill & Cleanse',
+    badgeColor: 'bg-purple-100 text-purple-900 border-purple-200',
+    effect: 'Cleanses negative combat statuses and restores your Awakening / EX Bar, Hamon, or Vampire meter instead of HP.',
+    removeTarget: 'Keeps Stand & Sub-Ability',
+    obtain: '3% Rokakaka crop mutation pool; higher grades shorten the temporary stone limb petrification penalty.',
+    useCase: 'Sustaining heavy EX-dependent Stand combos during prolonged Raid boss fights or Gang Wars.',
+  },
+  {
+    name: 'Peridot Roka',
+    slug: 'peridot-roka',
+    img: '/images/rokakaka/peridot-roka.webp',
+    badge: 'Sub-Skill Reroll',
+    badgeColor: 'bg-lime-100 text-lime-900 border-lime-200',
+    effect: 'Lets you reroll one of your two Sub-Ability skills into a different move from the same fighting style without duplicates.',
+    removeTarget: 'Keeps Stand & Fighting Style',
+    obtain: '3% Rokakaka mutation roll; requires an active Stand and unlocked Sub-Ability style.',
+    useCase: 'Min-maxing exact Hamon or Vampire passives/moves without wasting Sapphire Rokas.',
+  },
+];
+
+const rokaFaqs = [
+  {
+    q: 'How do you get Rokakaka and Emerald/Sapphire Rokas in STAND OUT?',
+    a: 'Buy Rokakaka Seeds from Big Chop at Big Chop’s Garden (plus Garden Pots, Dirt Bags, and Ice Water) and harvest fully grown plants. Every harvested Rokakaka has a 3% chance to mutate into one of 33 special variants including Emerald, Sapphire, Amethyst, Peridot, and Opal Roka. You can also buy SSS-Rank Emerald or Sapphire Rokas for 80 Robux or redeem promo codes.',
+  },
+  {
+    q: 'What is the difference between Emerald Roka, Sapphire Roka, and Pure Roka?',
+    a: 'Emerald Roka removes your Stand (Normal 60%, Good 85%, Perfect 100%) while keeping your Sub-Ability. Sapphire Roka gives a 50% chance to remove your Sub-Ability (Hamon/Vampire) while keeping your Stand intact. Pure Roka refunds all allocated Stat Points (225 SP at Level 75) without removing either your Stand or Sub-Ability.',
+  },
+  {
+    q: 'How do you get higher-grade Rokakakas and avoid Opal Roka Stand wipes?',
+    a: 'Use Mysterious Fertilizer and grow seeds inside a 3x Gang Base Rokakaka Greenhouse or Fruit Company faction base for faster cycles and stronger harvest grades. Higher quality improves Emerald removal odds (100% at Perfect) and reduces Opal failure risk (S-tier Opal has a 0% Stand-wipe chance).',
+  },
+  {
+    q: 'Can Emerald, Sapphire, or Opal Rokas be brewed into throwable Splash Potions?',
+    a: 'No. Per Studio Umbra game rules, Rokakakas that remove Stands, clear Sub-Abilities, or evolve Stands (Emerald, Sapphire, Opal) cannot be used inside splash mode Mixing containers to prevent griefing other players.',
+  },
+  {
+    q: 'Can you sell unwanted Rokakakas for Dalas?',
+    a: 'Yes! Following Update 1 (Nov 22), you can sell Rokakakas to Big Chop exclusively during Night Time—though be prepared for the Food Safety Agency (FSA) Inspector to ambush illegal Roka sales.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: rokaFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 
 <Layout
-  title="Stand Out Rokakaka Guide – Resetting Stands & 33 Roka Mutations | Stand Out Wiki"
-  description="Complete guide to Rokakaka Fruit and mutations in Roblox STAND OUT. Learn how to reset Stands with Emerald Roka and explore all 33 verified mutations with our mixer tool."
+  title="Stand Out Rokakaka Guide – How to Get, Types & All 33 Roka Mutations | Stand Out Wiki"
+  description="How to get Rokakaka in Roblox STAND OUT and what every Roka does. Compare Emerald, Sapphire, Opal, Amethyst & Peridot Roka grades, 3% mutation odds, and use the 33 Mutation Mixer."
   canonicalPath="rokakaka"
   breadcrumbs={[{ label: 'Rokakaka & Mutations' }]}
   schemaType="CollectionPage"
+  dateModified="2026-11-27"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <!-- Hero Header -->
     <div class="max-w-3xl mb-10">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-bold mb-3 border border-teal-200">
-        <span>Botanical Equivalent Exchange</span>
+        <span>33 Verified Roka Variants</span>
         <span>•</span>
-        <span>33 Verified Mutations</span>
+        <span>3% Harvest Mutation Rate</span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
@@ -24,75 +130,163 @@ import RokaMixer from '../components/RokaMixer';
       </h1>
 
       <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-        The Rokakaka fruit is the bedrock of customization in Roblox <strong>STAND OUT</strong>. Consumed for Stand resets, sub-ability cleanses, or tactical buffs, each fruit adheres to the law of Equivalent Exchange by petrifying a body part to stone.
+        Looking for <strong>how to get Rokakaka</strong> or what <strong>Emerald, Sapphire, and Opal Rokas</strong> do in Roblox <strong>STAND OUT</strong>? Every harvested Rokakaka seed has a <strong>3% chance</strong> to mutate into one of 33 specialized fruits governing Stand resets, Sub-Ability cleanses, Stand awakenings, and combat buffs.
       </p>
-    </div>
 
-    <!-- Interactive Roka Mixer Component -->
-    <div class="mb-14 scroll-mt-24" id="mixer">
-      <RokaMixer client:load />
-    </div>
-
-    <!-- Essential Reset Guide -->
-    <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm space-y-6">
-      <h2 class="text-2xl font-black text-slate-900">How to Reset Stands Safely</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-600 leading-relaxed">
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-slate-900 mb-2">Emerald Rokakaka (Stand Reset)</h3>
-          <p class="mb-2">
-            Eating an <strong>Emerald Roka</strong> strips your active Stand, allowing you to use fresh arrows.
-          </p>
-          <ul class="list-disc list-inside space-y-1 font-semibold text-slate-800">
-            <li><strong>Normal Grade:</strong> 60% Stand removal success chance</li>
-            <li><strong>Good Grade:</strong> 85% Stand removal success chance</li>
-            <li><strong>Perfect Grade:</strong> 100% Guaranteed removal without penalty</li>
-          </ul>
-        </div>
-
-        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-          <h3 class="font-bold text-sm text-slate-900 mb-2">Sapphire Rokakaka (Sub-Ability Reset)</h3>
-          <p class="mb-2">
-            Eating a <strong>Sapphire Roka</strong> offers a 50% chance to remove your Hamon or Vampire style.
-          </p>
-          <ul class="list-disc list-inside space-y-1 font-semibold text-slate-800">
-            <li>Grants +10% of your current level EXP bar even if removal fails</li>
-            <li>Cannot be brewed into splash throwable potions</li>
-            <li>Keeps your Stand completely safe</li>
-          </ul>
-        </div>
-
-        <div class="p-5 rounded-xl bg-emerald-50/70 border border-emerald-200">
-          <h3 class="font-bold text-sm text-emerald-950 mb-2">Opal Rokakaka (Stand Evolution Catalyst)</h3>
-          <p class="mb-2 text-emerald-900">
-            The mythical mutation required to awaken <strong>Star Platinum: The World (SPTW)</strong> and <strong>The World: Alternative Universe (TWAU)</strong> for endgame progression.
-          </p>
-          <ul class="list-disc list-inside space-y-1 font-semibold text-emerald-900 mb-3">
-            <li>Triggers Stand awakening cutscene and moveset transformation</li>
-            <li>Obtained via greenhouse cross-fertilization or endgame raids</li>
-            <li>Requires character level 50+ before consumption</li>
-          </ul>
-          <a href="/items/opal-rokakaka/" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-800">
-            Read Opal Rokakaka Obtainment &amp; Evolution Guide &rarr;
-          </a>
-        </div>
-
-        <div class="p-5 rounded-xl bg-purple-50/70 border border-purple-200">
-          <h3 class="font-bold text-sm text-purple-950 mb-2">Pure Rokakaka (Skill Point Reset)</h3>
-          <p class="mb-2 text-purple-900">
-            Resets all allocated character and Stand skill points (up to 225 SP at Level 75) without wiping your current Stand ability.
-          </p>
-          <ul class="list-disc list-inside space-y-1 font-semibold text-purple-900 mb-3">
-            <li>Refunds all points back to your character pool</li>
-            <li>Essential when re-specifying stats between PvP and PvE builds</li>
-            <li>Preserves all unlocked Stand awakening stages</li>
-          </ul>
-          <a href="/guides/level-up-fast/" class="inline-flex items-center text-xs font-bold text-purple-700 hover:text-purple-800">
-            View Optimal Leveling &amp; Stat Builds &rarr;
-          </a>
-        </div>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <a href="#roka-types" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 font-bold text-slate-700 hover:border-emerald-500">All Core Roka Types ↓</a>
+        <a href="#mixer" class="px-3 py-1.5 rounded-lg bg-emerald-700 text-white font-bold hover:bg-emerald-600">33 Mutation Calculator &amp; Directory ↓</a>
+        <a href="/gardening/" class="px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 font-bold text-amber-900 hover:bg-amber-100">Need Pots, Seeds &amp; Growth Speeds? Gardening Guide →</a>
       </div>
     </div>
 
+    <!-- Core Rokakaka Comparison Visual Grid -->
+    <section id="roka-types" class="scroll-mt-24 mb-14">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+        <div>
+          <span class="text-[11px] font-black uppercase tracking-wider text-emerald-700">Essential Roka Comparison</span>
+          <h2 class="text-2xl font-black text-slate-900">All Main Rokakaka Types, Effects &amp; Reset Odds</h2>
+        </div>
+        <span class="text-xs text-slate-500">Click any fruit icon to zoom</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {coreRokas.map((roka) => (
+          <article class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col justify-between hover:border-emerald-400 transition-colors">
+            <div>
+              <div class="flex items-start gap-3.5 mb-3">
+                <div class="w-16 h-16 rounded-xl bg-slate-50 border border-slate-200 p-1.5 shrink-0">
+                  <ImageModal
+                    client:load
+                    src={roka.img}
+                    alt={`${roka.name} fruit in Roblox STAND OUT`}
+                    title={roka.name}
+                    subtitle={roka.removeTarget}
+                    className="w-full h-full"
+                  />
+                </div>
+                <div class="min-w-0">
+                  <span class={`inline-block px-2 py-0.5 text-[10px] font-black uppercase tracking-wider rounded border mb-1 ${roka.badgeColor}`}>
+                    {roka.badge}
+                  </span>
+                  <h3 class="text-base font-black text-slate-900 leading-tight">{roka.name}</h3>
+                  <p class="text-[11px] font-mono font-bold text-emerald-800 mt-0.5">{roka.removeTarget}</p>
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-700 leading-relaxed mb-3">{roka.effect}</p>
+            </div>
+
+            <div class="pt-3 border-t border-slate-100 text-[11px] space-y-1.5 text-slate-600">
+              <div><strong class="text-slate-800">How to Get:</strong> {roka.obtain}</div>
+              <div><strong class="text-slate-800">Best Use:</strong> {roka.useCase}</div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Grade vs Success Table -->
+      <div class="mt-8 bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+        <div class="p-4 sm:p-5 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
+          <h3 class="text-base font-black text-slate-900">Why Fruit Grade Matters (Normal → Good → Perfect / S / SSS)</h3>
+          <a href="/items/opal-rokakaka/" class="text-xs font-bold text-emerald-700 hover:underline">Opal Roka Deep Guide →</a>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-slate-100/70 border-b border-slate-200 text-slate-600 font-bold uppercase tracking-wider text-[11px]">
+                <th class="py-3 px-4">Roka Variant</th>
+                <th class="py-3 px-4">Primary Mechanic</th>
+                <th class="py-3 px-4">Grade Scaling Effect</th>
+                <th class="py-3 px-4">Splash Brew Allowed?</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Emerald Roka</td>
+                <td class="py-3 px-4">Removes active Stand + grants bonus EXP</td>
+                <td class="py-3 px-4 font-mono">Normal 60% • Good 85% • Perfect 100% (SSS: 80 Robux)</td>
+                <td class="py-3 px-4 font-bold text-rose-700">No</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Sapphire Roka</td>
+                <td class="py-3 px-4">Removes Sub-Ability (keeps Stand) + 10% EXP floor</td>
+                <td class="py-3 px-4 font-mono">Base 50% remove; higher grade boosts success &amp; EXP</td>
+                <td class="py-3 px-4 font-bold text-rose-700">No</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Opal Roka</td>
+                <td class="py-3 px-4">Evolves SP → SPTW or TW → TWAU (Level 50+)</td>
+                <td class="py-3 px-4 font-mono">Higher tier raises evolution rate; S-Tier = 0% Stand wipe</td>
+                <td class="py-3 px-4 font-bold text-rose-700">No</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Pure Roka</td>
+                <td class="py-3 px-4">Resets Stat Points (up to 225 SP at Level 75)</td>
+                <td class="py-3 px-4 font-mono">Guaranteed full stat point refund; safe on Stand &amp; Style</td>
+                <td class="py-3 px-4 font-bold text-rose-700">No</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-900">Amethyst / Buff Strains</td>
+                <td class="py-3 px-4">Refills EX bar / heals HP / cleanses status effects</td>
+                <td class="py-3 px-4 font-mono">Higher grade lowers limb stone petrification duration</td>
+                <td class="py-3 px-4 font-bold text-emerald-700">Yes (Combat Strains)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Roka Mixer Component -->
+    <div class="mb-14 scroll-mt-24" id="mixer">
+      <div class="mb-4">
+        <span class="text-[11px] font-black uppercase tracking-wider text-purple-700">Interactive Calculator &amp; 33-Strain Database</span>
+        <h2 class="text-2xl font-black text-slate-900 mt-0.5">Rokakaka Mutation Odds Calculator &amp; Full Directory</h2>
+        <p class="text-xs text-slate-600 mt-1">
+          Simulate batch yields with Greenhouse &amp; Fertilizer bonuses, browse all 33 localized Rokakaka icons, or inspect Harbor Jar recipes.
+        </p>
+      </div>
+      <RokaMixer client:load />
+    </div>
+
+    <!-- Safe Reset Checklist & Cross-Links -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-14">
+      <section class="bg-amber-50/70 border border-amber-200 rounded-2xl p-6 space-y-3">
+        <h2 class="text-lg font-black text-amber-950">Before You Eat an Emerald or Opal Roka: Safety Checklist</h2>
+        <ol class="list-decimal list-inside space-y-2 text-xs text-amber-950/90 leading-relaxed">
+          <li><strong>Bank Your Current Stand First:</strong> Visit D’Arby’s Stand Storage so you never accidentally delete a Mythical or Pinnacle Stand (<a href="/stand-storage/" class="font-bold underline text-emerald-800">Stand Storage Guide</a>).</li>
+          <li><strong>Sell Unwanted Rokas at Night:</strong> After Update 1, Big Chop buys Rokakakas at night—watch out for FSA Inspector raids (<a href="/gang-wars/" class="font-bold underline text-emerald-800">FSA Mechanics</a>).</li>
+          <li><strong>Grow in Bulk Inside a Gang Greenhouse:</strong> Public Gang Rokakaka Greenhouses triple crop speed (3x) and Fruit Company bases accelerate mutations (<a href="/gardening/" class="font-bold underline text-emerald-800">Full Gardening Guide</a>).</li>
+        </ol>
+      </section>
+
+      <section class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <h2 class="text-lg font-black text-slate-900 mb-2">Ready to Roll a New Stand After Resetting?</h2>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Once your Emerald Roka clears your slot (or Opal Roka evolves Star Platinum / The World), compare arrow summon math or redeem working promo codes before rolling.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <a href="/stand-arrows/" class="px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold transition-colors">Stand Arrows &amp; Odds →</a>
+          <a href="/codes/" class="px-4 py-2.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-950 font-bold transition-colors">Active Free Codes →</a>
+          <a href="/gardening/" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold transition-colors">Gardening &amp; Seeds →</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+      <h2 class="text-2xl font-black text-slate-900 mb-6">Rokakaka &amp; Mutations FAQ</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {rokaFaqs.map((faq) => (
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-sm text-slate-900 mb-1.5">{faq.q}</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   </div>
 </Layout>

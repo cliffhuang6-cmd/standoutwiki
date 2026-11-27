@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import BuildMaker from '../../components/BuildMaker';
 import ArrowCalculator from '../../components/ArrowCalculator';
+import ControlsReference from '../../components/ControlsReference';
 import { guides } from '../../data/guides';
 
 export function getStaticPaths() {
@@ -52,7 +53,7 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
     </div>
 
     <!-- Table of Contents -->
-    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm mb-12">
+    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm mb-10">
       <h2 class="text-xs font-black uppercase tracking-wider text-slate-500 mb-3">
         Table of Contents
       </h2>
@@ -67,6 +68,13 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
         ))}
       </ol>
     </div>
+
+    {/* Controls Interactive Quick-Answer & Platform Switcher */}
+    {guide.slug === 'controls' && (
+      <div id="interactive-controls" class="scroll-mt-24 mb-12">
+        <ControlsReference client:load />
+      </div>
+    )}
 
     <!-- Interactive Tool Embed (Contextual) -->
     {(guide.slug === 'lucky-arrows' || guide.slug === 'bizarre-arrows' || guide.slug === 'arrow-rates-explained') && (
@@ -186,6 +194,76 @@ const relatedGuides = guides.filter((g) => g.slug !== guide.slug && g.category =
           <p class="text-xs text-slate-500 mt-1">Test attribute allocations up to the 225-point cap (166 single-stat max) and calculate gear synergy bonuses.</p>
         </div>
         <BuildMaker client:load />
+      </div>
+    )}
+
+    {/* Contextual Cross-Links to Eliminate Cannibalization & Guide Users */}
+    {guide.slug === 'controls' && (
+      <div class="mt-10 p-5 rounded-2xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <div class="text-xs font-black uppercase tracking-wider text-emerald-800">Put Your Controls Into Practice</div>
+          <p class="text-sm font-bold text-slate-900 mt-0.5">
+            Explore full Stand move keybinds, combat combos, or redeem active promo codes via Phone (Z).
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 shrink-0">
+          <a href="/stands/" class="px-4 py-2 rounded-xl bg-emerald-700 text-white text-xs font-bold hover:bg-emerald-600 transition-colors">
+            All 55 Stands &rarr;
+          </a>
+          <a href="/codes/" class="px-4 py-2 rounded-xl bg-white border border-emerald-200 text-emerald-800 text-xs font-bold hover:bg-emerald-100 transition-colors">
+            Active Codes (Z Key)
+          </a>
+          <a href="/tier-list/" class="px-4 py-2 rounded-xl bg-white border border-emerald-200 text-emerald-800 text-xs font-bold hover:bg-emerald-100 transition-colors">
+            Tier List
+          </a>
+        </div>
+      </div>
+    )}
+
+    {guide.slug === 'ranked-mode' && (
+      <div class="mt-10 p-5 rounded-2xl bg-violet-50 border border-violet-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <div class="text-xs font-black uppercase tracking-wider text-violet-800">1,850 ELO Exclusive Unlock</div>
+          <p class="text-sm font-bold text-slate-900 mt-0.5">
+            Inspect full moveset frames, 70% damage reflection math, and builds on our Dolly Dagger Stand page.
+          </p>
+        </div>
+        <a href="/stands/dolly-dagger/" class="px-4 py-2 rounded-xl bg-violet-700 text-white text-xs font-bold hover:bg-violet-600 transition-colors shrink-0">
+          Dolly Dagger Guide &rarr;
+        </a>
+      </div>
+    )}
+
+    {guide.slug === 'gardening' && (
+      <div class="mt-10 p-5 rounded-2xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <div class="text-xs font-black uppercase tracking-wider text-emerald-800">Master Crop &amp; Mutation Hubs</div>
+          <p class="text-sm font-bold text-slate-900 mt-0.5">
+            Browse our full visual Gardening &amp; Seeds database or run batch yield math in the 33 Roka Mixer.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 shrink-0">
+          <a href="/gardening/" class="px-4 py-2 rounded-xl bg-emerald-700 text-white text-xs font-bold hover:bg-emerald-600 transition-colors">
+            Gardening Reference &rarr;
+          </a>
+          <a href="/rokakaka/" class="px-4 py-2 rounded-xl bg-white border border-emerald-200 text-emerald-800 text-xs font-bold hover:bg-emerald-100 transition-colors">
+            33 Roka Mutations
+          </a>
+        </div>
+      </div>
+    )}
+
+    {guide.slug === 'bizarre-arrows' && (
+      <div class="mt-10 p-5 rounded-2xl bg-purple-50 border border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <div class="text-xs font-black uppercase tracking-wider text-purple-800">Full Arrow &amp; Drop Hub</div>
+          <p class="text-sm font-bold text-slate-900 mt-0.5">
+            Compare Lucky, Bizarre, Part 3/4/5 Focus Arrows, and Arrow Parts crafting formulas side-by-side.
+          </p>
+        </div>
+        <a href="/stand-arrows/" class="px-4 py-2 rounded-xl bg-purple-700 text-white text-xs font-bold hover:bg-purple-600 transition-colors shrink-0">
+          All Stand Arrows &rarr;
+        </a>
       </div>
     )}
 

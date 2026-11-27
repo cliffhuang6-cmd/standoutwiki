@@ -125,178 +125,79 @@ export const guides: Guide[] = [
   },
   {
     "slug": "controls",
-    "title": "Stand Out Controls Guide: PC, Mobile & Console Keybinds",
+    "title": "Stand Out Controls: PC, Console (Xbox/PS) & Mobile Keybinds",
     "category": "Combat & Moves",
-    "description": "Complete keybind directory for Stand Out. Master PC keyboard controls (including X Universal Evasive), mobile touch UI, camera shiftlock, piloting, and Nov 24 console D-pad layouts.",
-    "readingTime": "5 min read",
-    "updatedDate": "2026-11-26",
+    "description": "Full Roblox STAND OUT controls for PC, Xbox/PS controller & Mobile. Includes Shift Lock (Left Alt), Inventory (Tab/Z), Universal Evasive (X), EX moves (T), and Nov 24 console D-pad layout.",
+    "readingTime": "6 min read",
+    "updatedDate": "2026-11-27",
     "tableOfContents": [
       {
         "id": "pc-keybinds",
-        "title": "PC Keyboard & Mouse Keybinds"
-      },
-      {
-        "id": "mobile-layout",
-        "title": "Mobile Touch Controls & Aim-Lock"
+        "title": "PC Keyboard & Mouse Keybinds (Shift Lock, Bag, Combat)"
       },
       {
         "id": "gamepad-layout",
-        "title": "Gamepad & Console Controls (Xbox / PS)"
+        "title": "Console & Controller Controls (Xbox / PlayStation)"
       },
       {
-        "id": "advanced-tech",
-        "title": "Advanced Mechanics: Pilot & Perfect Block"
+        "id": "mobile-layout",
+        "title": "Mobile Touch Controls, Camera Swipe & Block Toggle"
+      },
+      {
+        "id": "rebinding-combos",
+        "title": "How to Rebind Keys, Universal Evasive & EX Combos"
       },
       {
         "id": "troubleshooting",
-        "title": "Common Input Glitches & Fixes"
+        "title": "Beginner Mistakes & Input Glitches Fixes"
       }
     ],
     "sections": [
       {
         "id": "pc-keybinds",
-        "title": "PC Keyboard & Mouse Keybinds",
-        "content": "Roblox STAND OUT utilizes an extended keyboard layout allowing full access to basic combat, active Stand skills, awakening meters, and utility items. Enable Camera Shiftlock via Left Shift for responsive crosshair aim during ranged projectiles and barrage clashes.",
-        "table": {
-          "headers": [
-            "Keybind",
-            "Function",
-            "Context / Notes"
-          ],
-          "rows": [
-            [
-              "LMB",
-              "Light Attack / Combo",
-              "Chains into 4-hit combo"
-            ],
-            [
-              "RMB / R",
-              "Heavy Attack / Special",
-              "Guardbreak or signature heavy strike"
-            ],
-            [
-              "E, T, Y, F, G, H",
-              "Stand Ability Hotkeys",
-              "Fires assigned Stand moveset skills"
-            ],
-            [
-              "Q",
-              "Dash / Evasive Roll",
-              "Invulnerability frames on startup"
-            ],
-            [
-              "X",
-              "Universal Evasive",
-              "Breaks hitstun/ragdoll for 1 EX Bar (30s CD, 0 DMG)"
-            ],
-            [
-              "F",
-              "Block / Guard",
-              "Tap on connection for Perfect Block parry"
-            ],
-            [
-              "Left Ctrl",
-              "Pilot Mode Toggle",
-              "Steer Stand remotely; drains stamina"
-            ],
-            [
-              "P",
-              "Awakening Pose",
-              "Regenerates EX gauge in safe zones"
-            ],
-            [
-              "Left Shift",
-              "Shiftlock Camera",
-              "Locks crosshair for precision aim"
-            ],
-            [
-              "Tab / `",
-              "Inventory / Phone",
-              "Opens item satchel and smartphone apps"
-            ],
-            [
-              "Space (x2)",
-              "Double Jump / Stand Jump",
-              "Requires Stand jump mastery"
-            ]
-          ]
-        }
-      },
-      {
-        "id": "mobile-layout",
-        "title": "Mobile Touch Controls & Aim-Lock",
-        "content": "The mobile interface features a circular virtual joystick on the left screen and a dynamic radial action pad on the right. Tapping the target icon enables Target Aim-Lock. Following the Nov 15 update, mobile players can enable 'Block Input: Toggle' in settings (allowing one tap to block and another to unblock) and smoothly swipe the camera while pressing light or heavy attacks.",
+        "title": "PC Keyboard & Mouse Keybinds (Shift Lock, Bag, Combat)",
+        "content": "Per official STAND OUT developer controls, Camera Shift Lock on PC is Left Alt (whereas Left Shift is dedicated to Sprinting, alongside W+W). Equip your Smartphone from Meryl Mei Qi with Z, open your Backpack Inventory with Tab or `, summon/recall your Stand with E, activate Awakening EX Skills by holding T, and open the Menu/Keybind Editor with M.",
         "tips": [
-          "Increase touch button transparency in the in-game settings to maximize peripheral combat visibility.",
-          "Use the dedicated Lock-On button to prevent camera drift during high-speed mobile PvP battles."
+          "Left Shift is Sprint—always press Left Alt if your crosshair is not locking behind your character.",
+          "Press Z to open and close your Smartphone (Gifts Codes, Huber Fast Travel, Gangs, Map); press Tab or ` for Inventory & items."
         ]
       },
       {
         "id": "gamepad-layout",
-        "title": "Gamepad & Console Controls (Xbox / PS)",
-        "content": "STAND OUT natively supports game controllers across Xbox, PlayStation, and PC. The November 24, 2026 patch standardized console D-pad quick bindings alongside triggers and face buttons (and console players can edit keyboard/mouse binds in settings).",
-        "table": {
-          "headers": [
-            "Button (Xbox / PS)",
-            "Combat Action",
-            "Details"
-          ],
-          "rows": [
-            [
-              "RT / R2",
-              "Light Attack",
-              "Primary basic combo sequence"
-            ],
-            [
-              "RB / R1",
-              "Heavy Finisher",
-              "Guardbreak strike against holding blocks"
-            ],
-            [
-              "LT / L2",
-              "Block / Guard",
-              "Tap on incoming hitbox for Perfect Block parry"
-            ],
-            [
-              "LB / L1",
-              "Dash",
-              "1.2s standardized dash cooldown"
-            ],
-            [
-              "D-Pad Left",
-              "Universal Evasive",
-              "Breaks hitstun/ragdoll (1 EX Bar, 30s CD); Hold RT + D-Pad Left toggles cards"
-            ],
-            [
-              "D-Pad Right",
-              "Toolbar Item",
-              "Tap to use selected toolbar item; hold & release to cycle next slot"
-            ],
-            [
-              "Y, B, X / △, ○, □",
-              "Stand Skills",
-              "Assigned special moves and EX skills"
-            ],
-            [
-              "R3 (Right Stick)",
-              "Lock-On Toggle",
-              "Focus camera target on nearest opponent"
-            ]
-          ]
-        }
+        "title": "Xbox, PlayStation & Controller Support (Nov 24 D-Pad Layout)",
+        "content": "STAND OUT includes full native support for Xbox, PlayStation, and PC USB gamepads. Following the Nov 22 and Nov 24, 2026 updates, D-Pad Left handles Universal Evasive (or Hold RT + D-Pad Left to toggle cards), D-Pad Right uses/cycles your toolbar items, R2 taps Pose, R3 toggles target Lock-On, Touchpad/View toggles the Menu cursor, and console players can even rebind KBM controls inside Settings.",
+        "tips": [
+          "Use R3 Lock-On during ranged Stand fights (Mandom, Catch The Rainbow, Emperor) so aim-assisted skills track jumping targets.",
+          "Karaoke and Story QTE minigames automatically map to your controller face buttons on Xbox and PlayStation."
+        ]
       },
       {
-        "id": "advanced-tech",
-        "title": "Advanced Mechanics: Pilot & Perfect Block",
-        "content": "Piloted Stands (such as The World, Under World, and Highway Star) allow players to control the Stand entity up to 150 studs away from their physical avatar. While piloting, your physical avatar is completely immobile and undefended. Use pilot mode from behind high rooftops or alley corners to scout and execute ambush attacks.",
-        "warning": "Taking damage while piloting immediately snaps your camera back to your character and puts pilot mode on a 15-second penalty cooldown."
+        "id": "mobile-layout",
+        "title": "Mobile Touch Controls, Camera Swipe & Block Toggle",
+        "content": "The mobile layout places a virtual movement stick on the left and a customizable radial combat pad on the right. Following the Nov 15 combat update, mobile players can swipe the camera freely while tapping Light or Heavy attacks, resize and drag individual touch buttons in Settings, adjust opacity, and switch Block Input from Hold to Toggle.",
+        "tips": [
+          "Turn on 'Block Input: Toggle' in Settings if holding Block while swiping your mobile camera feels cramped—one tap holds guard, a second tap releases.",
+          "Slightly enlarge the Dash and Universal Evasive icons in the mobile HUD editor so you can break combo stuns reliably."
+        ]
+      },
+      {
+        "id": "rebinding-combos",
+        "title": "How to Change/Reset Keybinds, EX Moves & Essential Combos",
+        "content": "Press M (or tap the top-left Menu icon) and open Settings to remap combat abilities, movement actions, or unbind Right-Click Heavy Attack (added Nov 22 so M2 never conflicts with camera dragging). Mastering STAND OUT combat combines M1 strings with Guardbreaks, EX extensions, and Evasive defense.",
+        "steps": [
+          "Standard Guardbreak Confirm: 3x Light Attack (LMB) -> Dash Cancel (Q) -> Heavy Attack (R / RMB) to punish holding Block.",
+          "Awakening EX Extension: Summon (E) -> Build EX via damage or Pose (P) -> Land stun skill -> Hold T + EX Ability (1–5 EX Bars) -> Finish with Light string.",
+          "Defensive Reset: Hold F (or tap F within 0.12s for Perfect Block Parry) -> If caught in a combo, press X (D-Pad Left on controller) for Universal Evasive (1 EX Bar, 10 DMG burst)."
+        ]
       },
       {
         "id": "troubleshooting",
-        "title": "Common Input Glitches & Fixes",
-        "content": "If your character becomes stuck in a permanent blocking animation or skill hotkeys fail to register after cutscenes, press the Esc key twice to reset camera focus, or unequip and re-equip your Stand with the Z key. If Shiftlock becomes desynchronized, toggle Roblox standard Shiftlock in settings off and on.",
+        "title": "Common Beginner Input Mistakes & Fixes",
+        "content": "Most new player control issues come from Roblox muscle memory conflicting with STAND OUT defaults. If a skill stops responding after a cutscene or ragdoll, press Esc twice or recall and resummon your Stand with E (or unequip items with Tab/Z).",
+        "warning": "Do not press Left Shift expecting Shiftlock—it triggers Sprint. Use Left Alt on PC or R3 on controller. Also remember Universal Evasive costs 1 EX Bar with a 45-second cooldown (30 seconds in 1v1 Ranked) and cannot activate at 0 EX.",
         "tips": [
-          "Binding dash to a side mouse button significantly improves defensive reaction times against surprise Time Stops."
+          "Always unlock your Smartphone from Meryl Mei Qi Quest 2 first so Z-key Fast Travel, Map, and Code Redemption work properly.",
+          "Crouch (C) whenever infiltrating Rohan's villa or camera-guarded rooms so you can see and avoid red CCTV vision cones."
         ]
       }
     ]
@@ -623,9 +524,9 @@ export const guides: Guide[] = [
   },
   {
     "slug": "bizarre-arrows",
-    "title": "Stand Out Bizarre Arrows: 4.4% Pinnacle Chance & Raid Drops",
+    "title": "Bizarre Arrow Farming Guide: Train Raids & 4.4% Pinnacle Strategy",
     "category": "Endgame & Raids",
-    "description": "Complete guide to Bizarre Arrows in Stand Out. Learn how to achieve a 4.4% Pinnacle rate, farm Passione Train Raids, and execute optimal focus rolling.",
+    "description": "Focused farming strategy for Bizarre Arrows in STAND OUT: Passione Train Raid token loops (33 Tokens), 9x Mysterious forging routes, and when to roll vs save.",
     "readingTime": "5 min read",
     "updatedDate": "2026-11-16",
     "tableOfContents": [
@@ -1798,9 +1699,9 @@ export const guides: Guide[] = [
   },
   {
     "slug": "gardening",
-    "title": "Stand Out Gardening Guide: Crops, Greenhouses & Roka Mutations",
+    "title": "Gardening Profit Strategy: Jar Packaging, Rain Boost & Night Roka Sales",
     "category": "Economy",
-    "description": "The definitive agricultural guide for Stand Out. Covers crop timers, 3x Gang Greenhouse buffs, 20% rain growth bonus, +20% packaged produce value, Big Chop night Rokakaka sales, and 33 Rokakaka mutations.",
+    "description": "Maximize Dalas farming profits in STAND OUT: +20% Jar Packaging math, Texts Garden Delivery haggling, +20% Rain speed timing, Fruit Company bases, and surviving Big Chop night sales.",
     "readingTime": "7 min read",
     "updatedDate": "2026-11-26",
     "tableOfContents": [
@@ -2778,9 +2679,9 @@ export const guides: Guide[] = [
   },
   {
     "slug": "ranked-mode",
-    "title": "Stand Out Ranked Mode Guide: ELO Tiers, 1v1 Arena & Dolly Dagger",
+    "title": "Stand Out 1v1 Ranked Mode Guide: ELO Rules, Combat & Rewards",
     "category": "Endgame & Raids",
-    "description": "Comprehensive guide to 1v1 Ranked Mode in Roblox STAND OUT. Covers Level 60 entry, 5s respawns, removed health packs, 3x point gain, 30s Universal Evasive, and unlocking Dolly Dagger at 1,850 ELO.",
+    "description": "Competitive 1v1 Ranked Mode rules in Roblox STAND OUT: Level 60 requirement, 5s respawns, removed health packs, 3x ELO climbing tips, 30s Universal Evasive, and hitting 1,850 ELO.",
     "readingTime": "8 min read",
     "updatedDate": "2026-11-26",
     "tableOfContents": [

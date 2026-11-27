@@ -151,7 +151,7 @@ export default function RokaMixer() {
         </div>
 
         {/* Tab Controls */}
-        <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-xl text-xs font-bold shrink-0">
+        <div className="flex flex-wrap items-center gap-1.5 p-1 bg-slate-100 rounded-xl text-xs font-bold w-full sm:w-auto">
           <button
             onClick={() => setActiveTab('calculator')}
             className={`px-3 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
@@ -404,11 +404,20 @@ export default function RokaMixer() {
                 key={m.slug}
                 className="p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-xs transition-all space-y-2"
               >
-                <div className="flex items-center justify-between">
-                  <h3 className="font-black text-sm text-slate-900 flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-purple-700" />
-                    {m.name}
-                  </h3>
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <img
+                      src={`/images/rokakaka/${m.slug}.webp`}
+                      alt={`${m.name} fruit icon in Roblox STAND OUT`}
+                      width={40}
+                      height={40}
+                      loading="lazy"
+                      className="w-10 h-10 rounded-lg object-cover bg-slate-100 border border-slate-200 shrink-0"
+                    />
+                    <h3 className="font-black text-sm text-slate-900 truncate">
+                      {m.name}
+                    </h3>
+                  </div>
                   <div className="flex gap-1.5 text-[10px] font-bold">
                     {m.removesStand && (
                       <span className="px-2 py-0.5 rounded-full bg-red-100 text-red-800">Stand Reset</span>

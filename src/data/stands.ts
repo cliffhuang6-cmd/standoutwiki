@@ -863,116 +863,203 @@ export const stands: Stand[] = [
       "farming": "S"
     },
     "status": "Playable",
-    "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 4 focus items.",
-    "lore": "Highway Star is a powerful Stand possessed by Yuya Fungami in Part 4: Diamond is Unbreakable.",
+    "obtainMethod": "Rollable from Mysterious Arrows (~13.9% Mythic pool), Lucky Arrows (22.1% Mythic), Bizarre Arrows (37.7% Mythic), Part 4 Focus Arrows, OR farmed as a Stand Chip from the Highway Star Raid.",
+    "lore": "Yuya Fungami's long-range pursuit Stand tracks foes by scent across 600 studs, splits into a wall-climbing pack of feet, and drains enemies' life Nutrients to heal its user.",
     "image": "/images/stands/highway-star.webp",
     "combatRole": "Speed / Hit-and-Run",
     "passives": [
       {
-        "name": "Scent",
-        "description": "Scented enemies appear on your scent list and are marked through walls. Pursuit can chase them within 600 studs. Becoming Soaked washes the scent off."
+        "name": "Scent Tracking (600 Studs)",
+        "description": "Enemies tagged by Scent Trap, Footprint Flurry, or DEEEEP SNIFF appear on your Scent List and glow through walls. Pursuit chases marked targets anywhere within 600 studs. Becoming Soaked (rain/hydrant/November Rain) washes Scent off!"
+      },
+      {
+        "name": "Nutrients Gauge (0–100)",
+        "description": "Attacking and draining fills Nutrients up to 100, passively healing you while summoned (fades after 6s out of combat). Warning: below 60 Nutrients you take +20% damage and move -15% slower! At 100 Nutrients, your next Scent Trap or Nutrient Siphon empowers and resets gauge to 60."
       }
     ],
     "moveset": [
       {
         "key": "LMB",
-        "name": "Barrage",
+        "name": "Barrage (Nov 22 Combo Extender)",
         "type": "Barrage",
         "cooldown": "14s",
-        "damage": "Multi-Hit Rapid DMG",
-        "description": "Unleash a rapid flurry of punches on your opponent."
+        "damage": "Multi-Hit + Combo Extend",
+        "description": "Unleashes a rapid flurry of punches. Per the Nov 22 Update 1 patch, Highway Star's Barrage now cleanly combo-extends into M1 strings and Nutrient Siphon!"
       },
       {
         "key": "E",
-        "name": "Scent Trap",
-        "type": "Attack",
+        "name": "Scent Trap (Fake Arrow / Coated Prop)",
+        "type": "Utility",
         "cooldown": "30s",
-        "damage": "Combative Strike",
-        "description": "Aim at a throwable to coat it in scent, or aim at the ground to throw a fake Mysterious Arrow. Touching either applies Scented for 3 minutes. The arrow also drains and slows whoever takes the bait. Traps last 1 minute, with up to one arrow and two coated items at a time."
+        "damage": "Trap Drain + 3-Min Scent",
+        "description": "Coat a throwable in scent (up to 2 props) or drop a fake Mysterious Arrow on the ground (1 at a time, lasts 1 min). Any player touching the trap takes drain/slow and is Scented for 3 minutes."
       },
       {
         "key": "R",
-        "name": "Pursuit",
+        "name": "Pursuit (600-Stud Homing Chase)",
         "type": "Attack",
         "cooldown": "28s",
-        "damage": "Combative Strike",
-        "description": "Tap to send Highway Star after your selected Scented target within 600 studs. It chases them on its own and drains them on contact, healing you and filling your Nutrients. Hold to recall it, or hold while it is home to cycle through scents. A perfect block as the feet land is the only way to turn th"
+        "range": "600 Studs",
+        "parriable": true,
+        "description": "Tap to send Highway Star chasing your selected Scented target within 600 studs, draining HP & Nutrients on contact (Hold to cycle scents/recall). Only a Perfect Block right as the feet land turns them away—cast from Pilot Mode (-15% pilot speed Nov 22) to send the pack hunting while you roam!"
       },
       {
         "key": "T",
-        "name": "Footprints",
-        "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "A perfect block as Pursuit’s feet land turns them away; once they are on, only becoming Soaked or riding in a fast-moving vehicle removes them, and the same goes for the feet left by Footprint Storm."
-      },
-      {
-        "key": "Y",
         "name": "Nutrient Siphon",
-        "type": "Attack",
+        "type": "Heavy",
         "cooldown": "18s",
-        "damage": "Combative Strike",
-        "description": "Highway Star grabs an enemy in front of it and drains their health to heal you. Scented enemies are held longer and gain more Withered stacks. Against a downed enemy, finish them off and recover 30% of your maximum health."
+        "damage": "Drain Grab + 30% Execute Heal",
+        "description": "Grab an enemy to siphon HP and stack Withered (held longer on Scented foes). Using Nutrient Siphon on a downed enemy executes them and restores 30% of your max HP."
       },
       {
-        "key": "F",
-        "name": "Nutrients",
-        "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "Stand attacks and draining enemies fill your Nutrients, up to 100. Stored Nutrients gradually heal you while Highway Star is summoned. Below 60, you take 20% more damage and move 15% slower while it is out. At 100, your next Scent Trap or Nutrient Siphon is stronger and leaves you with 60. Nutrients"
-      },
-      {
-        "key": "G",
-        "name": "Foot Form",
-        "type": "Attack",
+        "key": "Hold E",
+        "name": "Foot Form & Wall Climb",
+        "type": "Movement",
         "cooldown": "3s",
-        "damage": "Combative Strike",
-        "description": "Hold the summon key to split Highway Star into a pack of feet. While piloting, move 75% faster and climb walls by moving into them. You cannot punch or fly in this form. Hold the key again to change back."
+        "description": "Hold Summon (E) to split into a pack of feet moving 75% faster in Pilot and climbing any wall automatically. Hold again to reform. (Mobile Highway Star bug fixed Nov 22.)"
       },
       {
-        "key": "H",
+        "key": "H (Foot Form)",
         "name": "Footprint Flurry",
         "type": "Barrage",
         "cooldown": "14s",
-        "damage": "Multi-Hit Rapid DMG",
-        "description": "In Foot Form, strike enemies in front of you with a flurry of feet. Hits apply Scented and occasionally drain health to heal you. The final hit knocks them back. in normal form, use Barrage instead."
+        "damage": "Life-Drain Flurry + Knockback",
+        "description": "While split into Foot Form, unleashes a flurry of feet that applies Scented, occasionally heals you, and knocks targets back on the last hit."
+      },
+      {
+        "key": "Hold T + G",
+        "name": "I'm so Handsome [2 Bars] (Nov 22 Tuned)",
+        "type": "Awakening / EX",
+        "cooldown": "70s",
+        "exCost": "2 EX Bars",
+        "description": "Strike a pose to restore 18% of your maximum HP (adjusted from 25% in Nov 22 Update 1) and instantly gain +40 Nutrients to escape the sub-60 penalty. Getting hit mid-pose cancels both rewards."
+      },
+      {
+        "key": "Hold T + H",
+        "name": "DEEEEP SNIFF [3 Bars]",
+        "type": "Awakening / EX",
+        "cooldown": "120s",
+        "exCost": "3 EX Bars",
+        "range": "1,000 Studs (Out of Combat)",
+        "description": "Marks all player enemies within 1,000 studs as Scented for 6 full minutes (ignores wild seals/animals per Oct 26 patch). Only usable outside active combat."
+      },
+      {
+        "key": "Hold T + V",
+        "name": "Footprint Storm [3 Bars]",
+        "type": "Awakening / EX",
+        "cooldown": "40s",
+        "exCost": "3 EX Bars",
+        "damage": "Heavy Trapping Wave",
+        "description": "Sweeps a tidal wave of feet forward that traps, drains, and hurls enemies (more hits on Scented targets). Leaves attached feet for 4 seconds draining and slowing victims until Soaked or inside a speeding vehicle."
       }
     ],
     "abilityScaling": [
-      "Every 20 Ability points increases signature skill effectiveness and duration.",
-      "Ability points scale projectile velocity and hitbox detection radius."
+      "Ability points improve Pursuit tracking chase pressure, Footprint Storm drain ticks, and Nutrient regeneration sustain.",
+      "High Health investment leverages percentage max-HP heals (30% on Siphon execute, 18% on I'm so Handsome).",
+      "Damage/Strength amplifies Nov 22's combo-extending Barrage strings."
     ],
     "recommendedBuild": {
       "points": {
-        "health": 50,
-        "damage": 50,
-        "ability": 50
+        "health": 85,
+        "damage": 65,
+        "ability": 75
       },
-      "subAbility": "Hamon (Caesar Path)",
-      "synergyNotes": "Pair with DIO or Jotaro gear sets for maximum damage scaling and ability cooldown reduction."
+      "subAbility": "Hamon (Caesar Path) or Vampire",
+      "synergyNotes": "85 Health maximizes percentage healing from Nutrient Siphon executes (30% Max HP) and I'm so Handsome (18% Max HP), while 65 Damage / 75 Ability capitalizes on Update 1's combo-extending Barrage and Scent Pursuit drains."
     },
     "pros": [
-      "Authentic JoJo moveset matching official game mechanics",
-      "Strong competitive versatility across PvP and Raid encounters",
-      "Reliable guardbreak options and combo starters"
+      "Relentless 600-stud Pursuit & 1,000-stud DEEEEP SNIFF make escaping impossible in open worlds",
+      "Nov 22 Barrage combo-extension makes close-range 1v1 duels vastly stronger",
+      "High sustain via Nutrient Siphon (30% downed execute heal) and I'm so Handsome (+40 Nutrients)",
+      "Drop-farmable directly via Highway Star Stand Chip in the Highway Star Raid"
     ],
     "cons": [
-      "Requires strict Ability point investment to optimize scaling",
-      "Punishable recovery frames on whiffed heavy finishers",
-      "Dependent on situational spacing and cooldown pacing"
+      "Below 60 Nutrients triggers a punishing +20% damage taken / -15% speed vulnerability",
+      "Becoming Soaked (Catch The Rainbow / November Rain / Hydrants) completely washes Scent marks away",
+      "Taking a hit mid-pose cancels I'm so Handsome's 18% heal and 40 Nutrients"
     ],
     "faqs": [
       {
-        "q": "How do I obtain Highway Star in STAND OUT?",
-        "a": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 4 focus items."
+        "q": "What rarity is Highway Star and how do you unlock it in STAND OUT?",
+        "a": "Highway Star is a Mythical Stand (Part 4). Roll it from Mysterious Arrows (~13.9% Mythic tier), Lucky Arrows (22.1%), Bizarre Arrows (37.7%), Part 4 Focus Arrows, or farm its Stand Chip from the Highway Star Raid (started outside Museum of Oahu)."
       },
       {
-        "q": "What combat role does Highway Star fulfill?",
-        "a": "Highway Star functions primarily as an authentic Speed / Hit-and-Run Stand with dedicated tools for competitive battles."
+        "q": "Did Highway Star change in Update 1 (Nov 22)?",
+        "a": "Yes: Barrage now combo extends cleanly, I'm so Handsome healing adjusted from 25% to 18% max HP (+40 Nutrients), Pilot movement speed decreased by 15%, and mobile bugs were fixed."
+      },
+      {
+        "q": "How do you stop Highway Star's Pursuit feet?",
+        "a": "Perfect Block (F) right at the moment the Pursuit feet touch you to deflect them, or wash off Scent/Pursuit feet using Soaked status (fire hydrants, Rain, November Rain) or a fast-moving vehicle."
       }
     ],
-    "verifiedDate": "2026-11-16"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "Highway Star Stand Out – Mythical Rarity, Pursuit Chase & 225 SP Build",
+    "seoDescription": "Highway Star (Mythical Stand) guide in Roblox STAND OUT: 600-stud Scent Pursuit, Nutrient heal thresholds, Nov 22 Barrage combo-extend & 18% EX heal, Foot Form climb & Raid Chip guide.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/highway-star-pose.webp",
+        "alt": "Yuya Fungami Highway Star pose in Roblox STAND OUT",
+        "title": "Highway Star Pose",
+        "caption": "Mythical Part 4 pursuit Stand with 600-stud Scent chase and Nutrient drain.",
+        "width": 262,
+        "height": 371
+      },
+      {
+        "src": "/images/stands/highway-star-pursuit-feet.webp",
+        "alt": "Highway Star Pursuit homing feet chasing a Scented enemy in STAND OUT",
+        "title": "Pursuit Homing Chase",
+        "caption": "Autonomously tracks marked targets up to 600 studs until Perfect Blocked.",
+        "width": 269,
+        "height": 257
+      },
+      {
+        "src": "/images/stands/highway-star-nutrient-siphon.webp",
+        "alt": "Highway Star Nutrient Siphon drain & execute heal in STAND OUT",
+        "title": "Nutrient Siphon & Gauge",
+        "caption": "Keeps Nutrients above 60 to avoid vulnerability and executes downed foes for 30% HP.",
+        "width": 359,
+        "height": 122
+      },
+      {
+        "src": "/images/stands/highway-star-foot-form.webp",
+        "alt": "Highway Star Foot Form wall climbing & Footprint Flurry in STAND OUT",
+        "title": "Foot Form (Wall Climb)",
+        "caption": "Hold E to split into 75%-faster wall-climbing feet with Footprint Flurry.",
+        "width": 289,
+        "height": 212
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "Never summon Highway Star blindly into a brawl below 60 Nutrients—charge Nutrients with quick Barrage -> Nutrient Siphon combos or safe I'm so Handsome poses, tag victims with Scent Traps, and let Pursuit + Footprint Storm wear runners down.",
+      "bestCombos": [
+        {
+          "name": "Nov 22 Barrage Sustain Chain",
+          "sequence": "M1 x3 → LMB Barrage (Combo Extends!) → M1 x2 → T (Nutrient Siphon) → E (Scent Trap Follow)",
+          "notes": "Takes full advantage of Nov 22's Barrage combo-extension buff to rapidly top off Nutrients past 60+."
+        },
+        {
+          "name": "600-Stud Bounty Hunter Loop",
+          "sequence": "Hold T + H (DEEEEP SNIFF Out of Combat) → Ctrl Pilot / R (Pursuit Chase) → Hold T + V (Footprint Storm)",
+          "notes": "Marks entire districts for 6 minutes so Pursuit hunts hiding Gang enemies cleanly."
+        }
+      ],
+      "pvpStrategy": "Watch your Nutrient bar! Stay above 60 Nutrients at all times; if trapped below 60 in a bad trade, disengage briefly with Foot Form wall-climbing (Hold E) and recover +40 Nutrients with I'm so Handsome safely behind cover.",
+      "pveStrategy": "Incredible for Gang Wars and Raid sustain—executing downed enemies with Nutrient Siphon refunds 30% Max HP without touching healing items.",
+      "howToCounter": [
+        "Trigger Soaked status (walk into Catch The Rainbow/November Rain water or open fire hydrants) to wash off Scent immediately!",
+        "Perfect Block (`F`) right as Pursuit's homing feet reach you—that is the only way to bounce them off cleanly.",
+        "Rush Highway Star whenever its Nutrients drop below 60 (+20% extra damage taken!) or hit it mid-pose to cancel I'm so Handsome."
+      ],
+      "recommendedItems": [
+        "Highway Star Stand Chip (Guaranteed unlock source from Highway Star Raid)",
+        "High-HP Set Pieces (scales 30% execute & 18% pose heal thresholds)"
+      ],
+      "commonMistakes": [
+        "Fighting at 0–50 Nutrients with your Stand out—you suffer +20% damage taken and -15% speed.",
+        "Posing for I'm so Handsome within enemy dash range (1 hit cancels both heal and Nutrients).",
+        "Chasing Catch The Rainbow / November Rain with Scent when water abilities instantly wash your Scent tag off."
+      ]
+    }
   },
   {
     "slug": "mandom",
@@ -986,96 +1073,198 @@ export const stands: Stand[] = [
       "farming": "B"
     },
     "status": "Playable",
-    "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 7 focus items.",
-    "lore": "Mandom is a powerful Stand possessed by Ringo Roadagain in Part 7: Steel Ball Run.",
+    "obtainMethod": "Rollable from Mysterious Arrows (Mythical tier), Lucky Arrows (22.1% Mythical tier), or Bizarre Arrows (37.7% Mythical tier).",
+    "lore": "“Welcome… to the 'True Man's World.'” Ringo Roadagain rewinds time by exactly six seconds to reset fatal mistakes, reposition behind attackers, and trade deadly close- and long-range revolver shots.",
     "image": "/images/stands/mandom.webp",
     "combatRole": "Disruption",
     "passives": [
       {
-        "name": "Stand Aura",
-        "description": "Intrinsically manifests user Stand power, scaling combat effectiveness with Ability stat points."
+        "name": "Six-Second Temporal Undo (Combat Rewind)",
+        "description": "Rewind restores your exact HP and physical location from 6 seconds prior (cannot rewind held throwables per Oct 26 patch; Watch Set is cancelable early). Note: Vampire Nov 22 execution drain permanently finishes downed targets so Mandom/CD cannot revive them."
       },
       {
-        "name": "Combat Resilience",
-        "description": "Mastery over Stand manifestation grants increased resistance to stun and knockback."
+        "name": "Dual Revolver + Up-Close Shovel Kit",
+        "description": "Combines long-range hitscan Deadeye/Ol' Reliable revolver pokes with Update 1 close-range EX brawling (Shovel Slam & Point Blank, usable even with Stand off as of Nov 22!)."
       }
     ],
     "moveset": [
       {
-        "key": "LMB",
-        "name": "Two rewind timings",
+        "key": "LMB / M2",
+        "name": "Revolver Strikes / Melee",
         "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "Rewind instantly or schedule a rewind with Watch Set."
+        "damage": "Hybrid Gun/Melee Strikes",
+        "description": "Standard combo sequence while spacing for revolver shots or close-range shovel punishes."
       },
       {
         "key": "E",
-        "name": "Rewind",
-        "type": "Attack",
+        "name": "Rewind (6 Seconds)",
+        "type": "Utility",
         "cooldown": "45s",
-        "damage": "Combative Strike",
-        "description": "Turn back time by 6 seconds, restoring your previous position and health."
+        "specialEffects": "Restores HP & Position",
+        "description": "Turns back the wristwatch dial by 6 seconds, instantly restoring your health and position from 6 seconds earlier—perfect for undoing heavy beatdowns or resetting off edges."
       },
       {
         "key": "R",
         "name": "Ol' Reliable [BASIC ATTACK]",
         "type": "Attack",
         "cooldown": "28s",
-        "damage": "Combative Strike",
-        "description": "Fire a trusty revolver shot at your target."
+        "damage": "Fast Revolver Shot",
+        "description": "Draws Ringo's revolver and fires a crisp mid-to-long-range projectile at your cursor."
       },
       {
         "key": "T",
         "name": "Deadeye",
         "type": "Attack",
         "cooldown": "35s",
-        "damage": "Combative Strike",
-        "description": "Take careful aim and fire a powerful shot."
+        "damage": "High-Burst Aimed Shot",
+        "description": "Takes careful aim before firing a devastating revolver round to punish healing, posing, or distant zoners."
       },
       {
         "key": "Y",
-        "name": "Watch Set",
-        "type": "Attack",
+        "name": "Watch Set (Cancelable)",
+        "type": "Utility",
         "cooldown": "70s",
-        "damage": "Combative Strike",
-        "description": "Start a countdown that automatically rewinds you and nearby targets. Once the watch is set, you can move and fight while the countdown runs. The rewind happens automatically when time runs out. [EX Moveset: TRUE MAN’S WORLD (5 Bars) Spend a full EX gauge to rewind after a lethal hit during the next "
+        "specialEffects": "Forced AoE Rewind",
+        "description": "Starts a countdown timer while letting you move and fight freely. When the watch expires, both you and nearby enemies rewind cleanly back 6 seconds (cancelable early per Oct 24 patch)."
+      },
+      {
+        "key": "Hold T + G",
+        "name": "Shovel Slam [1 Bar]",
+        "type": "Awakening / EX",
+        "cooldown": "18s",
+        "exCost": "1 EX Bar",
+        "blockable": false,
+        "parriable": true,
+        "damage": "10–22 DMG (80% STR / 20% ABL)",
+        "description": "Added in Update 1 (usable without Stand out per Nov 22!). Slams a heavy shovel downward to break guard and send opponents tumbling forward. Can be Perfect Blocked."
+      },
+      {
+        "key": "Hold T + H",
+        "name": "Point Blank [2 Bars]",
+        "type": "Awakening / EX",
+        "cooldown": "22s",
+        "exCost": "2 EX Bars",
+        "blockable": false,
+        "parriable": true,
+        "damage": "8–18 DMG (80% STR / 20% ABL)",
+        "description": "Added in Update 1 (usable without Stand out per Nov 22!). Grabs an opponent straight through guard and fires at point-blank range, leaving them stunned right within M1 follow-up distance. Can be Perfect Blocked."
+      },
+      {
+        "key": "Hold T + V",
+        "name": "TRUE MAN'S WORLD [5 Bars]",
+        "type": "Awakening / EX",
+        "cooldown": "90s",
+        "exCost": "5 EX Bars",
+        "specialEffects": "30s Anti-Death / Instant Bleedout Revive",
+        "description": "Spends all 5 EX bars to cheat death for 30 seconds: taking lethal damage triggers an automatic 6-second rewind (repositioning nearby foes too), or cast during bleedout for an instant revive!"
       }
     ],
     "abilityScaling": [
-      "Every 20 Ability points increases signature skill effectiveness and duration.",
-      "Ability points scale projectile velocity and hitbox detection radius."
+      "Both Update 1 EX moves (Point Blank 8–18 DMG and Shovel Slam 10–22 DMG at 166 STR) scale 80% with Strength (Damage) and 20% with Ability.",
+      "Ability points improve rewind/gun utility scaling while Strength carries lethal pistol + shovel combos."
     ],
     "recommendedBuild": {
       "points": {
-        "health": 45,
-        "damage": 45,
-        "ability": 60
+        "health": 80,
+        "damage": 80,
+        "ability": 65
       },
-      "subAbility": "Hamon (Caesar Path)",
-      "synergyNotes": "Pair with DIO or Jotaro gear sets for maximum damage scaling and ability cooldown reduction."
+      "subAbility": "Hamon (Caesar Path) or Vampire",
+      "synergyNotes": "Because Update 1's Point Blank and Shovel Slam scale 80% with Strength and 20% with Ability, split stats across 80 Health, 80 Damage, and 65 Ability. High Health maximizes how much HP Rewind recovers after eating an enemy's 5-EX ultimate!"
     },
     "pros": [
-      "Authentic JoJo moveset matching official game mechanics",
-      "Strong competitive versatility across PvP and Raid encounters",
-      "Reliable guardbreak options and combo starters"
+      "S+ Ranked PvP mindgames: 6s Rewind resets opponent ultimates and restores lost HP",
+      "TRUE MAN'S WORLD (5 EX) prevents lethal executions and revives out of bleedout",
+      "Update 1 Shovel Slam (1 EX) and Point Blank (2 EX) give Mandom true guardbreak & grab pressure even Standless",
+      "Deadeye + Ol' Reliable threaten from long range with Left Alt Shiftlock"
     ],
     "cons": [
-      "Requires strict Ability point investment to optimize scaling",
-      "Punishable recovery frames on whiffed heavy finishers",
-      "Dependent on situational spacing and cooldown pacing"
+      "Long base cooldowns across Rewind (45s), Deadeye (35s), and Watch Set (70s)",
+      "Vampire blood drain execution (Nov 22) permanently kills downed enemies before Mandom can rewind-revive",
+      "Shovel Slam and Point Blank can both be Perfect Blocked by sharp defenders"
     ],
     "faqs": [
       {
-        "q": "How do I obtain Mandom in STAND OUT?",
-        "a": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 7 focus items."
+        "q": "What rarity is Mandom and how do you get it in STAND OUT?",
+        "a": "Mandom is a Mythical Stand (Part 7), obtainable from Mysterious Arrows (~13.9% Mythic pool), Lucky Arrows (22.1% Mythical rate), or Bizarre Arrows (37.7% Mythical rate)."
       },
       {
-        "q": "What combat role does Mandom fulfill?",
-        "a": "Mandom functions primarily as an authentic Disruption Stand with dedicated tools for competitive battles."
+        "q": "How does Mandom's Rewind work in STAND OUT?",
+        "a": "Pressing E (Rewind, 45s CD) snaps you back to the exact health total and physical coordinates you held 6 seconds earlier. Watch Set (Y, 70s) rewinds both you and nearby foes after a countdown, while TRUE MAN'S WORLD (5 EX) automatically rewinds lethal hits for 30s."
+      },
+      {
+        "q": "What new moves did Mandom get in Update 1?",
+        "a": "Studio Umbra added two EX melee moves: Shovel Slam (1 EX Bar, 18s CD, guardbreak, 10–22 DMG) and Point Blank (2 EX Bars, 22s CD, grab through block, 8–18 DMG)—both fixed on Nov 22 to work even while Standless!"
       }
     ],
-    "verifiedDate": "2026-11-16"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "Mandom Stand Out – Mythical Rarity, 6s Rewind, EX Moves & Build",
+    "seoDescription": "Complete Mandom guide (Mythical Stand) in Roblox STAND OUT: 6-second Rewind & Watch Set mechanics, Deadeye sniping, Update 1 Point Blank (2 EX) & Shovel Slam (1 EX), True Man's World (5 EX) & 225 SP build.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/mandom-pose.webp",
+        "alt": "Ringo Roadagain Mandom pose in Roblox STAND OUT",
+        "title": "Mandom Pose",
+        "caption": "Mythical Part 7 time-rewinding Stand of Ringo Roadagain.",
+        "width": 720,
+        "height": 276
+      },
+      {
+        "src": "/images/stands/mandom-rewind.webp",
+        "alt": "Mandom 6-second Rewind restoring HP and position in STAND OUT",
+        "title": "Rewind (45s CD)",
+        "caption": "Rewinds 6 seconds back in time, undoing heavy burst damage and bad trades.",
+        "width": 252,
+        "height": 315
+      },
+      {
+        "src": "/images/stands/mandom-deadeye.webp",
+        "alt": "Mandom Deadeye revolver snipe shot in STAND OUT",
+        "title": "Deadeye & Ol' Reliable",
+        "caption": "High-impact revolver poke forcing opponents to block or close distance.",
+        "width": 314,
+        "height": 287
+      },
+      {
+        "src": "/images/stands/mandom-shovel-slam.webp",
+        "alt": "Mandom Shovel Slam 1 EX Bar guardbreak move in STAND OUT",
+        "title": "Shovel Slam (1 EX)",
+        "caption": "Nov 22 Update 1 guardbreak usable even without summoning Stand.",
+        "width": 235,
+        "height": 262
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "Mandom turns every duel into two fights per healthbar: bait enemy high-cooldown bursts, hit Rewind (E) 5 seconds later to return to full HP, and punish defensive turtling with Update 1's Shovel Slam (1 EX) and Point Blank (2 EX).",
+      "bestCombos": [
+        {
+          "name": "Update 1 Guardbreak Grab",
+          "sequence": "Deadeye (Force Block) → Hold T + G (Shovel Slam GB) → M1 x3 → Hold T + H (Point Blank 2 EX)",
+          "notes": "Punishes opponents trying to block Deadeye; Point Blank grabs through any lingering guard for a clean reset."
+        },
+        {
+          "name": "True Man's Second Life Bait",
+          "sequence": "Activate Watch Set (Y) → Trade Heavies → E (Rewind) or Hold T + V (True Man's World at Low HP)",
+          "notes": "Stacks Watch Set positioning mindgames with full-HP Rewind recovery to drain opponent cooldowns."
+        }
+      ],
+      "pvpStrategy": "Count 4–5 seconds in your head whenever you engage. If you eat a Time Stop or Beatdown at high HP, immediately hit Rewind (E) the moment stun ends to snap back to healthy HP. Never rewind at low HP if you were ALREADY low HP 6 seconds earlier!",
+      "pveStrategy": "Deadeye pokes bosses safely from rooftops while Shovel Slam breaks blocking Raid NPCs cleanly.",
+      "howToCounter": [
+        "Press `F` accurately to Perfect Block Shovel Slam and Point Blank—both are PB-able!",
+        "In Vampire matchups, drain downed Mandom users immediately (Nov 22 mechanic) so TRUE MAN'S WORLD cannot revive them.",
+        "Wait for Rewind (45s cooldown!) to be spent before committing 4–5 EX Bar ultimates like Star Platinum/King Crimson Time Erase."
+      ],
+      "recommendedItems": [
+        "Caesar Hamon or Vampire Sub-Ability",
+        "Jotaro / High-Damage Set (80% Strength scaling on EX shovel/pistol moves)"
+      ],
+      "commonMistakes": [
+        "Rewinding AFTER spending 6 seconds running away already low HP—Rewind restores whatever HP you had 6 seconds ago!",
+        "Standing motionless after setting Watch Set instead of actively flanking.",
+        "Trying to pick up throwables mid-Rewind (auto-drops at arrival per Oct 26 patch)."
+      ]
+    }
   },
   {
     "slug": "heavens-door",
@@ -1462,116 +1651,211 @@ export const stands: Stand[] = [
       "farming": "A"
     },
     "status": "Playable",
-    "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 9 focus items.",
-    "lore": "The Hustle is a powerful Stand possessed by Paco Laburante in Part 9: The JOJOLands.",
+    "obtainMethod": "Rollable from Mysterious Arrows (~35% Epic tier), Lucky Arrows (42.5% Epic tier), or Part 9 focus items once unlocked. Note: Not Story-locked.",
+    "lore": "“The Hustle! Time to do your stuff!” Paco Laburante's body-bound Stand lives inside his muscles, allowing wall crawling, throwable body armor plates, throat slams, and kinetic HUSTLE damage scaling.",
     "image": "/images/stands/the-hustle.webp",
     "combatRole": "Offense",
     "passives": [
       {
-        "name": "Chiseled Like A Rock",
-        "description": "Summoning The Hustle grows muscles on your body. While it’s out you take 10% less damage, deal 5% more melee damage and deal 50% more damage to piloted Stands. Use R while blocking to knock bullets away."
+        "name": "Chiseled Like A Rock (Nov 22 Balanced)",
+        "description": "While summoned, muscles grow across your avatar granting 8% flat damage reduction (adjusted from 10% on Nov 22), +5% melee damage, and +50% bonus damage against piloted Stands. Press R while blocking to knock incoming bullets away."
+      },
+      {
+        "name": "HUSTLE Resource Meter",
+        "description": "Taking hits, blocking attacks (scales off damage blocked per Nov 22, not hit count), softening blows with Tense Up, and tanking hits with your Muscle Plate build HUSTLE. Used to fuel DO the HUSTLE mode; drains slowly after 10s out of combat."
       }
     ],
     "moveset": [
       {
-        "key": "LMB",
-        "name": "Bizarre Physique",
-        "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "The Hustle can’t be piloted. Press Pilot (Ctrl) to flex instead. You can climb and crawl on any surface but can’t sprint in this mode, and Leap ends it. The first throwable you walk into sticks to your back and takes the next hit for you. Press H to take it off."
+        "key": "Left Ctrl",
+        "name": "Bizarre Physique (Flex & Climb + Muscle Plate)",
+        "type": "Movement",
+        "cooldown": "None",
+        "description": "The Hustle cannot be piloted. Pressing Ctrl enters flex mode so you can crawl and climb up any wall or ceiling (disables sprinting until cancelled or ended via Leap). Walking over any throwable attaches it to your back to absorb the next incoming hit; press H to detach."
       },
       {
         "key": "E",
-        "name": "Throat Grab",
-        "type": "Attack",
+        "name": "Throat Grab / DO IT Throw",
+        "type": "Heavy",
         "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "Grab an enemy by the throat and choke them for 5 seconds. You can walk and climb walls while holding them. Press again to use DO IT and throw them, which can be aimed upwards with your camera. Being thrown into a wall or other player does bonus damage. Hold the key instead to carry someone with no d"
+        "blockable": false,
+        "description": "Grab an enemy by the throat and choke them for 5 seconds while still able to walk and climb walls. Press again to hurl them (DO IT), aimable upward in Left Alt Shiftlock (fixed Nov 22) for wall/player collision bonus damage. Hold E instead to carry safely without damage."
       },
       {
         "key": "R",
         "name": "The Path Of Violence",
         "type": "Attack",
-        "cooldown": "14s",
-        "damage": "Combative Strike",
-        "description": "Lunge forward with an elbow. If it lands, you dash in, grab them and beat them down before sending them flying. The initial flying elbow deals chip damage."
+        "cooldown": "16s",
+        "damage": "Combo Starter + Beatdown",
+        "description": "Lunge forward with a flying elbow (deals chip damage) that dashes in for a beatdown slam and knockback. Base cooldown increased by +2s (14s -> 16s) in the Nov 22 Update 1 patch."
       },
       {
         "key": "T",
         "name": "Tense Up",
-        "type": "Attack",
+        "type": "Counter",
         "cooldown": "18s",
-        "damage": "Combative Strike",
-        "description": "Tense your body for 1 second. You gain the unstoppable status during this pose. Attacks during the window do 75% less damage to you and a quarter of the damage hits the attacker instead. If the attack hits you in the first 0.3 seconds of the stance, it’s parried, the attacker is stuck to you for 2 s"
+        "specialEffects": "Unstoppable (1s) + 0.3s Parry Lock",
+        "description": "Flex for 1 second gaining Unstoppable status, 75% damage reduction, and reflecting 25% of damage taken. Hits arriving in the first 0.3 seconds are parried, sticking the attacker to you for 2 seconds and slashing Tense Up cooldown. During DO the HUSTLE, 100% of damage reflects back!"
       },
       {
         "key": "Y",
-        "name": "DO the HUSTLE",
-        "type": "Attack",
+        "name": "DO the HUSTLE (25 HUSTLE Mode)",
+        "type": "Utility",
         "cooldown": "30s",
-        "damage": "Combative Strike",
-        "description": "Requires 25 HUSTLE. Flex to grow bigger and knock away anyone next to you. Constantly drain your HUSTLE meter to deal 30% more melee damage, move 20% faster, throw objects harder, make targets vibrate with every hit and break guard with your last basic attack. Taking hits and blocking can keep the m"
+        "specialEffects": "+30% Melee DMG & +20% Move Speed",
+        "description": "Spends 25+ HUSTLE to grow larger and knock back nearby enemies. Drains HUSTLE over time for +30% melee damage, +20% movement speed, harder throws, vibrating hitstun, and Guardbreak on M1 finishers. Taking or blocking hits extends mode duration."
       },
       {
-        "key": "F",
-        "name": "HUSTLE",
-        "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "Damage you take, hits you block, hits Tense Up softens and hits your Muscle Plate takes you all add HUSTLE. It slowly drains every 10 seconds out of combat. Do the HUSTLE spends it."
-      },
-      {
-        "key": "G",
-        "name": "Weapon Disarm [1 Bar]",
+        "key": "Hold T + G",
+        "name": "Weapon Disarm / Pickpocket [1 Bar]",
         "type": "Awakening / EX",
         "cooldown": "18s",
-        "damage": "High Impact / EX",
-        "description": "Take the throwable out of a target’s hands, or knock the item they’re holding to the ground."
+        "exCost": "1 EX Bar",
+        "description": "Tap to disarm a throwable or knock an opponent's held item onto the ground. Hold to pickpocket Dalas directly from targets instead."
       },
       {
-        "key": "H",
+        "key": "Hold T + H",
         "name": "Muscle Spasm [1 Bar]",
         "type": "Awakening / EX",
         "cooldown": "20s",
-        "damage": "High Impact / EX",
-        "description": "Your next heavy attack plants a hidden muscle spasm in the target for 8 seconds. The next time they shoot, throw or use a heavy attack, it goes wrong and leaves them stunned."
+        "exCost": "1 EX Bar",
+        "description": "Primes your next Heavy attack to inject an 8-second Muscle Spasm debuff. The next time that enemy fires a gun, throws an object, or casts a Heavy attack, it backfires and stuns them."
+      },
+      {
+        "key": "Hold T + Z",
+        "name": "Leap [1 Bar]",
+        "type": "Awakening / EX",
+        "cooldown": "10s",
+        "exCost": "1 EX Bar",
+        "description": "Explosive upward/forward vault that clings immediately onto whatever wall or roof you touch. Casting while flexed cleanly cancels flex state."
+      },
+      {
+        "key": "Hold T + V",
+        "name": "Brutal Beatdown [2 Bars]",
+        "type": "Awakening / EX",
+        "cooldown": "25s",
+        "exCost": "2 EX Bars",
+        "damage": "90% Strength / 10% Ability",
+        "description": "Sprint forward with a flying knee grab into a heavy multi-hit pummel and headbutt launcher (Nov 15 tuned EX barrage damage by -35% and improved forward tracking)."
       }
     ],
     "abilityScaling": [
-      "Every 20 Ability points increases signature skill effectiveness and duration.",
-      "Ability points scale projectile velocity and hitbox detection radius."
+      "Brutal Beatdown damage scales 90% with Strength (Damage stat) and 10% with Ability.",
+      "High Health directly multiplies effective value of your 8% Chiseled passive mitigation, 75% Tense Up armor, and Muscle Plate shield.",
+      "Throwables (especially heavy street props) gain noticeably higher launch velocity and collision impact while DO the HUSTLE is active."
     ],
     "recommendedBuild": {
       "points": {
-        "health": 45,
-        "damage": 65,
+        "health": 85,
+        "damage": 100,
         "ability": 40
       },
       "subAbility": "Hamon (Jonathan Path)",
-      "synergyNotes": "Pair with DIO or Jotaro gear sets for maximum damage scaling and ability cooldown reduction."
+      "synergyNotes": "Maximize Damage (100+) and Health (85+) since Brutal Beatdown scales 90% with Strength and close-range M1 brawling relies on trading with DO the HUSTLE. Pair with Meryl Mei Qi or DIO Strength pieces and Jonathan Hamon for brutal melee bursts."
     },
     "pros": [
-      "Authentic JoJo moveset matching official game mechanics",
-      "Strong competitive versatility across PvP and Raid encounters",
-      "Reliable guardbreak options and combo starters"
+      "High close-range brawler DPS with +30% DO the HUSTLE boost & Guardbreak M1 finishers",
+      "Unique Ctrl wall-climbing + Leap mobility & throwable back armor (Muscle Plate)",
+      "Tense Up shuts down reckless rushdown with 0.3s sticky parry and 100% reflect in mode",
+      "Deals +50% bonus damage directly against piloted Stands"
     ],
     "cons": [
-      "Requires strict Ability point investment to optimize scaling",
-      "Punishable recovery frames on whiffed heavy finishers",
-      "Dependent on situational spacing and cooldown pacing"
+      "No remote Pilot mode or long-range projectile neutral without scavenging props",
+      "DO the HUSTLE charge rate nerfed on Nov 22 (now checks block damage, not hit count)",
+      "Tense Up parry window HP scaling was tuned down in Update 1, requiring tighter 0.3s timing"
     ],
     "faqs": [
       {
-        "q": "How do I obtain The Hustle in STAND OUT?",
-        "a": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 9 focus items."
+        "q": "How do you get The Hustle in Roblox STAND OUT?",
+        "a": "Roll The Hustle from Mysterious Arrows (~35% Epic pool), Lucky Arrows (42.5% Epic pool), or Part 9 focus items. It is an Epic Stand and is not locked behind Storyline completion."
       },
       {
-        "q": "What combat role does The Hustle fulfill?",
-        "a": "The Hustle functions primarily as an authentic Offense Stand with dedicated tools for competitive battles."
+        "q": "How do you climb walls and use DO the HUSTLE?",
+        "a": "Press Left Ctrl (Pilot key) with The Hustle summoned to enter Flex Mode and climb walls/ceilings (press Space + Leap to disengage cleanly). Blocking and taking hits builds the HUSTLE bar; once you reach 25 HUSTLE, press Y to activate DO the HUSTLE (+30% melee damage, +20% speed, guardbreaking M1 finishers)."
+      },
+      {
+        "q": "What is the best Lv75 (225 SP) stat build for The Hustle?",
+        "a": "Run 85 Health, 100 Damage, and 40 Ability paired with Jonathan Hamon. Brutal Beatdown scales 90% with Strength/Damage, and high Health synergizes with Chiseled (8% DMG reduction) and Tense Up (75% reduction)."
+      },
+      {
+        "q": "Did Update 1 nerf The Hustle?",
+        "a": "Yes—on Nov 22, Chiseled reduction tuned from 10% to 8%, Path of Violence gained +2s CD (16s), Tense Up can no longer parry Time Stop, and DO the HUSTLE now fills based on actual damage blocked rather than raw barrage hit count."
       }
     ],
-    "verifiedDate": "2026-11-16"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "The Hustle Stand Out – Best 225 SP Build, Wall Climb & Moveset",
+    "seoDescription": "Complete The Hustle guide in Roblox STAND OUT (Epic Part 9 brawler). Covers Ctrl surface climbing, DO the HUSTLE meter (Nov 22 scaling), Tense Up parry, Brutal Beatdown EX & Lv75 225 SP build.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/the-hustle-climb.webp",
+        "alt": "The Hustle wall climbing with Bizarre Physique Ctrl toggle in STAND OUT",
+        "title": "Wall Climbing (Ctrl Flex)",
+        "caption": "Press Left Ctrl to crawl walls and ceilings; walk into props to attach Muscle Plate.",
+        "width": 286,
+        "height": 217
+      },
+      {
+        "src": "/images/stands/the-hustle-throat-grab.webp",
+        "alt": "The Hustle Throat Grab & DO IT throw in Roblox STAND OUT",
+        "title": "Throat Grab & DO IT",
+        "caption": "Choke enemies for 5s and throw toward walls/players using Left Alt Shiftlock.",
+        "width": 228,
+        "height": 229
+      },
+      {
+        "src": "/images/stands/the-hustle-tense-up-parry.webp",
+        "alt": "The Hustle Tense Up parry counter & Path of Violence in STAND OUT",
+        "title": "Path of Violence & Tense Up",
+        "caption": "Parry within 0.3s to stick attackers for 2s or lunge in with Path of Violence.",
+        "width": 272,
+        "height": 265
+      },
+      {
+        "src": "/images/stands/the-hustle-brutal-beatdown.webp",
+        "alt": "The Hustle Brutal Beatdown 2 EX Bar move in STAND OUT",
+        "title": "Brutal Beatdown (2 EX)",
+        "caption": "90% Strength scaling knee rush into full beatdown finisher.",
+        "width": 357,
+        "height": 228
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "The Hustle dominates close-quarters brawls by baiting Heavy moves into Tense Up, locking ranged foes down with Muscle Spasm, and building 25 HUSTLE for +30% melee damage.",
+      "bestCombos": [
+        {
+          "name": "Wall-Slam Opener",
+          "sequence": "M1 x3 → E (Throat Grab) → Left Alt Aim → E (DO IT into Wall) → R (Path Of Violence)",
+          "notes": "Angles the throat throw into nearby buildings for extra collision damage while closing distance with the elbow dash."
+        },
+        {
+          "name": "EX Trap Punish",
+          "sequence": "Parry (0.3s Tense Up) → Hold T + H (Muscle Spasm Heavy) → Hold T + V (Brutal Beatdown)",
+          "notes": "Punishes sticky-parried enemies with heavy Burst and leaves Muscle Spasm primed if they try to retaliate with a Heavy."
+        },
+        {
+          "name": "Piloted Stand Shredder",
+          "sequence": "Ctrl (Wall Climb Ambush) → Hold T + Z (Leap) → Y (DO the HUSTLE) → M1 Finisher GB",
+          "notes": "Capitalizes on +50% bonus damage against remote-piloted enemies like Hierophant/Bad Company/Highway Star."
+        }
+      ],
+      "pvpStrategy": "Always start fights by picking up any street prop onto your back (Muscle Plate eats the first surprise hit). Hold F to block single strong hits (building HUSTLE cleanly via Nov 22 damage scaling), deflect bullets with R while blocking, and pop DO the HUSTLE as soon as you hit 25+ meter so your M1 finishers break guard.",
+      "pveStrategy": "Excellent solo boss brawler—sticking a Muscle Plate onto your back absorbs big Raid boss hits while Jonathan Hamon + DO the HUSTLE melts stationary NPCs.",
+      "howToCounter": [
+        "Wait out the 1-second Tense Up pose instead of hitting into the 0.3s sticky-parry window.",
+        "Avoid firing projectiles or raw Heavy moves for 8s after getting tagged by Muscle Spasm.",
+        "Fight in wide open plazas without nearby walls/props so The Hustle cannot grab throwables or wall-bounce Throat Grab."
+      ],
+      "recommendedItems": [
+        "Street Signs, Chairs & Gas Cans (auto-attach to back as Muscle Plate shield)",
+        "Strength & Health Accessory Sets (DIO's / Big Chop / Meryl Mei Qi pieces)",
+        "Jonathan Hamon Sub-Ability (stacks melee overdrive with Chiseled buff)"
+      ],
+      "commonMistakes": [
+        "Spamming F block against light taps expecting instant HUSTLE—Nov 22 changed HUSTLE buildup to scale by damage blocked, not hit count.",
+        "Forgetting to turn on Left Alt Camera Lock before pressing E (DO IT), wasting the upward wall-slam bonus.",
+        "Trying to sprint while flexed (Ctrl) instead of cancelling flex with Leap or toggling Ctrl off."
+      ]
+    }
   },
   {
     "slug": "notorious-big",
@@ -1855,88 +2139,190 @@ export const stands: Stand[] = [
       "farming": "Z"
     },
     "status": "Playable",
-    "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 4 focus items.",
-    "lore": "Harvest is a powerful Stand possessed by Shigekiyo Yangu in Part 4: Diamond is Unbreakable.",
+    "obtainMethod": "Rollable from Mysterious Arrows (Epic tier), Lucky Arrows (42.5% Epic pool), or Part 4 Focus Arrows.",
+    "lore": "“They're my friends… my precious Harvest!” Shigekiyo Yangu commands roughly 500 miniature colony units that scour whole cities for loose items/arrows and overwhelm foes with Poison.",
     "image": "/images/stands/harvest.webp",
     "combatRole": "Support",
     "passives": [
       {
-        "name": "Stand Aura",
-        "description": "Intrinsically manifests user Stand power, scaling combat effectiveness with Ability stat points."
+        "name": "9-Squad Autonomous Colony & Item Scanner",
+        "description": "Deploys up to 9 independent Harvest squads across the map. Scout squads actively highlight Enemies, Interactive Objects, and ground Items (including Mysterious Arrows, Arrow Parts & drops) through walls until recalled."
       },
       {
-        "name": "Combat Resilience",
-        "description": "Mastery over Stand manifestation grants increased resistance to stun and knockback."
+        "name": "Wall-Climbing Colony & Poison Procs",
+        "description": "Ambush squads latch onto floors, walls, or ceilings and inflict lingering Poison damage when triggered (must recall active ambush squads before regular unsummon)."
       }
     ],
     "moveset": [
       {
-        "key": "LMB",
-        "name": "## Harvest Tornado",
+        "key": "LMB / M2",
+        "name": "Colony Swipes",
         "type": "Attack",
-        "cooldown": "23s",
-        "damage": "Combative Strike",
-        "description": "Harvest circles you at high speed, shredding nearby enemies from every direction. [Search Party / Command [M1] / Cycle [TAP] / Recall [HOLD]: Send all nine Harvest out to search. The enemies, objects and items they find stay marked until you recall them.] [Command [M1]: EX [Awakening Moves]]"
+        "damage": "Fast Colony Strikes",
+        "description": "Command your surrounding Harvest drones for close-range light and heavy punches."
       },
       {
         "key": "E",
-        "name": "Poured Into Veins [3 Bars]",
-        "type": "Awakening / EX",
-        "cooldown": "16s",
-        "damage": "High Impact / EX",
-        "description": "“I poured it into your veins!” All nine Harvest combine into one concealed trap and overwhelm its victim with poisoned stings."
+        "name": "Colony Carry [Tap Again to Stop]",
+        "type": "Movement",
+        "cooldown": "25s",
+        "description": "Hundreds of Harvest units scoop you up and haul you rapidly up walls and across streets (Nov 22 improved ledge/window climbing so you get stuck far less!). Tap again to dismount early."
       },
       {
         "key": "R",
-        "name": "## You want proof?! [4 Bars]",
-        "type": "Awakening / EX",
-        "cooldown": "35s",
-        "damage": "High Impact / EX",
-        "description": "Harvest quadruples its ranks and overwhelms one marked enemy."
+        "name": "Harvest Ambush / Recall [Hold]",
+        "type": "Utility",
+        "cooldown": "0.45s",
+        "specialEffects": "Inflicts Poison",
+        "description": "Tap to plant a concealed Harvest squad on any floor, wall, or ceiling (also displays which squads are resting per Nov 22). Hold to recall planted squads back to you."
       },
       {
         "key": "T",
-        "name": "## Snatch [2 Bars]",
+        "name": "Harvest Tornado",
+        "type": "Attack",
+        "cooldown": "23s",
+        "damage": "360° Multi-Hit AoE",
+        "description": "Harvest spins around you at blinding speed, shredding all nearby enemies in every direction—great anti-rushdown peel."
+      },
+      {
+        "key": "Y",
+        "name": "Search Party / Command [M1] / Cycle [Tap] / Recall [Hold]",
+        "type": "Utility",
+        "description": "Sends all 9 Harvest squads scouring outward. Any players, throwable objects, and loose world items (like Mysterious Arrows!) remain highlighted on your HUD until you Hold to Recall."
+      },
+      {
+        "key": "Hold T + G",
+        "name": "Snatch [2 Bars]",
         "type": "Awakening / EX",
         "cooldown": "18s",
-        "damage": "High Impact / EX",
-        "description": "Send Harvest to take a consumable from an enemy’s hand and bring it back. Getting hit on the way interrupts them and drops anything they took."
+        "exCost": "2 EX Bars",
+        "description": "Dispatches Harvest to rip a consumable (Rokakakas, Apples, Boosters) straight out of an enemy's hand and deliver it back to you (interrupted if Harvest takes damage en route; fixed Nov 22)."
+      },
+      {
+        "key": "Hold T + H",
+        "name": "Poured Into Veins [3 Bars]",
+        "type": "Awakening / EX",
+        "cooldown": "16s",
+        "exCost": "3 EX Bars",
+        "specialEffects": "Heavy Poison Trap",
+        "description": "All 9 Harvest fuse into a concealed floor trap that erupts on contact with severe venomous stings."
+      },
+      {
+        "key": "Hold T + V",
+        "name": "You want proof?! [4 Bars]",
+        "type": "Awakening / EX",
+        "cooldown": "35s",
+        "exCost": "4 EX Bars",
+        "damage": "Massive Marked Swarm",
+        "description": "Harvest quadruples its colony ranks and dogpiles a single Search-marked enemy from afar."
       }
     ],
     "abilityScaling": [
-      "Every 20 Ability points increases signature skill effectiveness and duration.",
-      "Ability points scale projectile velocity and hitbox detection radius."
+      "Ability points directly enhance Poison tick efficiency, Search/Ambush swarm reliability, and EX burst damage.",
+      "Health investment helps you survive while Recall / Colony Carry cools down in open lobbies."
     ],
     "recommendedBuild": {
       "points": {
-        "health": 50,
-        "damage": 50,
-        "ability": 50
+        "health": 80,
+        "damage": 55,
+        "ability": 90
       },
       "subAbility": "Hamon (Caesar Path)",
-      "synergyNotes": "Pair with DIO or Jotaro gear sets for maximum damage scaling and ability cooldown reduction."
+      "synergyNotes": "Z-Tier Utility & Farming build: 90 Ability & 80 Health keeps Search Party scouters and Poison Ambush traps oppressive while Caesar Hamon traps punish anyone diving inside Harvest Tornado."
     },
     "pros": [
-      "Authentic JoJo moveset matching official game mechanics",
-      "Strong competitive versatility across PvP and Raid encounters",
-      "Reliable guardbreak options and combo starters"
+      "Undisputed Z-Tier Farming Stand (Search Party reveals world Mysterious Arrows, Items & Bounties across the map)",
+      "Colony Carry scales skyscraper walls in seconds (improved Nov 22 navigation)",
+      "Snatch (2 EX) steals opposing Rokakakas and healing items right out of enemies' hands",
+      "Wall/ceiling Ambush mines + Harvest Tornado create strong area denial"
     ],
     "cons": [
-      "Requires strict Ability point investment to optimize scaling",
-      "Punishable recovery frames on whiffed heavy finishers",
-      "Dependent on situational spacing and cooldown pacing"
+      "Below-average 1v1 Ranked burst without setup marks and 3–4 EX bars",
+      "Cannot normal-unsummon while ambush squads are still planted (must Hold R Recall first)",
+      "Snatch drones can be knocked out of mid-air if intercepted"
     ],
     "faqs": [
       {
-        "q": "How do I obtain Harvest in STAND OUT?",
-        "a": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 4 focus items."
+        "q": "What can Harvest find in Roblox STAND OUT?",
+        "a": "Search Party (Y) dispatches all 9 Harvest squads across the map to detect and mark loose ground Items (such as spawned Mysterious Arrows & items), interactive Objects, and enemy Players until you Hold to Recall them."
       },
       {
-        "q": "What combat role does Harvest fulfill?",
-        "a": "Harvest functions primarily as an authentic Support Stand with dedicated tools for competitive battles."
+        "q": "What rarity is Harvest and how do you get it?",
+        "a": "Harvest is an Epic rarity Stand (Part 4), obtainable via standard Mysterious Arrows, Lucky Arrows (42.5% Epic tier), or Part 4 Focus Arrows."
+      },
+      {
+        "q": "Why won't my Harvest unsummon?",
+        "a": "Active Ambush squads planted on floors/walls prevent regular unsummon. Hold R to recall all planted squads first, then dismiss your Stand."
       }
     ],
-    "verifiedDate": "2026-11-16"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "Harvest Stand Out – Epic Rarity, Item Finder Pool & Poison Moveset",
+    "seoDescription": "Complete Harvest (Epic Stand) guide in Roblox STAND OUT: what Harvest Search Party finds (Arrows, Items & Players), Colony Carry wall hauling, Poison Ambush traps, Snatch steal (2 EX) & builds.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/harvest-pose.webp",
+        "alt": "Shigechi Harvest swarm pose in Roblox STAND OUT",
+        "title": "Harvest Swarm Pose",
+        "caption": "Epic colony Stand of 500+ autonomous item-hunting & poison drones.",
+        "width": 720,
+        "height": 274
+      },
+      {
+        "src": "/images/stands/harvest-colony-carry.webp",
+        "alt": "Harvest Colony Carry hauling user across walls in STAND OUT",
+        "title": "Colony Carry (25s)",
+        "caption": "Carries you rapidly up walls and buildings (Nov 22 anti-stuck navigation upgrade).",
+        "width": 720,
+        "height": 576
+      },
+      {
+        "src": "/images/stands/harvest-harvest-ambush.webp",
+        "alt": "Harvest Ambush poison drone traps on surfaces in STAND OUT",
+        "title": "Harvest Ambush (Poison)",
+        "caption": "Plant squads on walls or floors to ambush approaching foes with Poison.",
+        "width": 338,
+        "height": 350
+      },
+      {
+        "src": "/images/stands/harvest-harvest-tornado.webp",
+        "alt": "Harvest Tornado spinning AoE shred and Search Party in STAND OUT",
+        "title": "Harvest Tornado & Search",
+        "caption": "Shreds close rushers 360° while Search Party marks Items, Arrows & Players.",
+        "width": 291,
+        "height": 300
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "Harvest is Stand Out's #1 Farming Stand (Z-Tier) thanks to Search Party spotting loose Mysterious Arrows, items, and enemies citywide, while in combat it plays guerrilla warfare with wall traps, Poison, Tornado peel, and item-stealing Snatch.",
+      "bestCombos": [
+        {
+          "name": "Marked Swarm Burst",
+          "sequence": "Y (Search Party Mark) → R (Plant Ambush Poison) → T (Harvest Tornado) → Hold T + V (You want proof?!)",
+          "notes": "Marks targets first so your 4-EX dogpile locks onto them cleanly while Tornado + Poison stack chip damage."
+        },
+        {
+          "name": "Rokakaka Thief Combo",
+          "sequence": "Observe low-HP opponent holding Roka → Hold T + G (Snatch 2 EX) → E (Colony Carry Wall Escape)",
+          "notes": "Steals an opponent's emergency healing/reset fruit and carries you straight up a building."
+        }
+      ],
+      "pvpStrategy": "Do not try to M1 trade against Star Platinum or The Hustle. Pre-plant 3–4 Ambush traps near chokepoints, keep Search Party active to track flanks, spin Harvest Tornado whenever someone dashes in, and punish anyone trying to eat a Rokakaka mid-fight with Snatch (2 EX).",
+      "pveStrategy": "Pair Search Party with a Metal Detector / Huber taxi to scoop spawned Mysterious Arrows and Dalas items faster than any other Stand in public servers.",
+      "howToCounter": [
+        "Equip a AoE/projectile Stand or rush Harvest before it stacks Poured Into Veins (3 EX) & Ambush traps.",
+        "Attack Snatch drones en route—getting hit interrupts Snatch and drops stolen consumables.",
+        "Hold Block against Harvest Tornado and use Universal Evasive (`X`) if caught inside You want proof?!."
+      ],
+      "recommendedItems": [
+        "Metal Detector (stacks with Search Party item highlights for maximum Arrow farming)",
+        "Caesar Hamon Sub-Ability (bubble traps layer cleanly onto Harvest Ambush walls)"
+      ],
+      "commonMistakes": [
+        "Forgetting what Harvest Search Party can find—use Y in fresh servers to locate spawned Mysterious Arrows & objects instantly.",
+        "Panicking when E (Unsummon) won't work—Hold R to Recall your planted Ambush squads first.",
+        "Trading raw M1s instead of letting Colony Carry, Poison, and Tornado kite enemies."
+      ]
+    }
   },
   {
     "slug": "tubular-bells",
@@ -3437,7 +3823,7 @@ export const stands: Stand[] = [
       "farming": "B"
     },
     "status": "Playable",
-    "obtainMethod": "Unlocked in the Arrow pool after completing the main Storyline (cannot be rolled pre-storyline). Obtainable via Mysterious Arrows, Lucky Arrows (34.0% Legendary), or Bizarre Arrows (57.9% Legendary).",
+    "obtainMethod": "Story-Locked Arrow Stand: Complete Storyline Quest Chapter 10 first (until you finish the Storyline, Catch The Rainbow is locked out of all Arrows!). Then roll from Mysterious, Lucky (34.0% Legendary), or Bizarre Arrows (57.9% Legendary). Note: Blackmore's side quest rewards a Mysterious Arrow & Blackmore's Outfit, NOT the Stand itself.",
     "lore": "“I… have the ability to catch the rainbow.” The mask-like Stand of Blackmore grants control over rain, letting him walk on suspended raindrops or slice enemies with razor-sharp water projectiles.",
     "image": "/images/stands/catch-the-rainbow.webp",
     "combatRole": "Zoner",
@@ -3549,15 +3935,86 @@ export const stands: Stand[] = [
     ],
     "faqs": [
       {
-        "q": "How does Generic Unbranded Ocarina work on Catch The Rainbow?",
-        "a": "Spend 5 EX Bars (90s cooldown) to play Rhapsody of Rain (low D, F, and high D twice), summoning 30 seconds of rain so you can use your Stand anywhere. Unlike Body Projectile or Motionless Rain, you can play the ocarina with your mask off."
+        "q": "How do you get Catch The Rainbow in Roblox STAND OUT?",
+        "a": "Complete Storyline Chapter 10 first to unlock Catch The Rainbow inside the Arrow summon pool, then roll Mysterious Arrows, Lucky Arrows (34.0% Legendary tier), or Bizarre Arrows (57.9% Legendary tier). Blackmore's Leprechaun side quest awards a Mysterious Arrow and his cosmetic outfit rather than the Stand directly."
       },
       {
-        "q": "Why can't I roll Catch The Rainbow on a new account?",
-        "a": "Catch The Rainbow is one of 7 storyline-locked utility Stands removed from the arrow pool until you complete the main storyline."
+        "q": "Why won't Catch The Rainbow work when it isn't raining?",
+        "a": "Catch The Rainbow requires active Rain, Fog, or an open Fire Hydrant within 30 studs to cast Stand abilities. However, Update 1 added 'Generic Unbranded Ocarina' (5 EX Bars, 90s CD, usable mask-off) which summons 30 seconds of rain anywhere once you play the song."
+      },
+      {
+        "q": "What rarity is Catch The Rainbow and what Part is it from?",
+        "a": "Catch The Rainbow is a Legendary Stand wielded by Blackmore from JoJo Part 7: Steel Ball Run."
       }
     ],
-    "verifiedDate": "2026-11-26"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "Catch The Rainbow Stand Out – Story Unlock, Rain Ocarina & Moveset",
+    "seoDescription": "How to get Catch The Rainbow (Legendary) in Roblox STAND OUT: requires beating Storyline Chapter 10 first to unlock in Stand Arrows (Blackmore quest gives outfit/arrow). Includes Update 1 Rain Ocarina (5 EX), Rain Walk & Lv75 build.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/catch-the-rainbow-pose.webp",
+        "alt": "Blackmore Catch The Rainbow rain walking pose in Roblox STAND OUT",
+        "title": "Rain Walk / Float",
+        "caption": "Hold Space to ascend on suspended raindrops and traverse midair effortlessly.",
+        "width": 393,
+        "height": 272
+      },
+      {
+        "src": "/images/stands/catch-the-rainbow-rain-transport.webp",
+        "alt": "Catch The Rainbow Rain Transport ambush teleport in STAND OUT",
+        "title": "Rain Transport (Air E → M1)",
+        "caption": "Hide inside rain mid-float and teleport directly behind aimed opponents.",
+        "width": 400,
+        "height": 387
+      },
+      {
+        "src": "/images/stands/catch-the-rainbow-weapons-of-rain.webp",
+        "alt": "Catch The Rainbow Motionless Rain projectile shield & Water shots in STAND OUT",
+        "title": "Weapons & Motionless Rain",
+        "caption": "Suspended raindrop barrier (scales +1 drop per 50 Ability) + 7 Soaked shots.",
+        "width": 260,
+        "height": 273
+      },
+      {
+        "src": "/images/stands/catch-the-rainbow-rain-ocarina.webp",
+        "alt": "Catch The Rainbow Generic Unbranded Ocarina 5 EX Bar rain summon in STAND OUT",
+        "title": "Rain Ocarina (5 EX Bars)",
+        "caption": "Update 1 move: play Rhapsody of Rain (D, F, high D x2) for 30s of rain anywhere!",
+        "width": 234,
+        "height": 249
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "Most players get stuck trying to unlock or activate Catch The Rainbow: you MUST beat Storyline Chapter 10 before rolling it from Arrows, and in dry weather you can either fight near a bursting fire hydrant (30 studs) or play Update 1's Generic Unbranded Ocarina (5 EX Bars) to summon 30 seconds of rain on command.",
+      "bestCombos": [
+        {
+          "name": "Dry-Arena Ocarina Lock",
+          "sequence": "Charge 5 EX (Pose P) → Hold T + Ocarina (Low D, F, High D x2) → Rain Walk (Hold Space) → E (Rain Transport → M1) → R (Weapons of Rain)",
+          "notes": "Creates your own 30-second rainstorm in Ranked/dry plazas so your full ranged + teleport kit unlocks immediately."
+        },
+        {
+          "name": "Bleed Sever Pressure",
+          "sequence": "Frozen Rain (2 EX Dagger) → M1 x3 (Bleed) → Rain Catch Dive (Leap + Catch GB) → Triple Shot",
+          "notes": "Stacks Update 1 buffed Frozen Knife damage with limb-severing Bleed and a guard-piercing aerial dive execute."
+        }
+      ],
+      "pvpStrategy": "Wear the Mask whenever fighting to enable Motionless Rain projectile shields and Ctrl Body Projectile grabs. In dry servers, hover near city fire hydrants (hit them open to create a 30-stud water aura) or charge 5 EX for Ocarina. Note that Rain Walk mobility is balanced/capped inside 1v1 Ranked Arena.",
+      "pveStrategy": "Awesome Raid kiter: Rain Walk elevates you cleanly above ground melee bosses while Triple Shot and Weapons of Rain safely whittle down boss HP and wash Highway Star's Scent off.",
+      "howToCounter": [
+        "Wait out the 30-second Ocarina / natural rain window and fight far away from broken fire hydrants—without fog/rain within 30 studs, Catch The Rainbow cannot cast Stand skills.",
+        "Perfect Block (`F`) Rain Catch's aerial dive (it pierces normal guard, but is PB-able!).",
+        "Force Blackmore out of the air using anti-flight moves like Hermit Purple's Hermit Grasp EX or The Hand's Bring to Me."
+      ],
+      "recommendedItems": [
+        "Blackmore's Outfit / Caesar Hamon (bubbles synergize with Soaked status from Weapons of Rain!)",
+        "Fire Hydrant Map Awareness + Ability Investment (every 50 Ability adds 1 extra Motionless Rain shield drop per arm)"
+      ],
+      "commonMistakes": [
+        "Wasting Lucky or Bizarre Arrows BEFORE beating Storyline Chapter 10—CTR stays locked out of your arrow pool until you beat the story!",
+        "Confusing Blackmore's Rainbow side quest for the Stand unlock (that quest gives a Mysterious Arrow + Blackmore Jacket/Pants).",
+        "Summoning without natural Rain/Fog/Hydrant and wondering why moves don't fire—use Ocarina (5 EX) even with the Mask off!"
+      ]
+    }
   },
   {
     "slug": "silver-chariot",
@@ -3571,112 +4028,194 @@ export const stands: Stand[] = [
       "farming": "A"
     },
     "status": "Playable",
-    "obtainMethod": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 3 focus items.",
-    "lore": "Silver Chariot is a powerful Stand possessed by Jean Pierre Polnareff in Part 3: Stardust Crusaders.",
+    "obtainMethod": "Rollable from Mysterious Arrows (~14.5% Legendary pool), Lucky Arrows (34.0% Legendary), Bizarre Arrows (57.9% Legendary), or crafted Part 3 Focus Arrows.",
+    "lore": "“I'm going to turn you into a pin-cushion!” Jean Pierre Polnareff's armored rapier Stand delivers blistering thrust speed and can shed its silver armor for larger hitboxes and faster swings.",
     "image": "/images/stands/silver-chariot.webp",
     "combatRole": "Speed / Hit-and-Run",
     "passives": [
       {
-        "name": "Stand Aura",
-        "description": "Intrinsically manifests user Stand power, scaling combat effectiveness with Ability stat points."
+        "name": "Armor On vs Armor Off Stance (Update 1 Tuned)",
+        "description": "Default Armored stance grants extra protection (slightly faster Armor-On speed as of Nov 22). Activating Armor Toggle (1 EX Bar, slows EX drain) sheds armor for larger hitboxes and faster rapid thrusts (Armor-Off speed tuned slightly on Nov 22)."
       },
       {
-        "name": "Combat Resilience",
-        "description": "Mastery over Stand manifestation grants increased resistance to stun and knockback."
+        "name": "Disarmed Rapier Rule",
+        "description": "Firing Blade Eject leaves Chariot without its rapier, disabling Stand moves until the blade returns or you manually walk up and pick it back up."
       }
     ],
     "moveset": [
       {
-        "key": "LMB",
-        "name": "Rapier Rush",
-        "type": "Barrage",
-        "cooldown": "23s",
-        "damage": "Multi-Hit Rapid DMG",
-        "description": "A lightning-fast series of rapier thrusts."
+        "key": "LMB / M2",
+        "name": "Rapier Thrust Combo & Heavy",
+        "type": "Attack",
+        "damage": "Fast Piercing Combo",
+        "description": "High-speed rapier pokes with crisp Nov 22 hit VFX; gains extended hitbox reach and speed when Armor Toggle is active."
       },
       {
         "key": "E",
-        "name": "Blade Eject",
-        "type": "Attack",
-        "cooldown": "30s",
-        "damage": "Combative Strike",
-        "description": "Launch the blade from its hilt as a high-speed projectile. (Can Ricochet) User cannot use any stand abilities without their rapier. User can take their rapier back to avoid waiting for it to return."
+        "name": "Rapier Rush",
+        "type": "Barrage",
+        "cooldown": "23s",
+        "damage": "Multi-Hit Rapid Thrusts",
+        "description": "Signature lightning-fast flurry of rapier thrusts with superior close-range frame speed."
       },
       {
         "key": "R",
-        "name": "Your Last Moments",
-        "type": "Attack",
-        "cooldown": "34s",
-        "damage": "Combative Strike",
-        "description": "Deliver a heavy strike that finishes off weakened enemies."
+        "name": "Rapier Uppercut (Update 1 Guardbreak)",
+        "type": "Heavy",
+        "cooldown": "18s",
+        "blockable": false,
+        "damage": "Guardbreak Launcher",
+        "description": "Added in Update 1 as Silver Chariot's dedicated guardbreak move (replacing French Rotation's guardbreak). Launches blocking opponents upward for immediate combo extensions."
       },
       {
         "key": "T",
-        "name": "French Rotation",
+        "name": "Chariot Barrage / French Rotation",
         "type": "Attack",
         "cooldown": "20s",
-        "damage": "Combative Strike",
-        "description": "Silver Chariot spins and cuts everything around it, knocking enemies away with Bleed and breaking a blocking guard, unless perfect blocked. Use while stunned it breaks the stun and winds up longer. Ability scaling: Damage scales 80% with Strength and 20% with Ability."
+        "damage": "80% Strength / 20% Ability + Bleed",
+        "specialEffects": "Bleed + Stun Evasive Spin",
+        "description": "French Rotation spins 360° inflicting Bleed (castable while stunned with longer windup as an internal evasive). Note per Nov 22 Update 1: French Rotation NO LONGER breaks guard; Update 1 also added Chariot Barrage for extended sword pressure."
       },
       {
         "key": "Y",
-        "name": "In stun",
+        "name": "Blade Eject (Ricochet)",
         "type": "Attack",
-        "cooldown": "16s",
-        "damage": "Combative Strike",
-        "description": "EX [Awakening Moves]"
+        "cooldown": "30s",
+        "damage": "High-Speed Projectile",
+        "description": "Launch Silver Chariot's rapier blade at high velocity (can ricochet off arena walls). Walk over your dropped blade to pick it up immediately and skip the disarm downtime."
       },
       {
-        "key": "F",
+        "key": "V",
+        "name": "Your Last Moments",
+        "type": "Heavy",
+        "cooldown": "34s",
+        "damage": "Finisher / Execute",
+        "description": "Precision skewer finisher designed to confirm kills on low-HP opponents."
+      },
+      {
+        "key": "Hold T + G",
         "name": "Stand Jump [1 Bar]",
         "type": "Awakening / EX",
-        "cooldown": "16s",
-        "damage": "High Impact / EX",
-        "description": "Use your Stand’s power to launch high into the air."
+        "exCost": "1 EX Bar",
+        "description": "Explosive upward launch using Silver Chariot's thrust to escape ground traps or close vertical gaps."
       },
       {
-        "key": "G",
+        "key": "Hold T + H",
         "name": "Armor Toggle [1 Bar]",
         "type": "Awakening / EX",
         "cooldown": "20s",
-        "damage": "High Impact / EX",
-        "description": "Spend one EX bar to remove Silver Chariot’s armor for faster attacks, with EX draining slowly while it is off, and use it again to put the armor back on. Armor Toggle trades protection and speed. (Armor off also gives you bigger hitboxes)"
+        "exCost": "1 EX Bar + Drain",
+        "description": "Sheds Silver Chariot's heavy armor for faster attack speed and bigger hitboxes while slowly draining EX. Press again anytime to re-equip armor."
       }
     ],
     "abilityScaling": [
-      "Every 20 Ability points increases signature skill effectiveness and duration.",
-      "Ability points scale projectile velocity and hitbox detection radius."
+      "French Rotation damage scales 80% with Strength (Damage stat) and 20% with Ability.",
+      "High Damage/Strength investment maximizes Rapier Rush, Rapier Uppercut, and Armor-Off M1 rushdown DPS.",
+      "Blade Eject ricochets reward wall-angled aim in closed rooms/arenas."
     ],
     "recommendedBuild": {
       "points": {
-        "health": 50,
-        "damage": 50,
-        "ability": 50
+        "health": 75,
+        "damage": 95,
+        "ability": 55
       },
-      "subAbility": "Hamon (Caesar Path)",
-      "synergyNotes": "Pair with DIO or Jotaro gear sets for maximum damage scaling and ability cooldown reduction."
+      "subAbility": "Hamon (Caesar Path) or Vampire",
+      "synergyNotes": "Invest heavily into Damage (95) and Health (75) with 55 Ability since French Rotation and core rapier thrusts scale overwhelmingly off Strength. Caesar Hamon adds ranged bubble pressure to force blocks into Rapier Uppercut; Vampire sustains during Armor Off."
     },
     "pros": [
-      "Authentic JoJo moveset matching official game mechanics",
-      "Strong competitive versatility across PvP and Raid encounters",
-      "Reliable guardbreak options and combo starters"
+      "Blistering M1 speed and enlarged Armor-Off hitboxes dominate neutral spacing",
+      "French Rotation acts as a built-in emergency stun-breaker with Bleed pressure",
+      "New Update 1 Rapier Uppercut restores crisp Guardbreak threat",
+      "High roll accessibility (34% in Lucky / 57.9% in Bizarre / Part 3 Focus Arrow)"
     ],
     "cons": [
-      "Requires strict Ability point investment to optimize scaling",
-      "Punishable recovery frames on whiffed heavy finishers",
-      "Dependent on situational spacing and cooldown pacing"
+      "Missing Blade Eject disarms Silver Chariot and locks all Stand skills until retrieved",
+      "French Rotation no longer guardbreaks after Update 1 (players can hold F through the spin)",
+      "Armor Toggle steadily drains your EX meter, requiring careful bar management"
     ],
     "faqs": [
       {
-        "q": "How do I obtain Silver Chariot in STAND OUT?",
-        "a": "Can be awakened using Mysterious Arrows, Lucky Arrows, or Bizarre Arrows. Focus rollable via Part 3 focus items."
+        "q": "What rarity is Silver Chariot in STAND OUT?",
+        "a": "Silver Chariot is a Legendary Stand (Part 3), rollable at ~21.4% total Legendary tier via standard Mysterious Arrows, 34.0% via Lucky Arrows, 57.9% via Bizarre Arrows, or crafted Part 3 Focus Arrows."
       },
       {
-        "q": "What combat role does Silver Chariot fulfill?",
-        "a": "Silver Chariot functions primarily as an authentic Speed / Hit-and-Run Stand with dedicated tools for competitive battles."
+        "q": "What changed in the Silver Chariot Update 1 Rework?",
+        "a": "Studio Umbra added two new abilities—Rapier Uppercut (now Silver Chariot's Guardbreak) and Chariot Barrage—removed the guardbreak property from French Rotation, updated hit effects, and rebalanced Armor-On vs Armor-Off speeds."
+      },
+      {
+        "q": "What are the best stats for Silver Chariot (Level 75)?",
+        "a": "75 Health, 95 Damage, and 55 Ability with Caesar Hamon or Vampire maximizes rapid rapier burst while keeping enough Ability for French Rotation (20% Ability) and EX upkeep."
       }
     ],
-    "verifiedDate": "2026-11-16"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "Silver Chariot Stand Out – Legendary Rarity, Rework Moveset & Best Build",
+    "seoDescription": "Silver Chariot (Legendary Stand) guide in Roblox STAND OUT: Update 1 Rapier Uppercut guardbreak, Chariot Barrage, Armor Toggle (1 EX) hitbox boost, Blade Eject ricochet & Lv75 build.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/silver-chariot-pose.webp",
+        "alt": "Jean Pierre Polnareff Silver Chariot pose in Roblox STAND OUT",
+        "title": "Silver Chariot Pose",
+        "caption": "Legendary Part 3 rapier duelist with Armor-On/Off stance switching.",
+        "width": 720,
+        "height": 274
+      },
+      {
+        "src": "/images/stands/silver-chariot-rapier-rush.webp",
+        "alt": "Silver Chariot Rapier Rush flurry in STAND OUT",
+        "title": "Rapier Rush (23s)",
+        "caption": "Rapid piercing thrust flurry chaining directly off Rapier Uppercut.",
+        "width": 324,
+        "height": 281
+      },
+      {
+        "src": "/images/stands/silver-chariot-blade-eject.webp",
+        "alt": "Silver Chariot Blade Eject ricochet projectile in STAND OUT",
+        "title": "Blade Eject & Ricochet",
+        "caption": "Fires the blade off the hilt; pick it up manually to regain abilities immediately.",
+        "width": 397,
+        "height": 283
+      },
+      {
+        "src": "/images/stands/silver-chariot-armor-off.webp",
+        "alt": "Silver Chariot Armor Toggle off speed boost in STAND OUT",
+        "title": "Armor Toggle (1 EX)",
+        "caption": "Sheds armor for faster swings and wider hitboxes while draining EX.",
+        "width": 365,
+        "height": 229
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "Silver Chariot got two major Update 1 tools—Rapier Uppercut (new Guardbreak) and Chariot Barrage—while French Rotation shifted purely into a Bleed spin/stun-escape. Play tight footsies, shed armor when confirming bursts, and pick up your blade quickly after Blade Eject.",
+      "bestCombos": [
+        {
+          "name": "Update 1 Guardbreak Confirm",
+          "sequence": "M1 x3 → Rapier Uppercut (Guardbreak) → Dash Q → Rapier Rush (E) → Your Last Moments (V)",
+          "notes": "Punishes anyone holding F expecting French Rotation; launches and chains straight into execution."
+        },
+        {
+          "name": "Armor-Off Blitz",
+          "sequence": "Armor Toggle (1 EX) → Dash Q → M1 x4 → French Rotation (Bleed) → Blade Eject (close range pick-up)",
+          "notes": "Expanded Armor-Off hitboxes catch back-dashes easily, and shooting Blade Eject point-blank lets you grab the sword back instantly."
+        }
+      ],
+      "pvpStrategy": "Force opponents to respect Rapier Uppercut whenever they turtle against M1s. Save French Rotation either as a stun-break defensive panic tool or to stack Bleed at the end of strings—never expect it to crack a full guard anymore.",
+      "pveStrategy": "Solid boss DPS with Armor Off active + Hamon Damage boosts; Blade Eject snipes fleeing raid NPCs across long Train cars.",
+      "howToCounter": [
+        "Hold Block against French Rotation post-Update 1—it no longer guardbreaks!",
+        "Punish Silver Chariot aggressively the moment it whiffs Blade Eject and is disarmed.",
+        "Watch for Rapier Uppercut startups and Perfect Block (`F`) to trigger +0.2s endlag."
+      ],
+      "recommendedItems": [
+        "Caesar Hamon or Vampire Sub-Ability",
+        "Jotaro / Polnareff-style Strength & Cooldown Accessories",
+        "Part 3 Mysterious Arrow (fastest craftable focus roll)"
+      ],
+      "commonMistakes": [
+        "Using French Rotation as a guardbreaker—only Rapier Uppercut breaks block after Update 1.",
+        "Firing Blade Eject off rooftops into oceans where you cannot walk over the sword to retrieve it.",
+        "Leaving Armor Off active while running across the map, draining EX bars for zero value."
+      ]
+    }
   },
   {
     "slug": "strength",
@@ -4967,88 +5506,179 @@ export const stands: Stand[] = [
       "farming": "A+"
     },
     "status": "Playable",
-    "obtainMethod": "Obtainable by doing Bill’s Request quest (requires Hamon mastery and no Stand equipped).",
-    "lore": "Hermit Purple is a powerful Stand possessed by Joseph Joestar in Part 3: Stardust Crusaders.",
+    "obtainMethod": "Quest Stand (Cannot be rolled normally): Complete Billy's 'Obtain Hermit Purple!' quest. Requires being STANDLESS (use an Emerald Roka after banking Stands with D'Arby) and having Jonathan Hamon equipped, then Defeat DIO (0/1) and use Life-Giving Overdrive on Garden plants (0/15).",
+    "lore": "“Did you see it? The thorns from my hand? That is my Stand!” Joseph Joestar's thorny purple vines let him swing across buildings, conduct Hamon ripples, bind targets through block, and snap Spirit Photographs.",
     "image": "/images/stands/hermit-purple.webp",
     "combatRole": "Disruption",
     "passives": [
       {
         "name": "Hamon Conduction",
-        "description": "Purple vines channel breathing Ripple current, inflicting severe sunlight burns against Vampires and Pillar Men."
+        "description": "Thorny vines naturally pair with Jonathan Hamon Overdrive, melting Vampires and boosting close-range Ripple bursts across grabs and throws."
       },
       {
-        "name": "Divination Sight",
-        "description": "Vines track enemy positions through walls and reveal hidden traps across the district."
+        "name": "Spirit Photography Scouting",
+        "description": "Pick any player on the leaderboard and smash a camera to develop a live location snapshot of them and their surroundings for bounties or Gang Wars."
       }
     ],
     "moveset": [
       {
-        "key": "LMB",
-        "name": "Boulder Hold / Pull Rock / Throw",
+        "key": "LMB / M2",
+        "name": "Vine Lash Light & Heavy Combo",
         "type": "Attack",
-        "cooldown": "24s",
-        "damage": "Ranged Projectile",
-        "description": "Brace and pull a rock from the ground. While holding it, use slower, heavier basic attacks that deal more damage and stun. Use again to spin with hyperarmor, repeatedly knocking nearby enemies away before throwing the rock. It bursts on impact to hit nearby targets."
+        "damage": "Fast Mid-Range Strikes",
+        "description": "Standard light and heavy vine punches extending slightly farther than bare fists."
       },
       {
         "key": "E",
-        "name": "Spirit Photography",
-        "type": "Attack",
-        "cooldown": "15s",
-        "damage": "Combative Strike",
-        "description": "Choose a player from the leaderboard, then smash a camera to develop a photograph of them and their surroundings."
+        "name": "Hermit's Sling [Tap Swing / Hold Pull]",
+        "type": "Movement",
+        "cooldown": "5s (0s out of combat)",
+        "description": "Tap E near high structures to swing Spider-Man style through open air (alternating sides; press Jump for lift). Hold E to zip straight toward your aim and release anytime. Zero cooldown outside combat!"
       },
       {
         "key": "R",
-        "name": "Hermit Grasp",
-        "type": "Attack",
-        "cooldown": "8s",
-        "damage": "Combative Strike",
-        "description": "Lash out with your vines, pushing nearby enemise outward before pulling them toward you. Bypasses their guard and briefly prevents blocking without dealing damage. EX [Awakening Moves]"
+        "name": "Boulder Hold / Pull Rock / Throw",
+        "type": "Heavy",
+        "cooldown": "24s",
+        "damage": "AoE Impact Rock Burst",
+        "specialEffects": "Hyperarmor Spin",
+        "description": "Rip a massive boulder from the earth. While held, basic attacks turn into heavier high-stun slams. Press again to spin with hyperarmor, knocking nearby foes back before hurling an AoE explosive rock."
       },
       {
         "key": "T",
+        "name": "Spirit Photography",
+        "type": "Utility",
+        "cooldown": "15s",
+        "description": "Open the player selector and smash a camera to reveal an active enemy's exact location and surroundings anywhere on the map."
+      },
+      {
+        "key": "Y",
+        "name": "Hermit Grasp",
+        "type": "Utility",
+        "cooldown": "8s",
+        "blockable": false,
+        "specialEffects": "Guard Bypass + Anti-Block",
+        "description": "Lashes thorny vines outward to push nearby enemies away, then yanks them straight into melee range. Bypasses guard and briefly disables blocking (deals 0 raw damage to set up guaranteed combos)."
+      },
+      {
+        "key": "Hold T + G",
         "name": "Hermit Grasp EX [1 Bar]",
         "type": "Awakening / EX",
         "cooldown": "16s",
-        "damage": "High Impact / EX",
-        "description": "Aim at an enemy and extend your vines to bind them from afar. Interrupts flight and reels them toward you. Bypassing their guard without dealing damage."
+        "exCost": "1 EX Bar",
+        "blockable": false,
+        "specialEffects": "Interrupts Flight + Pull",
+        "description": "Long-range aimed vine snag that binds distant or airborne opponents (canceling flight like Catch The Rainbow / Beyond The Sea!) and reels them straight into your Hamon follow-up while bypassing guard."
       }
     ],
     "abilityScaling": [
-      "Every 20 Ability points increases signature skill effectiveness and duration.",
-      "Ability points scale projectile velocity and hitbox detection radius."
+      "Ability points improve Spirit Photography tracking responsiveness, vine pull velocity, and Hamon-conducted boulder burst potential.",
+      "Jonathan Hamon scaling multiplies close-range sunlight damage after Hermit Grasp reels victims into Sunlight Yellow Overdrive.",
+      "Strength/Damage boosts M1 vine strings and Boulder Hold rock melee hits."
     ],
     "recommendedBuild": {
       "points": {
-        "health": 45,
-        "damage": 45,
-        "ability": 60
+        "health": 75,
+        "damage": 75,
+        "ability": 75
       },
-      "subAbility": "Hamon (Caesar Path)",
-      "synergyNotes": "Pair with DIO or Jotaro gear sets for maximum damage scaling and ability cooldown reduction."
+      "subAbility": "Jonathan Hamon (Required for Unlock & Synergy)",
+      "synergyNotes": "Because unlocking Hermit Purple already requires Jonathan Hamon at the Volcano, lean into a balanced 75 Health / 75 Damage / 75 Ability hybrid. Grasp bypasses guard cleanly into Sunlight Yellow Overdrive + Hamon-infused throwables."
     },
     "pros": [
-      "Authentic JoJo moveset matching official game mechanics",
-      "Strong competitive versatility across PvP and Raid encounters",
-      "Reliable guardbreak options and combo starters"
+      "Best free-roam aerial mobility in the game (0s CD Sling outside combat!)",
+      "Two guard-bypassing vine pulls (Hermit Grasp & 1-EX Grasp EX that cancels flight)",
+      "Spirit Photography makes Hunter Bounties, Eliminations, and Gang scouting effortless",
+      "Hyperarmor spin on Boulder Hold counters reckless M1 rushers"
     ],
     "cons": [
-      "Requires strict Ability point investment to optimize scaling",
-      "Punishable recovery frames on whiffed heavy finishers",
-      "Dependent on situational spacing and cooldown pacing"
+      "Low raw Stand damage compared to Pinnacle beatdowns—relies heavily on Jonathan Hamon sub-skills",
+      "Hermit Grasp deals zero raw damage on hit (purely setup/anti-block)",
+      "Unlock quest requires clearing your Stand slot first (use D'Arby Storage so you don't lose your current Stand!)"
     ],
     "faqs": [
       {
-        "q": "How do I obtain Hermit Purple in STAND OUT?",
-        "a": "Obtainable by doing Bill’s Request quest (requires Hamon mastery and no Stand equipped)."
+        "q": "How do I complete Billy's Obtain Hermit Purple Quest in STAND OUT?",
+        "a": "1) Bank your current Stand at D'Arby Stand Storage, then use an Emerald Roka to become Standless. 2) Unlock Jonathan Hamon from Lisa Lisa at the Volcano. 3) Talk to Billy to accept 'Obtain Hermit Purple!'. 4) Defeat DIO once (0/1) and cast Jonathan Hamon's Life-Giving Overdrive on Garden plants 15 times (0/15)."
       },
       {
-        "q": "What combat role does Hermit Purple fulfill?",
-        "a": "Hermit Purple functions primarily as an authentic Disruption Stand with dedicated tools for competitive battles."
+        "q": "Can I get Hermit Purple from a Stand Arrow?",
+        "a": "No. Despite its Rare classification, Hermit Purple is an exclusive Quest Stand obtained solely through Billy's quest while Standless with Jonathan Hamon."
+      },
+      {
+        "q": "Does Hermit Purple work best with Hamon?",
+        "a": "Yes! Both lore and mechanics favor Jonathan Hamon: Life-Giving Overdrive is required for the unlock quest, and Hermit Grasp's guard-bypass + anti-block window guarantees Sunlight Yellow Overdrive hits."
       }
     ],
-    "verifiedDate": "2026-11-16"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "Hermit Purple Stand Out – Billy Quest Guide, Hamon Synergy & Moveset",
+    "seoDescription": "How to get Hermit Purple in Roblox STAND OUT: step-by-step Billy Quest guide (Standless + Jonathan Hamon, defeat DIO, buff 15 plants), Vine Swing, Spirit Photography & Lv75 Hamon build.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/hermit-purple-pose.webp",
+        "alt": "Joseph Joestar Hermit Purple pose in Roblox STAND OUT",
+        "title": "Hermit Purple Pose",
+        "caption": "Unlockable via Billy's Quest while Standless + Jonathan Hamon.",
+        "width": 716,
+        "height": 271
+      },
+      {
+        "src": "/images/stands/hermit-purple-vine-swing.webp",
+        "alt": "Hermit Purple Hermit's Sling rooftop vine swinging in STAND OUT",
+        "title": "Hermit's Sling / Swing (5s)",
+        "caption": "Tap to swing rooftops (0s CD out of combat); Hold to grapple-pull.",
+        "width": 440,
+        "height": 337
+      },
+      {
+        "src": "/images/stands/hermit-purple-boulder-hold.webp",
+        "alt": "Hermit Purple Boulder Hold hyperarmor rock throw in STAND OUT",
+        "title": "Boulder Hold & Spin",
+        "caption": "Pulls a heavy boulder granting hyperarmor spin knockbacks and AoE burst.",
+        "width": 322,
+        "height": 286
+      },
+      {
+        "src": "/images/stands/hermit-purple-hermit-grasp.webp",
+        "alt": "Hermit Purple Hermit Grasp guard-bypassing pull in STAND OUT",
+        "title": "Hermit Grasp (8s)",
+        "caption": "Bypasses block, prevents re-blocking, and reels opponents into Hamon punches.",
+        "width": 315,
+        "height": 234
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "Unlock Hermit Purple cleanly by storing your active Stand at D'Arby, training Jonathan Hamon at Lisa Lisa, beating DIO, and boosting 15 Garden plants. In fights, use Zero-Block Grasp to lock enemies inside Hamon Sunlight Yellow Overdrive.",
+      "bestCombos": [
+        {
+          "name": "Zero-Block Hamon Burst",
+          "sequence": "Y (Hermit Grasp) → Jonathan Hamon Sunlight Yellow Overdrive → M1 x3 → Heavy R",
+          "notes": "Since Hermit Grasp briefly disables blocking, your entire Sunlight Yellow Overdrive barrage connects cleanly without getting parried."
+        },
+        {
+          "name": "Anti-Flight Snipe",
+          "sequence": "Hold T + G (Hermit Grasp EX) → E Pull → R (Boulder Hold Spin) → Throw Rock",
+          "notes": "Knocks aerial Stand users (Catch The Rainbow, Bad Company helis, Beyond The Sea) out of the sky straight into hyperarmor rock slams."
+        }
+      ],
+      "pvpStrategy": "Hermit Purple excels at hit-and-run verticality and isolating runners. Use Spirit Photography in open servers to hunt high-value Bounties, grapple across roofs with zero out-of-combat cooldown, and punish defensive blockers with Y -> Sunlight Yellow Overdrive.",
+      "pveStrategy": "For Billy's Quest step ('Use Life-Giving Overdrive on plants 0/15'), plant fast-growing seeds at Big Chop's Garden or a Gang Greenhouse so one Overdrive cycle knocks out the objective cleanly without wasting Rokas.",
+      "howToCounter": [
+        "Dash laterally (`Q`) rather than holding `F` Block when fighting Hermit Purple—both Grasp versions ignore block.",
+        "Punish the startup animation when Hermit Purple bends down to rip up a Boulder.",
+        "In Gang/Open-world chases, fight indoors or in tight alleys to neutralize Hermit's Sling height advantage."
+      ],
+      "recommendedItems": [
+        "Jonathan Hamon Training (Volcano Lisa Lisa)",
+        "Gasoline Cans / Heavy Throwables (Hamon infuses throwables & gas puddles)",
+        "Extra Garden Pots (for fast completion of the 15-plant Life-Giving Overdrive quest objective)"
+      ],
+      "commonMistakes": [
+        "Eating an Emerald Roka BEFORE storing your favorite Stand in D'Arby Stand Storage.",
+        "Using Caesar or Zeppeli Hamon—Billy's quest checks for Jonathan Hamon and Life-Giving Overdrive on plants.",
+        "Trying to swing without aiming high enough—Hermit's Sling needs elevated rooftops, trees, or poles to latch cleanly."
+      ]
+    }
   },
   {
     "slug": "kiss",
@@ -5450,7 +6080,74 @@ export const stands: Stand[] = [
         "a": "Toggle Restoration Mode with G and hit a downed ally who is bleeding out using light attacks or Dora Barrage to bring them back onto their feet."
       }
     ],
-    "verifiedDate": "2026-11-26"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "Crazy Diamond Stand Out – Pinnacle Rarity, Moveset, Rage & 225 SP Build",
+    "seoDescription": "Crazy Diamond (Pinnacle Stand) guide in Roblox STAND OUT: 0.5%–4.4% arrow rates, Restoration ally/bleedout healing, Nov 24 Diamond Wall stun fix, Yo Angelo & Rage mode + Lv75 build.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/crazy-diamond-pose.webp",
+        "alt": "Josuke Higashikata Crazy Diamond pose in Roblox STAND OUT",
+        "title": "Crazy Diamond (Pinnacle)",
+        "caption": "Update 1 Pinnacle Stand blending burst brawler DPS with ally bleedout revives.",
+        "width": 353,
+        "height": 519
+      },
+      {
+        "src": "/images/stands/crazy-diamond-dora-barrage.webp",
+        "alt": "Crazy Diamond Dora Barrage and Restore Barrage in STAND OUT",
+        "title": "Dora / Restore Barrage",
+        "caption": "Guardbreak barrage in Combat; heals 30–45 HP or walks freely during Rage.",
+        "width": 331,
+        "height": 195
+      },
+      {
+        "src": "/images/stands/crazy-diamond-diamond-wall.webp",
+        "alt": "Crazy Diamond Diamond Wall projectile barrier and shard shatter in STAND OUT",
+        "title": "Diamond Wall (Nov 24 Fixed)",
+        "caption": "Creation is no longer cancelled by stun; breaks projectiles or shatters into shards.",
+        "width": 305,
+        "height": 209
+      },
+      {
+        "src": "/images/stands/crazy-diamond-bearing-shot.webp",
+        "alt": "Crazy Diamond Bearing Shot and Fixed Donut Restore variant in STAND OUT",
+        "title": "Bearing Shot & Fixed Donut",
+        "caption": "390-stud snipe tracking Blood Knife marks (or healing & cleansing allies).",
+        "width": 231,
+        "height": 200
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "Crazy Diamond is an S+ all-rounder that switches seamlessly between ruthless guardbreaking combos, un-cancellable Diamond Wall traps (Nov 24 fix), and team-saving bleedout revives—remember Josuke can NEVER heal himself.",
+      "bestCombos": [
+        {
+          "name": "Wall-Shatter Guardbreak",
+          "sequence": "M1 x3 → Diamond Wall (Y) → Shining Kick / Heavy → R (Crazy Uppercut)",
+          "notes": "Raising Diamond Wall mid-combo blocks counter projectiles while kicking/punching it sprays high-damage shards."
+        },
+        {
+          "name": "Blood Mark Tracking Snipe",
+          "sequence": "Tap G (Restore Mode) → Blood Knife → Bearing Shot (tracks marked target up to 390 studs) → Tap G Off → Shining Kick",
+          "notes": "Blood Knife marks targets for 10 seconds so your Bearing Shot bends onto escaping opponents."
+        }
+      ],
+      "pvpStrategy": "Sit on 5 EX Bars when low HP—if an opponent insults your hair or uses Rage trigger within 24 studs, WHAT DID YOU SAY? doubles M1 damage, cuts on-foot cooldowns by 20%, makes Heaven's Door unable to book you, and unlocks Yo Angelo / Fresh Pair Of Underwear block-bypass grabs.",
+      "pveStrategy": "Must-have Raid support & carry: Restore Mode revives teammates out of bleedout without dying, while Yo Angelo turns sub-10% mobs into throwable statues and Zeppeli Hamon compounds burst.",
+      "howToCounter": [
+        "Avoid typing Josuke hair insults ('ugly hair', 'your hair sucks') near a 5-EX Crazy Diamond unless you want to trigger his Rage buff.",
+        "Pressure Josuke directly—Crazy Diamond cannot heal itself, so chip damage sticks permanently without consumables/Vampire drain.",
+        "Perfect Block the final punch of Dora Barrage or punish Shining Kick charge frames."
+      ],
+      "recommendedItems": [
+        "Zeppeli Hamon (pairs cleanly with heavy punch/barrage aggression)",
+        "100 Health / 75 Damage / 50 Ability balanced Lv75 stat split"
+      ],
+      "commonMistakes": [
+        "Forgetting to toggle Restoration Mode (G) OFF when attacking—accidentally healing enemies during a kill combo.",
+        "Standing too close when punching your own Diamond Wall without aiming toward the opponent.",
+        "Assuming Crazy Diamond evolves—it is already a terminal Pinnacle Stand with no evolution."
+      ]
+    }
   },
   {
     "slug": "the-hand",
@@ -5588,7 +6285,74 @@ export const stands: Stand[] = [
         "a": "Erasure, Erasure Leap, Bring to Me, and Rib Breaker each roll a 10% chance to sever an arm and 5% chance to sever a leg."
       }
     ],
-    "verifiedDate": "2026-11-26"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "The Hand (Za Hando) Stand Out – Mythical Rarity, Limb Erase & Build",
+    "seoDescription": "Complete The Hand (Za Hando) guide for Roblox STAND OUT (Mythical Stand): 20–42 DMG Erasure + wall destruction, 10% limb erase passive, Bring to Me pull, Za Hando Za Warudo (5 EX) & 225 SP Vampire build.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/the-hand-pose.webp",
+        "alt": "Okuyasu Nijimura The Hand pose in Roblox STAND OUT",
+        "title": "The Hand (Za Hando)",
+        "caption": "Update 1 Mythical close-range obliteration Stand with spatial pull & limb erasure.",
+        "width": 344,
+        "height": 475
+      },
+      {
+        "src": "/images/stands/the-hand-erasure.webp",
+        "alt": "The Hand right palm Erasure guardbreak swipe in STAND OUT",
+        "title": "Erasure (20–42 DMG)",
+        "caption": "Sucks targets in, destroys walls/props, and deletes limbs (10% arm / 5% leg).",
+        "width": 283,
+        "height": 221
+      },
+      {
+        "src": "/images/stands/the-hand-erasure-leap.webp",
+        "alt": "The Hand Erasure Leap 141-stud dash in STAND OUT",
+        "title": "Erasure Leap (Up to 141 Studs)",
+        "caption": "Erases space forward toward cursor while dragging nearby enemies along.",
+        "width": 260,
+        "height": 195
+      },
+      {
+        "src": "/images/stands/the-hand-za-hando-za-warudo.webp",
+        "alt": "The Hand Za Hando Za Warudo 5 EX Bar time-space swipe in STAND OUT",
+        "title": "ZA HANDO... ZA WARUDO!",
+        "caption": "5-EX ultimate combo stopper that obliterates caught targets.",
+        "width": 211,
+        "height": 375
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "The Hand (Za Hando) punishes sloppy spacing harder than almost any Stand in the game: pull victims from up to 87 studs with Bring to Me, break guard with a 20–42 DMG Erasure swipe, and cripple opponents via 10% arm / 5% leg permanent limb erasure.",
+      "bestCombos": [
+        {
+          "name": "Space-Erase One-Two",
+          "sequence": "Hold T + G (Bring to Me 1 EX) → E (Erasure Swipe GB) → M1 x3 → R (Rib Breaker Grab)",
+          "notes": "Pulls enemies to 4 studs in front of you into a devastating limb-erasing palm swipe and 1.4s Rib Breaker knee stun."
+        },
+        {
+          "name": "Leap Ambush Finisher",
+          "sequence": "T (Erasure Leap toward cursor) → Hold T + H (Erasure Combo 2 EX) → Barrage (LMB)",
+          "notes": "Closes 47–141 studs instantaneously and opens Erasure Combo with another 10% arm-erase roll."
+        }
+      ],
+      "pvpStrategy": "Always pressure ranged zoners with Bring to Me (especially if props/walls sit between you, triggering bonus wall-drag collision damage) and Projectile Erasure passively deleting incoming shots in front of your right palm. Stay aggressive with Vampire drain after landing Rib Breaker's 1.4s stun.",
+      "pveStrategy": "Equally strong Strength + Ability investment shreds Raid bosses cleanly while Erasure clears destructible props/walls blocking shortcuts.",
+      "howToCounter": [
+        "Sidestep out of Bring to Me's 6.6-stud pull cone before The Hand swings down.",
+        "Perfect Block (`F`) Rib Breaker's grab, Erasure's palm swipe, or the final punch of Barrage.",
+        "Keep distance beyond 30 studs and attack from behind since Projectile Erasure only clears frontal shots."
+      ],
+      "recommendedItems": [
+        "Vampire Sub-Ability (blood drain + mobility complements Rib Breaker & limb crippling)",
+        "Equal Strength & Ability Accessories (Barrage, Erasure, and Bring to Me split 50/50 STR & ABL scaling)"
+      ],
+      "commonMistakes": [
+        "Wasting Erasure Leap without holding aim until The Hand launches—aim determines your 141-stud gap-close.",
+        "Letting targets run 6.6 studs laterally out of Bring to Me instead of pairing it with walls/slows.",
+        "Neglecting Ability points—Ability nearly triples Erasure Leap distance (47 studs -> 141.12 studs!)."
+      ]
+    }
   },
   {
     "slug": "bad-company",
@@ -5754,7 +6518,74 @@ export const stands: Stand[] = [
         "a": "Snipe low-HP Helicopters (15 HP) and Infantry (10 HP) with projectiles to lock their Military Might for 10-30s, dash twice to shake off Green Berets, perfect block Tank shells and Airstrike missiles on their flash warning, and break Focus Fire line of sight."
       }
     ],
-    "verifiedDate": "2026-11-26"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "Bad Company Stand Out – Mythical Rarity, Nov 24 Rework & 225 SP Build",
+    "seoDescription": "Complete Bad Company guide (Mythical Stand) updated for the Nov 24 rework: 180-stud Maneuver, Flanking, Landmine, Airstrike (2 EX), Paratroopers (1 EX), unit cooldowns & Lv75 225 SP build.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/bad-company-pose.webp",
+        "alt": "Keicho Nijimura Bad Company pose in Roblox STAND OUT",
+        "title": "Bad Company Squad",
+        "caption": "Mythical 14-Might miniature army: 3 Infantry, 1 Green Beret, 1 Tank, 1 Helicopter.",
+        "width": 672,
+        "height": 668
+      },
+      {
+        "src": "/images/stands/bad-company-pilot-squad.webp",
+        "alt": "Bad Company 3x Pilot Range commanding tanks and helicopters in STAND OUT",
+        "title": "Tripled Pilot Range (Ctrl)",
+        "caption": "Lead up to 3 squad types remotely and fire targeted volleys on M1.",
+        "width": 316,
+        "height": 304
+      },
+      {
+        "src": "/images/stands/bad-company-maneuver.webp",
+        "alt": "Bad Company Maneuver 180-stud tactical positioning in STAND OUT",
+        "title": "180-Stud Maneuver & Flank",
+        "caption": "Deploy squads up to 180 studs out or order single-type flanking circles.",
+        "width": 265,
+        "height": 207
+      },
+      {
+        "src": "/images/stands/bad-company-airstrike.webp",
+        "alt": "Bad Company Nov 24 Airstrike 2 EX Bar jet missile barrage in STAND OUT",
+        "title": "Airstrike (2 EX Bars)",
+        "caption": "Nov 24 rework move: fighter jet drops 3 guardbreaking missiles inside pilot range.",
+        "width": 360,
+        "height": 325
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "After the Nov 24 rework tripled Pilot range and added Flanking, Landmine, Airstrike, and multi-unit Paratroopers, Bad Company plays like a tactical RTS army rather than mindless turret spam.",
+      "bestCombos": [
+        {
+          "name": "Mark & Surround Pin",
+          "sequence": "E (Focus Fire Mark) → Tap G (Select Helicopter/Infantry +25% DMG) → Flanking → Hold T + Paratroopers",
+          "notes": "Single-type selection grants +25% squad DPS while Flanking circles enemies within Focus Fire firing arcs."
+        },
+        {
+          "name": "Anti-Rushdown Minefield",
+          "sequence": "Landmine (3 charges) → Retreat / Pilot Mode (Ctrl) → Airstrike (2 EX Bars)",
+          "notes": "Drops an armed mine beneath aggressive divers; explosion knockdown sets up all 3 Airstrike jet missiles."
+        }
+      ],
+      "pvpStrategy": "Because Nov 24 dropped unit HP sharply (Infantry 10, Green Berets 5, Tanks 45, Helicopters 15), do not leave troops idling on top of AoE stands. Tap G for the +25% single-type damage bonus, hold positions out to 180 studs with Maneuver, and remember Green Berets turn invisible while piloted and ambush within 10 studs.",
+      "pveStrategy": "Still S+ in Raids and Horde farming—send Infantry forward to chip bosses from 180 studs, save Airstrike (2 EX) and Atomic Strike (4 EX) for grouped Train/Raid waves, and use HUD Layout Editor to move the Unit Menu to a comfortable spot.",
+      "howToCounter": [
+        "Destroy fragile post-rework squads quickly with AoE moves (Infantry only have 10 HP and Green Berets 5 HP, putting them on 10–30s respawn timers).",
+        "Nov 24 made Tank shells Perfect Blockable (Parryable) and Helicopter missiles regular-blockable—watch the warning flash right before launch.",
+        "Dash twice rapidly to shake off Green Beret stealth ambushes."
+      ],
+      "recommendedItems": [
+        "Caesar Hamon Sub-Ability (protects close-range gaps while squads zone at 180 studs)",
+        "100+ Ability Accessories (Focus Fire, Landmine, Airstrike & Atomic Strike scale 100% with Ability)"
+      ],
+      "commonMistakes": [
+        "Leaving 'All Units' selected permanently with Hold G—you lose the huge +25% single-type damage buff.",
+        "Letting enemies pop your Tank/Helicopter early (25s–30s replacement cooldowns lock up your Military Might).",
+        "Standing still inside Green Beret ambush range instead of dashing twice when you hear squad alerts."
+      ]
+    }
   },
   {
     "slug": "the-lock",
@@ -6134,7 +6965,80 @@ export const stands: Stand[] = [
         "a": "First hold G to capture an opponent reflection in the blade for 1.5s, then press V with 2 EX bars. For 12 seconds, 70% of all damage you take transfers to them."
       }
     ],
-    "verifiedDate": "2026-11-23"
+    "verifiedDate": "2026-11-27",
+    "seoTitle": "Dolly Dagger Stand Out – 1,850 ELO Unlock, 70% Reflection & Build",
+    "seoDescription": "Complete Dolly Dagger (Exclusive Stand) guide for Roblox STAND OUT: unlock at 1,850 ELO in 1v1 Ranked, Shed the Blame 70% damage reflection mechanics, Steadier Than Hands, combos & 225 SP Vampire build.",
+    "showcaseImages": [
+      {
+        "src": "/images/stands/dolly-dagger-pose.webp",
+        "alt": "Dolly Dagger Vittorio Cataldi Stand pose in Roblox STAND OUT",
+        "title": "Dolly Dagger Pose",
+        "caption": "1,850 Ranked ELO exclusive knife-bound Stand of Vittorio Cataldi.",
+        "width": 320,
+        "height": 442
+      },
+      {
+        "src": "/images/stands/dolly-dagger-sinking-suspicion.webp",
+        "alt": "Dolly Dagger Sinking Suspicion guardbreak stab in STAND OUT",
+        "title": "Sinking Suspicion & Pull",
+        "caption": "Guardbreaks and lodges the dagger inside opponents until you rip it free.",
+        "width": 233,
+        "height": 239
+      },
+      {
+        "src": "/images/stands/dolly-dagger-steadier-than-hands.webp",
+        "alt": "Dolly Dagger Steadier Than Hands planted dagger reflection zone in STAND OUT",
+        "title": "Steadier Than Hands",
+        "caption": "Drives the knife into the ground for a 12-stud damage-reflection zone & flash burst.",
+        "width": 315,
+        "height": 178
+      },
+      {
+        "src": "/images/stands/dolly-dagger-shed-the-blame-reflect.webp",
+        "alt": "Dolly Dagger Shed the Blame 70% damage reflection EX move in STAND OUT",
+        "title": "Shed the Blame (2 EX)",
+        "caption": "Passes 70% of incoming combat damage onto the captured reflection target for 12s.",
+        "width": 425,
+        "height": 252
+      }
+    ],
+    "combatGuide": {
+      "quickSummary": "Dolly Dagger thrives in 1v1 duels by landing Capture Reflection, popping Shed the Blame to pass 70% of incoming bursts back at the attacker, and cycling bleed-heavy unarmed/knife mixups.",
+      "bestCombos": [
+        {
+          "name": "Reflection Trap Setup",
+          "sequence": "Hold G (1.5s Capture Reflection) → Y (Steadier Than Hands) → Hold T + V (Shed the Blame)",
+          "notes": "Forces opponents into a lose-lose trade: attacking you reflects 70% onto them and triggers planted blade reflection."
+        },
+        {
+          "name": "Dagger Stick & Tear Bleed",
+          "sequence": "M1 x4 → E (Sinking Suspicion GB) → Unarmed Pressure → E (Pull Free Knockdown)",
+          "notes": "Leaves the knife embedded for massive bleed pressure and uses Pull Free to catch dashes."
+        },
+        {
+          "name": "Phantasmagoria Flash Mixup",
+          "sequence": "T (Swift Stabs) → Dash Q → Y (Plant Steadier) → Y (Phantasmagoria Burst Flash)",
+          "notes": "Recalls the planted blade from up to 45 studs away for a blind flash and slicing return hitbox."
+        }
+      ],
+      "pvpStrategy": "Dolly Dagger is tailor-made for high-ELO Ranked. Always manage your knife state carefully: when your dagger is stuck inside an opponent (Sinking Suspicion / Disregard), your knife-based specials lock out until Pull Free or automatic return—use Vampire mobility/sub-skills during unarmed gaps and aim Disregard at head height for extra headshot damage.",
+      "pveStrategy": "Because reflection leaves opponents at a minimum of 1 HP (cannot execute strictly through transferred ticks), finish Raid bosses and tough NPCs directly with Swift Stabs bleed and 5th-M1 slashes.",
+      "howToCounter": [
+        "Break line of sight or step outside 30 studs during the 1.5-second Capture Reflection gaze beam.",
+        "Kick Dolly Dagger's planted knife out of the ground when Steadier Than Hands is placed before Phantasmagoria Burst detonates.",
+        "Stall out Shed the Blame's 12-second reflection timer with dashes/blocking instead of dumping 5-EX ultimates into Vittorio."
+      ],
+      "recommendedItems": [
+        "Vampire Mask / Sub-Ability (night regeneration sustains HP while Shed the Blame transfers 70% dmg)",
+        "High-Health Accessory Sets (maximizes reflected damage trades)",
+        "1,850 Ranked ELO Unlock (must play Lv60+ Ranked Arena)"
+      ],
+      "commonMistakes": [
+        "Throwing Disregard blindly and accidentally locking your knife specials while far away from the target.",
+        "Thinking Shed the Blame can kill an enemy outright—reflected hits always leave at least 1 HP and require a finishing blow.",
+        "Standing outside Steadier Than Hands' 12-stud radius when trying to reflect incoming projectiles."
+      ]
+    }
   },
   {
     "slug": "cat-size",

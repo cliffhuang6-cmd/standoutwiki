@@ -20,30 +20,30 @@ export const items: Item[] = [
     "slug": "lucky-arrow",
     "name": "Lucky Arrow",
     "category": "Arrow",
-    "description": "An enriched, polished Stand Arrow that completely filters out low-tier rolls. Guarantees Epic rarity or higher, boosting Pinnacle Stand odds to 1.5%.",
-    "obtainMethod": "Crafted at Advanced Crafting Bench with 3x Mysterious Arrows, purchased from Passione Train Shop for 25 Tokens, or 90-minute world spawns.",
+    "description": "An enriched, polished Stand Arrow that completely filters out Rare Stands. Guarantees Epic rarity or higher, matching the odds of at least one Pinnacle in 3 standard rolls (1.5%).",
+    "obtainMethod": "Crafted at Crafting Station with 3x Mysterious Arrows (+ Dalas), purchased from Passione Train Shop for 17 Tokens, Lucky Turkey drops, or rare world spawns.",
     "image": "/images/arrows/lucky-arrow.webp",
     "rarity": "Legendary",
     "sellPrice": "$25,000 Dalas",
     "uses": [
-      "Guarantees an Epic (42%), Legendary (22%), Mythical (4.5%), or Pinnacle (1.5%) Stand.",
+      "Verified Trello Rates: Epic (42.5%), Legendary (34.0%), Mythical (22.1%), Pinnacle (1.5%).",
       "Completely eliminates Common and Rare tier outcomes from the roll pool.",
-      "Can be combined with Part 3 or Part 5 focus items for targeted summoning."
+      "Can be saved up toward crafting or traded between character Progression builds."
     ]
   },
   {
     "slug": "bizarre-arrow",
     "name": "Bizarre Arrow",
     "category": "Arrow",
-    "description": "The premier summon artifact in STAND OUT. Offers a staggering 4.4% Pinnacle rate (62x standard) and completely eliminates both Common and Rare pools.",
-    "obtainMethod": "Crafted at Master Forge with 9x Mysterious Arrows (or 3x Lucky Arrows + 1 Meteorite Shard), purchased from Train Shop for 75 Tokens, or Nightmare Train Raid MVP drop.",
+    "description": "The premier summon artifact in STAND OUT. Delivers a 4.4% Pinnacle rate (matching 9 regular arrows) and completely excludes both Rare and Epic pools.",
+    "obtainMethod": "Crafted at Crafting Station with 9x Mysterious Arrows (+ Dalas), purchased from Train Shop for 33 Tokens, Bizarre Turkey drops, or Hard Train Raid drops.",
     "image": "/images/arrows/bizarre-arrow.webp",
     "rarity": "Pinnacle",
     "sellPrice": "$75,000 Dalas",
     "uses": [
-      "Highest base Pinnacle drop rate in the game at 4.40% (Star Platinum, The World, King Crimson).",
-      "Filters out all Common, Rare, and low-tier Epic filler Stands.",
-      "Guaranteed high-tier summon for competitive PvP players and raid speedrunners."
+      "Verified Trello Rates: Legendary (57.9%), Mythical (37.7%), Pinnacle (4.4%).",
+      "Excludes all Rare and Epic Stands so every pull hits Legendary tier or higher.",
+      "Optimal summon arrow for hunting Pinnacle Stands (Star Platinum, The World, King Crimson, Crazy Diamond)."
     ]
   },
   {

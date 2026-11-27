@@ -9,6 +9,8 @@ export interface Move {
   cooldown?: string;
   damage?: string;
   exCost?: string;
+  range?: string;
+  specialEffects?: string;
   description: string;
   blockable?: boolean;
   parriable?: boolean;
@@ -30,6 +32,25 @@ export interface Stand {
   lore: string;
   image: string;
   poseImage?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  showcaseImages?: {
+    src: string;
+    alt: string;
+    title: string;
+    caption: string;
+    width: number;
+    height: number;
+  }[];
+  combatGuide?: {
+    quickSummary: string;
+    bestCombos: { name: string; sequence: string; notes: string }[];
+    pvpStrategy: string;
+    pveStrategy: string;
+    howToCounter: string[];
+    recommendedItems: string[];
+    commonMistakes: string[];
+  };
   combatRole: 'Offense' | 'Zoner' | 'Support' | 'Disruption' | 'Speed / Hit-and-Run' | 'Tank' | 'Utility';
   passives: {
     name: string;
