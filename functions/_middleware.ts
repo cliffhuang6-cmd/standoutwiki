@@ -21,7 +21,7 @@ export async function onRequest(context: PagesContext) {
 
   const ua = context.request.headers.get('user-agent') || '';
   const chMobile = context.request.headers.get('sec-ch-ua-mobile');
-  const isMobile = chMobile === '?1' || (chMobile !== '?0' && MOBILE_UA_RE.test(ua));
+  const isMobile = MOBILE_UA_RE.test(ua) || chMobile === '?1';
 
   const html = await response.text();
   const marker = isMobile ? 'desktop' : 'mobile';
