@@ -81,9 +81,16 @@ export default function CodeCard({ code }: { code: Code }) {
     >
       <div>
         <div className="flex items-center justify-between gap-2 mb-3">
-          <span className={`px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider rounded-md border ${statusConfig.badgeBg}`}>
-            {statusConfig.label}
-          </span>
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <span className={`px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider rounded-md border ${statusConfig.badgeBg}`}>
+              {statusConfig.label}
+            </span>
+            {code.isNew && (
+              <span className="px-2 py-0.5 text-[11px] font-black uppercase tracking-wider rounded-md bg-rose-600 text-white shadow-xs">
+                NEW
+              </span>
+            )}
+          </div>
           {code.isNewServerOnly && (
             <span className="flex items-center gap-1 text-[11px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
               <Clock className="w-3 h-3 shrink-0" /> New Servers Only

@@ -184,7 +184,7 @@ export default function SearchModal() {
               {filtered.length === 0 ? (
                 <div className="p-8 text-center text-slate-500">
                   <p className="text-base font-semibold">No results found for "{query}"</p>
-                  <p className="text-sm mt-1 text-slate-400">Try searching for "Crazy Diamond", "200KLIKESMASSIVE", "Ranked Mode", or "Hamon".</p>
+                  <p className="text-sm mt-1 text-slate-400">Try searching for "Crazy Diamond", "REAL200KLIKES", "Ranked Mode", or "Hamon".</p>
                 </div>
               ) : (
                 filtered.map((item) => (

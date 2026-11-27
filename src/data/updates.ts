@@ -2,6 +2,21 @@ import type { UpdateLog } from '../types';
 
 export const updateLogs: UpdateLog[] = [
   {
+    date: '2026-11-26',
+    title: 'Thanksgiving Update (Turkey Tendency) & 200K Likes Codes',
+    summary: 'Studio Umbra launched the limited-time Turkey Tendency Thanksgiving seasonal event and released the true 200K Likes milestone code REAL200KLIKES plus THANKFULFORSTANDOUT as game likes passed 205K.',
+    changes: [
+      'New Active Codes: Added REAL200KLIKES (2 Bizarre Arrows + 4,000 Dalas) for crossing 200K Likes, and THANKFULFORSTANDOUT (3 Mysterious Arrows, 500 Dalas & 1 Hour of 2x EXP) for Thanksgiving.',
+      'Expired Codes Rotation: Moved Update 1 codes 200KLIKESMASSIVE (150K milestone) and CRAZYDIAMOND to Expired; updated the next Roblox milestone target to 250K Likes.',
+      'New Seasonal Event – Turkey Tendency: Added Normal Turkey, Lucky Turkey (drops Lucky Arrow), Bizarre Turkey (drops Bizarre Arrow), and Over Heaven Turkey (drops random Pinnacle Stand Chip), plus 10 EXP, Table Turkey, Turkey Wings, and Turkey Dinner drops.',
+      'New World Event – Turkey Overdrive: Random server event boosting Turkey spawn rates to 5x for 3 minutes.',
+      'New Accessory, Gang Furniture & Mounts: Added Turkey Wings (+2 Health, -5 Strength, -5 Ability, +5% Damage Resistance, +100% Jump Height), Table Turkey gang base furniture, and Turkey Mount taming (eat a Turkey Dinner in front of any Turkey to tame and ride it).'
+    ],
+    bugFixes: [
+      'No standalone bug-fix bullets listed on the 26/11/2026 Trello Changelog card; event spawns and item drops documented under the Seasonal Events board.'
+    ]
+  },
+  {
     date: '2026-11-25',
     title: 'LEGENDARY Leaderboard Badge & Live Milestone Tracking',
     summary: 'Studio Umbra deployed the new LEGENDARY Roblox badge (REACHED TOP 10) and pushed live game builds ahead of the 200,000 Likes milestone.',

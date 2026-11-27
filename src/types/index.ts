@@ -59,6 +59,7 @@ export interface Code {
   code: string;
   reward: string;
   status: 'Active' | 'Unverified' | 'May Be Expired' | 'Expired';
+  isNew?: boolean;
   isNewServerOnly: boolean;
   addedDate: string;
   lastCheckedDate?: string;
